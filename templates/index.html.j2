@@ -34,12 +34,30 @@
 </section>
 {% endif %}
 
-<p class="result-count"><span id="visible-count">{{ items|length }}</span> of {{ items|length }} items</p>
+<p class="result-count"><span id="visible-count">{{ (items_with_code|length) + (items_papers_only|length) }}</span> of {{ (items_with_code|length) + (items_papers_only|length) }} items</p>
 
-<section class="items" id="items">
-  {% for it in items %}
-    {% include "_item.html.j2" %}
-  {% endfor %}
+<section class="section" id="section-code">
+  <h2 class="section-title">Code &amp; repos <span class="muted">({{ items_with_code|length }})</span></h2>
+  <p class="section-hint muted">GitHub repositories and papers that release code or a project page. The actionable stuff.</p>
+  <div class="items">
+    {% for it in items_with_code %}
+      {% include "_item.html.j2" %}
+    {% else %}
+      <p class="muted">No code-bearing items in this batch.</p>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section section-deprioritized" id="section-papers-only">
+  <h2 class="section-title">Papers only <span class="muted">({{ items_papers_only|length }})</span></h2>
+  <p class="section-hint muted">No code or project page detected. Lower priority — but kept here for completeness.</p>
+  <div class="items">
+    {% for it in items_papers_only %}
+      {% include "_item.html.j2" %}
+    {% else %}
+      <p class="muted">No papers-only items in this batch.</p>
+    {% endfor %}
+  </div>
 </section>
 
 <script src="{{ url_root }}filters.js"></script>

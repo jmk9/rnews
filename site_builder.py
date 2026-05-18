@@ -41,6 +41,18 @@ def _first_seen(it: dict[str, Any], fallback_date: str = "") -> str:
     return fallback_date or (it.get("updated") or "")[:10] or (it.get("published") or "")[:10] or ""
 
 
+def _has_code(it: dict[str, Any]) -> bool:
+    """An item is 'has-code' if it's a repo, or its ranker stamped it with the has_code bonus.
+
+    Used by the site to push papers-without-code to the bottom of the page —
+    they're still indexed and searchable, just deprioritized in the layout.
+    """
+    if it.get("source") == "github":
+        return True
+    bd = it.get("score_breakdown") or {}
+    return bool(bd.get("has_code", 0))
+
+
 def _load_all_processed(processed_dir: Path) -> list[dict[str, Any]]:
     """Merge every snapshot, keeping the highest-scoring copy of each item id."""
     by_id: dict[str, dict[str, Any]] = {}
@@ -128,6 +140,17 @@ def build_site(cfg: dict[str, Any]) -> Path:
     items_on_index = int(site_cfg.get("items_on_index", 80))
     index_items = all_items[:items_on_index]
 
+    # Partition the index list: actionable items (has code or repo) at the top,
+    # paper-only items at the bottom. Within each section, sort by score desc.
+    index_with_code = sorted(
+        (it for it in index_items if _has_code(it)),
+        key=lambda x: float(x.get("score") or 0), reverse=True,
+    )
+    index_papers_only = sorted(
+        (it for it in index_items if not _has_code(it)),
+        key=lambda x: float(x.get("score") or 0), reverse=True,
+    )
+
     tag_counter: Counter[str] = Counter()
     for it in index_items:
         for t in it.get("tags") or []:
@@ -151,7 +174,9 @@ def build_site(cfg: dict[str, Any]) -> Path:
     generated = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
     index_html = env.get_template("index.html.j2").render(
-        items=index_items,
+        items_with_code=index_with_code,
+        items_papers_only=index_papers_only,
+        items=index_items,  # kept for back-compat if templates still reference it
         top_tags=top_tags,
         archive_days=days_sorted,
         generated=generated,
@@ -159,15 +184,21 @@ def build_site(cfg: dict[str, Any]) -> Path:
         url_root="",
     )
     (site_dir / "index.html").write_text(index_html, encoding="utf-8")
-    log.info("site: wrote index.html (%d items)", len(index_items))
+    log.info("site: wrote index.html (%d w/code + %d papers-only)",
+             len(index_with_code), len(index_papers_only))
 
     day_tpl = env.get_template("day.html.j2")
     for i, d in enumerate(days_sorted):
-        day_items = sorted(by_day[d], key=lambda x: float(x.get("score") or 0), reverse=True)
+        day_all = sorted(by_day[d], key=lambda x: float(x.get("score") or 0), reverse=True)
+        day_with_code = [it for it in day_all if _has_code(it)]
+        day_papers_only = [it for it in day_all if not _has_code(it)]
         prev_day = days_sorted[i + 1] if i + 1 < len(days_sorted) else ""
         next_day = days_sorted[i - 1] if i > 0 else ""
         html = day_tpl.render(
-            items=day_items, date=d, generated=generated, site=site_ctx,
+            items_with_code=day_with_code,
+            items_papers_only=day_papers_only,
+            items=day_all,
+            date=d, generated=generated, site=site_ctx,
             url_root="../", prev_day=prev_day, next_day=next_day,
         )
         (site_dir / "daily" / f"{d}.html").write_text(html, encoding="utf-8")

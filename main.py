@@ -20,7 +20,7 @@ from processors.ranker import rank_items
 from processors.summarizer import AbstractTruncationSummarizer, summarize_items
 from processors.tagger import tag_items
 from site_builder import build_site
-from utils.io import Item, ensure_dir, save_json, save_text
+from utils.io import Item, ensure_dir, load_json, save_json, save_text
 from utils.state import SeenStore
 
 log = logging.getLogger("robot-ai-monitor")
@@ -38,10 +38,14 @@ def load_config(path: str | Path) -> dict[str, Any]:
 
 
 def apply_mode_overrides(cfg: dict[str, Any], mode: str) -> dict[str, Any]:
-    """`daily` shortens lookback windows; `weekly` uses config defaults."""
+    """Daily mode uses a moderate window (not 1-day) because:
+      - arXiv doesn't post on weekends; Fri→Mon is a 3-day gap.
+      - "What's new today" is enforced separately by SeenStore + the daily filter
+        on the markdown report. The window is just a collection budget.
+    """
     if mode == "daily":
-        cfg.setdefault("sources", {}).setdefault("arxiv", {})["days_back"] = 2
-        cfg["sources"].setdefault("github", {})["days_back"] = 7
+        cfg.setdefault("sources", {}).setdefault("arxiv", {})["days_back"] = 5
+        cfg["sources"].setdefault("github", {})["days_back"] = 14
     return cfg
 
 
@@ -255,8 +259,22 @@ def main(argv: list[str] | None = None) -> int:
     raw_path = raw_dir / f"{today_str}_raw.json"
     processed_path = processed_dir / f"{today_str}_processed.json"
     save_json(raw_path, [it.to_dict() for it in raw_items])
-    save_json(processed_path, [it.to_dict() for it in items])
-    log.info("Wrote %s and %s", raw_path, processed_path)
+    # Merge with any prior same-day snapshot so a narrower run (e.g. workflow's
+    # daily mode covering only one source) never erases items from an earlier
+    # broader run. Latest copy of each id wins.
+    merged: dict[str, dict[str, Any]] = {}
+    prior = load_json(processed_path)
+    if isinstance(prior, list):
+        for it in prior:
+            iid = it.get("id")
+            if iid:
+                merged[iid] = it
+    for it in items:
+        merged[it.id] = it.to_dict()
+    save_json(processed_path, list(merged.values()))
+    log.info("Wrote %s (%d items, %d merged from prior same-day snapshot) and %s",
+             processed_path, len(merged), len(merged) - len(items) if len(merged) > len(items) else 0,
+             raw_path)
 
     if args.output in ("markdown", "both"):
         report_md = build_report(items_for_report, cfg, args.mode)

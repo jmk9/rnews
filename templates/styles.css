@@ -88,6 +88,16 @@ body {
 
 .result-count { color: var(--muted); font-size: .82rem; margin: 0 0 .8rem; }
 
+.section { margin: 1.5rem 0; }
+.section-title {
+  font-size: 1.15rem; margin: 0 0 .2rem;
+  display: flex; align-items: baseline; gap: .5rem;
+}
+.section-hint { margin: 0 0 .8rem; font-size: .85rem; }
+.section-deprioritized { opacity: .82; }
+.section-deprioritized .item { background: transparent; }
+.section-deprioritized .section-title::before { content: "↓ "; color: var(--muted); }
+
 .items { display: flex; flex-direction: column; gap: .85rem; }
 .item {
   background: var(--bg-elev);

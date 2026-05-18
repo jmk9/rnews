@@ -9,11 +9,27 @@
 </section>
 
 <h2>Daily snapshot — {{ date }}</h2>
-<p class="muted">{{ items|length }} item{{ '' if items|length == 1 else 's' }} first seen on this date, sorted by relevance score.</p>
+<p class="muted">{{ items|length }} item{{ '' if items|length == 1 else 's' }} first seen on this date.</p>
 
-<section class="items">
-  {% for it in items %}
-    {% include "_item.html.j2" %}
-  {% endfor %}
+<section class="section">
+  <h3 class="section-title">Code &amp; repos <span class="muted">({{ items_with_code|length }})</span></h3>
+  <div class="items">
+    {% for it in items_with_code %}
+      {% include "_item.html.j2" %}
+    {% else %}
+      <p class="muted">No code-bearing items.</p>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section section-deprioritized">
+  <h3 class="section-title">Papers only <span class="muted">({{ items_papers_only|length }})</span></h3>
+  <div class="items">
+    {% for it in items_papers_only %}
+      {% include "_item.html.j2" %}
+    {% else %}
+      <p class="muted">No papers-only items.</p>
+    {% endfor %}
+  </div>
 </section>
 {% endblock %}
