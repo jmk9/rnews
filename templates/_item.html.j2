@@ -1,7 +1,8 @@
 <article class="item"
   data-source="{{ it.source }}"
   data-priority="{{ it.priority }}"
-  data-tags="{{ (it.tags or []) | join(' ') }}">
+  data-tags="{{ (it.tags or []) | join(' ') }}"
+  data-published="{{ (it.updated or it.published or '')[:10] }}">
   <div class="item-header">
     <a class="item-title" href="{{ it.url }}" target="_blank" rel="noopener">{{ it.title }}</a>
     <span class="badge badge-{{ it.source }}">{{ it.source }}</span>

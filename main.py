@@ -26,9 +26,9 @@ from utils.state import SeenStore
 log = logging.getLogger("robot-ai-monitor")
 
 PRIORITY_LABELS = {
-    "must_read": "Must read",
-    "save_for_later": "Save for later",
-    "low_priority": "Low priority",
+    "must_read": "High",
+    "save_for_later": "Mid",
+    "low_priority": "Low",
 }
 
 

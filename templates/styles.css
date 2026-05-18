@@ -9,9 +9,9 @@
   --tag-bg: #f0f0f3;
   --arxiv: #b31b1b;
   --github: #24292e;
-  --must: #1a8a4c;
-  --save: #2d5cf6;
-  --low: #8a8a8a;
+  --must: #1a8a4c;   /* High — green */
+  --save: #f5a623;   /* Mid — amber */
+  --low: #b0b0b0;    /* Low — gray */
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -102,11 +102,15 @@ body {
 .item {
   background: var(--bg-elev);
   border: 1px solid var(--border);
+  border-left: 4px solid var(--low);  /* color-bar — overridden per priority below */
   border-radius: 10px;
   padding: 1rem 1.15rem;
   transition: border-color .12s, transform .12s;
 }
-.item:hover { border-color: var(--accent); }
+.item[data-priority="must_read"] { border-left-color: var(--must); }
+.item[data-priority="save_for_later"] { border-left-color: var(--save); }
+.item[data-priority="low_priority"] { border-left-color: var(--low); }
+.item:hover { border-color: var(--accent); border-left-color: var(--accent); }
 .item-header {
   display: flex; align-items: baseline; flex-wrap: wrap; gap: .55rem;
   margin-bottom: .35rem;

@@ -12,7 +12,7 @@
 <p class="muted">{{ items|length }} item{{ '' if items|length == 1 else 's' }} first seen on this date.</p>
 
 <section class="section">
-  <h3 class="section-title">Code &amp; repos <span class="muted">({{ items_with_code|length }})</span></h3>
+  <h3 class="section-title">Code &amp; repos <span class="muted">(<span class="section-count" data-section="code">{{ items_with_code|length }}</span>)</span></h3>
   <div class="items">
     {% for it in items_with_code %}
       {% include "_item.html.j2" %}
@@ -23,7 +23,7 @@
 </section>
 
 <section class="section section-deprioritized">
-  <h3 class="section-title">Papers only <span class="muted">({{ items_papers_only|length }})</span></h3>
+  <h3 class="section-title">Papers only <span class="muted">(<span class="section-count" data-section="papers">{{ items_papers_only|length }}</span>)</span></h3>
   <div class="items">
     {% for it in items_papers_only %}
       {% include "_item.html.j2" %}

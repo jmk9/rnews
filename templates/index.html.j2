@@ -18,9 +18,19 @@
   <div class="filter-group">
     <strong>Priority</strong>
     <button class="chip active" data-filter="priority" data-value="">All</button>
-    <button class="chip" data-filter="priority" data-value="must_read">Must read</button>
-    <button class="chip" data-filter="priority" data-value="save_for_later">Save</button>
+    <button class="chip" data-filter="priority" data-value="must_read">High</button>
+    <button class="chip" data-filter="priority" data-value="save_for_later">Mid</button>
     <button class="chip" data-filter="priority" data-value="low_priority">Low</button>
+  </div>
+  <div class="filter-group">
+    <strong>Time</strong>
+    <button class="chip active" data-filter="time" data-value="">All</button>
+    <button class="chip" data-filter="time" data-value="7">1 week</button>
+    <button class="chip" data-filter="time" data-value="31">1 month</button>
+    <button class="chip" data-filter="time" data-value="93">3 months</button>
+    <button class="chip" data-filter="time" data-value="186">6 months</button>
+    <button class="chip" data-filter="time" data-value="366">1 year</button>
+    <button class="chip" data-filter="time" data-value="1100">3 years</button>
   </div>
 </section>
 
@@ -37,7 +47,7 @@
 <p class="result-count"><span id="visible-count">{{ (items_with_code|length) + (items_papers_only|length) }}</span> of {{ (items_with_code|length) + (items_papers_only|length) }} items</p>
 
 <section class="section" id="section-code">
-  <h2 class="section-title">Code &amp; repos <span class="muted">({{ items_with_code|length }})</span></h2>
+  <h2 class="section-title">Code &amp; repos <span class="muted">(<span class="section-count" data-section="code">{{ items_with_code|length }}</span>)</span></h2>
   <p class="section-hint muted">GitHub repositories and papers that release code or a project page. The actionable stuff.</p>
   <div class="items">
     {% for it in items_with_code %}
@@ -49,7 +59,7 @@
 </section>
 
 <section class="section section-deprioritized" id="section-papers-only">
-  <h2 class="section-title">Papers only <span class="muted">({{ items_papers_only|length }})</span></h2>
+  <h2 class="section-title">Papers only <span class="muted">(<span class="section-count" data-section="papers">{{ items_papers_only|length }}</span>)</span></h2>
   <p class="section-hint muted">No code or project page detected. Lower priority — but kept here for completeness.</p>
   <div class="items">
     {% for it in items_papers_only %}

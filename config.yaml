@@ -47,29 +47,50 @@ research_interests:
   - td-mpc
 
 # Tag inference: tag -> list of phrases that trigger it (case-insensitive substring match).
+# Kept intentionally small. We absorb related concepts (PPO, SAC, OfflineRL, etc.)
+# under the parent #RL tag instead of fragmenting the filter UI. Add more tags
+# back if a daily scan reveals that a topic genuinely needs its own bucket —
+# see SELF_FEEDBACK.md for the rule.
 tags:
-  "#RL": [reinforcement learning, " rl ", "policy gradient"]
-  "#PPO": [ppo, "proximal policy"]
-  "#SAC": [" sac ", "soft actor-critic", "soft actor critic"]
-  "#OfflineRL": [offline rl, "offline reinforcement", iql, cql, awr]
-  "#RLPD": [rlpd]
-  "#SERL": [serl, hil-serl]
-  "#VLA": [vla, vision-language-action, "vision language action", openvla]
-  "#DiffusionPolicy": [diffusion policy, dppo, "diffusion-based policy"]
-  "#WorldModel": [world model, dreamer, td-mpc, "model-based rl"]
-  "#Manipulation": [manipulation, grasping, "pick and place", "pick-and-place", dexterous]
-  "#MobileManipulation": [mobile manipulation, "mobile manipulator"]
-  "#Humanoid": [humanoid, biped, "whole-body"]
-  "#Sim2Real": [sim-to-real, sim2real, "sim to real", "domain randomization"]
-  "#IsaacLab": [isaac lab, "isaac sim", "isaac gym", isaaclab]
-  "#MuJoCo": [mujoco]
-  "#Genesis": ["genesis simulator", " genesis "]
-  "#ManiSkill": [maniskill]
-  "#MRTA": [task allocation, multi-robot, "multi robot"]
-  "#ROS2": [ros2, "ros 2"]
-  "#PhysicalAI": [physical ai, "embodied ai", "embodied agent"]
-  "#FoundationModel": [foundation model, "pre-trained policy", "pretrained policy"]
-  "#ImitationLearning": [imitation learning, "behavior cloning", "behaviour cloning"]
+  "#RL":
+    - reinforcement learning
+    - " rl "
+    - policy gradient
+    - ppo
+    - "proximal policy"
+    - " sac "
+    - "soft actor-critic"
+    - "soft actor critic"
+    - offline rl
+    - "offline reinforcement"
+    - iql
+    - cql
+    - awr
+    - world model
+    - dreamer
+    - td-mpc
+    - "model-based rl"
+  "#IL":
+    - imitation learning
+    - "behavior cloning"
+    - "behaviour cloning"
+    - diffusion policy
+    - dppo
+    - "diffusion-based policy"
+  "#VLA":
+    - vla
+    - vision-language-action
+    - "vision language action"
+    - openvla
+    - foundation model
+    - "pre-trained policy"
+    - "pretrained policy"
+  "#HIL-SERL":
+    - hil-serl
+    - serl
+    - rlpd
+    - "human-in-the-loop"
+    - "interactive imitation"
 
 sources:
   arxiv:
@@ -129,5 +150,5 @@ site:
   title: "Robot AI Monitor"
   description: "Daily picks in robot learning, RL, VLA, diffusion policy, sim-to-real, and friends."
   url: ""              # If hosted, set absolute URL — used for RSS <link>.
-  items_on_index: 80   # how many items the front page shows
+  items_on_index: 500  # how many items the front page renders (client-side time filter narrows from this pool)
   top_tags: 16         # how many tag-filter chips to expose

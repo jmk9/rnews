@@ -27,8 +27,8 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 log = logging.getLogger("robot-ai-monitor.site")
 
 PRIORITY_LABELS = {
-    "must_read": "Must read",
-    "save_for_later": "Save",
+    "must_read": "High",
+    "save_for_later": "Mid",
     "low_priority": "Low",
 }
 
