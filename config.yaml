@@ -1,0 +1,133 @@
+# Robot AI Monitor — configuration
+
+# Keywords that an item should contain at least one of (in title or abstract/README).
+# Used to filter out obviously-unrelated items before scoring.
+must_match_keywords:
+  - robot
+  - robotic
+  - manipulation
+  - locomotion
+  - grasping
+  - humanoid
+  - quadruped
+  - drone
+  - autonomous
+  - reinforcement learning
+  - policy learning
+  - imitation learning
+  - vision-language-action
+  - vla
+  - diffusion policy
+  - sim-to-real
+  - sim2real
+  - mobile manipulation
+  - multi-robot
+  - ros2
+  - isaac
+  - mujoco
+
+# Research areas you care about most. Items matching these get a relevance boost.
+research_interests:
+  - robot learning
+  - reinforcement learning
+  - diffusion policy
+  - vision-language-action
+  - vla
+  - sim-to-real
+  - mobile manipulation
+  - multi-robot
+  - humanoid
+  - physical ai
+  - world model
+  - offline rl
+  - rlpd
+  - serl
+  - hil-serl
+  - dreamerv3
+  - td-mpc
+
+# Tag inference: tag -> list of phrases that trigger it (case-insensitive substring match).
+tags:
+  "#RL": [reinforcement learning, " rl ", "policy gradient"]
+  "#PPO": [ppo, "proximal policy"]
+  "#SAC": [" sac ", "soft actor-critic", "soft actor critic"]
+  "#OfflineRL": [offline rl, "offline reinforcement", iql, cql, awr]
+  "#RLPD": [rlpd]
+  "#SERL": [serl, hil-serl]
+  "#VLA": [vla, vision-language-action, "vision language action", openvla]
+  "#DiffusionPolicy": [diffusion policy, dppo, "diffusion-based policy"]
+  "#WorldModel": [world model, dreamer, td-mpc, "model-based rl"]
+  "#Manipulation": [manipulation, grasping, "pick and place", "pick-and-place", dexterous]
+  "#MobileManipulation": [mobile manipulation, "mobile manipulator"]
+  "#Humanoid": [humanoid, biped, "whole-body"]
+  "#Sim2Real": [sim-to-real, sim2real, "sim to real", "domain randomization"]
+  "#IsaacLab": [isaac lab, "isaac sim", "isaac gym", isaaclab]
+  "#MuJoCo": [mujoco]
+  "#Genesis": ["genesis simulator", " genesis "]
+  "#ManiSkill": [maniskill]
+  "#MRTA": [task allocation, multi-robot, "multi robot"]
+  "#ROS2": [ros2, "ros 2"]
+  "#PhysicalAI": [physical ai, "embodied ai", "embodied agent"]
+  "#FoundationModel": [foundation model, "pre-trained policy", "pretrained policy"]
+  "#ImitationLearning": [imitation learning, "behavior cloning", "behaviour cloning"]
+
+sources:
+  arxiv:
+    enabled: true
+    categories: [cs.RO, cs.AI, cs.LG, cs.CV]
+    days_back: 7
+    max_results_per_category: 100
+  github:
+    enabled: true
+    queries:
+      - "robot learning"
+      - "diffusion policy"
+      - "vision language action"
+      - "reinforcement learning robot"
+      - "sim-to-real"
+      - "isaac lab"
+    days_back: 90
+    per_page: 30
+    min_stars: 10
+
+# Weights used by ranker.compute_score().
+ranking:
+  title_keyword: 3.0          # per must_match keyword hit in title
+  abstract_keyword: 1.0       # per must_match keyword hit in abstract/readme
+  research_interest_title: 5.0   # per research_interest hit in title
+  research_interest_abstract: 2.0 # per research_interest hit in abstract/readme
+  recency: 3.0                # 0..1 scaled by how recent within days_back
+  has_code: 4.0               # paper mentions github/code release
+  github_stars_log: 1.5       # log10(stars+1) * weight for repos
+  real_robot: 2.0             # paper mentions real-robot experiment
+
+# Priority thresholds applied to final score
+priority:
+  must_read_threshold: 12.0
+  low_priority_threshold: 4.0
+
+paths:
+  raw: data/raw
+  processed: data/processed
+  reports: reports
+
+# Report rendering caps
+report:
+  top_papers: 15
+  top_repos: 10
+  summary_max_chars: 320
+
+# First-seen tracking: lets daily mode highlight only items new since the last run.
+state:
+  seen_path: data/state/seen.json
+
+# Static HTML site (shareable with colleagues via any web server).
+site:
+  enabled: true
+  output_dir: site
+  templates_dir: templates
+  title: "Robot AI Monitor"
+  description: "Daily picks in robot learning, RL, VLA, diffusion policy, sim-to-real, and friends."
+  url: ""              # If hosted, set absolute URL — used for RSS <link>.
+  items_on_index: 80   # how many items the front page shows
+  top_tags: 16         # how many tag-filter chips to expose

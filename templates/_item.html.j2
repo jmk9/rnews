@@ -1,0 +1,29 @@
+<article class="item"
+  data-source="{{ it.source }}"
+  data-priority="{{ it.priority }}"
+  data-tags="{{ (it.tags or []) | join(' ') }}">
+  <div class="item-header">
+    <a class="item-title" href="{{ it.url }}" target="_blank" rel="noopener">{{ it.title }}</a>
+    <span class="badge badge-{{ it.source }}">{{ it.source }}</span>
+    {% if it.priority %}<span class="badge badge-{{ it.priority }}">{{ priority_label(it.priority) }}</span>{% endif %}
+  </div>
+  <div class="item-meta">
+    {% if it.authors %}
+      {{ it.authors[:5] | join(', ') }}{% if it.authors|length > 5 %} et al.{% endif %} ·
+    {% endif %}
+    {% if it.source == 'github' and it.extra and it.extra.stars is defined %}
+      ★ {{ it.extra.stars }} ·
+      {% if it.extra.language %}{{ it.extra.language }} · {% endif %}
+    {% endif %}
+    {{ (it.updated or it.published or '')[:10] }} · score {{ it.score }}
+    {% if it.extra and it.extra.first_seen %} · first seen {{ it.extra.first_seen }}{% endif %}
+  </div>
+  {% if it.tags %}
+  <div class="item-tags">
+    {% for t in it.tags %}<span class="tag">{{ t }}</span>{% endfor %}
+  </div>
+  {% endif %}
+  {% if it.summary %}
+  <p class="item-summary">{{ it.summary }}</p>
+  {% endif %}
+</article>

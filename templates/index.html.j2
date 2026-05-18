@@ -1,0 +1,46 @@
+{% extends "_layout.html.j2" %}
+{% block content %}
+
+<section class="filters" aria-label="Filters">
+  <div class="filter-group">
+    <strong>Tag</strong>
+    <button class="chip active" data-filter="tag" data-value="">All</button>
+    {% for tag, count in top_tags %}
+    <button class="chip" data-filter="tag" data-value="{{ tag }}">{{ tag }} <span class="count">{{ count }}</span></button>
+    {% endfor %}
+  </div>
+  <div class="filter-group">
+    <strong>Source</strong>
+    <button class="chip active" data-filter="source" data-value="">All</button>
+    <button class="chip" data-filter="source" data-value="arxiv">arXiv</button>
+    <button class="chip" data-filter="source" data-value="github">GitHub</button>
+  </div>
+  <div class="filter-group">
+    <strong>Priority</strong>
+    <button class="chip active" data-filter="priority" data-value="">All</button>
+    <button class="chip" data-filter="priority" data-value="must_read">Must read</button>
+    <button class="chip" data-filter="priority" data-value="save_for_later">Save</button>
+    <button class="chip" data-filter="priority" data-value="low_priority">Low</button>
+  </div>
+</section>
+
+{% if archive_days %}
+<section class="archive-nav" aria-label="Daily archive">
+  <strong>Daily archive:</strong>
+  {% for d in archive_days[:14] %}
+  <a href="daily/{{ d }}.html">{{ d }}</a>
+  {% endfor %}
+  {% if archive_days|length > 14 %}<span class="muted">… {{ archive_days|length - 14 }} earlier</span>{% endif %}
+</section>
+{% endif %}
+
+<p class="result-count"><span id="visible-count">{{ items|length }}</span> of {{ items|length }} items</p>
+
+<section class="items" id="items">
+  {% for it in items %}
+    {% include "_item.html.j2" %}
+  {% endfor %}
+</section>
+
+<script src="{{ url_root }}filters.js"></script>
+{% endblock %}

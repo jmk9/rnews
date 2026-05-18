@@ -1,0 +1,29 @@
+# Generated site — published via GH Actions artifact, not via git
+site/
+
+# Markdown reports — regenerated every run
+reports/
+
+# Raw collected data — large, can always be re-collected
+data/raw/
+
+# Run logs
+data/run.log
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# IDE / OS
+.idea/
+.DS_Store
+Thumbs.db
+
+# Tracked on purpose (so GH Actions can preserve history across runs):
+#   data/processed/*.json
+#   data/state/seen.json

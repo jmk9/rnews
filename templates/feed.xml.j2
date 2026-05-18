@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+<title>{{ site.title }}</title>
+<link>{{ site.url or 'http://localhost' }}</link>
+<description>{{ site.description }}</description>
+<lastBuildDate>{{ build_date }}</lastBuildDate>
+{% for it in items %}
+<item>
+<title>{{ it.title }}</title>
+<link>{{ it.url }}</link>
+<guid isPermaLink="false">{{ it.id }}</guid>
+<pubDate>{{ rfc822(it.updated or it.published) }}</pubDate>
+<description>{{ it.summary }}{% if it.tags %} — Tags: {{ it.tags | join(' ') }}{% endif %}{% if it.source == 'github' and it.extra and it.extra.stars is defined %} — ★ {{ it.extra.stars }}{% endif %} — Score {{ it.score }}</description>
+</item>
+{% endfor %}
+</channel>
+</rss>
