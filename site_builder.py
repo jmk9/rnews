@@ -168,19 +168,22 @@ def build_site(cfg: dict[str, Any]) -> Path:
             tag_counter[t] += 1
     top_tags = tag_counter.most_common(int(site_cfg.get("top_tags", 16)))
 
-    # tag_groups in config.yaml controls the visual grouping in the chip UI
-    # (e.g. Method vs Platform). Filter dimension remains single — these are
-    # just labelled clusters of chips. Tags with zero items in the current
-    # window are omitted from their group so we don't show empty chips.
+    # tag_groups in config.yaml controls both the visual grouping in the chip
+    # UI (e.g. Method vs Platform) AND the independent filter dimension keys
+    # (data-filter="method", data-filter="platform"). Two-dim filtering means
+    # users can stack chips across groups (#VLA + #Manipulator -> intersect).
+    # Tags with zero items in the current window are omitted so we don't
+    # render empty chips.
     raw_groups = cfg.get("tag_groups") or []
-    grouped_tag_counts: list[tuple[str, list[tuple[str, int]]]] = []
+    grouped_tag_counts: list[tuple[str, str, list[tuple[str, int]]]] = []
     if isinstance(raw_groups, list):
         for g in raw_groups:
             label = str(g.get("label") or "Tag")
+            filter_key = str(g.get("filter_key") or label.lower())
             wanted = list(g.get("tags") or [])
             counts = [(t, tag_counter[t]) for t in wanted if tag_counter[t] > 0]
             if counts:
-                grouped_tag_counts.append((label, counts))
+                grouped_tag_counts.append((label, filter_key, counts))
 
     # Group by first-seen date for the archive.
     by_day: dict[str, list[dict[str, Any]]] = {}

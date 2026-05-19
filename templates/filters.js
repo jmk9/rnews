@@ -1,6 +1,8 @@
 (function () {
   "use strict";
-  const state = { tag: "", source: "", priority: "", time: "" };
+  // Two-dim tag filter: Method and Platform act independently and AND together.
+  // E.g. method=#VLA + platform=#Manipulator -> only VLA papers on cobot arms.
+  const state = { method: "", platform: "", source: "", priority: "", time: "" };
   const items = Array.from(document.querySelectorAll(".item"));
   const counter = document.getElementById("visible-count");
   const sectionCounts = document.querySelectorAll(".section-count");
@@ -25,11 +27,12 @@
     const timeLimit = state.time ? parseFloat(state.time) : Infinity;
     for (const it of items) {
       const tags = (it.dataset.tags || "").split(/\s+/).filter(Boolean);
-      const okTag = !state.tag || tags.indexOf(state.tag) !== -1;
+      const okMethod = !state.method || tags.indexOf(state.method) !== -1;
+      const okPlatform = !state.platform || tags.indexOf(state.platform) !== -1;
       const okSrc = !state.source || it.dataset.source === state.source;
       const okPri = !state.priority || it.dataset.priority === state.priority;
       const okTime = it.__ageDays <= timeLimit;
-      const show = okTag && okSrc && okPri && okTime;
+      const show = okMethod && okPlatform && okSrc && okPri && okTime;
       it.style.display = show ? "" : "none";
       if (show) {
         visible++;

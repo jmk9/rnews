@@ -93,7 +93,10 @@ tags:
     - "pre-trained policy"
     - "pretrained policy"
 
-  # ---- Platform (form factor of the robot trained) ----
+  # ---- Platform (cobot family only — collaborative robots).
+  # Non-cobot platforms (humanoid / quadruped / UGV / drone) intentionally
+  # removed: they fall outside the cobot research focus. If a quadruped or
+  # humanoid topic becomes critical, add it back here.
   "#Manipulator":
     - manipulator
     - "robot arm"
@@ -124,56 +127,17 @@ tags:
     - "fetch robot"
     - "mobile aloha"
     - tidybot
-  "#Humanoid":
-    - humanoid
-    - bipedal
-    - biped
-    - "boston dynamics atlas"
-    - "unitree h1"
-    - "unitree g1"
-    - "tesla optimus"
-    - "figure 01"
-    - "figure 02"
-    - "1x neo"
-    - "agility digit"
-    - "whole-body humanoid"
-  "#Quadruped":
-    - quadruped
-    - quadrupedal
-    - "boston dynamics spot"
-    - anymal
-    - "unitree go1"
-    - "unitree go2"
-    - "unitree a1"
-    - "unitree aliengo"
-    - "four-legged"
-    - "four legged"
-    - "legged locomotion"
-  "#UGV":
-    - " ugv "
-    - "wheeled robot"
-    - "differential drive"
-    - ackermann
-    - "f1tenth"
-    - "racing car"
-  "#Drone":
-    - " drone "
-    - quadcopter
-    - " uav "
-    - "aerial robot"
-    - "aerial manipulation"
-    - multirotor
-    - quadrotor
-    - hexarotor
 
-# Tag chip groups. Drives the visual grouping on the site (Method / Platform).
-# Filter dimension is still single — clicking any chip filters by that one tag —
-# but the UI groups them so users see structure at a glance.
+# Tag chip groups. Method and Platform are **independent filter dimensions** —
+# users can pick one from each (e.g. #VLA + #Manipulator). The site renders
+# them as two chip rows with separate `data-filter` keys.
 tag_groups:
   - label: Method
+    filter_key: method
     tags: ["#RL", "#IL", "#VLA"]
   - label: Platform
-    tags: ["#Manipulator", "#Bimanual", "#MobileManipulator", "#Humanoid", "#Quadruped", "#UGV", "#Drone"]
+    filter_key: platform
+    tags: ["#Manipulator", "#Bimanual", "#MobileManipulator"]
 
 sources:
   arxiv:
