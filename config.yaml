@@ -93,10 +93,10 @@ tags:
     - "pre-trained policy"
     - "pretrained policy"
 
-  # ---- Platform (cobot family only — collaborative robots).
-  # Non-cobot platforms (humanoid / quadruped / UGV / drone) intentionally
-  # removed: they fall outside the cobot research focus. If a quadruped or
-  # humanoid topic becomes critical, add it back here.
+  # ---- Platform (cobot family + humanoid).
+  # Humanoid kept because modern bipedal robots (Figure, 1X, Optimus, H1)
+  # increasingly target collaborative / shared-workspace deployment.
+  # Quadrupeds / UGVs / drones remain out of scope.
   "#Manipulator":
     - manipulator
     - "robot arm"
@@ -127,6 +127,19 @@ tags:
     - "fetch robot"
     - "mobile aloha"
     - tidybot
+  "#Humanoid":
+    - humanoid
+    - bipedal
+    - biped
+    - "boston dynamics atlas"
+    - "unitree h1"
+    - "unitree g1"
+    - "tesla optimus"
+    - "figure 01"
+    - "figure 02"
+    - "1x neo"
+    - "agility digit"
+    - "whole-body humanoid"
 
 # Tag chip groups. Method and Platform are **independent filter dimensions** —
 # users can pick one from each (e.g. #VLA + #Manipulator). The site renders
@@ -137,7 +150,7 @@ tag_groups:
     tags: ["#RL", "#IL", "#VLA"]
   - label: Platform
     filter_key: platform
-    tags: ["#Manipulator", "#Bimanual", "#MobileManipulator"]
+    tags: ["#Manipulator", "#Bimanual", "#MobileManipulator", "#Humanoid"]
 
 sources:
   arxiv:
