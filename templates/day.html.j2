@@ -22,6 +22,17 @@
   </div>
 </section>
 
+<section class="section">
+  <h3 class="section-title">News &amp; articles <span class="muted">(<span class="section-count" data-section="news">{{ items_news|length }}</span>)</span></h3>
+  <div class="items">
+    {% for it in items_news %}
+      {% include "_item.html.j2" %}
+    {% else %}
+      <p class="muted">No news items.</p>
+    {% endfor %}
+  </div>
+</section>
+
 <section class="section section-deprioritized">
   <h3 class="section-title">Papers only <span class="muted">(<span class="section-count" data-section="papers">{{ items_papers_only|length }}</span>)</span></h3>
   <div class="items">

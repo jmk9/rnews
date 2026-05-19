@@ -14,7 +14,7 @@ from typing import Any
 
 import yaml
 
-from collectors import arxiv_collector, github_collector
+from collectors import arxiv_collector, github_collector, news_collector
 from processors.deduplicator import deduplicate
 from processors.ranker import rank_items
 from processors.summarizer import AbstractTruncationSummarizer, summarize_items
@@ -55,6 +55,8 @@ def run_collectors(cfg: dict[str, Any], source: str) -> list[Item]:
         items.extend(arxiv_collector.collect(cfg))
     if source in ("all", "github"):
         items.extend(github_collector.collect(cfg))
+    if source in ("all", "news"):
+        items.extend(news_collector.collect(cfg))
     return items
 
 
@@ -189,7 +191,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     p = argparse.ArgumentParser(description="RNEWS — collect and summarize Robot AI / Robot Learning updates.")
     p.add_argument("--mode", choices=["daily", "weekly"], default="weekly",
                    help="`daily` shrinks lookback windows; `weekly` uses config defaults.")
-    p.add_argument("--source", choices=["all", "arxiv", "github"], default="all")
+    p.add_argument("--source", choices=["all", "arxiv", "github", "news"], default="all")
     p.add_argument("--output", choices=["markdown", "json", "both"], default="both")
     p.add_argument("--config", default="config.yaml")
     p.add_argument("--no-filter", action="store_true",

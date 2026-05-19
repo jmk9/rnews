@@ -21,7 +21,7 @@
 
   function apply() {
     let visible = 0;
-    const perSection = { code: 0, papers: 0 };
+    const perSection = { code: 0, news: 0, papers: 0 };
     const timeLimit = state.time ? parseFloat(state.time) : Infinity;
     for (const it of items) {
       const tags = (it.dataset.tags || "").split(/\s+/).filter(Boolean);
@@ -33,10 +33,11 @@
       it.style.display = show ? "" : "none";
       if (show) {
         visible++;
-        // Walk up to the nearest <section> to attribute the count
+        // Walk up to the nearest <section> and attribute by section id.
         const section = it.closest("section.section");
         if (section) {
           if (section.id === "section-code") perSection.code++;
+          else if (section.id === "section-news") perSection.news++;
           else if (section.id === "section-papers-only") perSection.papers++;
           else if (section.classList.contains("section-deprioritized")) perSection.papers++;
           else perSection.code++;

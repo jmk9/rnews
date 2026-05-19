@@ -143,16 +143,24 @@ def build_site(cfg: dict[str, Any]) -> Path:
     items_on_index = int(site_cfg.get("items_on_index", 80))
     index_items = all_items[:items_on_index]
 
-    # Partition the index list: actionable items (has code or repo) at the top,
-    # paper-only items at the bottom. Within each section, sort by score desc.
-    index_with_code = sorted(
-        (it for it in index_items if _has_code(it)),
-        key=lambda x: float(x.get("score") or 0), reverse=True,
-    )
-    index_papers_only = sorted(
-        (it for it in index_items if not _has_code(it)),
-        key=lambda x: float(x.get("score") or 0), reverse=True,
-    )
+    # Partition into three sections, top to bottom on the page:
+    #   1. Code & repos    — actionable (github items + papers with released code)
+    #   2. News & articles — industry pulse (RSS sources, scored mostly by recency)
+    #   3. Papers only     — research depth (arxiv without code link)
+    # News needs its own bucket because it's neither "code" nor "paper" — putting
+    # news in either of the existing buckets reads wrong.
+    def _bucket(it: dict[str, Any]) -> str:
+        if it.get("source") == "news":
+            return "news"
+        return "code" if _has_code(it) else "papers"
+
+    by_score = lambda x: float(x.get("score") or 0)  # noqa: E731
+    index_with_code = sorted((it for it in index_items if _bucket(it) == "code"),
+                             key=by_score, reverse=True)
+    index_news = sorted((it for it in index_items if _bucket(it) == "news"),
+                        key=by_score, reverse=True)
+    index_papers_only = sorted((it for it in index_items if _bucket(it) == "papers"),
+                               key=by_score, reverse=True)
 
     tag_counter: Counter[str] = Counter()
     for it in index_items:
@@ -192,6 +200,7 @@ def build_site(cfg: dict[str, Any]) -> Path:
 
     index_html = env.get_template("index.html.j2").render(
         items_with_code=index_with_code,
+        items_news=index_news,
         items_papers_only=index_papers_only,
         items=index_items,  # kept for back-compat if templates still reference it
         top_tags=top_tags,
@@ -202,18 +211,20 @@ def build_site(cfg: dict[str, Any]) -> Path:
         url_root="",
     )
     (site_dir / "index.html").write_text(index_html, encoding="utf-8")
-    log.info("site: wrote index.html (%d w/code + %d papers-only)",
-             len(index_with_code), len(index_papers_only))
+    log.info("site: wrote index.html (%d w/code + %d news + %d papers-only)",
+             len(index_with_code), len(index_news), len(index_papers_only))
 
     day_tpl = env.get_template("day.html.j2")
     for i, d in enumerate(days_sorted):
         day_all = sorted(by_day[d], key=lambda x: float(x.get("score") or 0), reverse=True)
-        day_with_code = [it for it in day_all if _has_code(it)]
-        day_papers_only = [it for it in day_all if not _has_code(it)]
+        day_with_code = [it for it in day_all if _bucket(it) == "code"]
+        day_news = [it for it in day_all if _bucket(it) == "news"]
+        day_papers_only = [it for it in day_all if _bucket(it) == "papers"]
         prev_day = days_sorted[i + 1] if i + 1 < len(days_sorted) else ""
         next_day = days_sorted[i - 1] if i > 0 else ""
         html = day_tpl.render(
             items_with_code=day_with_code,
+            items_news=day_news,
             items_papers_only=day_papers_only,
             items=day_all,
             date=d, generated=generated, site=site_ctx,

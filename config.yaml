@@ -193,6 +193,29 @@ sources:
     days_back: 90
     per_page: 30
     min_stars: 10
+  news:
+    enabled: true
+    days_back: 14         # show items posted within the last 2 weeks
+    max_per_feed: 25      # cap per feed so a noisy outlet can't drown the rest
+    feeds:
+      - name: "The Robot Report"
+        url: "https://www.therobotreport.com/feed/"
+      - name: "IEEE Spectrum — Robotics"
+        url: "https://spectrum.ieee.org/topic/robotics/feed"
+      - name: "TechCrunch — Robotics"
+        url: "https://techcrunch.com/category/robotics/feed/"
+      - name: "MIT News — Robotics"
+        url: "https://news.mit.edu/topic/mitrobotics-rss.xml"
+      - name: "VentureBeat — AI"
+        url: "https://venturebeat.com/category/ai/feed/"
+      - name: "Robotics and Automation News"
+        url: "https://roboticsandautomationnews.com/feed/"
+      - name: "NVIDIA Blog"
+        url: "https://blogs.nvidia.com/feed/"
+      - name: "DeepMind Blog"
+        url: "https://deepmind.google/blog/rss.xml"
+      - name: "Hacker News (front page, filtered downstream)"
+        url: "https://hnrss.org/frontpage?points=100"
 
 # Weights used by ranker.compute_score().
 # Sort policy: bias toward what people actually USE and TRUST.
