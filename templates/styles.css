@@ -55,6 +55,19 @@ body {
   margin-bottom: 1rem;
 }
 .filter-group { display: flex; align-items: center; flex-wrap: wrap; gap: .35rem; }
+.filter-search { width: 100%; padding: 0 0 .35rem; }
+#search-box {
+  width: 100%;
+  max-width: 520px;
+  padding: .5rem .75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-elev);
+  color: var(--fg);
+  font-family: inherit;
+  font-size: .92rem;
+}
+#search-box:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 2px rgba(45,92,246,0.15); }
 .filter-group strong {
   font-size: .72rem; color: var(--muted);
   text-transform: uppercase; letter-spacing: .06em;

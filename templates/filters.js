@@ -11,6 +11,8 @@
 
   // Each item is born with a data-published date string (YYYY-MM-DD).
   // We precompute its age in days once so filtering is O(1) per item.
+  // We also precompute a lowercase searchable haystack (title + summary +
+  // tags + source) so the search box doesn't re-walk the DOM each keystroke.
   for (const it of items) {
     const ds = it.dataset.published;
     let age = Infinity;
@@ -19,6 +21,26 @@
       if (!Number.isNaN(t)) age = (now - t) / DAY_MS;
     }
     it.__ageDays = age;
+    const titleEl = it.querySelector(".item-title");
+    const sumEl = it.querySelector(".item-summary");
+    const parts = [
+      titleEl ? titleEl.textContent : "",
+      sumEl ? sumEl.textContent : "",
+      it.dataset.tags || "",
+      it.dataset.source || "",
+    ];
+    it.__searchText = parts.join(" ").toLowerCase();
+  }
+
+  // Multi-word search: every whitespace-separated term must appear somewhere
+  // in the item's searchable text. Empty query => no constraint.
+  let searchTerms = [];
+  const searchBox = document.getElementById("search-box");
+  if (searchBox) {
+    searchBox.addEventListener("input", () => {
+      searchTerms = searchBox.value.toLowerCase().trim().split(/\s+/).filter(Boolean);
+      apply();
+    });
   }
 
   function apply() {
@@ -32,7 +54,9 @@
       const okSrc = !state.source || it.dataset.source === state.source;
       const okPri = !state.priority || it.dataset.priority === state.priority;
       const okTime = it.__ageDays <= timeLimit;
-      const show = okMethod && okPlatform && okSrc && okPri && okTime;
+      const okSearch = searchTerms.length === 0 ||
+        searchTerms.every((t) => it.__searchText.indexOf(t) !== -1);
+      const show = okMethod && okPlatform && okSrc && okPri && okTime && okSearch;
       it.style.display = show ? "" : "none";
       if (show) {
         visible++;
