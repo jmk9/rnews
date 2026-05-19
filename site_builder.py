@@ -160,6 +160,20 @@ def build_site(cfg: dict[str, Any]) -> Path:
             tag_counter[t] += 1
     top_tags = tag_counter.most_common(int(site_cfg.get("top_tags", 16)))
 
+    # tag_groups in config.yaml controls the visual grouping in the chip UI
+    # (e.g. Method vs Platform). Filter dimension remains single — these are
+    # just labelled clusters of chips. Tags with zero items in the current
+    # window are omitted from their group so we don't show empty chips.
+    raw_groups = cfg.get("tag_groups") or []
+    grouped_tag_counts: list[tuple[str, list[tuple[str, int]]]] = []
+    if isinstance(raw_groups, list):
+        for g in raw_groups:
+            label = str(g.get("label") or "Tag")
+            wanted = list(g.get("tags") or [])
+            counts = [(t, tag_counter[t]) for t in wanted if tag_counter[t] > 0]
+            if counts:
+                grouped_tag_counts.append((label, counts))
+
     # Group by first-seen date for the archive.
     by_day: dict[str, list[dict[str, Any]]] = {}
     for it in all_items:
@@ -181,6 +195,7 @@ def build_site(cfg: dict[str, Any]) -> Path:
         items_papers_only=index_papers_only,
         items=index_items,  # kept for back-compat if templates still reference it
         top_tags=top_tags,
+        grouped_tag_counts=grouped_tag_counts,
         archive_days=days_sorted,
         generated=generated,
         site=site_ctx,

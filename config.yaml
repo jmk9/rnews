@@ -46,12 +46,14 @@ research_interests:
   - dreamerv3
   - td-mpc
 
-# Tag inference: tag -> list of phrases that trigger it (case-insensitive substring match).
-# Kept intentionally small. We absorb related concepts (PPO, SAC, OfflineRL, etc.)
-# under the parent #RL tag instead of fragmenting the filter UI. Add more tags
-# back if a daily scan reveals that a topic genuinely needs its own bucket —
-# see SELF_FEEDBACK.md for the rule.
+# Tag taxonomy. Two orthogonal axes:
+#   - Method: how the policy was trained (#RL, #IL, #VLA)
+#   - Platform: what kind of robot was trained on (#Manipulator, #Humanoid, ...)
+# Items can carry tags from both axes (a bimanual humanoid VLA paper gets four
+# tags). Add more tags here if and only if a daily scan reveals a category that
+# genuinely needs its own bucket — see SELF_FEEDBACK.md for the rule.
 tags:
+  # ---- Method ----
   "#RL":
     - reinforcement learning
     - " rl "
@@ -70,6 +72,10 @@ tags:
     - dreamer
     - td-mpc
     - "model-based rl"
+    - hil-serl
+    - " serl "
+    - rlpd
+    - "human-in-the-loop rl"
   "#IL":
     - imitation learning
     - "behavior cloning"
@@ -77,6 +83,7 @@ tags:
     - diffusion policy
     - dppo
     - "diffusion-based policy"
+    - "interactive imitation"
   "#VLA":
     - vla
     - vision-language-action
@@ -85,12 +92,88 @@ tags:
     - foundation model
     - "pre-trained policy"
     - "pretrained policy"
-  "#HIL-SERL":
-    - hil-serl
-    - serl
-    - rlpd
-    - "human-in-the-loop"
-    - "interactive imitation"
+
+  # ---- Platform (form factor of the robot trained) ----
+  "#Manipulator":
+    - manipulator
+    - "robot arm"
+    - "robotic arm"
+    - "franka"
+    - "panda arm"
+    - "ur5"
+    - "ur10"
+    - "ur3"
+    - "kuka"
+    - "xarm"
+    - "iiwa"
+    - "tabletop manipulation"
+    - "table-top manipulation"
+  "#Bimanual":
+    - bimanual
+    - "two-arm"
+    - "dual-arm"
+    - "two arm"
+    - "dual arm"
+    - aloha
+  "#MobileManipulator":
+    - mobile manipulator
+    - "mobile manipulation"
+    - "stretch robot"
+    - "hello robot stretch"
+    - tiago
+    - "fetch robot"
+    - "mobile aloha"
+    - tidybot
+  "#Humanoid":
+    - humanoid
+    - bipedal
+    - biped
+    - "boston dynamics atlas"
+    - "unitree h1"
+    - "unitree g1"
+    - "tesla optimus"
+    - "figure 01"
+    - "figure 02"
+    - "1x neo"
+    - "agility digit"
+    - "whole-body humanoid"
+  "#Quadruped":
+    - quadruped
+    - quadrupedal
+    - "boston dynamics spot"
+    - anymal
+    - "unitree go1"
+    - "unitree go2"
+    - "unitree a1"
+    - "unitree aliengo"
+    - "four-legged"
+    - "four legged"
+    - "legged locomotion"
+  "#UGV":
+    - " ugv "
+    - "wheeled robot"
+    - "differential drive"
+    - ackermann
+    - "f1tenth"
+    - "racing car"
+  "#Drone":
+    - " drone "
+    - quadcopter
+    - " uav "
+    - "aerial robot"
+    - "aerial manipulation"
+    - multirotor
+    - quadrotor
+    - hexarotor
+
+# Tag chip groups. Drives the visual grouping on the site (Method / Platform).
+# Filter dimension is still single — clicking any chip filters by that one tag —
+# but the UI groups them so users see structure at a glance.
+tag_groups:
+  - label: Method
+    tags: ["#RL", "#IL", "#VLA"]
+  - label: Platform
+    tags: ["#Manipulator", "#Bimanual", "#MobileManipulator", "#Humanoid", "#Quadruped", "#UGV", "#Drone"]
 
 sources:
   arxiv:
