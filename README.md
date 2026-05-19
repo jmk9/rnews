@@ -1,15 +1,63 @@
 # RNEWS — Robot NEWS
 
-A local tool that collects, filters, ranks, and summarizes the latest papers and
-code in robot learning / robot AI — then publishes a clean, shareable **static
-site** you can host anywhere.
+**👉 Live site: https://jmk9.github.io/rnews/**
 
-Sorting is biased toward what people *actually use*: GitHub stars and active
-maintenance are weighted heavily, code-released papers beat code-less ones,
-real-robot experiments beat sim-only.
+Daily picks in robot learning — RL / IL / VLA across cobot manipulators,
+bimanual setups, mobile manipulators, and humanoid robots. Plus an industry
+news feed (Figure / 1X / NVIDIA / DeepMind announcements, TechCrunch, IEEE
+Spectrum, Hacker News, …).
 
-Sources today: **arXiv** (cs.RO/AI/LG/CV) + **GitHub** search.
-The pipeline is source-agnostic, so adding Semantic Scholar / HF Papers later is just a new collector.
+Updated daily at **07:00 KST**. Sorted by what people *actually use* —
+GitHub stars, code availability, real-robot experiments.
+
+---
+
+## How to use the site (no setup, just browse)
+
+Open https://jmk9.github.io/rnews/ in any browser. The page is a single
+scrollable feed, organized top to bottom:
+
+1. **Code & repos** — GitHub projects + papers that released code. The
+   actionable stuff. Sorted by popularity (stars + forks).
+2. **News & articles** — fresh industry pulse from RSS feeds.
+3. **Papers only** — research papers without code. Lower priority but kept
+   for completeness.
+
+### Filter chips at the top
+
+| Chip row | What it does |
+|---|---|
+| **Method** | `#RL` / `#IL` / `#VLA` — how the policy was trained |
+| **Platform** | `#Manipulator` / `#Bimanual` / `#MobileManipulator` / `#Humanoid` — what kind of robot |
+| **Source** | `arXiv` / `GitHub` / `News` |
+| **Priority** | `High` / `Mid` / `Low` (color-bar on left of each card matches) |
+| **Time** | last `1 week` / `1 month` / `3 months` |
+
+**Method and Platform stack** — clicking `#VLA` then `#Manipulator` shows
+only VLA work on cobot arms. Other dimensions also AND together. Click
+**All** in a row to clear that dimension.
+
+### Other things on the page
+
+- **Card color bar** (left edge): 🟢 green = High, 🟠 amber = Mid, ⚪ gray = Low
+- **Card title** is a link — opens the original paper / repo / article
+- **Tags on each card** show its Method + Platform classification
+- **Daily archive** links at the top jump to per-day snapshots
+- **RSS feed** at `https://jmk9.github.io/rnews/feed.xml` — subscribe in any
+  feed reader (NetNewsWire, Reeder, Feedly, Vivaldi) for new items
+
+### What it covers
+
+- Sources: **arXiv** (cs.RO / cs.AI / cs.LG / cs.CV) + **GitHub** search + **9 RSS news feeds**
+- ~90-day rolling window; the daily run accumulates more over time
+- Two-axis tag taxonomy stays small on purpose — Method (3) × Platform (4) — so the filter UI stays scannable
+
+---
+
+## For developers — running locally
+
+Below is everything you need to fork, run, and self-host. Skip if you just
+want to read the live site.
 
 ## What you get out of one run
 
