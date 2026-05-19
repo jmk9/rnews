@@ -134,8 +134,11 @@ def build_site(cfg: dict[str, Any]) -> Path:
     all_items = _load_all_processed(processed_dir)
     log.info("site: loaded %d unique items from %s", len(all_items), processed_dir)
 
-    # Sort by (first_seen desc, score desc) — newest+best on top.
-    all_items.sort(key=lambda x: (_first_seen(x), float(x.get("score") or 0)), reverse=True)
+    # Sort by score desc, then first_seen desc as a tiebreaker. We previously
+    # had first_seen as the primary key, but that buried high-quality repos
+    # under freshly-backfilled papers just because the papers were "discovered
+    # today". Score-first is what the user actually scans for.
+    all_items.sort(key=lambda x: (float(x.get("score") or 0), _first_seen(x)), reverse=True)
 
     items_on_index = int(site_cfg.get("items_on_index", 80))
     index_items = all_items[:items_on_index]
