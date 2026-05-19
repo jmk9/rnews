@@ -1,6 +1,20 @@
 name: daily
 
 on:
+  # Auto-deploy on relevant code/template/config pushes. Skips the heavy
+  # collection step (see job below) — just rebuilds the site from data
+  # already in the repo, so it's fast and doesn't touch arXiv.
+  push:
+    branches: [main]
+    paths:
+      - "templates/**"
+      - "*.py"
+      - "config.yaml"
+      - "collectors/**"
+      - "processors/**"
+      - "utils/**"
+      - "requirements.txt"
+      - ".github/workflows/**"
   schedule:
     # 22:00 UTC daily = 07:00 KST. GitHub-scheduled cron can lag 5–30 min;
     # this gives buffer before a typical 08:30 KST work start.
@@ -30,13 +44,23 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run the monitor (daily mode)
+      - name: Run the monitor (full pipeline — scheduled/manual)
+        if: github.event_name != 'push'
         env:
           # Built-in token; gives ~1000 req/hour for the search API.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python main.py --mode daily
 
+      - name: Rebuild site only (after code/template push)
+        if: github.event_name == 'push'
+        # No network on push — just re-render from data/processed already in
+        # the repo. Cheap, deterministic, and avoids hammering arXiv every commit.
+        run: python main.py --site-only
+
       - name: Persist accumulated processed data + state
+        # Only after a full collection run; push-triggered rebuilds don't
+        # change data files and would commit nothing anyway.
+        if: github.event_name != 'push'
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
