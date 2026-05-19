@@ -65,9 +65,12 @@ def _score_one(item: Item, cfg: dict[str, Any], days_back: int) -> tuple[float, 
 
     if item.source == "github":
         stars = int(item.extra.get("stars", 0))
+        forks = int(item.extra.get("forks", 0))
         breakdown["github_stars_log"] = math.log10(stars + 1.0) * float(w.get("github_stars_log", 0))
+        breakdown["github_forks_log"] = math.log10(forks + 1.0) * float(w.get("github_forks_log", 0))
     else:
         breakdown["github_stars_log"] = 0.0
+        breakdown["github_forks_log"] = 0.0
 
     real_robot = any(h in summary_lc for h in _REAL_ROBOT_HINTS)
     breakdown["real_robot"] = float(w.get("real_robot", 0)) if real_robot else 0.0

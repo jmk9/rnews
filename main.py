@@ -1,4 +1,4 @@
-"""Robot AI Monitor — CLI entry point.
+"""RNEWS (Robot NEWS) — CLI entry point.
 
 Pipeline: collect -> dedupe -> tag -> rank -> mark-seen -> (daily filter) ->
 summarize -> save -> markdown report -> static site.
@@ -23,7 +23,7 @@ from site_builder import build_site
 from utils.io import Item, ensure_dir, load_json, save_json, save_text
 from utils.state import SeenStore
 
-log = logging.getLogger("robot-ai-monitor")
+log = logging.getLogger("rnews")
 
 PRIORITY_LABELS = {
     "must_read": "High",
@@ -139,7 +139,7 @@ def build_report(items: list[Item], cfg: dict[str, Any], mode: str) -> str:
     repos = [it for it in items if it.source == "github"][:top_repos_n]
 
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    title = "Robot AI " + ("Daily" if mode == "daily" else "Weekly") + " Report"
+    title = "RNEWS " + ("Daily" if mode == "daily" else "Weekly") + " Report"
 
     parts = [f"# {title}", f"_Generated: {today} (UTC)_", ""]
     parts.append(f"- arXiv papers in this report: {sum(1 for i in items if i.source == 'arxiv')}")
@@ -186,7 +186,7 @@ def build_report(items: list[Item], cfg: dict[str, Any], mode: str) -> str:
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
-    p = argparse.ArgumentParser(description="Collect and summarize Robot AI / Robot Learning updates.")
+    p = argparse.ArgumentParser(description="RNEWS — collect and summarize Robot AI / Robot Learning updates.")
     p.add_argument("--mode", choices=["daily", "weekly"], default="weekly",
                    help="`daily` shrinks lookback windows; `weekly` uses config defaults.")
     p.add_argument("--source", choices=["all", "arxiv", "github"], default="all")

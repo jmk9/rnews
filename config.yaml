@@ -1,4 +1,4 @@
-# Robot AI Monitor — configuration
+# Robot NEWS (RNEWS) — configuration
 
 # Keywords that an item should contain at least one of (in title or abstract/README).
 # Used to filter out obviously-unrelated items before scoring.
@@ -112,15 +112,21 @@ sources:
     min_stars: 10
 
 # Weights used by ranker.compute_score().
+# Sort policy: bias toward what people actually USE and TRUST.
+#   - github_stars_log dominates for repos (popularity = trust proxy)
+#   - github_forks_log secondary (forks = real usage, not bookmarks)
+#   - has_code matters a lot (J2: find code I can run)
+#   - real_robot matters (effectiveness — papers that touched hardware)
 ranking:
   title_keyword: 3.0          # per must_match keyword hit in title
   abstract_keyword: 1.0       # per must_match keyword hit in abstract/readme
   research_interest_title: 5.0   # per research_interest hit in title
   research_interest_abstract: 2.0 # per research_interest hit in abstract/readme
   recency: 3.0                # 0..1 scaled by how recent within days_back
-  has_code: 4.0               # paper mentions github/code release
-  github_stars_log: 1.5       # log10(stars+1) * weight for repos
-  real_robot: 2.0             # paper mentions real-robot experiment
+  has_code: 6.0               # bumped — code release is a strong "actually useful" signal
+  github_stars_log: 5.0       # bumped — popularity dominates the ordering for repos
+  github_forks_log: 2.0       # NEW — forks indicate real downstream usage
+  real_robot: 3.0             # bumped — practical effectiveness signal for papers
 
 # Priority thresholds applied to final score
 priority:
@@ -147,8 +153,8 @@ site:
   enabled: true
   output_dir: site
   templates_dir: templates
-  title: "Robot AI Monitor"
-  description: "Daily picks in robot learning, RL, VLA, diffusion policy, sim-to-real, and friends."
+  title: "RNEWS — Robot NEWS"
+  description: "Daily picks in robot learning, RL, IL, VLA, and HIL-SERL. Sorted by how much people actually use it."
   url: ""              # If hosted, set absolute URL — used for RSS <link>.
   items_on_index: 1500  # how many items the front page renders (client-side time filter narrows from this pool)
   top_tags: 16         # how many tag-filter chips to expose

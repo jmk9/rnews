@@ -1,8 +1,12 @@
-# Robot AI Monitor
+# RNEWS — Robot NEWS
 
 A local tool that collects, filters, ranks, and summarizes the latest papers and
 code in robot learning / robot AI — then publishes a clean, shareable **static
 site** you can host anywhere.
+
+Sorting is biased toward what people *actually use*: GitHub stars and active
+maintenance are weighted heavily, code-released papers beat code-less ones,
+real-robot experiments beat sim-only.
 
 Sources today: **arXiv** (cs.RO/AI/LG/CV) + **GitHub** search.
 The pipeline is source-agnostic, so adding Semantic Scholar / HF Papers later is just a new collector.
@@ -95,10 +99,10 @@ Reeder, Feedly, …) can subscribe and get updates automatically.
 
 ### systemd timer (more reliable, recovers from missed runs)
 
-`~/.config/systemd/user/robot-ai-monitor.service`:
+`~/.config/systemd/user/rnews.service`:
 ```ini
 [Unit]
-Description=Robot AI Monitor daily run
+Description=RNEWS daily run
 
 [Service]
 Type=oneshot
@@ -106,10 +110,10 @@ WorkingDirectory=%h/RNEWS
 ExecStart=%h/RNEWS/.venv/bin/python main.py --mode daily
 ```
 
-`~/.config/systemd/user/robot-ai-monitor.timer`:
+`~/.config/systemd/user/rnews.timer`:
 ```ini
 [Unit]
-Description=Robot AI Monitor daily
+Description=RNEWS daily
 
 [Timer]
 OnCalendar=Mon..Fri *-*-* 08:30:00 Asia/Seoul
@@ -120,7 +124,7 @@ WantedBy=timers.target
 ```
 
 ```bash
-systemctl --user enable --now robot-ai-monitor.timer
+systemctl --user enable --now rnews.timer
 ```
 
 ### GitHub Actions

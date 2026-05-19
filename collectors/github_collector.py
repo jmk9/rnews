@@ -21,7 +21,7 @@ SEARCH_URL = "https://api.github.com/search/repositories"
 
 
 def _headers() -> dict[str, str]:
-    h = {"Accept": "application/vnd.github+json", "User-Agent": "robot-ai-monitor"}
+    h = {"Accept": "application/vnd.github+json", "User-Agent": "rnews"}
     token = os.environ.get("GITHUB_TOKEN")
     if token:
         h["Authorization"] = f"Bearer {token}"

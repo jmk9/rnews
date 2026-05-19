@@ -24,7 +24,7 @@ from typing import Any
 import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-log = logging.getLogger("robot-ai-monitor.site")
+log = logging.getLogger("rnews.site")
 
 PRIORITY_LABELS = {
     "must_read": "High",
@@ -170,7 +170,7 @@ def build_site(cfg: dict[str, Any]) -> Path:
 
     env = _build_env(templates_dir)
     site_ctx = {
-        "title": site_cfg.get("title", "Robot AI Monitor"),
+        "title": site_cfg.get("title", "RNEWS — Robot NEWS"),
         "description": site_cfg.get("description", ""),
         "url": site_cfg.get("url", ""),
     }
@@ -222,7 +222,7 @@ def _load_config(path: str | Path) -> dict[str, Any]:
 
 
 def main(argv: list[str] | None = None) -> int:
-    p = argparse.ArgumentParser(description="Render the Robot AI Monitor static site.")
+    p = argparse.ArgumentParser(description="Render the RNEWS static site.")
     p.add_argument("--config", default="config.yaml")
     p.add_argument("-v", "--verbose", action="store_true")
     args = p.parse_args(argv)
