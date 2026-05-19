@@ -24,6 +24,7 @@ log = logging.getLogger(__name__)
 
 _HTML_TAG = re.compile(r"<[^>]+>")
 _WS = re.compile(r"\s+")
+_IMG_SRC = re.compile(r"<img[^>]+src=[\"']([^\"']+)[\"']", re.IGNORECASE)
 
 
 def _strip_html(text: str) -> str:
@@ -31,6 +32,53 @@ def _strip_html(text: str) -> str:
     if not text:
         return ""
     return _WS.sub(" ", html.unescape(_HTML_TAG.sub(" ", text))).strip()
+
+
+def _extract_thumbnail(entry: Any, summary_html: str) -> str:
+    """Pull a representative image URL from a feed entry.
+
+    Tries in order: <media:thumbnail>, <media:content type=image/*>, <enclosure>
+    with image MIME, then the first <img> inside summary HTML. Returns ""
+    when nothing usable is present.
+    """
+    def _get(name: str) -> Any:
+        v = getattr(entry, name, None)
+        if v is None and hasattr(entry, "get"):
+            v = entry.get(name)
+        return v
+
+    media_thumb = _get("media_thumbnail")
+    if isinstance(media_thumb, list) and media_thumb:
+        url = media_thumb[0].get("url") if isinstance(media_thumb[0], dict) else None
+        if url:
+            return url
+
+    media_content = _get("media_content")
+    if isinstance(media_content, list):
+        for mc in media_content:
+            if not isinstance(mc, dict):
+                continue
+            mc_url = mc.get("url")
+            mc_type = (mc.get("type") or "").lower()
+            if mc_url and (mc_type.startswith("image/")
+                           or mc_url.lower().endswith((".jpg", ".jpeg", ".png", ".webp", ".gif"))):
+                return mc_url
+
+    enclosures = _get("enclosures") or []
+    for enc in enclosures:
+        try:
+            enc_url = enc.get("href") if hasattr(enc, "get") else None
+            enc_type = (enc.get("type") if hasattr(enc, "get") else "") or ""
+        except Exception:
+            continue
+        if enc_url and enc_type.lower().startswith("image/"):
+            return enc_url
+
+    if summary_html:
+        m = _IMG_SRC.search(summary_html)
+        if m:
+            return m.group(1)
+    return ""
 
 
 def _parse_published(entry: Any) -> str:
@@ -59,12 +107,18 @@ def _to_item(entry: Any, feed_name: str) -> Item | None:
     if not title or not url:
         return None
 
-    summary = (
-        _strip_html(getattr(entry, "summary", "") or entry.get("summary", ""))
-        or _strip_html(getattr(entry, "description", "") or entry.get("description", ""))
+    summary_raw = (
+        getattr(entry, "summary", "") or entry.get("summary", "")
+        or getattr(entry, "description", "") or entry.get("description", "")
     )
+    summary = _strip_html(summary_raw)
+    thumbnail = _extract_thumbnail(entry, summary_raw)
     published = _parse_published(entry)
     author = getattr(entry, "author", "") or entry.get("author", "")
+
+    extra: dict[str, Any] = {"feed": feed_name}
+    if thumbnail:
+        extra["thumbnail"] = thumbnail
 
     return Item(
         id=f"news:{_stable_id(url, title)}",
@@ -75,7 +129,7 @@ def _to_item(entry: Any, feed_name: str) -> Item | None:
         published=published,
         updated=published,
         authors=[author] if author else [],
-        extra={"feed": feed_name},
+        extra=extra,
     )
 
 

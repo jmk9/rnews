@@ -141,7 +141,14 @@ def build_site(cfg: dict[str, Any]) -> Path:
     all_items.sort(key=lambda x: (float(x.get("score") or 0), _first_seen(x)), reverse=True)
 
     items_on_index = int(site_cfg.get("items_on_index", 80))
-    index_items = all_items[:items_on_index]
+    news_min_slots = int(site_cfg.get("news_min_slots", 50))
+    # Reserve slots for News explicitly. News items score low (no stars, no
+    # has_code) so a pure top-by-score cut buries almost all of them. We take
+    # the top-N non-news as the main pool, then add top-M news on top.
+    non_news = [it for it in all_items if it.get("source") != "news"][:items_on_index]
+    news_subset = [it for it in all_items if it.get("source") == "news"][:news_min_slots]
+    seen_ids = {it.get("id") for it in non_news}
+    index_items = non_news + [it for it in news_subset if it.get("id") not in seen_ids]
 
     # Partition into three sections, top to bottom on the page:
     #   1. Code & repos    — actionable (github items + papers with released code)

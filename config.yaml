@@ -239,5 +239,6 @@ site:
   title: "RNEWS — Robot NEWS"
   description: "Daily picks in robot learning — RL / IL / VLA across cobot manipulators, bimanual, mobile manipulators, and humanoids. Sorted by how much people actually use it."
   url: ""              # If hosted, set absolute URL — used for RSS <link>.
-  items_on_index: 1500  # how many items the front page renders (client-side time filter narrows from this pool)
+  items_on_index: 1500  # cap for non-news items (papers + repos)
+  news_min_slots: 50   # ensure at least this many news items always visible
   top_tags: 16         # how many tag-filter chips to expose

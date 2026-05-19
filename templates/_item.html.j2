@@ -3,30 +3,49 @@
   data-priority="{{ it.priority }}"
   data-tags="{{ (it.tags or []) | join(' ') }}"
   data-published="{{ (it.updated or it.published or '')[:10] }}">
-  <div class="item-header">
-    <a class="item-title" href="{{ it.url }}" target="_blank" rel="noopener">{{ it.title }}</a>
-    <span class="badge badge-{{ it.source }}">{{ it.source }}</span>
-    {% if it.priority %}<span class="badge badge-{{ it.priority }}">{{ priority_label(it.priority) }}</span>{% endif %}
-  </div>
-  <div class="item-meta">
-    {% if it.authors %}
-      {{ it.authors[:5] | join(', ') }}{% if it.authors|length > 5 %} et al.{% endif %} ·
-    {% endif %}
-    {% if it.source == 'github' and it.extra and it.extra.stars is defined %}
-      ★ {{ it.extra.stars }} ·
-      {% if it.extra.language %}{{ it.extra.language }} · {% endif %}
-    {% endif %}
-    {% set date_str = (it.updated or it.published or '')[:10] %}
-    {% if date_str %}
-      {% if it.source == 'github' %}Last pushed{% elif it.source == 'news' %}Published{% else %}Updated{% endif %} {{ date_str }}
-    {% endif %}
-  </div>
-  {% if it.tags %}
-  <div class="item-tags">
-    {% for t in it.tags %}<span class="tag">{{ t }}</span>{% endfor %}
-  </div>
+
+  {# Thumbnail: github -> owner avatar (always available), news -> RSS-extracted image,
+     arxiv (or news without image) -> a small CSS placeholder badge. Avatars hide
+     gracefully if the image fails to load. #}
+  {% if it.source == 'github' %}
+    {% set owner = it.title.split('/')[0] %}
+    <img class="item-thumb item-thumb-avatar" src="https://github.com/{{ owner }}.png?size=160"
+         loading="lazy" alt="" onerror="this.style.display='none'" />
+  {% elif it.source == 'news' and it.extra and it.extra.thumbnail %}
+    <img class="item-thumb" src="{{ it.extra.thumbnail }}"
+         loading="lazy" alt="" onerror="this.style.display='none'" />
+  {% else %}
+    <div class="item-thumb item-thumb-placeholder item-thumb-{{ it.source }}">
+      <span>{{ it.source }}</span>
+    </div>
   {% endif %}
-  {% if it.summary %}
-  <p class="item-summary">{{ it.summary }}</p>
-  {% endif %}
+
+  <div class="item-body">
+    <div class="item-header">
+      <a class="item-title" href="{{ it.url }}" target="_blank" rel="noopener">{{ it.title }}</a>
+      <span class="badge badge-{{ it.source }}">{{ it.source }}</span>
+      {% if it.priority %}<span class="badge badge-{{ it.priority }}">{{ priority_label(it.priority) }}</span>{% endif %}
+    </div>
+    <div class="item-meta">
+      {% if it.authors %}
+        {{ it.authors[:5] | join(', ') }}{% if it.authors|length > 5 %} et al.{% endif %} ·
+      {% endif %}
+      {% if it.source == 'github' and it.extra and it.extra.stars is defined %}
+        ★ {{ it.extra.stars }} ·
+        {% if it.extra.language %}{{ it.extra.language }} · {% endif %}
+      {% endif %}
+      {% set date_str = (it.updated or it.published or '')[:10] %}
+      {% if date_str %}
+        {% if it.source == 'github' %}Last pushed{% elif it.source == 'news' %}Published{% else %}Updated{% endif %} {{ date_str }}
+      {% endif %}
+    </div>
+    {% if it.tags %}
+    <div class="item-tags">
+      {% for t in it.tags %}<span class="tag">{{ t }}</span>{% endfor %}
+    </div>
+    {% endif %}
+    {% if it.summary %}
+    <p class="item-summary">{{ it.summary }}</p>
+    {% endif %}
+  </div>
 </article>
