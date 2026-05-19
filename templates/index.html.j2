@@ -6,9 +6,7 @@
     {% for group_label, group_tags in grouped_tag_counts %}
     <div class="filter-group">
       <strong>{{ group_label }}</strong>
-      {% if loop.first %}
       <button class="chip active" data-filter="tag" data-value="">All</button>
-      {% endif %}
       {% for tag, count in group_tags %}
       <button class="chip" data-filter="tag" data-value="{{ tag }}">{{ tag }} <span class="count">{{ count }}</span></button>
       {% endfor %}

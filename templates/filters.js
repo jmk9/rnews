@@ -57,10 +57,20 @@
       const filter = btn.dataset.filter;
       const value = btn.dataset.value || "";
       state[filter] = value;
+      // A given filter dimension may repeat its "All" button across multiple
+      // visual groups (e.g. Method row + Platform row both have an All chip
+      // bound to data-filter=tag). Activating *every* chip with the matching
+      // value keeps the UI honest: clicking "All" in either row lights up
+      // both Alls, clicking #VLA lights up only #VLA.
       document
         .querySelectorAll('.chip[data-filter="' + filter + '"]')
-        .forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
+        .forEach((b) => {
+          if ((b.dataset.value || "") === value) {
+            b.classList.add("active");
+          } else {
+            b.classList.remove("active");
+          }
+        });
       apply();
     });
   });
