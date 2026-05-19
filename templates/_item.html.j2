@@ -16,8 +16,10 @@
       ★ {{ it.extra.stars }} ·
       {% if it.extra.language %}{{ it.extra.language }} · {% endif %}
     {% endif %}
-    {{ (it.updated or it.published or '')[:10] }} · score {{ it.score }}
-    {% if it.extra and it.extra.first_seen %} · first seen {{ it.extra.first_seen }}{% endif %}
+    {% set date_str = (it.updated or it.published or '')[:10] %}
+    {% if date_str %}
+      {% if it.source == 'github' %}Last pushed{% elif it.source == 'news' %}Published{% else %}Updated{% endif %} {{ date_str }}
+    {% endif %}
   </div>
   {% if it.tags %}
   <div class="item-tags">

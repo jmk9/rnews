@@ -1,6 +1,13 @@
 {% extends "_layout.html.j2" %}
 {% block content %}
 
+<p class="page-hint">
+  Search by keyword, or click chips to filter — <strong>Method</strong> and <strong>Platform</strong> stack
+  (e.g. <code>#VLA</code> + <code>#Humanoid</code> shows only VLA on humanoids).
+  Color bar on each card's left edge: <span style="color:var(--must)">●</span> High ·
+  <span style="color:var(--save)">●</span> Mid · <span style="color:var(--low)">●</span> Low.
+</p>
+
 <section class="filters" aria-label="Filters">
   <div class="filter-group filter-search">
     <input type="search" id="search-box" placeholder="Search titles, summaries, tags…" autocomplete="off" />
