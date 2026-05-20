@@ -4,8 +4,11 @@
 
 Daily picks in robot learning — RL / IL / VLA across cobot manipulators,
 bimanual setups, mobile manipulators, and humanoid robots. Plus an industry
-news feed (Figure / 1X / NVIDIA / DeepMind announcements, TechCrunch, IEEE
-Spectrum, Hacker News, …).
+news feed from ~18 sources (Robohub, IEEE Spectrum, TechCrunch, NVIDIA,
+DeepMind, MIT, 로봇신문, AI타임스, …).
+
+Each card carries a short **LLM-written summary** — read the gist in place,
+click the title only when you want the original paper / repo / article.
 
 Updated daily at **07:00 KST**. Sorted by what people *actually use* —
 GitHub stars, code availability, real-robot experiments.
@@ -25,15 +28,18 @@ scrollable feed, organized top to bottom:
 
 ### Search and filter
 
-- **Search box** at the top — full-text over title, summary, and tags.
-- **Method** row: `#RL` / `#IL` / `#VLA`
-- **Platform** row: `#Manipulator` / `#Bimanual` / `#MobileManipulator` / `#Humanoid`
-- **Source**: `arXiv` / `GitHub` / `News`
-- **Priority**: `High` / `Mid` / `Low` (color bar on each card's left edge)
-- **Time**: last `1 week` / `1 month` / `3 months`
+- **Search box** — full-text over title, summary, and tags (× to clear; matches
+  highlighted in titles).
+- **Source**: `News` / `arXiv` / `GitHub`
+- **Method**: `#RL` / `#IL` / `#VLA` (VLA also covers robot foundation models)
+- **Platform**: `#Manipulator` / `#Bimanual` / `#MobileManipulator` / `#Humanoid` /
+  `#Other` (no specific platform)
+- **More filters** (collapsed): **Priority** `High`/`Mid`/`Low` · **Time** last
+  `1w`/`1m`/`3m` · **Sort by** `Score` (relevance, default) / `Created` / `Pushed` / `Stars`
 
-Filters stack — `#VLA` + `#Manipulator` shows only VLA work on cobot arms.
-Click **All** in a row to clear that dimension.
+Filters stack — `#VLA` + `#Humanoid` shows only VLA work on humanoids.
+Click **All** in a row to clear that dimension. The colored bar on each card's
+left edge is its priority (🟢 High / 🟠 Mid / ⚪ Low).
 
 ### Subscribe
 
@@ -51,10 +57,20 @@ python main.py --site-only  # rebuild site from existing data, no network
 ```
 
 Outputs go to `data/`, `reports/`, and `site/`. Configuration in
-[`config.yaml`](config.yaml). The pipeline runs daily via GitHub Actions
+[`config.yaml`](config.yaml) — sources, keywords, tag taxonomy
+(Method × Platform), ranking weights, and `exclude_keywords` (drops
+out-of-scope topics like self-driving / finance / video-gen).
+
+**Summaries** are pluggable via `summarizer.provider` in config:
+`codex` (OpenAI Codex CLI, uses the ChatGPT-extension OAuth — no API key,
+local only), `openai` (`OPENAI_API_KEY`), `claude` (`ANTHROPIC_API_KEY`),
+or `truncation` (no LLM). Backfill existing items with
+`python scripts/llm_summarize.py`.
+
+The pipeline runs daily via GitHub Actions
 (see [`.github/workflows/daily.yml`](.github/workflows/daily.yml)) and
 auto-deploys to GitHub Pages.
 
 To add a new source: drop a `collectors/<name>_collector.py` exposing
 `collect(cfg: dict) -> list[Item]` and wire it into [`main.py`](main.py).
-The rest (dedup, tag, rank, render) is source-agnostic.
+The rest (dedup, tag, rank, summarize, render) is source-agnostic.
