@@ -19,6 +19,14 @@
 <section class="filters" aria-label="Filters">
   <div class="filter-group filter-search">
     <input type="search" id="search-box" placeholder="Search titles, summaries, tags…" autocomplete="off" />
+    <button type="button" id="search-clear" aria-label="Clear search" hidden>&times;</button>
+  </div>
+  <div class="filter-group">
+    <strong>Source</strong>
+    <button class="chip active" data-filter="source" data-value="">All</button>
+    <button class="chip" data-filter="source" data-value="news">News</button>
+    <button class="chip" data-filter="source" data-value="arxiv">arXiv</button>
+    <button class="chip" data-filter="source" data-value="github">GitHub</button>
   </div>
   {% if grouped_tag_counts %}
     {% for group_label, group_filter, group_tags in grouped_tag_counts %}
@@ -30,46 +38,37 @@
       {% endfor %}
     </div>
     {% endfor %}
-  {% else %}
-    <div class="filter-group">
-      <strong>Tag</strong>
-      <button class="chip active" data-filter="tag" data-value="">All</button>
-      {% for tag, count in top_tags %}
-      <button class="chip" data-filter="tag" data-value="{{ tag }}">{{ tag }}</button>
-      {% endfor %}
-    </div>
   {% endif %}
-  <div class="filter-group">
-    <strong>Source</strong>
-    <button class="chip active" data-filter="source" data-value="">All</button>
-    <button class="chip" data-filter="source" data-value="news">News</button>
-    <button class="chip" data-filter="source" data-value="arxiv">arXiv</button>
-    <button class="chip" data-filter="source" data-value="github">GitHub</button>
-  </div>
-  <div class="filter-group">
-    <strong>Priority</strong>
-    <button class="chip active" data-filter="priority" data-value="">All</button>
-    <button class="chip" data-filter="priority" data-value="must_read">High</button>
-    <button class="chip" data-filter="priority" data-value="save_for_later">Mid</button>
-    <button class="chip" data-filter="priority" data-value="low_priority">Low</button>
-  </div>
-  <div class="filter-group">
-    <strong>Time</strong>
-    <button class="chip active" data-filter="time" data-value="">All</button>
-    <button class="chip" data-filter="time" data-value="7">1 week</button>
-    <button class="chip" data-filter="time" data-value="31">1 month</button>
-    <button class="chip" data-filter="time" data-value="93">3 months</button>
-  </div>
-  <div class="filter-group">
-    <strong>Sort by</strong>
-    <button class="chip active" data-filter="sort" data-value="">Score</button>
-    <button class="chip" data-filter="sort" data-value="created">Created</button>
-    <button class="chip" data-filter="sort" data-value="pushed">Pushed</button>
-    <button class="chip" data-filter="sort" data-value="stars">Stars</button>
-  </div>
+  <details class="more-filters">
+    <summary>More filters</summary>
+    <div class="more-filters-body">
+      <div class="filter-group">
+        <strong>Priority</strong>
+        <button class="chip active" data-filter="priority" data-value="">All</button>
+        <button class="chip" data-filter="priority" data-value="must_read">High</button>
+        <button class="chip" data-filter="priority" data-value="save_for_later">Mid</button>
+        <button class="chip" data-filter="priority" data-value="low_priority">Low</button>
+      </div>
+      <div class="filter-group">
+        <strong>Time</strong>
+        <button class="chip active" data-filter="time" data-value="">All</button>
+        <button class="chip" data-filter="time" data-value="7">1 week</button>
+        <button class="chip" data-filter="time" data-value="31">1 month</button>
+        <button class="chip" data-filter="time" data-value="93">3 months</button>
+      </div>
+      <div class="filter-group">
+        <strong>Sort by</strong>
+        <button class="chip active" data-filter="sort" data-value="">Score</button>
+        <button class="chip" data-filter="sort" data-value="created">Created</button>
+        <button class="chip" data-filter="sort" data-value="pushed">Pushed</button>
+        <button class="chip" data-filter="sort" data-value="stars">Stars</button>
+      </div>
+    </div>
+  </details>
 </section>
 
 <p class="result-count"><span id="visible-count">{{ (items_with_code|length) + (items_news|length) + (items_papers_only|length) }}</span> of {{ (items_with_code|length) + (items_news|length) + (items_papers_only|length) }} items</p>
+<p class="empty-state" id="empty-state" hidden>No items match these filters. Try clearing one.</p>
 
 <section class="section" id="section-code">
   <h2 class="section-title">Code &amp; repos <span class="muted">(<span class="section-count" data-section="code">{{ items_with_code|length }}</span>)</span></h2>
@@ -106,6 +105,8 @@
     {% endfor %}
   </div>
 </section>
+
+<button type="button" id="back-to-top" aria-label="Back to top" hidden>↑ Top</button>
 
 <script src="{{ url_root }}filters.js?v={{ generated_ts }}"></script>
 {% endblock %}

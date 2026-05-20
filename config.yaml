@@ -125,9 +125,18 @@ tags:
     - vision-language-action
     - "vision language action"
     - openvla
-    # NOTE: "foundation model" / "pretrained policy" removed — too broad.
-    # A robotics foundation model is not necessarily a VLA (e.g. Genesis AI's
-    # GENE was tagged #VLA only because it said "foundation model").
+    # NOTE: "foundation model" lives in #FoundationModel now (not every
+    # foundation model is a VLA — e.g. Genesis AI's GENE).
+  "#FoundationModel":
+    - foundation model
+    - "robot foundation model"
+    - "robotics foundation model"
+    - "generalist policy"
+    - "generalist robot"
+    - "pretrained policy"
+    - "pre-trained policy"
+    - "기반 모델"
+    - "파운데이션 모델"
 
   # ---- Platform (cobot family + humanoid).
   # Humanoid kept because modern bipedal robots (Figure, 1X, Optimus, H1)
@@ -203,7 +212,7 @@ tags:
 tag_groups:
   - label: Method
     filter_key: method
-    tags: ["#RL", "#IL", "#VLA"]
+    tags: ["#RL", "#IL", "#VLA", "#FoundationModel"]
   - label: Platform
     filter_key: platform
     # #Other is the platform catch-all — items matching none of the 4 above.

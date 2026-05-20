@@ -75,11 +75,10 @@ body {
   margin-bottom: 1rem;
 }
 .filter-group { display: flex; align-items: center; flex-wrap: wrap; gap: .35rem; }
-.filter-search { width: 100%; padding: 0 0 .35rem; }
+.filter-search { width: 100%; padding: 0 0 .35rem; position: relative; max-width: 520px; }
 #search-box {
   width: 100%;
-  max-width: 520px;
-  padding: .5rem .75rem;
+  padding: .5rem 2rem .5rem .75rem;
   border: 1px solid var(--border);
   border-radius: 8px;
   background: var(--bg-elev);
@@ -88,6 +87,43 @@ body {
   font-size: .92rem;
 }
 #search-box:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 2px rgba(45,92,246,0.15); }
+#search-clear {
+  position: absolute; right: .4rem; top: 50%; transform: translateY(-50%);
+  margin-top: -.18rem;
+  border: none; background: transparent; color: var(--muted);
+  font-size: 1.3rem; line-height: 1; cursor: pointer; padding: 0 .25rem;
+}
+#search-clear:hover { color: var(--fg); }
+
+.more-filters { width: 100%; }
+.more-filters > summary {
+  cursor: pointer; font-size: .8rem; color: var(--accent);
+  list-style: none; padding: .2rem 0; user-select: none;
+}
+.more-filters > summary::-webkit-details-marker { display: none; }
+.more-filters > summary::before { content: "⚙ "; }
+.more-filters-body { display: flex; flex-direction: column; gap: .6rem; padding-top: .4rem; }
+
+.empty-state { color: var(--muted); font-style: italic; padding: 1.5rem 0; text-align: center; }
+
+.show-more {
+  display: block; margin: .8rem auto 0; padding: .5rem 1.1rem;
+  border: 1px solid var(--border); background: var(--bg-elev); color: var(--accent);
+  border-radius: 999px; font-size: .85rem; font-family: inherit; cursor: pointer;
+}
+.show-more:hover { border-color: var(--accent); }
+
+#back-to-top {
+  position: fixed; right: 1.2rem; bottom: 1.2rem; z-index: 50;
+  padding: .5rem .8rem; border: 1px solid var(--border);
+  background: var(--bg-elev); color: var(--fg); border-radius: 999px;
+  font-size: .82rem; font-family: inherit; cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+#back-to-top:hover { border-color: var(--accent); color: var(--accent); }
+
+mark { background: #ffe27a; color: #000; border-radius: 2px; padding: 0 .1em; }
+@media (prefers-color-scheme: dark) { mark { background: #b8860b; color: #fff; } }
 .filter-group strong {
   font-size: .72rem; color: var(--muted);
   text-transform: uppercase; letter-spacing: .06em;
@@ -141,6 +177,11 @@ body {
   padding: 1rem 1.15rem;
   transition: border-color .12s, transform .12s;
   display: flex; gap: 1rem; align-items: flex-start;
+  /* Let the browser skip layout/paint for off-screen cards — keeps a long
+     feed cheap to render. contain-intrinsic-size reserves space so the
+     scrollbar doesn't jump. */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 180px;
 }
 .item-body { flex: 1 1 auto; min-width: 0; }
 .item-thumb {
