@@ -16,9 +16,12 @@ being set in the environment.
 """
 from __future__ import annotations
 
+import glob
 import logging
 import os
 import re
+import subprocess
+import tempfile
 from typing import Protocol
 
 from utils.io import Item
@@ -205,6 +208,81 @@ class ClaudeSummarizer:
             return self._fallback.summarize(text)
 
 
+class CodexCLISummarizer:
+    """Summarize via the OpenAI Codex CLI (`codex exec`).
+
+    Uses the Codex VS Code extension's bundled binary and its existing OAuth
+    login (ChatGPT subscription) — no API key, no extra billing. The trade-off:
+    it only works where the binary + auth exist (i.e. the user's local machine,
+    NOT GitHub Actions), and each call is slow (~10-20s) because Codex is an
+    agentic tool, not a bare completion endpoint.
+
+    Falls back to truncation if the binary can't be found or a call fails.
+    """
+
+    _BINARY_GLOBS = [
+        "~/.vscode/extensions/openai.chatgpt-*/bin/*/codex",
+        "~/.vscode-server/extensions/openai.chatgpt-*/bin/*/codex",
+        "~/.cursor/extensions/openai.chatgpt-*/bin/*/codex",
+    ]
+
+    def __init__(
+        self,
+        binary: str | None = None,
+        model: str | None = None,
+        timeout: int = 150,
+        fallback: "AbstractTruncationSummarizer | None" = None,
+    ) -> None:
+        self.binary = binary or self._discover_binary()
+        self.model = model or None
+        self.timeout = timeout
+        self._fallback = fallback or AbstractTruncationSummarizer(max_chars=360)
+
+    @classmethod
+    def _discover_binary(cls) -> str | None:
+        for pattern in cls._BINARY_GLOBS:
+            hits = sorted(glob.glob(os.path.expanduser(pattern)))
+            if hits:
+                return hits[-1]  # latest extension version
+        return None
+
+    def summarize(self, text: str, *, source: str = "", title: str = "") -> str:
+        if not text or not text.strip():
+            return ""
+        if len(text.strip()) < 80:
+            return text.strip()
+        if not self.binary or not os.path.exists(self.binary):
+            return self._fallback.summarize(text)
+
+        prompt = _SUMMARY_PROMPT.format(
+            source=source or "unknown",
+            title=title or "(no title)",
+            text=text[:6000],
+        )
+        out_fd, out_path = tempfile.mkstemp(suffix=".txt", prefix="rnews_codex_")
+        os.close(out_fd)
+        try:
+            cmd = [self.binary, "exec", "--skip-git-repo-check", "-o", out_path]
+            if self.model:
+                cmd += ["-m", self.model]
+            cmd.append(prompt)
+            subprocess.run(
+                cmd, capture_output=True, timeout=self.timeout,
+                cwd=tempfile.gettempdir(), check=False,
+            )
+            with open(out_path, "r", encoding="utf-8") as f:
+                out = f.read().strip()
+            return out or self._fallback.summarize(text)
+        except (subprocess.TimeoutExpired, OSError) as exc:
+            log.warning("CodexCLISummarizer failed (%s); falling back", exc)
+            return self._fallback.summarize(text)
+        finally:
+            try:
+                os.unlink(out_path)
+            except OSError:
+                pass
+
+
 def make_summarizer(cfg: dict) -> Summarizer:
     """Build a summarizer from config. Swapping providers is a one-line config
     change. `provider: auto` picks whichever API key is present, preferring
@@ -214,13 +292,20 @@ def make_summarizer(cfg: dict) -> Summarizer:
     provider = str(scfg.get("provider", "auto")).lower()
 
     if provider == "auto":
-        if os.environ.get("OPENAI_API_KEY"):
+        if CodexCLISummarizer._discover_binary():
+            provider = "codex"
+        elif os.environ.get("OPENAI_API_KEY"):
             provider = "openai"
         elif os.environ.get("ANTHROPIC_API_KEY"):
             provider = "claude"
         else:
             provider = "truncation"
 
+    if provider == "codex":
+        return CodexCLISummarizer(
+            binary=scfg.get("codex_binary") or None,
+            model=scfg.get("codex_model") or None,
+        )
     if provider == "openai":
         return OpenAISummarizer(
             model=scfg.get("openai_model", "gpt-4o-mini"),

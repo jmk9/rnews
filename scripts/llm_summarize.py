@@ -47,8 +47,12 @@ def main() -> int:
     args = p.parse_args()
 
     cfg = yaml.safe_load(open("config.yaml")) or {}
-    if not (os.environ.get("OPENAI_API_KEY") or os.environ.get("ANTHROPIC_API_KEY")):
-        log.error("No OPENAI_API_KEY or ANTHROPIC_API_KEY set; aborting.")
+    provider = str((cfg.get("summarizer") or {}).get("provider", "auto")).lower()
+    # API-key providers need a key; codex uses local OAuth; truncation needs nothing.
+    if provider in ("openai", "claude") and not (
+        os.environ.get("OPENAI_API_KEY") or os.environ.get("ANTHROPIC_API_KEY")
+    ):
+        log.error("provider=%s but no OPENAI_API_KEY / ANTHROPIC_API_KEY set; aborting.", provider)
         return 1
 
     # Load every processed snapshot and dedupe by id so we don't pay for the

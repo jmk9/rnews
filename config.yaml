@@ -227,16 +227,22 @@ report:
   top_repos: 10
   summary_max_chars: 320
 
-# Card summaries. Swap provider here — one line — to move between APIs.
-#   provider: openai   -> uses OPENAI_API_KEY (a.k.a. Codex). Current choice.
-#   provider: claude   -> uses ANTHROPIC_API_KEY. Switch back to this later.
+# Card summaries. Swap provider here — one line — to move between backends.
+#   provider: codex    -> OpenAI Codex CLI via your ChatGPT-extension OAuth
+#                          login. No API key, no extra billing. LOCAL ONLY
+#                          (the binary + auth don't exist on GitHub Actions),
+#                          and slow (~10-20s/item). Current choice.
+#   provider: openai   -> OPENAI_API_KEY. Fast, automatable on CI, pay-as-you-go.
+#   provider: claude   -> ANTHROPIC_API_KEY. Switch here later.
 #   provider: truncation -> no API, keeps source text (free fallback).
-#   provider: auto     -> pick whichever API key is present.
-# If the chosen provider's key/SDK is missing at runtime, it falls back to
-# truncation automatically, so the pipeline never breaks.
+#   provider: auto     -> codex if found, else whichever API key is present.
+# If the chosen provider is unavailable at runtime it falls back to truncation,
+# so the pipeline never breaks (e.g. CI without the codex binary).
 summarizer:
-  provider: openai
-  openai_model: gpt-4o-mini       # set to whatever model your account exposes
+  provider: codex
+  codex_binary: ""                # auto-discovered from the VS Code extension if empty
+  codex_model: ""                 # optional, e.g. gpt-5-mini
+  openai_model: gpt-4o-mini       # used when provider: openai
   openai_base_url: ""             # optional: OpenAI-compatible endpoint
   claude_model: claude-haiku-4-5-20251001
   truncation_max_chars: 10000
