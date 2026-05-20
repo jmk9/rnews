@@ -160,7 +160,10 @@ def build_site(cfg: dict[str, Any]) -> Path:
         return site_dir
 
     site_dir.mkdir(parents=True, exist_ok=True)
-    (site_dir / "daily").mkdir(parents=True, exist_ok=True)
+    # Daily archive pages were removed; clean up any stale ones from old builds.
+    stale_daily = site_dir / "daily"
+    if stale_daily.exists():
+        shutil.rmtree(stale_daily)
 
     for asset in ("styles.css", "filters.js"):
         src = templates_dir / asset
@@ -239,14 +242,6 @@ def build_site(cfg: dict[str, Any]) -> Path:
             if counts:
                 grouped_tag_counts.append((label, filter_key, counts))
 
-    # Group by first-seen date for the archive.
-    by_day: dict[str, list[dict[str, Any]]] = {}
-    for it in all_items:
-        d = _first_seen(it)
-        if d:
-            by_day.setdefault(d, []).append(it)
-    days_sorted = sorted(by_day.keys(), reverse=True)
-
     env = _build_env(templates_dir)
     site_ctx = {
         "title": site_cfg.get("title", "RNEWS — Robot NEWS"),
@@ -266,7 +261,6 @@ def build_site(cfg: dict[str, Any]) -> Path:
         items=index_items,  # kept for back-compat if templates still reference it
         top_tags=top_tags,
         grouped_tag_counts=grouped_tag_counts,
-        archive_days=days_sorted,
         generated=generated,
         generated_ts=generated_ts,
         site=site_ctx,
@@ -276,24 +270,8 @@ def build_site(cfg: dict[str, Any]) -> Path:
     log.info("site: wrote index.html (%d w/code + %d news + %d papers-only)",
              len(index_with_code), len(index_news), len(index_papers_only))
 
-    day_tpl = env.get_template("day.html.j2")
-    for i, d in enumerate(days_sorted):
-        day_all = sorted(by_day[d], key=lambda x: float(x.get("score") or 0), reverse=True)
-        day_with_code = [it for it in day_all if _bucket(it) == "code"]
-        day_news = [it for it in day_all if _bucket(it) == "news"]
-        day_papers_only = [it for it in day_all if _bucket(it) == "papers"]
-        prev_day = days_sorted[i + 1] if i + 1 < len(days_sorted) else ""
-        next_day = days_sorted[i - 1] if i > 0 else ""
-        html = day_tpl.render(
-            items_with_code=day_with_code,
-            items_news=day_news,
-            items_papers_only=day_papers_only,
-            items=day_all,
-            date=d, generated=generated, generated_ts=generated_ts, site=site_ctx,
-            url_root="../", prev_day=prev_day, next_day=next_day,
-        )
-        (site_dir / "daily" / f"{d}.html").write_text(html, encoding="utf-8")
-    log.info("site: wrote %d day pages", len(days_sorted))
+    # Daily archive pages were removed — the unified index (with search +
+    # filters + time chips) covers the same need without the per-day clutter.
 
     feed_xml = env.get_template("feed.xml.j2").render(
         items=index_items[:50], site=site_ctx, build_date=_rfc822(""),
