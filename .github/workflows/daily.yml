@@ -15,6 +15,10 @@ on:
       - "utils/**"
       - "requirements.txt"
       - ".github/workflows/**"
+      # local cron pushes summarized data -> rebuild + deploy the site.
+      # (the workflow's own github-actions[bot] data commits don't re-trigger.)
+      - "data/processed/**"
+      - "data/state/**"
   schedule:
     # 22:00 UTC daily = 07:00 KST. GitHub-scheduled cron can lag 5–30 min;
     # this gives buffer before a typical 08:30 KST work start.
