@@ -6278,7 +6278,7 @@
     "source": "arxiv",
     "title": "Closed-Loop Verbal Reinforcement Learning for Task-Level Robotic Planning",
     "url": "http://arxiv.org/abs/2603.22169v1",
-    "summary": "We propose a new Verbal Reinforcement Learning (VRL) framework for interpretable task-level planning in mobile robotic systems operating under execution uncertainty. The framework follows a closed-loop architecture that enables iterative policy improvement through interaction with the physical environment.",
+    "summary": "Closed-Loop Verbal Reinforcement Learning treats task-level mobile robot planning as an iterative language-guided policy improvement problem, where the robot executes plans, observes uncertainty or failure in the physical environment, and uses verbal feedback to refine its future decisions. The interesting part is the closed-loop design: planning remains interpretable in natural language while still adapting from real execution outcomes rather than relying only on offline prompts or fixed symbolic rules.",
     "published": "2026-03-23T16:28:36+00:00",
     "updated": "2026-03-23T16:28:36+00:00",
     "authors": [
@@ -6304,7 +6304,9 @@
       "pdf_url": "https://arxiv.org/pdf/2603.22169v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2603.22169.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2603.22169.jpg",
+      "full_text": "We propose a new Verbal Reinforcement Learning (VRL) framework for interpretable task-level planning in mobile robotic systems operating under execution uncertainty. The framework follows a closed-loop architecture that enables iterative policy improvement through interaction with the physical environment.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -6329,7 +6331,7 @@
     "source": "arxiv",
     "title": "AnchorRefine: Synergy-Manipulation Based on Trajectory Anchor and Residual Refinement for Vision-Language-Action Models",
     "url": "http://arxiv.org/abs/2604.17787v1",
-    "summary": "Precision-critical manipulation requires both global trajectory organization and local execution correction, yet most vision-language-action (VLA) policies generate actions within a single unified space.",
+    "summary": "AnchorRefine separates manipulation into coarse trajectory anchors and residual refinements, aiming to give vision-language-action policies both a globally organized motion plan and fine-grained local correction. The arXiv blurb is sparse, but the interesting idea is the explicit split between where the trajectory should go and how each step should be adjusted for precision-critical execution, rather than forcing all actions through one unified prediction space.",
     "published": "2026-04-20T04:25:24+00:00",
     "updated": "2026-04-20T04:25:24+00:00",
     "authors": [
@@ -6352,7 +6354,9 @@
       "pdf_url": "https://arxiv.org/pdf/2604.17787v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2604.17787.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2604.17787.jpg",
+      "full_text": "Precision-critical manipulation requires both global trajectory organization and local execution correction, yet most vision-language-action (VLA) policies generate actions within a single unified space.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -6377,7 +6381,7 @@
     "source": "arxiv",
     "title": "A Rapid Deployment Pipeline for Autonomous Humanoid Grasping Based on Foundation Models",
     "url": "http://arxiv.org/abs/2604.17258v1",
-    "summary": "Deploying a humanoid robot to manipulate a new object has traditionally required one to two days of effort: data collection, manual annotation, 3D model acquisition, and model training.",
+    "summary": "A deployment pipeline lets a humanoid robot grasp new objects without the usual one-to-two-day cycle of data collection, manual annotation, 3D model acquisition, and task-specific training. It uses foundation models to compress that setup process, aiming to make autonomous humanoid manipulation practical for rapidly changing object sets rather than carefully pre-modeled environments.",
     "published": "2026-04-19T04:42:14+00:00",
     "updated": "2026-04-19T04:42:14+00:00",
     "authors": [
@@ -6393,7 +6397,9 @@
       "pdf_url": "https://arxiv.org/pdf/2604.17258v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2604.17258.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2604.17258.jpg",
+      "full_text": "Deploying a humanoid robot to manipulate a new object has traditionally required one to two days of effort: data collection, manual annotation, 3D model acquisition, and model training.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -6419,7 +6425,7 @@
     "source": "arxiv",
     "title": "Offline Semantic Guidance for Efficient Vision-Language-Action Policy Distillation",
     "url": "http://arxiv.org/abs/2605.16241v1",
-    "summary": "Billion-parameter Vision-Language-Action (VLA) policies have recently shown impressive performance in robotic manipulation, yet their size and inference cost remain major obstacles for real-time closed-loop control. We introduce \\textbf{VLA-AD}, a distillation framework that uses a Vision-Language Model as an offline semantic supervisor to transfer large VLA teachers into lightweight student policies. Instead of relying only on low-level action imitation, VLA-AD augments teacher-provided 7-DoF action targets with high-level semantic guidance, including task phase anchors and multi-frame operating-direction descriptions. These auxiliary signals are used only during training: at test time, the student policy runs independently, with neither the VLA teacher nor the VLM required. We evaluate VLA-AD on three LIBERO benchmark suites. Using OpenVLA-7B as the teacher, our method produces a 158M-parameter student, yielding a $44\\times$ reduction in model size while matching the teacher with only a $0.27\\%$ average relative gap. The resulting policy runs at 12.5 Hz on an RTX 4090, achieving a $3.28\\times$ inference speedup over OpenVLA-7B. We further show that the same semantic distillation pipeline generalizes to a different $π_{0.5}$-4B teacher, where the student outperforms the teacher on two suites and remains within $0.53\\%$ on \\texttt{libero\\_goal}. Additional analysis indicates that phase-level supervision and multi-frame directional cues make the student less sensitive to noisy teacher actions, such as erroneous high-frequency gripper changes. Overall, VLA-AD demonstrates that offline semantic guidance from VLMs can substantially improve the efficiency, robustness, and deployability of VLA policy distillation.",
+    "summary": "VLA-AD distills billion-parameter vision-language-action robot policies into much smaller closed-loop controllers by using a VLM offline during training to add semantic supervision, such as task-phase anchors and multi-frame direction cues, alongside 7-DoF action imitation. On LIBERO, it compresses OpenVLA-7B into a 158M-parameter student with a 44x size reduction, only a 0.27% average relative performance gap, and 12.5 Hz inference on an RTX 4090, while similar distillation from a pi_0.5-4B teacher also transfers well. The semantic training signals appear to make the student more robust to noisy teacher actions, especially high-frequency gripper errors, without requiring the teacher or VLM at deployment.",
     "published": "2026-05-15T17:48:25+00:00",
     "updated": "2026-05-15T17:48:25+00:00",
     "authors": [
@@ -6436,7 +6442,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.16241v1",
       "comment": null,
       "first_seen": "2026-05-18",
-      "thumbnail_path": "thumbnails/arxiv/2605.16241.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.16241.jpg",
+      "full_text": "Billion-parameter Vision-Language-Action (VLA) policies have recently shown impressive performance in robotic manipulation, yet their size and inference cost remain major obstacles for real-time closed-loop control. We introduce \\textbf{VLA-AD}, a distillation framework that uses a Vision-Language Model as an offline semantic supervisor to transfer large VLA teachers into lightweight student policies. Instead of relying only on low-level action imitation, VLA-AD augments teacher-provided 7-DoF action targets with high-level semantic guidance, including task phase anchors and multi-frame operating-direction descriptions. These auxiliary signals are used only during training: at test time, the student policy runs independently, with neither the VLA teacher nor the VLM required. We evaluate VLA-AD on three LIBERO benchmark suites. Using OpenVLA-7B as the teacher, our method produces a 158M-parameter student, yielding a $44\\times$ reduction in model size while matching the teacher with only a $0.27\\%$ average relative gap. The resulting policy runs at 12.5 Hz on an RTX 4090, achieving a $3.28\\times$ inference speedup over OpenVLA-7B. We further show that the same semantic distillation pipeline generalizes to a different $π_{0.5}$-4B teacher, where the student outperforms the teacher on two suites and remains within $0.53\\%$ on \\texttt{libero\\_goal}. Additional analysis indicates that phase-level supervision and multi-frame directional cues make the student less sensitive to noisy teacher actions, such as erroneous high-frequency gripper changes. Overall, VLA-AD demonstrates that offline semantic guidance from VLMs can substantially improve the efficiency, robustness, and deployability of VLA policy distillation.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -6461,7 +6469,7 @@
     "source": "arxiv",
     "title": "Feedback World Model Enables Precise Guidance of Diffusion Policy",
     "url": "http://arxiv.org/abs/2605.15705v1",
-    "summary": "World models aim to improve robotic decision making by predicting the consequences of actions. However, in practice, their predictions often become unreliable once the robot encounters states outside the training distribution, limiting their effectiveness at deployment. We observe that execution itself provides a natural but underutilized signal: after each action, the robot directly observes the true next state, revealing the mismatch between predicted and actual outcomes. Building on this insight, we propose feedback world model, a new paradigm that closes the loop between prediction and observation at inference time. Instead of treating the world model as a static open-loop predictor, our method maintains a lightweight feedback state that is updated online to iteratively correct future predictions, compensating for model errors using real-time observations without additional training data or parameter updates. We show that this process can be interpreted as a latent-space observer and admits convergence guarantees under mild conditions. We further introduce action-aware guidance to better translate corrected predictions into control by emphasizing action-controllable components while suppressing irrelevant variations. Experiments on LIBERO-Plus, Robomimic, and real-world manipulation tasks demonstrate that our method substantially improves both prediction accuracy and policy performance under distribution shift. In particular, it reduces world model prediction error by up to 76.4% and improves out-of-distribution (OOD) success rate by 30%. These results show that incorporating real-time feedback at inference time provides a simple yet powerful alternative to static world modeling.",
+    "summary": "Feedback world model turns a robot’s world model into a closed-loop predictor: after each action, it compares the predicted next state with the observed one and updates a lightweight latent feedback state online, without new data or parameter updates. The corrected predictions are then fed into diffusion policy guidance through an action-aware mechanism that emphasizes controllable state components and filters out irrelevant variation. Across LIBERO-Plus, Robomimic, and real-world manipulation, this reduced prediction error by up to 76.4% and improved out-of-distribution success rates by 30%.",
     "published": "2026-05-15T07:52:13+00:00",
     "updated": "2026-05-15T07:52:13+00:00",
     "authors": [
@@ -6486,7 +6494,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.15705v1",
       "comment": "21 pages, 9 figures",
       "first_seen": "2026-05-18",
-      "thumbnail_path": "thumbnails/arxiv/2605.15705.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.15705.jpg",
+      "full_text": "World models aim to improve robotic decision making by predicting the consequences of actions. However, in practice, their predictions often become unreliable once the robot encounters states outside the training distribution, limiting their effectiveness at deployment. We observe that execution itself provides a natural but underutilized signal: after each action, the robot directly observes the true next state, revealing the mismatch between predicted and actual outcomes. Building on this insight, we propose feedback world model, a new paradigm that closes the loop between prediction and observation at inference time. Instead of treating the world model as a static open-loop predictor, our method maintains a lightweight feedback state that is updated online to iteratively correct future predictions, compensating for model errors using real-time observations without additional training data or parameter updates. We show that this process can be interpreted as a latent-space observer and admits convergence guarantees under mild conditions. We further introduce action-aware guidance to better translate corrected predictions into control by emphasizing action-controllable components while suppressing irrelevant variations. Experiments on LIBERO-Plus, Robomimic, and real-world manipulation tasks demonstrate that our method substantially improves both prediction accuracy and policy performance under distribution shift. In particular, it reduces world model prediction error by up to 76.4% and improves out-of-distribution (OOD) success rate by 30%. These results show that incorporating real-time feedback at inference time provides a simple yet powerful alternative to static world modeling.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -6512,7 +6522,7 @@
     "source": "arxiv",
     "title": "WOMBET: World Model-based Experience Transfer for Robust and Sample-efficient Reinforcement Learning",
     "url": "http://arxiv.org/abs/2604.08958v2",
-    "summary": "Reinforcement learning (RL) in robotics is often limited by the cost and risk of data collection, motivating experience transfer from a source task to a target task. Offline-to-online RL leverages prior data but typically assumes a given fixed dataset and does not address how to generate reliable data for transfer.",
+    "summary": "WOMBET targets offline-to-online reinforcement learning for robotics by focusing on how transferable experience should be generated, rather than assuming a fixed source dataset already exists. It uses a world model to produce experience for transfer from a source task to a target task, aiming to make robot RL more sample-efficient and robust when real-world data collection is costly or risky.",
     "published": "2026-04-10T04:57:54+00:00",
     "updated": "2026-04-15T07:14:50+00:00",
     "authors": [
@@ -6529,7 +6539,9 @@
       "pdf_url": "https://arxiv.org/pdf/2604.08958v2",
       "comment": "13 pages, 6 figures, 8th Annual Learning for Dynamics & Control Conference (L4DC)",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2604.08958.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2604.08958.jpg",
+      "full_text": "Reinforcement learning (RL) in robotics is often limited by the cost and risk of data collection, motivating experience transfer from a source task to a target task. Offline-to-online RL leverages prior data but typically assumes a given fixed dataset and does not address how to generate reliable data for transfer.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -6554,7 +6566,7 @@
     "source": "arxiv",
     "title": "HoMMI: Learning Whole-Body Mobile Manipulation from Human Demonstrations",
     "url": "http://arxiv.org/abs/2603.03243v2",
-    "summary": "We present Whole-Body Mobile Manipulation Interface (HoMMI), a data collection and policy learning framework that learns whole-body mobile manipulation directly from robot-free human demonstrations.",
+    "summary": "HoMMI is a framework for learning whole-body mobile manipulation from robot-free human demonstrations, pairing a data-collection interface with policy learning so robots can acquire coordinated base, body, and arm behaviors from people acting naturally. The interesting part is the supervision source: instead of requiring teleoperation on the target robot, it tries to turn human demonstrations directly into training data for mobile manipulation policies.",
     "published": "2026-03-03T18:36:49+00:00",
     "updated": "2026-05-14T23:12:06+00:00",
     "authors": [
@@ -6576,7 +6588,9 @@
       "pdf_url": "https://arxiv.org/pdf/2603.03243v2",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2603.03243.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2603.03243.jpg",
+      "full_text": "We present Whole-Body Mobile Manipulation Interface (HoMMI), a data collection and policy learning framework that learns whole-body mobile manipulation directly from robot-free human demonstrations.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Manipulator",
@@ -6601,7 +6615,7 @@
     "source": "arxiv",
     "title": "Tree Learning: A Multi-Skill Continual Learning Framework for Humanoid Robots",
     "url": "http://arxiv.org/abs/2604.12909v1",
-    "summary": "As reinforcement learning for humanoid robots evolves from single-task to multi-skill paradigms, efficiently expanding new skills while avoiding catastrophic forgetting has become a key challenge in embodied intelligence.",
+    "summary": "Tree Learning targets continual multi-skill training for humanoid robots, where new reinforcement-learned behaviors need to be added without erasing earlier ones. From the provided abstract fragment, the concrete focus is on structuring skill expansion so a humanoid can move beyond isolated single-task policies while controlling catastrophic forgetting, but the mechanism and results are not specified here.",
     "published": "2026-04-14T15:57:27+00:00",
     "updated": "2026-04-14T15:57:27+00:00",
     "authors": [
@@ -6616,7 +6630,9 @@
       "pdf_url": "https://arxiv.org/pdf/2604.12909v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2604.12909.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2604.12909.jpg",
+      "full_text": "As reinforcement learning for humanoid robots evolves from single-task to multi-skill paradigms, efficiently expanding new skills while avoiding catastrophic forgetting has become a key challenge in embodied intelligence.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -6641,7 +6657,7 @@
     "source": "arxiv",
     "title": "Federated Single-Agent Robotics: Multi-Robot Coordination Without Intra-Robot Multi-Agent Fragmentation",
     "url": "http://arxiv.org/abs/2604.11028v1",
-    "summary": "As embodied robots move toward fleet-scale operation, multi-robot coordination is becoming a central systems challenge. Existing approaches often treat this as motivation for increasing internal multi-agent decomposition within each robot.",
+    "summary": "Federated Single-Agent Robotics argues that fleet-level coordination does not require splitting each robot into multiple internal agents. Instead, it frames each robot as a single decision-making unit within a federated coordination setup, aiming to preserve simpler intra-robot control while still addressing the systems problems that emerge when many embodied robots operate together.",
     "published": "2026-04-13T05:51:13+00:00",
     "updated": "2026-04-13T05:51:13+00:00",
     "authors": [
@@ -6660,7 +6676,9 @@
       "pdf_url": "https://arxiv.org/pdf/2604.11028v1",
       "comment": "30 pages, 10 figures, 9 tables. Code: https://github.com/s20sc/fsar-fleet-coordination",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2604.11028.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2604.11028.jpg",
+      "full_text": "As embodied robots move toward fleet-scale operation, multi-robot coordination is becoming a central systems challenge. Existing approaches often treat this as motivation for increasing internal multi-agent decomposition within each robot.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -6684,7 +6702,7 @@
     "source": "arxiv",
     "title": "GuidedVLA: Specifying Task-Relevant Factors via Plug-and-Play Action Attention Specialization",
     "url": "http://arxiv.org/abs/2605.12369v1",
-    "summary": "Vision-Language-Action (VLA) models aim for general robot learning by aligning action as a modality within powerful Vision-Language Models (VLMs). Existing VLAs rely on end-to-end supervision to implicitly enable the action decoding process to learn task-relevant features.",
+    "summary": "GuidedVLA introduces a plug-and-play way to specialize action attention in vision-language-action models so the robot can focus on task-relevant factors instead of relying entirely on end-to-end supervision to discover them implicitly. From the provided text, the concrete result details are not given, but the mechanism is aimed at making action decoding more explicitly guided and adaptable within VLM-based robot policies.",
     "published": "2026-05-12T16:38:40+00:00",
     "updated": "2026-05-12T16:38:40+00:00",
     "authors": [
@@ -6717,7 +6735,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.12369v1",
       "comment": "Accepted to RSS 2026. Project page: https://guidedvla.github.io/project_page/",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2605.12369.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.12369.jpg",
+      "full_text": "Vision-Language-Action (VLA) models aim for general robot learning by aligning action as a modality within powerful Vision-Language Models (VLMs). Existing VLAs rely on end-to-end supervision to implicitly enable the action decoding process to learn task-relevant features.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -6742,7 +6762,7 @@
     "source": "arxiv",
     "title": "Failing Forward: Adaptive Failure-Informed Learning for Vision-Language-Action Models",
     "url": "http://arxiv.org/abs/2605.08434v2",
-    "summary": "Vision-language-action (VLA) models provide a promising paradigm for scalable robotic manipulation, yet their reliance on success-only behavioral cloning leaves them brittle; lacking corrective training signals, minor execution errors rapidly compound into unrecoverable, out-of-distribution failures.",
+    "summary": "Failing Forward trains vision-language-action models with explicit signals from failed robot executions, aiming to make manipulation policies recover instead of drifting into unrecoverable out-of-distribution states after small mistakes. The approach targets a core weakness of success-only behavioral cloning by turning execution failures into corrective learning data, so the model can adapt its next actions when a rollout starts to go wrong.",
     "published": "2026-05-08T19:57:11+00:00",
     "updated": "2026-05-12T15:21:07+00:00",
     "authors": [
@@ -6763,7 +6783,9 @@
       "primary_category": "cs.RO",
       "pdf_url": "https://arxiv.org/pdf/2605.08434v2",
       "comment": null,
-      "first_seen": "2026-05-19"
+      "first_seen": "2026-05-19",
+      "full_text": "Vision-language-action (VLA) models provide a promising paradigm for scalable robotic manipulation, yet their reliance on success-only behavioral cloning leaves them brittle; lacking corrective training signals, minor execution errors rapidly compound into unrecoverable, out-of-distribution failures.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -6788,7 +6810,7 @@
     "source": "arxiv",
     "title": "Retrieve-then-Steer: Online Success Memory for Test-Time Adaptation of Generative VLAs",
     "url": "http://arxiv.org/abs/2605.10094v2",
-    "summary": "Vision-Language-Action (VLA) models show strong potential for general-purpose robotic manipulation, yet their closed-loop reliability often degrades under local deployment conditions. Existing evaluations typically treat test episodes as independent zero-shot trials.",
+    "summary": "Retrieve-then-Steer adapts generative vision-language-action policies at test time by keeping an online “success memory” of episodes that worked, then retrieving relevant past successes to steer future rollouts under the same deployment conditions. The idea is to move beyond treating each robot trial as an isolated zero-shot attempt, using local experience accumulated during evaluation to improve closed-loop reliability when the deployed environment differs from training.",
     "published": "2026-05-11T07:11:10+00:00",
     "updated": "2026-05-12T11:39:28+00:00",
     "authors": [
@@ -6811,7 +6833,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.10094v2",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2605.10094.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.10094.jpg",
+      "full_text": "Vision-Language-Action (VLA) models show strong potential for general-purpose robotic manipulation, yet their closed-loop reliability often degrades under local deployment conditions. Existing evaluations typically treat test episodes as independent zero-shot trials.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -6836,7 +6860,7 @@
     "source": "arxiv",
     "title": "See What Matters: Differentiable Grid Sample Pruning for Generalizable Vision-Language-Action Model",
     "url": "http://arxiv.org/abs/2605.11817v1",
-    "summary": "Vision-Language-Action (VLA) models have shown remarkable promise in robotics manipulation, yet their high computational cost hinders real-time deployment.",
+    "summary": "Differentiable Grid Sample Pruning targets the runtime bottleneck in vision-language-action models by learning which visual grid samples are worth keeping for manipulation decisions. The available text only states the motivation, so the concrete pruning mechanism, evaluation setup, and speed or accuracy results are not specified here.",
     "published": "2026-05-12T09:08:42+00:00",
     "updated": "2026-05-12T09:08:42+00:00",
     "authors": [
@@ -6857,7 +6881,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.11817v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2605.11817.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.11817.jpg",
+      "full_text": "Vision-Language-Action (VLA) models have shown remarkable promise in robotics manipulation, yet their high computational cost hinders real-time deployment.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -6882,7 +6908,7 @@
     "source": "arxiv",
     "title": "SEVO: Semantic-Enhanced Virtual Observation for Robust VLA Manipulation via Active Illumination and Data-Centric Collection",
     "url": "http://arxiv.org/abs/2605.11114v1",
-    "summary": "Vision-Language-Action (VLA) and imitation-learning policies trained via community toolchains on low-cost hardware frequently fail when deployed outside the training environment.",
+    "summary": "SEVO targets the brittleness of low-cost VLA and imitation-learning manipulation policies when they leave their original training setup. It uses semantic-enhanced virtual observations with active illumination and a data-centric collection strategy, aiming to make robot manipulation policies less tied to narrow visual conditions and more robust under deployment shifts.",
     "published": "2026-05-11T18:23:04+00:00",
     "updated": "2026-05-11T18:23:04+00:00",
     "authors": [
@@ -6899,7 +6925,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.11114v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2605.11114.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.11114.jpg",
+      "full_text": "Vision-Language-Action (VLA) and imitation-learning policies trained via community toolchains on low-cost hardware frequently fail when deployed outside the training environment.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -6924,7 +6952,7 @@
     "source": "arxiv",
     "title": "SaPaVe: Towards Active Perception and Manipulation in Vision-Language-Action Models for Robotics",
     "url": "http://arxiv.org/abs/2603.12193v1",
-    "summary": "Active perception and manipulation are crucial for robots to interact with complex scenes. Existing methods struggle to unify semantic-driven active perception with robust, viewpoint-invariant execution. We propose SaPaVe, an end-to-end framework that jointly learns these capabilities in a data-efficient manner.",
+    "summary": "SaPaVe trains a vision-language-action robot model to combine semantic active perception with manipulation, so the robot can choose informative viewpoints in complex scenes and then execute actions robustly across changes in camera pose. The interesting part is the end-to-end formulation: instead of treating perception gathering and control as separate modules, it jointly learns both in a data-efficient way to improve viewpoint-invariant execution.",
     "published": "2026-03-12T17:23:46+00:00",
     "updated": "2026-03-12T17:23:46+00:00",
     "authors": [
@@ -6947,7 +6975,9 @@
       "pdf_url": "https://arxiv.org/pdf/2603.12193v1",
       "comment": "Accepted to CVPR 2026. See project page at https://lmzpai.github.io/SaPaVe",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2603.12193.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2603.12193.jpg",
+      "full_text": "Active perception and manipulation are crucial for robots to interact with complex scenes. Existing methods struggle to unify semantic-driven active perception with robust, viewpoint-invariant execution. We propose SaPaVe, an end-to-end framework that jointly learns these capabilities in a data-efficient manner.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -6972,7 +7002,7 @@
     "source": "arxiv",
     "title": "VEGA: Visual Encoder Grounding Alignment for Spatially-Aware Vision-Language-Action Models",
     "url": "http://arxiv.org/abs/2605.10485v1",
-    "summary": "Precise spatial reasoning is fundamental to robotic manipulation, yet the visual backbones of current vision-language-action (VLA) models are predominantly pretrained on 2D image data without explicit 3D geometric supervision, resulting in representations that lack accurate spatial awareness.",
+    "summary": "VEGA targets a common weakness in vision-language-action models: their image encoders are usually trained on 2D data, so they can miss the 3D spatial structure needed for precise manipulation. It aligns visual encoder representations with explicit grounding for spatial awareness, aiming to give robotic policies a better geometric sense of where objects and actions are in the scene.",
     "published": "2026-05-11T12:44:26+00:00",
     "updated": "2026-05-11T12:44:26+00:00",
     "authors": [
@@ -6998,7 +7028,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.10485v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2605.10485.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.10485.jpg",
+      "full_text": "Precise spatial reasoning is fundamental to robotic manipulation, yet the visual backbones of current vision-language-action (VLA) models are predominantly pretrained on 2D image data without explicit 3D geometric supervision, resulting in representations that lack accurate spatial awareness.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -7023,7 +7055,7 @@
     "source": "arxiv",
     "title": "Explicit Stair Geometry Conditioning for Robust Humanoid Locomotion",
     "url": "http://arxiv.org/abs/2605.09944v1",
-    "summary": "Robust humanoid stair climbing remains challenging due to geometric discontinuities, sensitivity to step height variations, and perception uncertainty in real-world environments.",
+    "summary": "Explicit Stair Geometry Conditioning targets robust humanoid stair climbing by conditioning locomotion control on stair geometry rather than relying only on generic terrain handling. The setup is motivated by the failure modes that make stairs hard in practice: discontinuous contacts, variation in step height, and imperfect perception of real stair structure.",
     "published": "2026-05-11T03:47:24+00:00",
     "updated": "2026-05-11T03:47:24+00:00",
     "authors": [
@@ -7044,7 +7076,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.09944v1",
       "comment": "8 pages, 7 figures, 4 tables",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2605.09944.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.09944.jpg",
+      "full_text": "Robust humanoid stair climbing remains challenging due to geometric discontinuities, sensitivity to step height variations, and perception uncertainty in real-world environments.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Humanoid"
@@ -7068,7 +7102,7 @@
     "source": "arxiv",
     "title": "CORAL: Scalable Multi-Task Robot Learning via LoRA Experts",
     "url": "http://arxiv.org/abs/2603.09298v1",
-    "summary": "Deploying Vision-Language-Action (VLA) models in real-world robotics exposes a core multi-task learning challenge: reconciling task interference in multi-task robotic learning.",
+    "summary": "CORAL targets multi-task interference in vision-language-action robot models by using LoRA experts, suggesting a scalable way to specialize parts of a shared policy without fully duplicating the model for each task. From the provided abstract fragment, the concrete mechanism and results are not specified beyond framing the problem, so the takeaway is that it addresses real-world VLA deployment where many robot skills must coexist without degrading one another.",
     "published": "2026-03-10T07:28:41+00:00",
     "updated": "2026-03-10T07:28:41+00:00",
     "authors": [
@@ -7085,7 +7119,9 @@
       "pdf_url": "https://arxiv.org/pdf/2603.09298v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2603.09298.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2603.09298.jpg",
+      "full_text": "Deploying Vision-Language-Action (VLA) models in real-world robotics exposes a core multi-task learning challenge: reconciling task interference in multi-task robotic learning.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -7110,7 +7146,7 @@
     "source": "arxiv",
     "title": "GST-VLA: Structured Gaussian Spatial Tokens for 3D Depth-Aware Vision-Language-Action Models",
     "url": "http://arxiv.org/abs/2603.09079v1",
-    "summary": "VLA models encode visual observations as 2D patch tokens with no intrinsic geometric structure. We introduce GST-VLA with two contributions.",
+    "summary": "GST-VLA replaces ordinary 2D visual patch tokens in vision-language-action models with structured Gaussian spatial tokens that carry explicit 3D depth-aware geometry. From the provided excerpt, the concrete mechanism beyond that token representation and the empirical results are not specified, but the direction is to give robotic policies visual tokens with intrinsic spatial structure rather than forcing geometry to be inferred from flat image patches.",
     "published": "2026-03-10T01:39:38+00:00",
     "updated": "2026-03-10T01:39:38+00:00",
     "authors": [
@@ -7128,7 +7164,9 @@
       "pdf_url": "https://arxiv.org/pdf/2603.09079v1",
       "comment": "The results presented in this paper are preliminary. Please note that the experiments are currently ongoing, and the final data is subject to change upon the completion of the study. All ideas, results, methods, and any content herein are the sole property of the authors",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2603.09079.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2603.09079.jpg",
+      "full_text": "VLA models encode visual observations as 2D patch tokens with no intrinsic geometric structure. We introduce GST-VLA with two contributions.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -7197,7 +7235,7 @@
     "source": "arxiv",
     "title": "Reconstruction or Semantics? What Makes a Latent Space Useful for Robotic World Models",
     "url": "http://arxiv.org/abs/2605.06388v1",
-    "summary": "World model-based policy evaluation is a practical proxy for testing real-world robot control by rolling out candidate actions in action-conditioned video diffusion models. As these models increasingly adopt latent diffusion modeling (LDM), choosing the right latent space becomes critical.",
+    "summary": "World model-based policy evaluation can roll out candidate robot actions inside action-conditioned video diffusion models, but in latent diffusion setups the choice of latent space strongly shapes whether those rollouts are useful. The paper examines whether robotic world models benefit more from latents optimized for pixel reconstruction or from semantically structured representations, framing latent design as a central bottleneck for using diffusion video models as practical proxies for real-world control testing.",
     "published": "2026-05-07T15:05:26+00:00",
     "updated": "2026-05-07T15:05:26+00:00",
     "authors": [
@@ -7216,7 +7254,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.06388v1",
       "comment": "9 pages",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2605.06388.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.06388.jpg",
+      "full_text": "World model-based policy evaluation is a practical proxy for testing real-world robot control by rolling out candidate actions in action-conditioned video diffusion models. As these models increasingly adopt latent diffusion modeling (LDM), choosing the right latent space becomes critical.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -7241,7 +7281,7 @@
     "source": "arxiv",
     "title": "Seeing Realism from Simulation: Efficient Video Transfer for Vision-Language-Action Data Augmentation",
     "url": "http://arxiv.org/abs/2605.02757v1",
-    "summary": "Vision-language-action (VLA) models typically rely on large-scale real-world videos, whereas simulated data, despite being inexpensive and highly parallelizable to collect, often suffers from a substantial visual domain gap and limited environmental diversity, resulting in weak real-world generalization.",
+    "summary": "Simulated robot videos are used as cheap VLA training data, but first transferred toward real-world visual realism to reduce the domain gap that usually hurts deployment. The approach targets efficient video-level augmentation rather than simply collecting more real footage, aiming to preserve the action-relevant structure of simulation while making the observations look more like real robot data.",
     "published": "2026-05-04T15:57:07+00:00",
     "updated": "2026-05-04T15:57:07+00:00",
     "authors": [
@@ -7263,7 +7303,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.02757v1",
       "comment": "ICML 2026",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2605.02757.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.02757.jpg",
+      "full_text": "Vision-language-action (VLA) models typically rely on large-scale real-world videos, whereas simulated data, despite being inexpensive and highly parallelizable to collect, often suffers from a substantial visual domain gap and limited environmental diversity, resulting in weak real-world generalization.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -7288,7 +7330,7 @@
     "source": "arxiv",
     "title": "Latent Bridge: Feature Delta Prediction for Efficient Dual-System Vision-Language-Action Model Inference",
     "url": "http://arxiv.org/abs/2605.02739v1",
-    "summary": "Dual-system Vision-Language-Action (VLA) models achieve state-of-the-art robotic manipulation but are bottlenecked by the VLM backbone, which must   execute at every control step while producing temporally redundant features.",
+    "summary": "Latent Bridge targets the inference bottleneck in dual-system VLA robot policies by avoiding a full VLM backbone pass at every control step. It predicts feature deltas in latent space, exploiting the temporal redundancy between consecutive observations so the action system can update vision-language features more cheaply during manipulation control.",
     "published": "2026-05-04T15:37:55+00:00",
     "updated": "2026-05-04T15:37:55+00:00",
     "authors": [
@@ -7316,7 +7358,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.02739v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2605.02739.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.02739.jpg",
+      "full_text": "Dual-system Vision-Language-Action (VLA) models achieve state-of-the-art robotic manipulation but are bottlenecked by the VLM backbone, which must   execute at every control step while producing temporally redundant features.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -7341,7 +7385,7 @@
     "source": "arxiv",
     "title": "Decoupling Task and Behavior: A Two-Stage Reward Curriculum in Reinforcement Learning for Robotics",
     "url": "http://arxiv.org/abs/2603.05113v1",
-    "summary": "Deep Reinforcement Learning is a promising tool for robotic control, yet practical application is often hindered by the difficulty of designing effective reward functions.",
+    "summary": "Deep reinforcement learning for robot control is framed here around a two-stage reward curriculum that separates learning task success from shaping the desired behavior. Based on the available text, the work targets the common bottleneck of hand-designing reward functions, but no specific robot tasks, benchmarks, or results are provided.",
     "published": "2026-03-05T12:34:27+00:00",
     "updated": "2026-03-05T12:34:27+00:00",
     "authors": [
@@ -7358,7 +7402,9 @@
       "pdf_url": "https://arxiv.org/pdf/2603.05113v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2603.05113.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2603.05113.jpg",
+      "full_text": "Deep Reinforcement Learning is a promising tool for robotic control, yet practical application is often hindered by the difficulty of designing effective reward functions.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -7383,7 +7429,7 @@
     "source": "arxiv",
     "title": "Sim-to-Real Transfer and Robustness Evaluation of Reinforcement Learning Control with Integrated Perception on an ASV for Floating Waste Capture",
     "url": "http://arxiv.org/abs/2605.02529v1",
-    "summary": "Autonomous surface vessels for floating-waste removal operate under varying hydrodynamics, external disturbances, and challenging water-surface perception.",
+    "summary": "Autonomous surface vessels for floating-waste capture are treated as a full closed-loop problem, combining reinforcement-learning control with onboard perception under changing hydrodynamics, disturbances, and difficult water-surface sensing. The study focuses on sim-to-real transfer and robustness evaluation, testing whether policies trained in simulation can still steer an ASV effectively when perception errors and real-world environmental variation enter the loop.",
     "published": "2026-05-04T12:29:15+00:00",
     "updated": "2026-05-04T12:29:15+00:00",
     "authors": [
@@ -7399,7 +7445,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.02529v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2605.02529.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.02529.jpg",
+      "full_text": "Autonomous surface vessels for floating-waste removal operate under varying hydrodynamics, external disturbances, and challenging water-surface perception.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -7424,7 +7472,7 @@
     "source": "arxiv",
     "title": "ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation",
     "url": "http://arxiv.org/abs/2603.03279v1",
-    "summary": "Achieving autonomous and versatile whole-body loco-manipulation remains a central barrier to making humanoids practically useful.",
+    "summary": "ULTRA targets autonomous whole-body loco-manipulation for humanoids, framing mobility and manipulation as a unified multimodal control problem rather than separate walking and arm-control modules. From the provided text, the concrete claim is that versatile, practical humanoid behavior depends on solving this integrated control barrier; no mechanism details, benchmarks, or results are given beyond that framing.",
     "published": "2026-03-03T18:59:29+00:00",
     "updated": "2026-03-03T18:59:29+00:00",
     "authors": [
@@ -7445,7 +7493,9 @@
       "pdf_url": "https://arxiv.org/pdf/2603.03279v1",
       "comment": "Project Page: https://ultra-humanoid.github.io/",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2603.03279.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2603.03279.jpg",
+      "full_text": "Achieving autonomous and versatile whole-body loco-manipulation remains a central barrier to making humanoids practically useful.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Manipulator",
@@ -7470,7 +7520,7 @@
     "source": "arxiv",
     "title": "CMoE: Contrastive Mixture of Experts for Motion Control and Terrain Adaptation of Humanoid Robots",
     "url": "http://arxiv.org/abs/2603.03067v1",
-    "summary": "For effective deployment in real-world environments, humanoid robots must autonomously navigate a diverse range of complex terrains with abrupt transitions.",
+    "summary": "CMoE targets humanoid locomotion across complex terrains with abrupt transitions, using a contrastive mixture-of-experts approach to motion control and terrain adaptation. From the provided text, the concrete mechanism and results are not available, but the focus is on enabling humanoid robots to autonomously adjust their control strategy as terrain conditions change in real-world settings.",
     "published": "2026-03-03T15:06:30+00:00",
     "updated": "2026-03-03T15:06:30+00:00",
     "authors": [
@@ -7492,7 +7542,9 @@
       "pdf_url": "https://arxiv.org/pdf/2603.03067v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2603.03067.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2603.03067.jpg",
+      "full_text": "For effective deployment in real-world environments, humanoid robots must autonomously navigate a diverse range of complex terrains with abrupt transitions.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Humanoid"
@@ -7516,7 +7568,7 @@
     "source": "arxiv",
     "title": "Ruka-v2: Tendon Driven Open-Source Dexterous Hand with Wrist and Abduction for Robot Learning",
     "url": "http://arxiv.org/abs/2603.26660v2",
-    "summary": "Lack of accessible and dexterous robot hardware has been a significant bottleneck to achieving human-level dexterity in robots. Last year, we released Ruka, a fully open-sourced, tendon-driven humanoid hand with 11 degrees of freedom - 2 per finger and 3 at the thumb - buildable for under $1,300.",
+    "summary": "Ruka-v2 is an open-source, tendon-driven dexterous hand aimed at making capable robot-learning hardware more accessible. It builds on the original Ruka hand, which offered 11 degrees of freedom with two joints per finger and three at the thumb, and was designed to be built for under $1,300.",
     "published": "2026-03-27T17:58:03+00:00",
     "updated": "2026-03-30T16:30:40+00:00",
     "authors": [
@@ -7539,7 +7591,9 @@
       "pdf_url": "https://arxiv.org/pdf/2603.26660v2",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2603.26660.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2603.26660.jpg",
+      "full_text": "Lack of accessible and dexterous robot hardware has been a significant bottleneck to achieving human-level dexterity in robots. Last year, we released Ruka, a fully open-sourced, tendon-driven humanoid hand with 11 degrees of freedom - 2 per finger and 3 at the thumb - buildable for under $1,300.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Manipulator",
@@ -7564,7 +7618,7 @@
     "source": "arxiv",
     "title": "Active Stereo-Camera Outperforms Multi-Sensor Setup in ACT Imitation Learning for Humanoid Manipulation",
     "url": "http://arxiv.org/abs/2603.28422v1",
-    "summary": "The complexity of teaching humanoid robots new tasks is one of the major reasons hindering their widespread adoption in the industry.",
+    "summary": "An arXiv paper titled Active Stereo-Camera Outperforms Multi-Sensor Setup in ACT Imitation Learning for Humanoid Manipulation studies sensor choice for training humanoid manipulation with Action Chunking Transformer imitation learning. From the provided text, the only concrete claim available is that an active stereo-camera setup outperforms a multi-sensor configuration, framed around reducing the difficulty of teaching humanoid robots new industrial tasks.",
     "published": "2026-03-30T13:30:34+00:00",
     "updated": "2026-03-30T13:30:34+00:00",
     "authors": [
@@ -7581,7 +7635,9 @@
       "pdf_url": "https://arxiv.org/pdf/2603.28422v1",
       "comment": "7 pages",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2603.28422.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2603.28422.jpg",
+      "full_text": "The complexity of teaching humanoid robots new tasks is one of the major reasons hindering their widespread adoption in the industry.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#IL",
@@ -7607,7 +7663,7 @@
     "source": "arxiv",
     "title": "Libra-VLA: Achieving Learning Equilibrium via Asynchronous Coarse-to-Fine Dual-System",
     "url": "http://arxiv.org/abs/2604.24921v1",
-    "summary": "Vision-Language-Action (VLA) models are a promising paradigm for generalist robotic manipulation by grounding high-level semantic instructions into executable physical actions.",
+    "summary": "Libra-VLA targets generalist robotic manipulation by linking vision-language understanding to executable actions, so robots can interpret semantic instructions and turn them into physical behavior. The available excerpt only states the broad VLA setting and the paper’s asynchronous coarse-to-fine dual-system framing, without enough detail to summarize the specific mechanism or results.",
     "published": "2026-04-27T19:02:46+00:00",
     "updated": "2026-04-27T19:02:46+00:00",
     "authors": [
@@ -7630,7 +7686,9 @@
       "pdf_url": "https://arxiv.org/pdf/2604.24921v1",
       "comment": "Accepted to the Main Conference of ACL 2026. Project page: https://libra-vla.github.io/",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2604.24921.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2604.24921.jpg",
+      "full_text": "Vision-Language-Action (VLA) models are a promising paradigm for generalist robotic manipulation by grounding high-level semantic instructions into executable physical actions.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -7655,7 +7713,7 @@
     "source": "arxiv",
     "title": "$M^2$-VLA: Boosting Vision-Language Models for Generalizable Manipulation via Layer Mixture and Meta-Skills",
     "url": "http://arxiv.org/abs/2604.24182v1",
-    "summary": "Current Vision-Language-Action (VLA) models predominantly rely on end-to-end fine-tuning. While effective, this paradigm compromises the inherent generalization capabilities of Vision-Language Models (VLMs) and incurs catastrophic forgetting.",
+    "summary": "$M^2$-VLA targets a common failure mode in Vision-Language-Action training: end-to-end fine-tuning can make a strong VLM better at robot manipulation while eroding the generalization it started with. It introduces layer mixture and meta-skills as a way to adapt VLMs for manipulation more selectively, aiming to preserve broad visual-language knowledge while improving transfer across robot tasks.",
     "published": "2026-04-27T08:44:12+00:00",
     "updated": "2026-04-27T08:44:12+00:00",
     "authors": [
@@ -7680,7 +7738,9 @@
       "pdf_url": "https://arxiv.org/pdf/2604.24182v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2604.24182.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2604.24182.jpg",
+      "full_text": "Current Vision-Language-Action (VLA) models predominantly rely on end-to-end fine-tuning. While effective, this paradigm compromises the inherent generalization capabilities of Vision-Language Models (VLMs) and incurs catastrophic forgetting.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -7705,7 +7765,7 @@
     "source": "arxiv",
     "title": "Vision-Language-Action in Robotics: A Survey of Datasets, Benchmarks, and Data Engines",
     "url": "http://arxiv.org/abs/2604.23001v1",
-    "summary": "Despite remarkable progress in Vision--Language--Action (VLA) models, a central bottleneck remains underexamined: the data infrastructure that underlies embodied learning.",
+    "summary": "Vision-Language-Action models are framed here through the data systems that make embodied learning possible: datasets, benchmarks, and the “data engines” that collect, curate, evaluate, and scale robot experience. Rather than treating performance gains as only a modeling problem, the survey focuses on the infrastructure bottlenecks behind VLA robotics and organizes the field around how data is built and used.",
     "published": "2026-04-24T20:41:59+00:00",
     "updated": "2026-04-24T20:41:59+00:00",
     "authors": [
@@ -7729,7 +7789,9 @@
       "pdf_url": "https://arxiv.org/pdf/2604.23001v1",
       "comment": "This is a survey paper. The survey is already accepted by TMLR after peer-review. The OpenReview link is here: https://openreview.net/forum?id=tAaWFpvnmm",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2604.23001.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2604.23001.jpg",
+      "full_text": "Despite remarkable progress in Vision--Language--Action (VLA) models, a central bottleneck remains underexamined: the data infrastructure that underlies embodied learning.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -7754,7 +7816,7 @@
     "source": "arxiv",
     "title": "Learn Weightlessness: Imitate Non-Self-Stabilizing Motions on Humanoid Robot",
     "url": "http://arxiv.org/abs/2604.21351v1",
-    "summary": "The integration of imitation and reinforcement learning has enabled remarkable advances in humanoid whole-body control, facilitating diverse human-like behaviors. However, research on environment-dependent motions remains limited.",
+    "summary": "Imitation and reinforcement learning are used to train humanoid whole-body control for motions that depend on environmental dynamics rather than self-stabilizing balance alone. The focus is on “weightless” or non-self-stabilizing behaviors, where the robot must reproduce human-like motion patterns that cannot be maintained without interaction with the surrounding environment.",
     "published": "2026-04-23T07:10:05+00:00",
     "updated": "2026-04-23T07:10:05+00:00",
     "authors": [
@@ -7776,7 +7838,9 @@
       "pdf_url": "https://arxiv.org/pdf/2604.21351v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2604.21351.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2604.21351.jpg",
+      "full_text": "The integration of imitation and reinforcement learning has enabled remarkable advances in humanoid whole-body control, facilitating diverse human-like behaviors. However, research on environment-dependent motions remains limited.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -7801,7 +7865,7 @@
     "source": "arxiv",
     "title": "How VLAs (Really) Work In Open-World Environments",
     "url": "http://arxiv.org/abs/2604.21192v1",
-    "summary": "Vision-language-action models (VLAs) have been extensively used in robotics applications, achieving great success in various manipulation problems. More recently, VLAs have been used in long-horizon tasks and evaluated on benchmarks, such as BEHAVIOR1K (B1K), for solving complex household chores.",
+    "summary": "Vision-language-action models are being pushed beyond short manipulation skills into long-horizon household chores, with BEHAVIOR1K used as a stress test for how they operate in open-world settings. The work focuses on unpacking how these VLAs actually handle complex environments rather than just reporting task success, making it useful for understanding where current robot-AI systems generalize and where their behavior may be brittle.",
     "published": "2026-04-23T01:32:51+00:00",
     "updated": "2026-04-23T01:32:51+00:00",
     "authors": [
@@ -7822,7 +7886,9 @@
       "pdf_url": "https://arxiv.org/pdf/2604.21192v1",
       "comment": "8 pages, 7 figures, 2 tables",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2604.21192.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2604.21192.jpg",
+      "full_text": "Vision-language-action models (VLAs) have been extensively used in robotics applications, achieving great success in various manipulation problems. More recently, VLAs have been used in long-horizon tasks and evaluated on benchmarks, such as BEHAVIOR1K (B1K), for solving complex household chores.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -7847,7 +7913,7 @@
     "source": "arxiv",
     "title": "Cutting the Cord: System Architecture for Low-Cost, GPU-Accelerated Bimanual Mobile Manipulation",
     "url": "http://arxiv.org/abs/2603.09051v2",
-    "summary": "We present a bimanual mobile manipulator built on the open-source XLeRobot with integrated onboard compute for less than \\$1300.",
+    "summary": "A bimanual mobile manipulator based on the open-source XLeRobot is redesigned to run with integrated onboard GPU compute, removing dependence on tethered external hardware. The system targets low-cost deployment, with the full platform coming in under $1300, making mobile two-arm manipulation experiments more accessible for labs working with constrained budgets.",
     "published": "2026-03-10T00:44:23+00:00",
     "updated": "2026-03-21T18:13:20+00:00",
     "authors": [
@@ -7868,7 +7934,9 @@
       "pdf_url": "https://arxiv.org/pdf/2603.09051v2",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2603.09051.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2603.09051.jpg",
+      "full_text": "We present a bimanual mobile manipulator built on the open-source XLeRobot with integrated onboard compute for less than \\$1300.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Manipulator",
@@ -7894,7 +7962,7 @@
     "source": "arxiv",
     "title": "AGILE: A Comprehensive Workflow for Humanoid Loco-Manipulation Learning",
     "url": "http://arxiv.org/abs/2603.20147v1",
-    "summary": "Recent advances in reinforcement learning (RL) have enabled impressive humanoid behaviors in simulation, yet transferring these results to new robots remains challenging.",
+    "summary": "AGILE presents a workflow for learning humanoid loco-manipulation skills with reinforcement learning, aimed at making simulation-trained behaviors easier to transfer across different robot platforms. From the provided excerpt, the emphasis is on closing the gap between impressive simulated humanoid behaviors and practical reuse on new hardware, rather than on a single isolated controller or benchmark result.",
     "published": "2026-03-20T17:21:19+00:00",
     "updated": "2026-03-20T17:21:19+00:00",
     "authors": [
@@ -7916,7 +7984,9 @@
       "pdf_url": "https://arxiv.org/pdf/2603.20147v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2603.20147.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2603.20147.jpg",
+      "full_text": "Recent advances in reinforcement learning (RL) have enabled impressive humanoid behaviors in simulation, yet transferring these results to new robots remains challenging.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -7942,7 +8012,7 @@
     "source": "arxiv",
     "title": "PRIOR: Perceptive Learning for Humanoid Locomotion with Reference Gait Priors",
     "url": "http://arxiv.org/abs/2603.18979v1",
-    "summary": "Training perceptive humanoid locomotion policies that traverse complex terrains with natural gaits remains an open challenge, typically demanding multi-stage training pipelines, adversarial objectives, or extensive real-world calibration.",
+    "summary": "PRIOR targets perceptive humanoid locomotion on complex terrain by using reference gait priors to help policies retain natural-looking movement while adapting to terrain perception. The provided abstract fragment frames it as an alternative to heavier pipelines that rely on multi-stage training, adversarial losses, or extensive real-world calibration, but it does not include enough detail to report the exact training mechanism or results.",
     "published": "2026-03-19T14:42:07+00:00",
     "updated": "2026-03-19T14:42:07+00:00",
     "authors": [
@@ -7961,7 +8031,9 @@
       "pdf_url": "https://arxiv.org/pdf/2603.18979v1",
       "comment": "https://prior-iros2026.github.io/",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2603.18979.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2603.18979.jpg",
+      "full_text": "Training perceptive humanoid locomotion policies that traverse complex terrains with natural gaits remains an open challenge, typically demanding multi-stage training pipelines, adversarial objectives, or extensive real-world calibration.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Humanoid"
@@ -7985,7 +8057,7 @@
     "source": "arxiv",
     "title": "Bringing Network Coding into Multi-Robot Systems: Interplay Study for Autonomous Systems over Wireless Communications",
     "url": "http://arxiv.org/abs/2603.17472v1",
-    "summary": "Communication is a core enabler for multi-robot systems (MRS), providing the mechanism through which robots exchange state information, coordinate actions, and satisfy safety constraints.",
+    "summary": "Network coding is examined as a communication mechanism for multi-robot systems operating over wireless links, where robots need to exchange state, coordinate behavior, and maintain safety constraints. The paper appears to focus on how coded transmissions interact with autonomous multi-robot coordination, aiming to clarify when network coding can improve reliability or efficiency in robot-to-robot communication.",
     "published": "2026-03-18T08:26:17+00:00",
     "updated": "2026-03-18T08:26:17+00:00",
     "authors": [
@@ -8003,7 +8075,9 @@
       "pdf_url": "https://arxiv.org/pdf/2603.17472v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2603.17472.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2603.17472.jpg",
+      "full_text": "Communication is a core enabler for multi-robot systems (MRS), providing the mechanism through which robots exchange state information, coordinate actions, and satisfy safety constraints.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -8027,7 +8101,7 @@
     "source": "arxiv",
     "title": "Terrain Consistent Reference-Guided RL for Humanoid Navigation Autonomy",
     "url": "http://arxiv.org/abs/2605.15517v1",
-    "summary": "We present a method for training reference-guided, perceptive reinforcement learning locomotion policies for humanoid robots in which reference trajectories are modulated in training to be consistent with terrain geometry.",
+    "summary": "Terrain Consistent Reference-Guided RL trains humanoid navigation policies by adapting the reference trajectories during training so they match the local terrain geometry the robot must traverse. The result is a perceptive, reference-guided locomotion setup aimed at making humanoid autonomy more reliable on uneven terrain, where blindly tracking a nominal motion plan would conflict with the ground shape.",
     "published": "2026-05-15T01:27:50+00:00",
     "updated": "2026-05-15T01:27:50+00:00",
     "authors": [
@@ -8044,7 +8118,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.15517v1",
       "comment": "8 pages, 4 figures, intended to submit to Humanoids 2026",
       "first_seen": "2026-05-18",
-      "thumbnail_path": "thumbnails/arxiv/2605.15517.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.15517.jpg",
+      "full_text": "We present a method for training reference-guided, perceptive reinforcement learning locomotion policies for humanoid robots in which reference trajectories are modulated in training to be consistent with terrain geometry.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -8069,7 +8145,7 @@
     "source": "arxiv",
     "title": "AnySlot: Goal-Conditioned Vision-Language-Action Policies for Zero-Shot Slot-Level Placement",
     "url": "http://arxiv.org/abs/2604.10432v2",
-    "summary": "Vision-Language-Action (VLA) policies have emerged as a versatile paradigm for generalist robotic manipulation. However, precise object placement under compositional language instructions remains a major challenge for modern monolithic VLA policies.",
+    "summary": "AnySlot targets compositional placement commands where a robot must put an object into a specific slot-level location, a case that monolithic VLA policies often struggle to ground precisely. It frames placement as goal-conditioned vision-language-action policy learning, aiming to make slot-level placements work zero-shot from language and visual context rather than requiring task-specific retraining.",
     "published": "2026-04-12T03:09:44+00:00",
     "updated": "2026-04-14T04:07:15+00:00",
     "authors": [
@@ -8088,7 +8164,9 @@
       "pdf_url": "https://arxiv.org/pdf/2604.10432v2",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2604.10432.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2604.10432.jpg",
+      "full_text": "Vision-Language-Action (VLA) policies have emerged as a versatile paradigm for generalist robotic manipulation. However, precise object placement under compositional language instructions remains a major challenge for modern monolithic VLA policies.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -8113,7 +8191,7 @@
     "source": "arxiv",
     "title": "BlockVLA: Accelerating Autoregressive VLA via Block Diffusion Finetuning",
     "url": "http://arxiv.org/abs/2605.13382v1",
-    "summary": "While autoregressive (AR) Vision-Language-Action (VLA) models have demonstrated formidable reasoning capabilities in robotic tasks, their sequential decoding process often incurs high inference latency and may amplify error accumulation during long-horizon execution.",
+    "summary": "BlockVLA targets the latency and compounding-error issues in autoregressive vision-language-action models for robotics by replacing strictly token-by-token action decoding with block diffusion finetuning. The approach keeps the reasoning strengths of AR VLAs while generating chunks of actions more efficiently, aiming to make long-horizon robot execution faster and less brittle.",
     "published": "2026-05-13T11:37:51+00:00",
     "updated": "2026-05-13T11:37:51+00:00",
     "authors": [
@@ -8131,7 +8209,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.13382v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2605.13382.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.13382.jpg",
+      "full_text": "While autoregressive (AR) Vision-Language-Action (VLA) models have demonstrated formidable reasoning capabilities in robotic tasks, their sequential decoding process often incurs high inference latency and may amplify error accumulation during long-horizon execution.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -8156,7 +8236,7 @@
     "source": "arxiv",
     "title": "3D RL-DWA: A Hybrid Reinforcement Learning and Dynamic Window Approach for Goal-Directed Local Navigation in Multi-DoF Robots",
     "url": "http://arxiv.org/abs/2605.12689v1",
-    "summary": "In this paper, we present a novel hybrid approach that combines Reinforcement Learning (RL) with Dynamic Window Approach (DWA) for adaptive 3D local navigation of high-degree-of-freedom robotic systems.",
+    "summary": "3D RL-DWA combines reinforcement learning with the Dynamic Window Approach to handle adaptive local navigation for high-DoF robots moving through 3D space. The method is aimed at goal-directed motion where a robot must choose feasible local actions under its kinematic constraints while adapting beyond a hand-tuned planner.",
     "published": "2026-05-12T19:37:32+00:00",
     "updated": "2026-05-12T19:37:32+00:00",
     "authors": [
@@ -8172,7 +8252,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.12689v1",
       "comment": "Accepted to IEEE/ASME International Conference on Advanced Intelligent Mechatronics, AIM2026",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2605.12689.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.12689.jpg",
+      "full_text": "In this paper, we present a novel hybrid approach that combines Reinforcement Learning (RL) with Dynamic Window Approach (DWA) for adaptive 3D local navigation of high-degree-of-freedom robotic systems.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -8197,7 +8279,7 @@
     "source": "arxiv",
     "title": "Learning Action Manifold with Multi-view Latent Priors for Robotic Manipulation",
     "url": "http://arxiv.org/abs/2605.11832v1",
-    "summary": "This paper tackles spatial perception and manipulation challenges in Vision-Language-Action (VLA) models.",
+    "summary": "Learning Action Manifold with Multi-view Latent Priors targets the spatial perception bottlenecks that make vision-language-action policies brittle in robotic manipulation. It appears to learn a structured action space using latent priors from multiple views, aiming to give the policy a better geometric handle on how visual observations map to feasible robot actions.",
     "published": "2026-05-12T09:21:29+00:00",
     "updated": "2026-05-12T09:21:29+00:00",
     "authors": [
@@ -8222,7 +8304,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.11832v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2605.11832.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.11832.jpg",
+      "full_text": "This paper tackles spatial perception and manipulation challenges in Vision-Language-Action (VLA) models.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -8247,7 +8331,7 @@
     "source": "arxiv",
     "title": "AR-VLA: True Autoregressive Action Expert for Vision-Language-Action Models",
     "url": "http://arxiv.org/abs/2603.10126v2",
-    "summary": "We propose a standalone autoregressive (AR) Action Expert that generates actions as a continuous causal sequence while conditioning on refreshable vision-language prefixes.",
+    "summary": "AR-VLA introduces a standalone autoregressive action expert for vision-language-action models, treating robot actions as a continuous causal sequence rather than a one-shot prediction. It conditions that action stream on refreshable vision-language prefixes, letting the model update its perception-language context while preserving autoregressive structure over actions.",
     "published": "2026-03-10T18:03:29+00:00",
     "updated": "2026-05-11T15:13:54+00:00",
     "authors": [
@@ -8270,7 +8354,9 @@
       "pdf_url": "https://arxiv.org/pdf/2603.10126v2",
       "comment": "RSS 2026 accepted",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2603.10126.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2603.10126.jpg",
+      "full_text": "We propose a standalone autoregressive (AR) Action Expert that generates actions as a continuous causal sequence while conditioning on refreshable vision-language prefixes.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -8295,7 +8381,7 @@
     "source": "arxiv",
     "title": "RoboRouter: Training-Free Policy Routing for Robotic Manipulation",
     "url": "http://arxiv.org/abs/2603.07892v3",
-    "summary": "Research on robotic manipulation has developed a diverse set of policy paradigms, including vision-language-action (VLA) models, vision-action (VA) policies, and code-based compositional approaches.",
+    "summary": "RoboRouter tackles robotic manipulation by routing each task to an appropriate policy type rather than relying on a single universal controller. It is training-free and is designed to choose among VLA models, VA policies, and code-based compositional methods, making the interesting part less about learning a new policy and more about deciding which existing policy paradigm fits the situation.",
     "published": "2026-03-09T02:14:32+00:00",
     "updated": "2026-03-12T05:45:57+00:00",
     "authors": [
@@ -8320,7 +8406,9 @@
       "pdf_url": "https://arxiv.org/pdf/2603.07892v3",
       "comment": "We need to withdraw the paper as some of the reference papers are incorrect and need to be removed",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2603.07892.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2603.07892.jpg",
+      "full_text": "Research on robotic manipulation has developed a diverse set of policy paradigms, including vision-language-action (VLA) models, vision-action (VA) policies, and code-based compositional approaches.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -8345,7 +8433,7 @@
     "source": "arxiv",
     "title": "Adaptive Action Chunking at Inference-time for Vision-Language-Action Models",
     "url": "http://arxiv.org/abs/2604.04161v2",
-    "summary": "In Vision-Language-Action (VLA) models, action chunking (i.e., executing a sequence of actions without intermediate replanning) is a key technique to improve robotic manipulation abilities.",
+    "summary": "Adaptive Action Chunking adjusts how many low-level robot actions a vision-language-action model executes between replanning steps at inference time, instead of using a fixed chunk size throughout a task. The idea targets a practical tradeoff in robotic manipulation: longer chunks can make behavior smoother and faster, while shorter chunks let the policy react when the scene or task state needs tighter feedback.",
     "published": "2026-04-05T16:03:32+00:00",
     "updated": "2026-04-10T12:28:01+00:00",
     "authors": [
@@ -8366,7 +8454,9 @@
       "pdf_url": "https://arxiv.org/pdf/2604.04161v2",
       "comment": "accepted by CVPR 2026",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2604.04161.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2604.04161.jpg",
+      "full_text": "In Vision-Language-Action (VLA) models, action chunking (i.e., executing a sequence of actions without intermediate replanning) is a key technique to improve robotic manipulation abilities.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -8391,7 +8481,7 @@
     "source": "arxiv",
     "title": "EMMa: End-Effector Stability-Oriented Mobile Manipulation for Tracked Rescue Robots",
     "url": "http://arxiv.org/abs/2604.08292v1",
-    "summary": "The autonomous operation of tracked mobile manipulators in rescue missions requires not only ensuring the reachability and safety of robot motion but also maintaining stable end-effector manipulation under diverse task demands.",
+    "summary": "EMMa targets tracked rescue robots with mobile manipulators, focusing on keeping the end effector stable while the base moves through difficult mission settings. From the provided text, it appears to combine motion reachability and safety with task-dependent manipulation stability, so the robot can operate autonomously without treating arm control as separate from locomotion.",
     "published": "2026-04-09T14:28:41+00:00",
     "updated": "2026-04-09T14:28:41+00:00",
     "authors": [
@@ -8409,7 +8499,9 @@
       "pdf_url": "https://arxiv.org/pdf/2604.08292v1",
       "comment": "14 pages, 17 figures",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2604.08292.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2604.08292.jpg",
+      "full_text": "The autonomous operation of tracked mobile manipulators in rescue missions requires not only ensuring the reachability and safety of robot motion but also maintaining stable end-effector manipulation under diverse task demands.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Manipulator",
@@ -8434,7 +8526,7 @@
     "source": "arxiv",
     "title": "Scale-Plan: Scalable Language-Enabled Task Planning for Heterogeneous Multi-Robot Teams",
     "url": "http://arxiv.org/abs/2603.08814v1",
-    "summary": "Long-horizon task planning for heterogeneous multi-robot systems is essential for deploying collaborative teams in real-world environments; yet, it remains challenging due to the large volume of perceptual information, much of which is irrelevant to task objectives and burdens planning.",
+    "summary": "Scale-Plan tackles long-horizon planning for heterogeneous robot teams by using language-enabled task planning while filtering down the large stream of perceptual information to what is relevant for the mission. The interesting angle is its focus on scalability: it is designed for settings where different robots must coordinate over extended tasks without letting irrelevant environmental details overwhelm the planner.",
     "published": "2026-03-09T18:13:18+00:00",
     "updated": "2026-03-09T18:13:18+00:00",
     "authors": [
@@ -8454,7 +8546,9 @@
       "pdf_url": "https://arxiv.org/pdf/2603.08814v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2603.08814.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2603.08814.jpg",
+      "full_text": "Long-horizon task planning for heterogeneous multi-robot systems is essential for deploying collaborative teams in real-world environments; yet, it remains challenging due to the large volume of perceptual information, much of which is irrelevant to task objectives and burdens planning.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -8478,7 +8572,7 @@
     "source": "arxiv",
     "title": "LineRides: Line-Guided Reinforcement Learning for Bicycle Robot Stunts",
     "url": "http://arxiv.org/abs/2605.05110v2",
-    "summary": "Designing reward functions for agile robotic maneuvers in reinforcement learning remains difficult, and demonstration-based approaches often require reference motions that are unavailable for novel platforms or extreme stunts.",
+    "summary": "LineRides tackles agile bicycle-robot stunts by guiding reinforcement learning with task lines rather than hand-designed dense rewards or reference motions. The idea is aimed at maneuvers where demonstrations are hard to obtain, letting a new or unusual bicycle platform learn extreme behaviors from geometric guidance instead of imitation data.",
     "published": "2026-05-06T16:43:28+00:00",
     "updated": "2026-05-08T17:02:40+00:00",
     "authors": [
@@ -8498,7 +8592,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.05110v2",
       "comment": "Published in IEEE Robotics and Automation Letters (RA-L), 2026",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2605.05110.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.05110.jpg",
+      "full_text": "Designing reward functions for agile robotic maneuvers in reinforcement learning remains difficult, and demonstration-based approaches often require reference motions that are unavailable for novel platforms or extreme stunts.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -8523,7 +8619,7 @@
     "source": "arxiv",
     "title": "VLA-GSE: Boosting Parameter-Efficient Fine-Tuning in VLA with Generalized and Specialized Experts",
     "url": "http://arxiv.org/abs/2605.06175v2",
-    "summary": "Vision-language-action (VLA) models inherit rich visual-semantic priors from pre-trained vision-language backbones, but adapting them to robotic control remains challenging. Full fine-tuning (FFT) is prone to overfitting on downstream robotic data and catastrophic forgetting of pretrained vision-language capabilities.",
+    "summary": "VLA-GSE targets parameter-efficient adaptation of vision-language-action models for robotic control, aiming to avoid the overfitting and catastrophic forgetting that can come with full fine-tuning on limited robot data. It does this by splitting adaptation into generalized and specialized expert components, so the model can retain broad vision-language priors while learning control-specific behavior more selectively.",
     "published": "2026-05-07T12:56:58+00:00",
     "updated": "2026-05-08T06:32:29+00:00",
     "authors": [
@@ -8543,7 +8639,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.06175v2",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2605.06175.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.06175.jpg",
+      "full_text": "Vision-language-action (VLA) models inherit rich visual-semantic priors from pre-trained vision-language backbones, but adapting them to robotic control remains challenging. Full fine-tuning (FFT) is prone to overfitting on downstream robotic data and catastrophic forgetting of pretrained vision-language capabilities.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -8568,7 +8666,7 @@
     "source": "arxiv",
     "title": "TempoFit: Plug-and-Play Layer-Wise Temporal KV Memory for Long-Horizon Vision-Language-Action Manipulation",
     "url": "http://arxiv.org/abs/2603.07647v1",
-    "summary": "Pretrained Vision-Language-Action (VLA) policies have achieved strong single-step manipulation, but their inference remains largely memoryless, which is brittle in non-Markovian long-horizon settings with occlusion, state aliasing, and subtle post-action changes.",
+    "summary": "TempoFit targets the memory bottleneck in pretrained vision-language-action manipulation policies by adding a plug-and-play, layer-wise temporal key-value memory during inference. Instead of treating each control step independently, it lets the policy retain temporally structured context across long horizons, which is especially useful when occlusions, aliased states, or small post-action changes make the current observation ambiguous.",
     "published": "2026-03-08T14:17:25+00:00",
     "updated": "2026-03-08T14:17:25+00:00",
     "authors": [
@@ -8591,7 +8689,9 @@
       "pdf_url": "https://arxiv.org/pdf/2603.07647v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2603.07647.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2603.07647.jpg",
+      "full_text": "Pretrained Vision-Language-Action (VLA) policies have achieved strong single-step manipulation, but their inference remains largely memoryless, which is brittle in non-Markovian long-horizon settings with occlusion, state aliasing, and subtle post-action changes.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -8616,7 +8716,7 @@
     "source": "arxiv",
     "title": "Stability of Control Lyapunov Function Guided Reinforcement Learning",
     "url": "http://arxiv.org/abs/2605.01978v2",
-    "summary": "Reinforcement learning (RL) has become the de facto method for achieving locomotion on humanoid robots in practice, yet stability analysis of the corresponding control policies is lacking. Recent work has attempted to merge control theoretic ideas with reinforcement learning through control guided learning.",
+    "summary": "Control Lyapunov Function guided reinforcement learning is used to bring explicit stability structure into humanoid locomotion policies, where standard RL often works well empirically but lacks guarantees. The approach sits at the intersection of control-guided learning and policy optimization, aiming to train controllers whose behavior can be analyzed through CLF-style stability arguments rather than treated as a black box.",
     "published": "2026-05-03T17:27:44+00:00",
     "updated": "2026-05-06T17:51:05+00:00",
     "authors": [
@@ -8633,7 +8733,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.01978v2",
       "comment": "This work has been submitted to the IEEE for possible publication",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2605.01978.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.01978.jpg",
+      "full_text": "Reinforcement learning (RL) has become the de facto method for achieving locomotion on humanoid robots in practice, yet stability analysis of the corresponding control policies is lacking. Recent work has attempted to merge control theoretic ideas with reinforcement learning through control guided learning.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -8658,7 +8760,7 @@
     "source": "arxiv",
     "title": "Can Explicit Physical Feasibility Benefit VLA Learning? An Empirical Study",
     "url": "http://arxiv.org/abs/2604.17896v2",
-    "summary": "Vision-Language-Action (VLA) models map multimodal inputs directly to robot actions and are typically trained through large-scale imitation learning.",
+    "summary": "An empirical study examines whether making physical feasibility explicit can improve Vision-Language-Action models, which usually learn robot actions directly from multimodal demonstrations. The premise is that adding constraints or signals about what actions are physically possible may help imitation-trained VLAs avoid implausible behavior, but the provided text does not include the specific method, benchmarks, or results.",
     "published": "2026-04-20T07:15:12+00:00",
     "updated": "2026-05-05T10:16:22+00:00",
     "authors": [
@@ -8676,7 +8778,9 @@
       "pdf_url": "https://arxiv.org/pdf/2604.17896v2",
       "comment": "8 pages, 5 figures. This work has been submitted to the IEEE for possible publication",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2604.17896.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2604.17896.jpg",
+      "full_text": "Vision-Language-Action (VLA) models map multimodal inputs directly to robot actions and are typically trained through large-scale imitation learning.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#IL",
@@ -8702,7 +8806,7 @@
     "source": "arxiv",
     "title": "Phone2Act: A Low-Cost, Hardware-Agnostic Teleoperation System for Scalable VLA Data Collection",
     "url": "http://arxiv.org/abs/2605.01948v1",
-    "summary": "Collecting diverse, high-quality manipulation data for Vision-Language-Action (VLA) model training remains prohibitively expensive for many research groups, as existing teleoperation frameworks rely on specialized hardware or are tightly coupled to specific robot platforms.",
+    "summary": "Phone2Act targets the data bottleneck in VLA manipulation by turning a regular smartphone into a low-cost teleoperation interface that is not tied to a particular robot platform. From the provided text, its value is in making scalable, high-quality robot demonstration collection more accessible to groups that cannot afford specialized teleoperation hardware or platform-specific systems.",
     "published": "2026-05-03T16:17:16+00:00",
     "updated": "2026-05-03T16:17:16+00:00",
     "authors": [
@@ -8721,7 +8825,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.01948v1",
       "comment": "6 pages, 5 figures",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2605.01948.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.01948.jpg",
+      "full_text": "Collecting diverse, high-quality manipulation data for Vision-Language-Action (VLA) model training remains prohibitively expensive for many research groups, as existing teleoperation frameworks rely on specialized hardware or are tightly coupled to specific robot platforms.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -8746,7 +8852,7 @@
     "source": "arxiv",
     "title": "SkillVLA: Tackling Combinatorial Diversity in Dual-Arm Manipulation via Skill Reuse",
     "url": "http://arxiv.org/abs/2603.03836v1",
-    "summary": "Recent progress in vision-language-action (VLA) models has demonstrated strong potential for dual-arm manipulation, enabling complex behaviors and generalization to unseen environments. However, mainstream bimanual VLA formulations largely overlook the critical challenge of combinatorial diversity.",
+    "summary": "SkillVLA targets the combinatorial explosion in dual-arm manipulation, where many object, hand, and subtask pairings can appear even within seemingly similar bimanual tasks. It frames dual-arm behavior around reusable skills rather than treating each combination as a separate vision-language-action mapping, aiming to make generalization to unseen manipulation setups more systematic.",
     "published": "2026-03-04T08:38:27+00:00",
     "updated": "2026-03-04T08:38:27+00:00",
     "authors": [
@@ -8767,7 +8873,9 @@
       "pdf_url": "https://arxiv.org/pdf/2603.03836v1",
       "comment": "16 pages",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2603.03836.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2603.03836.jpg",
+      "full_text": "Recent progress in vision-language-action (VLA) models has demonstrated strong potential for dual-arm manipulation, enabling complex behaviors and generalization to unseen environments. However, mainstream bimanual VLA formulations largely overlook the critical challenge of combinatorial diversity.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -8793,7 +8901,7 @@
     "source": "arxiv",
     "title": "Stereo Multistage Spatial Attention for Real-Time Mobile Manipulation Under Visual Scale Variation and Disturbances",
     "url": "http://arxiv.org/abs/2605.00471v1",
-    "summary": "Robots operating in open, unstructured real-world environments must rely on onboard visual perception while autonomously moving across different locations. Continuous changes in onboard camera viewpoints cause significant visual scale variations in target objects, affecting vision-based motion generation.",
+    "summary": "Stereo Multistage Spatial Attention targets the scale instability that mobile manipulators see when onboard stereo cameras move through unstructured environments and the same object changes apparent size. It appears to use staged spatial attention over stereo visual input to keep vision-based motion generation responsive in real time under viewpoint shifts and disturbances, aiming at more reliable mobile manipulation without relying on fixed external perception.",
     "published": "2026-05-01T07:18:11+00:00",
     "updated": "2026-05-01T07:18:11+00:00",
     "authors": [
@@ -8812,7 +8920,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.00471v1",
       "comment": "8 pages, 10 figures",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2605.00471.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.00471.jpg",
+      "full_text": "Robots operating in open, unstructured real-world environments must rely on onboard visual perception while autonomously moving across different locations. Continuous changes in onboard camera viewpoints cause significant visual scale variations in target objects, affecting vision-based motion generation.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Manipulator",
@@ -8837,7 +8947,7 @@
     "source": "arxiv",
     "title": "Scaling Tasks, Not Samples: Mastering Humanoid Control through Multi-Task Model-Based Reinforcement Learning",
     "url": "http://arxiv.org/abs/2603.01452v1",
-    "summary": "Developing generalist robots capable of mastering diverse skills remains a central challenge in embodied AI. While recent progress emphasizes scaling model parameters and offline datasets, such approaches are limited in robotics, where learning requires active interaction.",
+    "summary": "The paper argues that humanoid control should be scaled through the number and diversity of interactive tasks rather than by relying mainly on larger models or offline datasets. It frames multi-task model-based reinforcement learning as a route to more general humanoid skill acquisition, where the robot learns from active interaction across tasks instead of passively imitating fixed data.",
     "published": "2026-03-02T05:07:43+00:00",
     "updated": "2026-03-02T05:07:43+00:00",
     "authors": [
@@ -8855,7 +8965,9 @@
       "pdf_url": "https://arxiv.org/pdf/2603.01452v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2603.01452.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2603.01452.jpg",
+      "full_text": "Developing generalist robots capable of mastering diverse skills remains a central challenge in embodied AI. While recent progress emphasizes scaling model parameters and offline datasets, such approaches are limited in robotics, where learning requires active interaction.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -8881,7 +8993,7 @@
     "source": "arxiv",
     "title": "MiniVLA-Nav v1: A Multi-Scene Simulation Dataset for Language-Conditioned Robot Navigation",
     "url": "http://arxiv.org/abs/2605.00397v1",
-    "summary": "We present MiniVLA-Nav v1, a simulation dataset for Language-Conditioned Object Approach (LCOA) navigation: given a short natural-language instruction, an NVIDIA Nova Carter differential-drive robot must navigate to the named object and stop within 1 m across four photorealistic Isaac Sim environments (Office, Hospital, Full Warehouse, and Warehouse with Multiple Shelves).",
+    "summary": "MiniVLA-Nav v1 is a simulated benchmark dataset for language-conditioned object approach navigation, where an NVIDIA Nova Carter differential-drive robot follows short natural-language instructions to reach named objects and stop within 1 m. It spans four photorealistic Isaac Sim scenes, including office, hospital, full warehouse, and multi-shelf warehouse layouts, giving researchers a controlled way to test VLA-style navigation across varied indoor and logistics environments.",
     "published": "2026-05-01T04:36:54+00:00",
     "updated": "2026-05-01T04:36:54+00:00",
     "authors": [
@@ -8896,7 +9008,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.00397v1",
       "comment": "9 pages, 12 figures, 7 tables. Dataset paper",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2605.00397.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.00397.jpg",
+      "full_text": "We present MiniVLA-Nav v1, a simulation dataset for Language-Conditioned Object Approach (LCOA) navigation: given a short natural-language instruction, an NVIDIA Nova Carter differential-drive robot must navigate to the named object and stop within 1 m across four photorealistic Isaac Sim environments (Office, Hospital, Full Warehouse, and Warehouse with Multiple Shelves).",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -8921,7 +9035,7 @@
     "source": "arxiv",
     "title": "ANCHOR: A Physically Grounded Closed-Loop Framework for Robust Home-Service Mobile Manipulation",
     "url": "http://arxiv.org/abs/2604.25323v1",
-    "summary": "Recent advances in open-vocabulary mobile manipulation have brought robots into real domestic environments. In such settings, reliable long-horizon execution under open-set object references and frequent disturbances becomes essential. However, many failures persist.",
+    "summary": "ANCHOR targets long-horizon home-service mobile manipulation in real domestic settings, where robots must follow open-set object references while recovering from disturbances and execution failures. It frames the problem as physically grounded closed-loop control, aiming to keep perception, manipulation, and navigation tied to ongoing feedback rather than brittle one-shot plans.",
     "published": "2026-04-28T07:37:39+00:00",
     "updated": "2026-04-28T07:37:39+00:00",
     "authors": [
@@ -8939,7 +9053,9 @@
       "pdf_url": "https://arxiv.org/pdf/2604.25323v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2604.25323.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2604.25323.jpg",
+      "full_text": "Recent advances in open-vocabulary mobile manipulation have brought robots into real domestic environments. In such settings, reliable long-horizon execution under open-set object references and frequent disturbances becomes essential. However, many failures persist.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Manipulator",
@@ -8964,7 +9080,7 @@
     "source": "arxiv",
     "title": "LaMP: Learning Vision-Language-Action Policies with 3D Scene Flow as Latent Motion Prior",
     "url": "http://arxiv.org/abs/2603.25399v1",
-    "summary": "We introduce \\textbf{LaMP}, a dual-expert Vision-Language-Action framework that embeds dense 3D scene flow as a latent motion prior for robotic manipulation. Existing VLA models regress actions directly from 2D semantic visual features, forcing them to learn complex 3D physical interactions implicitly.",
+    "summary": "LaMP trains vision-language-action manipulation policies with a dual-expert setup that uses dense 3D scene flow as a latent motion prior. Instead of forcing a policy to infer physical motion purely from 2D semantic visual features, it gives the model an internal representation of how the scene is moving in 3D, aiming to make action prediction more grounded in object geometry and interaction dynamics.",
     "published": "2026-03-26T12:47:51+00:00",
     "updated": "2026-03-26T12:47:51+00:00",
     "authors": [
@@ -8988,7 +9104,9 @@
       "pdf_url": "https://arxiv.org/pdf/2603.25399v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2603.25399.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2603.25399.jpg",
+      "full_text": "We introduce \\textbf{LaMP}, a dual-expert Vision-Language-Action framework that embeds dense 3D scene flow as a latent motion prior for robotic manipulation. Existing VLA models regress actions directly from 2D semantic visual features, forcing them to learn complex 3D physical interactions implicitly.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -9013,7 +9131,7 @@
     "source": "arxiv",
     "title": "$π$, But Make It Fly: Physics-Guided Transfer of VLA Models to Aerial Manipulation",
     "url": "http://arxiv.org/abs/2603.25038v1",
-    "summary": "Vision-Language-Action (VLA) models such as $π_0$ have demonstrated remarkable generalization across diverse fixed-base manipulators.",
+    "summary": "π₀ is adapted from fixed-base manipulation to aerial manipulation by using physics guidance to bridge the embodiment gap between grounded arms and flying robots. The idea is to preserve the generalization strengths of vision-language-action models while making their actions compatible with the dynamics and constraints of a robot that has to fly while manipulating objects.",
     "published": "2026-03-26T05:19:54+00:00",
     "updated": "2026-03-26T05:19:54+00:00",
     "authors": [
@@ -9036,7 +9154,9 @@
       "pdf_url": "https://arxiv.org/pdf/2603.25038v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2603.25038.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2603.25038.jpg",
+      "full_text": "Vision-Language-Action (VLA) models such as $π_0$ have demonstrated remarkable generalization across diverse fixed-base manipulators.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -9061,7 +9181,7 @@
     "source": "arxiv",
     "title": "CodeGraphVLP: Code-as-Planner Meets Semantic-Graph State for Non-Markovian Vision-Language-Action Models",
     "url": "http://arxiv.org/abs/2604.22238v1",
-    "summary": "Vision-Language-Action (VLA) models promise generalist robot manipulation, but are typically trained and deployed as short-horizon policies that assume the latest observation is sufficient for action reasoning.",
+    "summary": "CodeGraphVLP tackles a common weakness in vision-language-action robot models: treating each step as if the current camera observation contains all the information needed to act. It combines code-as-planner style reasoning with a semantic graph state, giving the policy a structured memory for non-Markovian manipulation tasks where past objects, relations, or instructions matter beyond the latest frame.",
     "published": "2026-04-24T05:27:27+00:00",
     "updated": "2026-04-24T05:27:27+00:00",
     "authors": [
@@ -9085,7 +9205,9 @@
       "pdf_url": "https://arxiv.org/pdf/2604.22238v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2604.22238.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2604.22238.jpg",
+      "full_text": "Vision-Language-Action (VLA) models promise generalist robot manipulation, but are typically trained and deployed as short-horizon policies that assume the latest observation is sufficient for action reasoning.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -9110,7 +9232,7 @@
     "source": "arxiv",
     "title": "MEVIUS2: Practical Open-Source Quadruped Robot with Sheet Metal Welding and Multimodal Perception",
     "url": "http://arxiv.org/abs/2603.22031v1",
-    "summary": "Various quadruped robots have been developed to date, and thanks to reinforcement learning, they are now capable of traversing diverse types of rough terrain. In parallel, there is a growing trend of releasing these robot designs as open-source, enabling researchers to freely build and modify robots themselves.",
+    "summary": "MEVIUS2 is an open-source quadruped designed to be practical to build and modify, using sheet-metal welding rather than more specialized fabrication. It pairs a rough-terrain locomotion platform with multimodal perception, aiming to give researchers a reproducible robot they can assemble themselves and adapt for embodied AI experiments.",
     "published": "2026-03-23T14:36:16+00:00",
     "updated": "2026-03-23T14:36:16+00:00",
     "authors": [
@@ -9129,7 +9251,9 @@
       "pdf_url": "https://arxiv.org/pdf/2603.22031v1",
       "comment": "Accepted to IEEE Robotics and Automation Practice, Website - https://haraduka.github.io/mevius2-hardware/",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2603.22031.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2603.22031.jpg",
+      "full_text": "Various quadruped robots have been developed to date, and thanks to reinforcement learning, they are now capable of traversing diverse types of rough terrain. In parallel, there is a growing trend of releasing these robot designs as open-source, enabling researchers to freely build and modify robots themselves.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -9154,7 +9278,7 @@
     "source": "arxiv",
     "title": "Temporal Difference Calibration in Sequential Tasks: Application to Vision-Language-Action Models",
     "url": "http://arxiv.org/abs/2604.20472v1",
-    "summary": "Recent advances in vision-language-action (VLA) models for robotics have highlighted the importance of reliable uncertainty quantification in sequential tasks. However, assessing and improving calibration in such settings remains mostly unexplored, especially when only partial trajectories are observed.",
+    "summary": "Temporal Difference Calibration targets uncertainty estimates for vision-language-action robotics models during sequential execution, including cases where only partial trajectories are available. It frames calibration around how confidence should evolve over time in a task, aiming to make VLA models’ uncertainty more reliable for step-by-step robotic decision-making.",
     "published": "2026-04-22T11:58:05+00:00",
     "updated": "2026-04-22T11:58:05+00:00",
     "authors": [
@@ -9172,7 +9296,9 @@
       "pdf_url": "https://arxiv.org/pdf/2604.20472v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2604.20472.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2604.20472.jpg",
+      "full_text": "Recent advances in vision-language-action (VLA) models for robotics have highlighted the importance of reliable uncertainty quantification in sequential tasks. However, assessing and improving calibration in such settings remains mostly unexplored, especially when only partial trajectories are observed.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -9197,7 +9323,7 @@
     "source": "arxiv",
     "title": "Assessing VLM-Driven Semantic-Affordance Inference for Non-Humanoid Robot Morphologies",
     "url": "http://arxiv.org/abs/2604.19509v1",
-    "summary": "Vision-language models (VLMs) have demonstrated remarkable capabilities in understanding human-object interactions, but their application to robotic systems with non-humanoid morphologies remains largely unexplored.",
+    "summary": "Vision-language models are tested for semantic-affordance inference on robots whose bodies do not resemble humans, asking whether models trained around human-object interaction can still judge what a differently shaped robot can do with objects. The setup targets a practical gap in VLM-based robotics: affordances depend on morphology, so a model’s human-centric assumptions may break when the agent has non-humanoid limbs, sensors, or effectors.",
     "published": "2026-04-21T14:26:29+00:00",
     "updated": "2026-04-21T14:26:29+00:00",
     "authors": [
@@ -9214,7 +9340,9 @@
       "pdf_url": "https://arxiv.org/pdf/2604.19509v1",
       "comment": "AAMAS 2026 (main track), 9 pages, 4 figures",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2604.19509.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2604.19509.jpg",
+      "full_text": "Vision-language models (VLMs) have demonstrated remarkable capabilities in understanding human-object interactions, but their application to robotic systems with non-humanoid morphologies remains largely unexplored.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Humanoid"
@@ -9238,7 +9366,7 @@
     "source": "arxiv",
     "title": "Unmasking the Illusion of Embodied Reasoning in Vision-Language-Action Models",
     "url": "http://arxiv.org/abs/2604.18000v1",
-    "summary": "Recent Vision-Language-Action (VLA) models report impressive success rates on standard robotic benchmarks, fueling optimism about general-purpose physical intelligence.",
+    "summary": "Recent Vision-Language-Action models look strong on standard robot benchmarks, but this paper argues that their apparent embodied reasoning may be partly an evaluation illusion. It examines whether high success rates actually reflect grounded physical understanding or whether benchmark structure and shortcuts let models appear more capable than they are.",
     "published": "2026-04-20T09:25:30+00:00",
     "updated": "2026-04-20T09:25:30+00:00",
     "authors": [
@@ -9257,7 +9385,9 @@
       "pdf_url": "https://arxiv.org/pdf/2604.18000v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2604.18000.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2604.18000.jpg",
+      "full_text": "Recent Vision-Language-Action (VLA) models report impressive success rates on standard robotic benchmarks, fueling optimism about general-purpose physical intelligence.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -9282,7 +9412,7 @@
     "source": "arxiv",
     "title": "Towards Generalizable Robotic Manipulation in Dynamic Environments",
     "url": "http://arxiv.org/abs/2603.15620v2",
-    "summary": "Vision-Language-Action (VLA) models excel in static manipulation but struggle in dynamic environments with moving targets.",
+    "summary": "Vision-Language-Action models are framed here around the gap between static tabletop manipulation and dynamic settings where targets move during execution. The paper appears to focus on making robotic manipulation policies generalize under those changing conditions, but the provided text does not include the proposed mechanism, benchmarks, or results.",
     "published": "2026-03-16T17:59:57+00:00",
     "updated": "2026-04-15T16:35:09+00:00",
     "authors": [
@@ -9302,7 +9432,9 @@
       "pdf_url": "https://arxiv.org/pdf/2603.15620v2",
       "comment": "Project Page: https://h-embodvis.github.io/DOMINO/",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2603.15620.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2603.15620.jpg",
+      "full_text": "Vision-Language-Action (VLA) models excel in static manipulation but struggle in dynamic environments with moving targets.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -9369,7 +9501,7 @@
     "source": "arxiv",
     "title": "FlashSAC: Fast and Stable Off-Policy Reinforcement Learning for High-Dimensional Robot Control",
     "url": "http://arxiv.org/abs/2604.04539v2",
-    "summary": "Reinforcement learning (RL) is a core approach for robot control when expert demonstrations are unavailable.",
+    "summary": "FlashSAC targets high-dimensional robot control with an off-policy reinforcement learning approach designed to be faster and more stable when demonstrations are not available. From the provided text, the concrete mechanism and results are not specified, so the safest reading is that it is a Soft Actor-Critic-style method focused on improving training efficiency and robustness for robot control problems.",
     "published": "2026-04-06T09:03:41+00:00",
     "updated": "2026-05-15T07:15:36+00:00",
     "authors": [
@@ -9395,7 +9527,9 @@
       "primary_category": "cs.LG",
       "pdf_url": "https://arxiv.org/pdf/2604.04539v2",
       "comment": "RSS'26",
-      "first_seen": "2026-05-19"
+      "first_seen": "2026-05-19",
+      "full_text": "Reinforcement learning (RL) is a core approach for robot control when expert demonstrations are unavailable.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -9420,7 +9554,7 @@
     "source": "arxiv",
     "title": "Propagating Unsafe Actions in LLM Controlled Multi-Robot Collaboration via Single Robot Compromise",
     "url": "http://arxiv.org/abs/2605.15641v1",
-    "summary": "Large language models (LLMs) are increasingly used as general planners in embodied intelligence, enabling high level coordination and low level task planning for both single robot and multi-robot collaboration.",
+    "summary": "LLM-controlled multi-robot teams are examined through a security lens: compromising a single robot can let unsafe actions propagate through the collaboration process. The work focuses on how high-level language-model planning and inter-robot coordination create a pathway for one corrupted agent to influence the behavior of otherwise uncompromised robots.",
     "published": "2026-05-15T05:45:52+00:00",
     "updated": "2026-05-15T05:45:52+00:00",
     "authors": [
@@ -9437,7 +9571,9 @@
       "primary_category": "cs.RO",
       "pdf_url": "https://arxiv.org/pdf/2605.15641v1",
       "comment": "Accepted by the 35th International Joint Conference on Artificial Intelligence (IJCAI 2026). 9 pages, 4 figures, 3 tables",
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "Large language models (LLMs) are increasingly used as general planners in embodied intelligence, enabling high level coordination and low level task planning for both single robot and multi-robot collaboration.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -9461,7 +9597,7 @@
     "source": "arxiv",
     "title": "A1: A Fully Transparent Open-Source, Adaptive and Efficient Truncated Vision-Language-Action Model",
     "url": "http://arxiv.org/abs/2604.05672v3",
-    "summary": "Vision-Language-Action (VLA) models have emerged as a powerful paradigm for open-world robot manipulation, but their practical deployment is often constrained by cost: billion-scale VLM backbones and iterative diffusion/flow-based action heads incur high latency and compute, making real-time control expensive on commodity hardware.",
+    "summary": "A1 targets the deployment bottleneck in vision-language-action robot policies by making the model adaptive and truncated, reducing the cost of both the large VLM backbone and the iterative action head used in many VLA systems. The emphasis is on a fully transparent open-source design that can support real-time open-world manipulation on commodity hardware rather than requiring billion-scale inference budgets.",
     "published": "2026-04-07T10:18:40+00:00",
     "updated": "2026-04-15T03:34:03+00:00",
     "authors": [
@@ -9496,7 +9632,9 @@
       "primary_category": "cs.RO",
       "pdf_url": "https://arxiv.org/pdf/2604.05672v3",
       "comment": null,
-      "first_seen": "2026-05-19"
+      "first_seen": "2026-05-19",
+      "full_text": "Vision-Language-Action (VLA) models have emerged as a powerful paradigm for open-world robot manipulation, but their practical deployment is often constrained by cost: billion-scale VLM backbones and iterative diffusion/flow-based action heads incur high latency and compute, making real-time control expensive on commodity hardware.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -9521,7 +9659,7 @@
     "source": "arxiv",
     "title": "Hand-in-the-Loop: Improving Dexterous VLA via Seamless Interventional Correction",
     "url": "http://arxiv.org/abs/2605.15157v1",
-    "summary": "Vision-Language-Action (VLA) models are prone to compounding errors in dexterous manipulation, where high-dimensional action spaces and contact-rich dynamics amplify small policy deviations over long horizons.",
+    "summary": "Hand-in-the-Loop targets the compounding-error problem in dexterous vision-language-action policies by letting a human intervene with seamless corrections during manipulation, rather than treating policy execution as a fixed open-loop rollout. The interesting piece is the corrective feedback loop: small hand-guided interventions can keep contact-rich, high-dimensional manipulation trajectories from drifting, giving the VLA model a practical way to recover over long horizons.",
     "published": "2026-05-14T17:51:40+00:00",
     "updated": "2026-05-14T17:51:40+00:00",
     "authors": [
@@ -9542,7 +9680,9 @@
       "primary_category": "cs.RO",
       "pdf_url": "https://arxiv.org/pdf/2605.15157v1",
       "comment": null,
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "Vision-Language-Action (VLA) models are prone to compounding errors in dexterous manipulation, where high-dimensional action spaces and contact-rich dynamics amplify small policy deviations over long horizons.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -12415,7 +12555,7 @@
     "source": "arxiv",
     "title": "Adaptive Outer-Loop Control of Quadrotors via Reinforcement Learning",
     "url": "http://arxiv.org/abs/2605.16015v2",
-    "summary": "Deep Reinforcement Learning (DRL) for quadrotor flight control typically relies on Domain Randomization (DR) for sim-to-real transfer, resulting in overly conservative policies that struggle with dynamic disturbances. To overcome this, we propose a novel adaptive control architecture that actively perceives and reacts to instantaneous perturbations. First, we train an optimal outer-loop policy, then replace its reliance on ground-truth disturbance data with a Residual Dynamics Predictor (RDP). The RDP estimates the external forces and moments acting on the aircraft in flight online using only the history of states and control actions. For seamless hardware transfer, we introduce a data-efficient linear calibration bridge and an online thrust correction mechanism that align the simulated latent space with reality using mere seconds of flight data. Real-world validations on a Crazyflie micro-quadrotor demonstrate that our adaptive controller significantly outperforms baselines, maintaining precise trajectory tracking under severe uncertainties including mass variations, asymmetric payloads, and dynamic slung loads",
+    "summary": "Adaptive Outer-Loop Control of Quadrotors via Reinforcement Learning replaces disturbance-aware DRL policies with a Residual Dynamics Predictor that estimates external forces and moments online from recent state and control histories. A lightweight linear calibration bridge plus online thrust correction lets the sim-trained controller transfer to a Crazyflie with only seconds of real flight data, where it tracks trajectories more accurately than baselines under mass changes, asymmetric payloads, and dynamic slung loads.",
     "published": "2026-05-15T14:49:58+00:00",
     "updated": "2026-05-18T16:30:20+00:00",
     "authors": [
@@ -12433,7 +12573,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.16015v2",
       "comment": null,
       "first_seen": "2026-05-18",
-      "thumbnail_path": "thumbnails/arxiv/2605.16015.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.16015.jpg",
+      "full_text": "Deep Reinforcement Learning (DRL) for quadrotor flight control typically relies on Domain Randomization (DR) for sim-to-real transfer, resulting in overly conservative policies that struggle with dynamic disturbances. To overcome this, we propose a novel adaptive control architecture that actively perceives and reacts to instantaneous perturbations. First, we train an optimal outer-loop policy, then replace its reliance on ground-truth disturbance data with a Residual Dynamics Predictor (RDP). The RDP estimates the external forces and moments acting on the aircraft in flight online using only the history of states and control actions. For seamless hardware transfer, we introduce a data-efficient linear calibration bridge and an online thrust correction mechanism that align the simulated latent space with reality using mere seconds of flight data. Real-world validations on a Crazyflie micro-quadrotor demonstrate that our adaptive controller significantly outperforms baselines, maintaining precise trajectory tracking under severe uncertainties including mass variations, asymmetric payloads, and dynamic slung loads",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -30306,7 +30448,7 @@
     "source": "arxiv",
     "title": "DexJoCo: A Benchmark and Toolkit for Task-Oriented Dexterous Manipulation on MuJoCo",
     "url": "http://arxiv.org/abs/2605.16257v1",
-    "summary": "Achieving human-level manipulation requires dexterous robotic hands capable of complex object interactions. Advancing such capabilities further demands standardized benchmarks for systematic evaluation.",
+    "summary": "DexJoCo is a MuJoCo-based benchmark and toolkit for evaluating task-oriented dexterous manipulation with robotic hands. It focuses on standardized, systematic testing of complex object interactions, giving researchers a common environment for comparing progress toward more human-level manipulation skills.",
     "published": "2026-05-15T17:59:51+00:00",
     "updated": "2026-05-15T17:59:51+00:00",
     "authors": [
@@ -30333,7 +30475,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.16257v1",
       "comment": "8 pages, 6 figures, project page is available at: https://dexjoco.github.io",
       "first_seen": "2026-05-18",
-      "thumbnail_path": "thumbnails/arxiv/2605.16257.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.16257.jpg",
+      "full_text": "Achieving human-level manipulation requires dexterous robotic hands capable of complex object interactions. Advancing such capabilities further demands standardized benchmarks for systematic evaluation.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Manipulator"
@@ -50762,7 +50906,7 @@
     "source": "arxiv",
     "title": "Learning Bilevel Policies over Symbolic World Models for Long-Horizon Planning",
     "url": "http://arxiv.org/abs/2605.15975v1",
-    "summary": "We tackle the challenge of building embodied AI agents that can reliably solve long-horizon planning problems. Imitation learning from demonstrations has shown itself to be effective in training robots to solve a diversity of complex tasks requiring fine motor control and manipulation over low-level (LL), continuous environments. Yet, it remains a difficult endeavour to generate long-horizon plans from imitation learning alone. In contrast, high-level (HL), symbolic abstractions facilitate efficient and interpretable long-horizon planning. We propose to combine the strengths of LL imitation learning for manipulation and control, and HL symbolic abstractions for long-horizon planning. We realise this idea via \\emph{bilevel policies} of the form $(π^{\\mathrm{hl}}, π^{\\mathrm{ll}})$, consisting of a neural policy $π^{\\mathrm{ll}}$ learned from LL demonstrations, and an HL symbolic policy $π^{\\mathrm{hl}}$ that is constructed from symbolic abstractions of the LL demonstrations combined with inductive generalisation. We implement these ideas in the BISON system. Experiments on extended MetaWorld benchmarks demonstrate that BISON generalises to long horizons and problems with greater numbers of objects than those solved by VLA and end-to-end methods, and is more time and memory efficient in training and inference. Notably, when ignoring LL execution, BISON's HL policies can solve HL problems with 10,000 relevant objects in under a minute. Project page: https://dillonzchen.github.io/bison",
+    "summary": "BISON learns a bilevel robot policy that pairs a low-level neural imitation policy for continuous manipulation with a high-level symbolic policy distilled from demonstrations and generalized inductively for long-horizon planning. On extended MetaWorld tasks, it handles longer horizons and more objects than VLA and end-to-end baselines while using less time and memory, and its symbolic planner alone can solve high-level problems with 10,000 relevant objects in under a minute.",
     "published": "2026-05-15T14:08:44+00:00",
     "updated": "2026-05-15T14:08:44+00:00",
     "authors": [
@@ -50780,7 +50924,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.15975v1",
       "comment": null,
       "first_seen": "2026-05-18",
-      "thumbnail_path": "thumbnails/arxiv/2605.15975.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.15975.jpg",
+      "full_text": "We tackle the challenge of building embodied AI agents that can reliably solve long-horizon planning problems. Imitation learning from demonstrations has shown itself to be effective in training robots to solve a diversity of complex tasks requiring fine motor control and manipulation over low-level (LL), continuous environments. Yet, it remains a difficult endeavour to generate long-horizon plans from imitation learning alone. In contrast, high-level (HL), symbolic abstractions facilitate efficient and interpretable long-horizon planning. We propose to combine the strengths of LL imitation learning for manipulation and control, and HL symbolic abstractions for long-horizon planning. We realise this idea via \\emph{bilevel policies} of the form $(π^{\\mathrm{hl}}, π^{\\mathrm{ll}})$, consisting of a neural policy $π^{\\mathrm{ll}}$ learned from LL demonstrations, and an HL symbolic policy $π^{\\mathrm{hl}}$ that is constructed from symbolic abstractions of the LL demonstrations combined with inductive generalisation. We implement these ideas in the BISON system. Experiments on extended MetaWorld benchmarks demonstrate that BISON generalises to long horizons and problems with greater numbers of objects than those solved by VLA and end-to-end methods, and is more time and memory efficient in training and inference. Notably, when ignoring LL execution, BISON's HL policies can solve HL problems with 10,000 relevant objects in under a minute. Project page: https://dillonzchen.github.io/bison",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -99792,7 +99938,7 @@
     "source": "news",
     "title": "Arrive AI using Nvidia Isaac Sim and Blackwell GPUs to develop autonomous drone delivery network",
     "url": "https://roboticsandautomationnews.com/2026/05/18/arrive-ai-using-nvidia-isaac-sim-and-blackwell-gpus-to-develop-autonomous-drone-delivery-network/101651/",
-    "summary": "Arrive AI, an autonomous delivery infrastructure company, says it is accelerating its artificial intelligence and robotics development using Nvidia Isaac Sim and high-performance GPU workstations powered by Nvidia Blackwell architecture.",
+    "summary": "Arrive AI is using Nvidia Isaac Sim and Blackwell-powered GPU workstations to speed development of its autonomous drone delivery network. The update matters mainly as an infrastructure and simulation play: the company is leaning on high-fidelity robotics simulation and newer GPU hardware to train, test, and iterate delivery autonomy before deploying it in the field.",
     "published": "2026-05-18T19:04:16+00:00",
     "updated": "2026-05-18T19:04:16+00:00",
     "authors": [
@@ -99801,7 +99947,9 @@
     "extra": {
       "feed": "Robotics and Automation News",
       "first_seen": "2026-05-19",
-      "thumbnail": "https://roboticsandautomationnews.com/wp-content/uploads/2026/05/arrive-ai-isaac-sim-1.png"
+      "thumbnail": "https://roboticsandautomationnews.com/wp-content/uploads/2026/05/arrive-ai-isaac-sim-1.png",
+      "full_text": "Arrive AI, an autonomous delivery infrastructure company, says it is accelerating its artificial intelligence and robotics development using Nvidia Isaac Sim and high-performance GPU workstations powered by Nvidia Blackwell architecture.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -100276,7 +100424,7 @@
     "source": "github",
     "title": "starVLA/starVLA",
     "url": "https://github.com/starVLA/starVLA",
-    "summary": "StarVLA: A Lego-like Codebase for Vision-Language-Action Model Developing",
+    "summary": "StarVLA is a modular open-source platform for building and evaluating vision-language-action models, with separated components for models, data, training, configs, and evaluation so researchers can swap backbones, benchmarks, and robot setups without rewriting the whole stack. It already covers practical VLA workflows such as LIBERO, SimplerEnv, RoboTwin, VLA-Arena, RoboCasa, CALVIN, Behavior-1K, Franka real-robot examples, RL post-training via RLinf, and world-model-based action prediction using Cosmos-Predict2 or Wan2. Its appeal is as much engineering substrate as model code: it is designed for rapid prototyping, benchmark co-training, custom robot or dataset integration, and even coding-agent-assisted extensions.",
     "published": "2025-10-09T15:33:23Z",
     "updated": "2026-05-19T13:18:09Z",
     "authors": [
@@ -100299,7 +100447,7 @@
       "thumbnail": "https://raw.githubusercontent.com/starVLA/starVLA/HEAD/assets/starVLA_overview.png",
       "readme": "StarVLA: A Lego-like Codebase for Vision-Language-Action Model Developing An open-source research platform for integrating and exploring cutting-edge technologies for generalist robots. 📢 Citation Update: Our technical report is now on arXiv (2604.05014). We kindly invite you to use the updated BibTeX for any ongoing or future citations. If you have already cited StarVLA in a previous version of your work, we would greatly appreciate it if you could update the citation entry in your camera-ready or future revisions. Thank you for your understanding and support! 🙏 --- In StarVLA (also a pun on \"start VLA\" ), each functional component (model, data, trainer, config, evaluation, etc.) follows a top-down, intuitive separation and high-cohesion, low-coupling principle, enabling plug-and-play design, rapid prototyping, and independent debugging. News ⚠️ Branch notice: The starVLA dev branch is where we actively merge new features and may be temporarily unstable. For verified results, use the stable starVLA branch. Thanks to StarVLA's low-coupling design, switching between branches is painless. We encourage trying starVLA dev and welcome PRs if you spot any issues! 💡 Tip: Files under any /bar/ directory are git-ignored, so you can place your custom scripts there (e.g., examples/LIBERO/train files/bar/my train.sh ) without polluting the repo. [2026/04/09] 🚀 unified multi-benchmark co-training example (combining LIBERO, SimplerEnv, RoboTwin, VLA-Arena, etc.) is coming soon. Stay tuned! [2026/05/01] 🔥 We now provide a step-by-step guide for integrating your own robot / dataset into StarVLA. [2026/05/01] 🔥 We are building agent skills to make StarVLA a powerful substrate for AI coding agents — we have verified that GitHub Copilot (Claude Opus 4.7) can autonomously integrate examples/Robocasa 365 and examples/RoboChallenge table30v2 from scratch. Going forward, StarVLA will be continuously optimised to be equally easy to use for humans and code agents. [2026/05/01] 🙏 Special thanks to the AllenAI team for providing optimised Docker environments and evaluation-acceleration support via vla-evaluation-harness! If you need to speed up large-scale VLA benchmark evaluation, we recommend checking it out. [2026/04/18] 🔥 StarVLA now supports DOMINO, a dynamic manipulation benchmark for moving objects and time-varying scenes. Original DOMINO repository is here. [2026/04/09] 🎯 Thanks to the RLinf team, StarVLA now supports RL post-training ! Check out the StarVLA × RLinf tutorial to get started. [2026/04/09] 🔥 WM4A (World Model for Action) is now integrated! Use pretrained video-generation DiT models (Cosmos-Predict2, Wan2.2) as backbones for action prediction. See docs/WM4A.md for architecture details and training instructions. Pretrained checkpoints are available at the StarVLA/world-model-to-vla HuggingFace collection. [2026/03/29] 🔥 Thanks to the ABot-M0 team for providing the pre-trained weights. For Qwen3-VL 4B , you can reload the qwen vl interface module in various frameworks! [2026/03/19] 🔥 StarVLA now provides a complete real-robot development case with Franka robot examples! [2026/03/03] 🔥 We now support Qwen3.5 as a backbone for VLA — the fastest integration in the community ⚡ With more model size options: 0.8B, 2B, 4B, and 9B ! Build your VLA flexibly on top of native multimodal models! [2026/01/29] 🔥 StarVLA Training Efficiency Report & Training Curves released! Training configs and efficiency benchmarks for community reference. [2026/01/29] Calvin benchmark experiments were conducted by the UNT team. For inquiries, please contact Zhijie Song (1600013008@pku.edu.cn) or Feng Yan (bphengyan@163.com). [2025/12/25] We've simultaneously established pipelines for Behavior-1K, RoboTwin 2.0, and CALVIN. We'd love to collaborate and share baseline results for more benchmarks with the community! Prior Timeline [2025/12/25] We've released RoboCasa evaluation support, which was trained without pretraining and reached SOTA performance . Check out mo",
       "full_text": "StarVLA: A Lego-like Codebase for Vision-Language-Action Model Developing An open-source research platform for integrating and exploring cutting-edge technologies for generalist robots. 📢 Citation Update: Our technical report is now on arXiv (2604.05014). We kindly invite you to use the updated BibTeX for any ongoing or future citations. If you have already cited StarVLA in a previous version of your work, we would greatly appreciate it if you could update the citation entry in your camera-ready or future revisions. Thank you for your understanding and support! 🙏 --- In StarVLA (also a pun on \"start VLA\" ), each functional component (model, data, trainer, config, evaluation, etc.) follows a top-down, intuitive separation and high-cohesion, low-coupling principle, enabling plug-and-play design, rapid prototyping, and independent debugging. News ⚠️ Branch notice: The starVLA dev branch is where we actively merge new features and may be temporarily unstable. For verified results, use the stable starVLA branch. Thanks to StarVLA's low-coupling design, switching between branches is painless. We encourage trying starVLA dev and welcome PRs if you spot any issues! 💡 Tip: Files under any /bar/ directory are git-ignored, so you can place your custom scripts there (e.g., examples/LIBERO/train files/bar/my train.sh ) without polluting the repo. [2026/04/09] 🚀 unified multi-benchmark co-training example (combining LIBERO, SimplerEnv, RoboTwin, VLA-Arena, etc.) is coming soon. Stay tuned! [2026/05/01] 🔥 We now provide a step-by-step guide for integrating your own robot / dataset into StarVLA. [2026/05/01] 🔥 We are building agent skills to make StarVLA a powerful substrate for AI coding agents — we have verified that GitHub Copilot (Claude Opus 4.7) can autonomously integrate examples/Robocasa 365 and examples/RoboChallenge table30v2 from scratch. Going forward, StarVLA will be continuously optimised to be equally easy to use for humans and code agents. [2026/05/01] 🙏 Special thanks to the AllenAI team for providing optimised Docker environments and evaluation-acceleration support via vla-evaluation-harness! If you need to speed up large-scale VLA benchmark evaluation, we recommend checking it out. [2026/04/18] 🔥 StarVLA now supports DOMINO, a dynamic manipulation benchmark for moving objects and time-varying scenes. Original DOMINO repository is here. [2026/04/09] 🎯 Thanks to the RLinf team, StarVLA now supports RL post-training ! Check out the StarVLA × RLinf tutorial to get started. [2026/04/09] 🔥 WM4A (World Model for Action) is now integrated! Use pretrained video-generation DiT models (Cosmos-Predict2, Wan2.2) as backbones for action prediction. See docs/WM4A.md for architecture details and training instructions. Pretrained checkpoints are available at the StarVLA/world-model-to-vla HuggingFace collection. [2026/03/29] 🔥 Thanks to the ABot-M0 team for providing the pre-trained weights. For Qwen3-VL 4B , you can reload the qwen vl interface module in various frameworks! [2026/03/19] 🔥 StarVLA now provides a complete real-robot development case with Franka robot examples! [2026/03/03] 🔥 We now support Qwen3.5 as a backbone for VLA — the fastest integration in the community ⚡ With more model size options: 0.8B, 2B, 4B, and 9B ! Build your VLA flexibly on top of native multimodal models! [2026/01/29] 🔥 StarVLA Training Efficiency Report & Training Curves released! Training configs and efficiency benchmarks for community reference. [2026/01/29] Calvin benchmark experiments were conducted by the UNT team. For inquiries, please contact Zhijie Song (1600013008@pku.edu.cn) or Feng Yan (bphengyan@163.com). [2025/12/25] We've simultaneously established pipelines for Behavior-1K, RoboTwin 2.0, and CALVIN. We'd love to collaborate and share baseline results for more benchmarks with the community! Prior Timeline [2025/12/25] We've released RoboCasa evaluation support, which was trained without pretraining and reached SOTA performance . Check out mo",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -100903,7 +101051,7 @@
     "source": "github",
     "title": "NVIDIA/warp",
     "url": "https://github.com/NVIDIA/warp",
-    "summary": "A Python framework for GPU-accelerated simulation, robotics, and machine learning.",
+    "summary": "NVIDIA Warp lets researchers write simulation and robotics kernels as ordinary Python functions, then JIT-compiles them into efficient CPU or CUDA code for workloads like particles, fluids, FEM, mesh processing, ray casting, and optimization. Its differentiable kernels can plug into PyTorch, JAX, and Paddle pipelines, making it useful for GPU-accelerated physics and geometry computations that need to sit inside learning or control loops.",
     "published": "2022-03-18T21:56:23Z",
     "updated": "2026-05-19T23:09:29Z",
     "authors": [
@@ -100928,7 +101076,7 @@
       "thumbnail": "https://github.com/NVIDIA/warp/raw/main/docs/img/header.jpg",
       "full_text": "NVIDIA Warp Documentation Changelog Warp is a Python framework for GPU-accelerated simulation, robotics, and machine learning. Warp takes regular Python functions and JIT compiles them to efficient kernel code that can run on the CPU or GPU. Warp comes with a rich set of primitives for physics simulation, robotics, geometry processing, and more. Warp kernels are differentiable and can be used as part of machine-learning pipelines with frameworks such as PyTorch, JAX and Paddle. A selection of physical simulations computed with Warp Quick Start Simulate one million particles under gravitational attraction, in 20 lines: Installing Python version 3.10 or newer is required. Warp can run on x86-64 and ARMv8 CPUs on Windows and Linux, and on Apple Silicon (ARMv8) on macOS. GPU support requires a CUDA-capable NVIDIA GPU and driver (minimum GeForce GTX 9xx). The easiest way to install Warp is from PyPI: You can also use pip install warp-lang[examples] to install additional dependencies for running examples and USD-related features. For nightly builds, conda, CUDA 13 builds, building from source, and CUDA driver requirements, see the Installation Guide. Tutorial Notebooks The NVIDIA Accelerated Computing Hub contains the current, actively maintained set of Warp tutorials: Notebook Colab Link ---------- ------------ Introduction to NVIDIA Warp GPU-Accelerated Ising Model Simulation in NVIDIA Warp Additionally, several notebooks in the notebooks directory provide additional examples and cover key Warp features: Notebook Colab Link ---------- ------------ Warp Core Tutorial: Basics Warp Core Tutorial: Generics Warp Core Tutorial: Points Warp Core Tutorial: Meshes Warp Core Tutorial: Volumes Warp PyTorch Tutorial: Basics Warp PyTorch Tutorial: Custom Operators Running Examples The warp/examples directory contains examples covering physics simulation, geometry processing, optimization, and tile-based GPU programming. Before running examples, install the optional example dependencies using: On Linux aarch64 systems (e.g., NVIDIA DGX Spark), the [examples] extra automatically installs usd-exchange instead of usd-core as a drop-in replacement, since usd-core wheels are not available for that platform. Examples can be run from the command-line as follows: Most examples can be run on either the CPU or a CUDA-capable device, but a handful require a CUDA-capable device. These are marked at the top of the example script. Some examples generate USD files containing time-sampled animations in the current working directory. These can be viewed in Pixar's UsdView, Blender, or any USD-compatible viewer. To browse the example source code, you can open the directory where the files are located like this: warp/examples/core dem fluid graph capture marching cubes mesh nvdb raycast raymarch sample mesh sph torch wave 2-D incompressible turbulence in a periodic box warp/examples/fem diffusion 3d mixed elasticity apic fluid streamlines distortion energy taylor green kelvin helmholtz magnetostatics adaptive grid nonconforming contact darcy level-set optimization elastic shape optimization warp/examples/optim diffray fluid checkpoint particle repulsion navier-stokes perturbation warp/examples/tile mlp nbody mcgp Learn More Please see the following resources for additional background on Warp: Product Page SIGGRAPH 2024 Course Slides GTC 2024 Presentation GTC 2022 Presentation GTC 2021 Presentation SIGGRAPH Asia 2021 Differentiable Simulation Course Support See the FAQ for common questions. Problems, questions, and feature requests can be opened on GitHub Issues. For inquiries not suited for GitHub Issues, please email . Contributing Contributions and pull requests from the community are welcome. Please see the Contribution Guide for more information on contributing to the development of Warp. License Warp is provided under the Apache License, Version 2.0. Please see LICENSE.md for full license text. This project will download and install additional third-party op",
       "readme": "NVIDIA Warp Documentation Changelog Warp is a Python framework for GPU-accelerated simulation, robotics, and machine learning. Warp takes regular Python functions and JIT compiles them to efficient kernel code that can run on the CPU or GPU. Warp comes with a rich set of primitives for physics simulation, robotics, geometry processing, and more. Warp kernels are differentiable and can be used as part of machine-learning pipelines with frameworks such as PyTorch, JAX and Paddle. A selection of physical simulations computed with Warp Quick Start Simulate one million particles under gravitational attraction, in 20 lines: Installing Python version 3.10 or newer is required. Warp can run on x86-64 and ARMv8 CPUs on Windows and Linux, and on Apple Silicon (ARMv8) on macOS. GPU support requires a CUDA-capable NVIDIA GPU and driver (minimum GeForce GTX 9xx). The easiest way to install Warp is from PyPI: You can also use pip install warp-lang[examples] to install additional dependencies for running examples and USD-related features. For nightly builds, conda, CUDA 13 builds, building from source, and CUDA driver requirements, see the Installation Guide. Tutorial Notebooks The NVIDIA Accelerated Computing Hub contains the current, actively maintained set of Warp tutorials: Notebook Colab Link ---------- ------------ Introduction to NVIDIA Warp GPU-Accelerated Ising Model Simulation in NVIDIA Warp Additionally, several notebooks in the notebooks directory provide additional examples and cover key Warp features: Notebook Colab Link ---------- ------------ Warp Core Tutorial: Basics Warp Core Tutorial: Generics Warp Core Tutorial: Points Warp Core Tutorial: Meshes Warp Core Tutorial: Volumes Warp PyTorch Tutorial: Basics Warp PyTorch Tutorial: Custom Operators Running Examples The warp/examples directory contains examples covering physics simulation, geometry processing, optimization, and tile-based GPU programming. Before running examples, install the optional example dependencies using: On Linux aarch64 systems (e.g., NVIDIA DGX Spark), the [examples] extra automatically installs usd-exchange instead of usd-core as a drop-in replacement, since usd-core wheels are not available for that platform. Examples can be run from the command-line as follows: Most examples can be run on either the CPU or a CUDA-capable device, but a handful require a CUDA-capable device. These are marked at the top of the example script. Some examples generate USD files containing time-sampled animations in the current working directory. These can be viewed in Pixar's UsdView, Blender, or any USD-compatible viewer. To browse the example source code, you can open the directory where the files are located like this: warp/examples/core dem fluid graph capture marching cubes mesh nvdb raycast raymarch sample mesh sph torch wave 2-D incompressible turbulence in a periodic box warp/examples/fem diffusion 3d mixed elasticity apic fluid streamlines distortion energy taylor green kelvin helmholtz magnetostatics adaptive grid nonconforming contact darcy level-set optimization elastic shape optimization warp/examples/optim diffray fluid checkpoint particle repulsion navier-stokes perturbation warp/examples/tile mlp nbody mcgp Learn More Please see the following resources for additional background on Warp: Product Page SIGGRAPH 2024 Course Slides GTC 2024 Presentation GTC 2022 Presentation GTC 2021 Presentation SIGGRAPH Asia 2021 Differentiable Simulation Course Support See the FAQ for common questions. Problems, questions, and feature requests can be opened on GitHub Issues. For inquiries not suited for GitHub Issues, please email . Contributing Contributions and pull requests from the community are welcome. Please see the Contribution Guide for more information on contributing to the development of Warp. License Warp is provided under the Apache License, Version 2.0. Please see LICENSE.md for full license text. This project will download and install additional third-party op",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -101091,7 +101239,7 @@
     "source": "github",
     "title": "RobotControlStack/robot-control-stack",
     "url": "https://github.com/RobotControlStack/robot-control-stack",
-    "summary": "A lean, ROS-free sim-to-real framework for training and deploying Vision-Language-Action (VLA) models and RL agents. Native MuJoCo Gymnasium wrappers with synchronous execution for Franka, UR5e, xArm, and SO101.",
+    "summary": "Robot Control Stack is a ROS-free robot learning interface that exposes both MuJoCo simulation and real hardware through the same Gymnasium-style API, so VLA or RL policies can be trained and deployed with minimal code changes. Its wrapper-based design lets users compose cameras, grippers, action spaces, and robot-specific extensions, with built-in support for Franka FR3/Panda, xArm7, UR5e, and SO101 plus teleoperation and remote inference apps. The interesting angle is its focus on synchronous, Python-native data collection and control, avoiding ROS/MoveIt overhead that can bottleneck modern ML training loops.",
     "published": "2024-02-29T12:40:59Z",
     "updated": "2026-05-19T20:05:41Z",
     "authors": [
@@ -101118,7 +101266,7 @@
       "thumbnail": "https://raw.githubusercontent.com/RobotControlStack/robotcontrolstack.github.io/refs/heads/master/static/videos/grid.webp",
       "full_text": "A lean, ROS-free Sim-to-Real framework for training and deploying Vision-Language-Action (VLA) models and Reinforcement Learning (RL) agents. --- Robot Control Stack (RCS) is a flexible, native Gymnasium wrapper-based robot control interface designed specifically for modern robot learning and Vision-Language-Action (VLA) models. It completely unifies MuJoCo simulation and real-world physical robot control into a single, seamless API. Currently, RCS natively supports four robots out-of-the-box: Franka FR3/Panda, xArm7, UR5e, and SO101. 🚀 Why use Robot Control Stack? Traditional robotics middleware (like ROS/ROS2) and complex motion planning pipelines (like MoveIt or standard ros2 control ) are built for asynchronous, distributed systems. This often becomes a massive bottleneck when attempting to train modern, synchronous machine learning models. RCS is built differently: Zero ROS Overhead: No complex message-passing, middleware, or network configuration required. Run natively in Python with a lightweight C++ backend. Frictionless Sim-to-Real: Train your Reinforcement Learning or VLA policies in our MuJoCo Gymnasium wrapper, and deploy the exact same code directly to physical hardware. Synchronous Execution: Optimized specifically for the highly parallelized, synchronous data collection required by modern ML workflows. Ready-to-Use Apps: Ships with pre-built applications for data collection via teleoperation and remote model inference via vlagents. 🧩 Wrapper-Based Architecture RCS utilizes a highly modular, wrapper-based architecture, allowing you to easily stack capabilities (cameras, grippers, action spaces) as needed. 💻 Example: Composing your Environment Flexibly compose your Gymnasium environment to fit your exact training needs. For common environment compositions, factory functions such as rcs.envs.creators.SimEnvCreator are provided. Note: This and other examples can be found in the examples/ folder. 🛠️ Installation From Source Make sure that common build tools (i.e., build-essential ) and a C++ compiler like gcc or clang are installed on your system/conda/docker. RCS works best in Python 3.11, and all extensions have been tested to work in 3.11. For Python 3.11: The rcs realsense extension won't work due to the pyrealsense2 version RCS utilizes. For Python 3.12: The ompl python module is currently not available on PyPI. If OMPL is not used, it is safe to remove this dependency in pyproject.toml . Via PyPI/pip Coming soon... 🦾 Hardware Extensions RCS supports various hardware extensions to seamlessly connect your policies to the real world (e.g., FR3, xArm7, RealSense). These are located in the extensions directory. To install a specific robot extension (example for Franka FR3): For a full list of extensions and detailed documentation, visit robotcontrolstack.org/extensions . ⚠️ Troubleshooting & FAQ License error or group argument not found during installation? Make sure you are using a pip version =25.1 and setuptools version =45 . Dependency error during installation? Make sure you are using Python 3.11. RCS extensions currently do not support 3.12+ due to OMPL and RealSense dependencies. Simulation is running too slow? Check that you have enable on-demand rendering: SimCameraSet(..., render on demand=True) to render camera frames only once per step. Resolution and number of cameras in the scene has a large impact on simulation speed. Make sure to use a decent GPU when rendering is enabled. 📚 Documentation For full documentation, including advanced installation, modular usage, and API references, please visit: 👉 robotcontrolstack.org Useful quick-reference pages: - RCS Conventions for quaternion order, frames, Euler angles, and gripper semantics - Sim Scene Configuration for SimEnvCreatorConfig , scene frames, and example setup patterns 🤝 Contribution We welcome contributions from the robotics and ML community! For contribution guidelines, please check out robotcontrolstack.org/contributing . 📝 Citation If you find RC",
       "readme": "A lean, ROS-free Sim-to-Real framework for training and deploying Vision-Language-Action (VLA) models and Reinforcement Learning (RL) agents. --- Robot Control Stack (RCS) is a flexible, native Gymnasium wrapper-based robot control interface designed specifically for modern robot learning and Vision-Language-Action (VLA) models. It completely unifies MuJoCo simulation and real-world physical robot control into a single, seamless API. Currently, RCS natively supports four robots out-of-the-box: Franka FR3/Panda, xArm7, UR5e, and SO101. 🚀 Why use Robot Control Stack? Traditional robotics middleware (like ROS/ROS2) and complex motion planning pipelines (like MoveIt or standard ros2 control ) are built for asynchronous, distributed systems. This often becomes a massive bottleneck when attempting to train modern, synchronous machine learning models. RCS is built differently: Zero ROS Overhead: No complex message-passing, middleware, or network configuration required. Run natively in Python with a lightweight C++ backend. Frictionless Sim-to-Real: Train your Reinforcement Learning or VLA policies in our MuJoCo Gymnasium wrapper, and deploy the exact same code directly to physical hardware. Synchronous Execution: Optimized specifically for the highly parallelized, synchronous data collection required by modern ML workflows. Ready-to-Use Apps: Ships with pre-built applications for data collection via teleoperation and remote model inference via vlagents. 🧩 Wrapper-Based Architecture RCS utilizes a highly modular, wrapper-based architecture, allowing you to easily stack capabilities (cameras, grippers, action spaces) as needed. 💻 Example: Composing your Environment Flexibly compose your Gymnasium environment to fit your exact training needs. For common environment compositions, factory functions such as rcs.envs.creators.SimEnvCreator are provided. Note: This and other examples can be found in the examples/ folder. 🛠️ Installation From Source Make sure that common build tools (i.e., build-essential ) and a C++ compiler like gcc or clang are installed on your system/conda/docker. RCS works best in Python 3.11, and all extensions have been tested to work in 3.11. For Python 3.11: The rcs realsense extension won't work due to the pyrealsense2 version RCS utilizes. For Python 3.12: The ompl python module is currently not available on PyPI. If OMPL is not used, it is safe to remove this dependency in pyproject.toml . Via PyPI/pip Coming soon... 🦾 Hardware Extensions RCS supports various hardware extensions to seamlessly connect your policies to the real world (e.g., FR3, xArm7, RealSense). These are located in the extensions directory. To install a specific robot extension (example for Franka FR3): For a full list of extensions and detailed documentation, visit robotcontrolstack.org/extensions . ⚠️ Troubleshooting & FAQ License error or group argument not found during installation? Make sure you are using a pip version =25.1 and setuptools version =45 . Dependency error during installation? Make sure you are using Python 3.11. RCS extensions currently do not support 3.12+ due to OMPL and RealSense dependencies. Simulation is running too slow? Check that you have enable on-demand rendering: SimCameraSet(..., render on demand=True) to render camera frames only once per step. Resolution and number of cameras in the scene has a large impact on simulation speed. Make sure to use a decent GPU when rendering is enabled. 📚 Documentation For full documentation, including advanced installation, modular usage, and API references, please visit: 👉 robotcontrolstack.org Useful quick-reference pages: - RCS Conventions for quaternion order, frames, Euler angles, and gripper semantics - Sim Scene Configuration for SimEnvCreatorConfig , scene frames, and example setup patterns 🤝 Contribution We welcome contributions from the robotics and ML community! For contribution guidelines, please check out robotcontrolstack.org/contributing . 📝 Citation If you find RC",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -101354,7 +101502,7 @@
     "source": "github",
     "title": "ARISE-Initiative/robosuite",
     "url": "https://github.com/ARISE-Initiative/robosuite",
-    "summary": "robosuite: A Modular Simulation Framework and Benchmark for Robot Learning",
+    "summary": "robosuite is a MuJoCo-based robot learning simulator with standardized manipulation benchmarks and modular APIs for composing environments from robot models, arenas, controllers, and tasks. The current v1.5 release broadens it beyond classic arm manipulation with humanoid and other embodiments, custom robot composition, composite and whole-body controllers, expanded teleoperation support, and photorealistic rendering. It is useful when you want reproducible RL or imitation-learning experiments without relying on scarce hardware, while still retaining enough flexibility to prototype new robot setups and control stacks.",
     "published": "2018-10-25T07:11:07Z",
     "updated": "2026-05-09T19:23:19Z",
     "authors": [
@@ -101377,7 +101525,7 @@
       "thumbnail": "https://raw.githubusercontent.com/ARISE-Initiative/robosuite/HEAD/docs/images/gallery.png",
       "readme": "robosuite [ [Homepage] ](https://robosuite.ai/) &ensp; [ [White Paper] ](https://arxiv.org/abs/2009.12293) &ensp; [ [Documentations] ](https://robosuite.ai/docs/overview.html) &ensp; [ [ARISE Initiative] ](https://github.com/ARISE-Initiative) ------- Latest Updates - [10/28/2024] v1.5 : Added support for diverse robot embodiments (including humanoids), custom robot composition, composite controllers (including whole body controllers), more teleoperation devices, photo-realistic rendering. [[release notes]](https://github.com/ARISE-Initiative/robosuite/releases/tag/v1.5.0) [[documentation]](http://robosuite.ai/docs/overview.html) - [11/15/2022] v1.4 : Backend migration to DeepMind's official MuJoCo Python binding, robot textures, and bug fixes :robot: [[release notes]](https://github.com/ARISE-Initiative/robosuite/releases/tag/v1.4.0) [[documentation]](http://robosuite.ai/docs/v1.4/) - [10/19/2021] v1.3 : Ray tracing and physically based rendering tools :sparkles: and access to additional vision modalities 🎥 [[video spotlight]](https://www.youtube.com/watch?v=2xesly6JrQ8) [[release notes]](https://github.com/ARISE-Initiative/robosuite/releases/tag/v1.3) [[documentation]](http://robosuite.ai/docs/v1.3/) - [02/17/2021] v1.2 : Added observable sensor models :eyes: and dynamics randomization :game die: [[release notes]](https://github.com/ARISE-Initiative/robosuite/releases/tag/v1.2) - [12/17/2020] v1.1 : Refactored infrastructure and standardized model classes for much easier environment prototyping :wrench: [[release notes]](https://github.com/ARISE-Initiative/robosuite/releases/tag/v1.1) ------- robosuite is a simulation framework powered by the MuJoCo physics engine for robot learning. It also offers a suite of benchmark environments for reproducible research. The current release (v1.5) features support for diverse robot embodiments (including humanoids), custom robot composition, composite controllers (including whole body controllers), more teleoperation devices, photo-realistic rendering. This project is part of the broader Advancing Robot Intelligence through Simulated Environments (ARISE) Initiative, with the aim of lowering the barriers of entry for cutting-edge research at the intersection of AI and Robotics. Data-driven algorithms, such as reinforcement learning and imitation learning, provide a powerful and generic tool in robotics. These learning paradigms, fueled by new advances in deep learning, have achieved some exciting successes in a variety of robot control problems. However, the challenges of reproducibility and the limited accessibility of robot hardware (especially during a pandemic) have impaired research progress. The overarching goal of robosuite is to provide researchers with: a standardized set of benchmarking tasks for rigorous evaluation and algorithm development; a modular design that offers great flexibility in designing new robot simulation environments; a high-quality implementation of robot controllers and off-the-shelf learning algorithms to lower the barriers to entry. This framework was originally developed in late 2017 by researchers in Stanford Vision and Learning Lab (SVL) as an internal tool for robot learning research. Now, it is actively maintained and used for robotics research projects in SVL, the UT Robot Perception and Learning Lab (RPL) and NVIDIA Generalist Embodied Agent Research Group (GEAR). We welcome community contributions to this project. For details, please check out our contributing guidelines. Robosuite offers a modular design of APIs for building new environments, robot embodiments, and robot controllers with procedural generation. We highlight these primary features below: standardized tasks : a set of standardized manipulation tasks of large diversity and varying complexity and RL benchmarking results for reproducible research; procedural generation : modular APIs for programmatically creating new environments and new tasks as combinations of robot models, arenas, and ",
       "full_text": "robosuite [ [Homepage] ](https://robosuite.ai/) &ensp; [ [White Paper] ](https://arxiv.org/abs/2009.12293) &ensp; [ [Documentations] ](https://robosuite.ai/docs/overview.html) &ensp; [ [ARISE Initiative] ](https://github.com/ARISE-Initiative) ------- Latest Updates - [10/28/2024] v1.5 : Added support for diverse robot embodiments (including humanoids), custom robot composition, composite controllers (including whole body controllers), more teleoperation devices, photo-realistic rendering. [[release notes]](https://github.com/ARISE-Initiative/robosuite/releases/tag/v1.5.0) [[documentation]](http://robosuite.ai/docs/overview.html) - [11/15/2022] v1.4 : Backend migration to DeepMind's official MuJoCo Python binding, robot textures, and bug fixes :robot: [[release notes]](https://github.com/ARISE-Initiative/robosuite/releases/tag/v1.4.0) [[documentation]](http://robosuite.ai/docs/v1.4/) - [10/19/2021] v1.3 : Ray tracing and physically based rendering tools :sparkles: and access to additional vision modalities 🎥 [[video spotlight]](https://www.youtube.com/watch?v=2xesly6JrQ8) [[release notes]](https://github.com/ARISE-Initiative/robosuite/releases/tag/v1.3) [[documentation]](http://robosuite.ai/docs/v1.3/) - [02/17/2021] v1.2 : Added observable sensor models :eyes: and dynamics randomization :game die: [[release notes]](https://github.com/ARISE-Initiative/robosuite/releases/tag/v1.2) - [12/17/2020] v1.1 : Refactored infrastructure and standardized model classes for much easier environment prototyping :wrench: [[release notes]](https://github.com/ARISE-Initiative/robosuite/releases/tag/v1.1) ------- robosuite is a simulation framework powered by the MuJoCo physics engine for robot learning. It also offers a suite of benchmark environments for reproducible research. The current release (v1.5) features support for diverse robot embodiments (including humanoids), custom robot composition, composite controllers (including whole body controllers), more teleoperation devices, photo-realistic rendering. This project is part of the broader Advancing Robot Intelligence through Simulated Environments (ARISE) Initiative, with the aim of lowering the barriers of entry for cutting-edge research at the intersection of AI and Robotics. Data-driven algorithms, such as reinforcement learning and imitation learning, provide a powerful and generic tool in robotics. These learning paradigms, fueled by new advances in deep learning, have achieved some exciting successes in a variety of robot control problems. However, the challenges of reproducibility and the limited accessibility of robot hardware (especially during a pandemic) have impaired research progress. The overarching goal of robosuite is to provide researchers with: a standardized set of benchmarking tasks for rigorous evaluation and algorithm development; a modular design that offers great flexibility in designing new robot simulation environments; a high-quality implementation of robot controllers and off-the-shelf learning algorithms to lower the barriers to entry. This framework was originally developed in late 2017 by researchers in Stanford Vision and Learning Lab (SVL) as an internal tool for robot learning research. Now, it is actively maintained and used for robotics research projects in SVL, the UT Robot Perception and Learning Lab (RPL) and NVIDIA Generalist Embodied Agent Research Group (GEAR). We welcome community contributions to this project. For details, please check out our contributing guidelines. Robosuite offers a modular design of APIs for building new environments, robot embodiments, and robot controllers with procedural generation. We highlight these primary features below: standardized tasks : a set of standardized manipulation tasks of large diversity and varying complexity and RL benchmarking results for reproducible research; procedural generation : modular APIs for programmatically creating new environments and new tasks as combinations of robot models, arenas, and ",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#Manipulator"
@@ -103897,7 +104045,7 @@
     "source": "github",
     "title": "lasgroup/safe-learning",
     "url": "https://github.com/lasgroup/safe-learning",
-    "summary": "A collection of algorithms and experiment tools for safe sim to real transfer in robotics.",
+    "summary": "lasgroup/safe-learning collects algorithms and experiment tooling for studying safe sim-to-real transfer in robotics. It is meant as a practical codebase for running and comparing safe learning methods, where the emphasis is on moving policies from simulation toward real robotic systems while managing safety constraints during learning and deployment.",
     "published": "2024-07-02T09:04:44Z",
     "updated": "2026-05-19T09:45:57Z",
     "authors": [
@@ -103912,7 +104060,9 @@
       ],
       "open_issues": 0,
       "license": "MIT",
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "A collection of algorithms and experiment tools for safe sim to real transfer in robotics.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -103936,7 +104086,7 @@
     "source": "arxiv",
     "title": "Scheduling That Speaks: An Interpretable Programmatic Reinforcement Learning Framework",
     "url": "http://arxiv.org/abs/2605.18454v1",
-    "summary": "Deep reinforcement learning (DRL) has recently emerged as a promising approach to solve combinatorial optimization problems such as job shop scheduling.",
+    "summary": "Scheduling That Speaks targets job shop scheduling with a programmatic reinforcement learning approach meant to make learned scheduling policies interpretable rather than opaque DRL controllers. From the provided text, the concrete setup and results are not given, so the clearest takeaway is that it applies DRL-style optimization to combinatorial scheduling while expressing the learned decision process in a form researchers can inspect and reason about.",
     "published": "2026-05-18T14:19:59+00:00",
     "updated": "2026-05-18T14:19:59+00:00",
     "authors": [
@@ -103954,7 +104104,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.18454v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2605.18454.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.18454.jpg",
+      "full_text": "Deep reinforcement learning (DRL) has recently emerged as a promising approach to solve combinatorial optimization problems such as job shop scheduling.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -103979,7 +104131,7 @@
     "source": "github",
     "title": "darshmenon/pickplace-rl-mobile-manipulator",
     "url": "https://github.com/darshmenon/pickplace-rl-mobile-manipulator",
-    "summary": "Mobile manipulator pick-and-place via reinforcement learning — UR3 arm on a diff-drive base, trained end-to-end with TQC in Gazebo/ROS2",
+    "summary": "A UR3 arm mounted on a differential-drive mobile base is trained end-to-end for pick-and-place in Gazebo/ROS2 using Truncated Quantile Critics reinforcement learning. The repo is useful as a simulation and training setup for mobile manipulation policies that jointly coordinate base motion and arm control, rather than treating navigation and grasping as separate hand-engineered stages.",
     "published": "2025-08-31T10:39:41Z",
     "updated": "2026-05-17T17:44:20Z",
     "authors": [
@@ -104011,7 +104163,9 @@
       ],
       "open_issues": 0,
       "license": null,
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "Mobile manipulator pick-and-place via reinforcement learning — UR3 arm on a diff-drive base, trained end-to-end with TQC in Gazebo/ROS2",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -104037,7 +104191,7 @@
     "source": "arxiv",
     "title": "Beyond Safety Filtering: Control Barrier Function-Informed Reinforcement Learning for Connected and Automated Vehicles",
     "url": "http://arxiv.org/abs/2605.16894v1",
-    "summary": "Reinforcement Learning (RL) uses rewards to guide learning, yet reward design is typically hand-crafted using heuristics that can be difficult to tune.",
+    "summary": "Control barrier functions are used to shape reinforcement-learning rewards for connected and automated vehicles, moving safety information into the learning signal rather than relying only on a post-hoc safety filter. The idea is aimed at reducing brittle, hand-tuned reward engineering while still steering the learned driving policy toward constraint-respecting behavior.",
     "published": "2026-05-16T09:12:59+00:00",
     "updated": "2026-05-16T09:12:59+00:00",
     "authors": [
@@ -104053,7 +104207,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.16894v1",
       "comment": "This paper has been accepted for publication in the Proceedings of the 2026 IEEE International Conference on Intelligent Transportation Systems (ITSC 2026)",
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2605.16894.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.16894.jpg",
+      "full_text": "Reinforcement Learning (RL) uses rewards to guide learning, yet reward design is typically hand-crafted using heuristics that can be difficult to tune.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -104156,7 +104312,7 @@
     "source": "github",
     "title": "shuosha/Residual_Copilot",
     "url": "https://github.com/shuosha/Residual_Copilot",
-    "summary": "Open-source code of the paper: Efficient and Reliable Teleoperation through Real-to-Sim-to-Real Shared Autonomy",
+    "summary": "Residual_Copilot is the open-source implementation for Efficient and Reliable Teleoperation through Real-to-Sim-to-Real Shared Autonomy, a shared-autonomy approach that improves robot teleoperation by learning residual assistance through a real-to-sim-to-real pipeline. It is aimed at making remote robot control more efficient and reliable by using simulation-derived assistance while keeping the human operator in the loop.",
     "published": "2026-02-17T16:56:23Z",
     "updated": "2026-05-15T21:04:50Z",
     "authors": [
@@ -104169,7 +104325,9 @@
       "topics": [],
       "open_issues": 0,
       "license": null,
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "Open-source code of the paper: Efficient and Reliable Teleoperation through Real-to-Sim-to-Real Shared Autonomy",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -104193,7 +104351,7 @@
     "source": "arxiv",
     "title": "HCLM: A Hierarchical Framework for Cooperative Loco-Manipulation with Dual Quadrupeds",
     "url": "http://arxiv.org/abs/2605.17300v1",
-    "summary": "We introduce HCLM, a hierarchical framework for general-purpose cooperative loco-manipulation with dual quadrupedal systems.",
+    "summary": "HCLM is a hierarchical control framework for coordinating two quadruped robots on loco-manipulation tasks, where the robots must move and manipulate objects together rather than acting independently. The available text only states the high-level goal, so the concrete mechanism, task setup, and measured results are not specified here.",
     "published": "2026-05-17T07:23:03+00:00",
     "updated": "2026-05-17T07:23:03+00:00",
     "authors": [
@@ -104210,7 +104368,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.17300v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "thumbnail_path": "thumbnails/arxiv/2605.17300.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.17300.jpg",
+      "full_text": "We introduce HCLM, a hierarchical framework for general-purpose cooperative loco-manipulation with dual quadrupedal systems.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Manipulator"
@@ -104309,7 +104469,7 @@
     "source": "github",
     "title": "maniparena/maniparena-sim",
     "url": "https://github.com/maniparena/maniparena-sim",
-    "summary": "ManipArena-Sim is the simulation environment for ManipArena, a real-robot benchmark for bimanual manipulation. It provides data collection, replay, and policy evaluation for the bimanual robot, built on Isaac Lab and IsaacLab-Arena.",
+    "summary": "ManipArena-Sim provides the Isaac Lab-based simulation stack behind ManipArena, a real-robot benchmark for bimanual manipulation. It supports collecting data, replaying demonstrations or runs, and evaluating policies for a bimanual robot, making it useful for developing and testing manipulation methods before or alongside real-robot experiments.",
     "published": "2026-03-15T15:40:36Z",
     "updated": "2026-05-14T09:00:34Z",
     "authors": [
@@ -104322,7 +104482,9 @@
       "topics": [],
       "open_issues": 0,
       "license": null,
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "ManipArena-Sim is the simulation environment for ManipArena, a real-robot benchmark for bimanual manipulation. It provides data collection, replay, and policy evaluation for the bimanual robot, built on Isaac Lab and IsaacLab-Arena.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Manipulator",
@@ -104384,7 +104546,7 @@
     "source": "github",
     "title": "NJU-R-L-Group-Embodied-Lab/lavira-code",
     "url": "https://github.com/NJU-R-L-Group-Embodied-Lab/lavira-code",
-    "summary": "[ICRA 2026] LaViRA: Language-Vision-Robot Actions Translation for Zero-Shot Vision-and-Language Navigation in Continuous Environments",
+    "summary": "LaViRA targets zero-shot vision-and-language navigation in continuous environments by translating language and visual context into executable robot actions. The repository is the code release for an ICRA 2026 project, useful for researchers looking at embodied navigation methods that bridge high-level instructions and low-level robot control without task-specific training examples.",
     "published": "2026-03-03T10:10:12Z",
     "updated": "2026-05-14T13:29:40Z",
     "authors": [
@@ -104397,7 +104559,9 @@
       "topics": [],
       "open_issues": 1,
       "license": null,
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "[ICRA 2026] LaViRA: Language-Vision-Robot Actions Translation for Zero-Shot Vision-and-Language Navigation in Continuous Environments",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -104579,7 +104743,7 @@
     "source": "github",
     "title": "RUCKBReasoning/From_Pixels_to_Tokens",
     "url": "https://github.com/RUCKBReasoning/From_Pixels_to_Tokens",
-    "summary": "[ICML' 26] From Pixels to Tokens: A Systematic Study of Latent Action Supervision for Vision-Language-Action Models",
+    "summary": "RUCKBReasoning/From_Pixels_to_Tokens accompanies an ICML 2026 study on latent action supervision for vision-language-action models, examining how pixel-level robot behavior can be converted into tokenized action representations for learning. The project is interesting because it frames action supervision as a systematic design space rather than a single model trick, aiming to clarify how different latent action choices affect VLA training and downstream robot control.",
     "published": "2026-03-31T00:58:37Z",
     "updated": "2026-05-08T09:43:39Z",
     "authors": [
@@ -104592,7 +104756,9 @@
       "topics": [],
       "open_issues": 0,
       "license": null,
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "[ICML' 26] From Pixels to Tokens: A Systematic Study of Latent Action Supervision for Vision-Language-Action Models",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",

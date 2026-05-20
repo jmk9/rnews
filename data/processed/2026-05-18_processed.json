@@ -88,7 +88,7 @@
     "source": "github",
     "title": "Jiaaqiliu/Awesome-VLA-Robotics",
     "url": "https://github.com/Jiaaqiliu/Awesome-VLA-Robotics",
-    "summary": "A comprehensive list of excellent research papers, models, datasets, and other resources on Vision-Language-Action (VLA) models in robotics.",
+    "summary": "Jiaaqiliu/Awesome-VLA-Robotics is a curated survey-style resource for Vision-Language-Action models in robotics, organizing papers, models, datasets, benchmarks, and related tools across manipulation, navigation, mobile manipulation, HRI, planning, humanoids, and other embodied-AI settings. It is useful as a field map for tracking how VLA systems extend VLMs with robot action generation, including common building blocks such as vision encoders, LLM-based language understanding, action decoders or policies, and modality-alignment mechanisms.",
     "published": "2025-04-21T11:03:51Z",
     "updated": "2026-03-23T18:25:44Z",
     "authors": [
@@ -105,7 +105,7 @@
       "full_text": "Awesome VLA for Robotics A comprehensive list of excellent research papers, models, datasets, and other resources on Vision-Language-Action (VLA) models in robotics. The relevant survey paper will be released soon. Contributions are welcome! Table of Contents - 1. What are VLA Models in Robotics? - 2. Survey papers - 3. Key VLA Models and Research Papers - 3.1 Quick Glance at Key VLA Models - 3.2 By Application Area - 3.2.1 Manipulation - 3.2.2 Navigation and Mobile Manipulation - 3.2.3 Human-Robot Interaction (HRI) - 3.2.4 Task Planning / Reasoning - 3.2.5 Humanoid - 3.2.6 Other - 3.3 By Technical Approach - 3.3.1 Model Architectures - 3.3.2 Action Representation & Generation - 3.3.3 Learning Paradigms - 3.3.4 Input Modalities & Grounding - 3.3.5 Fine-tuning Improvement Methods - 4. Datasets and Benchmarks - 4.1 Quick Glance at Datasets and Benchmarks - 4.2 Robot Learning Datasets - 4.3 Simulation Environments - 4.4 Evaluation Benchmarks - 5. Challenges and Future Directions - 6. Related Awesome Lists 1. What are VLA Models in Robotics? - Definition: Vision-Language-Action (VLA) models are a class of multimodal AI systems specifically designed for robotics and Embodied AI. They integrate visual perception (from cameras/sensors), natural language understanding (from text or voice commands), and action generation (physical movements or digital tasks) into a unified framework. Unlike traditional robotic systems that often treat perception, planning, and control as separate modules, VLAs aim for end-to-end or tightly integrated processing, similar to how the human brain processes these modalities simultaneously. The term \"VLA\" gained prominence with the introduction of the RT-2 model. Generally, a VLA is defined as any model capable of processing multimodal inputs (vision, language) to generate robotic actions for completing embodied tasks. - Core Concepts: The basic idea is to leverage the powerful capabilities of large models (LLMs and VLMs) pre-trained on internet-scale data and apply them to robot control. This involves \"grounding\" language instructions and visual perception information in the physical world to generate appropriate robot actions. The goal is to achieve greater versatility, dexterity, generalization ability, and robustness compared to traditional methods or early reinforcement learning approaches, enabling robots to work effectively in complex, unstructured environments like homes. - Key Components: - Vision Encoder: Processes raw visual input (images, videos, sometimes 3D data), using architectures like ViT, CLIP encoders, DINOv2, SigLIP to extract meaningful features (object recognition, spatial reasoning). - Language Understanding: Employs LLM components (such as Llama, PaLM, GPT variants) to process natural language instructions, map commands to context, and perform reasoning. - Action Decoder/Policy: Generates robot actions based on integrated visual and language understanding (e.g., end-effector pose, joint velocities, gripper commands, base movements). This is a significant differentiator between VLAs and VLMs, involving techniques like action tokenization, diffusion models, or direct regression. - Alignment Mechanisms: Uses strategies like projection layers and cross-attention to bridge the gap between different modalities, aligning visual, language, and action representations. - Relationship to VLMs and Embodied AI: VLAs are a specialized category within the field of Embodied AI. They extend Vision-Language Models (VLMs) by explicitly incorporating action generation capabilities. VLMs primarily focus on understanding and generating text based on visual input, while VLAs leverage this understanding to interact with the physical world. - Evolution from VLM Adaptation to Integrated Systems: Early VLA research focused mainly on adapting existing VLMs by simply fine-tuning them to output action tokens (e.g., the initial concept of RT-2 ). However, the field is moving towards more integrated architectures w",
       "thumbnail": "https://api.star-history.com/svg?repos=Jiaaqiliu/Awesome-VLA-Robotics&amp;type=Date",
       "readme": "Awesome VLA for Robotics A comprehensive list of excellent research papers, models, datasets, and other resources on Vision-Language-Action (VLA) models in robotics. The relevant survey paper will be released soon. Contributions are welcome! Table of Contents - 1. What are VLA Models in Robotics? - 2. Survey papers - 3. Key VLA Models and Research Papers - 3.1 Quick Glance at Key VLA Models - 3.2 By Application Area - 3.2.1 Manipulation - 3.2.2 Navigation and Mobile Manipulation - 3.2.3 Human-Robot Interaction (HRI) - 3.2.4 Task Planning / Reasoning - 3.2.5 Humanoid - 3.2.6 Other - 3.3 By Technical Approach - 3.3.1 Model Architectures - 3.3.2 Action Representation & Generation - 3.3.3 Learning Paradigms - 3.3.4 Input Modalities & Grounding - 3.3.5 Fine-tuning Improvement Methods - 4. Datasets and Benchmarks - 4.1 Quick Glance at Datasets and Benchmarks - 4.2 Robot Learning Datasets - 4.3 Simulation Environments - 4.4 Evaluation Benchmarks - 5. Challenges and Future Directions - 6. Related Awesome Lists 1. What are VLA Models in Robotics? - Definition: Vision-Language-Action (VLA) models are a class of multimodal AI systems specifically designed for robotics and Embodied AI. They integrate visual perception (from cameras/sensors), natural language understanding (from text or voice commands), and action generation (physical movements or digital tasks) into a unified framework. Unlike traditional robotic systems that often treat perception, planning, and control as separate modules, VLAs aim for end-to-end or tightly integrated processing, similar to how the human brain processes these modalities simultaneously. The term \"VLA\" gained prominence with the introduction of the RT-2 model. Generally, a VLA is defined as any model capable of processing multimodal inputs (vision, language) to generate robotic actions for completing embodied tasks. - Core Concepts: The basic idea is to leverage the powerful capabilities of large models (LLMs and VLMs) pre-trained on internet-scale data and apply them to robot control. This involves \"grounding\" language instructions and visual perception information in the physical world to generate appropriate robot actions. The goal is to achieve greater versatility, dexterity, generalization ability, and robustness compared to traditional methods or early reinforcement learning approaches, enabling robots to work effectively in complex, unstructured environments like homes. - Key Components: - Vision Encoder: Processes raw visual input (images, videos, sometimes 3D data), using architectures like ViT, CLIP encoders, DINOv2, SigLIP to extract meaningful features (object recognition, spatial reasoning). - Language Understanding: Employs LLM components (such as Llama, PaLM, GPT variants) to process natural language instructions, map commands to context, and perform reasoning. - Action Decoder/Policy: Generates robot actions based on integrated visual and language understanding (e.g., end-effector pose, joint velocities, gripper commands, base movements). This is a significant differentiator between VLAs and VLMs, involving techniques like action tokenization, diffusion models, or direct regression. - Alignment Mechanisms: Uses strategies like projection layers and cross-attention to bridge the gap between different modalities, aligning visual, language, and action representations. - Relationship to VLMs and Embodied AI: VLAs are a specialized category within the field of Embodied AI. They extend Vision-Language Models (VLMs) by explicitly incorporating action generation capabilities. VLMs primarily focus on understanding and generating text based on visual input, while VLAs leverage this understanding to interact with the physical world. - Evolution from VLM Adaptation to Integrated Systems: Early VLA research focused mainly on adapting existing VLMs by simply fine-tuning them to output action tokens (e.g., the initial concept of RT-2 ). However, the field is moving towards more integrated architectures w",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -130,7 +130,7 @@
     "source": "github",
     "title": "starVLA/starVLA",
     "url": "https://github.com/starVLA/starVLA",
-    "summary": "StarVLA: A Lego-like Codebase for Vision-Language-Action Model Developing",
+    "summary": "StarVLA is a modular open-source platform for building and evaluating vision-language-action models, with separated components for models, data, training, configs, and evaluation so researchers can swap backbones, benchmarks, and robot setups without rewriting the whole stack. It already covers practical VLA workflows such as LIBERO, SimplerEnv, RoboTwin, VLA-Arena, RoboCasa, CALVIN, Behavior-1K, Franka real-robot examples, RL post-training via RLinf, and world-model-based action prediction using Cosmos-Predict2 or Wan2. Its appeal is as much engineering substrate as model code: it is designed for rapid prototyping, benchmark co-training, custom robot or dataset integration, and even coding-agent-assisted extensions.",
     "published": "2025-10-09T15:33:23Z",
     "updated": "2026-05-15T06:42:37Z",
     "authors": [
@@ -153,7 +153,7 @@
       "thumbnail": "https://raw.githubusercontent.com/starVLA/starVLA/HEAD/assets/starVLA_overview.png",
       "readme": "StarVLA: A Lego-like Codebase for Vision-Language-Action Model Developing An open-source research platform for integrating and exploring cutting-edge technologies for generalist robots. 📢 Citation Update: Our technical report is now on arXiv (2604.05014). We kindly invite you to use the updated BibTeX for any ongoing or future citations. If you have already cited StarVLA in a previous version of your work, we would greatly appreciate it if you could update the citation entry in your camera-ready or future revisions. Thank you for your understanding and support! 🙏 --- In StarVLA (also a pun on \"start VLA\" ), each functional component (model, data, trainer, config, evaluation, etc.) follows a top-down, intuitive separation and high-cohesion, low-coupling principle, enabling plug-and-play design, rapid prototyping, and independent debugging. News ⚠️ Branch notice: The starVLA dev branch is where we actively merge new features and may be temporarily unstable. For verified results, use the stable starVLA branch. Thanks to StarVLA's low-coupling design, switching between branches is painless. We encourage trying starVLA dev and welcome PRs if you spot any issues! 💡 Tip: Files under any /bar/ directory are git-ignored, so you can place your custom scripts there (e.g., examples/LIBERO/train files/bar/my train.sh ) without polluting the repo. [2026/04/09] 🚀 unified multi-benchmark co-training example (combining LIBERO, SimplerEnv, RoboTwin, VLA-Arena, etc.) is coming soon. Stay tuned! [2026/05/01] 🔥 We now provide a step-by-step guide for integrating your own robot / dataset into StarVLA. [2026/05/01] 🔥 We are building agent skills to make StarVLA a powerful substrate for AI coding agents — we have verified that GitHub Copilot (Claude Opus 4.7) can autonomously integrate examples/Robocasa 365 and examples/RoboChallenge table30v2 from scratch. Going forward, StarVLA will be continuously optimised to be equally easy to use for humans and code agents. [2026/05/01] 🙏 Special thanks to the AllenAI team for providing optimised Docker environments and evaluation-acceleration support via vla-evaluation-harness! If you need to speed up large-scale VLA benchmark evaluation, we recommend checking it out. [2026/04/18] 🔥 StarVLA now supports DOMINO, a dynamic manipulation benchmark for moving objects and time-varying scenes. Original DOMINO repository is here. [2026/04/09] 🎯 Thanks to the RLinf team, StarVLA now supports RL post-training ! Check out the StarVLA × RLinf tutorial to get started. [2026/04/09] 🔥 WM4A (World Model for Action) is now integrated! Use pretrained video-generation DiT models (Cosmos-Predict2, Wan2.2) as backbones for action prediction. See docs/WM4A.md for architecture details and training instructions. Pretrained checkpoints are available at the StarVLA/world-model-to-vla HuggingFace collection. [2026/03/29] 🔥 Thanks to the ABot-M0 team for providing the pre-trained weights. For Qwen3-VL 4B , you can reload the qwen vl interface module in various frameworks! [2026/03/19] 🔥 StarVLA now provides a complete real-robot development case with Franka robot examples! [2026/03/03] 🔥 We now support Qwen3.5 as a backbone for VLA — the fastest integration in the community ⚡ With more model size options: 0.8B, 2B, 4B, and 9B ! Build your VLA flexibly on top of native multimodal models! [2026/01/29] 🔥 StarVLA Training Efficiency Report & Training Curves released! Training configs and efficiency benchmarks for community reference. [2026/01/29] Calvin benchmark experiments were conducted by the UNT team. For inquiries, please contact Zhijie Song (1600013008@pku.edu.cn) or Feng Yan (bphengyan@163.com). [2025/12/25] We've simultaneously established pipelines for Behavior-1K, RoboTwin 2.0, and CALVIN. We'd love to collaborate and share baseline results for more benchmarks with the community! Prior Timeline [2025/12/25] We've released RoboCasa evaluation support, which was trained without pretraining and reached SOTA performance . Check out mo",
       "full_text": "StarVLA: A Lego-like Codebase for Vision-Language-Action Model Developing An open-source research platform for integrating and exploring cutting-edge technologies for generalist robots. 📢 Citation Update: Our technical report is now on arXiv (2604.05014). We kindly invite you to use the updated BibTeX for any ongoing or future citations. If you have already cited StarVLA in a previous version of your work, we would greatly appreciate it if you could update the citation entry in your camera-ready or future revisions. Thank you for your understanding and support! 🙏 --- In StarVLA (also a pun on \"start VLA\" ), each functional component (model, data, trainer, config, evaluation, etc.) follows a top-down, intuitive separation and high-cohesion, low-coupling principle, enabling plug-and-play design, rapid prototyping, and independent debugging. News ⚠️ Branch notice: The starVLA dev branch is where we actively merge new features and may be temporarily unstable. For verified results, use the stable starVLA branch. Thanks to StarVLA's low-coupling design, switching between branches is painless. We encourage trying starVLA dev and welcome PRs if you spot any issues! 💡 Tip: Files under any /bar/ directory are git-ignored, so you can place your custom scripts there (e.g., examples/LIBERO/train files/bar/my train.sh ) without polluting the repo. [2026/04/09] 🚀 unified multi-benchmark co-training example (combining LIBERO, SimplerEnv, RoboTwin, VLA-Arena, etc.) is coming soon. Stay tuned! [2026/05/01] 🔥 We now provide a step-by-step guide for integrating your own robot / dataset into StarVLA. [2026/05/01] 🔥 We are building agent skills to make StarVLA a powerful substrate for AI coding agents — we have verified that GitHub Copilot (Claude Opus 4.7) can autonomously integrate examples/Robocasa 365 and examples/RoboChallenge table30v2 from scratch. Going forward, StarVLA will be continuously optimised to be equally easy to use for humans and code agents. [2026/05/01] 🙏 Special thanks to the AllenAI team for providing optimised Docker environments and evaluation-acceleration support via vla-evaluation-harness! If you need to speed up large-scale VLA benchmark evaluation, we recommend checking it out. [2026/04/18] 🔥 StarVLA now supports DOMINO, a dynamic manipulation benchmark for moving objects and time-varying scenes. Original DOMINO repository is here. [2026/04/09] 🎯 Thanks to the RLinf team, StarVLA now supports RL post-training ! Check out the StarVLA × RLinf tutorial to get started. [2026/04/09] 🔥 WM4A (World Model for Action) is now integrated! Use pretrained video-generation DiT models (Cosmos-Predict2, Wan2.2) as backbones for action prediction. See docs/WM4A.md for architecture details and training instructions. Pretrained checkpoints are available at the StarVLA/world-model-to-vla HuggingFace collection. [2026/03/29] 🔥 Thanks to the ABot-M0 team for providing the pre-trained weights. For Qwen3-VL 4B , you can reload the qwen vl interface module in various frameworks! [2026/03/19] 🔥 StarVLA now provides a complete real-robot development case with Franka robot examples! [2026/03/03] 🔥 We now support Qwen3.5 as a backbone for VLA — the fastest integration in the community ⚡ With more model size options: 0.8B, 2B, 4B, and 9B ! Build your VLA flexibly on top of native multimodal models! [2026/01/29] 🔥 StarVLA Training Efficiency Report & Training Curves released! Training configs and efficiency benchmarks for community reference. [2026/01/29] Calvin benchmark experiments were conducted by the UNT team. For inquiries, please contact Zhijie Song (1600013008@pku.edu.cn) or Feng Yan (bphengyan@163.com). [2025/12/25] We've simultaneously established pipelines for Behavior-1K, RoboTwin 2.0, and CALVIN. We'd love to collaborate and share baseline results for more benchmarks with the community! Prior Timeline [2025/12/25] We've released RoboCasa evaluation support, which was trained without pretraining and reached SOTA performance . Check out mo",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -1391,7 +1391,7 @@
     "source": "github",
     "title": "NVIDIA/warp",
     "url": "https://github.com/NVIDIA/warp",
-    "summary": "A Python framework for GPU-accelerated simulation, robotics, and machine learning.",
+    "summary": "NVIDIA Warp lets researchers write simulation and robotics kernels as ordinary Python functions, then JIT-compiles them into efficient CPU or CUDA code for workloads like particles, fluids, FEM, mesh processing, ray casting, and optimization. Its differentiable kernels can plug into PyTorch, JAX, and Paddle pipelines, making it useful for GPU-accelerated physics and geometry computations that need to sit inside learning or control loops.",
     "published": "2022-03-18T21:56:23Z",
     "updated": "2026-05-18T23:01:12Z",
     "authors": [
@@ -1416,7 +1416,7 @@
       "thumbnail": "https://github.com/NVIDIA/warp/raw/main/docs/img/header.jpg",
       "full_text": "NVIDIA Warp Documentation Changelog Warp is a Python framework for GPU-accelerated simulation, robotics, and machine learning. Warp takes regular Python functions and JIT compiles them to efficient kernel code that can run on the CPU or GPU. Warp comes with a rich set of primitives for physics simulation, robotics, geometry processing, and more. Warp kernels are differentiable and can be used as part of machine-learning pipelines with frameworks such as PyTorch, JAX and Paddle. A selection of physical simulations computed with Warp Quick Start Simulate one million particles under gravitational attraction, in 20 lines: Installing Python version 3.10 or newer is required. Warp can run on x86-64 and ARMv8 CPUs on Windows and Linux, and on Apple Silicon (ARMv8) on macOS. GPU support requires a CUDA-capable NVIDIA GPU and driver (minimum GeForce GTX 9xx). The easiest way to install Warp is from PyPI: You can also use pip install warp-lang[examples] to install additional dependencies for running examples and USD-related features. For nightly builds, conda, CUDA 13 builds, building from source, and CUDA driver requirements, see the Installation Guide. Tutorial Notebooks The NVIDIA Accelerated Computing Hub contains the current, actively maintained set of Warp tutorials: Notebook Colab Link ---------- ------------ Introduction to NVIDIA Warp GPU-Accelerated Ising Model Simulation in NVIDIA Warp Additionally, several notebooks in the notebooks directory provide additional examples and cover key Warp features: Notebook Colab Link ---------- ------------ Warp Core Tutorial: Basics Warp Core Tutorial: Generics Warp Core Tutorial: Points Warp Core Tutorial: Meshes Warp Core Tutorial: Volumes Warp PyTorch Tutorial: Basics Warp PyTorch Tutorial: Custom Operators Running Examples The warp/examples directory contains examples covering physics simulation, geometry processing, optimization, and tile-based GPU programming. Before running examples, install the optional example dependencies using: On Linux aarch64 systems (e.g., NVIDIA DGX Spark), the [examples] extra automatically installs usd-exchange instead of usd-core as a drop-in replacement, since usd-core wheels are not available for that platform. Examples can be run from the command-line as follows: Most examples can be run on either the CPU or a CUDA-capable device, but a handful require a CUDA-capable device. These are marked at the top of the example script. Some examples generate USD files containing time-sampled animations in the current working directory. These can be viewed in Pixar's UsdView, Blender, or any USD-compatible viewer. To browse the example source code, you can open the directory where the files are located like this: warp/examples/core dem fluid graph capture marching cubes mesh nvdb raycast raymarch sample mesh sph torch wave 2-D incompressible turbulence in a periodic box warp/examples/fem diffusion 3d mixed elasticity apic fluid streamlines distortion energy taylor green kelvin helmholtz magnetostatics adaptive grid nonconforming contact darcy level-set optimization elastic shape optimization warp/examples/optim diffray fluid checkpoint particle repulsion navier-stokes perturbation warp/examples/tile mlp nbody mcgp Learn More Please see the following resources for additional background on Warp: Product Page SIGGRAPH 2024 Course Slides GTC 2024 Presentation GTC 2022 Presentation GTC 2021 Presentation SIGGRAPH Asia 2021 Differentiable Simulation Course Support See the FAQ for common questions. Problems, questions, and feature requests can be opened on GitHub Issues. For inquiries not suited for GitHub Issues, please email . Contributing Contributions and pull requests from the community are welcome. Please see the Contribution Guide for more information on contributing to the development of Warp. License Warp is provided under the Apache License, Version 2.0. Please see LICENSE.md for full license text. This project will download and install additional third-party op",
       "readme": "NVIDIA Warp Documentation Changelog Warp is a Python framework for GPU-accelerated simulation, robotics, and machine learning. Warp takes regular Python functions and JIT compiles them to efficient kernel code that can run on the CPU or GPU. Warp comes with a rich set of primitives for physics simulation, robotics, geometry processing, and more. Warp kernels are differentiable and can be used as part of machine-learning pipelines with frameworks such as PyTorch, JAX and Paddle. A selection of physical simulations computed with Warp Quick Start Simulate one million particles under gravitational attraction, in 20 lines: Installing Python version 3.10 or newer is required. Warp can run on x86-64 and ARMv8 CPUs on Windows and Linux, and on Apple Silicon (ARMv8) on macOS. GPU support requires a CUDA-capable NVIDIA GPU and driver (minimum GeForce GTX 9xx). The easiest way to install Warp is from PyPI: You can also use pip install warp-lang[examples] to install additional dependencies for running examples and USD-related features. For nightly builds, conda, CUDA 13 builds, building from source, and CUDA driver requirements, see the Installation Guide. Tutorial Notebooks The NVIDIA Accelerated Computing Hub contains the current, actively maintained set of Warp tutorials: Notebook Colab Link ---------- ------------ Introduction to NVIDIA Warp GPU-Accelerated Ising Model Simulation in NVIDIA Warp Additionally, several notebooks in the notebooks directory provide additional examples and cover key Warp features: Notebook Colab Link ---------- ------------ Warp Core Tutorial: Basics Warp Core Tutorial: Generics Warp Core Tutorial: Points Warp Core Tutorial: Meshes Warp Core Tutorial: Volumes Warp PyTorch Tutorial: Basics Warp PyTorch Tutorial: Custom Operators Running Examples The warp/examples directory contains examples covering physics simulation, geometry processing, optimization, and tile-based GPU programming. Before running examples, install the optional example dependencies using: On Linux aarch64 systems (e.g., NVIDIA DGX Spark), the [examples] extra automatically installs usd-exchange instead of usd-core as a drop-in replacement, since usd-core wheels are not available for that platform. Examples can be run from the command-line as follows: Most examples can be run on either the CPU or a CUDA-capable device, but a handful require a CUDA-capable device. These are marked at the top of the example script. Some examples generate USD files containing time-sampled animations in the current working directory. These can be viewed in Pixar's UsdView, Blender, or any USD-compatible viewer. To browse the example source code, you can open the directory where the files are located like this: warp/examples/core dem fluid graph capture marching cubes mesh nvdb raycast raymarch sample mesh sph torch wave 2-D incompressible turbulence in a periodic box warp/examples/fem diffusion 3d mixed elasticity apic fluid streamlines distortion energy taylor green kelvin helmholtz magnetostatics adaptive grid nonconforming contact darcy level-set optimization elastic shape optimization warp/examples/optim diffray fluid checkpoint particle repulsion navier-stokes perturbation warp/examples/tile mlp nbody mcgp Learn More Please see the following resources for additional background on Warp: Product Page SIGGRAPH 2024 Course Slides GTC 2024 Presentation GTC 2022 Presentation GTC 2021 Presentation SIGGRAPH Asia 2021 Differentiable Simulation Course Support See the FAQ for common questions. Problems, questions, and feature requests can be opened on GitHub Issues. For inquiries not suited for GitHub Issues, please email . Contributing Contributions and pull requests from the community are welcome. Please see the Contribution Guide for more information on contributing to the development of Warp. License Warp is provided under the Apache License, Version 2.0. Please see LICENSE.md for full license text. This project will download and install additional third-party op",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -1440,7 +1440,7 @@
     "source": "github",
     "title": "fan-ziqi/rl_sar",
     "url": "https://github.com/fan-ziqi/rl_sar",
-    "summary": "Simulation verification and physical deployment of robot reinforcement learning algorithms, suitable for quadruped robots, wheeled robots, and humanoid robots. \"sar\" represents \"simulation and real\"",
+    "summary": "rl_sar is a deployment-oriented robot RL stack that bridges simulation and real hardware across IsaacGym/IsaacSim, Gazebo, MuJoCo, ROS Noetic, and ROS2 Foxy/Humble, with inference via libtorch or ONNX Runtime. It is aimed at taking trained locomotion or dance policies onto a broad set of platforms, including Unitree A1/Go2/B2/G1, FFTAI GR1 variants, Deeprobotics Lite3, Agibot D1, and others, with support status called out separately for Gazebo, MuJoCo, and real robots.",
     "published": "2024-03-06T09:06:25Z",
     "updated": "2026-04-02T02:17:38Z",
     "authors": [
@@ -1456,7 +1456,7 @@
       "first_seen": "2026-05-18",
       "full_text": "rl sar 中文文档 This repository provides a framework for simulation verification and physical deployment of robot reinforcement learning algorithms, suitable for quadruped robots, wheeled robots, and humanoid robots. \"sar\" stands for \"simulation and real\" Supports both IsaacGym and IsaacSim Supports both ROS-Noetic and ROS2-Foxy/Humble Supports both libtorch and onnxruntime Supports both Linux and macOS (Only support Mujoco simulation) Supports both Gazebo and Mujoco (Partial support) Supports both Locomotion and Dance Support List: Robot Name (rname:=) Pre-Trained Policy Gazebo Mujoco Real - - - - - Unitree-A1 (a1) legged gym (IsaacGym) ✅ ❌ ✅ Unitree-Go2 (go2) himloco (IsaacGym) robot lab (IsaacSim) ✅ ✅ ✅ ✅ Unitree-Go2W (go2w) robot lab (IsaacSim) ✅ ✅ ✅ Unitree-B2 (b2) robot lab (IsaacSim) ✅ ✅ ⚪ Unitree-B2W (b2w) robot lab (IsaacSim) ✅ ✅ ⚪ Unitree-G1 (g1) robomimic/locomotion (IsaacGym) robomimic/charleston (IsaacGym) whole body tracking/dance 102 (IsaacSim) whole body tracking/gangnam style (IsaacSim) ✅ ✅ ✅ FFTAI-GR1T1 (gr1t1) (Only available on Ubuntu20.04) legged gym (IsaacGym) ✅ ❌ ⚪ FFTAI-GR1T2 (gr1t2) (Only available on Ubuntu20.04) legged gym (IsaacGym) ✅ ❌ ⚪ zhinao-L4W4 (l4w4) legged gym (IsaacGym) ✅ ❌ ✅ Deeprobotics-Lite3 (lite3) himloco (IsaacGym) ✅ ❌ ✅ Agibot-D1 (d1) robot lab (IsaacSim) ✅ ✅ ✅ DDTRobot-Tita (tita) robot lab (IsaacSim) ✅ ❌ ⚪ [!IMPORTANT] Python version temporarily suspended maintenance, please use v2.3 if necessary, may be re-released in the future. [!NOTE] If you want to train policy using IsaacLab(IsaacSim), please use robot lab project. The order of joints in robot lab cfg file joint names is the same as that defined in xxx/robot lab/config.yaml in this project. Discuss in Github Discussion or Discord. [!CAUTION] Disclaimer: User acknowledges that all risks and consequences arising from using this code shall be solely borne by the user, the author assumes no liability for any direct or indirect damages, and proper safety measures must be implemented prior to operation. Preparation Clone the repository To update Dependency Install the required packages: If you need to use ROS, install the following dependency packages: Compilation Execute the following script in the project root directory to compile the entire project: To compile specific packages individually, you can append the package names: To clean the build, use the following command. This will remove all compiled outputs and created symbolic links: If simulation is not needed and you only want to run on the robot, you can compile using CMake while disabling ROS (the compiled executables will be in cmake build/bin and libraries in cmake build/lib ): To use the Mujoco simulator For detailed usage instructions, you can check them via ./build.sh -h : [!TIP] If catkin build report errors: Unable to find either executable 'empy' or Python module 'em' , run catkin config -DPYTHON EXECUTABLE=/usr/bin/python3 before catkin build Running In the following text, \\ /\\ is used to represent different environments, such as go2/himloco and go2w/robot lab . Before running, copy the trained pt model file to rl sar/src/rl sar/policy/ / , and configure the parameters in / /config.yaml and /base.yaml . Simulation Gazebo Open a terminal, launch the gazebo simulation environment Open a new terminal, launch the control program [!TIP] IMPORTANT: After launching Gazebo, you must launch rl sim in a separate terminal to control the robot. Without rl sim , the robot will not be controlled and may fall over. If you cannot see the robot after launching Gazebo in Ubuntu 22.04, it means the robot was initialized outside the field of view. The robot's position will be automatically reset after launching rl sim. If the robot falls over during the standing process, use the keyboard R or the gamepad RB+Y to reset the robot. If Gazebo cannot be opened when you start it for the first time, you need to download the model package Mujoco Docker Docker support is available for simulation ",
       "readme": "rl sar 中文文档 This repository provides a framework for simulation verification and physical deployment of robot reinforcement learning algorithms, suitable for quadruped robots, wheeled robots, and humanoid robots. \"sar\" stands for \"simulation and real\" Supports both IsaacGym and IsaacSim Supports both ROS-Noetic and ROS2-Foxy/Humble Supports both libtorch and onnxruntime Supports both Linux and macOS (Only support Mujoco simulation) Supports both Gazebo and Mujoco (Partial support) Supports both Locomotion and Dance Support List: Robot Name (rname:=) Pre-Trained Policy Gazebo Mujoco Real - - - - - Unitree-A1 (a1) legged gym (IsaacGym) ✅ ❌ ✅ Unitree-Go2 (go2) himloco (IsaacGym) robot lab (IsaacSim) ✅ ✅ ✅ ✅ Unitree-Go2W (go2w) robot lab (IsaacSim) ✅ ✅ ✅ Unitree-B2 (b2) robot lab (IsaacSim) ✅ ✅ ⚪ Unitree-B2W (b2w) robot lab (IsaacSim) ✅ ✅ ⚪ Unitree-G1 (g1) robomimic/locomotion (IsaacGym) robomimic/charleston (IsaacGym) whole body tracking/dance 102 (IsaacSim) whole body tracking/gangnam style (IsaacSim) ✅ ✅ ✅ FFTAI-GR1T1 (gr1t1) (Only available on Ubuntu20.04) legged gym (IsaacGym) ✅ ❌ ⚪ FFTAI-GR1T2 (gr1t2) (Only available on Ubuntu20.04) legged gym (IsaacGym) ✅ ❌ ⚪ zhinao-L4W4 (l4w4) legged gym (IsaacGym) ✅ ❌ ✅ Deeprobotics-Lite3 (lite3) himloco (IsaacGym) ✅ ❌ ✅ Agibot-D1 (d1) robot lab (IsaacSim) ✅ ✅ ✅ DDTRobot-Tita (tita) robot lab (IsaacSim) ✅ ❌ ⚪ [!IMPORTANT] Python version temporarily suspended maintenance, please use v2.3 if necessary, may be re-released in the future. [!NOTE] If you want to train policy using IsaacLab(IsaacSim), please use robot lab project. The order of joints in robot lab cfg file joint names is the same as that defined in xxx/robot lab/config.yaml in this project. Discuss in Github Discussion or Discord. [!CAUTION] Disclaimer: User acknowledges that all risks and consequences arising from using this code shall be solely borne by the user, the author assumes no liability for any direct or indirect damages, and proper safety measures must be implemented prior to operation. Preparation Clone the repository To update Dependency Install the required packages: If you need to use ROS, install the following dependency packages: Compilation Execute the following script in the project root directory to compile the entire project: To compile specific packages individually, you can append the package names: To clean the build, use the following command. This will remove all compiled outputs and created symbolic links: If simulation is not needed and you only want to run on the robot, you can compile using CMake while disabling ROS (the compiled executables will be in cmake build/bin and libraries in cmake build/lib ): To use the Mujoco simulator For detailed usage instructions, you can check them via ./build.sh -h : [!TIP] If catkin build report errors: Unable to find either executable 'empy' or Python module 'em' , run catkin config -DPYTHON EXECUTABLE=/usr/bin/python3 before catkin build Running In the following text, \\ /\\ is used to represent different environments, such as go2/himloco and go2w/robot lab . Before running, copy the trained pt model file to rl sar/src/rl sar/policy/ / , and configure the parameters in / /config.yaml and /base.yaml . Simulation Gazebo Open a terminal, launch the gazebo simulation environment Open a new terminal, launch the control program [!TIP] IMPORTANT: After launching Gazebo, you must launch rl sim in a separate terminal to control the robot. Without rl sim , the robot will not be controlled and may fall over. If you cannot see the robot after launching Gazebo in Ubuntu 22.04, it means the robot was initialized outside the field of view. The robot's position will be automatically reset after launching rl sim. If the robot falls over during the standing process, use the keyboard R or the gamepad RB+Y to reset the robot. If Gazebo cannot be opened when you start it for the first time, you need to download the model package Mujoco Docker Docker support is available for simulation ",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -1528,7 +1528,7 @@
     "source": "github",
     "title": "unitreerobotics/unitree_sim_isaaclab",
     "url": "https://github.com/unitreerobotics/unitree_sim_isaaclab",
-    "summary": "The Unitree simulation environment built based on Isaac Lab",
+    "summary": "Unitree’s Isaac Lab simulator runs G1 and H1-2 humanoid manipulation tasks such as pick-place, block stacking, and whole-body object moving, with configurations for grippers, Dex3, and Inspire hands. It mirrors the real robots’ DDS communication topics, making it useful for testing control code, collecting or replaying teleoperation data with xr_teleoperate, and validating policies in simulation before moving to hardware.",
     "published": "2025-06-24T01:53:00Z",
     "updated": "2026-03-30T03:10:40Z",
     "authors": [
@@ -1545,7 +1545,7 @@
       "thumbnail": "https://raw.githubusercontent.com/unitreerobotics/unitree_sim_isaaclab/HEAD/./img/mainview.png",
       "readme": "unitree sim isaaclab Unitree Robotics English 中文 Important Notes First - Please use the officially recommended hardware resources for deployment - The simulator may take some time to load resources during its first startup, and the waiting time depends on hardware performance and network environment - After the simulator starts running, it will send/receive the same DDS topics as the real robot (Please note to distinguish between the simulator and real robot if there is a real robot running on the same network). For specific DDS usage, please refer toG1 Control and Dex3 Dexterous Hand Control - The weight files provided in this project are only for simulation environment testing - Currently, our project has only been tested on RTX 3080, RTX 3090, and RTX 4090 GPUs. For the RTX 50 series GPUs, please use Isaac Sim version 5.0.0 - After the virtual scene starts up, please click PerspectiveCamera - Cameras - PerspectiveCamera to view the main view scene. The operation steps are shown below: Main View Finding Steps 1、 📖 Introduction This project is built on Isaac Lab to simulate Unitree robots in various tasks, facilitating data collection, playback, generation, and model validation. It can be used in conjunction with the xr teleoperate repository for dataset collection. The project adopts the same DDS communication protocol as the real robot to enhance code generality and ease of use. Currently, the project employs Unitree G1/H1-2 robots equipped with different actuators, and provides simulation scenarios for multiple tasks. The task names and corresponding illustrations are summarized in the table below. Tasks that include Wholebody in their names enable mobile operations. G1-29dof-gripper G1-29dof-dex3 G1-29dof-inspire H1-2-inspire Isaac-PickPlace-Cylinder-G129-Dex1-Joint Isaac-PickPlace-Cylinder-G129-Dex3-Joint Isaac-PickPlace-Cylinder-G129-Inspire-Joint Isaac-PickPlace-Cylinder-H12-27dof-Inspire-Joint Isaac-PickPlace-RedBlock-G129-Dex1-Joint Isaac-PickPlace-RedBlock-G129-Dex3-Joint Isaac-PickPlace-RedBlock-G129-Inspire-Joint Isaac-PickPlace-RedBlock-H12-27dof-Inspire-Joint Isaac-Stack-RgyBlock-G129-Dex1-Joint Isaac-Stack-RgyBlock-G129-Dex3-Joint Isaac-Stack-RgyBlock-G129-Inspire-Joint Isaac-Stack-RgyBlock-H12-27dof-Inspire-Joint Isaac-Move-Cylinder-G129-Dex1-Wholebody Isaac-Move-Cylinder-G129-Dex3-Wholebody Isaac-Move-Cylinder-G129-Inspire-Wholebody 2、⚙️ Environment Setup and Running This project requires Isaac Sim 4.5.0/Isaac Sim 5.x.0 and Isaac Lab. You can refer to the official installation guide or follow the steps below. The installation methods for Ubuntu 20.04 and Ubuntu 22.04 (and later versions) are different. Please choose the installation method based on your system version and GPU resources. 2.1 Isaac Sim 4.5.0 Environment Installation The environment can be installed using one of the following two methods: - Use the auto setup env.sh script for automatic installation. - Follow the documentation below for installation. Please refer to the Isaac Sim 4.5.0 Environment Installation Steps for the setup. 2.2 Isaac Sim 5.0.0/5.1.0 Environment Installation The environment can be installed using one of the following two methods: - Use the auto setup env.sh script for automatic installation. - Follow the documentation below for installation. Please refer to the Isaac Sim 5.0.0 Environment Installation Steps ， Isaac Sim 5.1.0 Environment Installation Steps for the setup. Recommended: Use the auto setup env.sh script to automatically install the environment and download the required assets. 2.3 Build the Docker Environment (Using Ubuntu 22.04 / IsaacSim 5.1) 2.3.1 Build the Docker environment 2.3.2 Enter the Docker environment 2.4 Run Program 2.4.1 Asset Download Use the following command to download the required asset files 2.4.2 Teleoperation - --task : Task name, corresponding to the task names in the table above - --enable dex1 dds/--enable dex3 dds : Represent enabling DDS for two-finger gripper/three-finger dexterous h",
       "full_text": "unitree sim isaaclab Unitree Robotics English 中文 Important Notes First - Please use the officially recommended hardware resources for deployment - The simulator may take some time to load resources during its first startup, and the waiting time depends on hardware performance and network environment - After the simulator starts running, it will send/receive the same DDS topics as the real robot (Please note to distinguish between the simulator and real robot if there is a real robot running on the same network). For specific DDS usage, please refer toG1 Control and Dex3 Dexterous Hand Control - The weight files provided in this project are only for simulation environment testing - Currently, our project has only been tested on RTX 3080, RTX 3090, and RTX 4090 GPUs. For the RTX 50 series GPUs, please use Isaac Sim version 5.0.0 - After the virtual scene starts up, please click PerspectiveCamera - Cameras - PerspectiveCamera to view the main view scene. The operation steps are shown below: Main View Finding Steps 1、 📖 Introduction This project is built on Isaac Lab to simulate Unitree robots in various tasks, facilitating data collection, playback, generation, and model validation. It can be used in conjunction with the xr teleoperate repository for dataset collection. The project adopts the same DDS communication protocol as the real robot to enhance code generality and ease of use. Currently, the project employs Unitree G1/H1-2 robots equipped with different actuators, and provides simulation scenarios for multiple tasks. The task names and corresponding illustrations are summarized in the table below. Tasks that include Wholebody in their names enable mobile operations. G1-29dof-gripper G1-29dof-dex3 G1-29dof-inspire H1-2-inspire Isaac-PickPlace-Cylinder-G129-Dex1-Joint Isaac-PickPlace-Cylinder-G129-Dex3-Joint Isaac-PickPlace-Cylinder-G129-Inspire-Joint Isaac-PickPlace-Cylinder-H12-27dof-Inspire-Joint Isaac-PickPlace-RedBlock-G129-Dex1-Joint Isaac-PickPlace-RedBlock-G129-Dex3-Joint Isaac-PickPlace-RedBlock-G129-Inspire-Joint Isaac-PickPlace-RedBlock-H12-27dof-Inspire-Joint Isaac-Stack-RgyBlock-G129-Dex1-Joint Isaac-Stack-RgyBlock-G129-Dex3-Joint Isaac-Stack-RgyBlock-G129-Inspire-Joint Isaac-Stack-RgyBlock-H12-27dof-Inspire-Joint Isaac-Move-Cylinder-G129-Dex1-Wholebody Isaac-Move-Cylinder-G129-Dex3-Wholebody Isaac-Move-Cylinder-G129-Inspire-Wholebody 2、⚙️ Environment Setup and Running This project requires Isaac Sim 4.5.0/Isaac Sim 5.x.0 and Isaac Lab. You can refer to the official installation guide or follow the steps below. The installation methods for Ubuntu 20.04 and Ubuntu 22.04 (and later versions) are different. Please choose the installation method based on your system version and GPU resources. 2.1 Isaac Sim 4.5.0 Environment Installation The environment can be installed using one of the following two methods: - Use the auto setup env.sh script for automatic installation. - Follow the documentation below for installation. Please refer to the Isaac Sim 4.5.0 Environment Installation Steps for the setup. 2.2 Isaac Sim 5.0.0/5.1.0 Environment Installation The environment can be installed using one of the following two methods: - Use the auto setup env.sh script for automatic installation. - Follow the documentation below for installation. Please refer to the Isaac Sim 5.0.0 Environment Installation Steps ， Isaac Sim 5.1.0 Environment Installation Steps for the setup. Recommended: Use the auto setup env.sh script to automatically install the environment and download the required assets. 2.3 Build the Docker Environment (Using Ubuntu 22.04 / IsaacSim 5.1) 2.3.1 Build the Docker environment 2.3.2 Enter the Docker environment 2.4 Run Program 2.4.1 Asset Download Use the following command to download the required asset files 2.4.2 Teleoperation - --task : Task name, corresponding to the task names in the table above - --enable dex1 dds/--enable dex3 dds : Represent enabling DDS for two-finger gripper/three-finger dexterous h",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -1569,7 +1569,7 @@
     "source": "github",
     "title": "ARISE-Initiative/robosuite",
     "url": "https://github.com/ARISE-Initiative/robosuite",
-    "summary": "robosuite: A Modular Simulation Framework and Benchmark for Robot Learning",
+    "summary": "robosuite is a MuJoCo-based robot learning simulator with standardized manipulation benchmarks and modular APIs for composing environments from robot models, arenas, controllers, and tasks. The current v1.5 release broadens it beyond classic arm manipulation with humanoid and other embodiments, custom robot composition, composite and whole-body controllers, expanded teleoperation support, and photorealistic rendering. It is useful when you want reproducible RL or imitation-learning experiments without relying on scarce hardware, while still retaining enough flexibility to prototype new robot setups and control stacks.",
     "published": "2018-10-25T07:11:07Z",
     "updated": "2026-05-09T19:23:19Z",
     "authors": [
@@ -1592,7 +1592,7 @@
       "thumbnail": "https://raw.githubusercontent.com/ARISE-Initiative/robosuite/HEAD/docs/images/gallery.png",
       "readme": "robosuite [ [Homepage] ](https://robosuite.ai/) &ensp; [ [White Paper] ](https://arxiv.org/abs/2009.12293) &ensp; [ [Documentations] ](https://robosuite.ai/docs/overview.html) &ensp; [ [ARISE Initiative] ](https://github.com/ARISE-Initiative) ------- Latest Updates - [10/28/2024] v1.5 : Added support for diverse robot embodiments (including humanoids), custom robot composition, composite controllers (including whole body controllers), more teleoperation devices, photo-realistic rendering. [[release notes]](https://github.com/ARISE-Initiative/robosuite/releases/tag/v1.5.0) [[documentation]](http://robosuite.ai/docs/overview.html) - [11/15/2022] v1.4 : Backend migration to DeepMind's official MuJoCo Python binding, robot textures, and bug fixes :robot: [[release notes]](https://github.com/ARISE-Initiative/robosuite/releases/tag/v1.4.0) [[documentation]](http://robosuite.ai/docs/v1.4/) - [10/19/2021] v1.3 : Ray tracing and physically based rendering tools :sparkles: and access to additional vision modalities 🎥 [[video spotlight]](https://www.youtube.com/watch?v=2xesly6JrQ8) [[release notes]](https://github.com/ARISE-Initiative/robosuite/releases/tag/v1.3) [[documentation]](http://robosuite.ai/docs/v1.3/) - [02/17/2021] v1.2 : Added observable sensor models :eyes: and dynamics randomization :game die: [[release notes]](https://github.com/ARISE-Initiative/robosuite/releases/tag/v1.2) - [12/17/2020] v1.1 : Refactored infrastructure and standardized model classes for much easier environment prototyping :wrench: [[release notes]](https://github.com/ARISE-Initiative/robosuite/releases/tag/v1.1) ------- robosuite is a simulation framework powered by the MuJoCo physics engine for robot learning. It also offers a suite of benchmark environments for reproducible research. The current release (v1.5) features support for diverse robot embodiments (including humanoids), custom robot composition, composite controllers (including whole body controllers), more teleoperation devices, photo-realistic rendering. This project is part of the broader Advancing Robot Intelligence through Simulated Environments (ARISE) Initiative, with the aim of lowering the barriers of entry for cutting-edge research at the intersection of AI and Robotics. Data-driven algorithms, such as reinforcement learning and imitation learning, provide a powerful and generic tool in robotics. These learning paradigms, fueled by new advances in deep learning, have achieved some exciting successes in a variety of robot control problems. However, the challenges of reproducibility and the limited accessibility of robot hardware (especially during a pandemic) have impaired research progress. The overarching goal of robosuite is to provide researchers with: a standardized set of benchmarking tasks for rigorous evaluation and algorithm development; a modular design that offers great flexibility in designing new robot simulation environments; a high-quality implementation of robot controllers and off-the-shelf learning algorithms to lower the barriers to entry. This framework was originally developed in late 2017 by researchers in Stanford Vision and Learning Lab (SVL) as an internal tool for robot learning research. Now, it is actively maintained and used for robotics research projects in SVL, the UT Robot Perception and Learning Lab (RPL) and NVIDIA Generalist Embodied Agent Research Group (GEAR). We welcome community contributions to this project. For details, please check out our contributing guidelines. Robosuite offers a modular design of APIs for building new environments, robot embodiments, and robot controllers with procedural generation. We highlight these primary features below: standardized tasks : a set of standardized manipulation tasks of large diversity and varying complexity and RL benchmarking results for reproducible research; procedural generation : modular APIs for programmatically creating new environments and new tasks as combinations of robot models, arenas, and ",
       "full_text": "robosuite [ [Homepage] ](https://robosuite.ai/) &ensp; [ [White Paper] ](https://arxiv.org/abs/2009.12293) &ensp; [ [Documentations] ](https://robosuite.ai/docs/overview.html) &ensp; [ [ARISE Initiative] ](https://github.com/ARISE-Initiative) ------- Latest Updates - [10/28/2024] v1.5 : Added support for diverse robot embodiments (including humanoids), custom robot composition, composite controllers (including whole body controllers), more teleoperation devices, photo-realistic rendering. [[release notes]](https://github.com/ARISE-Initiative/robosuite/releases/tag/v1.5.0) [[documentation]](http://robosuite.ai/docs/overview.html) - [11/15/2022] v1.4 : Backend migration to DeepMind's official MuJoCo Python binding, robot textures, and bug fixes :robot: [[release notes]](https://github.com/ARISE-Initiative/robosuite/releases/tag/v1.4.0) [[documentation]](http://robosuite.ai/docs/v1.4/) - [10/19/2021] v1.3 : Ray tracing and physically based rendering tools :sparkles: and access to additional vision modalities 🎥 [[video spotlight]](https://www.youtube.com/watch?v=2xesly6JrQ8) [[release notes]](https://github.com/ARISE-Initiative/robosuite/releases/tag/v1.3) [[documentation]](http://robosuite.ai/docs/v1.3/) - [02/17/2021] v1.2 : Added observable sensor models :eyes: and dynamics randomization :game die: [[release notes]](https://github.com/ARISE-Initiative/robosuite/releases/tag/v1.2) - [12/17/2020] v1.1 : Refactored infrastructure and standardized model classes for much easier environment prototyping :wrench: [[release notes]](https://github.com/ARISE-Initiative/robosuite/releases/tag/v1.1) ------- robosuite is a simulation framework powered by the MuJoCo physics engine for robot learning. It also offers a suite of benchmark environments for reproducible research. The current release (v1.5) features support for diverse robot embodiments (including humanoids), custom robot composition, composite controllers (including whole body controllers), more teleoperation devices, photo-realistic rendering. This project is part of the broader Advancing Robot Intelligence through Simulated Environments (ARISE) Initiative, with the aim of lowering the barriers of entry for cutting-edge research at the intersection of AI and Robotics. Data-driven algorithms, such as reinforcement learning and imitation learning, provide a powerful and generic tool in robotics. These learning paradigms, fueled by new advances in deep learning, have achieved some exciting successes in a variety of robot control problems. However, the challenges of reproducibility and the limited accessibility of robot hardware (especially during a pandemic) have impaired research progress. The overarching goal of robosuite is to provide researchers with: a standardized set of benchmarking tasks for rigorous evaluation and algorithm development; a modular design that offers great flexibility in designing new robot simulation environments; a high-quality implementation of robot controllers and off-the-shelf learning algorithms to lower the barriers to entry. This framework was originally developed in late 2017 by researchers in Stanford Vision and Learning Lab (SVL) as an internal tool for robot learning research. Now, it is actively maintained and used for robotics research projects in SVL, the UT Robot Perception and Learning Lab (RPL) and NVIDIA Generalist Embodied Agent Research Group (GEAR). We welcome community contributions to this project. For details, please check out our contributing guidelines. Robosuite offers a modular design of APIs for building new environments, robot embodiments, and robot controllers with procedural generation. We highlight these primary features below: standardized tasks : a set of standardized manipulation tasks of large diversity and varying complexity and RL benchmarking results for reproducible research; procedural generation : modular APIs for programmatically creating new environments and new tasks as combinations of robot models, arenas, and ",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#Manipulator"
@@ -1708,7 +1708,7 @@
     "source": "github",
     "title": "RobotControlStack/robot-control-stack",
     "url": "https://github.com/RobotControlStack/robot-control-stack",
-    "summary": "A lean, ROS-free sim-to-real framework for training and deploying Vision-Language-Action (VLA) models and RL agents. Native MuJoCo Gymnasium wrappers with synchronous execution for Franka, UR5e, xArm, and SO101.",
+    "summary": "Robot Control Stack is a ROS-free robot learning interface that exposes both MuJoCo simulation and real hardware through the same Gymnasium-style API, so VLA or RL policies can be trained and deployed with minimal code changes. Its wrapper-based design lets users compose cameras, grippers, action spaces, and robot-specific extensions, with built-in support for Franka FR3/Panda, xArm7, UR5e, and SO101 plus teleoperation and remote inference apps. The interesting angle is its focus on synchronous, Python-native data collection and control, avoiding ROS/MoveIt overhead that can bottleneck modern ML training loops.",
     "published": "2024-02-29T12:40:59Z",
     "updated": "2026-05-18T13:16:48Z",
     "authors": [
@@ -1735,7 +1735,7 @@
       "thumbnail": "https://raw.githubusercontent.com/RobotControlStack/robotcontrolstack.github.io/refs/heads/master/static/videos/grid.webp",
       "full_text": "A lean, ROS-free Sim-to-Real framework for training and deploying Vision-Language-Action (VLA) models and Reinforcement Learning (RL) agents. --- Robot Control Stack (RCS) is a flexible, native Gymnasium wrapper-based robot control interface designed specifically for modern robot learning and Vision-Language-Action (VLA) models. It completely unifies MuJoCo simulation and real-world physical robot control into a single, seamless API. Currently, RCS natively supports four robots out-of-the-box: Franka FR3/Panda, xArm7, UR5e, and SO101. 🚀 Why use Robot Control Stack? Traditional robotics middleware (like ROS/ROS2) and complex motion planning pipelines (like MoveIt or standard ros2 control ) are built for asynchronous, distributed systems. This often becomes a massive bottleneck when attempting to train modern, synchronous machine learning models. RCS is built differently: Zero ROS Overhead: No complex message-passing, middleware, or network configuration required. Run natively in Python with a lightweight C++ backend. Frictionless Sim-to-Real: Train your Reinforcement Learning or VLA policies in our MuJoCo Gymnasium wrapper, and deploy the exact same code directly to physical hardware. Synchronous Execution: Optimized specifically for the highly parallelized, synchronous data collection required by modern ML workflows. Ready-to-Use Apps: Ships with pre-built applications for data collection via teleoperation and remote model inference via vlagents. 🧩 Wrapper-Based Architecture RCS utilizes a highly modular, wrapper-based architecture, allowing you to easily stack capabilities (cameras, grippers, action spaces) as needed. 💻 Example: Composing your Environment Flexibly compose your Gymnasium environment to fit your exact training needs. For common environment compositions, factory functions such as rcs.envs.creators.SimEnvCreator are provided. Note: This and other examples can be found in the examples/ folder. 🛠️ Installation From Source Make sure that common build tools (i.e., build-essential ) and a C++ compiler like gcc or clang are installed on your system/conda/docker. RCS works best in Python 3.11, and all extensions have been tested to work in 3.11. For Python 3.11: The rcs realsense extension won't work due to the pyrealsense2 version RCS utilizes. For Python 3.12: The ompl python module is currently not available on PyPI. If OMPL is not used, it is safe to remove this dependency in pyproject.toml . Via PyPI/pip Coming soon... 🦾 Hardware Extensions RCS supports various hardware extensions to seamlessly connect your policies to the real world (e.g., FR3, xArm7, RealSense). These are located in the extensions directory. To install a specific robot extension (example for Franka FR3): For a full list of extensions and detailed documentation, visit robotcontrolstack.org/extensions . ⚠️ Troubleshooting & FAQ License error or group argument not found during installation? Make sure you are using a pip version =25.1 and setuptools version =45 . Dependency error during installation? Make sure you are using Python 3.11. RCS extensions currently do not support 3.12+ due to OMPL and RealSense dependencies. Simulation is running too slow? Check that you have enable on-demand rendering: SimCameraSet(..., render on demand=True) to render camera frames only once per step. Resolution and number of cameras in the scene has a large impact on simulation speed. Make sure to use a decent GPU when rendering is enabled. 📚 Documentation For full documentation, including advanced installation, modular usage, and API references, please visit: 👉 robotcontrolstack.org Useful quick-reference pages: - RCS Conventions for quaternion order, frames, Euler angles, and gripper semantics - Sim Scene Configuration for SimEnvCreatorConfig , scene frames, and example setup patterns 🤝 Contribution We welcome contributions from the robotics and ML community! For contribution guidelines, please check out robotcontrolstack.org/contributing . 📝 Citation If you find RC",
       "readme": "A lean, ROS-free Sim-to-Real framework for training and deploying Vision-Language-Action (VLA) models and Reinforcement Learning (RL) agents. --- Robot Control Stack (RCS) is a flexible, native Gymnasium wrapper-based robot control interface designed specifically for modern robot learning and Vision-Language-Action (VLA) models. It completely unifies MuJoCo simulation and real-world physical robot control into a single, seamless API. Currently, RCS natively supports four robots out-of-the-box: Franka FR3/Panda, xArm7, UR5e, and SO101. 🚀 Why use Robot Control Stack? Traditional robotics middleware (like ROS/ROS2) and complex motion planning pipelines (like MoveIt or standard ros2 control ) are built for asynchronous, distributed systems. This often becomes a massive bottleneck when attempting to train modern, synchronous machine learning models. RCS is built differently: Zero ROS Overhead: No complex message-passing, middleware, or network configuration required. Run natively in Python with a lightweight C++ backend. Frictionless Sim-to-Real: Train your Reinforcement Learning or VLA policies in our MuJoCo Gymnasium wrapper, and deploy the exact same code directly to physical hardware. Synchronous Execution: Optimized specifically for the highly parallelized, synchronous data collection required by modern ML workflows. Ready-to-Use Apps: Ships with pre-built applications for data collection via teleoperation and remote model inference via vlagents. 🧩 Wrapper-Based Architecture RCS utilizes a highly modular, wrapper-based architecture, allowing you to easily stack capabilities (cameras, grippers, action spaces) as needed. 💻 Example: Composing your Environment Flexibly compose your Gymnasium environment to fit your exact training needs. For common environment compositions, factory functions such as rcs.envs.creators.SimEnvCreator are provided. Note: This and other examples can be found in the examples/ folder. 🛠️ Installation From Source Make sure that common build tools (i.e., build-essential ) and a C++ compiler like gcc or clang are installed on your system/conda/docker. RCS works best in Python 3.11, and all extensions have been tested to work in 3.11. For Python 3.11: The rcs realsense extension won't work due to the pyrealsense2 version RCS utilizes. For Python 3.12: The ompl python module is currently not available on PyPI. If OMPL is not used, it is safe to remove this dependency in pyproject.toml . Via PyPI/pip Coming soon... 🦾 Hardware Extensions RCS supports various hardware extensions to seamlessly connect your policies to the real world (e.g., FR3, xArm7, RealSense). These are located in the extensions directory. To install a specific robot extension (example for Franka FR3): For a full list of extensions and detailed documentation, visit robotcontrolstack.org/extensions . ⚠️ Troubleshooting & FAQ License error or group argument not found during installation? Make sure you are using a pip version =25.1 and setuptools version =45 . Dependency error during installation? Make sure you are using Python 3.11. RCS extensions currently do not support 3.12+ due to OMPL and RealSense dependencies. Simulation is running too slow? Check that you have enable on-demand rendering: SimCameraSet(..., render on demand=True) to render camera frames only once per step. Resolution and number of cameras in the scene has a large impact on simulation speed. Make sure to use a decent GPU when rendering is enabled. 📚 Documentation For full documentation, including advanced installation, modular usage, and API references, please visit: 👉 robotcontrolstack.org Useful quick-reference pages: - RCS Conventions for quaternion order, frames, Euler angles, and gripper semantics - Sim Scene Configuration for SimEnvCreatorConfig , scene frames, and example setup patterns 🤝 Contribution We welcome contributions from the robotics and ML community! For contribution guidelines, please check out robotcontrolstack.org/contributing . 📝 Citation If you find RC",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -1977,7 +1977,7 @@
     "source": "github",
     "title": "BAAI-Humanoid/MOSAIC",
     "url": "https://github.com/BAAI-Humanoid/MOSAIC",
-    "summary": "MOSAIC: Bridging the Sim-to-Real Gap in Generalist Humanoid Motion Tracking and Teleoperation with Rapid Residual Adaptation",
+    "summary": "MOSAIC trains humanoid teleoperation policies for whole-body motion tracking across multiple input interfaces, using rewards tuned for global motion consistency so behaviors stay stable over long horizons. It combines multi-source motion data from AMASS, OMOMO, optical and inertial MoCap, and GENMO-generated motions with rapid residual adaptation, adding interface-specific corrections without giving up a general tracker. The repo is mainly the Isaac Lab training pipeline for the teleoperation-oriented tracker, adaptor training, and multi-teacher residual distillation, with deployment handled separately through RobotBridge.",
     "published": "2026-02-10T13:32:14Z",
     "updated": "2026-03-07T02:58:26Z",
     "authors": [
@@ -1993,7 +1993,7 @@
       "first_seen": "2026-05-18",
       "full_text": "MOSAIC Training Code [[Website]](https://baai-humanoid.github.io/MOSAIC/) [[Arxiv]](https://arxiv.org/pdf/2602.08594) [[Dataset]](https://huggingface.co/datasets/BAAI-Humanoid/MOSAIC Dataset) [[Model]](https://huggingface.co/BAAI-Humanoid/MOSAIC Model) Overview MOSAIC is an open-source system for generalist humanoid motion tracking and whole-body teleoperation across multiple interfaces. It trains a teleoperation-oriented tracker with rewards that emphasize global motion consistency for stable, long-horizon behaviors. To bridge sim-to-real interface gaps, it uses rapid residual adaptation to inject interface-specific corrections while preserving generality. This repo focuses on the teleoperation policy training; for sim-to-sim and sim-to-real deployment, see RobotBridge. Installation - Install Isaac Lab v2.1.0 by following the installation guide. We recommend using the conda installation as it simplifies calling Python scripts from the terminal. - Clone this repository separately from the Isaac Lab installation (i.e., outside the IsaacLab directory): - Using a Python interpreter that has Isaac Lab installed, install the library and install the algorithm library General Training Pipeline Motion Preprocessing We store all processed motions locally. The reference motion should be retargeted and use generalized coordinates only. - Gather the reference motion datasets (please follow the original licenses), we use the same convention as .csv of Unitree's dataset - Convert retargeted motions to include the maximum coordinates information (body pose, body velocity, and body acceleration) via forward kinematics: - Single Motion The processed motion file will be saved locally with output name {motion name}. - Multiple Motions This converts the processed motion files to the output target path {motion save path}. - Replay motions from local files in Isaac Sim: Policy Training - Train policy by the following command for single motion: - Train policy by the following command for multiple motion: - If you want to activate multiple GPUs for training in parallel, just follow the command like that: Policy Evaluation - Play the trained policy by the following command for single motion: - Play the trained policy by the following command for multiple motion: The WandB run path can be located in the run overview. It follows the format {your organization}/{project name}/ along with a unique 8-character identifier. Note that run name is different from run path. MOSAIC Training This section follows the full training flow in order. Before training, prepare the following motion sources: 1) Public datasets downloaded from their official sites: AMASS and OMOMO. 2) Built-in MOSAIC datasets (optical MoCap, inertial MoCap, and GENMO-generated motions) downloaded from our open dataset. 3) Adaptor training data (VR and inertial MoCap) downloaded from our open dataset. Training is provided as shell scripts. Run them in order, and make sure to set the motion source paths inside each script before running. 1) MOSAIC GMT policy training using multi-source dataset After training, you get the GMT model: gmt checkpoint.pt 1) MOSAIC teleoperation adaptor training using adaptor training data After training, you get the adaptor model: adaptor checkpoint.pt Then update the motion path and model path for GMT and Adaptor in with relative task config: - source/whole body tracking/whole body tracking/tasks/tracking/config/g1/flat env cfg.py - source/whole body tracking/whole body tracking/tasks/tracking/config/g1/agents/rsl rl mosaic cfg.py 3) MOSAIC multi-teacher residual distillation (fast adaptation) Code Structure Below is an overview of the code structure for this repository: - source/whole body tracking/whole body tracking/tasks/tracking/mdp This directory contains the atomic functions to define the MDP for MOSAIC. Below is a breakdown of the functions: - commands.py Command library to compute relevant variables from the reference motion, current robot state, and error",
       "readme": "MOSAIC Training Code [[Website]](https://baai-humanoid.github.io/MOSAIC/) [[Arxiv]](https://arxiv.org/pdf/2602.08594) [[Dataset]](https://huggingface.co/datasets/BAAI-Humanoid/MOSAIC Dataset) [[Model]](https://huggingface.co/BAAI-Humanoid/MOSAIC Model) Overview MOSAIC is an open-source system for generalist humanoid motion tracking and whole-body teleoperation across multiple interfaces. It trains a teleoperation-oriented tracker with rewards that emphasize global motion consistency for stable, long-horizon behaviors. To bridge sim-to-real interface gaps, it uses rapid residual adaptation to inject interface-specific corrections while preserving generality. This repo focuses on the teleoperation policy training; for sim-to-sim and sim-to-real deployment, see RobotBridge. Installation - Install Isaac Lab v2.1.0 by following the installation guide. We recommend using the conda installation as it simplifies calling Python scripts from the terminal. - Clone this repository separately from the Isaac Lab installation (i.e., outside the IsaacLab directory): - Using a Python interpreter that has Isaac Lab installed, install the library and install the algorithm library General Training Pipeline Motion Preprocessing We store all processed motions locally. The reference motion should be retargeted and use generalized coordinates only. - Gather the reference motion datasets (please follow the original licenses), we use the same convention as .csv of Unitree's dataset - Convert retargeted motions to include the maximum coordinates information (body pose, body velocity, and body acceleration) via forward kinematics: - Single Motion The processed motion file will be saved locally with output name {motion name}. - Multiple Motions This converts the processed motion files to the output target path {motion save path}. - Replay motions from local files in Isaac Sim: Policy Training - Train policy by the following command for single motion: - Train policy by the following command for multiple motion: - If you want to activate multiple GPUs for training in parallel, just follow the command like that: Policy Evaluation - Play the trained policy by the following command for single motion: - Play the trained policy by the following command for multiple motion: The WandB run path can be located in the run overview. It follows the format {your organization}/{project name}/ along with a unique 8-character identifier. Note that run name is different from run path. MOSAIC Training This section follows the full training flow in order. Before training, prepare the following motion sources: 1) Public datasets downloaded from their official sites: AMASS and OMOMO. 2) Built-in MOSAIC datasets (optical MoCap, inertial MoCap, and GENMO-generated motions) downloaded from our open dataset. 3) Adaptor training data (VR and inertial MoCap) downloaded from our open dataset. Training is provided as shell scripts. Run them in order, and make sure to set the motion source paths inside each script before running. 1) MOSAIC GMT policy training using multi-source dataset After training, you get the GMT model: gmt checkpoint.pt 1) MOSAIC teleoperation adaptor training using adaptor training data After training, you get the adaptor model: adaptor checkpoint.pt Then update the motion path and model path for GMT and Adaptor in with relative task config: - source/whole body tracking/whole body tracking/tasks/tracking/config/g1/flat env cfg.py - source/whole body tracking/whole body tracking/tasks/tracking/config/g1/agents/rsl rl mosaic cfg.py 3) MOSAIC multi-teacher residual distillation (fast adaptation) Code Structure Below is an overview of the code structure for this repository: - source/whole body tracking/whole body tracking/tasks/tracking/mdp This directory contains the atomic functions to define the MDP for MOSAIC. Below is a breakdown of the functions: - commands.py Command library to compute relevant variables from the reference motion, current robot state, and error",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#Humanoid"
@@ -6274,7 +6274,7 @@
     "source": "github",
     "title": "darshmenon/pickplace-rl-mobile-manipulator",
     "url": "https://github.com/darshmenon/pickplace-rl-mobile-manipulator",
-    "summary": "Mobile manipulator pick-and-place via reinforcement learning — UR3 arm on a diff-drive base, trained end-to-end with TQC in Gazebo/ROS2",
+    "summary": "A UR3 arm mounted on a differential-drive mobile base is trained end-to-end for pick-and-place in Gazebo/ROS2 using Truncated Quantile Critics reinforcement learning. The repo is useful as a simulation and training setup for mobile manipulation policies that jointly coordinate base motion and arm control, rather than treating navigation and grasping as separate hand-engineered stages.",
     "published": "2025-08-31T10:39:41Z",
     "updated": "2026-05-17T17:44:20Z",
     "authors": [
@@ -6306,7 +6306,9 @@
       ],
       "open_issues": 0,
       "license": null,
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "Mobile manipulator pick-and-place via reinforcement learning — UR3 arm on a diff-drive base, trained end-to-end with TQC in Gazebo/ROS2",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -6332,7 +6334,7 @@
     "source": "github",
     "title": "Youqiang-Gui/SeedPolicy",
     "url": "https://github.com/Youqiang-Gui/SeedPolicy",
-    "summary": "Official implementation of \"SeedPolicy: Horizon Scaling via Self-Evolving Diffusion Policy for Robot Manipulation\".",
+    "summary": "SeedPolicy is the official code release for a robot manipulation method that scales diffusion-policy control over longer horizons by letting the policy self-evolve rather than relying only on fixed demonstrations. The repo is mainly useful for reproducing and building on the SeedPolicy experiments from Horizon Scaling via Self-Evolving Diffusion Policy for Robot Manipulation.",
     "published": "2026-01-30T14:28:36Z",
     "updated": "2026-03-15T06:34:47Z",
     "authors": [
@@ -6345,7 +6347,9 @@
       "topics": [],
       "open_issues": 1,
       "license": null,
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "Official implementation of \"SeedPolicy: Horizon Scaling via Self-Evolving Diffusion Policy for Robot Manipulation\".",
+      "summary_kind": "llm"
     },
     "tags": [
       "#IL",
@@ -6370,7 +6374,7 @@
     "source": "arxiv",
     "title": "Offline Semantic Guidance for Efficient Vision-Language-Action Policy Distillation",
     "url": "http://arxiv.org/abs/2605.16241v1",
-    "summary": "Billion-parameter Vision-Language-Action (VLA) policies have recently shown impressive performance in robotic manipulation, yet their size and inference cost remain major obstacles for real-time closed-loop control. We introduce \\textbf{VLA-AD}, a distillation framework that uses a Vision-Language Model as an offline semantic supervisor to transfer large VLA teachers into lightweight student policies. Instead of relying only on low-level action imitation, VLA-AD augments teacher-provided 7-DoF action targets with high-level semantic guidance, including task phase anchors and multi-frame operating-direction descriptions. These auxiliary signals are used only during training: at test time, the student policy runs independently, with neither the VLA teacher nor the VLM required. We evaluate VLA-AD on three LIBERO benchmark suites. Using OpenVLA-7B as the teacher, our method produces a 158M-parameter student, yielding a $44\\times$ reduction in model size while matching the teacher with only a $0.27\\%$ average relative gap. The resulting policy runs at 12.5 Hz on an RTX 4090, achieving a $3.28\\times$ inference speedup over OpenVLA-7B. We further show that the same semantic distillation pipeline generalizes to a different $π_{0.5}$-4B teacher, where the student outperforms the teacher on two suites and remains within $0.53\\%$ on \\texttt{libero\\_goal}. Additional analysis indicates that phase-level supervision and multi-frame directional cues make the student less sensitive to noisy teacher actions, such as erroneous high-frequency gripper changes. Overall, VLA-AD demonstrates that offline semantic guidance from VLMs can substantially improve the efficiency, robustness, and deployability of VLA policy distillation.",
+    "summary": "VLA-AD distills billion-parameter vision-language-action robot policies into much smaller closed-loop controllers by using a VLM offline during training to add semantic supervision, such as task-phase anchors and multi-frame direction cues, alongside 7-DoF action imitation. On LIBERO, it compresses OpenVLA-7B into a 158M-parameter student with a 44x size reduction, only a 0.27% average relative performance gap, and 12.5 Hz inference on an RTX 4090, while similar distillation from a pi_0.5-4B teacher also transfers well. The semantic training signals appear to make the student more robust to noisy teacher actions, especially high-frequency gripper errors, without requiring the teacher or VLM at deployment.",
     "published": "2026-05-15T17:48:25+00:00",
     "updated": "2026-05-15T17:48:25+00:00",
     "authors": [
@@ -6387,7 +6391,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.16241v1",
       "comment": null,
       "first_seen": "2026-05-18",
-      "thumbnail_path": "thumbnails/arxiv/2605.16241.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.16241.jpg",
+      "full_text": "Billion-parameter Vision-Language-Action (VLA) policies have recently shown impressive performance in robotic manipulation, yet their size and inference cost remain major obstacles for real-time closed-loop control. We introduce \\textbf{VLA-AD}, a distillation framework that uses a Vision-Language Model as an offline semantic supervisor to transfer large VLA teachers into lightweight student policies. Instead of relying only on low-level action imitation, VLA-AD augments teacher-provided 7-DoF action targets with high-level semantic guidance, including task phase anchors and multi-frame operating-direction descriptions. These auxiliary signals are used only during training: at test time, the student policy runs independently, with neither the VLA teacher nor the VLM required. We evaluate VLA-AD on three LIBERO benchmark suites. Using OpenVLA-7B as the teacher, our method produces a 158M-parameter student, yielding a $44\\times$ reduction in model size while matching the teacher with only a $0.27\\%$ average relative gap. The resulting policy runs at 12.5 Hz on an RTX 4090, achieving a $3.28\\times$ inference speedup over OpenVLA-7B. We further show that the same semantic distillation pipeline generalizes to a different $π_{0.5}$-4B teacher, where the student outperforms the teacher on two suites and remains within $0.53\\%$ on \\texttt{libero\\_goal}. Additional analysis indicates that phase-level supervision and multi-frame directional cues make the student less sensitive to noisy teacher actions, such as erroneous high-frequency gripper changes. Overall, VLA-AD demonstrates that offline semantic guidance from VLMs can substantially improve the efficiency, robustness, and deployability of VLA policy distillation.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -6412,7 +6418,7 @@
     "source": "github",
     "title": "weqwoueu/Isaac-Legged-Locomotion",
     "url": "https://github.com/weqwoueu/Isaac-Legged-Locomotion",
-    "summary": "本项目基于 **NVIDIA Omniverse / Isaac Lab** 大规模并行张量仿真框架，针对目前工业界最前沿的足式平台（**Unitree G1/H1 人形机器人, Unitree Go1 / ANYmal-C 机器狗**）进行了强化学习 (PPO) 步态策略的从零训练。项目深度介入了**域随机化 (Domain Randomization)** 与 **面向硬件的奖励塑形 (Hardware-Aware Reward Shaping)**，成功实现了机器人无需视觉输入、仅靠本体感觉（Proprioception）即可在崎岖地形（Rough Terrain）与极限冰面下保持动态平衡的鲁棒控制。",
+    "summary": "Isaac-Legged-Locomotion trains PPO gait policies from scratch in NVIDIA Omniverse/Isaac Lab for current legged platforms including Unitree G1/H1 humanoids, Unitree Go1, and ANYmal-C. It focuses on large-scale parallel tensor simulation with domain randomization and hardware-aware reward shaping, producing proprioception-only controllers that can keep dynamic balance on rough terrain and highly slippery ice without visual input.",
     "published": "2026-03-03T09:31:18Z",
     "updated": "2026-03-04T15:28:18Z",
     "authors": [
@@ -6425,7 +6431,9 @@
       "topics": [],
       "open_issues": 0,
       "license": null,
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "本项目基于 **NVIDIA Omniverse / Isaac Lab** 大规模并行张量仿真框架，针对目前工业界最前沿的足式平台（**Unitree G1/H1 人形机器人, Unitree Go1 / ANYmal-C 机器狗**）进行了强化学习 (PPO) 步态策略的从零训练。项目深度介入了**域随机化 (Domain Randomization)** 与 **面向硬件的奖励塑形 (Hardware-Aware Reward Shaping)**，成功实现了机器人无需视觉输入、仅靠本体感觉（Proprioception）即可在崎岖地形（Rough Terrain）与极限冰面下保持动态平衡的鲁棒控制。",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -6450,7 +6458,7 @@
     "source": "arxiv",
     "title": "Feedback World Model Enables Precise Guidance of Diffusion Policy",
     "url": "http://arxiv.org/abs/2605.15705v1",
-    "summary": "World models aim to improve robotic decision making by predicting the consequences of actions. However, in practice, their predictions often become unreliable once the robot encounters states outside the training distribution, limiting their effectiveness at deployment. We observe that execution itself provides a natural but underutilized signal: after each action, the robot directly observes the true next state, revealing the mismatch between predicted and actual outcomes. Building on this insight, we propose feedback world model, a new paradigm that closes the loop between prediction and observation at inference time. Instead of treating the world model as a static open-loop predictor, our method maintains a lightweight feedback state that is updated online to iteratively correct future predictions, compensating for model errors using real-time observations without additional training data or parameter updates. We show that this process can be interpreted as a latent-space observer and admits convergence guarantees under mild conditions. We further introduce action-aware guidance to better translate corrected predictions into control by emphasizing action-controllable components while suppressing irrelevant variations. Experiments on LIBERO-Plus, Robomimic, and real-world manipulation tasks demonstrate that our method substantially improves both prediction accuracy and policy performance under distribution shift. In particular, it reduces world model prediction error by up to 76.4% and improves out-of-distribution (OOD) success rate by 30%. These results show that incorporating real-time feedback at inference time provides a simple yet powerful alternative to static world modeling.",
+    "summary": "Feedback world model turns a robot’s world model into a closed-loop predictor: after each action, it compares the predicted next state with the observed one and updates a lightweight latent feedback state online, without new data or parameter updates. The corrected predictions are then fed into diffusion policy guidance through an action-aware mechanism that emphasizes controllable state components and filters out irrelevant variation. Across LIBERO-Plus, Robomimic, and real-world manipulation, this reduced prediction error by up to 76.4% and improved out-of-distribution success rates by 30%.",
     "published": "2026-05-15T07:52:13+00:00",
     "updated": "2026-05-15T07:52:13+00:00",
     "authors": [
@@ -6475,7 +6483,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.15705v1",
       "comment": "21 pages, 9 figures",
       "first_seen": "2026-05-18",
-      "thumbnail_path": "thumbnails/arxiv/2605.15705.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.15705.jpg",
+      "full_text": "World models aim to improve robotic decision making by predicting the consequences of actions. However, in practice, their predictions often become unreliable once the robot encounters states outside the training distribution, limiting their effectiveness at deployment. We observe that execution itself provides a natural but underutilized signal: after each action, the robot directly observes the true next state, revealing the mismatch between predicted and actual outcomes. Building on this insight, we propose feedback world model, a new paradigm that closes the loop between prediction and observation at inference time. Instead of treating the world model as a static open-loop predictor, our method maintains a lightweight feedback state that is updated online to iteratively correct future predictions, compensating for model errors using real-time observations without additional training data or parameter updates. We show that this process can be interpreted as a latent-space observer and admits convergence guarantees under mild conditions. We further introduce action-aware guidance to better translate corrected predictions into control by emphasizing action-controllable components while suppressing irrelevant variations. Experiments on LIBERO-Plus, Robomimic, and real-world manipulation tasks demonstrate that our method substantially improves both prediction accuracy and policy performance under distribution shift. In particular, it reduces world model prediction error by up to 76.4% and improves out-of-distribution (OOD) success rate by 30%. These results show that incorporating real-time feedback at inference time provides a simple yet powerful alternative to static world modeling.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -6501,7 +6511,7 @@
     "source": "github",
     "title": "BeingBeyond/Being-H0",
     "url": "https://github.com/BeingBeyond/Being-H0",
-    "summary": "Being-H0: Vision-Language-Action Pretraining from Large-Scale Human Videos (ICML 2026)",
+    "summary": "Being-H0 pretrains a vision-language-action model from large-scale human videos, aiming to transfer the structure of everyday human behavior into robot control. The interesting part is the supervision source: instead of relying only on robot demonstrations, it uses abundant human video data to learn action-relevant visual and language representations for downstream embodied tasks.",
     "published": "2026-01-19T20:39:04Z",
     "updated": "2026-05-04T07:42:16Z",
     "authors": [
@@ -6514,7 +6524,9 @@
       "topics": [],
       "open_issues": 0,
       "license": "MIT",
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "Being-H0: Vision-Language-Action Pretraining from Large-Scale Human Videos (ICML 2026)",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -6539,7 +6551,7 @@
     "source": "github",
     "title": "shuosha/Residual_Copilot",
     "url": "https://github.com/shuosha/Residual_Copilot",
-    "summary": "Open-source code of the paper: Efficient and Reliable Teleoperation through Real-to-Sim-to-Real Shared Autonomy",
+    "summary": "Residual_Copilot is the open-source implementation for Efficient and Reliable Teleoperation through Real-to-Sim-to-Real Shared Autonomy, a shared-autonomy approach that improves robot teleoperation by learning residual assistance through a real-to-sim-to-real pipeline. It is aimed at making remote robot control more efficient and reliable by using simulation-derived assistance while keeping the human operator in the loop.",
     "published": "2026-02-17T16:56:23Z",
     "updated": "2026-05-15T21:04:50Z",
     "authors": [
@@ -6552,7 +6564,9 @@
       "topics": [],
       "open_issues": 0,
       "license": null,
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "Open-source code of the paper: Efficient and Reliable Teleoperation through Real-to-Sim-to-Real Shared Autonomy",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -6576,7 +6590,7 @@
     "source": "github",
     "title": "yechen056/UR5e-DP-Family",
     "url": "https://github.com/yechen056/UR5e-DP-Family",
-    "summary": "A practical repository for deploying the Diffusion Policy family on UR5e robots.",
+    "summary": "Practical deployment code for running the Diffusion Policy family on UR5e robot arms, aimed at moving imitation-learning policies from research implementations onto real hardware. It should be useful for researchers or engineers working with UR5e setups who want a concrete starting point for testing diffusion-based manipulation policies rather than rebuilding the robot integration stack themselves.",
     "published": "2026-04-18T10:55:05Z",
     "updated": "2026-04-19T13:27:06Z",
     "authors": [
@@ -6591,7 +6605,9 @@
       ],
       "open_issues": 0,
       "license": "MIT",
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "A practical repository for deploying the Diffusion Policy family on UR5e robots.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#IL",
@@ -6616,7 +6632,7 @@
     "source": "github",
     "title": "RajatDandekar/sim-engine",
     "url": "https://github.com/RajatDandekar/sim-engine",
-    "summary": "MuJoCo SO-101 robot arm simulator for learning manipulation policies (ACT, Diffusion, SmolVLA)",
+    "summary": "MuJoCo-based SO-101 robot arm simulator aimed at training and testing manipulation policies such as ACT, Diffusion Policy, and SmolVLA. It is useful as a lightweight environment for experimenting with robot learning pipelines before moving to hardware, especially for comparing policy architectures on simulated arm-control tasks.",
     "published": "2026-03-27T10:36:12Z",
     "updated": "2026-03-27T11:01:58Z",
     "authors": [
@@ -6629,7 +6645,9 @@
       "topics": [],
       "open_issues": 0,
       "license": null,
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "MuJoCo SO-101 robot arm simulator for learning manipulation policies (ACT, Diffusion, SmolVLA)",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -6691,7 +6709,7 @@
     "source": "arxiv",
     "title": "Terrain Consistent Reference-Guided RL for Humanoid Navigation Autonomy",
     "url": "http://arxiv.org/abs/2605.15517v1",
-    "summary": "We present a method for training reference-guided, perceptive reinforcement learning locomotion policies for humanoid robots in which reference trajectories are modulated in training to be consistent with terrain geometry.",
+    "summary": "Terrain Consistent Reference-Guided RL trains humanoid navigation policies by adapting the reference trajectories during training so they match the local terrain geometry the robot must traverse. The result is a perceptive, reference-guided locomotion setup aimed at making humanoid autonomy more reliable on uneven terrain, where blindly tracking a nominal motion plan would conflict with the ground shape.",
     "published": "2026-05-15T01:27:50+00:00",
     "updated": "2026-05-15T01:27:50+00:00",
     "authors": [
@@ -6708,7 +6726,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.15517v1",
       "comment": "8 pages, 4 figures, intended to submit to Humanoids 2026",
       "first_seen": "2026-05-18",
-      "thumbnail_path": "thumbnails/arxiv/2605.15517.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.15517.jpg",
+      "full_text": "We present a method for training reference-guided, perceptive reinforcement learning locomotion policies for humanoid robots in which reference trajectories are modulated in training to be consistent with terrain geometry.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -6823,7 +6843,7 @@
     "source": "github",
     "title": "maniparena/maniparena-sim",
     "url": "https://github.com/maniparena/maniparena-sim",
-    "summary": "ManipArena-Sim is the simulation environment for ManipArena, a real-robot benchmark for bimanual manipulation. It provides data collection, replay, and policy evaluation for the bimanual robot, built on Isaac Lab and IsaacLab-Arena.",
+    "summary": "ManipArena-Sim provides the Isaac Lab-based simulation stack behind ManipArena, a real-robot benchmark for bimanual manipulation. It supports collecting data, replaying demonstrations or runs, and evaluating policies for a bimanual robot, making it useful for developing and testing manipulation methods before or alongside real-robot experiments.",
     "published": "2026-03-15T15:40:36Z",
     "updated": "2026-05-14T09:00:34Z",
     "authors": [
@@ -6836,7 +6856,9 @@
       "topics": [],
       "open_issues": 0,
       "license": null,
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "ManipArena-Sim is the simulation environment for ManipArena, a real-robot benchmark for bimanual manipulation. It provides data collection, replay, and policy evaluation for the bimanual robot, built on Isaac Lab and IsaacLab-Arena.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Manipulator",
@@ -6898,7 +6920,7 @@
     "source": "github",
     "title": "NJU-R-L-Group-Embodied-Lab/lavira-code",
     "url": "https://github.com/NJU-R-L-Group-Embodied-Lab/lavira-code",
-    "summary": "[ICRA 2026] LaViRA: Language-Vision-Robot Actions Translation for Zero-Shot Vision-and-Language Navigation in Continuous Environments",
+    "summary": "LaViRA targets zero-shot vision-and-language navigation in continuous environments by translating language and visual context into executable robot actions. The repository is the code release for an ICRA 2026 project, useful for researchers looking at embodied navigation methods that bridge high-level instructions and low-level robot control without task-specific training examples.",
     "published": "2026-03-03T10:10:12Z",
     "updated": "2026-05-14T13:29:40Z",
     "authors": [
@@ -6911,7 +6933,9 @@
       "topics": [],
       "open_issues": 1,
       "license": null,
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "[ICRA 2026] LaViRA: Language-Vision-Robot Actions Translation for Zero-Shot Vision-and-Language Navigation in Continuous Environments",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -6935,7 +6959,7 @@
     "source": "github",
     "title": "RUCKBReasoning/From_Pixels_to_Tokens",
     "url": "https://github.com/RUCKBReasoning/From_Pixels_to_Tokens",
-    "summary": "[ICML' 26] From Pixels to Tokens: A Systematic Study of Latent Action Supervision for Vision-Language-Action Models",
+    "summary": "RUCKBReasoning/From_Pixels_to_Tokens accompanies an ICML 2026 study on latent action supervision for vision-language-action models, examining how pixel-level robot behavior can be converted into tokenized action representations for learning. The project is interesting because it frames action supervision as a systematic design space rather than a single model trick, aiming to clarify how different latent action choices affect VLA training and downstream robot control.",
     "published": "2026-03-31T00:58:37Z",
     "updated": "2026-05-08T09:43:39Z",
     "authors": [
@@ -6948,7 +6972,9 @@
       "topics": [],
       "open_issues": 0,
       "license": null,
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "[ICML' 26] From Pixels to Tokens: A Systematic Study of Latent Action Supervision for Vision-Language-Action Models",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -7015,7 +7041,7 @@
     "source": "github",
     "title": "phamtrongthang123/drifting_policy",
     "url": "https://github.com/phamtrongthang123/drifting_policy",
-    "summary": "Unofficial implementation of \"Generative Modeling via Drifting\" on PushT, built on Diffusion Policy",
+    "summary": "An unofficial implementation of Generative Modeling via Drifting applies the method to the PushT manipulation benchmark on top of the Diffusion Policy codebase. It is mainly useful as a practical reproduction or starting point for studying drifting-based generative policies in a familiar robot imitation-learning setup.",
     "published": "2026-02-11T18:52:29Z",
     "updated": "2026-03-25T03:59:23Z",
     "authors": [
@@ -7035,7 +7061,9 @@
       ],
       "open_issues": 2,
       "license": "MIT",
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "Unofficial implementation of \"Generative Modeling via Drifting\" on PushT, built on Diffusion Policy",
+      "summary_kind": "llm"
     },
     "tags": [
       "#IL",
@@ -7060,7 +7088,7 @@
     "source": "arxiv",
     "title": "Propagating Unsafe Actions in LLM Controlled Multi-Robot Collaboration via Single Robot Compromise",
     "url": "http://arxiv.org/abs/2605.15641v1",
-    "summary": "Large language models (LLMs) are increasingly used as general planners in embodied intelligence, enabling high level coordination and low level task planning for both single robot and multi-robot collaboration.",
+    "summary": "LLM-controlled multi-robot teams are examined through a security lens: compromising a single robot can let unsafe actions propagate through the collaboration process. The work focuses on how high-level language-model planning and inter-robot coordination create a pathway for one corrupted agent to influence the behavior of otherwise uncompromised robots.",
     "published": "2026-05-15T05:45:52+00:00",
     "updated": "2026-05-15T05:45:52+00:00",
     "authors": [
@@ -7077,7 +7105,9 @@
       "primary_category": "cs.RO",
       "pdf_url": "https://arxiv.org/pdf/2605.15641v1",
       "comment": "Accepted by the 35th International Joint Conference on Artificial Intelligence (IJCAI 2026). 9 pages, 4 figures, 3 tables",
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "Large language models (LLMs) are increasingly used as general planners in embodied intelligence, enabling high level coordination and low level task planning for both single robot and multi-robot collaboration.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -7101,7 +7131,7 @@
     "source": "github",
     "title": "jgillick/genesis-forge",
     "url": "https://github.com/jgillick/genesis-forge",
-    "summary": "A modular robot training frameworks for Genesis inspired by Isaac Lab and Gymnasium",
+    "summary": "Genesis Forge is a modular training setup for building robot learning environments on top of Genesis, with design cues from Isaac Lab and Gymnasium. It is meant to make Genesis-based robot training more structured and reusable, likely by giving researchers familiar environment abstractions for defining tasks, running simulations, and iterating on policies.",
     "published": "2025-09-03T07:17:57Z",
     "updated": "2026-04-28T06:14:54Z",
     "authors": [
@@ -7118,7 +7148,9 @@
       ],
       "open_issues": 9,
       "license": "Apache-2.0",
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "A modular robot training frameworks for Genesis inspired by Isaac Lab and Gymnasium",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -7142,7 +7174,7 @@
     "source": "arxiv",
     "title": "Hand-in-the-Loop: Improving Dexterous VLA via Seamless Interventional Correction",
     "url": "http://arxiv.org/abs/2605.15157v1",
-    "summary": "Vision-Language-Action (VLA) models are prone to compounding errors in dexterous manipulation, where high-dimensional action spaces and contact-rich dynamics amplify small policy deviations over long horizons.",
+    "summary": "Hand-in-the-Loop targets the compounding-error problem in dexterous vision-language-action policies by letting a human intervene with seamless corrections during manipulation, rather than treating policy execution as a fixed open-loop rollout. The interesting piece is the corrective feedback loop: small hand-guided interventions can keep contact-rich, high-dimensional manipulation trajectories from drifting, giving the VLA model a practical way to recover over long horizons.",
     "published": "2026-05-14T17:51:40+00:00",
     "updated": "2026-05-14T17:51:40+00:00",
     "authors": [
@@ -7163,7 +7195,9 @@
       "primary_category": "cs.RO",
       "pdf_url": "https://arxiv.org/pdf/2605.15157v1",
       "comment": null,
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "Vision-Language-Action (VLA) models are prone to compounding errors in dexterous manipulation, where high-dimensional action spaces and contact-rich dynamics amplify small policy deviations over long horizons.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -7562,7 +7596,7 @@
     "source": "github",
     "title": "lasgroup/safe-learning",
     "url": "https://github.com/lasgroup/safe-learning",
-    "summary": "A collection of algorithms and experiment tools for safe sim to real transfer in robotics.",
+    "summary": "lasgroup/safe-learning collects algorithms and experiment tooling for studying safe sim-to-real transfer in robotics. It is meant as a practical codebase for running and comparing safe learning methods, where the emphasis is on moving policies from simulation toward real robotic systems while managing safety constraints during learning and deployment.",
     "published": "2024-07-02T09:04:44Z",
     "updated": "2026-02-23T09:43:01Z",
     "authors": [
@@ -7577,7 +7611,9 @@
       ],
       "open_issues": 0,
       "license": "MIT",
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "A collection of algorithms and experiment tools for safe sim to real transfer in robotics.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -7601,7 +7637,7 @@
     "source": "arxiv",
     "title": "Adaptive Outer-Loop Control of Quadrotors via Reinforcement Learning",
     "url": "http://arxiv.org/abs/2605.16015v1",
-    "summary": "Deep Reinforcement Learning (DRL) for quadrotor flight control typically relies on Domain Randomization (DR) for sim-to-real transfer, resulting in overly conservative policies that struggle with dynamic disturbances. To overcome this, we propose a novel adaptive control architecture that actively perceives and reacts to instantaneous perturbations. First, we train an optimal outer-loop policy, then replace its reliance on ground-truth disturbance data with a Residual Dynamics Predictor (RDP). The RDP estimates the external forces and moments acting on the aircraft in flight online using only the history of states and control actions. For seamless hardware transfer, we introduce a data-efficient linear calibration bridge and an online thrust correction mechanism that align the simulated latent space with reality using mere seconds of flight data. Real-world validations on a Crazyflie micro-quadrotor demonstrate that our adaptive controller significantly outperforms baselines, maintaining precise trajectory tracking under severe uncertainties including mass variations, asymmetric payloads, and dynamic slung loads",
+    "summary": "Adaptive Outer-Loop Control of Quadrotors via Reinforcement Learning replaces disturbance-aware DRL policies with a Residual Dynamics Predictor that estimates external forces and moments online from recent state and control histories. A lightweight linear calibration bridge plus online thrust correction lets the sim-trained controller transfer to a Crazyflie with only seconds of real flight data, where it tracks trajectories more accurately than baselines under mass changes, asymmetric payloads, and dynamic slung loads.",
     "published": "2026-05-15T14:49:58+00:00",
     "updated": "2026-05-15T14:49:58+00:00",
     "authors": [
@@ -7619,7 +7655,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.16015v1",
       "comment": null,
       "first_seen": "2026-05-18",
-      "thumbnail_path": "thumbnails/arxiv/2605.16015.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.16015.jpg",
+      "full_text": "Deep Reinforcement Learning (DRL) for quadrotor flight control typically relies on Domain Randomization (DR) for sim-to-real transfer, resulting in overly conservative policies that struggle with dynamic disturbances. To overcome this, we propose a novel adaptive control architecture that actively perceives and reacts to instantaneous perturbations. First, we train an optimal outer-loop policy, then replace its reliance on ground-truth disturbance data with a Residual Dynamics Predictor (RDP). The RDP estimates the external forces and moments acting on the aircraft in flight online using only the history of states and control actions. For seamless hardware transfer, we introduce a data-efficient linear calibration bridge and an online thrust correction mechanism that align the simulated latent space with reality using mere seconds of flight data. Real-world validations on a Crazyflie micro-quadrotor demonstrate that our adaptive controller significantly outperforms baselines, maintaining precise trajectory tracking under severe uncertainties including mass variations, asymmetric payloads, and dynamic slung loads",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -8485,7 +8523,7 @@
     "source": "arxiv",
     "title": "DexJoCo: A Benchmark and Toolkit for Task-Oriented Dexterous Manipulation on MuJoCo",
     "url": "http://arxiv.org/abs/2605.16257v1",
-    "summary": "Achieving human-level manipulation requires dexterous robotic hands capable of complex object interactions. Advancing such capabilities further demands standardized benchmarks for systematic evaluation.",
+    "summary": "DexJoCo is a MuJoCo-based benchmark and toolkit for evaluating task-oriented dexterous manipulation with robotic hands. It focuses on standardized, systematic testing of complex object interactions, giving researchers a common environment for comparing progress toward more human-level manipulation skills.",
     "published": "2026-05-15T17:59:51+00:00",
     "updated": "2026-05-15T17:59:51+00:00",
     "authors": [
@@ -8512,7 +8550,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.16257v1",
       "comment": "8 pages, 6 figures, project page is available at: https://dexjoco.github.io",
       "first_seen": "2026-05-18",
-      "thumbnail_path": "thumbnails/arxiv/2605.16257.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.16257.jpg",
+      "full_text": "Achieving human-level manipulation requires dexterous robotic hands capable of complex object interactions. Advancing such capabilities further demands standardized benchmarks for systematic evaluation.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Manipulator"
@@ -9088,7 +9128,7 @@
     "source": "arxiv",
     "title": "Learning Bilevel Policies over Symbolic World Models for Long-Horizon Planning",
     "url": "http://arxiv.org/abs/2605.15975v1",
-    "summary": "We tackle the challenge of building embodied AI agents that can reliably solve long-horizon planning problems. Imitation learning from demonstrations has shown itself to be effective in training robots to solve a diversity of complex tasks requiring fine motor control and manipulation over low-level (LL), continuous environments. Yet, it remains a difficult endeavour to generate long-horizon plans from imitation learning alone. In contrast, high-level (HL), symbolic abstractions facilitate efficient and interpretable long-horizon planning. We propose to combine the strengths of LL imitation learning for manipulation and control, and HL symbolic abstractions for long-horizon planning. We realise this idea via \\emph{bilevel policies} of the form $(π^{\\mathrm{hl}}, π^{\\mathrm{ll}})$, consisting of a neural policy $π^{\\mathrm{ll}}$ learned from LL demonstrations, and an HL symbolic policy $π^{\\mathrm{hl}}$ that is constructed from symbolic abstractions of the LL demonstrations combined with inductive generalisation. We implement these ideas in the BISON system. Experiments on extended MetaWorld benchmarks demonstrate that BISON generalises to long horizons and problems with greater numbers of objects than those solved by VLA and end-to-end methods, and is more time and memory efficient in training and inference. Notably, when ignoring LL execution, BISON's HL policies can solve HL problems with 10,000 relevant objects in under a minute. Project page: https://dillonzchen.github.io/bison",
+    "summary": "BISON learns a bilevel robot policy that pairs a low-level neural imitation policy for continuous manipulation with a high-level symbolic policy distilled from demonstrations and generalized inductively for long-horizon planning. On extended MetaWorld tasks, it handles longer horizons and more objects than VLA and end-to-end baselines while using less time and memory, and its symbolic planner alone can solve high-level problems with 10,000 relevant objects in under a minute.",
     "published": "2026-05-15T14:08:44+00:00",
     "updated": "2026-05-15T14:08:44+00:00",
     "authors": [
@@ -9106,7 +9146,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.15975v1",
       "comment": null,
       "first_seen": "2026-05-18",
-      "thumbnail_path": "thumbnails/arxiv/2605.15975.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.15975.jpg",
+      "full_text": "We tackle the challenge of building embodied AI agents that can reliably solve long-horizon planning problems. Imitation learning from demonstrations has shown itself to be effective in training robots to solve a diversity of complex tasks requiring fine motor control and manipulation over low-level (LL), continuous environments. Yet, it remains a difficult endeavour to generate long-horizon plans from imitation learning alone. In contrast, high-level (HL), symbolic abstractions facilitate efficient and interpretable long-horizon planning. We propose to combine the strengths of LL imitation learning for manipulation and control, and HL symbolic abstractions for long-horizon planning. We realise this idea via \\emph{bilevel policies} of the form $(π^{\\mathrm{hl}}, π^{\\mathrm{ll}})$, consisting of a neural policy $π^{\\mathrm{ll}}$ learned from LL demonstrations, and an HL symbolic policy $π^{\\mathrm{hl}}$ that is constructed from symbolic abstractions of the LL demonstrations combined with inductive generalisation. We implement these ideas in the BISON system. Experiments on extended MetaWorld benchmarks demonstrate that BISON generalises to long horizons and problems with greater numbers of objects than those solved by VLA and end-to-end methods, and is more time and memory efficient in training and inference. Notably, when ignoring LL execution, BISON's HL policies can solve HL problems with 10,000 relevant objects in under a minute. Project page: https://dillonzchen.github.io/bison",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
