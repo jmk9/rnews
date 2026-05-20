@@ -75,6 +75,73 @@ class AbstractTruncationSummarizer:
         return result if result else (text[: self.max_chars].rstrip() + "…")
 
 
+class OpenAISummarizer:
+    """LLM-backed summarizer via the OpenAI (a.k.a. Codex) API.
+
+    Uses the `openai` SDK's chat-completions endpoint. `base_url` is optional —
+    set it for any OpenAI-compatible endpoint. Falls back to truncation on any
+    error or missing key.
+    """
+
+    def __init__(
+        self,
+        model: str = "gpt-4o-mini",
+        max_tokens: int = 220,
+        base_url: str | None = None,
+        fallback: "AbstractTruncationSummarizer | None" = None,
+    ) -> None:
+        self.model = model
+        self.max_tokens = max_tokens
+        self.base_url = base_url or None
+        self._client = None  # lazy
+        self._fallback = fallback or AbstractTruncationSummarizer(max_chars=360)
+
+    def _client_or_none(self):
+        if self._client is not None:
+            return self._client
+        if not os.environ.get("OPENAI_API_KEY"):
+            return None
+        try:
+            import openai  # type: ignore
+        except ImportError:
+            log.warning("openai SDK not installed; install with `pip install openai`")
+            return None
+        try:
+            kwargs = {}
+            if self.base_url:
+                kwargs["base_url"] = self.base_url
+            self._client = openai.OpenAI(**kwargs)
+            return self._client
+        except Exception as exc:
+            log.warning("openai client init failed: %s", exc)
+            return None
+
+    def summarize(self, text: str, *, source: str = "", title: str = "") -> str:
+        if not text or not text.strip():
+            return ""
+        if len(text.strip()) < 80:
+            return text.strip()
+        client = self._client_or_none()
+        if client is None:
+            return self._fallback.summarize(text)
+        prompt = _SUMMARY_PROMPT.format(
+            source=source or "unknown",
+            title=title or "(no title)",
+            text=text[:6000],
+        )
+        try:
+            resp = client.chat.completions.create(
+                model=self.model,
+                max_tokens=self.max_tokens,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            out = (resp.choices[0].message.content or "").strip()
+            return out or self._fallback.summarize(text)
+        except Exception as exc:
+            log.warning("OpenAISummarizer call failed (%s); falling back", exc)
+            return self._fallback.summarize(text)
+
+
 class ClaudeSummarizer:
     """LLM-backed summarizer. Falls back to truncation on any API hiccup."""
 
@@ -136,6 +203,33 @@ class ClaudeSummarizer:
         except Exception as exc:
             log.warning("ClaudeSummarizer call failed (%s); falling back", exc)
             return self._fallback.summarize(text)
+
+
+def make_summarizer(cfg: dict) -> Summarizer:
+    """Build a summarizer from config. Swapping providers is a one-line config
+    change. `provider: auto` picks whichever API key is present, preferring
+    OpenAI, then Claude, then the no-cost truncation fallback.
+    """
+    scfg = (cfg or {}).get("summarizer", {}) or {}
+    provider = str(scfg.get("provider", "auto")).lower()
+
+    if provider == "auto":
+        if os.environ.get("OPENAI_API_KEY"):
+            provider = "openai"
+        elif os.environ.get("ANTHROPIC_API_KEY"):
+            provider = "claude"
+        else:
+            provider = "truncation"
+
+    if provider == "openai":
+        return OpenAISummarizer(
+            model=scfg.get("openai_model", "gpt-4o-mini"),
+            base_url=scfg.get("openai_base_url") or None,
+        )
+    if provider == "claude":
+        return ClaudeSummarizer(model=scfg.get("claude_model", "claude-haiku-4-5-20251001"))
+    # truncation: keep full text essentially intact (cards render it as-is)
+    return AbstractTruncationSummarizer(max_chars=int(scfg.get("truncation_max_chars", 10000)))
 
 
 def summarize_items(items: list[Item], summarizer: Summarizer) -> list[Item]:

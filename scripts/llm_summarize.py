@@ -25,7 +25,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from processors.summarizer import ClaudeSummarizer  # noqa: E402
+import yaml  # noqa: E402
+
+from processors.summarizer import make_summarizer  # noqa: E402
 
 logging.basicConfig(
     level=logging.INFO,
@@ -44,8 +46,9 @@ def main() -> int:
                    help="Re-summarize items that already have an LLM summary.")
     args = p.parse_args()
 
-    if not os.environ.get("ANTHROPIC_API_KEY"):
-        log.error("ANTHROPIC_API_KEY not set; aborting.")
+    cfg = yaml.safe_load(open("config.yaml")) or {}
+    if not (os.environ.get("OPENAI_API_KEY") or os.environ.get("ANTHROPIC_API_KEY")):
+        log.error("No OPENAI_API_KEY or ANTHROPIC_API_KEY set; aborting.")
         return 1
 
     # Load every processed snapshot and dedupe by id so we don't pay for the
@@ -70,7 +73,8 @@ def main() -> int:
         candidates = candidates[: args.max_items]
 
     log.info("Will summarize %d items", len(candidates))
-    summ = ClaudeSummarizer()
+    summ = make_summarizer(cfg)
+    log.info("Using summarizer: %s", type(summ).__name__)
     updates: dict[str, dict] = {}
     for i, it in enumerate(candidates, 1):
         original = (it.get("extra") or {}).get("full_text") or it.get("summary") or ""

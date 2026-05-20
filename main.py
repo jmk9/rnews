@@ -17,7 +17,7 @@ import yaml
 from collectors import arxiv_collector, github_collector, news_collector
 from processors.deduplicator import deduplicate
 from processors.ranker import rank_items
-from processors.summarizer import AbstractTruncationSummarizer, ClaudeSummarizer, summarize_items
+from processors.summarizer import make_summarizer, summarize_items
 from processors.tagger import tag_items
 from site_builder import build_site
 from utils.io import Item, ensure_dir, load_json, save_json, save_text
@@ -242,19 +242,11 @@ def main(argv: list[str] | None = None) -> int:
     seen = annotate_first_seen(items, cfg)
     log.info("Seen-state tracks %d items total", len(seen))
 
-    # Pick the summarizer. ClaudeSummarizer produces tight 2-3 sentence
-    # summaries (the actual product promise) when ANTHROPIC_API_KEY is
-    # available; otherwise we fall back to keeping the source text verbatim
-    # in extra.full_text and a very long truncation so daily collection still
-    # works without an API key. Once the user adds the key (locally + as a
-    # GitHub Actions secret), every run produces real LLM summaries.
-    import os
-    if os.environ.get("ANTHROPIC_API_KEY"):
-        summarizer = ClaudeSummarizer()
-        log.info("summarizer: Claude API (ANTHROPIC_API_KEY detected)")
-    else:
-        summarizer = AbstractTruncationSummarizer(max_chars=10000)
-        log.info("summarizer: AbstractTruncationSummarizer fallback (no API key)")
+    # Summarizer is config-driven (summarizer.provider). Falls back to
+    # truncation if the chosen provider's key/SDK is missing, so the pipeline
+    # never breaks. Original source text is preserved in extra.full_text.
+    summarizer = make_summarizer(cfg)
+    log.info("summarizer: %s", type(summarizer).__name__)
     items = summarize_items(items, summarizer)
 
     if args.mode == "daily":

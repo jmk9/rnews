@@ -227,6 +227,20 @@ report:
   top_repos: 10
   summary_max_chars: 320
 
+# Card summaries. Swap provider here — one line — to move between APIs.
+#   provider: openai   -> uses OPENAI_API_KEY (a.k.a. Codex). Current choice.
+#   provider: claude   -> uses ANTHROPIC_API_KEY. Switch back to this later.
+#   provider: truncation -> no API, keeps source text (free fallback).
+#   provider: auto     -> pick whichever API key is present.
+# If the chosen provider's key/SDK is missing at runtime, it falls back to
+# truncation automatically, so the pipeline never breaks.
+summarizer:
+  provider: openai
+  openai_model: gpt-4o-mini       # set to whatever model your account exposes
+  openai_base_url: ""             # optional: OpenAI-compatible endpoint
+  claude_model: claude-haiku-4-5-20251001
+  truncation_max_chars: 10000
+
 # First-seen tracking: lets daily mode highlight only items new since the last run.
 state:
   seen_path: data/state/seen.json

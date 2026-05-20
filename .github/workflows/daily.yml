@@ -49,9 +49,11 @@ jobs:
         env:
           # Built-in token; gives ~5000 req/hour search + REST.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # When set as a repo secret, the pipeline produces LLM summaries
-          # instead of the truncation fallback. Optional — without it the
-          # site still works, summaries are just less polished.
+          # When set as repo secrets, the pipeline produces LLM summaries
+          # instead of the truncation fallback. Both optional — the active one
+          # is chosen by summarizer.provider in config.yaml. Without any key,
+          # the site still works (truncation summaries).
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         # --no-site so we can interleave thumbnail extraction before building.
         # The next two steps fold the site build back in.
