@@ -34,6 +34,7 @@ body {
   color: var(--fg);
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;   /* safety net: never scroll sideways on mobile */
 }
 
 .site-header, main, .site-footer {
@@ -179,13 +180,15 @@ body {
   font-size: 1.04rem; font-weight: 600;
   color: var(--fg); text-decoration: none;
   flex: 1 1 auto; min-width: 0;
+  overflow-wrap: anywhere; word-break: break-word;  /* break long repo names / hyphen chains */
 }
 .item-title:hover { color: var(--accent); }
-.item-meta { font-size: .8rem; color: var(--muted); margin-bottom: .35rem; }
+.item-meta { font-size: .8rem; color: var(--muted); margin-bottom: .35rem; overflow-wrap: anywhere; }
 .item-summary {
   margin: .45rem 0 0;
   color: var(--fg);
   font-size: .94rem;
+  overflow-wrap: anywhere; word-break: break-word;  /* break long URLs / tokens */
   /* Summaries are LLM-compressed to ~2-3 sentences so we show them in full —
      the card IS the destination. Click the title for the original source. */
 }
