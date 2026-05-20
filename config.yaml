@@ -121,20 +121,18 @@ tags:
     - "diffusion-based policy"
     - "interactive imitation"
   "#VLA":
+    # In robotics, "foundation model" predominantly means a VLA / generalist
+    # policy (RT-2, OpenVLA, π0, GR00T, Octo), so they share one tag. (World
+    # models are the exception but we don't tag those.)
     - vla                      # also catches openvla / smolvla / cogvla
     - vision-language-action
     - "vision language action"
     - openvla
-    # NOTE: "foundation model" lives in #FoundationModel now (not every
-    # foundation model is a VLA — e.g. Genesis AI's GENE).
-  "#FoundationModel":
     - foundation model
     - "robot foundation model"
     - "robotics foundation model"
     - "generalist policy"
     - "generalist robot"
-    - "pretrained policy"
-    - "pre-trained policy"
     - "기반 모델"
     - "파운데이션 모델"
 
@@ -212,7 +210,7 @@ tags:
 tag_groups:
   - label: Method
     filter_key: method
-    tags: ["#RL", "#IL", "#VLA", "#FoundationModel"]
+    tags: ["#RL", "#IL", "#VLA"]
   - label: Platform
     filter_key: platform
     # #Other is the platform catch-all — items matching none of the 4 above.
