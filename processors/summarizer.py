@@ -318,15 +318,24 @@ def make_summarizer(cfg: dict) -> Summarizer:
 
 
 def summarize_items(items: list[Item], summarizer: Summarizer) -> list[Item]:
+    is_llm = not isinstance(summarizer, AbstractTruncationSummarizer)
     for it in items:
+        extra = dict(it.extra or {})
+        # Don't downgrade an existing model summary. A CI run (truncation-only,
+        # no codex binary) must not clobber a summary we produced locally with
+        # codex/OpenAI/Claude.
+        if extra.get("summary_kind") == "llm":
+            it.extra = extra
+            continue
         # Keep the original around so we can re-summarize later with a better
         # prompt / model without losing the raw source text.
-        if "full_text" not in (it.extra or {}):
-            it.extra = dict(it.extra or {})
-            it.extra["full_text"] = it.summary
+        if "full_text" not in extra:
+            extra["full_text"] = it.summary
         it.summary = summarizer.summarize(
-            it.extra.get("full_text") or it.summary,
+            extra.get("full_text") or it.summary,
             source=it.source,
             title=it.title,
         )
+        extra["summary_kind"] = "llm" if is_llm else "truncation"
+        it.extra = extra
     return items

@@ -275,7 +275,21 @@ def main(argv: list[str] | None = None) -> int:
             if iid:
                 merged[iid] = it
     for it in items:
-        merged[it.id] = it.to_dict()
+        new_d = it.to_dict()
+        prior_d = merged.get(it.id)
+        # If this run produced a truncation summary but a prior snapshot already
+        # has a model (codex/LLM) summary for the same item, keep the good one.
+        if prior_d:
+            prior_extra = prior_d.get("extra") or {}
+            new_extra = new_d.get("extra") or {}
+            if prior_extra.get("summary_kind") == "llm" and new_extra.get("summary_kind") != "llm":
+                new_d["summary"] = prior_d.get("summary", new_d.get("summary"))
+                new_extra = dict(new_extra)
+                new_extra["summary_kind"] = "llm"
+                if prior_extra.get("full_text"):
+                    new_extra["full_text"] = prior_extra["full_text"]
+                new_d["extra"] = new_extra
+        merged[it.id] = new_d
     save_json(processed_path, list(merged.values()))
     log.info("Wrote %s (%d items, %d merged from prior same-day snapshot) and %s",
              processed_path, len(merged), len(merged) - len(items) if len(merged) > len(items) else 0,

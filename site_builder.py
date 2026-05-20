@@ -99,9 +99,22 @@ def _load_all_processed(processed_dir: Path) -> list[dict[str, Any]]:
                 extra["first_seen"] = date_from_name
                 it["extra"] = extra
             existing = by_id.get(iid)
-            if existing is None or it.get("score", 0) >= existing.get("score", 0):
+            if existing is None or _prefer(it, existing):
                 by_id[iid] = it
     return list(by_id.values())
+
+
+def _prefer(candidate: dict[str, Any], current: dict[str, Any]) -> bool:
+    """Decide whether `candidate` should replace `current` when deduping the
+    same item across snapshots. An LLM summary always beats a truncation one
+    (so a CI run that re-summarized with truncation can't shadow a codex
+    summary from an earlier snapshot); otherwise higher score wins."""
+    def rank(it: dict[str, Any]) -> int:
+        return 1 if (it.get("extra") or {}).get("summary_kind") == "llm" else 0
+    cr, ur = rank(candidate), rank(current)
+    if cr != ur:
+        return cr > ur
+    return float(candidate.get("score") or 0) >= float(current.get("score") or 0)
 
 
 def _rfc822(iso_dt: str) -> str:
