@@ -126,13 +126,18 @@
   });
 
   // ---- Expand / collapse summary on each card ----------------------------
-  // Delegated handler so we don't bind 1500 listeners on init.
-  document.addEventListener("click", (e) => {
-    const btn = e.target.closest(".expand-btn");
-    if (!btn) return;
-    const item = btn.closest(".item");
-    if (!item) return;
-    const expanded = item.classList.toggle("expanded");
-    btn.textContent = expanded ? "Show less ▲" : "Read more ▼";
+  // Direct binding (not delegation) so a stray ancestor click handler can't
+  // swallow the event. 1500 listeners is fine in modern browsers and we get
+  // unambiguous behaviour.
+  document.querySelectorAll(".expand-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const item = btn.closest(".item");
+      if (!item) return;
+      const expanded = item.classList.toggle("expanded");
+      btn.textContent = expanded ? "Hide ▲" : "Summary ▼";
+      btn.setAttribute("aria-expanded", expanded ? "true" : "false");
+    });
   });
 })();

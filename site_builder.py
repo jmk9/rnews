@@ -241,6 +241,10 @@ def build_site(cfg: dict[str, Any]) -> Path:
         "url": site_cfg.get("url", ""),
     }
     generated = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    # Cache-bust query string for static assets (styles.css, filters.js). Each
+    # build gets a fresh value, so browsers refetch instead of serving a stale
+    # cached copy when we ship a UI change.
+    generated_ts = datetime.now(timezone.utc).strftime("%Y%m%d%H%M%S")
 
     index_html = env.get_template("index.html.j2").render(
         items_with_code=index_with_code,
@@ -251,6 +255,7 @@ def build_site(cfg: dict[str, Any]) -> Path:
         grouped_tag_counts=grouped_tag_counts,
         archive_days=days_sorted,
         generated=generated,
+        generated_ts=generated_ts,
         site=site_ctx,
         url_root="",
     )
@@ -271,7 +276,7 @@ def build_site(cfg: dict[str, Any]) -> Path:
             items_news=day_news,
             items_papers_only=day_papers_only,
             items=day_all,
-            date=d, generated=generated, site=site_ctx,
+            date=d, generated=generated, generated_ts=generated_ts, site=site_ctx,
             url_root="../", prev_day=prev_day, next_day=next_day,
         )
         (site_dir / "daily" / f"{d}.html").write_text(html, encoding="utf-8")

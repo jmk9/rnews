@@ -131,14 +131,13 @@ body {
 }
 .item-body { flex: 1 1 auto; min-width: 0; }
 .item-thumb {
-  flex: 0 0 96px;
-  width: 96px; height: 96px;
+  flex: 0 0 180px;
+  width: 180px; height: 112px;     /* 16:10 — wider hero shape, matches paper figure / repo card */
   object-fit: cover;
   border-radius: 8px;
   border: 1px solid var(--border);
   background: var(--bg);
 }
-.item-thumb-avatar { object-fit: contain; background: var(--bg); padding: 4px; }
 .item-thumb-placeholder {
   display: flex; align-items: center; justify-content: center;
   font-weight: 700; text-transform: uppercase;
@@ -147,8 +146,14 @@ body {
 }
 .item-thumb-arxiv { background: var(--arxiv); }
 .item-thumb-news { background: var(--news); }
-@media (max-width: 600px) {
-  .item-thumb { flex-basis: 64px; width: 64px; height: 64px; }
+.item-thumb-github { background: var(--github); }
+@media (max-width: 700px) {
+  .item-thumb { flex-basis: 120px; width: 120px; height: 76px; }
+}
+@media (max-width: 480px) {
+  /* Stack the thumb on top on phones — full width hero */
+  .item { flex-direction: column; }
+  .item-thumb { flex-basis: auto; width: 100%; height: 160px; }
 }
 .item[data-priority="must_read"] { border-left-color: var(--must); }
 .item[data-priority="save_for_later"] { border-left-color: var(--save); }
