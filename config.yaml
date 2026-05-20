@@ -166,10 +166,8 @@ tag_groups:
     tags: ["#RL", "#IL", "#VLA"]
   - label: Platform
     filter_key: platform
-    tags: ["#Manipulator", "#Bimanual", "#MobileManipulator", "#Humanoid"]
-  - label: Other
-    filter_key: other
-    tags: ["#Other"]   # catch-all: matched no Method and no Platform tag
+    # #Other is the platform catch-all — items matching none of the 4 above.
+    tags: ["#Manipulator", "#Bimanual", "#MobileManipulator", "#Humanoid", "#Other"]
 
 sources:
   arxiv:

@@ -22,14 +22,15 @@ def tag_items(items: list[Item], cfg: dict[str, Any]) -> list[Item]:
     # Pre-lowercase patterns for cheaper repeated matching.
     compiled = {tag: [p.lower() for p in patterns] for tag, patterns in tag_map.items()}
 
-    # Tags that count as "categorized" = everything declared in tag_groups
-    # except the catch-all itself. An item matching none of these gets #Other,
-    # so the user can filter for work that fits neither Method nor Platform.
-    categorized: set[str] = set()
+    # #Other is the catch-all for whichever group lists it (Platform): an item
+    # gets #Other when it matches none of that group's *other* tags. So #Other
+    # = "platform doesn't fit the named ones", independent of Method.
+    fallback_siblings: set[str] = set()
     for g in cfg.get("tag_groups") or []:
-        for t in g.get("tags") or []:
-            if t != OTHER_TAG:
-                categorized.add(t)
+        gtags = g.get("tags") or []
+        if OTHER_TAG in gtags:
+            fallback_siblings = {t for t in gtags if t != OTHER_TAG}
+            break
 
     for it in items:
         text = _haystack(it)
@@ -37,7 +38,7 @@ def tag_items(items: list[Item], cfg: dict[str, Any]) -> list[Item]:
         for tag, patterns in compiled.items():
             if any(p in text for p in patterns):
                 tags.append(tag)
-        if categorized and not (set(tags) & categorized):
+        if fallback_siblings and not (set(tags) & fallback_siblings):
             tags.append(OTHER_TAG)
         it.tags = tags
     return items
