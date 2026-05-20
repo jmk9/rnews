@@ -26,7 +26,7 @@
       <strong>{{ group_label }}</strong>
       <button class="chip active" data-filter="{{ group_filter }}" data-value="">All</button>
       {% for tag, count in group_tags %}
-      <button class="chip" data-filter="{{ group_filter }}" data-value="{{ tag }}">{{ tag }} <span class="count">{{ count }}</span></button>
+      <button class="chip" data-filter="{{ group_filter }}" data-value="{{ tag }}">{{ tag }}</button>
       {% endfor %}
     </div>
     {% endfor %}
@@ -35,7 +35,7 @@
       <strong>Tag</strong>
       <button class="chip active" data-filter="tag" data-value="">All</button>
       {% for tag, count in top_tags %}
-      <button class="chip" data-filter="tag" data-value="{{ tag }}">{{ tag }} <span class="count">{{ count }}</span></button>
+      <button class="chip" data-filter="tag" data-value="{{ tag }}">{{ tag }}</button>
       {% endfor %}
     </div>
   {% endif %}
