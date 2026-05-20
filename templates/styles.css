@@ -174,31 +174,9 @@ body {
   margin: .45rem 0 0;
   color: var(--fg);
   font-size: .94rem;
-  /* Default: clamp to ~3 lines so cards stay scannable. Expand button removes
-     the clamp so the full abstract / description is visible inline — that's
-     the whole point of RNEWS over a vanilla link list. */
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  /* Summaries are LLM-compressed to ~2-3 sentences so we show them in full —
+     the card IS the destination. Click the title for the original source. */
 }
-.item.expanded .item-summary {
-  -webkit-line-clamp: unset;
-  line-clamp: unset;
-  overflow: visible;
-}
-.expand-btn {
-  margin-top: .45rem;
-  background: transparent;
-  border: none;
-  color: var(--accent);
-  font-size: .82rem;
-  cursor: pointer;
-  font-family: inherit;
-  padding: .15rem 0;
-}
-.expand-btn:hover { text-decoration: underline; }
 
 .badge {
   font-size: .66rem;

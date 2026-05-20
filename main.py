@@ -17,7 +17,7 @@ import yaml
 from collectors import arxiv_collector, github_collector, news_collector
 from processors.deduplicator import deduplicate
 from processors.ranker import rank_items
-from processors.summarizer import AbstractTruncationSummarizer, summarize_items
+from processors.summarizer import AbstractTruncationSummarizer, ClaudeSummarizer, summarize_items
 from processors.tagger import tag_items
 from site_builder import build_site
 from utils.io import Item, ensure_dir, load_json, save_json, save_text
@@ -242,13 +242,20 @@ def main(argv: list[str] | None = None) -> int:
     seen = annotate_first_seen(items, cfg)
     log.info("Seen-state tracks %d items total", len(seen))
 
-    # Don't truncate summaries. Cards CSS-clamp to 3 lines by default and the
-    # expand button reveals the full text inline — that's the "read here, not
-    # in 5 other tabs" promise of RNEWS. Keeping the full text in JSON also
-    # makes the data file richer for any downstream analysis. The summarizer
-    # interface is preserved (we still pass through) in case we switch to an
-    # LLM summarizer later — see SELF_FEEDBACK P1 LLM summarizer.
-    items = summarize_items(items, AbstractTruncationSummarizer(max_chars=10000))
+    # Pick the summarizer. ClaudeSummarizer produces tight 2-3 sentence
+    # summaries (the actual product promise) when ANTHROPIC_API_KEY is
+    # available; otherwise we fall back to keeping the source text verbatim
+    # in extra.full_text and a very long truncation so daily collection still
+    # works without an API key. Once the user adds the key (locally + as a
+    # GitHub Actions secret), every run produces real LLM summaries.
+    import os
+    if os.environ.get("ANTHROPIC_API_KEY"):
+        summarizer = ClaudeSummarizer()
+        log.info("summarizer: Claude API (ANTHROPIC_API_KEY detected)")
+    else:
+        summarizer = AbstractTruncationSummarizer(max_chars=10000)
+        log.info("summarizer: AbstractTruncationSummarizer fallback (no API key)")
+    items = summarize_items(items, summarizer)
 
     if args.mode == "daily":
         items_for_report = [it for it in items if it.extra.get("first_seen") == today_str]

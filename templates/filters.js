@@ -125,32 +125,4 @@
     });
   });
 
-  // ---- Expand / collapse summary on each card ----------------------------
-  // Hide the Summary button on cards whose text already fits inside the
-  // 3-line clamp. Otherwise the user would click "Summary" and see nothing
-  // change — the text was already fully visible. Compare `scrollHeight`
-  // (full content height) to `clientHeight` (clipped height): equal means
-  // nothing's hidden, so the button is useless.
-  document.querySelectorAll(".item").forEach((item) => {
-    const sum = item.querySelector(".item-summary");
-    const btn = item.querySelector(".expand-btn");
-    if (!sum || !btn) return;
-    if (sum.scrollHeight <= sum.clientHeight + 1) {  // +1 for sub-pixel rounding
-      btn.style.display = "none";
-    }
-  });
-
-  // Direct binding (not delegation) so a stray ancestor click handler can't
-  // swallow the event. ~1500 listeners is fine in modern browsers.
-  document.querySelectorAll(".expand-btn").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      const item = btn.closest(".item");
-      if (!item) return;
-      const expanded = item.classList.toggle("expanded");
-      btn.textContent = expanded ? "Hide ▲" : "Summary ▼";
-      btn.setAttribute("aria-expanded", expanded ? "true" : "false");
-    });
-  });
 })();
