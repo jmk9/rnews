@@ -25,6 +25,22 @@ must_match_keywords:
   - ros2
   - isaac
   - mujoco
+  # Korean keywords — let Korean-language news (로봇신문, AI타임스) pass the filter
+  - 로봇
+  - 로봇팔
+  - 휴머노이드
+  - 협동로봇
+  - 매니퓰레이터
+  - 사족보행
+  - 보행로봇
+  - 강화학습
+  - 모방학습
+  - 그리퍼
+  - 로봇손
+  - 양팔로봇
+  - 물류로봇
+  - 산업용로봇
+  - 자율주행
 
 # Research areas you care about most. Items matching these get a relevance boost.
 research_interests:
@@ -172,27 +188,40 @@ sources:
     min_stars: 10
   news:
     enabled: true
-    days_back: 14         # show items posted within the last 2 weeks
-    max_per_feed: 25      # cap per feed so a noisy outlet can't drown the rest
+    days_back: 21         # show items posted within the last 3 weeks
+    max_per_feed: 40      # cap per feed so a noisy outlet can't drown the rest
     feeds:
-      - name: "The Robot Report"
-        url: "https://www.therobotreport.com/feed/"
+      # --- robotics-focused ---
+      - name: "Robohub"
+        url: "https://robohub.org/feed/"
       - name: "IEEE Spectrum — Robotics"
-        url: "https://spectrum.ieee.org/topic/robotics/feed"
+        url: "https://spectrum.ieee.org/feeds/topic/robotics.rss"
       - name: "TechCrunch — Robotics"
         url: "https://techcrunch.com/category/robotics/feed/"
       - name: "MIT News — Robotics"
         url: "https://news.mit.edu/topic/mitrobotics-rss.xml"
-      - name: "VentureBeat — AI"
-        url: "https://venturebeat.com/category/ai/feed/"
       - name: "Robotics and Automation News"
         url: "https://roboticsandautomationnews.com/feed/"
+      # --- AI / tech (filtered by robotics keywords downstream) ---
+      - name: "The Verge — AI"
+        url: "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
+      - name: "Ars Technica"
+        url: "https://feeds.arstechnica.com/arstechnica/index"
+      - name: "Synced"
+        url: "https://syncedreview.com/feed/"
+      - name: "BAIR Blog (Berkeley AI Research)"
+        url: "https://bair.berkeley.edu/blog/feed.xml"
       - name: "NVIDIA Blog"
         url: "https://blogs.nvidia.com/feed/"
       - name: "DeepMind Blog"
         url: "https://deepmind.google/blog/rss.xml"
       - name: "Hacker News (front page, filtered downstream)"
         url: "https://hnrss.org/frontpage?points=100"
+      # --- Korean ---
+      - name: "로봇신문 (irobotnews)"
+        url: "http://www.irobotnews.com/rss/allArticle.xml"
+      - name: "AI타임스"
+        url: "https://www.aitimes.com/rss/allArticle.xml"
 
 # Weights used by ranker.compute_score().
 # Sort policy: bias toward what people actually USE and TRUST.
@@ -261,5 +290,5 @@ site:
   description: "Daily picks in robot learning — RL / IL / VLA across cobot arms, bimanual, mobile manipulators, and humanoids."
   url: ""              # If hosted, set absolute URL — used for RSS <link>.
   items_on_index: 1500  # cap for non-news items (papers + repos)
-  news_min_slots: 50   # ensure at least this many news items always visible
+  news_min_slots: 90   # ensure at least this many news items always visible
   top_tags: 16         # how many tag-filter chips to expose
