@@ -18,13 +18,22 @@ def _count_hits(text: str, phrases: list[str]) -> int:
     return sum(1 for p in phrases if p and p in text)
 
 
-def _filter_must_match(items: list[Item], must_match: list[str]) -> list[Item]:
+def _filter_must_match(
+    items: list[Item],
+    must_match: list[str],
+    exclude: list[str] | None = None,
+) -> list[Item]:
     if not must_match:
         return items
     needles = [p.lower() for p in must_match]
+    blocks = [b.lower() for b in (exclude or [])]
     kept: list[Item] = []
     for it in items:
         text = f"{it.title}\n{it.summary}".lower()
+        # Hard exclude clearly out-of-scope topics (self-driving, financial RL,
+        # image/video generation) even if they tripped a must_match keyword.
+        if blocks and any(b in text for b in blocks):
+            continue
         if any(n in text for n in needles):
             kept.append(it)
     return kept
@@ -91,7 +100,11 @@ def _assign_priority(score: float, cfg: dict[str, Any]) -> str:
 def rank_items(items: list[Item], cfg: dict[str, Any], *, filter_unrelated: bool = True) -> list[Item]:
     """Filter obviously-unrelated items, score the rest, and tag priority. Returns sorted desc."""
     if filter_unrelated:
-        items = _filter_must_match(items, cfg.get("must_match_keywords") or [])
+        items = _filter_must_match(
+            items,
+            cfg.get("must_match_keywords") or [],
+            cfg.get("exclude_keywords") or [],
+        )
 
     # Use the largest configured days_back for recency normalization so papers and
     # repos are comparable on the same time scale.

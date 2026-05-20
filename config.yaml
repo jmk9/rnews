@@ -11,7 +11,6 @@ must_match_keywords:
   - humanoid
   - quadruped
   - drone
-  - autonomous
   - reinforcement learning
   - policy learning
   - imitation learning
@@ -40,7 +39,28 @@ must_match_keywords:
   - 양팔로봇
   - 물류로봇
   - 산업용로봇
+
+# Hard-exclude clearly out-of-scope topics even if they trip a must_match
+# keyword (e.g. an RL paper that's really about finance, or a "policy" that's
+# video generation). Dropped before ranking. Substring, case-insensitive.
+exclude_keywords:
+  - self-driving
+  - "self driving"
+  - autonomous driving
+  - autonomous vehicle
   - 자율주행
+  - financial
+  - stock trading
+  - stock market
+  - portfolio
+  - algorithmic trading
+  - video generation
+  - text-to-video
+  - "text to video"
+  - image generation
+  - text-to-image
+  - "text to image"
+  - recommendation system
 
 # Research areas you care about most. Items matching these get a relevance boost.
 research_interests:
