@@ -165,7 +165,35 @@ body {
 }
 .item-title:hover { color: var(--accent); }
 .item-meta { font-size: .8rem; color: var(--muted); margin-bottom: .35rem; }
-.item-summary { margin: .45rem 0 0; color: var(--fg); font-size: .94rem; }
+.item-summary {
+  margin: .45rem 0 0;
+  color: var(--fg);
+  font-size: .94rem;
+  /* Default: clamp to ~3 lines so cards stay scannable. Expand button removes
+     the clamp so the full abstract / description is visible inline — that's
+     the whole point of RNEWS over a vanilla link list. */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.item.expanded .item-summary {
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+  overflow: visible;
+}
+.expand-btn {
+  margin-top: .45rem;
+  background: transparent;
+  border: none;
+  color: var(--accent);
+  font-size: .82rem;
+  cursor: pointer;
+  font-family: inherit;
+  padding: .15rem 0;
+}
+.expand-btn:hover { text-decoration: underline; }
 
 .badge {
   font-size: .66rem;
@@ -180,6 +208,7 @@ body {
 .badge-arxiv { background: var(--arxiv); }
 .badge-github { background: var(--github); }
 .badge-news { background: var(--news); }
+.badge-new { background: #d97706; color: #fff; }   /* freshness highlight */
 .badge-must_read { background: var(--must); }
 .badge-save_for_later { background: var(--save); }
 .badge-low_priority { background: var(--low); }

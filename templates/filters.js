@@ -2,7 +2,9 @@
   "use strict";
   // Two-dim tag filter: Method and Platform act independently and AND together.
   // E.g. method=#VLA + platform=#Manipulator -> only VLA papers on cobot arms.
-  const state = { method: "", platform: "", source: "", priority: "", time: "" };
+  // `sort` reorders within each section: "" = default (score desc), "created"
+  // = first-seen / repo-creation desc, "pushed" = last-activity desc, "stars" desc.
+  const state = { method: "", platform: "", source: "", priority: "", time: "", sort: "" };
   const items = Array.from(document.querySelectorAll(".item"));
   const counter = document.getElementById("visible-count");
   const sectionCounts = document.querySelectorAll(".section-count");
@@ -80,6 +82,25 @@
     });
   }
 
+  // ---- Sort: reorder DOM within each section -----------------------------
+  // Items carry data-score / data-created / data-published / data-stars so
+  // we can resort without hitting any data file. Default key "" uses score
+  // (the build-time order). All sorts are descending — newest / largest first.
+  function sortKeyOf(art, key) {
+    if (key === "created") return Date.parse(art.dataset.created || "") || 0;
+    if (key === "pushed") return Date.parse(art.dataset.published || "") || 0;
+    if (key === "stars") return parseInt(art.dataset.stars || "0", 10);
+    return parseFloat(art.dataset.score || "0"); // default: score
+  }
+
+  function applySort() {
+    document.querySelectorAll("section.section .items").forEach((container) => {
+      const arts = Array.from(container.children).filter((c) => c.tagName === "ARTICLE");
+      arts.sort((a, b) => sortKeyOf(b, state.sort) - sortKeyOf(a, state.sort));
+      for (const art of arts) container.appendChild(art);
+    });
+  }
+
   document.querySelectorAll(".chip").forEach((btn) => {
     btn.addEventListener("click", () => {
       const filter = btn.dataset.filter;
@@ -99,7 +120,19 @@
             b.classList.remove("active");
           }
         });
+      if (filter === "sort") applySort();
       apply();
     });
+  });
+
+  // ---- Expand / collapse summary on each card ----------------------------
+  // Delegated handler so we don't bind 1500 listeners on init.
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".expand-btn");
+    if (!btn) return;
+    const item = btn.closest(".item");
+    if (!item) return;
+    const expanded = item.classList.toggle("expanded");
+    btn.textContent = expanded ? "Show less ▲" : "Read more ▼";
   });
 })();

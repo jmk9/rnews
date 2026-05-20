@@ -2,17 +2,24 @@
   data-source="{{ it.source }}"
   data-priority="{{ it.priority }}"
   data-tags="{{ (it.tags or []) | join(' ') }}"
-  data-published="{{ (it.updated or it.published or '')[:10] }}">
+  data-published="{{ (it.updated or it.published or '')[:10] }}"
+  data-created="{{ (it.published or it.updated or '')[:10] }}"
+  data-stars="{{ (it.extra.stars if it.extra and it.extra.stars is defined else 0) }}"
+  data-score="{{ it.score or 0 }}">
 
-  {# Thumbnail: github -> owner avatar (always available), news -> RSS-extracted image,
-     arxiv (or news without image) -> a small CSS placeholder badge. Avatars hide
-     gracefully if the image fails to load. #}
-  {% if it.source == 'github' %}
-    {% set owner = it.title.split('/')[0] %}
-    <img class="item-thumb item-thumb-avatar" src="https://github.com/{{ owner }}.png?size=160"
+  {# Thumbnail: prefer the real "main figure" we extracted —
+       - arxiv: local PNG of figure 1 from the PDF -> extra.thumbnail_path
+       - github: first image in the rendered README     -> extra.thumbnail
+       - news:   RSS media image or og:image            -> extra.thumbnail
+     Otherwise a small source-colored placeholder so the layout stays uniform.
+     loading="lazy" defers the 1500-card image load until scroll. #}
+  {% set thumb_path = it.extra.thumbnail_path if it.extra else none %}
+  {% set thumb_url = it.extra.thumbnail if it.extra else none %}
+  {% if thumb_path %}
+    <img class="item-thumb" src="{{ url_root }}{{ thumb_path }}"
          loading="lazy" alt="" onerror="this.style.display='none'" />
-  {% elif it.source == 'news' and it.extra and it.extra.thumbnail %}
-    <img class="item-thumb" src="{{ it.extra.thumbnail }}"
+  {% elif thumb_url %}
+    <img class="item-thumb" src="{{ thumb_url }}"
          loading="lazy" alt="" onerror="this.style.display='none'" />
   {% else %}
     <div class="item-thumb item-thumb-placeholder item-thumb-{{ it.source }}">
@@ -25,6 +32,7 @@
       <a class="item-title" href="{{ it.url }}" target="_blank" rel="noopener">{{ it.title }}</a>
       <span class="badge badge-{{ it.source }}">{{ it.source }}</span>
       {% if it.priority %}<span class="badge badge-{{ it.priority }}">{{ priority_label(it.priority) }}</span>{% endif %}
+      {% if it.extra and it.extra.is_new %}<span class="badge badge-new">NEW</span>{% endif %}
     </div>
     <div class="item-meta">
       {% if it.authors %}
@@ -34,9 +42,14 @@
         ★ {{ it.extra.stars }} ·
         {% if it.extra.language %}{{ it.extra.language }} · {% endif %}
       {% endif %}
-      {% set date_str = (it.updated or it.published or '')[:10] %}
-      {% if date_str %}
-        {% if it.source == 'github' %}Last pushed{% elif it.source == 'news' %}Published{% else %}Updated{% endif %} {{ date_str }}
+      {% set created = (it.published or '')[:10] %}
+      {% set active = (it.updated or '')[:10] %}
+      {% if it.source == 'github' %}
+        {% if created %}Created {{ created }}{% endif %}{% if created and active and active != created %} · Active {{ active }}{% endif %}
+      {% elif it.source == 'news' %}
+        {% if active or created %}Published {{ active or created }}{% endif %}
+      {% else %}
+        {% if created %}Submitted {{ created }}{% endif %}{% if created and active and active[:10] != created[:10] %} · Updated {{ active }}{% endif %}
       {% endif %}
     </div>
     {% if it.tags %}
@@ -46,6 +59,7 @@
     {% endif %}
     {% if it.summary %}
     <p class="item-summary">{{ it.summary }}</p>
+    <button class="expand-btn" type="button">Read more ▼</button>
     {% endif %}
   </div>
 </article>

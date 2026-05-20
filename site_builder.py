@@ -41,6 +41,29 @@ def _first_seen(it: dict[str, Any], fallback_date: str = "") -> str:
     return fallback_date or (it.get("updated") or "")[:10] or (it.get("published") or "")[:10] or ""
 
 
+def _annotate_is_new(items: list[dict[str, Any]], days: int = 30) -> None:
+    """Stamp extra.is_new=True on items whose `published` (= creation /
+    first-submission date) falls within the last N days. Drives the NEW badge
+    on the card — useful for github specifically, where a 1-year-old repo with
+    yesterday's typo fix would otherwise look just as fresh as a brand-new one.
+    """
+    now = datetime.now(timezone.utc)
+    cutoff = now.timestamp() - days * 86400
+    for it in items:
+        created = it.get("published") or it.get("updated") or ""
+        if not created:
+            continue
+        try:
+            dt = datetime.fromisoformat(created.replace("Z", "+00:00"))
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
+            if dt.timestamp() >= cutoff:
+                extra = it.setdefault("extra", {})
+                extra["is_new"] = True
+        except (ValueError, TypeError):
+            continue
+
+
 def _has_code(it: dict[str, Any]) -> bool:
     """An item is 'has-code' if it's a repo, or its ranker stamped it with the has_code bonus.
 
@@ -131,8 +154,19 @@ def build_site(cfg: dict[str, Any]) -> Path:
         if src.exists():
             shutil.copy2(src, site_dir / asset)
 
+    # Copy locally-stored thumbnails (currently: arxiv figure crops produced by
+    # scripts/extract_thumbnails.py) into the site so templates can reference
+    # them via relative `thumbnails/...` paths.
+    thumb_src = Path("data/thumbnails")
+    if thumb_src.exists():
+        thumb_dest = site_dir / "thumbnails"
+        if thumb_dest.exists():
+            shutil.rmtree(thumb_dest)
+        shutil.copytree(thumb_src, thumb_dest)
+
     all_items = _load_all_processed(processed_dir)
     log.info("site: loaded %d unique items from %s", len(all_items), processed_dir)
+    _annotate_is_new(all_items, days=30)
 
     # Sort by score desc, then first_seen desc as a tiebreaker. We previously
     # had first_seen as the primary key, but that buried high-quality repos

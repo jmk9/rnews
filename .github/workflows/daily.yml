@@ -47,9 +47,21 @@ jobs:
       - name: Run the monitor (full pipeline — scheduled/manual)
         if: github.event_name != 'push'
         env:
-          # Built-in token; gives ~1000 req/hour for the search API.
+          # Built-in token; gives ~5000 req/hour search + REST.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python main.py --mode daily
+        # --no-site so we can interleave thumbnail extraction before building.
+        # The next two steps fold the site build back in.
+        run: python main.py --mode daily --no-site
+
+      - name: Extract thumbnails for top items (arxiv PDF / github README / news og:image)
+        if: github.event_name != 'push'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/extract_thumbnails.py --max-items 200
+
+      - name: Build site (after collection + thumbnails)
+        if: github.event_name != 'push'
+        run: python main.py --site-only
 
       - name: Rebuild site only (after code/template push)
         if: github.event_name == 'push'
@@ -64,7 +76,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/processed data/state
+          git add data/processed data/state data/thumbnails
           if git diff --cached --quiet; then
             echo "no data changes to commit"
           else

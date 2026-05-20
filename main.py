@@ -242,9 +242,13 @@ def main(argv: list[str] | None = None) -> int:
     seen = annotate_first_seen(items, cfg)
     log.info("Seen-state tracks %d items total", len(seen))
 
-    items = summarize_items(items, AbstractTruncationSummarizer(
-        max_chars=int(cfg.get("report", {}).get("summary_max_chars", 320))
-    ))
+    # Don't truncate summaries. Cards CSS-clamp to 3 lines by default and the
+    # expand button reveals the full text inline — that's the "read here, not
+    # in 5 other tabs" promise of RNEWS. Keeping the full text in JSON also
+    # makes the data file richer for any downstream analysis. The summarizer
+    # interface is preserved (we still pass through) in case we switch to an
+    # LLM summarizer later — see SELF_FEEDBACK P1 LLM summarizer.
+    items = summarize_items(items, AbstractTruncationSummarizer(max_chars=10000))
 
     if args.mode == "daily":
         items_for_report = [it for it in items if it.extra.get("first_seen") == today_str]
