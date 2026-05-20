@@ -4,7 +4,7 @@
   // E.g. method=#VLA + platform=#Manipulator -> only VLA papers on cobot arms.
   // `sort` reorders within each section: "" = default (score desc), "created"
   // = first-seen / repo-creation desc, "pushed" = last-activity desc, "stars" desc.
-  const state = { method: "", platform: "", source: "", priority: "", time: "", sort: "" };
+  const state = { method: "", platform: "", other: "", source: "", priority: "", time: "", sort: "" };
   const items = Array.from(document.querySelectorAll(".item"));
   const counter = document.getElementById("visible-count");
   const sectionCounts = document.querySelectorAll(".section-count");
@@ -53,12 +53,13 @@
       const tags = (it.dataset.tags || "").split(/\s+/).filter(Boolean);
       const okMethod = !state.method || tags.indexOf(state.method) !== -1;
       const okPlatform = !state.platform || tags.indexOf(state.platform) !== -1;
+      const okOther = !state.other || tags.indexOf(state.other) !== -1;
       const okSrc = !state.source || it.dataset.source === state.source;
       const okPri = !state.priority || it.dataset.priority === state.priority;
       const okTime = it.__ageDays <= timeLimit;
       const okSearch = searchTerms.length === 0 ||
         searchTerms.every((t) => it.__searchText.indexOf(t) !== -1);
-      const show = okMethod && okPlatform && okSrc && okPri && okTime && okSearch;
+      const show = okMethod && okPlatform && okOther && okSrc && okPri && okTime && okSearch;
       it.style.display = show ? "" : "none";
       if (show) {
         visible++;

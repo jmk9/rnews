@@ -167,6 +167,9 @@ tag_groups:
   - label: Platform
     filter_key: platform
     tags: ["#Manipulator", "#Bimanual", "#MobileManipulator", "#Humanoid"]
+  - label: Other
+    filter_key: other
+    tags: ["#Other"]   # catch-all: matched no Method and no Platform tag
 
 sources:
   arxiv:
@@ -211,6 +214,12 @@ sources:
         url: "https://syncedreview.com/feed/"
       - name: "BAIR Blog (Berkeley AI Research)"
         url: "https://bair.berkeley.edu/blog/feed.xml"
+      - name: "Hugging Face Blog"
+        url: "https://huggingface.co/blog/feed.xml"
+      - name: "Robotics Tomorrow"
+        url: "https://www.roboticstomorrow.com/rss/news.xml"
+      - name: "NVIDIA Developer Blog"
+        url: "https://developer.nvidia.com/blog/feed/"
       - name: "NVIDIA Blog"
         url: "https://blogs.nvidia.com/feed/"
       - name: "DeepMind Blog"
@@ -222,6 +231,8 @@ sources:
         url: "http://www.irobotnews.com/rss/allArticle.xml"
       - name: "AI타임스"
         url: "https://www.aitimes.com/rss/allArticle.xml"
+      - name: "인공지능신문"
+        url: "https://www.aitimes.kr/rss/allArticle.xml"
 
 # Weights used by ranker.compute_score().
 # Sort policy: bias toward what people actually USE and TRUST.

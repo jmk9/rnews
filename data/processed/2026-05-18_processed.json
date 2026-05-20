@@ -285,7 +285,10 @@
       "full_text": "LeRobot aims to provide models, datasets, and tools for real-world robotics in PyTorch. The goal is to lower the barrier to entry so that everyone can contribute to and benefit from shared datasets and pretrained models. 🤗 A hardware-agnostic, Python-native interface that standardizes control across diverse platforms, from low-cost arms (SO-100) to humanoids. 🤗 A standardized, scalable LeRobotDataset format (Parquet + MP4 or images) hosted on the Hugging Face Hub, enabling efficient storage, streaming and visualization of massive robotic datasets. 🤗 State-of-the-art policies that have been shown to transfer to the real-world ready for training and deployment. 🤗 Comprehensive support for the open-source ecosystem to democratize physical AI. Quick Start LeRobot can be installed directly from PyPI. [!IMPORTANT] For detailed installation guide, please see the Installation Documentation. Robots & Control LeRobot provides a unified Robot class interface that decouples control logic from hardware specifics. It supports a wide range of robots and teleoperation devices. Supported Hardware: SO100, LeKiwi, Koch, HopeJR, OMX, EarthRover, Reachy2, Gamepads, Keyboards, Phones, OpenARM, Unitree G1. While these devices are natively integrated into the LeRobot codebase, the library is designed to be extensible. You can easily implement the Robot interface to utilize LeRobot's data collection, training, and visualization tools for your own custom robot. For detailed hardware setup guides, see the Hardware Documentation. LeRobot Dataset To solve the data fragmentation problem in robotics, we utilize the LeRobotDataset format. - Structure: Synchronized MP4 videos (or images) for vision and Parquet files for state/action data. - HF Hub Integration: Explore thousands of robotics datasets on the Hugging Face Hub. - Tools: Seamlessly delete episodes, split by indices/fractions, add/remove features, and merge multiple datasets. Learn more about it in the LeRobotDataset Documentation SoTA Models LeRobot implements state-of-the-art policies in pure PyTorch, covering Imitation Learning, Reinforcement Learning, and Vision-Language-Action (VLA) models, with more coming soon. It also provides you with the tools to instrument and inspect your training process. Training a policy is as simple as running a script configuration: Category Models -------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- Imitation Learning ACT, Diffusion, VQ-BeT, Multitask DiT Policy Reinforcement Learning HIL-SERL, TDMPC & QC-FQL (coming soon) VLAs Models Pi0Fast, Pi0.5, GR00T N1.5, SmolVLA, XVLA Similarly to the hardware, you can easily implement your own policy & leverage LeRobot's data collection, training, and visualization tools, and share your model to the HF Hub For detailed policy setup guides, see the Policy Documentation. For GPU/RAM requirements and expected training time per policy, see the Compute Hardware Guide. Inference & Evaluation Evaluate your policies in simulation or on real hardware using the unified evaluation script. LeRobot supports standard benchmarks like LIBERO , MetaWorld and more to come. Learn how to implement your own simulation environment or benchmark and distribute it from the HF Hub by following the EnvHub Documentation Resources - Documentation: The complete guide to tutorials & API. - Chinese Tutorials: LeRobot+SO-ARM101中文教程-同济子豪兄 Detailed doc for assembling, teleoperate, dataset, train, deploy. Verified by Seed Studio and 5 global hackathon players. - Discord: Join the LeRobot server to discuss with the community. - X: Follow us on X to stay up-to-date with the latest developments. - Robot Learning Tutorial: A free, hands-on course to learn robot learning using LeRobot. Citation If you use LeRobot in your project, please cite the GitHub repository to acknowledg",
       "summary_kind": "llm"
     },
-    "tags": [],
+    "tags": [
+      "#VLA",
+      "#Humanoid"
+    ],
     "score": 43.224,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -371,7 +374,10 @@
       "full_text": "--- Isaac Lab Isaac Lab is a GPU-accelerated, open-source framework designed to unify and simplify robotics research workflows, such as reinforcement learning, imitation learning, and motion planning. Built on NVIDIA Isaac Sim, it combines fast and accurate physics and sensor simulation, making it an ideal choice for sim-to-real transfer in robotics. Isaac Lab provides developers with a range of essential features for accurate sensor simulation, such as RTX-based cameras, LIDAR, or contact sensors. The framework's GPU acceleration enables users to run complex simulations and computations faster, which is key for iterative processes like reinforcement learning and data-intensive tasks. Moreover, Isaac Lab can run locally or be distributed across the cloud, offering flexibility for large-scale deployments. A detailed description of Isaac Lab can be found in our arXiv paper. Key Features Isaac Lab offers a comprehensive set of tools and environments designed to facilitate robot learning: - Robots : A diverse collection of robots, from manipulators, quadrupeds, to humanoids, with more than 16 commonly available models. - Environments : Ready-to-train implementations of more than 30 environments, which can be trained with popular reinforcement learning frameworks such as RSL RL, SKRL, RL Games, or Stable Baselines. We also support multi-agent reinforcement learning. - Physics : Rigid bodies, articulated systems, deformable objects - Sensors : RGB/depth/segmentation cameras, camera annotations, IMU, contact sensors, ray casters. Getting Started Documentation Our documentation page provides everything you need to get started, including detailed tutorials and step-by-step guides. Follow these links to learn more about: - Installation steps - Reinforcement learning - Tutorials - Available environments Isaac Sim Version Dependency Isaac Lab is built on top of Isaac Sim and requires specific versions of Isaac Sim that are compatible with each release of Isaac Lab. Below, we outline the recent Isaac Lab releases and GitHub branches and their corresponding dependency versions for Isaac Sim. Isaac Lab Version Isaac Sim Version ----------------------------- ------------------------- main branch Isaac Sim 4.5 / 5.0 / 5.1 v2.3.X Isaac Sim 4.5 / 5.0 / 5.1 v2.2.X Isaac Sim 4.5 / 5.0 v2.1.X Isaac Sim 4.5 v2.0.X Isaac Sim 4.5 Contributing to Isaac Lab We wholeheartedly welcome contributions from the community to make this framework mature and useful for everyone. These may happen as bug reports, feature requests, or code contributions. For details, please check our contribution guidelines. Show & Tell: Share Your Inspiration We encourage you to utilize our Show & Tell area in the Discussions section of this repository. This space is designed for you to: Share the tutorials you've created Showcase your learning content Present exciting projects you've developed By sharing your work, you'll inspire others and contribute to the collective knowledge of our community. Your contributions can spark new ideas and collaborations, fostering innovation in robotics and simulation. Troubleshooting Please see the troubleshooting section for common fixes or submit an issue. For issues related to Isaac Sim, we recommend checking its documentation or opening a question on its forums. Support Please use GitHub Discussions for discussing ideas, asking questions, and requests for new features. Github Issues should only be used to track executable pieces of work with a definite scope and a clear deliverable. These can be fixing bugs, documentation issues, new features, or general updates. Connect with the NVIDIA Omniverse Community Do you have a project or resource you'd like to share more widely? We'd love to hear from you! Reach out to the NVIDIA Omniverse Community team at OmniverseCommunity@nvidia.com to explore opportunities to spotlight your work. You can also join the conversation on the Omniverse Discord to connect with other developers, share your projects, a",
       "summary_kind": "llm"
     },
-    "tags": [],
+    "tags": [
+      "#RL",
+      "#IL"
+    ],
     "score": 42.379,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -415,7 +421,9 @@
       "summary_kind": "llm"
     },
     "tags": [
-      "#VLA"
+      "#RL",
+      "#VLA",
+      "#Bimanual"
     ],
     "score": 42.245,
     "score_breakdown": {
@@ -598,7 +606,9 @@
       "full_text": "☕️ Mithi's Robotics Coursework - Overwhelmed by the sheer amount of links in this repo? No worries, I got you 😁. - If you want to use Arduino or Raspberry Pi to make robots but you don't know where to start, this short list might be helpful. - Check this short list if you like reading textbooks. - Here are some pending links that might be someday be transfered in this document. - If there's anything you think should be included here, you can submit an issue, I'll check it out. - 🌱 Fundamental Knowledge (Curated), 💸 Requires Money, 📺 Videos, ♥️ Mithi's Bookmarks Series of Courses - 🌱 ♥️ [Robot Academy][series1], Peter Corke, Queensland University of Technology - [MIT Open Courseware: Robotics][series9] - Coursera: Robotics - EdX: Robotics - Coursera: [Modern Robotics Specialization][series4] [book][series11a] + [📺 channel][series11b], Northwestern University - Coursera: [Self-Driving Cars][series10], University of Toronto - 💸 [The Construct: Robotics Developers Course Library][series8], Robot Ignite Academy - 💸 Autonomous Vehicles, Skill Lync - 💸 Udemy: Robotics [series1]: http://robotacademy.net.au [series4]: https://www.coursera.org/specializations/modernrobotics [series8]: https://www.theconstructsim.com/robotigniteacademy learnros/ros-courses-library/ [series9]: https://ocw.mit.edu/search/?q=robotics [series10]: https://www.coursera.org/specializations/self-driving-cars [series11a]: http://modernrobotics.org [series11b]: https://www.youtube.com/playlist?list=PLggLP4f-rq02vX0OQQ5vrCxbJrzamYDfx Single Courses - 🌱 Math Fundamentals for Robotics, (Assignments), Michael Erdmann, Carnegie Mellon University - [Introduction to Robotics][course11], Oussama Khatib, Stanford Engineering Everywhere - [Introduction to Robotics][course28], Burton Ma, York University - [NPTEL: Introduction to Robotics][course32], IIT Madras - [📺 Robotics I][course16], De Luca, Universita di Roma - [MEAM 620: Robotics][course25], University of Pennsylvania - [Robogrok: Robotics][course17a] + [📺 channel][course17b], Angela Sodemann - [Programming for Robotics - ROS][course44], Edo Jelavić, Tom Lankhorst, Marco Hutter, ETHZurich - TRS: An Open-source Recipe for Teaching/Learning Robotics with a Simulator, The University of Liège, Renaud Detry - Real World Robotics, ETHZurich - [Advanced Robotics (CS 287)][course19], Pieter Abbeel, University of California at Berkeley - [📺 Applied Robot Design (CS235)][course23], Reuben Brewer, Standford University - [📺 Evolutionary robotics][course43], Josh Bongard, University of Vermont - [Robotics Manipulation: Perception, Planning, and Control][course29] + [📺 channel][course29b], Russ Tedrake, Massachusetts Institute of Technology - ♥️ Underactuated Robotics [book][course20a] + [📺 channel][course20b], Russ Tedrake, Massachusetts Institute of Technology - [Introduction to Aerial Robotics][course13], Kostas Alexis, University of Nevada - [HKUST ELEC5660 Introduction to Aerial Robots][course34], Shaojie SHEN, Hong Kong University of Science and Technology - [ENAE 788M: Hands On Autonomous Aerial Robotics][course35], Nitin Sanket, University of Maryland - [CMSC828T Vision, Planning And Control In Aerial Robotics][course33], Yiannis Aloimonos, University of Maryland - [Visual Navigation for Flying Robot][course22], Jürgen Sturm, Technical University of Munich - [📺 SLAM playlist][course15], Cyrill Stachniss, University of Freiburg - [📺 SLAM Lectures][course18], Clause Brenne, Leibniz University Hannover - [Autonomous Intelligent Systems][course10], Wolfram Burgard et al, University of Freiburg - [Autonomous Robots Lab: Autonomous Mobile Robot Design (and more)][course24], University of Nevada - 🌱 Deep Learning for Robotics, Deepak Pathak, Alex Li, The Carnegie Mellon University Robotics Institute - 🌱 CS 6758: Deep Learning for Robotics, Kuan Fang, Yunhao Cao, Cornell University - [Deep-learning for Self-Driving Cars][course14], Lex Fridman, Massachusetts Institute of Technology - [Self-Driving Cars with ROS and Autoware][course",
       "summary_kind": "llm"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 40.794,
     "score_breakdown": {
       "title_keyword": 6.0,
@@ -637,7 +647,9 @@
       "full_text": "Genesis 🔥 News - [2025-08-05] Released v0.3.0 🎊 🎉 - [2025-07-02] The development of Genesis is now officially supported by Genesis AI. - [2025-01-09] We released a detailed performance benchmarking and comparison report on Genesis, together with all the test scripts. - [2025-01-08] Released v0.2.1 🎊 🎉 - [2025-01-08] Created Discord and Wechat group. - [2024-12-25] Added a docker including support for the ray-tracing renderer - [2024-12-24] Added guidelines for contributing to Genesis Table of Contents 1. What is Genesis? 2. Key Features 3. Quick Installation 4. Docker 5. Documentation 6. Contributing to Genesis 7. Support 8. License and Acknowledgments 9. Associated Papers 10. Citation What is Genesis? Genesis is a physics platform designed for general-purpose Robotics/Embodied AI/Physical AI applications. It is simultaneously multiple things: 1. A universal physics engine re-built from the ground up, capable of simulating a wide range of materials and physical phenomena. 2. A lightweight , ultra-fast , pythonic , and user-friendly robotics simulation platform. 3. A powerful and fast photo-realistic rendering system . 4. A generative data engine that transforms user-prompted natural language description into various modalities of data. Powered by a universal physics engine re-designed and re-built from the ground up, Genesis integrates various physics solvers and their coupling into a unified framework. This core physics engine is further enhanced by a generative agent framework that operates at an upper level, aiming towards fully automated data generation for robotics and beyond. Note : Currently, we are open-sourcing the underlying physics engine and the simulation platform . Our generative framework is a modular system that incorporates many different generative modules, each handling a certain range of data modalities, routed by a high level agent. Some of the modules integrated existing papers and some are still under submission. Access to our generative feature will be gradually rolled out in the near future. If you are interested, feel free to explore more in the paper list below. Genesis aims to: - Lower the barrier to using physics simulations, making robotics research accessible to everyone. See our mission statement. - Unify diverse physics solvers into a single framework to recreate the physical world with the highest fidelity. - Automate data generation , reducing human effort and letting the data flywheel spin on its own. Project Page: Key Features - Speed : Over 43 million FPS when simulating a Franka robotic arm with a single RTX 4090 (430,000 times faster than real-time). - Cross-platform : Runs on Linux, macOS, Windows, and supports multiple compute backends (CPU, Nvidia/AMD GPUs, Apple Metal). - Integration of diverse physics solvers : Rigid body, MPM, SPH, FEM, PBD, Stable Fluid. - Wide range of material models : Simulation and coupling of rigid bodies, liquids, gases, deformable objects, thin-shell objects, and granular materials. - Compatibility with various robots : Robotic arms, legged robots, drones, soft robots , and support for loading MJCF (.xml) , URDF , .obj , .glb , .ply , .stl , and more. - Photo-realistic rendering : Native ray-tracing-based rendering. - Differentiability : Genesis is designed to be fully differentiable. Currently, our MPM solver and Tool Solver support differentiability, with other solvers planned for future versions (starting with rigid & articulated body solver). - User-friendliness : Designed for simplicity, with intuitive installation and APIs. Quick Installation Using pip Install PyTorch first following the official instructions. Then, install Genesis via PyPI: For the latest version to date, make sure that pip is up-to-date via pip install --upgrade pip , then run command: Note that the package must still be updated manually to sync with main branch. Users seeking to contribute are encouraged to install Genesis in editable mode. First, make sure that genesis-world has b",
       "summary_kind": "llm"
     },
-    "tags": [],
+    "tags": [
+      "#Manipulator"
+    ],
     "score": 40.156,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -722,6 +734,7 @@
       "summary_kind": "llm"
     },
     "tags": [
+      "#RL",
       "#VLA"
     ],
     "score": 39.773,
@@ -761,7 +774,9 @@
       "full_text": "RSL-RL RSL-RL is a GPU-accelerated, lightweight learning library for robotics research. Its compact design allows researchers to prototype and test new ideas without the overhead of modifying large, complex libraries. RSL-RL can also be used out-of-the-box by installing it via PyPI, supports multi-GPU training, and features common algorithms for robot learning. Key Features - Minimal, readable codebase with clear extension points for rapid prototyping. - Robotics-first methods including PPO and Student-Teacher Distillation. - High-throughput training with native Multi-GPU support. - Proven performance in numerous research publications. Learning Environments RSL-RL is currently used by the following robot learning libraries: - Isaac Lab (built on top of NVIDIA Isaac Sim) - Legged Gym (built on top of NVIDIA Isaac Gym) - mjlab (built on top of MuJoCo Warp) - MuJoCo Playground (built on top of MuJoCo MJX and Warp) Installation Before installing RSL-RL, ensure that Python 3.9+ is available. It is recommended to install the library in a virtual environment (e.g. using venv or conda ), which is often already created by the used environment library (e.g. Isaac Lab). If so, make sure to activate it before installing RSL-RL. Installing RSL-RL as a dependency Installing RSL-RL for development Citation If you use RSL-RL in your research, please cite the paper:",
       "summary_kind": "llm"
     },
-    "tags": [],
+    "tags": [
+      "#RL"
+    ],
     "score": 39.246,
     "score_breakdown": {
       "title_keyword": 6.0,
@@ -800,7 +815,10 @@
       "readme": "MuJoCo Playground A comprehensive suite of GPU-accelerated environments for robot learning research and sim-to-real, built with MuJoCo MJX. Features include: - Classic control environments from dm control . - Quadruped and bipedal locomotion environments. - Non-prehensile and dexterous manipulation environments. - Vision-based support available via the MJWarp Batch Renderer. For more details, check out the project website. [!NOTE] We now support training with both the MuJoCo MJX JAX implementation, as well as the MuJoCo Warp implementation at HEAD. See this discussion post for more details. Installation You can install MuJoCo Playground directly from PyPI: [!IMPORTANT] We recommend users to install from source to get the latest features and bug fixes from MuJoCo. From Source [!IMPORTANT] Requires Python 3.10 or later. 1. git clone git@github.com:google-deepmind/mujoco playground.git && cd mujoco playground 2. Install uv, a faster alternative to pip 3. Create a virtual environment: uv venv --python 3.12 4. Activate it: source .venv/bin/activate 5. Install CUDA 12 jax: uv pip install -U \"jax[cuda12]\" --index-url https://pypi.org/simple Verify GPU backend: python -c \"import jax; print(jax.default backend())\" should print gpu. unset LD LIBRARY PATH may need to be run before running this command. 6. Install playground from source: uv --no-config sync --all-extras 7. Verify installation: uv --no-config run python -c \"import mujoco playground; print('Success')\" Note : Menagerie assets will be downloaded automatically the first time you load a locomotion or manipulation environment. You can trigger this with: uv --no-config run python -c \"from mujoco playground import locomotion; locomotion.load('G1JoystickFlatTerrain')\" Getting started Running from CLI For basic usage, navigate to the repo's directory, install from source with jax[cuda12] , and run: To train with MuJoCo Warp: Or with uv : Basic Tutorials Colab Description ------- ------------- Introduction to the Playground with DM Control Suite Locomotion Environments Manipulation Environments Vision Environments Training Visualization To interactively view trajectories throughout training with rscope, install it ( pip install rscope ) and run: FAQ How can I contribute? Get started by installing the library and exploring its features! Found a bug? Report it in the issue tracker. Interested in contributing? If you are a developer with robotics experience, we would love your help—check out the contribution guidelines for more details. Reproducibility / GPU Precision Issues Users with NVIDIA Ampere architecture GPUs (e.g., RTX 30 and 40 series) may experience reproducibility issues in mujoco playground due to JAX’s default use of TF32 for matrix multiplications. This lower precision can adversely affect RL training stability. To ensure consistent behavior with systems using full float32 precision (as on Turing GPUs), please run export JAX DEFAULT MATMUL PRECISION=highest in your terminal before starting your experiments (or add it to the end of /.bashrc ). To reproduce results using the same exact learning script as used in the paper, run the brax training script which is available here. There are slight differences in results when using the learning/train jax ppo.py script, see the issue here for more context. Citation If you use Playground in your scientific works, please cite it as follows: License and Disclaimer The texture used in the rough terrain for the locomotion environments is from Polyhaven and licensed under CC0. All other content in this repository is licensed under the Apache License, Version 2.0. A copy of this license is provided in the top-level LICENSE file in this repository. You can also obtain it from https://www.apache.org/licenses/LICENSE-2.0. This is not an officially supported Google product.",
       "summary_kind": "llm"
     },
-    "tags": [],
+    "tags": [
+      "#RL",
+      "#Humanoid"
+    ],
     "score": 39.211,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -1073,7 +1091,8 @@
       "summary_kind": "llm"
     },
     "tags": [
-      "#RL"
+      "#RL",
+      "#Humanoid"
     ],
     "score": 37.982,
     "score_breakdown": {
@@ -1421,7 +1440,9 @@
       "readme": "⚙️ PACE — Sim-to-Real Transfer for Legged Robots PACE is a framework for sim-to-real transfer of diverse robotic systems , combining data-driven system identification with evolutionary optimization. It enables accurate actuator modeling and robust adaptation between simulation to reality by explicitly learning physically meaningful dynamics parameters. --- 🤖🐾 What is PACE? PACE (Precise Adaptation through Continuous Evolution) bridges the gap between simulation and real hardware by: Estimating actuator and joint dynamics directly from measured data Using CMA-ES for parameter optimization Applying learned parameters to improve sim-to-real locomotion performance Supporting multiple robot platforms and actuator types It is designed to integrate seamlessly with NVIDIA Isaac Lab and follows its task and environment conventions. --- 📦 Installation 1. Install Isaac Lab Follow the official Isaac Lab installation guide: https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/index.html We recommend using the conda or uv installation method, as this simplifies running Python scripts from the terminal and managing dependencies. 2. Clone this repository Clone or copy this project separately from the Isaac Lab installation (i.e. outside the IsaacLab directory): 3. Install PACE in editable mode Using a Python interpreter that has Isaac Lab installed: ⚠️ Isaac Sim version compatibility PACE is developed and tested against Isaac Sim 5.0 / Isaac Lab (latest) . If you run the examples on older versions (e.g. Isaac Sim 4.5), you may encounter warnings such as: These warnings are expected and indicate that certain physics properties (e.g. joint viscous friction) are not supported by the older simulator version. While the examples may still run, the physical fidelity and sim-to-real accuracy will be reduced. ✅ Recommended: Isaac Sim 5.0 or newer ⚠️ Legacy support: May run with limitations on F. Bjelonic, F. Tischhauser, and M. Hutter, Towards Bridging the Gap: Systematic Sim-to-Real Transfer for Diverse Legged Robots , arXiv:2509.06342, 2025. --- PACE — bringing simulation and reality closer, one parameter at a time.",
       "summary_kind": "llm"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 36.416,
     "score_breakdown": {
       "title_keyword": 9.0,
@@ -1565,7 +1586,9 @@
       "readme": "NVIDIA Warp Documentation Changelog Warp is a Python framework for GPU-accelerated simulation, robotics, and machine learning. Warp takes regular Python functions and JIT compiles them to efficient kernel code that can run on the CPU or GPU. Warp comes with a rich set of primitives for physics simulation, robotics, geometry processing, and more. Warp kernels are differentiable and can be used as part of machine-learning pipelines with frameworks such as PyTorch, JAX and Paddle. A selection of physical simulations computed with Warp Quick Start Simulate one million particles under gravitational attraction, in 20 lines: Installing Python version 3.10 or newer is required. Warp can run on x86-64 and ARMv8 CPUs on Windows and Linux, and on Apple Silicon (ARMv8) on macOS. GPU support requires a CUDA-capable NVIDIA GPU and driver (minimum GeForce GTX 9xx). The easiest way to install Warp is from PyPI: You can also use pip install warp-lang[examples] to install additional dependencies for running examples and USD-related features. For nightly builds, conda, CUDA 13 builds, building from source, and CUDA driver requirements, see the Installation Guide. Tutorial Notebooks The NVIDIA Accelerated Computing Hub contains the current, actively maintained set of Warp tutorials: Notebook Colab Link ---------- ------------ Introduction to NVIDIA Warp GPU-Accelerated Ising Model Simulation in NVIDIA Warp Additionally, several notebooks in the notebooks directory provide additional examples and cover key Warp features: Notebook Colab Link ---------- ------------ Warp Core Tutorial: Basics Warp Core Tutorial: Generics Warp Core Tutorial: Points Warp Core Tutorial: Meshes Warp Core Tutorial: Volumes Warp PyTorch Tutorial: Basics Warp PyTorch Tutorial: Custom Operators Running Examples The warp/examples directory contains examples covering physics simulation, geometry processing, optimization, and tile-based GPU programming. Before running examples, install the optional example dependencies using: On Linux aarch64 systems (e.g., NVIDIA DGX Spark), the [examples] extra automatically installs usd-exchange instead of usd-core as a drop-in replacement, since usd-core wheels are not available for that platform. Examples can be run from the command-line as follows: Most examples can be run on either the CPU or a CUDA-capable device, but a handful require a CUDA-capable device. These are marked at the top of the example script. Some examples generate USD files containing time-sampled animations in the current working directory. These can be viewed in Pixar's UsdView, Blender, or any USD-compatible viewer. To browse the example source code, you can open the directory where the files are located like this: warp/examples/core dem fluid graph capture marching cubes mesh nvdb raycast raymarch sample mesh sph torch wave 2-D incompressible turbulence in a periodic box warp/examples/fem diffusion 3d mixed elasticity apic fluid streamlines distortion energy taylor green kelvin helmholtz magnetostatics adaptive grid nonconforming contact darcy level-set optimization elastic shape optimization warp/examples/optim diffray fluid checkpoint particle repulsion navier-stokes perturbation warp/examples/tile mlp nbody mcgp Learn More Please see the following resources for additional background on Warp: Product Page SIGGRAPH 2024 Course Slides GTC 2024 Presentation GTC 2022 Presentation GTC 2021 Presentation SIGGRAPH Asia 2021 Differentiable Simulation Course Support See the FAQ for common questions. Problems, questions, and feature requests can be opened on GitHub Issues. For inquiries not suited for GitHub Issues, please email . Contributing Contributions and pull requests from the community are welcome. Please see the Contribution Guide for more information on contributing to the development of Warp. License Warp is provided under the Apache License, Version 2.0. Please see LICENSE.md for full license text. This project will download and install additional third-party op",
       "summary_kind": "truncation"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 35.53,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -1691,7 +1714,9 @@
       "full_text": "unitree sim isaaclab Unitree Robotics English 中文 Important Notes First - Please use the officially recommended hardware resources for deployment - The simulator may take some time to load resources during its first startup, and the waiting time depends on hardware performance and network environment - After the simulator starts running, it will send/receive the same DDS topics as the real robot (Please note to distinguish between the simulator and real robot if there is a real robot running on the same network). For specific DDS usage, please refer toG1 Control and Dex3 Dexterous Hand Control - The weight files provided in this project are only for simulation environment testing - Currently, our project has only been tested on RTX 3080, RTX 3090, and RTX 4090 GPUs. For the RTX 50 series GPUs, please use Isaac Sim version 5.0.0 - After the virtual scene starts up, please click PerspectiveCamera - Cameras - PerspectiveCamera to view the main view scene. The operation steps are shown below: Main View Finding Steps 1、 📖 Introduction This project is built on Isaac Lab to simulate Unitree robots in various tasks, facilitating data collection, playback, generation, and model validation. It can be used in conjunction with the xr teleoperate repository for dataset collection. The project adopts the same DDS communication protocol as the real robot to enhance code generality and ease of use. Currently, the project employs Unitree G1/H1-2 robots equipped with different actuators, and provides simulation scenarios for multiple tasks. The task names and corresponding illustrations are summarized in the table below. Tasks that include Wholebody in their names enable mobile operations. G1-29dof-gripper G1-29dof-dex3 G1-29dof-inspire H1-2-inspire Isaac-PickPlace-Cylinder-G129-Dex1-Joint Isaac-PickPlace-Cylinder-G129-Dex3-Joint Isaac-PickPlace-Cylinder-G129-Inspire-Joint Isaac-PickPlace-Cylinder-H12-27dof-Inspire-Joint Isaac-PickPlace-RedBlock-G129-Dex1-Joint Isaac-PickPlace-RedBlock-G129-Dex3-Joint Isaac-PickPlace-RedBlock-G129-Inspire-Joint Isaac-PickPlace-RedBlock-H12-27dof-Inspire-Joint Isaac-Stack-RgyBlock-G129-Dex1-Joint Isaac-Stack-RgyBlock-G129-Dex3-Joint Isaac-Stack-RgyBlock-G129-Inspire-Joint Isaac-Stack-RgyBlock-H12-27dof-Inspire-Joint Isaac-Move-Cylinder-G129-Dex1-Wholebody Isaac-Move-Cylinder-G129-Dex3-Wholebody Isaac-Move-Cylinder-G129-Inspire-Wholebody 2、⚙️ Environment Setup and Running This project requires Isaac Sim 4.5.0/Isaac Sim 5.x.0 and Isaac Lab. You can refer to the official installation guide or follow the steps below. The installation methods for Ubuntu 20.04 and Ubuntu 22.04 (and later versions) are different. Please choose the installation method based on your system version and GPU resources. 2.1 Isaac Sim 4.5.0 Environment Installation The environment can be installed using one of the following two methods: - Use the auto setup env.sh script for automatic installation. - Follow the documentation below for installation. Please refer to the Isaac Sim 4.5.0 Environment Installation Steps for the setup. 2.2 Isaac Sim 5.0.0/5.1.0 Environment Installation The environment can be installed using one of the following two methods: - Use the auto setup env.sh script for automatic installation. - Follow the documentation below for installation. Please refer to the Isaac Sim 5.0.0 Environment Installation Steps ， Isaac Sim 5.1.0 Environment Installation Steps for the setup. Recommended: Use the auto setup env.sh script to automatically install the environment and download the required assets. 2.3 Build the Docker Environment (Using Ubuntu 22.04 / IsaacSim 5.1) 2.3.1 Build the Docker environment 2.3.2 Enter the Docker environment 2.4 Run Program 2.4.1 Asset Download Use the following command to download the required asset files 2.4.2 Teleoperation - --task : Task name, corresponding to the task names in the table above - --enable dex1 dds/--enable dex3 dds : Represent enabling DDS for two-finger gripper/three-finger dexterous h",
       "summary_kind": "truncation"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 34.841,
     "score_breakdown": {
       "title_keyword": 9.0,
@@ -1736,7 +1761,9 @@
       "full_text": "robosuite [ [Homepage] ](https://robosuite.ai/) &ensp; [ [White Paper] ](https://arxiv.org/abs/2009.12293) &ensp; [ [Documentations] ](https://robosuite.ai/docs/overview.html) &ensp; [ [ARISE Initiative] ](https://github.com/ARISE-Initiative) ------- Latest Updates - [10/28/2024] v1.5 : Added support for diverse robot embodiments (including humanoids), custom robot composition, composite controllers (including whole body controllers), more teleoperation devices, photo-realistic rendering. [[release notes]](https://github.com/ARISE-Initiative/robosuite/releases/tag/v1.5.0) [[documentation]](http://robosuite.ai/docs/overview.html) - [11/15/2022] v1.4 : Backend migration to DeepMind's official MuJoCo Python binding, robot textures, and bug fixes :robot: [[release notes]](https://github.com/ARISE-Initiative/robosuite/releases/tag/v1.4.0) [[documentation]](http://robosuite.ai/docs/v1.4/) - [10/19/2021] v1.3 : Ray tracing and physically based rendering tools :sparkles: and access to additional vision modalities 🎥 [[video spotlight]](https://www.youtube.com/watch?v=2xesly6JrQ8) [[release notes]](https://github.com/ARISE-Initiative/robosuite/releases/tag/v1.3) [[documentation]](http://robosuite.ai/docs/v1.3/) - [02/17/2021] v1.2 : Added observable sensor models :eyes: and dynamics randomization :game die: [[release notes]](https://github.com/ARISE-Initiative/robosuite/releases/tag/v1.2) - [12/17/2020] v1.1 : Refactored infrastructure and standardized model classes for much easier environment prototyping :wrench: [[release notes]](https://github.com/ARISE-Initiative/robosuite/releases/tag/v1.1) ------- robosuite is a simulation framework powered by the MuJoCo physics engine for robot learning. It also offers a suite of benchmark environments for reproducible research. The current release (v1.5) features support for diverse robot embodiments (including humanoids), custom robot composition, composite controllers (including whole body controllers), more teleoperation devices, photo-realistic rendering. This project is part of the broader Advancing Robot Intelligence through Simulated Environments (ARISE) Initiative, with the aim of lowering the barriers of entry for cutting-edge research at the intersection of AI and Robotics. Data-driven algorithms, such as reinforcement learning and imitation learning, provide a powerful and generic tool in robotics. These learning paradigms, fueled by new advances in deep learning, have achieved some exciting successes in a variety of robot control problems. However, the challenges of reproducibility and the limited accessibility of robot hardware (especially during a pandemic) have impaired research progress. The overarching goal of robosuite is to provide researchers with: a standardized set of benchmarking tasks for rigorous evaluation and algorithm development; a modular design that offers great flexibility in designing new robot simulation environments; a high-quality implementation of robot controllers and off-the-shelf learning algorithms to lower the barriers to entry. This framework was originally developed in late 2017 by researchers in Stanford Vision and Learning Lab (SVL) as an internal tool for robot learning research. Now, it is actively maintained and used for robotics research projects in SVL, the UT Robot Perception and Learning Lab (RPL) and NVIDIA Generalist Embodied Agent Research Group (GEAR). We welcome community contributions to this project. For details, please check out our contributing guidelines. Robosuite offers a modular design of APIs for building new environments, robot embodiments, and robot controllers with procedural generation. We highlight these primary features below: standardized tasks : a set of standardized manipulation tasks of large diversity and varying complexity and RL benchmarking results for reproducible research; procedural generation : modular APIs for programmatically creating new environments and new tasks as combinations of robot models, arenas, and ",
       "summary_kind": "truncation"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 34.314,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -1919,7 +1946,7 @@
       "summary_kind": "llm"
     },
     "tags": [
-      "#RL"
+      "#Other"
     ],
     "score": 33.804,
     "score_breakdown": {
@@ -2003,7 +2030,9 @@
       "readme": "Awesome Robot Diffusion A curated list of recent robot learning papers incorporating diffusion models for manipulation, navigation, planning etc. The paper list is structured so that each paper falls into only one place. While some methods could fit into multiple places, we place each one in the most relevant class. Please refer to our survey paper below for detailed review, which has been accepted to International Journal of Computer Vision (IJCV). Diffusion Models in Robotics: A survey Xiaokang Liu 1 &nbsp; Yuchen Ma 1 &nbsp; Chen Gao 1 &nbsp; Mike Zheng Shou 1 &nbsp; 1 Show Lab, National University of Singapore&nbsp; If our work helps you in your research, please kindly cite our paper 😀. ---- (Source: Make-A-Video , Tune-A-Video , and Fate/Zero .) -- Table of Contents - Benchmarks - Diffusion as Policy - Diffusion as Synthesizer - Task Objectives and Applications - Robot Learning Utilizing Diffusion Model Properties - Citation Benchmarks + Learning Complex Dexterous Manipulation with Deep Reinforcement Learning and Demonstrations (RSS 2018) + Meta-World: A Benchmark and Evaluation for Multi-Task and Meta Reinforcement Learning (CoRL 2020) + Bridge data: Boosting generalization of robotic skills with cross-domain datasets (RSS 2022) + Towards Human-Level Bimanual Dexterous Manipulation with Reinforcement Learning (NeurIPS 2022 Datasets and Benchmarks Track) + Dexart: Benchmarking generalizable dexterous manipulation with articulated objects (CVPR 2023) + BridgeData V2: A Dataset for Robot Learning at Scale (CoRL 2023) + CALVIN: A Benchmark for Language-conditioned Policy Learning for Long-horizon Robot Manipulation Tasks (RAL 2022) + RLBench: The Robot Learning Benchmark & Learning Environment (RAL 2020) + LIBERO: Benchmarking Knowledge Transfer in Lifelong Robot Learning (NeurIPS 2023 Dataset and Benchmark Track) Diffusion as Policy + Diffusion policy: Visuomotor policy learning via action diffusion (RSS 2023) Algorithmic Level (Diffusion Variations) SGM + Goal-conditioned imitation learning using score-based diffusion policies (RSS 2023) + Movement Primitive Diffusion: Learning Gentle Robotic Manipulation of Deformable Objects + Precise Pick-and-Place using Score-Based Diffusion Networks Consistency Model + Consistency policy: Accelerated visuomotor policies via consistency distillation (RSS 2024) + ManiCM: Real-time 3D Diffusion Policy via Consistency Model for Robotic Manipulation Flow Matching + Vision-Language-Affordance-based Robot Manipulation with Flow Matching (Sep 2024) + Flow Matching Imitation Learning for Multi-Support Manipulation + FlowPolicy: Enabling Fast and Robust 3D Flow-based Policy via Consistency Flow Matching for Robot Manipulation + ACTIONFLOW: Equivariant, Accurate, and Efficient Policies with Spatially Symmetric Flow Matching + Learning Robotic Manipulation Policies from Point Clouds with Conditional Flow Matching + Fast and Robust Visuomotor Riemannian Flow Matching Policy + Safe Flow Matching: Robot Motion Planning with Control Barrier Functions Architecture Level DiT + RDT-1B: a Diffusion Foundation Model for Bimanual Manipulation (Dec 2024) + Diffusion Transformer Policy + Scaling Diffusion Policy in Transformer to 1 Billion Parameters for Robotic Manipulation + Prediction with Action: Visual Policy Learning via Joint Denoising Process + The Ingredients for Robotic Diffusion Transformers Equivariant Architecture + EquiBot: SIM (3)-Equivariant Diffusion Policy for Generalizable and Data Efficient Learning (CoRL 2024) + Equivariant Diffusion Policy (CoRL 2024) + Diffusion-EDFs: Bi-equivariant Denoising Generative Modeling on SE(3) for Visual Robotic Manipulation + ET-SEED: Efficient Trajectory-Level SE(3) Equivariant Diffusion Policy Mamba Models + MaIL: Improving Imitation Learning with Mamba + Mamba Policy: Towards Efficient 3D Diffusion Policy with Hybrid Selective State models Hierarchical Design + SkillDiffuser: Interpretable Hierarchical Planning via Skill Abstractions in Diffusion-Based T",
       "summary_kind": "llm"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 33.592,
     "score_breakdown": {
       "title_keyword": 6.0,
@@ -2049,7 +2078,9 @@
       "readme": "Overview Reinforcement learning implementation of quadruped locomotion in IsaacLab. It includes support for different robots available at DLS, with scripts for both sim-to-sim and sim-to-real transfer. Features: - Concurrent State Estimator - Rapid Motor Adaptation - Morphological Symmetries - Adversarial Motion Priors (big thanks to Giuseppe L'erario and Giulio Romualdi) - Identification of robot parameters for sim2real using pace via our repo sim2real-robot-identification - Sim-to-Sim in Mujoco - Sim-to-Real using ROS2 Features work in progress - done but not tested: - Dagger for depth-to-heightmap policy distillation - Depth-to-Heightmap NN for avoiding the distillation step above Real-world deployment via: - muse for state estimation (if no concurrent state estimation is used) - unitree-ros2-dls for unitree robot communication A list of robots and environments available is described below: Robot Model Environment Name Pattern --------------------- ------------------------------------------------------------ Aliengo, Go2, B2, HyQReal2 Locomotion- RobotModel -Flat-Blind Locomotion- RobotModel -Rough-Blind Locomotion- RobotModel -Rough-Vision Installation and Runs If you want only to deploy a trained policy on your robot, continue on README DEPLOY otherwise on README TRAIN. For the train, check first the compatibility with IsaacLab and rsl-rl at the top of this readme. They indicate the releases that we tested. Citing this work If you find the work useful and you adopt Morphological Symmetries, please consider citing one of our works: Leveraging Symmetry in RL-based Legged Locomotion Control (IROS-2024) Morphological symmetries in robotics (IJRR-2025): How to contribute PRs are very welcome (search for TODO in the issue, or add what you like)! Maintainer This repository is maintained by Giulio Turrisi.",
       "summary_kind": "llm"
     },
-    "tags": [],
+    "tags": [
+      "#RL"
+    ],
     "score": 33.455,
     "score_breakdown": {
       "title_keyword": 6.0,
@@ -2087,7 +2118,9 @@
       "readme": "Isaac Lab-Arena Composable Environment Creation and Policy Evaluation for Robotics Simulation Documentation · NVIDIA Blog Post · Report a Bug · Discussions --- [!WARNING] Alpha Software — Not an Early Access or General Availability Release. Isaac Lab-Arena v0.2.x is an early code release intended to give the community a practical starting point to experiment, provide feedback, and influence future design direction. APIs are unstable and will change. Features are incomplete. Documentation is evolving. Do not use this in production. See Project Status for details. [!NOTE] Changes on main contains an in development version based on v0.2.0, based on Isaac Lab 3.0. --- Overview Isaac Lab-Arena is an open-source extension to NVIDIA Isaac Lab for simplified task curation and robotic policy evaluation at scale. It provides a composable architecture where environments are assembled on-the-fly from independent, reusable building blocks — eliminating the redundant boilerplate that plagues traditional task library development. Instead of hand-writing and maintaining a separate configuration for every combination of robot, object, and scenario, Arena lets you compose environments from three independent primitives: Primitive Description ----------- ------------- Scene The physical environment layout — a collection of objects, furniture, fixtures Embodiment The robot and its observations, actions, sensors, and controllers Task The objective — what the robot should accomplish (pick-and-place, open door, etc.) The ArenaEnvBuilder composes these primitives into a standard ManagerBasedRLEnvCfg that runs natively in Isaac Lab. Why Isaac Lab-Arena? With the rise of generalist robot policies (e.g., GR00T N, pi0, SmolVLA), there is an urgent need to evaluate these policies across many diverse tasks and environments. Traditional approaches suffer from: - Code duplication — each task variation (different object, different robot) requires a near-copy of the same configuration - Maintenance burden — N robots × M objects × K scenes = an explosion of configs to keep in sync - Slow iteration — researchers spend more time wrangling configs than running experiments Arena solves this by making environment variation a first-class concept. Swap an object, change a robot, or modify a scene — all without duplicating a single line of task logic. Key Features - LEGO-like Composable Environments — Mix and match scenes, embodiments, and tasks independently - On-the-fly Assembly — Environments are built at runtime; no duplicate config files to maintain. - New Sequential Task Chaining — Chain atomic skills (e.g. Pick + Walk + Place + …) to create complex long-horizon tasks. - New Natural Language Object Placement — Define scene layouts using semantic relationships like \"on\" or \"next to\", instead of manually specified coordinates. - Integrated Evaluation — Extensible metrics and evaluation pipelines for policy benchmarking - New Large-scale Parallel Evaluations with Heterogeneous Objects — Evaluate policy on multiple parallel environments, each with different objects, to maximize evaluation throughput. - New RL Workflow Support and Seamless Interoperation with Isaac Lab: Plug Isaac Lab - Arena environments into Isaac Lab workflows for Reinforcement learning and Data generation for imitation learning. Quick Start Prerequisites - Linux (Ubuntu 22.04+) - NVIDIA GPU (see Isaac Sim hardware requirements) - Docker and NVIDIA Container Toolkit - Git Installation Isaac Lab-Arena currently supports installation from source inside a Docker container . Note: The Docker script automatically mounts $HOME/datasets , $HOME/models , and $HOME/eval from your host into the container. For detailed setup instructions (including server-client mode for GR00T), see the Installation Guide. Usage Example Compose a Franka arm in a kitchen scene with a couple of objects: Explore more examples in the documentation, including: Example Description --------- ------------- Imitation Learning G1 Loco-M",
       "summary_kind": "llm"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 33.388,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -2165,7 +2198,9 @@
       "summary_kind": "llm",
       "full_text": "Vector OS: Cross-embodiment robot operating system with industrial-grade autonomous navigation, natural   language control, and sim-to-real transfer. Unitree Go2 + SO-ARM101. CMU Robotics Institute."
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 33.276,
     "score_breakdown": {
       "title_keyword": 6.0,
@@ -2247,7 +2282,6 @@
       "full_text": "Framework for measuring sim-to-real gaps in robot joint motions. Supports different humanoids with physics simulation, real hardware data collection, and statistical analysis."
     },
     "tags": [
-      "#RL",
       "#Humanoid"
     ],
     "score": 33.23,
@@ -2411,8 +2445,7 @@
       "full_text": "This repository provides tutorials for reinforcement learning and imitation learning using ROBOTIS robots, and supports Sim2Real functionality for deploying the learned policies on real robots."
     },
     "tags": [
-      "#RL",
-      "#IL"
+      "#RL"
     ],
     "score": 33.008,
     "score_breakdown": {
@@ -2503,7 +2536,9 @@
       "summary_kind": "llm",
       "full_text": "RoboVerse: Towards a Unified Platform, Dataset and Benchmark for Scalable and Generalizable Robot Learning"
     },
-    "tags": [],
+    "tags": [
+      "#IL"
+    ],
     "score": 32.601,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -2759,7 +2794,9 @@
       "summary_kind": "llm",
       "full_text": "This repo contains my snippet and tutorials for Lie Group and Lie Algebra, Topology and Configuration of Robot and Space ,IMU, ROS2 Gazebo Integration, State Estimation, VIO, LIO, and Deep Learning based SLAM"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 31.656,
     "score_breakdown": {
       "title_keyword": 6.0,
@@ -2794,7 +2831,9 @@
       "license": "BSD-3-Clause",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 31.338,
     "score_breakdown": {
       "title_keyword": 6.0,
@@ -2927,7 +2966,9 @@
       "summary_kind": "llm",
       "full_text": "All the source code for \"Robot Learning: A Tutorial\". Get involved to be featured in the next iteration!"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 30.853,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -3020,7 +3061,9 @@
       "first_seen": "2026-05-18",
       "thumbnail": "https://user-images.githubusercontent.com/8695500/193484553-2da66824-4461-4aca-ad8c-b17c05bef067.png"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 30.692,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -3250,7 +3293,9 @@
       "first_seen": "2026-05-18",
       "thumbnail": "https://private-user-images.githubusercontent.com/12837145/257031961-04aff6da-f9fa-4f5f-abc6-cfcd70c6cd90.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzkyNDYxNjEsIm5iZiI6MTc3OTI0NTg2MSwicGF0aCI6Ii8xMjgzNzE0NS8yNTcwMzE5NjEtMDRhZmY2ZGEtZjlmYS00ZjVmLWFiYzYtY2ZjZDcwYzZjZDkwLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA1MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwNTIwVDAyNTc0MVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWU5Y2I5YzJmYjM1ZDIxOWIxZDVmMDk3MTgxYzVjMWU5MjAyMGYxYjQ4M2ExZmMwZDIwNzZmN2NiZmUxMzQ3NjYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.BLIAVYCJbmRJukP-a7FkS1Jb_5hEhzvBlAefpyNC_OM"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 29.766,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -3288,8 +3333,7 @@
       "full_text": "Official implementation for pi0 steering via DSRL, Steering Your Diffusion Policy with Latent Space Reinforcement Learning (CoRL 2025)"
     },
     "tags": [
-      "#RL",
-      "#IL"
+      "#RL"
     ],
     "score": 29.568,
     "score_breakdown": {
@@ -3339,7 +3383,9 @@
       "summary_kind": "llm",
       "full_text": "A  Python-based lightweight robot simulator designed for navigation, control, and learning"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 29.384,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -3472,7 +3518,7 @@
       "full_text": "This repository provides a set of reinforcement learning tasks for Booster robots using Isaac Lab."
     },
     "tags": [
-      "#RL"
+      "#Other"
     ],
     "score": 29.124,
     "score_breakdown": {
@@ -3602,7 +3648,9 @@
       "summary_kind": "llm",
       "full_text": "A modular, open and non-proprietary toolkit for core robotic functionalities by harnessing deep learning"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 29.086,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -3645,7 +3693,7 @@
       "full_text": "A software framework integrating various imitation learning methods and benchmark environments for robotic manipulation"
     },
     "tags": [
-      "#IL"
+      "#Other"
     ],
     "score": 29.056,
     "score_breakdown": {
@@ -3782,7 +3830,9 @@
       "summary_kind": "llm",
       "full_text": "[ICRA 2026] Re3Sim: Generating High-Fidelity Simulation Data via 3D-Photorealistic Real-to-Sim for Robotic Manipulation"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 28.641,
     "score_breakdown": {
       "title_keyword": 6.0,
@@ -4121,7 +4171,9 @@
       "first_seen": "2026-05-18",
       "thumbnail": "https://raw.githubusercontent.com/allenai/molmospaces/HEAD/docs/images/MolmoSpacesLogo.png"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 27.883,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -4241,7 +4293,9 @@
       "first_seen": "2026-05-18",
       "thumbnail": "https://raw.githubusercontent.com/GaTech-RL2/EgoVerse/HEAD/./assets/egoverse.png"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 27.645,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -4321,7 +4375,9 @@
       "license": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 27.421,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -4397,7 +4453,9 @@
       "first_seen": "2026-05-18",
       "thumbnail": "https://raw.githubusercontent.com/TJU-Aerial-Robotics/YOPO-Rally/HEAD/.media/yopo-sim.jpg"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 27.326,
     "score_breakdown": {
       "title_keyword": 6.0,
@@ -4435,7 +4493,9 @@
       "summary_kind": "llm",
       "full_text": "Hobot StereoNet is a high-performance, deep learning-based stereo depth estimation algorithm developed by D-Robotics. It processes stereo image pairs to generate accurate depth maps in real-time, enabling 3D perception for robotics and computer vision applications."
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 27.307,
     "score_breakdown": {
       "title_keyword": 6.0,
@@ -4635,7 +4695,9 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 26.665,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -4671,7 +4733,9 @@
       "first_seen": "2026-05-18",
       "thumbnail": "https://raw.githubusercontent.com/NeuracoreAI/neuracore/HEAD/./docs/assets/neuracore_logo.jpg"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 26.611,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -4724,7 +4788,9 @@
       "first_seen": "2026-05-18",
       "thumbnail": "https://private-user-images.githubusercontent.com/62947045/474230167-890e3a9d-5cbd-46a5-9317-37d0f2511684.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzkyNDYyMzUsIm5iZiI6MTc3OTI0NTkzNSwicGF0aCI6Ii82Mjk0NzA0NS80NzQyMzAxNjctODkwZTNhOWQtNWNiZC00NmE1LTkzMTctMzdkMGYyNTExNjg0LmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA1MjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwNTIwVDAyNTg1NVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWE5ZmZiMTQ2Y2QyZjg2MGQyOWE2YjVlOGRlNjQ3Y2FkNDY3MGM5ZWFjMmM4N2U5OGM1NDg1YjMwMTJlOThlNDgmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRmdpZiJ9.ce1zTzwSOKz_3MCo4Q9qpKKuqLB_oD76W0QJxHSqWFQ"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 26.567,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -4800,7 +4866,9 @@
       "first_seen": "2026-05-18",
       "thumbnail": "https://github.com/toxuandung/DRL_Navigation_Robot_ROS2_Foxy/raw/main/Test_example_env1.gif"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 26.395,
     "score_breakdown": {
       "title_keyword": 6.0,
@@ -4945,7 +5013,9 @@
       "summary_kind": "llm",
       "full_text": "[TRO 2025] NeuPAN: Direct Point Robot Navigation with End-to-End Model-based Learning."
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 26.206,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -5046,7 +5116,9 @@
       "summary_kind": "llm",
       "full_text": "A differentiable physics engine and multibody dynamics library for control and robot learning."
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 25.84,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -5129,7 +5201,9 @@
       "first_seen": "2026-05-18",
       "thumbnail": "https://raw.githubusercontent.com/zhaozijie2022/LocoLeggedWheel/HEAD/docs/demos/gross.gif"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 25.636,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -5177,7 +5251,9 @@
       "summary_kind": "llm",
       "full_text": "Pytorch implementation of the models RT-1-X and RT-2-X from the paper: \"Open X-Embodiment: Robotic Learning Datasets and RT-X Models\""
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 25.633,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -5215,7 +5291,9 @@
       "summary_kind": "llm",
       "full_text": "🤖 RoboLLM Hub | A curated collection of embodied AI and robot learning resources.具身智能与机器人学习资源集合，包含最新论文、代码与工具。👉"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 25.134,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -5305,7 +5383,9 @@
       "first_seen": "2026-05-18",
       "thumbnail": "https://raw.githubusercontent.com/HorizonRobotics/RoboTransfer/HEAD/assets/pin/robotransfer.jpg"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 24.998,
     "score_breakdown": {
       "title_keyword": 6.0,
@@ -5388,7 +5468,8 @@
       "full_text": "While reinforcement learning (RL) enables robots to acquire skills autonomously, its real-world deployment is severely limited by inefficient and unsafe exploration."
     },
     "tags": [
-      "#RL"
+      "#RL",
+      "#Manipulator"
     ],
     "score": 24.883,
     "score_breakdown": {
@@ -5437,7 +5518,7 @@
       "full_text": "RealROS is an open-source Python framework that seamlessly integrates with ROS (Robot Operating System) to create real-world robotics environments tailored for reinforcement learning (RL) applications. This modular framework simplifies RL development, enabling real-time training with physical robots"
     },
     "tags": [
-      "#RL"
+      "#Other"
     ],
     "score": 24.871,
     "score_breakdown": {
@@ -5692,7 +5773,9 @@
       "license": "MIT",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 23.481,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -5727,7 +5810,9 @@
       "license": "MIT",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 23.431,
     "score_breakdown": {
       "title_keyword": 6.0,
@@ -5762,7 +5847,9 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 22.962,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -5797,7 +5884,9 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 22.83,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -5832,7 +5921,9 @@
       "license": "NOASSERTION",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 22.739,
     "score_breakdown": {
       "title_keyword": 6.0,
@@ -5870,7 +5961,7 @@
       "full_text": "Reinforcement Learning framework for human-aware mobile robot navigation in MuJoCo environments using laser_based perception"
     },
     "tags": [
-      "#RL"
+      "#Other"
     ],
     "score": 22.617,
     "score_breakdown": {
@@ -5952,7 +6043,9 @@
       "license": "NOASSERTION",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 22.261,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -6028,7 +6121,9 @@
       "summary_kind": "llm",
       "full_text": "Perceptive Learning for Legged Robots in IsaacLab. | LocoTouch: Learning Dynamic Quadrupedal Transport with Tactile Sensing (CoRL'25)"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 22.141,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -6186,7 +6281,9 @@
       "license": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 21.746,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -6223,7 +6320,9 @@
       "summary_kind": "llm",
       "full_text": "Official implementation for paper \"Adaptive Compliance Policy Learning Approximate Compliance for Diffusion Guided Control\"."
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 21.708,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -6260,7 +6359,9 @@
       "summary_kind": "llm",
       "full_text": "[IEEE RA-L] REALM: A Real-to-Sim Validated Benchmark for Generalization in Robotic Manipulation"
     },
-    "tags": [],
+    "tags": [
+      "#VLA"
+    ],
     "score": 21.655,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -6345,7 +6446,9 @@
       "license": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 21.11,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -6460,7 +6563,9 @@
       "summary_kind": "llm",
       "full_text": "[CVPR 2026] The official implemention for \"PAM: A Pose–Appearance–Motion Engine for Sim-to-Real HOI Video Generation\""
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 20.412,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -6756,7 +6861,9 @@
       "license": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 19.559,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -6869,7 +6976,9 @@
       "license": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 19.203,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -6904,7 +7013,9 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 19.085,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -6986,7 +7097,9 @@
       "license": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 18.716,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -7106,7 +7219,9 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 18.423,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -7141,7 +7256,9 @@
       "license": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 17.96,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -7302,7 +7419,9 @@
       "comment": "Accepted by the 35th International Joint Conference on Artificial Intelligence (IJCAI 2026). 9 pages, 4 figures, 3 tables",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 17.872,
     "score_breakdown": {
       "title_keyword": 6.0,
@@ -7341,7 +7460,9 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 17.856,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -7426,7 +7547,9 @@
       "comment": "Accepted at IFAC World Congress 2026",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 17.854,
     "score_breakdown": {
       "title_keyword": 6.0,
@@ -7788,7 +7911,9 @@
       "license": "MIT",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 17.161,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -7969,7 +8094,9 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 16.379,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -8044,7 +8171,9 @@
       "license": "MIT",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 15.848,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -8116,7 +8245,9 @@
       "license": "MIT",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 15.803,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -8151,7 +8282,9 @@
       "license": "MIT",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 15.385,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -8188,7 +8321,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 14.886,
     "score_breakdown": {
       "title_keyword": 6.0,
@@ -8277,7 +8412,9 @@
       "comment": "On-going work",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 14.821,
     "score_breakdown": {
       "title_keyword": 9.0,
@@ -8400,6 +8537,7 @@
       "first_seen": "2026-05-18"
     },
     "tags": [
+      "#RL",
       "#VLA"
     ],
     "score": 13.876,
@@ -8476,7 +8614,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 13.867,
     "score_breakdown": {
       "title_keyword": 9.0,
@@ -8743,7 +8883,9 @@
       "first_seen": "2026-05-18",
       "thumbnail_path": "thumbnails/arxiv/2605.16257.jpg"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 11.889,
     "score_breakdown": {
       "title_keyword": 6.0,
@@ -8783,7 +8925,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 11.869,
     "score_breakdown": {
       "title_keyword": 6.0,
@@ -8861,7 +9005,9 @@
       "comment": "29 pages, 7 figures, supplemental videos link is mentioned in the paper",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 11.839,
     "score_breakdown": {
       "title_keyword": 6.0,
@@ -8942,7 +9088,9 @@
       "comment": "9 pages, 12 figures, currently under review",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 10.877,
     "score_breakdown": {
       "title_keyword": 6.0,
@@ -8981,7 +9129,9 @@
       "comment": "Work in progress version accepted to the Recent Advances in Robotic Perception for Forestry",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 10.86,
     "score_breakdown": {
       "title_keyword": 6.0,
@@ -9151,7 +9301,9 @@
       "comment": "This manuscript has been submitted for possible publication. 14 pages, 5 figures",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 9.865,
     "score_breakdown": {
       "title_keyword": 6.0,
@@ -9189,7 +9341,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 9.846,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -9229,7 +9383,10 @@
       "comment": "Project webpage at https://lambdavi.github.io/gap",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#IL",
+      "#VLA"
+    ],
     "score": 8.879,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -9272,7 +9429,9 @@
       "comment": "Accepted to Robotics: Science and Systems (RSS) 2026. 11 pages, 5 figures, 2 tables. Project website: https://a2r-lab.org/TinySDP/",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 8.82,
     "score_breakdown": {
       "title_keyword": 6.0,
@@ -9313,7 +9472,9 @@
       "thumbnail_path": "thumbnails/arxiv/2605.15975.jpg"
     },
     "tags": [
-      "#RL"
+      "#RL",
+      "#IL",
+      "#VLA"
     ],
     "score": 7.883,
     "score_breakdown": {
@@ -9355,7 +9516,9 @@
       "comment": "28 pages, 14 figures",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 7.877,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -9392,7 +9555,9 @@
       "comment": "17 pages",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 7.833,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -9436,7 +9601,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 6.887,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -9473,7 +9640,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 6.886,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -9554,7 +9723,9 @@
       "comment": "Accepted for publication in the Proceedings of ACM Designing Interactive Systems (2026)",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 6.881,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -9594,7 +9765,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 6.879,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -9641,7 +9814,9 @@
       "first_seen": "2026-05-18"
     },
     "tags": [
-      "#Manipulator"
+      "#RL",
+      "#Manipulator",
+      "#MobileManipulator"
     ],
     "score": 6.875,
     "score_breakdown": {
@@ -9682,7 +9857,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 6.873,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -9720,7 +9897,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 6.871,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -9759,7 +9938,9 @@
       "comment": "9 pages, 5 figures",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 6.864,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -9854,7 +10035,9 @@
       "comment": "16 pages, 6 figures, 2 tables. Accepted at IEEE ITSC 2026",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 6.849,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -9892,7 +10075,9 @@
       "comment": "7 pages, 7 figures",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 6.832,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -9929,7 +10114,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 6.83,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -9968,7 +10155,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 6.82,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -10012,7 +10201,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 6.82,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -10052,7 +10243,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 5.888,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -10138,6 +10331,7 @@
       "first_seen": "2026-05-18"
     },
     "tags": [
+      "#IL",
       "#Bimanual"
     ],
     "score": 5.885,
@@ -10313,7 +10507,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 5.877,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -10350,7 +10546,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 5.877,
     "score_breakdown": {
       "title_keyword": 3.0,
@@ -10473,7 +10671,9 @@
       "comment": "19 pages, 10 figures",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 5.864,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -10790,7 +10990,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 4.872,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -10834,7 +11036,9 @@
       "comment": "15 pages",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 4.867,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -10916,7 +11120,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 4.822,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -10956,7 +11162,9 @@
       "comment": "Accepted for publication at IEEE ITSC 2026",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 3.886,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -10995,7 +11203,9 @@
       "comment": "Early Accepted by MICCAI 2026",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 3.885,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -11037,7 +11247,9 @@
       "comment": "Under Review",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 3.885,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -11074,7 +11286,9 @@
       "comment": "Accepted by the IFAC World Congress 2026",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 3.884,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -11115,7 +11329,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 3.882,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -11197,7 +11413,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#RL"
+    ],
     "score": 3.877,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -11237,7 +11455,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 3.877,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -11276,7 +11496,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 3.866,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -11319,7 +11541,9 @@
       "comment": "RSS 2026",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 3.855,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -11356,7 +11580,9 @@
       "comment": "9 pages, 3 figures, Accepted May 2026 for publication in IEEE Robotics and Automation Letters (RA-L)",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 3.854,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -11397,7 +11623,9 @@
       "comment": "Accepted at IEEE/ASME AIM 2026",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 3.846,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -11442,7 +11670,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 3.838,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -11481,7 +11711,9 @@
       "comment": "Poster at 2026 AI-Driven Safe Aerial Robotics Workshop",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 3.821,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -11521,7 +11753,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 3.82,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -11567,7 +11801,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 2.888,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -11611,7 +11847,9 @@
       "comment": "ICLR 2026",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#RL"
+    ],
     "score": 2.885,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -11648,7 +11886,9 @@
       "comment": "Accepted at IEEE International Conference on Image Processing 2026, 6 pages",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 2.885,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -11686,7 +11926,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 2.884,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -11729,7 +11971,9 @@
       "comment": "30 pages, 5 main figures, 3 tables, appendices with interface screenshots and implementation details; pilot-stage framework and single-manuscript validation study",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 2.884,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -11780,7 +12024,10 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#RL",
+      "#VLA"
+    ],
     "score": 2.883,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -11825,7 +12072,9 @@
       "comment": "27 pages, 11 figures, 3 tables",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 2.883,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -11863,7 +12112,9 @@
       "comment": "Preprint of VEHITS 2026 : 12th International Conference on Vehicle Technology and Intelligent Transport Systems",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 2.883,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -11902,7 +12153,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 2.882,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -11948,7 +12201,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 2.882,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -11988,7 +12243,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 2.881,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -12024,7 +12281,9 @@
       "comment": "11 pages + appendices",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 2.881,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -12061,7 +12320,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 2.879,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -12099,7 +12360,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 2.877,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -12180,7 +12443,9 @@
       "comment": "4 figures, 19 tables, 23 pages (including appendix and reference)",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 2.874,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -12221,7 +12486,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 2.873,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -12261,7 +12528,9 @@
       "comment": "26 Pages, 12 figures, Accepted to AAMAS 2026",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 2.866,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -12306,7 +12575,9 @@
       "comment": "Project page: https://articraft3d.github.io/",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 2.855,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -12419,7 +12690,9 @@
       "comment": null,
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 2.842,
     "score_breakdown": {
       "title_keyword": 0.0,
@@ -12505,7 +12778,9 @@
       "comment": "Preprint; 12 pages, 7 figures, 10 tables",
       "first_seen": "2026-05-18"
     },
-    "tags": [],
+    "tags": [
+      "#Other"
+    ],
     "score": 2.822,
     "score_breakdown": {
       "title_keyword": 0.0,
