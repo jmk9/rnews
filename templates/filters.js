@@ -11,10 +11,6 @@
   const now = Date.now();
   const DAY_MS = 24 * 3600 * 1000;
 
-  // How many matching items to show per section before "Show more".
-  const PAGE = 40;
-  const shownLimit = { code: PAGE, news: PAGE, papers: PAGE };
-
   function sectionKey(it) {
     const section = it.closest("section.section");
     if (!section) return "code";
@@ -100,8 +96,7 @@
   // ---- Apply filters ------------------------------------------------------
   function apply() {
     let visible = 0;
-    const matched = { code: 0, news: 0, papers: 0 };  // total passing filters
-    const drawn = { code: 0, news: 0, papers: 0 };    // actually shown (<= limit)
+    const matched = { code: 0, news: 0, papers: 0 };
     const timeLimit = state.time ? parseFloat(state.time) : Infinity;
 
     for (const it of items) {
@@ -114,21 +109,11 @@
         it.__ageDays <= timeLimit &&
         (searchTerms.length === 0 || searchTerms.every((t) => it.__searchText.indexOf(t) !== -1));
 
-      if (!ok) {
-        it.style.display = "none";
-        highlightTitle(it, false);
-        continue;
-      }
-      const k = it.__section;
-      matched[k]++;
-      if (drawn[k] < shownLimit[k]) {
-        it.style.display = "";
-        drawn[k]++;
+      it.style.display = ok ? "" : "none";
+      highlightTitle(it, ok);
+      if (ok) {
         visible++;
-        highlightTitle(it, true);
-      } else {
-        it.style.display = "none";  // beyond the page limit
-        highlightTitle(it, false);
+        matched[it.__section]++;
       }
     }
 
@@ -136,17 +121,6 @@
     sectionCounts.forEach((el) => {
       const key = el.dataset.section;
       if (key && matched[key] !== undefined) el.textContent = matched[key].toString();
-    });
-    // Show-more buttons per section
-    document.querySelectorAll(".show-more").forEach((btn) => {
-      const k = btn.dataset.section;
-      const remaining = matched[k] - Math.min(drawn[k], shownLimit[k]);
-      if (remaining > 0) {
-        btn.hidden = false;
-        btn.textContent = "Show more (" + remaining + ")";
-      } else {
-        btn.hidden = true;
-      }
     });
     if (emptyState) emptyState.hidden = visible !== 0;
   }
@@ -175,30 +149,9 @@
       document.querySelectorAll('.chip[data-filter="' + filter + '"]').forEach((b) => {
         b.classList.toggle("active", (b.dataset.value || "") === value);
       });
-      // Reset paging when filters change so you don't land mid-list.
-      shownLimit.code = shownLimit.news = shownLimit.papers = PAGE;
       if (filter === "sort") applySort();
       apply();
     });
-  });
-
-  // ---- Show more ----------------------------------------------------------
-  // Inject a "Show more" button at the end of each section's item list.
-  document.querySelectorAll("section.section").forEach((section) => {
-    const container = section.querySelector(".items");
-    if (!container) return;
-    const k = section.id === "section-news" ? "news"
-      : (section.id === "section-papers-only" ? "papers" : "code");
-    const btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "show-more";
-    btn.dataset.section = k;
-    btn.hidden = true;
-    btn.addEventListener("click", () => {
-      shownLimit[k] += PAGE;
-      apply();
-    });
-    container.after(btn);
   });
 
   // ---- Broken thumbnail -> placeholder ------------------------------------
