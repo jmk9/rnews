@@ -15,12 +15,12 @@
      loading="lazy" defers the 1500-card image load until scroll. #}
   {% set thumb_path = it.extra.thumbnail_path if it.extra else none %}
   {% set thumb_url = it.extra.thumbnail if it.extra else none %}
-  {% if thumb_path %}
-    <img class="item-thumb" src="{{ url_root }}{{ thumb_path }}"
-         loading="lazy" alt="" onerror="this.style.display='none'" />
-  {% elif thumb_url %}
-    <img class="item-thumb" src="{{ thumb_url }}"
-         loading="lazy" alt="" onerror="this.style.display='none'" />
+  {% if thumb_path or thumb_url %}
+    {# data-source lets filters.js swap a broken image for a placeholder
+       instead of leaving a blank gap (onerror used to just hide it). #}
+    <img class="item-thumb" data-source="{{ it.source }}"
+         src="{{ (url_root ~ thumb_path) if thumb_path else thumb_url }}"
+         loading="lazy" alt="" />
   {% else %}
     <div class="item-thumb item-thumb-placeholder item-thumb-{{ it.source }}">
       <span>{{ it.source }}</span>

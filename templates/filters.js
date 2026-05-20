@@ -125,4 +125,16 @@
     });
   });
 
+  // ---- Broken thumbnail -> placeholder (not a blank gap) -----------------
+  // github README images and news og:images sometimes 404. Replace the failed
+  // <img> with a source-colored placeholder so the card layout stays uniform.
+  document.querySelectorAll("img.item-thumb").forEach((img) => {
+    img.addEventListener("error", () => {
+      const src = img.dataset.source || "arxiv";
+      const ph = document.createElement("div");
+      ph.className = "item-thumb item-thumb-placeholder item-thumb-" + src;
+      ph.innerHTML = "<span>" + src + "</span>";
+      img.replaceWith(ph);
+    });
+  });
 })();

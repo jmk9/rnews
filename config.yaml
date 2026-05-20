@@ -241,7 +241,8 @@ report:
 summarizer:
   provider: codex
   codex_binary: ""                # auto-discovered from the VS Code extension if empty
-  codex_model: ""                 # optional, e.g. gpt-5-mini
+  codex_model: ""                 # optional, e.g. gpt-5-mini (lighter = less quota)
+  codex_reasoning_effort: low     # low/minimal — summaries don't need xhigh (saves ChatGPT quota)
   openai_model: gpt-4o-mini       # used when provider: openai
   openai_base_url: ""             # optional: OpenAI-compatible endpoint
   claude_model: claude-haiku-4-5-20251001

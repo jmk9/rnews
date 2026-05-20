@@ -30,23 +30,22 @@ log = logging.getLogger(__name__)
 
 _SENT_SPLIT = re.compile(r"(?<=[.!?])\s+(?=[A-Z0-9])")
 
-_SUMMARY_PROMPT = """You are summarizing a piece of robot-AI work for a researcher who scans many items per day. They want to decide in 5 seconds whether to open the source.
+_SUMMARY_PROMPT = """Write a natural 2–3 sentence summary of this robot-AI work for a researcher scanning many items a day. Describe it the way you'd explain it to a knowledgeable colleague — flowing, concrete prose that makes clear what it does and what's interesting about it.
 
 Source type: {source}
 Title: {title}
 
-Original text:
+Text:
 {text}
 
-Write a tight summary in 2–3 sentences (max ~350 characters total) that captures:
-1. What this is (concrete object — a method, dataset, demo, repo, news event).
-2. The key claim or capability — with numbers if the original gives them.
-3. What makes it actionable (code released? real-robot tested? specific benchmark? funding amount?).
+For a paper, convey the key idea or mechanism and the main result. For a repo or tool, convey what it actually does and what it's good for. For news, convey what happened and why it matters.
 
-Rules:
-- No filler openings ("This paper presents", "We propose", "This repository contains").
-- Concrete language. If the original is vague, stay vague rather than hallucinate.
-- Plain prose. No bullets, no headings, no quote marks.
+Hard rules:
+- Write natural prose. Do NOT use meta-labels or scaffolding such as "the novelty is", "the main contribution is", "the key capability is", "this is actionable because", "what's notable is". Just describe the work directly so the importance comes through on its own.
+- Do NOT open with "This paper", "We propose", "This repository", "A framework for", "This work", "GitHub repo for".
+- Be specific and concrete — name the method, mechanism, benchmark, dataset, or numbers when the text gives them. Avoid empty phrases like "novel approach", "various tasks", or "state-of-the-art" used without specifics.
+- If the text is too thin to say anything substantive, just describe plainly what the thing is. Don't pad or invent.
+- 2–3 sentences, one paragraph, no bullets, headings, or quotation marks.
 - Output ONLY the summary text. No preamble, no sign-off."""
 
 
@@ -230,11 +229,16 @@ class CodexCLISummarizer:
         self,
         binary: str | None = None,
         model: str | None = None,
+        reasoning_effort: str | None = "low",
         timeout: int = 150,
         fallback: "AbstractTruncationSummarizer | None" = None,
     ) -> None:
         self.binary = binary or self._discover_binary()
         self.model = model or None
+        # Codex defaults to gpt-5.5 + xhigh reasoning, which is overkill for
+        # summarization and burns the ChatGPT usage limit fast. Low effort is
+        # plenty for a 3-sentence summary and stretches the daily quota.
+        self.reasoning_effort = reasoning_effort or None
         self.timeout = timeout
         self._fallback = fallback or AbstractTruncationSummarizer(max_chars=360)
 
@@ -247,40 +251,63 @@ class CodexCLISummarizer:
         return None
 
     def summarize(self, text: str, *, source: str = "", title: str = "") -> str:
+        """Return a summary, or "" if the CLI call failed / echoed the input.
+        Returning "" lets summarize_items mark it as truncation (retryable) so a
+        flaky codex call never gets frozen in as a fake 'llm' summary."""
         if not text or not text.strip():
             return ""
         if len(text.strip()) < 80:
             return text.strip()
         if not self.binary or not os.path.exists(self.binary):
-            return self._fallback.summarize(text)
+            return ""
 
         prompt = _SUMMARY_PROMPT.format(
             source=source or "unknown",
             title=title or "(no title)",
             text=text[:6000],
         )
+        for attempt in range(2):  # one retry — codex occasionally returns junk
+            out = self._run_once(prompt)
+            if out and not self._looks_like_echo(out, text):
+                return out
+            log.warning("codex summary attempt %d unusable for %r; %s",
+                        attempt + 1, (title or "")[:40],
+                        "retrying" if attempt == 0 else "giving up")
+        return ""
+
+    def _run_once(self, prompt: str) -> str:
         out_fd, out_path = tempfile.mkstemp(suffix=".txt", prefix="rnews_codex_")
         os.close(out_fd)
         try:
             cmd = [self.binary, "exec", "--skip-git-repo-check", "-o", out_path]
             if self.model:
                 cmd += ["-m", self.model]
+            if self.reasoning_effort:
+                cmd += ["-c", f"model_reasoning_effort={self.reasoning_effort}"]
             cmd.append(prompt)
             subprocess.run(
                 cmd, capture_output=True, timeout=self.timeout,
                 cwd=tempfile.gettempdir(), check=False,
             )
             with open(out_path, "r", encoding="utf-8") as f:
-                out = f.read().strip()
-            return out or self._fallback.summarize(text)
+                return f.read().strip()
         except (subprocess.TimeoutExpired, OSError) as exc:
-            log.warning("CodexCLISummarizer failed (%s); falling back", exc)
-            return self._fallback.summarize(text)
+            log.warning("CodexCLISummarizer call failed (%s)", exc)
+            return ""
         finally:
             try:
                 os.unlink(out_path)
             except OSError:
                 pass
+
+    @staticmethod
+    def _looks_like_echo(result: str, src: str) -> bool:
+        """True if the 'summary' is really just the input handed back (codex
+        sometimes echoes, and the truncation fallback would too)."""
+        r, s = result.strip(), src.strip()
+        if len(r) > 320 and r[:100].lower() == s[:100].lower():
+            return True
+        return False
 
 
 def make_summarizer(cfg: dict) -> Summarizer:
@@ -305,6 +332,7 @@ def make_summarizer(cfg: dict) -> Summarizer:
         return CodexCLISummarizer(
             binary=scfg.get("codex_binary") or None,
             model=scfg.get("codex_model") or None,
+            reasoning_effort=scfg.get("codex_reasoning_effort", "low") or None,
         )
     if provider == "openai":
         return OpenAISummarizer(
@@ -315,6 +343,9 @@ def make_summarizer(cfg: dict) -> Summarizer:
         return ClaudeSummarizer(model=scfg.get("claude_model", "claude-haiku-4-5-20251001"))
     # truncation: keep full text essentially intact (cards render it as-is)
     return AbstractTruncationSummarizer(max_chars=int(scfg.get("truncation_max_chars", 10000)))
+
+
+_TRUNC_FALLBACK = AbstractTruncationSummarizer(max_chars=360)
 
 
 def summarize_items(items: list[Item], summarizer: Summarizer) -> list[Item]:
@@ -331,11 +362,17 @@ def summarize_items(items: list[Item], summarizer: Summarizer) -> list[Item]:
         # prompt / model without losing the raw source text.
         if "full_text" not in extra:
             extra["full_text"] = it.summary
-        it.summary = summarizer.summarize(
-            extra.get("full_text") or it.summary,
-            source=it.source,
-            title=it.title,
-        )
-        extra["summary_kind"] = "llm" if is_llm else "truncation"
+        src_text = extra.get("full_text") or it.summary
+
+        result = summarizer.summarize(src_text, source=it.source, title=it.title)
+        if is_llm and result:
+            # Genuine model summary.
+            it.summary = result
+            extra["summary_kind"] = "llm"
+        else:
+            # LLM unavailable / failed (returned "") -> truncation. Mark it
+            # "truncation" (NOT llm) so a later run retries it.
+            it.summary = result if (not is_llm and result) else _TRUNC_FALLBACK.summarize(src_text)
+            extra["summary_kind"] = "truncation"
         it.extra = extra
     return items
