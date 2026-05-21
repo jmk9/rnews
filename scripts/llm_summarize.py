@@ -66,15 +66,27 @@ def main() -> int:
             if existing is None or float(it.get("score") or 0) > float(existing.get("score") or 0):
                 by_id[it["id"]] = it
 
-    candidates = list(by_id.values())
+    ranked = sorted(by_id.values(), key=lambda x: float(x.get("score") or 0), reverse=True)
     if args.top_only:
-        candidates.sort(key=lambda x: float(x.get("score") or 0), reverse=True)
-        candidates = candidates[: args.top_only]
+        candidates = ranked[: args.top_only]
+    else:
+        candidates = ranked
+    # Always include ALL news, regardless of score. News scores low (no stars /
+    # no code) so it falls outside top-N, but it's the "read here, don't click
+    # out" surface and there are only ~tens of items — cheap and high value.
+    chosen = {it["id"]: it for it in candidates}
+    for it in by_id.values():
+        if it.get("source") == "news":
+            chosen[it["id"]] = it
+    candidates = list(chosen.values())
     if not args.force:
         candidates = [it for it in candidates
                       if (it.get("extra") or {}).get("summary_kind") != "llm"]
+    # max_items caps non-news bulk; keep all news.
     if args.max_items:
-        candidates = candidates[: args.max_items]
+        news = [it for it in candidates if it.get("source") == "news"]
+        rest = [it for it in candidates if it.get("source") != "news"][: args.max_items]
+        candidates = news + rest
 
     log.info("Will summarize %d items", len(candidates))
     summ = make_summarizer(cfg)
