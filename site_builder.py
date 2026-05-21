@@ -217,10 +217,14 @@ def build_site(cfg: dict[str, Any]) -> Path:
     by_score = lambda x: float(x.get("score") or 0)  # noqa: E731
     index_with_code = sorted((it for it in index_items if _bucket(it) == "code"),
                              key=by_score, reverse=True)
-    # News section defaults to newest-first (timeliness > relevance score).
+    # News default = recency + relevance: sort by day (newest first), and within
+    # the same day by relevance score. So today's important news tops the list,
+    # then today's minor news, then yesterday's important, etc.
+    def _news_key(x: dict[str, Any]):
+        day = (x.get("updated") or x.get("published") or "")[:10]
+        return (day, float(x.get("score") or 0))
     index_news = sorted((it for it in index_items if _bucket(it) == "news"),
-                        key=lambda x: (x.get("updated") or x.get("published") or ""),
-                        reverse=True)
+                        key=_news_key, reverse=True)
     index_papers_only = sorted((it for it in index_items if _bucket(it) == "papers"),
                                key=by_score, reverse=True)
 
