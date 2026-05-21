@@ -41,10 +41,6 @@ Filters stack — `#VLA` + `#Humanoid` shows only VLA work on humanoids.
 Click **All** in a row to clear that dimension. The colored bar on each card's
 left edge is its priority (🟢 High / 🟠 Mid / ⚪ Low).
 
-### Subscribe
-
-RSS feed at https://jmk9.github.io/rnews/feed.xml — drop into any reader.
-
 > The 2–3 sentence blurb on each card is an **LLM-written summary** of the
 > source, meant for a quick gist. It can occasionally be off — open the
 > original via the card title before relying on details.
