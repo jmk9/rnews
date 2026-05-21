@@ -45,32 +45,6 @@ left edge is its priority (🟢 High / 🟠 Mid / ⚪ Low).
 
 RSS feed at https://jmk9.github.io/rnews/feed.xml — drop into any reader.
 
----
-
-## For developers
-
-```bash
-git clone https://github.com/jmk9/rnews.git
-cd rnews && pip install -r requirements.txt
-python main.py            # full collection + site build
-python main.py --site-only  # rebuild site from existing data, no network
-```
-
-Outputs go to `data/`, `reports/`, and `site/`. Configuration in
-[`config.yaml`](config.yaml) — sources, keywords, tag taxonomy
-(Method × Platform), ranking weights, and `exclude_keywords` (drops
-out-of-scope topics like self-driving / finance / video-gen).
-
-**Summaries** are pluggable via `summarizer.provider` in config:
-`codex` (OpenAI Codex CLI, uses the ChatGPT-extension OAuth — no API key,
-local only), `openai` (`OPENAI_API_KEY`), `claude` (`ANTHROPIC_API_KEY`),
-or `truncation` (no LLM). Backfill existing items with
-`python scripts/llm_summarize.py`.
-
-The pipeline runs daily via GitHub Actions
-(see [`.github/workflows/daily.yml`](.github/workflows/daily.yml)) and
-auto-deploys to GitHub Pages.
-
-To add a new source: drop a `collectors/<name>_collector.py` exposing
-`collect(cfg: dict) -> list[Item]` and wire it into [`main.py`](main.py).
-The rest (dedup, tag, rank, summarize, render) is source-agnostic.
+> The 2–3 sentence blurb on each card is an **AI-generated summary** of the
+> source, meant for a quick gist. It can occasionally be off — open the
+> original via the card title before relying on details.
