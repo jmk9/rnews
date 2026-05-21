@@ -70,18 +70,6 @@
 <p class="result-count"><span id="visible-count">{{ (items_with_code|length) + (items_news|length) + (items_papers_only|length) }}</span> of {{ (items_with_code|length) + (items_news|length) + (items_papers_only|length) }} items</p>
 <p class="empty-state" id="empty-state" hidden>No items match these filters. Try clearing one.</p>
 
-<section class="section" id="section-code">
-  <h2 class="section-title">Code &amp; repos <span class="muted">(<span class="section-count" data-section="code">{{ items_with_code|length }}</span>)</span></h2>
-  <p class="section-hint muted">GitHub repositories and papers that release code or a project page. The actionable stuff.</p>
-  <div class="items">
-    {% for it in items_with_code %}
-      {% include "_item.html.j2" %}
-    {% else %}
-      <p class="muted">No code-bearing items in this batch.</p>
-    {% endfor %}
-  </div>
-</section>
-
 <section class="section" id="section-news">
   <h2 class="section-title">News &amp; articles <span class="muted">(<span class="section-count" data-section="news">{{ items_news|length }}</span>)</span></h2>
   <p class="section-hint muted">Industry pulse — company announcements, funding, demos, journalism. Newest first.</p>
@@ -90,6 +78,18 @@
       {% include "_item.html.j2" %}
     {% else %}
       <p class="muted">No news items in this batch.</p>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section" id="section-code">
+  <h2 class="section-title">Code &amp; repos <span class="muted">(<span class="section-count" data-section="code">{{ items_with_code|length }}</span>)</span></h2>
+  <p class="section-hint muted">GitHub repositories and papers that release code or a project page. The actionable stuff.</p>
+  <div class="items">
+    {% for it in items_with_code %}
+      {% include "_item.html.j2" %}
+    {% else %}
+      <p class="muted">No code-bearing items in this batch.</p>
     {% endfor %}
   </div>
 </section>
