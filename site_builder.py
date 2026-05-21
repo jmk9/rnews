@@ -193,10 +193,13 @@ def build_site(cfg: dict[str, Any]) -> Path:
     items_on_index = int(site_cfg.get("items_on_index", 80))
     news_min_slots = int(site_cfg.get("news_min_slots", 50))
     # Reserve slots for News explicitly. News items score low (no stars, no
-    # has_code) so a pure top-by-score cut buries almost all of them. We take
-    # the top-N non-news as the main pool, then add top-M news on top.
+    # has_code) so a pure top-by-score cut buries almost all of them. Take the
+    # top-N non-news by score, then the most RECENT news (news is timely — we
+    # sort the News section by date, not score).
     non_news = [it for it in all_items if it.get("source") != "news"][:items_on_index]
-    news_subset = [it for it in all_items if it.get("source") == "news"][:news_min_slots]
+    news_all = [it for it in all_items if it.get("source") == "news"]
+    news_all.sort(key=lambda x: (x.get("updated") or x.get("published") or ""), reverse=True)
+    news_subset = news_all[:news_min_slots]
     seen_ids = {it.get("id") for it in non_news}
     index_items = non_news + [it for it in news_subset if it.get("id") not in seen_ids]
 
@@ -214,8 +217,10 @@ def build_site(cfg: dict[str, Any]) -> Path:
     by_score = lambda x: float(x.get("score") or 0)  # noqa: E731
     index_with_code = sorted((it for it in index_items if _bucket(it) == "code"),
                              key=by_score, reverse=True)
+    # News section defaults to newest-first (timeliness > relevance score).
     index_news = sorted((it for it in index_items if _bucket(it) == "news"),
-                        key=by_score, reverse=True)
+                        key=lambda x: (x.get("updated") or x.get("published") or ""),
+                        reverse=True)
     index_papers_only = sorted((it for it in index_items if _bucket(it) == "papers"),
                                key=by_score, reverse=True)
 
