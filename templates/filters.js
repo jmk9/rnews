@@ -126,16 +126,22 @@
   }
 
   // ---- Sort ---------------------------------------------------------------
-  function sortKeyOf(art, key) {
-    if (key === "created") return Date.parse(art.dataset.created || "") || 0;
-    if (key === "pushed") return Date.parse(art.dataset.published || "") || 0;
-    if (key === "stars") return parseInt(art.dataset.stars || "0", 10);
-    return parseFloat(art.dataset.score || "0");
+  // Default ("Score" chip): priority tier (High->Mid->Low) then newest within.
+  const PRANK = { must_read: 2, save_for_later: 1, low_priority: 0 };
+  function dateMs(art) { return Date.parse(art.dataset.published || art.dataset.created || "") || 0; }
+  function cmp(a, b) {
+    const k = state.sort;
+    if (k === "created") return (Date.parse(b.dataset.created || "") || 0) - (Date.parse(a.dataset.created || "") || 0);
+    if (k === "pushed") return dateMs(b) - dateMs(a);
+    if (k === "stars") return parseInt(b.dataset.stars || "0", 10) - parseInt(a.dataset.stars || "0", 10);
+    // default / "score": priority tier desc, then recency desc
+    const pr = (PRANK[b.dataset.priority] || 0) - (PRANK[a.dataset.priority] || 0);
+    return pr !== 0 ? pr : dateMs(b) - dateMs(a);
   }
   function applySort() {
     document.querySelectorAll("section.section .items").forEach((container) => {
       const arts = Array.from(container.children).filter((c) => c.tagName === "ARTICLE");
-      arts.sort((a, b) => sortKeyOf(b, state.sort) - sortKeyOf(a, state.sort));
+      arts.sort(cmp);
       for (const art of arts) container.appendChild(art);
     });
   }

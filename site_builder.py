@@ -214,19 +214,19 @@ def build_site(cfg: dict[str, Any]) -> Path:
             return "news"
         return "code" if _has_code(it) else "papers"
 
-    by_score = lambda x: float(x.get("score") or 0)  # noqa: E731
+    # Default order (all sections): priority tier first (High -> Mid -> Low),
+    # then newest within each tier. The "Score" sort chip reproduces this.
+    _PRANK = {"must_read": 2, "save_for_later": 1, "low_priority": 0}
+    def _default_key(x: dict[str, Any]):
+        pr = _PRANK.get(x.get("priority", ""), 0)
+        date = (x.get("updated") or x.get("published") or "")
+        return (pr, date)
     index_with_code = sorted((it for it in index_items if _bucket(it) == "code"),
-                             key=by_score, reverse=True)
-    # News default = recency + relevance: sort by day (newest first), and within
-    # the same day by relevance score. So today's important news tops the list,
-    # then today's minor news, then yesterday's important, etc.
-    def _news_key(x: dict[str, Any]):
-        day = (x.get("updated") or x.get("published") or "")[:10]
-        return (day, float(x.get("score") or 0))
+                             key=_default_key, reverse=True)
     index_news = sorted((it for it in index_items if _bucket(it) == "news"),
-                        key=_news_key, reverse=True)
+                        key=_default_key, reverse=True)
     index_papers_only = sorted((it for it in index_items if _bucket(it) == "papers"),
-                               key=by_score, reverse=True)
+                               key=_default_key, reverse=True)
 
     tag_counter: Counter[str] = Counter()
     for it in index_items:
