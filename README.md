@@ -2,10 +2,10 @@
 
 **👉 Live site: https://jmk9.github.io/rnews/**
 
-Daily picks in robot learning — RL / IL / VLA across cobot manipulators,
-bimanual setups, mobile manipulators, and humanoid robots. Plus an industry
-news feed from ~18 sources (Robohub, IEEE Spectrum, TechCrunch, NVIDIA,
-DeepMind, MIT, 로봇신문, AI타임스, …).
+Daily picks in robot learning — RL / IL / VLA across cobot arms, bimanual,
+mobile manipulators, and humanoids. Plus an industry news feed from ~18
+sources (Robohub, IEEE Spectrum, TechCrunch, NVIDIA, DeepMind, MIT,
+로봇신문, AI타임스, …).
 
 Each card carries a short **LLM-written summary** — read the gist in place,
 click the title only when you want the original paper / repo / article.
@@ -45,6 +45,6 @@ left edge is its priority (🟢 High / 🟠 Mid / ⚪ Low).
 
 RSS feed at https://jmk9.github.io/rnews/feed.xml — drop into any reader.
 
-> The 2–3 sentence blurb on each card is an **AI-generated summary** of the
+> The 2–3 sentence blurb on each card is an **LLM-written summary** of the
 > source, meant for a quick gist. It can occasionally be off — open the
 > original via the card title before relying on details.
