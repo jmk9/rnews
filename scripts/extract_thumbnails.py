@@ -19,6 +19,7 @@ are skipped, so a second run is cheap.
 from __future__ import annotations
 
 import argparse
+import html as html_lib
 import io
 import json
 import logging
@@ -50,6 +51,15 @@ _OG_IMG = re.compile(
 )
 _OG_IMG_REV = re.compile(
     r"<meta[^>]+content=[\"']([^\"']+)[\"'][^>]+(?:property|name)=[\"']og:image[\"']",
+    re.IGNORECASE,
+)
+# Article blurb fallback for feeds that publish title-only RSS entries.
+_OG_DESC = re.compile(
+    r"<meta[^>]+(?:property|name)=[\"'](?:og:description|description)[\"'][^>]+content=[\"']([^\"']+)[\"']",
+    re.IGNORECASE,
+)
+_OG_DESC_REV = re.compile(
+    r"<meta[^>]+content=[\"']([^\"']+)[\"'][^>]+(?:property|name)=[\"'](?:og:description|description)[\"']",
     re.IGNORECASE,
 )
 
@@ -199,10 +209,12 @@ def extract_github_thumb(item: dict, *, token: str | None = None) -> str | None:
 # News: og:image
 # ---------------------------------------------------------------------------
 
-def extract_news_thumb(item: dict) -> str | None:
+def fetch_news_meta(item: dict) -> tuple[str | None, str | None]:
+    """One page fetch -> (og:image url, og:description text). Either may be None.
+    The description backfills the summary for feeds that publish title-only RSS."""
     url = item.get("url")
     if not url:
-        return None
+        return None, None
     try:
         r = requests.get(
             url, timeout=15,
@@ -210,17 +222,23 @@ def extract_news_thumb(item: dict) -> str | None:
             allow_redirects=True,
         )
     except requests.RequestException:
-        return None
+        return None, None
     if r.status_code != 200:
-        return None
+        return None, None
     body = r.text
-    m = _OG_IMG.search(body) or _OG_IMG_REV.search(body)
-    if not m:
-        return None
-    img_url = m.group(1).strip()
-    if img_url.startswith("//"):
-        img_url = "https:" + img_url
-    return img_url
+    img_url = None
+    mi = _OG_IMG.search(body) or _OG_IMG_REV.search(body)
+    if mi:
+        img_url = mi.group(1).strip()
+        if img_url.startswith("//"):
+            img_url = "https:" + img_url
+    desc = None
+    md = _OG_DESC.search(body) or _OG_DESC_REV.search(body)
+    if md:
+        desc = html_lib.unescape(md.group(1).strip())
+        if len(desc) < 40:  # too short to be a useful blurb
+            desc = None
+    return img_url, desc
 
 
 # ---------------------------------------------------------------------------
@@ -267,12 +285,19 @@ def main() -> int:
         for it in by_id.values():
             if it.get("source") == "news":
                 pool[it["id"]] = it
+    def _empty_summary(it: dict) -> bool:
+        return not (it.get("summary") or "").strip()
+    # News is fetched if it needs a thumbnail OR has no summary text (title-only
+    # RSS) — one HTTP yields both the image and an og:description blurb.
     candidates = [it for it in pool.values()
-                  if it.get("source") in sources and _needs_thumb(it)]
+                  if it.get("source") in sources
+                  and (_needs_thumb(it)
+                       or (it.get("source") == "news" and _empty_summary(it)))]
     log.info("Processing %d candidates (max=%d + all news, sources=%s)",
              len(candidates), args.max_items, sources)
 
     updates: dict[str, dict[str, str]] = {}  # id -> {extra_key: value}
+    summary_fills: dict[str, str] = {}        # id -> backfilled summary text
     for i, it in enumerate(candidates, 1):
         src = it["source"]
         log.info("[%d/%d] %s %s: %s", i, len(candidates), src, it["id"], it["title"][:60])
@@ -286,17 +311,20 @@ def main() -> int:
             key = "thumbnail"
             time.sleep(0.5 if token else 1.5)
         elif src == "news":
-            result = extract_news_thumb(it)
-            key = "thumbnail"
+            img, desc = fetch_news_meta(it)
+            result, key = img, "thumbnail"
+            if desc and _empty_summary(it):
+                summary_fills[it["id"]] = desc
+                log.info("  -> summary backfilled (%d chars)", len(desc))
             time.sleep(0.5)
-        if result and key:
+        if result and key and _needs_thumb(it):
             updates[it["id"]] = {key: result}
             log.info("  -> %s", result[:90])
         else:
-            log.info("  -> (none)")
+            log.info("  -> (no thumb)")
 
-    if not updates:
-        log.info("No new thumbnails extracted.")
+    if not updates and not summary_fills:
+        log.info("Nothing to update.")
         return 0
 
     # Write updates back to every processed JSON that contains the items.
@@ -310,11 +338,16 @@ def main() -> int:
                 for k, v in up.items():
                     extra[k] = v
                 changed = True
+            desc = summary_fills.get(it["id"])
+            if desc and _empty_summary(it):
+                it["summary"] = desc
+                it.setdefault("extra", {})["full_text"] = desc
+                changed = True
         if changed:
             with open(fp, "w") as f:
                 json.dump(data, f, ensure_ascii=False, indent=2)
             log.info("Wrote updates to %s", fp)
-    log.info("Total items updated: %d", len(updates))
+    log.info("Items updated: %d thumb, %d summary", len(updates), len(summary_fills))
     return 0
 
 
