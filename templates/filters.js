@@ -146,6 +146,29 @@
     });
   }
 
+  // ---- Source-aware filters ----------------------------------------------
+  // News carries no GitHub stars and published==created, so the Stars/Pushed
+  // sorts are meaningless there. Hide them while the News source is active
+  // (and fall back to the default Score sort if one was selected).
+  const NEWS_HIDDEN_SORTS = ["stars", "pushed"];
+  function syncSortAvailability() {
+    const newsOnly = state.source === "news";
+    let reset = false;
+    document.querySelectorAll('.chip[data-filter="sort"]').forEach((b) => {
+      const v = b.dataset.value || "";
+      const hide = newsOnly && NEWS_HIDDEN_SORTS.indexOf(v) !== -1;
+      b.hidden = hide;
+      if (hide && state.sort === v) reset = true;
+    });
+    if (reset) {
+      state.sort = "";
+      document.querySelectorAll('.chip[data-filter="sort"]').forEach((b) => {
+        b.classList.toggle("active", (b.dataset.value || "") === "");
+      });
+      applySort();
+    }
+  }
+
   // ---- Chips --------------------------------------------------------------
   document.querySelectorAll(".chip").forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -155,6 +178,7 @@
       document.querySelectorAll('.chip[data-filter="' + filter + '"]').forEach((b) => {
         b.classList.toggle("active", (b.dataset.value || "") === value);
       });
+      if (filter === "source") syncSortAvailability();
       if (filter === "sort") applySort();
       apply();
     });
