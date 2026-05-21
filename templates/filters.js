@@ -126,22 +126,33 @@
   }
 
   // ---- Sort ---------------------------------------------------------------
-  // Default ("Score" chip): priority tier (High->Mid->Low) then newest within.
+  // Default ("Score" chip) is section-aware, mirroring the server build:
+  //   News          -> priority tier (High->Mid->Low), newest within each.
+  //   Code & Papers -> relevance score desc, date as a tiebreak.
   const PRANK = { must_read: 2, save_for_later: 1, low_priority: 0 };
   function dateMs(art) { return Date.parse(art.dataset.published || art.dataset.created || "") || 0; }
-  function cmp(a, b) {
+  function scoreOf(art) { return parseFloat(art.dataset.score || "0") || 0; }
+  function makeCmp(section) {
     const k = state.sort;
-    if (k === "created") return (Date.parse(b.dataset.created || "") || 0) - (Date.parse(a.dataset.created || "") || 0);
-    if (k === "pushed") return dateMs(b) - dateMs(a);
-    if (k === "stars") return parseInt(b.dataset.stars || "0", 10) - parseInt(a.dataset.stars || "0", 10);
-    // default / "score": priority tier desc, then recency desc
-    const pr = (PRANK[b.dataset.priority] || 0) - (PRANK[a.dataset.priority] || 0);
-    return pr !== 0 ? pr : dateMs(b) - dateMs(a);
+    if (k === "created") return (a, b) => (Date.parse(b.dataset.created || "") || 0) - (Date.parse(a.dataset.created || "") || 0);
+    if (k === "pushed") return (a, b) => dateMs(b) - dateMs(a);
+    if (k === "stars") return (a, b) => parseInt(b.dataset.stars || "0", 10) - parseInt(a.dataset.stars || "0", 10);
+    if (section === "news") {
+      return (a, b) => {
+        const pr = (PRANK[b.dataset.priority] || 0) - (PRANK[a.dataset.priority] || 0);
+        return pr !== 0 ? pr : dateMs(b) - dateMs(a);
+      };
+    }
+    return (a, b) => {
+      const s = scoreOf(b) - scoreOf(a);
+      return s !== 0 ? s : dateMs(b) - dateMs(a);
+    };
   }
   function applySort() {
     document.querySelectorAll("section.section .items").forEach((container) => {
       const arts = Array.from(container.children).filter((c) => c.tagName === "ARTICLE");
-      arts.sort(cmp);
+      const section = arts.length ? arts[0].__section : "code";
+      arts.sort(makeCmp(section));
       for (const art of arts) container.appendChild(art);
     });
   }

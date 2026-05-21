@@ -214,19 +214,25 @@ def build_site(cfg: dict[str, Any]) -> Path:
             return "news"
         return "code" if _has_code(it) else "papers"
 
-    # Default order (all sections): priority tier first (High -> Mid -> Low),
-    # then newest within each tier. The "Score" sort chip reproduces this.
+    # Default order differs by section, matching the "Score" sort chip:
+    #   News  -> priority tier (High -> Mid -> Low), newest within each tier
+    #            (timely content; relevance score is mostly recency anyway).
+    #   Code & Papers -> relevance score desc (topic match, released code,
+    #            GitHub stars/forks, real-robot, recency), date as a tiebreak.
     _PRANK = {"must_read": 2, "save_for_later": 1, "low_priority": 0}
-    def _default_key(x: dict[str, Any]):
+    def _news_key(x: dict[str, Any]):
         pr = _PRANK.get(x.get("priority", ""), 0)
         date = (x.get("updated") or x.get("published") or "")
         return (pr, date)
+    def _score_key(x: dict[str, Any]):
+        date = (x.get("updated") or x.get("published") or "")
+        return (float(x.get("score") or 0), date)
     index_with_code = sorted((it for it in index_items if _bucket(it) == "code"),
-                             key=_default_key, reverse=True)
+                             key=_score_key, reverse=True)
     index_news = sorted((it for it in index_items if _bucket(it) == "news"),
-                        key=_default_key, reverse=True)
+                        key=_news_key, reverse=True)
     index_papers_only = sorted((it for it in index_items if _bucket(it) == "papers"),
-                               key=_default_key, reverse=True)
+                               key=_score_key, reverse=True)
 
     tag_counter: Counter[str] = Counter()
     for it in index_items:
