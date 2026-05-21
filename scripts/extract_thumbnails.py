@@ -259,9 +259,18 @@ def main() -> int:
         log.info("GITHUB_TOKEN found — github fetches will use it.")
 
     ranked = sorted(by_id.values(), key=lambda x: float(x.get("score") or 0), reverse=True)
-    candidates = [it for it in ranked[: args.max_items]
+    pool = {it["id"]: it for it in ranked[: args.max_items]}
+    # Always include ALL news (regardless of score) — news scores low so it
+    # falls outside top-N, but it's a primary surface and og:image fetch is
+    # one cheap HTTP per item.
+    if "news" in sources:
+        for it in by_id.values():
+            if it.get("source") == "news":
+                pool[it["id"]] = it
+    candidates = [it for it in pool.values()
                   if it.get("source") in sources and _needs_thumb(it)]
-    log.info("Processing %d candidates (max=%d, sources=%s)", len(candidates), args.max_items, sources)
+    log.info("Processing %d candidates (max=%d + all news, sources=%s)",
+             len(candidates), args.max_items, sources)
 
     updates: dict[str, dict[str, str]] = {}  # id -> {extra_key: value}
     for i, it in enumerate(candidates, 1):
