@@ -6836,7 +6836,7 @@
     "source": "arxiv",
     "title": "Mind the Sim-to-Real Gap & Think Like a Scientist",
     "url": "http://arxiv.org/abs/2605.21458v1",
-    "summary": "Suppose a planner has a pre-trained simulator of a sequential decision problem and the option to run real experiments in the field. The simulator is cheap to query but inherits confounding and drift from its calibration data. Experimentation is unbiased but consumes one real unit per trial.",
+    "summary": "A planner using a biased but cheap simulator can separate what real experiments can fix from what they cannot: randomization identifies calibration-to-deployment shift, while irreducible parametric residuals remain. The analysis shows that passive learning cannot close reachability gaps in unvisited states, and introduces Fisher-SEP, which chooses experiments to minimize posterior predictive variance of a target policy’s value. In the vending-machine and HIV mobile-testing examples, the payoff comes from front-loaded or explicitly exploratory experiments that reach regimes the simulator and passive updates miss.",
     "published": "2026-05-20T17:48:14+00:00",
     "updated": "2026-05-20T17:48:14+00:00",
     "authors": [
@@ -6856,7 +6856,7 @@
       "comment": null,
       "first_seen": "2026-05-21",
       "full_text": "Suppose a planner has a pre-trained simulator of a sequential decision problem and the option to run real experiments in the field. The simulator is cheap to query but inherits confounding and drift from its calibration data. Experimentation is unbiased but consumes one real unit per trial. We study when, and how, the planner should supplement the simulator with experiments. We give three results. First, an extended simulation lemma decomposes the simulator's value error into a calibration--deployment shift that randomization can identify and a parametric residual that no further interaction can reduce. Second, the value gap between the simulator-optimal policy and the optimum splits into a local component, on states the deployed policy already visits, and a reachability component, on states it does not. The reachability component stays bounded away from zero at any horizon under purely passive learning. Third, we propose Fisher-SEP, a simulation-aided experimental policy (SEP) that minimizes the posterior predictive variance of a target policy's value, with reward-only and transition-only specializations. Two case studies illustrate the regimes. In a vending-machine supply chain, front-loaded experimentation overtakes posterior updating once the horizon is long enough to amortize the pilot. In an HIV mobile-testing example with a corridor that separates a well-surveilled region from a poorly-surveilled one, only designed exploration reaches the poorly-surveilled region.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.21458.jpg"
     },
     "tags": [
@@ -6916,7 +6916,7 @@
     "source": "arxiv",
     "title": "Component Influence-Driven Fastener Reduction for Robotic Disassemblability-Aware Design Simplification",
     "url": "http://arxiv.org/abs/2605.21026v1",
-    "summary": "To accelerate automated remanufacturing, robotic disassembly must be considered during the product design phase. However, designers currently lack quantitative feedback to identify which structural elements hinder robotic operations.",
+    "summary": "The study turns CAD-derived contact-connection-constraint graphs and robotic disassembly planning results into per-component influence scores, showing which fasteners most often create constraint violations or worsen tool changes and robot motion. It overlays those scores as 3D heatmaps on the CAD model, then simulates removing high-impact fasteners while checking geometric stability so redesign suggestions do not make the assembly structurally unsafe. Across seven household appliances, the recommended removals eliminated 8 to 132 structural constraints and, where allowed, reduced tool changes and shortened robot travel by 165 to 1675 mm.",
     "published": "2026-05-20T11:00:25+00:00",
     "updated": "2026-05-20T11:00:25+00:00",
     "authors": [
@@ -6935,7 +6935,7 @@
       "comment": "7 pages, 8 figures",
       "first_seen": "2026-05-21",
       "full_text": "To accelerate automated remanufacturing, robotic disassembly must be considered during the product design phase. However, designers currently lack quantitative feedback to identify which structural elements hinder robotic operations. To address this, this study proposes an analytical framework that provides actionable redesign guidance focused on fastener reduction, as fasteners are numerous and ubiquitous components found in almost all manufactured products. Using a Computer-Aided Design (CAD) model and its automatically generated Contact-Connection-Constraint (CCC) graph, the framework translates robotic disassembly sequence planning outcomes into component influence scores. These scores reflect how often a component causes structural constraint violations or evaluation objective deteriorations in the robotic disassembly sequence. To visually highlight structural hindrances, the framework projects these scores onto the CAD geometry as 3D heatmaps. The system then analytically simulates the removal of highly influential fasteners. It reports the expected reductions in structural constraints, tool changes, and robot travel distances, while preventing structurally unsafe modifications by evaluating geometric stability metrics. Experiments on seven household appliances demonstrate that the framework successfully targets redundant fasteners. Removing the recommended fasteners simplified the structural dependencies by eliminating between 8 and 132 structural constraints on the graph depending on each product's structural configuration. Furthermore, it improved robotic operational efficiency by eliminating unnecessary tool change operations and shortening travel distances by 165 to 1675 millimeters wherever structurally permissible.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.21026.jpg"
     },
     "tags": [
@@ -6960,7 +6960,7 @@
     "source": "arxiv",
     "title": "Fault-Tolerant, Rigidity-Preserving Control of Inflatable Truss Robots",
     "url": "http://arxiv.org/abs/2605.20561v1",
-    "summary": "Isoperimetric robotic trusses can adapt to different tasks and environments because they have a high strength-to-weight ratio, can change their own shape dramatically, and can be reconfigured into a variety of different shapes. However, motor failures in operational environments can severely limit operational capabilities if not properly addressed.",
+    "summary": "Inflatable isoperimetric truss robots can keep operating after motor failures by folding actuator-failure constraints directly into the kinematic optimizer, then using discrete-time control barrier functions to preserve structural rigidity while still allowing as much reachable workspace as possible. On a 2D six-actuator truss, the method preserved more than 69% of the workspace under single-motor failures, and adding encoder-based closed-loop position control with forward-kinematics state estimation improved tracking accuracy by over 25% in simulation and hardware tests.",
     "published": "2026-05-19T23:39:55+00:00",
     "updated": "2026-05-19T23:39:55+00:00",
     "authors": [
@@ -6978,7 +6978,7 @@
       "comment": null,
       "first_seen": "2026-05-21",
       "full_text": "Isoperimetric robotic trusses can adapt to different tasks and environments because they have a high strength-to-weight ratio, can change their own shape dramatically, and can be reconfigured into a variety of different shapes. However, motor failures in operational environments can severely limit operational capabilities if not properly addressed. This paper presents a fault-tolerant control framework for an inflatable robotic truss that maintains functionality despite motor failures, shown through three key contributions. First, we extend the kinematic optimization to handle arbitrary combinations of motor failures by imposing equality constraints to ensure failed actuators are not used. Second, we introduce discrete-time control barrier function (DTCBF) constraints that mathematically guarantee structural rigidity while maximizing workspace utilization, a critical requirement for reliable operation of truss robots under discrete-time control. Third, we implement closed-loop position control using onboard encoder feedback and a forward kinematics-based state estimator, improving positional accuracy in the presence of disturbances. We validate our approach through simulation and hardware experiments on a 2D isoperimetric truss testbed. For a 2D configuration with 6 actuators, we demonstrate >69% workspace preservation under single-motor failures and a >25% improvement in tracking accuracy with closed-loop control. These results establish a foundation for more robust and resilient isoperimetric truss robots operating under degraded actuation.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.20561.jpg"
     },
     "tags": [
@@ -7003,7 +7003,7 @@
     "source": "arxiv",
     "title": "Spacetime Optimal-Transport Attention for Visuo-Haptic Imitation Learning of Contact-Rich Manipulation",
     "url": "http://arxiv.org/abs/2605.20433v1",
-    "summary": "Contact-rich manipulation tasks such as tight-clearance insertion, connector mating, polishing, and surface-conforming wiping remain difficult for data-driven controllers because they couple discontinuous contact dynamics, partial observability, and strict safety constraints.",
+    "summary": "SO-TA fuses vision, force/torque, and proprioceptive pose for contact-rich imitation learning by replacing standard softmax patch attention with entropy-regularized optimal transport between force-pose sub-queries and visual patches, giving the policy a structured way to attend to task-relevant regions under changing contact conditions. Paired with a diffusion sequence policy, it achieves 100% success on tight peg-in-hole insertion versus 93% for matched cross-attention, and remains much more robust under lighting, distractor, and occlusion shifts, with 82.5% success where a concatenation baseline falls to 43.5%. Its OT heatmaps and modality ablations also make the phase-dependent role of each sensor easier to inspect.",
     "published": "2026-05-19T19:29:21+00:00",
     "updated": "2026-05-19T19:29:21+00:00",
     "authors": [
@@ -7020,7 +7020,7 @@
       "comment": "8 pages, 16 figures, 3 tables. Preprint",
       "first_seen": "2026-05-21",
       "full_text": "Contact-rich manipulation tasks such as tight-clearance insertion, connector mating, polishing, and surface-conforming wiping remain difficult for data-driven controllers because they couple discontinuous contact dynamics, partial observability, and strict safety constraints. No single sensing modality suffices: vision supplies global context before contact, force/torque (F/T) feedback governs interaction after contact, and proprioceptive pose provides a consistent kinematic backbone. Most prior imitation-learning policies for contact-rich tasks operate on uni- or bi-modal signals, and the few that fuse three modalities typically adopt off-the-shelf attention modules with no explicit prior on how attention mass should be distributed across task-relevant regions. We present Spacetime Optimal-Transport Attention (SO-TA), a tri-modal fusion backbone that replaces softmax-normalized patch attention by an entropy-regularized Optimal Transport (OT) alignment between force-pose-derived sub-queries and visual patches. Explicit marginal constraints act as a structured inductive bias for contact-rich tasks, encouraging conditioning-aware spatial selection that is stable across illumination, distractors, and partial occlusion. SO-TA is paired with a diffusion-based sequence policy mapping observation windows to pose-action chunks. We evaluate SO-TA on three real-robot tasks: tight peg-in-hole assembly, BCM wiring-connector insertion, and curved-surface mark erasing. With ~200 rollouts per condition, SO-TA reaches 100% success on tight peg-in-hole versus 93% for cross-attention at matched capacity, and retains 82.5% success under illumination, distractor, and partial-occlusion perturbations where a concatenation baseline drops to 43.5%. OT-derived patch heatmaps and leave-one-out modality-influence ratios provide interpretable, phase-dependent diagnostics.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.20433.jpg"
     },
     "tags": [
@@ -7080,7 +7080,7 @@
     "source": "arxiv",
     "title": "Justifying bio-inspired robotics research: A taxonomy of strategies",
     "url": "http://arxiv.org/abs/2605.19840v1",
-    "summary": "For most of human history, we have not thought systematically about how and why we incorporate aspects of the natural world into our designs. The lack of a systematic approach has resulted in inconsistencies in motivations and methods that make it difficult to predict or evaluate the success of bio-inspired design.",
+    "summary": "Bio-inspired robotics often leans on resemblance to animals or plants without a clear account of why that resemblance matters, making systems hard to judge when the biological link feels superficial or mismatched to the engineering goal. The article organizes the field around a taxonomy of motivations for bio-inspired design, giving robotics researchers a way to justify whether biology is being used for mechanism discovery, performance goals, explanatory modeling, or other kinds of contribution, and giving funders a clearer basis for evaluating such projects.",
     "published": "2026-05-19T13:35:14+00:00",
     "updated": "2026-05-19T13:35:14+00:00",
     "authors": [
@@ -7097,7 +7097,7 @@
       "comment": null,
       "first_seen": "2026-05-20",
       "full_text": "For most of human history, we have not thought systematically about how and why we incorporate aspects of the natural world into our designs. The lack of a systematic approach has resulted in inconsistencies in motivations and methods that make it difficult to predict or evaluate the success of bio-inspired design. This mismatch between expectations and results can lead to disappointment when a reader considers a bio-inspired design to be superficial, weak, or incomplete. This is especially true in the field of Robotics, in which similarity to a biological system might be the driving motivation for construction. In an effort to assist robotics researchers justify their specific bio-inspired approach and to assist funding program managers with discerning the value of different bio-inspired approaches, here we propose a taxonomy of motivations for bio-inspired design and describe the potential significant contributions that are likely to result from different approaches.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19840.jpg"
     },
     "tags": [
@@ -7123,7 +7123,7 @@
     "source": "arxiv",
     "title": "Neuromorphic Control of a Flapping-Wing Robot on Resource-Constrained Hardware",
     "url": "http://arxiv.org/abs/2605.19430v1",
-    "summary": "Flapping-Wing Micro Aerial Vehicles (FWMAVs) provide exceptional maneuverability and aerodynamic efficiency but pose significant challenges for onboard control due to nonlinear dynamics and stringent Size, Weight, and Power (SWaP) constraints, as exemplified by a butterfly-inspired robot less than 30 gram.",
+    "summary": "A butterfly-inspired flapping-wing MAV under 30 g runs closed-loop flight control entirely onboard a $5 ESP32 by splitting the problem across two lightweight spiking neural networks: one estimates state from raw sensor feedback, and the other modulates a central pattern generator for wing actuation. Trained with imitation learning, it tracks pitch and heading during untethered real-world flight while cutting inference latency from 1059 to 680 us and power from 0.033 to 0.027 W versus an ANN baseline, showing that neuromorphic control can be practical even without specialized hardware.",
     "published": "2026-05-19T06:35:18+00:00",
     "updated": "2026-05-19T06:35:18+00:00",
     "authors": [
@@ -7141,7 +7141,7 @@
       "comment": null,
       "first_seen": "2026-05-20",
       "full_text": "Flapping-Wing Micro Aerial Vehicles (FWMAVs) provide exceptional maneuverability and aerodynamic efficiency but pose significant challenges for onboard control due to nonlinear dynamics and stringent Size, Weight, and Power (SWaP) constraints, as exemplified by a butterfly-inspired robot less than 30 gram. To this end, we present a hierarchical neuromorphic control framework that enables fully onboard, closed-loop flight on a widely available, resource-constrained ESP32 microcontroller with a unit cost of approximately $5. Specifically, our method deploys two lightweight Spiking Neural Networks (SNNs) onboard: one for state estimation from raw sensory feedback and another for control via modulation of a Central Pattern Generator (CPG) for wing actuation. Trained by imitation learning, the system achieves stable pitch and heading angle tracking during untethered real-world flight. Experimental results further reveal that the SNN-based controller reduces latency by 36% (1059us to 680us) and power by 18% (0.033W to 0.027W) for inference compared to the conventional Artificial Neural Network (ANN) baseline, demonstrating the viability of spike-based computation without specialized hardware. To the best of our knowledge, this work constitutes the first demonstration of fully onboard neuromorphic control for autonomous flight of a FWMAV, highlighting the potential of SNNs to enable energy-efficient autonomy under stringent SWaP constraints. Visual abstract: http://bit.ly/4nI8ECY",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19430.jpg"
     },
     "tags": [
@@ -7235,7 +7235,7 @@
     "source": "arxiv",
     "title": "Comparative Analysis of Military Detection Using Drone Imagery Across Multiple Visual Spectrums",
     "url": "http://arxiv.org/abs/2605.21157v1",
-    "summary": "In modern warfare, drones are becoming an essential part of intelligence gathering and carrying out precise attacks in different kinds of hostile environments. Their ability to operate in real-time and hostile environments from a safe distance makes them invaluable for surveillance and military operations.",
+    "summary": "Drone imagery from the KIIT-MiTA military dataset is transformed into four spectrum-style variants: grayscale, thermal, night vision, and obscura vision, to test detection under degraded visibility and sensor-like conditions. A YOLOv11-small detector is trained across these settings to compare how military object detection holds up when imagery resembles nighttime, heat-based, or otherwise obscured operational environments.",
     "published": "2026-05-20T13:26:35+00:00",
     "updated": "2026-05-20T13:26:35+00:00",
     "authors": [
@@ -7258,7 +7258,7 @@
       "comment": "6 pages, 7 figures. Accepted at the 16th International Conference on Computing, Communication and Networking Technologies (ICCCNT), July 6-11, 2025, IIT Indore. Proceedings pending publication",
       "first_seen": "2026-05-21",
       "full_text": "In modern warfare, drones are becoming an essential part of intelligence gathering and carrying out precise attacks in different kinds of hostile environments. Their ability to operate in real-time and hostile environments from a safe distance makes them invaluable for surveillance and military operations. The KIIT-MiTA dataset is comprised of images of different military scenarios taken from drones, and these provide a foundation for detecting military objects, but it does not take into account the various types of real-world scenarios. With that in mind, to evaluate how the models are performing under varying conditions, four different types of datasets are created: Gray Scale, Thermal Vision, Night Vision, and Obscura Vision. These simulate the real-world environments such as low visibility, heat-based imagery, and nighttime conditions. The YOLOv11-small model is trained and used to detect objects across diverse settings. This research boosts the performance and reliability of drone-based operations by contributing to the development of advanced detection systems in both defensive and offensive missions.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.21157.jpg"
     },
     "tags": [
@@ -7283,7 +7283,7 @@
     "source": "arxiv",
     "title": "EllipseLIO: Adaptive LiDAR Inertial Odometry with an Ellipsoid Representation",
     "url": "http://arxiv.org/abs/2605.21150v1",
-    "summary": "LiDAR Inertial Odometry (LIO) is a critical component for many mobile robots that need to navigate without relying on external positioning (e.g., GPS). Platforms that operate autonomously in different environments and with heterogeneous LiDAR sensors require a LIO approach that can adapt to these different scenarios without human intervention.",
+    "summary": "EllipseLIO is a real-time LiDAR-inertial odometry system designed to run across different environments and heterogeneous LiDAR sensors without per-scenario tuning. It adapts its scan filtering and registration to the sensor capabilities and local scene structure using an ellipsoid representation, improving robustness where fixed-configuration LIO pipelines often fail. Across five diverse datasets, it reduced average odometry error by 38% versus the next-best method and was the only approach that never diverged.",
     "published": "2026-05-20T13:24:58+00:00",
     "updated": "2026-05-20T13:24:58+00:00",
     "authors": [
@@ -7299,7 +7299,7 @@
       "comment": "8 pages, 6 figures, 2 tables",
       "first_seen": "2026-05-21",
       "full_text": "LiDAR Inertial Odometry (LIO) is a critical component for many mobile robots that need to navigate without relying on external positioning (e.g., GPS). Platforms that operate autonomously in different environments and with heterogeneous LiDAR sensors require a LIO approach that can adapt to these different scenarios without human intervention.   Existing LIO approaches can typically provide reliable and accurate odometry in scenarios with similar environments and sensors when suitably tuned. However, many approaches struggle to retain robust odometry across heterogeneous environments and sensors while using a consistent configuration.   This paper presents EllipseLIO, a real-time LIO approach that generalises between scenarios by using methods for LiDAR scan filtering and registration that adapt to the sensor capabilities and environment without requiring scenario-specific tuning. Experiments with EllipseLIO and state-of-the-art LIO approaches on five datasets with diverse and challenging scenarios demonstrate that EllipseLIO is the best-performing approach overall. It achieves a 38% lower odometry error on average than the second-best approach and is the only approach that does not diverge in any experiment. An open-source version of EllipseLIO will be available at github.com/v4rl-ucy/ellipselio.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.21150.jpg"
     },
     "tags": [
@@ -7324,7 +7324,7 @@
     "source": "arxiv",
     "title": "Decoupling Communication from Policy: Robust MARL under Bandwidth Constraints",
     "url": "http://arxiv.org/abs/2605.21085v1",
-    "summary": "Communication enables coordination in multi-agent reinforcement learning (MARL), but many real-world applications, e.g., search-and-rescue with drone swarms, operate under severe bandwidth constraints.",
+    "summary": "SLIM separates the communication channel in multi-agent reinforcement learning from the policy’s own latent representation, so shrinking messages does not also shrink the policy capacity. It also defines a normalized bandwidth budget, β, that makes sparsity, communication rounds, and message dimension comparable under one constraint. On partially observable MARL benchmarks where coordination depends on communication, the method maintains strong performance with only small drops as bandwidth is reduced.",
     "published": "2026-05-20T12:21:08+00:00",
     "updated": "2026-05-20T12:21:08+00:00",
     "authors": [
@@ -7344,7 +7344,7 @@
       "comment": null,
       "first_seen": "2026-05-21",
       "full_text": "Communication enables coordination in multi-agent reinforcement learning (MARL), but many real-world applications, e.g., search-and-rescue with drone swarms, operate under severe bandwidth constraints. Many communication architectures still expose a coupled bottleneck in which a shared latent representation is used for both policy execution and inter-agent communication. Consequently, reducing message size directly limits the policy's latent space, often leading to significant performance degradation. We address this with two contributions. First, we introduce $β$, a normalised per-agent bandwidth budget that unifies sparsity, rounds, and message dimension into a single comparable constraint. Second, we provide SLIM, a minimal architecture that decouples the communication pathway from the policy's latent representation, allowing us to isolate the effect of bandwidth from the effect of policy capacity while benefiting from in-step communication. We evaluate our method on several partially-observable MARL benchmarks, where communication is essential. Our approach achieves state-of-the-art performance and exhibits scalability and robustness under limited communication, with only marginal degradation as bandwidth is reduced.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.21085.jpg"
     },
     "tags": [
@@ -7404,7 +7404,7 @@
     "source": "arxiv",
     "title": "Multi-Week, In-Class Deployments of Telepresence Robots With Four Homebound K-12 Students: Benefits, Challenges, and Recommendations",
     "url": "http://arxiv.org/abs/2605.20431v1",
-    "summary": "Missing significant amounts of school during K-12 education is known to put students' cognitive and social development at risk. Alternatives such as home instruction and online learning are common, but lack sufficient interaction with peers and teachers in the classroom.",
+    "summary": "Four multi-week deployments followed homebound K-12 students using telepresence robots to attend class remotely, with experiences captured through 15 interviews and analyzed as qualitative case studies. The robots gave students more embodied, mobile participation than home instruction or ordinary video calls, but the deployments exposed practical barriers around hearing, seeing, navigation, classroom inclusion, teacher accountability, and peer respect. The paper turns these cases into concrete recommendations for designing and managing real classroom telepresence deployments.",
     "published": "2026-05-19T19:26:15+00:00",
     "updated": "2026-05-19T19:26:15+00:00",
     "authors": [
@@ -7426,7 +7426,7 @@
       "comment": null,
       "first_seen": "2026-05-21",
       "full_text": "Missing significant amounts of school during K-12 education is known to put students' cognitive and social development at risk. Alternatives such as home instruction and online learning are common, but lack sufficient interaction with peers and teachers in the classroom. Mobile remote presence systems, or telepresence robots, are promising for homebound students because they provide embodiment and mobility in addition to the real-time participation offered by video conferencing technologies. Research is needed, however, for telepresence robots to meet the complex needs of homebound students participating remotely in the K-12 classroom context. We present findings from four multi-week deployments with homebound K-12 students attending classes via telepresence robots. The homebound students' experiences were documented in a total of 15 interviews and analyzed qualitatively as case studies. The homebound student participants and their deployment contexts differed from one another along multiple dimensions, and while some benefits of mobile remote attendance were enjoyed by all participants, each participant also experienced unique benefits. Some challenges with hearing, seeing, and moving the robot around the classroom warranted improvements to the design of the telepresence system. Other challenges suggested priorities for managing a classroom deployment, such as ensuring that the remote student is included in classroom activities, accountable to the teacher, and treated with respect by classmates. Based on insights from the study, we make recommendations for real-world deployment procedures in similar contexts.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.20431.jpg"
     },
     "tags": [
@@ -7723,7 +7723,7 @@
     "source": "arxiv",
     "title": "PREFINE: Preference-Based Implicit Reward and Cost Fine-Tuning for Safety Alignment",
     "url": "http://arxiv.org/abs/2605.21225v1",
-    "summary": "We address the problem of making a pre-trained reinforcement learning (RL) policy safety-aware by incorporating cost constraints without retraining it from scratch. While costs could be numerically encoded, we assume a more general setting is when costs are provided as preferences.",
+    "summary": "PREFINE fine-tunes a reward-optimized continuous-control policy to avoid unsafe behavior using only trajectory-level preferences between low-cost and high-cost rollouts, rather than explicit numeric costs or full retraining. It adapts DPO to sequential decision making by building policy-sampled counterfactual trajectory pairs and optimizing both safety alignment and reward retention. In experiments, it cuts constraint violations and catastrophic failures by over 60% while preserving the original reward behavior, with better data and compute efficiency than full offline RL or imitation learning.",
     "published": "2026-05-20T14:19:45+00:00",
     "updated": "2026-05-20T14:19:45+00:00",
     "authors": [
@@ -7742,7 +7742,7 @@
       "comment": "Accepted at AAMAS 2026 as a full paper",
       "first_seen": "2026-05-21",
       "full_text": "We address the problem of making a pre-trained reinforcement learning (RL) policy safety-aware by incorporating cost constraints without retraining it from scratch. While costs could be numerically encoded, we assume a more general setting is when costs are provided as preferences. Given a reward-optimized policy and a small dataset of preferred (low-cost) and dispreferred (high-cost) trajectories, our goal is to fine-tune the policy to generate low-cost behaviors while retaining high rewards. Unlike standard RLHF in language models, where preferences are defined over responses to the same prompt, our setting involves trajectory-level preferences in continuous control environments. We introduce PREFINE: Preference-based Implicit Reward and Cost Fine-Tuning for Safety Alignment which is a preference-based fine-tuning method that adapts Direct Preference Optimization (DPO), which is now widely used for LLM fine-tuning, to the sequential decision making setting. PREFINE constructs policy-sampled counterfactual trajectories to establish meaningful preference contrasts and jointly optimizes for reward retention and safety alignment. Empirically, PREFINE reduces constraint violations and catastrophic failures by over 60% while maintaining original reward behavior. PREFINE produces policies that achieve low-cost, high-reward performance with significantly improved data and computational efficiency compared to full offline RL or imitation learning, bridging preference alignment and safe policy adaptation in continuous domains.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.21225.jpg"
     },
     "tags": [
@@ -7769,7 +7769,7 @@
     "source": "arxiv",
     "title": "Modeling and Control of a Pneumatic Morphing Soft Quadrotor based on the SOFA Framework for Dynamic Soft Robotic Simulation",
     "url": "http://arxiv.org/abs/2605.21031v1",
-    "summary": "This article presents a novel SOFA based finite element method for the soft body modeling and the corresponding dynamic simulation and control of a pneumatic morphing soft quadrotor.",
+    "summary": "A SOFA-based finite-element model represents the quadrotor’s pneumatically actuated soft arms as tetrahedral elastic meshes, preserving the usual quadrotor dynamics structure while capturing time-varying deformation from internal cavity pressure. The study uses both periodic and error-driven pneumatic actuation to simulate morphing behavior, then adds a proportional-integral controller that drives a soft arm toward a target position in simulation.",
     "published": "2026-05-20T11:06:56+00:00",
     "updated": "2026-05-20T11:06:56+00:00",
     "authors": [
@@ -7789,7 +7789,7 @@
       "comment": "8 pages, 10 figures",
       "first_seen": "2026-05-21",
       "full_text": "This article presents a novel SOFA based finite element method for the soft body modeling and the corresponding dynamic simulation and control of a pneumatic morphing soft quadrotor. The proposed modeling preserves the physical interpretability and control structure of traditional quadrotor dynamics, while capturing the complex, time-varying behavior of pneumatically actuated soft arms. In SOFA, the soft pneumatically actuated arms are discretized as a tetrahedral mesh following an elastic material law that produces internal forces adequate to the real dynamic behavior of the body. Pneumatic actuation governed by both periodic and error-based control signals is applied within the internal cavities to analyze the morphing capability. Finally, a proportional-integral controller is proposed to study the controlled dynamic behavior and morphing capabilities of the pneumatic arm, wherein the pneumatic actuation to the soft arm is controlled to achieve the desired target position. The simulation results show the effectiveness of the proposed novel modeling framework and the related controller design.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.21031.jpg"
     },
     "tags": [
@@ -7814,7 +7814,7 @@
     "source": "arxiv",
     "title": "VBT-MPC: Vision-Based Tactile MPC for Contour Following",
     "url": "http://arxiv.org/abs/2605.20392v1",
-    "summary": "Tactile sensing plays a key role in robotic manipulation, particularly in tasks like surface inspection. Successful execution requires maintaining contact while accurately tracking object contours.",
+    "summary": "VBT-MPC uses an eye-in-hand vision-based tactile sensor to follow object contours by running model predictive control directly over tactile contour features. By avoiding separate pose estimation and heavier force-control machinery, it keeps the control loop tied to what the tactile image actually observes, and the authors compare it against tactile-feature visual servoing on diverse object geometries and materials in both simulation and real-world trials.",
     "published": "2026-05-19T18:40:45+00:00",
     "updated": "2026-05-19T18:40:45+00:00",
     "authors": [
@@ -7832,7 +7832,7 @@
       "comment": "This article has been accepted for publication in IEEE Robotics and Automation Letters. This is a preprint version. This work was supported by the Interreg-VI Sudoe and European Regional Development Funds through the REMAIN Project under Grant S1/1.1/E0111",
       "first_seen": "2026-05-21",
       "full_text": "Tactile sensing plays a key role in robotic manipulation, particularly in tasks like surface inspection. Successful execution requires maintaining contact while accurately tracking object contours. In this work, we propose a Vision-Based Tactile Model Predictive Control (VBT-MPC) framework for robotic contour following using a Vision-Based Tactile Sensor (VBTS) mounted in an eye-in-hand configuration. The proposed controller operates directly in contour features space, thereby avoiding the need for separate pose-estimation modules or complex force-control architectures. We further compare our VBT-MPC with visual-servoing strategies adapted to tactile features, and evaluate contour tracking on objects with diverse geometries and materials in both simulation and real-world experiments.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.20392.jpg"
     },
     "tags": [
@@ -7893,7 +7893,7 @@
     "source": "arxiv",
     "title": "Terrestrial Soft Mobile Robots: A Review",
     "url": "http://arxiv.org/abs/2605.20304v1",
-    "summary": "Soft mobile robots have emerged as a promising area of research with potential applications in various disciplines including but not limited to search-and-rescue, service, surveillance, explorations, and manufacturing.",
+    "summary": "A review of wheelless terrestrial soft mobile robots, covering how these systems move, what actuators drive them, and how researchers model and control their deformable bodies. It maps past and current locomotion strategies across application areas such as search and rescue, service, surveillance, exploration, and manufacturing, while highlighting the technical barriers that still limit broader deployment.",
     "published": "2026-05-19T13:41:20+00:00",
     "updated": "2026-05-19T13:41:20+00:00",
     "authors": [
@@ -7908,7 +7908,7 @@
       "comment": null,
       "first_seen": "2026-05-21",
       "full_text": "Soft mobile robots have emerged as a promising area of research with potential applications in various disciplines including but not limited to search-and-rescue, service, surveillance, explorations, and manufacturing. In this article, we provide a comprehensive review of the current state of soft mobile robot research, focusing on wheelless terrestrial locomotive systems. We include past and present developments in locomotion strategies, actuation methods, modeling approaches, and control systems. Further, we identify key research challenges that must be overcome to enable the widespread adoption of soft mobile robots in various applications. Overall, this article provides a valuable resource for researchers and practitioners interested in the field of soft mobile robots and soft robotics.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.20304.jpg"
     },
     "tags": [
@@ -7965,7 +7965,7 @@
     "source": "arxiv",
     "title": "Self-assembling Modular Aerial Robot for Versatile Aerial Tasks",
     "url": "http://arxiv.org/abs/2605.19431v1",
-    "summary": "Multirotor aerial robots excel at maneuvering in three-dimensional space, and recent advances enable nimble navigation in cluttered and confined environments, especially for small airframes. By contrast, platforms built for high-altitude work tend to be larger to deliver high thrust for stable physical interaction with the environment.",
+    "summary": "LEGION is a modular multirotor system whose small, maneuverable units can dock end-to-end in flight using joint-equipped interfaces, forming a larger articulated aerial manipulator when physical interaction is needed. The units autonomously latch, maintain a zero-clearance interlock by regulating contact force and torque, and then switch from individual flight to collective behaviors such as pushing, pulling, rotating, grasping, and carrying.",
     "published": "2026-05-19T06:36:10+00:00",
     "updated": "2026-05-19T06:36:10+00:00",
     "authors": [
@@ -7986,7 +7986,7 @@
       "comment": null,
       "first_seen": "2026-05-20",
       "full_text": "Multirotor aerial robots excel at maneuvering in three-dimensional space, and recent advances enable nimble navigation in cluttered and confined environments, especially for small airframes. By contrast, platforms built for high-altitude work tend to be larger to deliver high thrust for stable physical interaction with the environment. However, these conflicting design requirements create a long-standing trade-off between nimble navigation and robust aerial manipulation. Here, we present LEGION units, which are reconfigurable modular aerial robots capable of in-flight self-assembly for cooperative manipulation, drawing inspiration from the self-organized collectives formed by ants. Each unit retains nimble maneuverability while joint-equipped docking interfaces at both ends enable end-to-end self-assembly into a flying manipulator. We show that multiple units autonomously dock in flight; once latched, they maintain a zero-clearance interlock by controlling the contact force and torque, enabling reliable aggregation and articulated motion even outdoors. We further show that self-reconfigurability enables morphological switching between nimble individual flight and collective articulated manipulation, while realizing core in-flight manipulation primitives including pushing, pulling, rotating, grasping, and carrying. LEGION's self-organization enables aerial robots, especially in swarms, to shift from passive observers to active participants in their environment, broadening the scope of aerial physical interaction.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19431.jpg"
     },
     "tags": [

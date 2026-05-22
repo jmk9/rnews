@@ -5124,7 +5124,7 @@
     "source": "arxiv",
     "title": "Neuromorphic Control of a Flapping-Wing Robot on Resource-Constrained Hardware",
     "url": "http://arxiv.org/abs/2605.19430v1",
-    "summary": "Flapping-Wing Micro Aerial Vehicles (FWMAVs) provide exceptional maneuverability and aerodynamic efficiency but pose significant challenges for onboard control due to nonlinear dynamics and stringent Size, Weight, and Power (SWaP) constraints, as exemplified by a butterfly-inspired robot less than 30 gram.",
+    "summary": "A butterfly-inspired flapping-wing MAV under 30 g runs closed-loop flight control entirely onboard a $5 ESP32 by splitting the problem across two lightweight spiking neural networks: one estimates state from raw sensor feedback, and the other modulates a central pattern generator for wing actuation. Trained with imitation learning, it tracks pitch and heading during untethered real-world flight while cutting inference latency from 1059 to 680 us and power from 0.033 to 0.027 W versus an ANN baseline, showing that neuromorphic control can be practical even without specialized hardware.",
     "published": "2026-05-19T06:35:18+00:00",
     "updated": "2026-05-19T06:35:18+00:00",
     "authors": [
@@ -5142,7 +5142,7 @@
       "comment": null,
       "first_seen": "2026-05-20",
       "full_text": "Flapping-Wing Micro Aerial Vehicles (FWMAVs) provide exceptional maneuverability and aerodynamic efficiency but pose significant challenges for onboard control due to nonlinear dynamics and stringent Size, Weight, and Power (SWaP) constraints, as exemplified by a butterfly-inspired robot less than 30 gram. To this end, we present a hierarchical neuromorphic control framework that enables fully onboard, closed-loop flight on a widely available, resource-constrained ESP32 microcontroller with a unit cost of approximately $5. Specifically, our method deploys two lightweight Spiking Neural Networks (SNNs) onboard: one for state estimation from raw sensory feedback and another for control via modulation of a Central Pattern Generator (CPG) for wing actuation. Trained by imitation learning, the system achieves stable pitch and heading angle tracking during untethered real-world flight. Experimental results further reveal that the SNN-based controller reduces latency by 36% (1059us to 680us) and power by 18% (0.033W to 0.027W) for inference compared to the conventional Artificial Neural Network (ANN) baseline, demonstrating the viability of spike-based computation without specialized hardware. To the best of our knowledge, this work constitutes the first demonstration of fully onboard neuromorphic control for autonomous flight of a FWMAV, highlighting the potential of SNNs to enable energy-efficient autonomy under stringent SWaP constraints. Visual abstract: http://bit.ly/4nI8ECY",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19430.jpg"
     },
     "tags": [
@@ -5289,7 +5289,7 @@
     "source": "arxiv",
     "title": "Justifying bio-inspired robotics research: A taxonomy of strategies",
     "url": "http://arxiv.org/abs/2605.19840v1",
-    "summary": "For most of human history, we have not thought systematically about how and why we incorporate aspects of the natural world into our designs. The lack of a systematic approach has resulted in inconsistencies in motivations and methods that make it difficult to predict or evaluate the success of bio-inspired design.",
+    "summary": "Bio-inspired robotics often leans on resemblance to animals or plants without a clear account of why that resemblance matters, making systems hard to judge when the biological link feels superficial or mismatched to the engineering goal. The article organizes the field around a taxonomy of motivations for bio-inspired design, giving robotics researchers a way to justify whether biology is being used for mechanism discovery, performance goals, explanatory modeling, or other kinds of contribution, and giving funders a clearer basis for evaluating such projects.",
     "published": "2026-05-19T13:35:14+00:00",
     "updated": "2026-05-19T13:35:14+00:00",
     "authors": [
@@ -5306,7 +5306,7 @@
       "comment": null,
       "first_seen": "2026-05-20",
       "full_text": "For most of human history, we have not thought systematically about how and why we incorporate aspects of the natural world into our designs. The lack of a systematic approach has resulted in inconsistencies in motivations and methods that make it difficult to predict or evaluate the success of bio-inspired design. This mismatch between expectations and results can lead to disappointment when a reader considers a bio-inspired design to be superficial, weak, or incomplete. This is especially true in the field of Robotics, in which similarity to a biological system might be the driving motivation for construction. In an effort to assist robotics researchers justify their specific bio-inspired approach and to assist funding program managers with discerning the value of different bio-inspired approaches, here we propose a taxonomy of motivations for bio-inspired design and describe the potential significant contributions that are likely to result from different approaches.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19840.jpg"
     },
     "tags": [
@@ -5332,7 +5332,7 @@
     "source": "arxiv",
     "title": "Dynamic robotic cloth folding with efficient Koopman operator-based model predictive control",
     "url": "http://arxiv.org/abs/2605.18373v1",
-    "summary": "Robotic cloth folding is a challenging task, particularly when considering dynamic folding tasks, which aim at folding cloth by fast motions that leverage its dynamics.",
+    "summary": "Dynamic robotic cloth folding is tackled as a fast, dynamics-aware control problem rather than a slow quasi-static manipulation task. The approach uses Koopman operator-based model predictive control to build an efficient predictive model of cloth motion, aiming to make rapid folding motions tractable for real-time robotic planning.",
     "published": "2026-05-18T13:21:38+00:00",
     "updated": "2026-05-18T13:21:38+00:00",
     "authors": [
@@ -5353,8 +5353,8 @@
       "pdf_url": "https://arxiv.org/pdf/2605.18373v1",
       "comment": "Accepted for presentation at the 2026 IEEE International Conference on Robotics and Automation (ICRA)",
       "first_seen": "2026-05-19",
-      "full_text": "Robotic cloth folding is a challenging task, particularly when considering dynamic folding tasks, which aim at folding cloth by fast motions that leverage its dynamics. When subject to such fast motions, the complexity of cloth dynamics hinders both system identification and planning of folding trajectories, resulting in a difficult simulation-to-reality transfer when using physical models of cloth. Compared to the dexterity that humans exhibit when performing folding tasks, robotic approaches usually employ small garments with quite rigid dynamics, and are either too slow, or fast but imprecise, requiring several attempts to achieve a reasonably good fold. In this paper, we tackle these challenges by generating fast folding trajectories with a novel model predictive controller, integrating physics-based simulation of cloth dynamics and efficient, kernel-based Koopman operator regression. Koopman operator regression, an increasingly popular machine learning technique for nonlinear system identification, is used to obtain a linear model for the cloth being folded. Such a surrogate model, trained with data from a high-fidelity, physics-based cloth simulator, can then be employed within a suitable model predictive control algorithm, in place of the costly, nonlinear one, to efficiently generate folding trajectories to be executed by a robotic manipulator. Both in simulated and real-robot experiments, we show how the linearization supplied by the Koopman operator-based model can be employed to efficiently generate fast folding trajectories to unseen poses, without sacrificing folding accuracy.",
-      "summary_kind": "truncation",
+      "full_text": "Robotic cloth folding is a challenging task, particularly when considering dynamic folding tasks, which aim at folding cloth by fast motions that leverage its dynamics.",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.18373.jpg"
     },
     "tags": [
@@ -5379,7 +5379,7 @@
     "source": "arxiv",
     "title": "On Improving Multimodal Pedestrian Trajectory Prediction with CVAE: A Study on Benchmark and Robot Data",
     "url": "http://arxiv.org/abs/2605.18262v1",
-    "summary": "Accurate pedestrian trajectory prediction is crucial for autonomous systems operating in complex environments, such as modular buses and delivery robots in suburban or semi-structured areas.",
+    "summary": "Accurate pedestrian trajectory prediction is framed here as a multimodal problem for autonomous platforms such as modular buses and delivery robots moving through suburban or semi-structured environments. The study focuses on improving CVAE-based prediction and evaluates it on both standard benchmarks and robot-collected data, aiming to understand how well these models transfer from curated datasets to the messier settings robots actually encounter.",
     "published": "2026-05-18T11:59:52+00:00",
     "updated": "2026-05-18T11:59:52+00:00",
     "authors": [
@@ -5394,8 +5394,8 @@
       "pdf_url": "https://arxiv.org/pdf/2605.18262v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "full_text": "Accurate pedestrian trajectory prediction is crucial for autonomous systems operating in complex environments, such as modular buses and delivery robots in suburban or semi-structured areas. Social Spatio-Temporal Graph Convolutional Neural Networks (Social-STGCNN) have shown strong performance by modeling social interactions; however, producing diverse and well-calibrated future trajectories remains challenging. In this work, we build on a Social-STGCNN backbone and introduce a Conditional Variational Autoencoder (CVAE)-based probabilistic formulation to explicitly model multimodal future trajectories. We evaluate the method on the ETH and UCY pedestrian trajectory datasets as well as on a real-world pedestrian dataset collected by a mobile robot. Results show moderate gains on public benchmarks, but more consistent endpoint accuracy and improved trajectory diversity across different crowd configurations. Evaluation on robot-collected data further demonstrates the approach's effectiveness beyond curated benchmarks and supports its applicability in practical deployments.",
-      "summary_kind": "truncation",
+      "full_text": "Accurate pedestrian trajectory prediction is crucial for autonomous systems operating in complex environments, such as modular buses and delivery robots in suburban or semi-structured areas.",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.18262.jpg"
     },
     "tags": [
@@ -5421,7 +5421,7 @@
     "source": "arxiv",
     "title": "FUSE: A Framework for Unified State Estimation in Robotic SLAM Systems",
     "url": "http://arxiv.org/abs/2605.18047v1",
-    "summary": "Tightly coupled SLAM formulations under mixed-rate sensing often bind temporal processing, local geometric association, estimator formulation, and map-update policy into method-specific designs. Such binding makes it difficult to vary one design choice without re-engineering the rest of the state-estimation process.",
+    "summary": "FUSE targets tightly coupled SLAM systems where mixed-rate sensors, temporal handling, geometric association, estimator design, and map updates are usually hard-wired together. It reframes state estimation as a unified framework so those pieces can be varied independently, making it easier to compare design choices or swap components without rebuilding the whole SLAM pipeline.",
     "published": "2026-05-18T08:36:04+00:00",
     "updated": "2026-05-18T08:36:04+00:00",
     "authors": [
@@ -5441,8 +5441,8 @@
       "pdf_url": "https://arxiv.org/pdf/2605.18047v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "full_text": "Tightly coupled SLAM formulations under mixed-rate sensing often bind temporal processing, local geometric association, estimator formulation, and map-update policy into method-specific designs. Such binding makes it difficult to vary one design choice without re-engineering the rest of the state-estimation process. This paper presents FUSE, a framework for unified state estimation in robotic SLAM systems. FUSE organizes the state-estimation interface around observation ingestion, propagation, update, and state query, and uses this interface to separate temporal processing, residual-ready local geometric association, estimator formulation, and map-update policy. A LiDAR--IMU instantiation is developed to examine the framework under mixed-rate sensing and directional degeneracy, where high-rate inertial propagation, LiDAR-triggered geometric update, residual screening, and degeneracy-aware correction operate through the same interface boundaries. On a 418 m loop-corridor sequence, the instantiation reports a 1.626~m end-to-end trajectory error, corresponding to a 7.9% relative error reduction compared with Faster-LIO, the lowest-error baseline on this sequence. The results support FUSE as a framework for organizing state-estimation design choices and show how the evaluated instantiation regularizes updates along weakly observable directions.",
-      "summary_kind": "truncation",
+      "full_text": "Tightly coupled SLAM formulations under mixed-rate sensing often bind temporal processing, local geometric association, estimator formulation, and map-update policy into method-specific designs. Such binding makes it difficult to vary one design choice without re-engineering the rest of the state-estimation process.",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.18047.jpg"
     },
     "tags": [
@@ -5468,7 +5468,7 @@
     "source": "arxiv",
     "title": "Active Defense Against False Data Injection Attacks in Robotic Manipulators",
     "url": "http://arxiv.org/abs/2605.17950v1",
-    "summary": "Robotic systems are vulnerable to False Data Injection Attacks (FDIAs), where adversaries corrupt sensor signals to gain malicious control. Feedback linearization exposes robotic systems to integrator vulnerability, making them susceptible to stealthy attacks that can cause significant deviations in end-effector behavior without raising alarms.",
+    "summary": "Robotic manipulators are treated as targets for false data injection, where an attacker corrupts sensor readings to steer the system away from its intended behavior. The paper frames the problem as active defense rather than passive detection, aiming to keep control authority even when the robot’s sensing channel is being manipulated.",
     "published": "2026-05-18T07:06:36+00:00",
     "updated": "2026-05-18T07:06:36+00:00",
     "authors": [
@@ -5485,8 +5485,8 @@
       "pdf_url": "https://arxiv.org/pdf/2605.17950v1",
       "comment": "Extended 8-page version containing full proofs. An abridged 6-page version has been accepted for publication in the Proceedings of the 23rd IFAC World Congress (2026)",
       "first_seen": "2026-05-19",
-      "full_text": "Robotic systems are vulnerable to False Data Injection Attacks (FDIAs), where adversaries corrupt sensor signals to gain malicious control. Feedback linearization exposes robotic systems to integrator vulnerability, making them susceptible to stealthy attacks that can cause significant deviations in end-effector behavior without raising alarms. This paper addresses the resilience of manipulators against finite-horizon FDIAs by formalizing two defense methods, namely anomaly-aware virtual damping and manipulability reduction, with probabilistic guarantees on nominal task execution. Simulations on a 7-DOF redundant manipulator show that the proposed defenses substantially reduce the impact of FDIA compared to using solely a threshold-based ADS like the Chi-squared, while preserving nominal task performance in the absence of attack.",
-      "summary_kind": "truncation",
+      "full_text": "Robotic systems are vulnerable to False Data Injection Attacks (FDIAs), where adversaries corrupt sensor signals to gain malicious control.",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.17950.jpg"
     },
     "tags": [
@@ -5511,7 +5511,7 @@
     "source": "arxiv",
     "title": "From a Single Demonstration to a General Policy for Contact-Rich Manipulation",
     "url": "http://arxiv.org/abs/2605.17601v1",
-    "summary": "We present a Learning from Demonstration (LfD) framework that achieves one-shot generalization in multi-stage, contact-rich manipulation tasks. Central to our approach is the utilization of environmental constraints as the inductive bias.",
+    "summary": "Uses environmental constraints as an inductive bias to turn a single human demonstration into a policy for multi-stage, contact-rich manipulation. The interesting part is the one-shot generalization claim: instead of needing many demonstrations across variations, the method tries to infer how contacts and constraints structure the task so the robot can adapt the behavior more broadly.",
     "published": "2026-05-17T18:58:03+00:00",
     "updated": "2026-05-17T18:58:03+00:00",
     "authors": [
@@ -5526,8 +5526,8 @@
       "pdf_url": "https://arxiv.org/pdf/2605.17601v1",
       "comment": "21 pages, 22 figures, 7 tables",
       "first_seen": "2026-05-19",
-      "full_text": "We present a Learning from Demonstration (LfD) framework that achieves one-shot generalization in multi-stage, contact-rich manipulation tasks. Central to our approach is the utilization of environmental constraints as the inductive bias. By representing a demonstration as a sequence of behaviors that exploit environmental constraints, the robot separates task-general structure -- the constraint types and their transitions -- from instance-specific details such as exact demonstration trajectories, poses, and local geometries. Our four-stage pipeline builds a complete policy on this representation: the robot first abstracts a single demonstration into environmental-constraint primitives, then disambiguates them through self-guided exploration, next assimilates targeted human corrections that handle out-of-distribution variations, and finally recovers the abstracted-away details online through compliant interaction. Because the resulting policy follows constraints rather than mimics trajectories, it generalizes across object poses, local geometries, and unmodeled contact dynamics. We validate our approach on seven real-world multi-stage contact-rich manipulation tasks and achieve over 90% success. These extensive experimental results establish environmental constraints as fundamental building blocks for efficient generalization in learning from demonstration.",
-      "summary_kind": "truncation",
+      "full_text": "We present a Learning from Demonstration (LfD) framework that achieves one-shot generalization in multi-stage, contact-rich manipulation tasks. Central to our approach is the utilization of environmental constraints as the inductive bias.",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.17601.jpg"
     },
     "tags": [
@@ -5588,7 +5588,7 @@
     "source": "arxiv",
     "title": "Set-Valued Policy Learning",
     "url": "http://arxiv.org/abs/2605.19830v1",
-    "summary": "Conventional treatment policies map patient covariates to a single recommended intervention in order to maximize expected clinical outcomes.",
+    "summary": "Set-valued policy learning replaces single treatment recommendations with sets of plausible interventions, using the set size itself as a signal of decision ambiguity under estimation uncertainty. The paper extends learning-to-defer to multiple treatments with a greatest Lower Bound method and introduces conformal policy learning with randomness injection to guarantee marginal coverage without assumptions on the black-box optimal treatment rule. Experiments on synthetic data and an IVF application show that these policies trade off performance and reliability while producing clinically usable recommendations.",
     "published": "2026-05-19T13:24:26+00:00",
     "updated": "2026-05-19T13:24:26+00:00",
     "authors": [
@@ -5609,7 +5609,7 @@
       "comment": null,
       "first_seen": "2026-05-20",
       "full_text": "Conventional treatment policies map patient covariates to a single recommended intervention in order to maximize expected clinical outcomes. Although a rich body of causal inference methods has been developed to estimate such policies, point-valued recommendations can be highly sensitive to estimation uncertainty, model specification, and finite-sample variability, while typically providing little guidance about how confident one should be in the recommended action. In this work, we propose a set-valued policy learning paradigm for the multiple-treatment setting, in which policies output a set of plausible treatments rather than a single recommendation. This formulation enables intrinsic uncertainty quantification, with the size of the predicted set reflecting the degree of decision ambiguity. We extend the learning-to-defer framework to multiple treatments via a novel \\textit{greatest Lower Bound} method, and introduce \\textit{conformal policy learning}, which bridges the gap between unobserved ground-truth optimal treatments and estimated optimal treatment rules. Drawing on insights from the noisy-label literature, we develop a randomness-injection approach that guarantees marginal coverage without requiring assumptions on underlying black-box optimal treatment rules. Through experiments on synthetic data and a real-world application to In-Vitro Fertilization (IVF), we demonstrate that our methods produce robust and actionable policies that naturally incorporate clinical considerations while effectively balancing performance and reliability.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19830.jpg"
     },
     "tags": [
@@ -5634,7 +5634,7 @@
     "source": "arxiv",
     "title": "deadtrees.earth-aerial: A Multi-Resolution Aerial Image Dataset for Tree Cover and Mortality Detection",
     "url": "http://arxiv.org/abs/2605.19605v1",
-    "summary": "Forests worldwide are increasingly threatened by climate change and disturbances such as fire, pests, and pathogens, creating an urgent need for scalable monitoring of tree cover and tree mortality. Aerial imagery from drones and aircraft is a key data source for detailed and large-scale mapping of tree crowns and mortality.",
+    "summary": "deadtrees.earth-aerial provides open, machine-learning-ready aerial image datasets for jointly segmenting tree cover and tree mortality from centimeter-scale drone and aircraft imagery across tropical, temperate, boreal, and dryland biomes. DTE-aerial-train contains 385K 1024x1024 patches at 2.5-20 cm resolution with expert-audited pseudo-labels, while DTE-aerial-bench adds 525 high-quality annotated benchmark patches from 25 globally distributed orthoimages. Baseline models evaluated on the benchmark substantially improve mortality segmentation across biomes, including a boreal-forest F1 jump from 0.40 to 0.58.",
     "published": "2026-05-19T09:43:29+00:00",
     "updated": "2026-05-19T09:43:29+00:00",
     "authors": [
@@ -5660,7 +5660,7 @@
       "comment": "Preprint. Under review. All rights reserved",
       "first_seen": "2026-05-20",
       "full_text": "Forests worldwide are increasingly threatened by climate change and disturbances such as fire, pests, and pathogens, creating an urgent need for scalable monitoring of tree cover and tree mortality. Aerial imagery from drones and aircraft is a key data source for detailed and large-scale mapping of tree crowns and mortality. However, related progress is limited by the lack of globally representative, harmonized datasets for joint segmentation of tree cover and mortality. We introduce two novel, open, machine-learning-ready datasets to enable joint segmentation of tree cover and tree mortality from centimeter-scale aerial imagery for the first time at global scales. With DTE-aerial-train, we provide a training dataset comprising 385K image patches of size 1024x1024 pixels, with resolutions ranging from 2.5 to 20 cm. It includes multi-class expert-annotated and -audited pseudo-labels for tree cover and mortality. With DTE-aerial-bench, we provide a geographically balanced benchmark test set of 25 globally distributed orthoimages totaling 525 patches with high-quality expert annotations for both tree cover and mortality. Both the training and benchmark datasets span tropical, temperate, boreal, and dryland biomes and cover a wide range of forest structures and mortality patterns. Using the benchmark test set for evaluation, we establish strong reference baselines that improve mortality segmentation across all biomes and scales with significant gains in challenging regions, such as boreal forests, where the F1 score increases from 0.40 to 0.58 with around 45% relative improvement. All data, models, and code will be publicly released under permissive open-source licenses. An interactive visualization of the benchmark dataset is available at deadtrees.earth/releases/dte-aerial-bench.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19605.jpg"
     },
     "tags": [
@@ -5685,7 +5685,7 @@
     "source": "arxiv",
     "title": "Self-assembling Modular Aerial Robot for Versatile Aerial Tasks",
     "url": "http://arxiv.org/abs/2605.19431v1",
-    "summary": "Multirotor aerial robots excel at maneuvering in three-dimensional space, and recent advances enable nimble navigation in cluttered and confined environments, especially for small airframes. By contrast, platforms built for high-altitude work tend to be larger to deliver high thrust for stable physical interaction with the environment.",
+    "summary": "LEGION is a modular multirotor system whose small, maneuverable units can dock end-to-end in flight using joint-equipped interfaces, forming a larger articulated aerial manipulator when physical interaction is needed. The units autonomously latch, maintain a zero-clearance interlock by regulating contact force and torque, and then switch from individual flight to collective behaviors such as pushing, pulling, rotating, grasping, and carrying.",
     "published": "2026-05-19T06:36:10+00:00",
     "updated": "2026-05-19T06:36:10+00:00",
     "authors": [
@@ -5706,7 +5706,7 @@
       "comment": null,
       "first_seen": "2026-05-20",
       "full_text": "Multirotor aerial robots excel at maneuvering in three-dimensional space, and recent advances enable nimble navigation in cluttered and confined environments, especially for small airframes. By contrast, platforms built for high-altitude work tend to be larger to deliver high thrust for stable physical interaction with the environment. However, these conflicting design requirements create a long-standing trade-off between nimble navigation and robust aerial manipulation. Here, we present LEGION units, which are reconfigurable modular aerial robots capable of in-flight self-assembly for cooperative manipulation, drawing inspiration from the self-organized collectives formed by ants. Each unit retains nimble maneuverability while joint-equipped docking interfaces at both ends enable end-to-end self-assembly into a flying manipulator. We show that multiple units autonomously dock in flight; once latched, they maintain a zero-clearance interlock by controlling the contact force and torque, enabling reliable aggregation and articulated motion even outdoors. We further show that self-reconfigurability enables morphological switching between nimble individual flight and collective articulated manipulation, while realizing core in-flight manipulation primitives including pushing, pulling, rotating, grasping, and carrying. LEGION's self-organization enables aerial robots, especially in swarms, to shift from passive observers to active participants in their environment, broadening the scope of aerial physical interaction.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19431.jpg"
     },
     "tags": [
@@ -5731,7 +5731,7 @@
     "source": "arxiv",
     "title": "REACT: Environment-Adaptive Architecture for Continuous Formation Navigation of Wheeled Mobile Robots",
     "url": "http://arxiv.org/abs/2605.18441v1",
-    "summary": "Formation control of wheeled mobile robots (WMRs) has been extensively studied due to its broad applications in fields such as logistics transportation, environmental monitoring, and search and rescue. However, most existing works mainly focus on tracking predefined formations, which limits their adaptability to complex real-world environments.",
+    "summary": "REACT targets continuous formation navigation for wheeled mobile robot teams, with an environment-adaptive architecture meant to keep formations coherent as conditions change. From the available text, it sits in the formation-control line of work for logistics, monitoring, and search-and-rescue settings, where the practical challenge is coordinating multiple nonholonomic robots through real environments rather than just maintaining a static geometric pattern.",
     "published": "2026-05-18T14:11:31+00:00",
     "updated": "2026-05-18T14:11:31+00:00",
     "authors": [
@@ -5751,8 +5751,8 @@
       "pdf_url": "https://arxiv.org/pdf/2605.18441v1",
       "comment": null,
       "first_seen": "2026-05-19",
-      "full_text": "Formation control of wheeled mobile robots (WMRs) has been extensively studied due to its broad applications in fields such as logistics transportation, environmental monitoring, and search and rescue. However, most existing works mainly focus on tracking predefined formations, which limits their adaptability to complex real-world environments. To address this, we propose REACT (Real-time Environment-Adaptive architecture for Continuous formation navigaTion), a hierarchical architecture integrating centralized formation generation and distributed formation maintenance. Specifically, our upper layer generates new environment-adaptive formations when necessary and uses our proposed TCF-R2T (Trajectory-Conflict-Free Robot-to-Target assignment) algorithm to compute conflict-free WMR-to-target assignments in polynomial time, enabling timely formation transitions without trajectory conflicts. At the lower layer, each WMR executes our developed JSTP (Joint Spatio-Temporal trajectory Planning) method to maintain the generated formation by simultaneously optimizing spatial positions and temporal durations, thereby enhancing coordination among WMRs and enabling continuous navigation in obstacle-rich environments and dynamic-obstacle scenarios. Both simulation and real-world experiments validate the effectiveness and practical applicability of REACT. Experimental videos are available on our project website: https://dongjh20.github.io/REACT-website.",
-      "summary_kind": "truncation",
+      "full_text": "Formation control of wheeled mobile robots (WMRs) has been extensively studied due to its broad applications in fields such as logistics transportation, environmental monitoring, and search and rescue.",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.18441.jpg"
     },
     "tags": [
@@ -5848,7 +5848,7 @@
     "source": "arxiv",
     "title": "Spatially Prompted Visual Trajectory Prediction for Egocentric Manipulation",
     "url": "http://arxiv.org/abs/2605.20085v1",
-    "summary": "Robotic manipulation is often specified through language instructions or task identifiers, yet cluttered environments with similar objects are better handled by spatially indicating what to move and where to place it.",
+    "summary": "Spatially Prompted Visual Trajectory Prediction frames egocentric manipulation as forecasting a robot end-effector’s future path from visual streams plus first-frame spatial prompts, such as boxes or points marking the object and target location. The authors introduce EgoSPT, with grounded object/target annotations and recovered 3D motion, and SPOT, which fuses prompt encoding, current observations, history, and a trajectory generator. Under strict scene-level splits, SPOT predicts trajectories better across new scenes than baselines without prompts or with only one prompt source.",
     "published": "2026-05-19T16:39:30+00:00",
     "updated": "2026-05-19T16:39:30+00:00",
     "authors": [
@@ -5866,7 +5866,7 @@
       "comment": null,
       "first_seen": "2026-05-20",
       "full_text": "Robotic manipulation is often specified through language instructions or task identifiers, yet cluttered environments with similar objects are better handled by spatially indicating what to move and where to place it. Addressing the vision-centric challenge of object and goal specification, we present, to the best of our knowledge, the first formalization of Spatially Prompted Visual Trajectory Prediction (SP-VTP). This novel setting utilizes initial spatial prompts (like bounding boxes or points) to define task objectives, tasking the model with forecasting future end-effector trajectories from egocentric streams. To study this problem, we collect and annotate EgoSPT, a dataset of egocentric spatially prompted manipulation trajectories with first-frame object and target grounding annotations and recovered 3D end-effector motion. SP-VTP is challenging because the task specification is static, while the scene configuration evolves over time. To solve this problem, we propose SPOT(Spatially Prompted Object-Target Policy), which combines a task encoder for first-frame visual and coordinate spatial prompts, an observation encoder for current visual and history context, and a trajectory generator for future end-effector motion. Experiments under strict scene-level splits show that SPOT improves cross-scene trajectory prediction over non-prompted or single-source prompted baselines. Together, EgoSPT and SPOT establish a new spatial prompting problem SP-VTP, as a simple and scalable task condition for egocentric manipulation.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.20085.jpg"
     },
     "tags": [
@@ -5891,7 +5891,7 @@
     "source": "arxiv",
     "title": "Distributionally Robust Control via Stein Variational Inference for Contact-Rich Manipulation",
     "url": "http://arxiv.org/abs/2605.19029v1",
-    "summary": "Reliable robotic manipulation requires control policies that can accurately represent and adapt to uncertainty arising from contact-rich interactions. Modern data-driven methods mitigate uncertainty through large-scale training and computation, and degrade significantly in performance with limited number of training samples.",
+    "summary": "Distributionally robust manipulation control is formulated with a deterministic Stein variational inference scheme that lets a model-based controller explicitly track task-sensitive parameter uncertainty in contact-rich settings. The goal is to keep the efficiency and reliability of classical controllers while adapting more flexibly than standard model-based uncertainty treatments, especially when training samples are limited. Across contact-rich manipulation experiments with broad parametric uncertainty, the resulting controllers achieve up to 3x better robustness than existing model-based control methods.",
     "published": "2026-05-18T18:54:29+00:00",
     "updated": "2026-05-18T18:54:29+00:00",
     "authors": [
@@ -5910,7 +5910,7 @@
       "comment": "In Proceedings of Robotics: Science and Systems, Sydney, Australia, July 2025",
       "first_seen": "2026-05-20",
       "full_text": "Reliable robotic manipulation requires control policies that can accurately represent and adapt to uncertainty arising from contact-rich interactions. Modern data-driven methods mitigate uncertainty through large-scale training and computation, and degrade significantly in performance with limited number of training samples. By contrast, classical model-based controllers are computationally efficient and reliable, but their limited ability to represent task-relevant uncertainty can hinder performance in contact-rich interactions.   In this work, we propose to expand the capabilities of model-based manipulation control through more flexible uncertainty modeling that retains performance while exactly adapting to uncertainty. Our approach casts the manipulation problem as a distributionally robust control optimization and proposes a novel deterministic formulation based on Stein variational inference that preserves performance while explicitly modeling task-sensitive parameter uncertainty. As a result, the derived controllers are more aware of task sensitivities to uncertainty, yielding high reliability without compromising performance. Experimental results demonstrate up to 3$\\times$ improved robustness across a range of contact-rich manipulation tasks under broad parametric uncertainty, outperforming existing model-based control methods.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19029.jpg"
     },
     "tags": [
@@ -5935,7 +5935,7 @@
     "source": "arxiv",
     "title": "Confidence-Gated Robot Autonomy: When Does Uncertainty Actually Help?",
     "url": "http://arxiv.org/abs/2605.18045v1",
-    "summary": "Robotic systems often use predictive uncertainty to decide whether to act autonomously or defer to a fallback policy. In threshold-gated autonomy, uncertainty matters mainly through its ability to rank likely errors. Standard metrics such as expected calibration error and AUROC do not directly test whether uncertainty changes act/defer decisions.",
+    "summary": "Confidence-gated robot autonomy uses predictive uncertainty as a switch: the robot acts on its own only when confidence is high enough, otherwise handing control to a fallback policy. The useful role of uncertainty here is not calibration for its own sake, but whether the uncertainty score reliably ranks likely failures, since thresholding only helps when high-uncertainty cases are actually the ones where autonomous action would go wrong.",
     "published": "2026-05-18T08:35:27+00:00",
     "updated": "2026-05-18T08:35:27+00:00",
     "authors": [
@@ -5952,8 +5952,8 @@
       "pdf_url": "https://arxiv.org/pdf/2605.18045v1",
       "comment": "ICRA 2026 workshop paper",
       "first_seen": "2026-05-19",
-      "full_text": "Robotic systems often use predictive uncertainty to decide whether to act autonomously or defer to a fallback policy. In threshold-gated autonomy, uncertainty matters mainly through its ability to rank likely errors. Standard metrics such as expected calibration error and AUROC do not directly test whether uncertainty changes act/defer decisions. We therefore evaluate uncertainty using Spearman rank correlation, paired bootstrap equivalence testing, and act/defer agreement. Across three temporal activity-recognition benchmarks, we find a dataset-dependent competence regime below which uncertainty provides a weak and unstable error ranking. Above this regime, softmax heuristics, MC Dropout, and ensembles produce similar gating behavior, while threshold choice has a much larger effect on execution outcomes. A multi-seed embodied simulation shows the same pattern for collision rate and cost once realized autonomy is matched. Under temporal covariate shift, ranking quality remains stable, but fine grained semantic OOD detection remains near chance. These results suggest that simple uncertainty proxies can suffice for selective gating once the base model is competent, but not for semantic novelty detection.",
-      "summary_kind": "truncation",
+      "full_text": "Robotic systems often use predictive uncertainty to decide whether to act autonomously or defer to a fallback policy. In threshold-gated autonomy, uncertainty matters mainly through its ability to rank likely errors.",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.18045.jpg"
     },
     "tags": [
@@ -5978,7 +5978,7 @@
     "source": "arxiv",
     "title": "Visual Sculpting: Visually-Aligned Planning Representations for Long-Horizon Robot Clay Sculpting",
     "url": "http://arxiv.org/abs/2605.17556v1",
-    "summary": "Clay sculpting is a nuanced, artistic task involving dexterous manipulation with long-horizon planning to achieve high-level goals. As a robotics problem, we formulate clay sculpting as a shape-to-shape matching challenge.",
+    "summary": "Visual Sculpting frames robot clay sculpting as a shape-to-shape matching problem, where the robot must plan a long sequence of dexterous manipulations to transform an initial clay form into a target shape. The interesting piece is its use of visually aligned planning representations, aiming to connect high-level visual goals with the low-level action choices needed for a deformable, artistic material like clay.",
     "published": "2026-05-17T17:37:34+00:00",
     "updated": "2026-05-17T17:37:34+00:00",
     "authors": [
@@ -5994,8 +5994,8 @@
       "pdf_url": "https://arxiv.org/pdf/2605.17556v1",
       "comment": "8 pages, 14 figures. Accepted for publication in IEEE Robotics and Automation Letters (RA-L)",
       "first_seen": "2026-05-19",
-      "full_text": "Clay sculpting is a nuanced, artistic task involving dexterous manipulation with long-horizon planning to achieve high-level goals. As a robotics problem, we formulate clay sculpting as a shape-to-shape matching challenge. Prior deformable object manipulation work either requires retraining a policy per goal or relies on dynamics models which represent state as sparse point clouds which do not capture important clay features, such as textures, well. We present a method for modeling the dynamics of deformable materials and planning for robotic sculpting in a representation that is visually-aligned, capturing lighting and texture features. With three different deformable materials and various end-effectors, we demonstrate that our dynamics model is comparable in performance to the state-of-the-art with the added benefit of being compatible with visual planning. Our actions are represented as parametrized pushes into clay with a single end-effector, which proved to be suitable for long-horizon (>100 actions) clay relief sculptures. Lastly, we show the benefits of planning in a visually-aligned representation, but also provide analysis providing evidence as to why this representation is challenging to plan in compared to 3D representations.",
-      "summary_kind": "truncation"
+      "full_text": "Clay sculpting is a nuanced, artistic task involving dexterous manipulation with long-horizon planning to achieve high-level goals. As a robotics problem, we formulate clay sculpting as a shape-to-shape matching challenge.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Manipulator"
@@ -9666,7 +9666,7 @@
     "source": "arxiv",
     "title": "GroupAffect-4: A Multimodal Dataset of Four-Person Collaborative Interaction",
     "url": "http://arxiv.org/abs/2605.19765v1",
-    "summary": "Existing affective-computing, social-signal-processing, and meeting corpora capture important parts of human interaction, but they rarely support analysis of affect in co-located groups as a coupled individual, interpersonal, and group-level process.",
+    "summary": "GroupAffect-4 is a multimodal corpus of 10 co-located four-person groups performing information pooling, negotiation, idea generation, and public-goods tasks, with synchronized physiology, eye tracking, close-talk audio, affect self-reports, task outcomes, questionnaires, and Big-Five personality scores for each participant. It is designed to study affect as something that unfolds jointly within individuals, between people, and at the group level, and the release includes 15 benchmark targets plus leave-one-group-out baselines. The dataset is relatively complete for this kind of setup, covering over 91% of expected physiology windows and 98% of eye-tracking windows, with an affective manipulation check showing the negotiation task produced the intended signal.",
     "published": "2026-05-19T12:38:27+00:00",
     "updated": "2026-05-19T12:38:27+00:00",
     "authors": [
@@ -9694,7 +9694,7 @@
       "comment": null,
       "first_seen": "2026-05-20",
       "full_text": "Existing affective-computing, social-signal-processing, and meeting corpora capture important parts of human interaction, but they rarely support analysis of affect in co-located groups as a coupled individual, interpersonal, and group-level process. The required signals (per-participant physiology, eye movement, audio, self-report, task outcomes, and personality) are usually fragmented across separate dataset traditions. We introduce GroupAffect-4, a multimodal corpus of 40 participants in 10 four-person groups, each completing four ecologically varied collaborative tasks spanning information pooling, negotiation, idea generation, and a public-goods game. Each participant is instrumented with a wrist-worn physiology sensor, eye-tracking glasses, and a close-talk microphone; sessions include continuous affect self-reports, post-task questionnaires, task outcomes, and Big-Five personality scores, all time-aligned to a shared clock. The dataset covers over 91% of expected physiology windows and 98% of eye-tracking windows, with strong task validity confirmed by a clear affective manipulation check across the negotiation block. We define fifteen benchmarkable targets spanning three analysis levels -- within-person state, between-person traits, and group dynamics -- and report leave-one-group-out feasibility baselines establishing the dataset's evaluative scope. GroupAffect-4 is released with a BIDS-inspired structure, Croissant metadata, a datasheet, per-session quality reports, and open processing scripts. Code and processing scripts are available at https://github.com/meisamjam/GroupAffect-4; the dataset is publicly archived at https://zenodo.org/records/20037847.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19765.jpg"
     },
     "tags": [
@@ -9720,7 +9720,7 @@
     "source": "arxiv",
     "title": "Robo-Cortex: A Self-Evolving Embodied Agent via Dual-Grain Cognitive Memory and Autonomous Knowledge Induction",
     "url": "http://arxiv.org/abs/2605.18729v1",
-    "summary": "The ability to navigate and interact with complex environments is central to real-world embodied agents, yet navigation in unseen environments remains challenging due to \"experiential amnesia,\" where existing trajectory-driven or reactive policies fail to synthesize generalizable strategies from past interactions.",
+    "summary": "Robo-Cortex turns a robot’s past navigation trajectories into reusable natural-language heuristics, using short-term reflective memory for local progress checks and long-term principle memory for general guidance and failure warnings. Its Autonomous Knowledge Induction module builds a Navigation Heuristic Library, while an imagine-then-verify loop simulates candidate actions and has a VLM evaluate them before execution. On IGNav, AR, and AEQA it improves success and exploration efficiency, including up to +4.16% SPL over the strongest baseline and +15.30% SPL when transferring heuristics to unseen environments.",
     "published": "2026-05-18T17:52:14+00:00",
     "updated": "2026-05-18T17:52:14+00:00",
     "authors": [
@@ -9747,7 +9747,7 @@
       "comment": null,
       "first_seen": "2026-05-19",
       "full_text": "The ability to navigate and interact with complex environments is central to real-world embodied agents, yet navigation in unseen environments remains challenging due to \"experiential amnesia,\" where existing trajectory-driven or reactive policies fail to synthesize generalizable strategies from past interactions. We propose Robo-Cortex, a self-evolving framework that enables robots to autonomously induce navigation heuristics and refine cognitive strategies through a continuous reflection-adaptation loop. By abstracting success patterns and failure pitfalls into natural-language heuristics, Robo-Cortex enables a transition from passive execution to active strategy evolution. Our core innovation is an Autonomous Knowledge Induction (AKI) mechanism that distills multimodal trajectories into a structured Navigation Heuristic Library for knowledge generalization. The architecture further incorporates a Dual-Grain Cognitive Memory system, comprising a Short-term Reflective Memory (SRM) for real-time local progress analysis, and a Long-term Principle Memory (LPM) that abstracts past trajectories into reusable guiding and cautionary principles. To ensure robust decision-making, we introduce a multimodal Imagine-then-Verify loop, where a world model simulates potential outcomes and a VLM-based evaluator validates action plans. Extensive evaluations on IGNav, AR, and AEQA show that Robo-Cortex consistently outperforms strong baselines in both task success and exploration efficiency, with gains of up to +4.16% SPL over the strongest prior method and up to +15.30% SPL under heuristic transfer to unseen environments. Preliminary real-world robotic experiments further support the effectiveness of Robo-Cortex in physical settings.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.18729.jpg"
     },
     "tags": [
