@@ -1953,7 +1953,8 @@
       "first_seen": "2026-05-18",
       "full_text": "Isaac Lab - Arena is a robotics simulation framework that enhances NVIDIA Isaac Lab by providing a composable, scalable system for creating diverse simulation environments and evaluating robot learning policies. The framework enables developers to rapidly prototype and test robotic tasks with various robot embodiments, objects, and environments.",
       "readme": "Isaac Lab-Arena Composable Environment Creation and Policy Evaluation for Robotics Simulation Documentation · NVIDIA Blog Post · Report a Bug · Discussions --- [!WARNING] Alpha Software — Not an Early Access or General Availability Release. Isaac Lab-Arena v0.2.x is an early code release intended to give the community a practical starting point to experiment, provide feedback, and influence future design direction. APIs are unstable and will change. Features are incomplete. Documentation is evolving. Do not use this in production. See Project Status for details. [!NOTE] Changes on main contains an in development version based on v0.2.0, based on Isaac Lab 3.0. --- Overview Isaac Lab-Arena is an open-source extension to NVIDIA Isaac Lab for simplified task curation and robotic policy evaluation at scale. It provides a composable architecture where environments are assembled on-the-fly from independent, reusable building blocks — eliminating the redundant boilerplate that plagues traditional task library development. Instead of hand-writing and maintaining a separate configuration for every combination of robot, object, and scenario, Arena lets you compose environments from three independent primitives: Primitive Description ----------- ------------- Scene The physical environment layout — a collection of objects, furniture, fixtures Embodiment The robot and its observations, actions, sensors, and controllers Task The objective — what the robot should accomplish (pick-and-place, open door, etc.) The ArenaEnvBuilder composes these primitives into a standard ManagerBasedRLEnvCfg that runs natively in Isaac Lab. Why Isaac Lab-Arena? With the rise of generalist robot policies (e.g., GR00T N, pi0, SmolVLA), there is an urgent need to evaluate these policies across many diverse tasks and environments. Traditional approaches suffer from: - Code duplication — each task variation (different object, different robot) requires a near-copy of the same configuration - Maintenance burden — N robots × M objects × K scenes = an explosion of configs to keep in sync - Slow iteration — researchers spend more time wrangling configs than running experiments Arena solves this by making environment variation a first-class concept. Swap an object, change a robot, or modify a scene — all without duplicating a single line of task logic. Key Features - LEGO-like Composable Environments — Mix and match scenes, embodiments, and tasks independently - On-the-fly Assembly — Environments are built at runtime; no duplicate config files to maintain. - New Sequential Task Chaining — Chain atomic skills (e.g. Pick + Walk + Place + …) to create complex long-horizon tasks. - New Natural Language Object Placement — Define scene layouts using semantic relationships like \"on\" or \"next to\", instead of manually specified coordinates. - Integrated Evaluation — Extensible metrics and evaluation pipelines for policy benchmarking - New Large-scale Parallel Evaluations with Heterogeneous Objects — Evaluate policy on multiple parallel environments, each with different objects, to maximize evaluation throughput. - New RL Workflow Support and Seamless Interoperation with Isaac Lab: Plug Isaac Lab - Arena environments into Isaac Lab workflows for Reinforcement learning and Data generation for imitation learning. Quick Start Prerequisites - Linux (Ubuntu 22.04+) - NVIDIA GPU (see Isaac Sim hardware requirements) - Docker and NVIDIA Container Toolkit - Git Installation Isaac Lab-Arena currently supports installation from source inside a Docker container . Note: The Docker script automatically mounts $HOME/datasets , $HOME/models , and $HOME/eval from your host into the container. For detailed setup instructions (including server-client mode for GR00T), see the Installation Guide. Usage Example Compose a Franka arm in a kitchen scene with a couple of objects: Explore more examples in the documentation, including: Example Description --------- ------------- Imitation Learning G1 Loco-M",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/isaac-sim/IsaacLab-Arena/HEAD/docs/images/static_apple_pick_and_place.gif"
     },
     "tags": [
       "#Other"
@@ -7220,7 +7221,8 @@
       "comment": null,
       "first_seen": "2026-05-18",
       "full_text": "Vision-Language-Action (VLA) models are prone to compounding errors in dexterous manipulation, where high-dimensional action spaces and contact-rich dynamics amplify small policy deviations over long horizons.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail_path": "thumbnails/arxiv/2605.15157.jpg"
     },
     "tags": [
       "#VLA",
@@ -7265,7 +7267,8 @@
       "comment": "Accepted at IFAC World Congress 2026",
       "first_seen": "2026-05-18",
       "full_text": "This paper presents a prototyping framework for distributed control of multi-robot systems, aimed at bridging theory and practical testing of distributed optimization algorithms.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail_path": "thumbnails/arxiv/2605.15049.jpg"
     },
     "tags": [
       "#Other"
@@ -7317,7 +7320,8 @@
       "comment": "Code can be found in https://github.com/ZGC-EmbodyAI/IntentVLA",
       "first_seen": "2026-05-18",
       "full_text": "Robot imitation data are often multimodal: similar visual-language observations may be followed by different action chunks because human demonstrators act with different short-horizon intents, task phases, or recent context.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail_path": "thumbnails/arxiv/2605.14712.jpg"
     },
     "tags": [
       "#VLA",
@@ -7363,7 +7367,8 @@
       "comment": null,
       "first_seen": "2026-05-18",
       "full_text": "Safe navigation for mobile robots demands policies that remain reliable under the high-consequence perception uncertainty of cluttered environments. Yet most existing safe reinforcement learning (RL) methods assess safety through average cumulative cost. Such metrics can mask dangerous tail-risk behaviors.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail_path": "thumbnails/arxiv/2605.14174.jpg"
     },
     "tags": [
       "#RL",
@@ -7413,7 +7418,8 @@
       "comment": "GitHub: https://github.com/ZGC-EmbodyAI/FrameSkip",
       "first_seen": "2026-05-18",
       "full_text": "Vision-Language-Action (VLA) policies are commonly trained from dense robot demonstration trajectories, often collected through teleoperation, by sampling every recorded frame as if it provided equally useful supervision.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail_path": "thumbnails/arxiv/2605.13757.jpg"
     },
     "tags": [
       "#VLA",
@@ -7608,7 +7614,8 @@
       "license": "MIT",
       "first_seen": "2026-05-18",
       "full_text": "[ICML 2026] Sparse ActionGen: Accelerating Diffusion Policy with Real-time Pruning",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/ky-ji/SAG/HEAD/figure/method.png"
     },
     "tags": [
       "#IL",
@@ -7751,7 +7758,8 @@
       "comment": null,
       "first_seen": "2026-05-18",
       "full_text": "Vision-Language-Action models have emerged as a promising paradigm for robotic manipulation by unifying perception, language grounding, and action generation.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail_path": "thumbnails/arxiv/2605.14950.jpg"
     },
     "tags": [
       "#VLA",
@@ -7799,7 +7807,8 @@
       "comment": null,
       "first_seen": "2026-05-18",
       "full_text": "Diffusion-based vision-language-action models (dVLAs) are promising for embodied intelligence but are fundamentally limited in real-time deployment by the high latency of full inference.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail_path": "thumbnails/arxiv/2605.13778.jpg"
     },
     "tags": [
       "#VLA",
@@ -8136,7 +8145,8 @@
       "comment": null,
       "first_seen": "2026-05-18",
       "full_text": "Natural language is an intuitive interface for humanoid robots, yet streaming whole-body control requires control representations that are executable now and anticipatory of future physical transitions.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail_path": "thumbnails/arxiv/2605.14417.jpg"
     },
     "tags": [
       "#Humanoid"
@@ -8442,7 +8452,8 @@
       "comment": "Accepted at 23rd IFAC World Congress 2026",
       "first_seen": "2026-05-18",
       "full_text": "Stochastic communication delays in teleoperation introduce signal discontinuities that undermine control stability and degrade control performance.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail_path": "thumbnails/arxiv/2605.15480.jpg"
     },
     "tags": [
       "#RL",
@@ -8534,7 +8545,8 @@
       "comment": null,
       "first_seen": "2026-05-18",
       "full_text": "Opening heavy, self closing doors, especially those that require pulling remains a long standing challenge in robotics. Humans naturally employ both arms in a dexterous manner, rotating the handle, widening the gap, holding the door, switching arms when needed, and moving through while maintaining clearance.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail_path": "thumbnails/arxiv/2605.15352.jpg"
     },
     "tags": [
       "#IL",
@@ -8581,7 +8593,8 @@
       "comment": "Accepted at ICML 2026. Project page: https://github.com/yuggiehk/EARL",
       "first_seen": "2026-05-18",
       "full_text": "Understanding human--environment interactions from egocentric vision is essential for assistive robotics and embodied intelligent agents, yet existing multimodal large language models (MLLMs) still struggle with accurate interaction reasoning and fine-grained pixel grounding.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail_path": "thumbnails/arxiv/2605.14742.jpg"
     },
     "tags": [
       "#RL",
@@ -8679,7 +8692,8 @@
       "comment": null,
       "first_seen": "2026-05-18",
       "full_text": "Robotic dexterous hands are central to contact-rich manipulation, with rapid progress driven by advances in hardware, sensing, control, simulation, and data generation.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail_path": "thumbnails/arxiv/2605.13925.jpg"
     },
     "tags": [
       "#Manipulator"
@@ -8764,7 +8778,8 @@
       "comment": "29 pages, 7 figures, supplemental videos link is mentioned in the paper",
       "first_seen": "2026-05-18",
       "full_text": "Quadruped robots are often designed with rigid feet to simplify control and maintain stable contact during locomotion. While this approach is straightforward, it limits the ability of the legs to absorb impact forces and reuse stored elastic energy, leading to higher energy expenditure during locomotion.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail_path": "thumbnails/arxiv/2605.14411.jpg"
     },
     "tags": [
       "#Other"
@@ -8897,7 +8912,8 @@
       "comment": "Work in progress version accepted to the Recent Advances in Robotic Perception for Forestry",
       "first_seen": "2026-05-18",
       "full_text": "This study demonstrates a method to locate an ideal perch location on a tree for vision-guided autonomous tree-perching drones. Various image processing algorithms, including those used for machine learning, image segmentation and binary image morphology, are implemented to assess the shape and structure of a tree.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail_path": "thumbnails/arxiv/2605.15430.jpg"
     },
     "tags": [
       "#Manipulator"
@@ -8943,7 +8959,8 @@
       "comment": null,
       "first_seen": "2026-05-18",
       "full_text": "High-fidelity physics simulation is essential for closing the sim-to-real gap in robotics and complex mechanical systems. However, the computational overhead of high-fidelity engines often limits their use in data-intensive tasks like Reinforcement Learning (RL) and global optimization.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail_path": "thumbnails/arxiv/2605.14911.jpg"
     },
     "tags": [
       "#RL",
@@ -8988,7 +9005,8 @@
       "comment": "8 pages, 7 figures. Submitted to IEEE Robotics and Automation Letters",
       "first_seen": "2026-05-18",
       "full_text": "In obstacle avoidance navigation of unmanned aerial vehicles (UAVs), variations in obstacle scale have received strangely less attention than obstacle number or density. Existing methods typically extract purely geometric features from single-frame depth observations.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail_path": "thumbnails/arxiv/2605.14810.jpg"
     },
     "tags": [
       "#RL",
@@ -9124,7 +9142,8 @@
       "comment": null,
       "first_seen": "2026-05-18",
       "full_text": "Generating robot simulation environments remains a major bottleneck in simulation-based robot learning. Constructing a training-ready MuJoCo scene typically requires expertise in 3D asset modeling, MJCF specification, spatial layout, collision avoidance, and robot-model integration.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail_path": "thumbnails/arxiv/2605.14700.jpg"
     },
     "tags": [
       "#Other"
@@ -9217,7 +9236,8 @@
       "comment": "Accepted to Robotics: Science and Systems (RSS) 2026. 11 pages, 5 figures, 2 tables. Project website: https://a2r-lab.org/TinySDP/",
       "first_seen": "2026-05-18",
       "full_text": "Semidefinite programming (SDP) provides a principled framework for convex relaxations of nonconvex geometric constraints in motion planning, yet existing solvers are too computationally expensive for real-time control, particularly on resource-constrained embedded systems.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail_path": "thumbnails/arxiv/2605.13748.jpg"
     },
     "tags": [
       "#Other"
@@ -9351,7 +9371,8 @@
       "comment": "17 pages",
       "first_seen": "2026-05-18",
       "full_text": "As robots become increasingly integrated into everyday environments, intuitive communication paradigms such as natural language and end-user programming have become indispensable for specifying autonomous robot behavior.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail_path": "thumbnails/arxiv/2605.14262.jpg"
     },
     "tags": [
       "#Other"
@@ -9634,7 +9655,8 @@
       "comment": "Project Page: https://phys-brain.github.io",
       "first_seen": "2026-05-18",
       "full_text": "Vision-language-action models have advanced rapidly, but robot trajectories alone provide limited coverage for learning broad physical understanding. PhysBrain 1.0 studies a complementary route: converting large-scale human egocentric video into structured physical commonsense supervision before robot adaptation.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail_path": "thumbnails/arxiv/2605.15298.jpg"
     },
     "tags": [
       "#VLA",
@@ -9677,7 +9699,8 @@
       "comment": "7 pages, 7 figures",
       "first_seen": "2026-05-18",
       "full_text": "This paper addresses the motion control problem for mobile robots in obstacle-cluttered environments. The mobile robot has partial environment information only, and aims to move from an initial position to a target position without collisions.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail_path": "thumbnails/arxiv/2605.14232.jpg"
     },
     "tags": [
       "#Other"
@@ -9720,7 +9743,8 @@
       "comment": null,
       "first_seen": "2026-05-18",
       "full_text": "In this paper, we study the problem of manipulation skill acquisition for performing construction activities consisting of repetitive tasks (e.g., building a wall or installing ceiling tiles).",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail_path": "thumbnails/arxiv/2605.13754.jpg"
     },
     "tags": [
       "#Manipulator"
