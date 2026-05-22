@@ -66,29 +66,29 @@ def main() -> int:
             if existing is None or float(it.get("score") or 0) > float(existing.get("score") or 0):
                 by_id[it["id"]] = it
 
-    ranked = sorted(by_id.values(), key=lambda x: float(x.get("score") or 0), reverse=True)
-    if args.top_only:
-        candidates = ranked[: args.top_only]
-    else:
-        candidates = ranked
-    # Always include ALL news, regardless of score. News scores low (no stars /
-    # no code) so it falls outside top-N, but it's the "read here, don't click
-    # out" surface and there are only ~tens of items — cheap and high value.
-    chosen = {it["id"]: it for it in candidates}
+    # Summarize in priority order so a quota-limited (codex) run always covers
+    # what matters most first: News (the "read here, don't click out" surface —
+    # essential) → GitHub (actionable code) → arXiv by score. News and GitHub
+    # are always fully included; arXiv is the long tail, capped by --top-only /
+    # --max-items. If quota runs out mid-run, news+github are already done.
+    def _score(it: dict) -> float: return float(it.get("score") or 0)
+    def _date(it: dict) -> str: return it.get("published") or it.get("updated") or ""
+    buckets: dict[str, list[dict]] = {"news": [], "github": [], "arxiv": []}
     for it in by_id.values():
-        if it.get("source") == "news":
-            chosen[it["id"]] = it
-    candidates = list(chosen.values())
+        buckets.get(it.get("source"), buckets["arxiv"]).append(it)
+    news = sorted(buckets["news"], key=_date, reverse=True)
+    github = sorted(buckets["github"], key=_score, reverse=True)
+    arxiv = sorted(buckets["arxiv"], key=_score, reverse=True)
+    arxiv_cap = args.top_only or args.max_items or len(arxiv)
+    candidates = news + github + arxiv[:arxiv_cap]
     if not args.force:
         candidates = [it for it in candidates
                       if (it.get("extra") or {}).get("summary_kind") != "llm"]
-    # max_items caps non-news bulk; keep all news.
-    if args.max_items:
-        news = [it for it in candidates if it.get("source") == "news"]
-        rest = [it for it in candidates if it.get("source") != "news"][: args.max_items]
-        candidates = news + rest
 
-    log.info("Will summarize %d items", len(candidates))
+    import collections as _c
+    _bd = _c.Counter(it.get("source") for it in candidates)
+    log.info("Will summarize %d items (news=%d, github=%d, arxiv=%d)",
+             len(candidates), _bd.get("news", 0), _bd.get("github", 0), _bd.get("arxiv", 0))
     summ = make_summarizer(cfg)
     log.info("Using summarizer: %s", type(summ).__name__)
     updates: dict[str, dict] = {}
