@@ -10,7 +10,8 @@ sources (Robohub, IEEE Spectrum, TechCrunch, NVIDIA, DeepMind, MIT,
 Each card carries a short **LLM-written summary** — read the gist in place,
 click the title only when you want the original paper / repo / article.
 
-Updated daily at **07:00 KST**. Sorted by what people *actually use* —
+Updated every morning, **07:00–09:00 KST** (new items land around 07:00; the
+AI summaries finish filling in by ~09:00). Sorted by what people *actually use* —
 GitHub stars, code availability, real-robot experiments.
 
 ---

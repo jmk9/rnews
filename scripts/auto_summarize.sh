@@ -10,9 +10,10 @@
 # - Idempotent: only items without an "llm" summary are (re)done, so steady
 #   state is just the day's new items (~tens), not a big batch.
 #
-# Install (every 3 hours):
+# Install (hourly — so codex summaries follow the ~07:00 KST cloud collection
+# within an hour; idempotent + flock make extra ticks cheap no-ops):
 #   crontab -e
-#   0 */3 * * * /home/lny/RNEWS/scripts/auto_summarize.sh
+#   0 * * * * /home/lny/RNEWS/scripts/auto_summarize.sh
 # Disable: remove that line from `crontab -e`.
 set -u
 
