@@ -23,13 +23,22 @@ cd "$REPO" || exit 0
 LOG="$REPO/data/auto_summarize.log"
 echo "=== $(date -u +%Y-%m-%dT%H:%M:%SZ) auto_summarize start ===" >> "$LOG"
 
+# Prevent overlapping runs: draining the backlog can take longer than the cron
+# interval, and two runs racing would double-summarize and fight over git.
+exec 9>/tmp/rnews_auto_summarize.lock
+flock -n 9 || { echo "another run in progress; skipping" >> "$LOG"; exit 0; }
+
 # Sync first so we don't diverge from CI's daily commit.
 git pull --rebase --autostash --quiet origin main >> "$LOG" 2>&1 || {
   echo "pull failed; skipping" >> "$LOG"; exit 0;
 }
 
-# Summarize the top items that still lack an LLM summary.
-python3 scripts/llm_summarize.py --top-only 400 >> "$LOG" 2>&1 || true
+# Summarize every item that still lacks an LLM summary, in priority order
+# (news -> github -> arxiv by score). No cap: arXiv is now small enough that
+# the backlog drains over a few runs, then steady state is just the day's new
+# items. If codex quota runs out mid-run, news+github are already done and the
+# rest retries next run (idempotent).
+python3 scripts/llm_summarize.py >> "$LOG" 2>&1 || true
 
 # Push only if data actually changed.
 if ! git diff --quiet data/processed data/state; then
