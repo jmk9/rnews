@@ -4121,7 +4121,7 @@
     "source": "arxiv",
     "title": "DEFLECT: Delay-Robust Execution via Flow-matching Likelihood-Estimated Counterfactual Tuning for VLA Policies",
     "url": "http://arxiv.org/abs/2605.19294v1",
-    "summary": "Vision-Language-Action (VLA) policies are typically deployed with asynchronous inference: the robot executes a previously predicted action chunk while the model computes the next one.",
+    "summary": "DEFLECT targets the latency mismatch in asynchronous VLA control, where action chunks are predicted from stale observations but executed after the robot state has already moved on. It post-trains existing async VLA policies offline by constructing fresh-versus-stale counterfactual action pairs from a frozen policy and using a flow-matching likelihood-ratio surrogate as a label-free preference signal, avoiding rewards, human labels, or online rollouts. On Kinetix it recovers performance in the severe-delay setting where naive rollover collapses, improving success by 6.4 points at 5-7 control steps of latency, with gains also transferring to a real-scale VLA and two real-robot tasks.",
     "published": "2026-05-19T03:14:11+00:00",
     "updated": "2026-05-19T03:14:11+00:00",
     "authors": [
@@ -4144,7 +4144,7 @@
       "comment": null,
       "first_seen": "2026-05-20",
       "full_text": "Vision-Language-Action (VLA) policies are typically deployed with asynchronous inference: the robot executes a previously predicted action chunk while the model computes the next one. This creates a prediction-execution misalignment: the chunk is conditioned on the observation taken before inference began, but executes in a physical state that has already drifted forward by several control steps; naive asynchronous rollover collapses from 89% to under 1% on Kinetix as the inference cycle covers up to seven control steps. We introduce DEFLECT, a fully offline post-training refinement that applies as a near drop-in upgrade to existing async-VLA stacks by converting latency itself into a label-free preference signal: counterfactual fresh/stale action pairs are constructed from a frozen reference policy and scored under the deployment-time conditioning via an implicit flow-matching likelihood-ratio surrogate, with no human labels, reward models, or online rollouts. DEFLECT substantially extends the usable delay envelope of async VLA control, with +6.4 success-rate gain in the high-latency regime (5-7 control steps), +4.6 when transferred to a real-scale VLA at the longest delay, and consistent improvements on two real-robot tasks (a bimanual conveyor pick-and-place and a reactive whack-a-mole).",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19294.jpg"
     },
     "tags": [
@@ -4171,7 +4171,7 @@
     "source": "arxiv",
     "title": "ManiSoft: Towards Vision-Language Manipulation for Soft Continuum Robotics",
     "url": "http://arxiv.org/abs/2605.18617v1",
-    "summary": "Most existing vision-language manipulation research targets rigid robotic arms, whose fixed morphology limits adaptability in cluttered or confined spaces. Soft robotic arms offer an appealing alternative due to their deformability, but confront challenges such as unreliable proprioception and distributed low-level actuation.",
+    "summary": "ManiSoft targets vision-language manipulation with soft continuum robots rather than conventional rigid arms, aiming to exploit their deformable bodies for cluttered or confined environments. From the provided text, the concrete setup and results are not specified, so the work can only be summarized as an effort to extend language-guided visual manipulation methods to robots whose morphology is flexible and adaptable rather than fixed.",
     "published": "2026-05-18T16:26:22+00:00",
     "updated": "2026-05-18T16:26:22+00:00",
     "authors": [
@@ -4191,8 +4191,8 @@
       "pdf_url": "https://arxiv.org/pdf/2605.18617v1",
       "comment": "Accepted in ICML 2026",
       "first_seen": "2026-05-19",
-      "full_text": "Most existing vision-language manipulation research targets rigid robotic arms, whose fixed morphology limits adaptability in cluttered or confined spaces. Soft robotic arms offer an appealing alternative due to their deformability, but confront challenges such as unreliable proprioception and distributed low-level actuation. To investigate these challenges, we introduce \\ManiSoft, a benchmark for vision-language manipulation with soft arms. ManiSoft features a tailored simulator that couples realistic soft-body dynamics with contact-rich interactions via an elastic force constraint. On this basis, ManiSoft defines four tasks, each highlighting distinct aspects of deformable control, from basic end-effector coordination to obstacle avoidance. To support policy training and evaluation, \\ManiSoft{} includes an automated pipeline that generates $6{,}300$ diverse scenes and corresponding expert trajectories. To produce high-quality trajectories at scale, we first employ a high-level planner to decompose each task into a sequence of waypoints, followed by a low-level reinforcement learning policy that generates torque commands to track waypoints. Benchmarking three representative policy models shows relatively promising results in clean scenes but substantial performance drop under randomization. Visualization analysis indicates that failures stem primarily from inaccurate visual estimation of proprioceptive state and limited exploitation of deformability for adaptive obstacle avoiding. We anticipate ManiSoft to serve as a valuable testbed, bridging the gap between rigid and soft arms in the context of vision-language manipulation. Out codes and datasets are released at https://buaa-colalab.github.io/ManiSoft.",
-      "summary_kind": "truncation",
+      "full_text": "Most existing vision-language manipulation research targets rigid robotic arms, whose fixed morphology limits adaptability in cluttered or confined spaces.",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.18617.jpg"
     },
     "tags": [
@@ -4337,7 +4337,7 @@
     "source": "arxiv",
     "title": "COBALT: Crowdsourcing Robot Learning via Cloud-Based Teleoperation with Smartphones",
     "url": "http://arxiv.org/abs/2605.19138v1",
-    "summary": "The scarcity of large-scale, high-quality demonstration data remains a bottleneck in scaling imitation learning for robotic manipulation. We present COBALT, a teleoperation platform designed to democratize robot learning at scale both in simulation and in the real world.",
+    "summary": "COBALT turns robot teleoperation into a cloud service that many remote users can access with ordinary devices, especially single or dual smartphones, while vectorized simulation, load balancing, caching, and synchronized video streaming keep dozens of clients interactive at 20 Hz. The system reaches sub-100 ms latency for up to 8 users per GPU and scales to 256 simulated clients across 8 GPUs, with real-time quality metrics and a training curriculum to filter and improve demonstrations. In a five-day pilot, users across nine countries collected over 7,500 smartphone demonstrations totaling 50+ hours, which were then used to train imitation-learning policies.",
     "published": "2026-05-18T21:37:32+00:00",
     "updated": "2026-05-18T21:37:32+00:00",
     "authors": [
@@ -4362,7 +4362,7 @@
       "comment": null,
       "first_seen": "2026-05-20",
       "full_text": "The scarcity of large-scale, high-quality demonstration data remains a bottleneck in scaling imitation learning for robotic manipulation. We present COBALT, a teleoperation platform designed to democratize robot learning at scale both in simulation and in the real world. By leveraging vectorized environments, our scalable, load-balanced infrastructure supports concurrent teleoperation by multiple users on a single GPU, yielding a significant reduction in teleoperation cost. Operators can connect from nearly anywhere on Earth using commonly available devices, including single or dual smartphones, VR headsets, 3D mice, and keyboards. An inmemory data cache and efficient video streaming keep control and rendering synchronous, sustaining dozens of concurrent users at 20 Hz with sub-100 ms end-to-end latency for up to 8 concurrent users per GPU. We also demonstrate stable operation supporting 256 simulated clients across 8 GPUs, underscoring the system's ability to scale across hardware and within individual servers. We perform a comprehensive user study showing that phone-based teleoperation performs comparably to or better than specialized hardware, enabling faster, more ergonomic data collection. To ensure data quality, COBALT logs a suite of real-time metrics to automatically filter suboptimal demonstrations. We further demonstrate that a structured user training curriculum significantly improves data collection quality. Guided by insights from our user study, we crowdsource the collection of a large-scale, high-quality pilot dataset with 7500+ demonstrations (50+ hours) collected with smartphones across nine countries over five days. We validate the dataset's quality by training state-of-the-art imitation learning algorithms. Please visit \\href{https://cobalt-teleop.github.io/}{cobalt-teleop.github.io} for more details.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19138.jpg"
     },
     "tags": [
@@ -4389,7 +4389,7 @@
     "source": "arxiv",
     "title": "EgoTraj: Real-World Egocentric Human Trajectory Dataset for Multimodal Prediction",
     "url": "http://arxiv.org/abs/2605.19004v1",
-    "summary": "Accurately forecasting human trajectories from an egocentric perspective plays a central role in applications such as humanoid robotics, wearable sensing systems, and assistive navigation. However, progress in this direction remains limited due to the scarcity of egocentric trajectory datasets collected in real-world environments.",
+    "summary": "EgoTraj is a real-world egocentric trajectory dataset captured with Meta Quest Pro headsets, containing 75 urban navigation sequences with synchronized RGB video, 6-DoF head poses, 3D eye gaze vectors, and scene annotations. It targets long-horizon, self-directed human navigation from the wearer’s viewpoint, and the paper uses benchmarks and ablations to show how gaze, scene context, and motion cues affect multimodal egocentric trajectory prediction for AR, robotics, and assistive navigation systems.",
     "published": "2026-05-18T18:26:51+00:00",
     "updated": "2026-05-18T18:26:51+00:00",
     "authors": [
@@ -4412,7 +4412,7 @@
       "comment": "21 pages, 14 figures. Project page: https://github.com/yehiahmad/EgoTraj",
       "first_seen": "2026-05-20",
       "full_text": "Accurately forecasting human trajectories from an egocentric perspective plays a central role in applications such as humanoid robotics, wearable sensing systems, and assistive navigation. However, progress in this direction remains limited due to the scarcity of egocentric trajectory datasets collected in real-world environments. Addressing this need, we introduce EgoTraj, an egocentric multimodal open dataset recorded using Meta Quest Pro (MQPro). EgoTraj contains 75 sequences of human navigation collected from multiple MQPro wearers in real-world urban environments. Each recording provides synchronized RGB video along with ground-truth data, including continuous time-synchronized 6-degree-of-freedom head poses, per-frame 3D eye gaze vectors, scene annotations. To the best of our knowledge, EgoTraj differs from typical egocentric trajectory datasets by capturing long-horizon, self-directed navigation across diverse urban routes with broad participant diversity. To demonstrate the potential of the dataset, we benchmark several state-of-the-art methods for egocentric trajectory prediction and conduct ablation studies to analyze the contributions of gaze, scene, and motion cues. The results highlight the utility of EgoTraj for AR-based perception, navigation, and assistive systems. The EgoTraj dataset, code, and EgoViz Dashboard are publicly available at https://github.com/yehiahmad/EgoTraj.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19004.jpg"
     },
     "tags": [
@@ -4558,7 +4558,7 @@
     "source": "arxiv",
     "title": "CANINE: Coaching Visually Impaired Users for Interactive Navigation with a Robot Guide Dog",
     "url": "http://arxiv.org/abs/2605.19501v1",
-    "summary": "Robot guide dogs offer navigation assistance that greatly expands the independent mobility of the visually impaired, but their effective use requires subtle human-robot coordination that is difficult for users to learn from generic verbal instructions.",
+    "summary": "CANINE trains visually impaired users to navigate with a robot guide dog by breaking human-robot coordination into sub-skills and giving personalized verbal coaching during practice. It uses knowledge tracing to decide which weak skill to train next, then observes each episode and uses foundation models to infer why errors happened and generate targeted corrections. In controlled blindfolded-user studies it improved learning efficiency and final navigation performance over generic instructions, with gains persisting after two weeks and an exploratory visually impaired-user case study pointing to real deployment considerations.",
     "published": "2026-05-19T07:52:32+00:00",
     "updated": "2026-05-19T07:52:32+00:00",
     "authors": [
@@ -4578,7 +4578,7 @@
       "comment": "Accepted to RSS 2026",
       "first_seen": "2026-05-20",
       "full_text": "Robot guide dogs offer navigation assistance that greatly expands the independent mobility of the visually impaired, but their effective use requires subtle human-robot coordination that is difficult for users to learn from generic verbal instructions. To tackle this challenge, we present CANINE, an automated coaching system that trains users for interactive navigation with a robot guide dog, through personalized, adaptive verbal feedback. CANINE decomposes a complex coordination task into sub-skills and operates at two levels. At the high level, it decides what to train by tracking the learner's proficiency across sub-skills using knowledge tracing and prioritizing training on the weakest areas. At the low level, CANINE decides how to train each sub-skill by observing each human practice episode, using foundation models to infer the underlying causes of errors, and generating targeted verbal corrections adaptively. A controlled study with blindfolded participants, treated as a proxy population for quantitative evaluation, demonstrates that CANINE significantly improves both learning efficiency and final navigation performance compared to generic verbal instructions. We further validate CANINE through a retention study and an exploratory case study. The retention study shows lasting skill improvement after two weeks. The case study confirms CANINE's effectiveness in training a visually impaired user, while revealing additional design considerations for real-world deployment. Both are well aligned with the findings of the controlled study. Project page: https://cunjunyu.github.io/project/canine/",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19501.jpg"
     },
     "tags": [
@@ -4604,7 +4604,7 @@
     "source": "arxiv",
     "title": "Adversarial Stress Testing of SPARK Humanoid Safety Filters",
     "url": "http://arxiv.org/abs/2605.19009v1",
-    "summary": "Humanoid robots are difficult to deploy safely because they have high-dimensional bodies, many collision constraints, and must operate near people and obstacles. Safety filters help by modifying a nominal control action when it may violate collision-avoidance constraints.",
+    "summary": "The study replicates the SPARK humanoid safety-filter benchmark G1SportMode_D1_WG_SO_v1 in MuJoCo and stress-tests RSSA, RSSS, SSA, CBF, PFM, and SMA under controlled random seeds. It adds a log post-processing pipeline for goal tracking, minimum distance, and collision-step metrics, showing that filters trade off goal accuracy against collision reduction. Under crowded obstacles, noisy distance estimates, and delayed obstacle information, safety behavior shifts enough to argue for robustness-focused evaluation beyond nominal benchmark scores.",
     "published": "2026-05-18T18:32:45+00:00",
     "updated": "2026-05-18T18:32:45+00:00",
     "authors": [
@@ -4622,7 +4622,7 @@
       "comment": "5 pages, 7 figures, 1 table. Code available at https://github.com/ghoshsaurav/spark-adversarial-safety",
       "first_seen": "2026-05-20",
       "full_text": "Humanoid robots are difficult to deploy safely because they have high-dimensional bodies, many collision constraints, and must operate near people and obstacles. Safety filters help by modifying a nominal control action when it may violate collision-avoidance constraints. Still, nominal benchmark scores do not fully show how these filters behave in harder environments. In this work, we study the robustness of SPARK humanoid safety filters through replication and stress testing. We replicate the SPARK benchmark case G1SportMode_D1_WG_SO_v1 in MuJoCo and evaluate RSSA, RSSS, SSA, CBF, PFM, and SMA under controlled random seeds. We also built a post-processing pipeline that converts raw SPARK logs into goal-tracking, minimum-distance, and collision-step metrics. Our results show that some methods track the goal more closely, while others reduce collision steps more effectively. The stress tests further indicate that safety behavior can change under obstacle crowding, noisy distance estimates, and delayed obstacle information. These findings suggest that humanoid autonomy should be evaluated beyond nominal performance, using metrics that expose failure modes before deployment.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19009.jpg"
     },
     "tags": [
@@ -4721,7 +4721,7 @@
     "source": "arxiv",
     "title": "Robotics-Inspired Guardrails for Foundation Models in Socially Sensitive Domains",
     "url": "http://arxiv.org/abs/2605.19940v1",
-    "summary": "Foundation models are increasingly deployed in socially sensitive domains such as education, mental health, and caregiving, where failures are often cumulative and context-dependent.",
+    "summary": "Grounded Observer treats guardrails for foundation models as runtime control over whole interaction trajectories, borrowing ideas from robotics for enforcing constraints in uncertain closed-loop systems. Instead of judging isolated outputs, it monitors conversations for drift into undesirable regimes and intervenes during deployment, demonstrated in small talk, in-home autism therapy, and school behavioral de-escalation. The interesting shift is from empirical risk reduction toward mechanisms that can adapt to social context while moving closer to enforceable behavioral guarantees.",
     "published": "2026-05-19T15:00:06+00:00",
     "updated": "2026-05-19T15:00:06+00:00",
     "authors": [
@@ -4739,7 +4739,7 @@
       "comment": "Under review at Journal of Artificial Intelligence Research (JAIR)",
       "first_seen": "2026-05-20",
       "full_text": "Foundation models are increasingly deployed in socially sensitive domains such as education, mental health, and caregiving, where failures are often cumulative and context-dependent. Existing guardrail approaches -- ranging from training-time alignment to prompting, decoding constraints, and post-hoc moderation -- primarily provide empirical risk reduction rather than enforceable behavioral guarantees, and largely treat safety as a property of individual outputs rather than interaction trajectories. We reframe guardrails as a problem of runtime behavioral control over interaction trajectories, drawing on robotics to introduce formal constructs for constraint enforcement in uncertain, closed-loop systems. We instantiate these ideas in the Grounded Observer framework and apply it across three real-world deployments: small talk, in-home autism therapy, and behavioral de-escalation in schools. Across settings, the framework enables runtime interventions that mitigate drift into undesirable interaction regimes while adapting to diverse social contexts. We discuss extensions to the framework and propose research directions toward stronger guarantees.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19940.jpg"
     },
     "tags": [
@@ -4765,7 +4765,7 @@
     "source": "arxiv",
     "title": "Memory-Augmented Reinforcement Learning Agent for CAD Generation",
     "url": "http://arxiv.org/abs/2605.19748v1",
-    "summary": "Automatic generation of computer-aided design (CAD) models is a core technology for enabling intelligence in advanced manufacturing.",
+    "summary": "Memory-Augmented Reinforcement Learning Agent for CAD Generation turns CAD synthesis into a closed-loop agent workflow: it interprets design intent, plans globally, calls a structured geometric-kernel toolchain, executes operations, and verifies the result across multiple dimensions. Its dual memory system combines a case library with a skill library, using reinforcement learning to retrieve and refine examples without getting stuck on semantically similar but geometrically invalid designs. In experiments on complex CAD generation tasks, this improved both generation success rate and geometric consistency without requiring additional large-scale annotated data.",
     "published": "2026-05-19T12:16:31+00:00",
     "updated": "2026-05-19T12:16:31+00:00",
     "authors": [
@@ -4787,7 +4787,7 @@
       "comment": "26 pages; multilingual submission: English version first, followed by Chinese version",
       "first_seen": "2026-05-20",
       "full_text": "Automatic generation of computer-aided design (CAD) models is a core technology for enabling intelligence in advanced manufacturing. Existing generation methods based on large language models (LLMs) often fall short when handling complex CAD models characterized by long operation sequences, diverse operation types, and strong geometric constraints, primarily because reasoning chains break and effective error-correction mechanisms are lacking. To address this problem, this paper proposes a memory-augmented reinforcement learning framework for CAD generation agents. The framework encapsulates the underlying geometric kernel into a structured toolchain callable by the agent and builds a closed-loop mechanism of design intent understanding, global planning, execution, and multi-dimensional verification. It also designs a dual-track memory module consisting of a case library and a skill library, and proposes a dynamic utility retrieval algorithm. By introducing reinforcement learning into retrieval and policy optimization, the agent can effectively avoid retrieval traps in which examples are semantically similar but geometrically infeasible, enabling online self-correction and continual evolution without additional large-scale annotated data. Experiments show that the proposed method significantly improves both the success rate and geometric consistency on complex CAD model generation tasks.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19748.jpg"
     },
     "tags": [
@@ -4813,7 +4813,7 @@
     "source": "arxiv",
     "title": "CaptchaMind: Training CAPTCHA Solvers via Reinforcement Learning with Explicit Reasoning Supervision",
     "url": "http://arxiv.org/abs/2605.19538v1",
-    "summary": "CAPTCHAs are widely deployed as human verification mechanisms and frequently block intelligent agents from completing end-to-end automation in real-world web environments.",
+    "summary": "CaptchaMind trains CAPTCHA-solving agents with reinforcement learning plus explicit supervision over intermediate reasoning steps, using CaptchaBench, a 16,000-sample synthetic benchmark spanning eight CAPTCHA task types with region and process annotations. The benchmark shows existing solvers break down on fine-grained visual detail and region-level comparisons, while CaptchaMind reaches 82.9% average success across the eight tasks and 71.0% on real-world CAPTCHAs without relying on closed-source APIs.",
     "published": "2026-05-19T08:38:44+00:00",
     "updated": "2026-05-19T08:38:44+00:00",
     "authors": [
@@ -4836,7 +4836,7 @@
       "comment": "17 pages, 12 figures",
       "first_seen": "2026-05-20",
       "full_text": "CAPTCHAs are widely deployed as human verification mechanisms and frequently block intelligent agents from completing end-to-end automation in real-world web environments. Solving modern CAPTCHAs requires robust multi-step visual reasoning and interaction capabilities, yet training-based approaches have remained absent due to the lack of large-scale training data and process-level annotations. We introduce CaptchaBench, the first CAPTCHA benchmark designed to support large-scale training, comprising 16,000 programmatically generated samples across eight task categories with detailed region and process-level annotations. Systematic evaluation on CaptchaBench reveals that existing methods fail consistently on tasks requiring fine-grained visual detail capture and region-level comparison. We therefore present CaptchaMind, an RL-based solver trained with explicit reasoning process supervision, achieving 82.9% average success rate across eight tasks and 71.0% on real-world instances, substantially outperforming all existing methods without closed-source APIs.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19538.jpg"
     },
     "tags": [
@@ -4862,7 +4862,7 @@
     "source": "arxiv",
     "title": "Key-Gram: Extensible World Knowledge for Embodied Manipulation",
     "url": "http://arxiv.org/abs/2605.18556v1",
-    "summary": "Embodied control increasingly requires models to follow compositional language instructions while reasoning over dynamic visual states.",
+    "summary": "Key-Gram targets embodied manipulation settings where a robot has to interpret compositional language commands against changing visual scenes. From the available description, it appears to focus on giving control models extensible world knowledge so they can reason beyond the immediate instruction text and visual state, though the provided text does not include the mechanism, benchmarks, or results.",
     "published": "2026-05-18T15:37:02+00:00",
     "updated": "2026-05-18T15:37:02+00:00",
     "authors": [
@@ -4880,8 +4880,8 @@
       "pdf_url": "https://arxiv.org/pdf/2605.18556v1",
       "comment": "16 pages, 5 figures",
       "first_seen": "2026-05-19",
-      "full_text": "Embodied control increasingly requires models to follow compositional language instructions while reasoning over dynamic visual states. However, current vision-language-action policies and world-action models often couple linguistic knowledge with visual computation in a shared backbone or conditioning pathway, leading to modality competition and making knowledge extension dependent on backbone updates. In this paper, we introduce Key-Gram, a conditional-memory framework that separates language-derived world knowledge from visual-state reasoning for embodied control. At its core is a memory module that decomposes an instruction into task-specific key-grams, retrieves static linguistic priors through deterministic hashed lookup, and injects the retrieved entries into selected hidden layers through context-aware gating and lightweight convolutional fusion. This design allows the backbone to devote its main capacity to visual reasoning and action inference, while reusable instruction knowledge is stored in an extensible external memory. The logical memory table can be conveniently partitioned during training and, due to its $O(1)$ lookup pattern, efficiently placed on host memory during inference. Across RoboTwin2.0, LIBERO/LIBERO-Plus, and real-world dual-arm manipulation, Key-Gram consistently improves both $π_{0}$ and $π_{0.5}$ backbones, with average relative gains of $29.5\\%/9.9\\%$ on RoboTwin2.0, $35.8\\%/4.5\\%$ on LIBERO-Plus transfer without target-domain fine-tuning, and $15.4\\%/8.1\\%$ on real-world long-horizon tasks. These results demonstrate that externalized linguistic memory provides an effective and extensible mechanism for improving compositional grounding, transfer, and real-world manipulation.",
-      "summary_kind": "truncation",
+      "full_text": "Embodied control increasingly requires models to follow compositional language instructions while reasoning over dynamic visual states.",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.18556.jpg"
     },
     "tags": [
@@ -4908,7 +4908,7 @@
     "source": "arxiv",
     "title": "Learning-Based Adaptive Control for Surgical Robotic Exposure Task on Deformable Tissues",
     "url": "http://arxiv.org/abs/2605.17927v1",
-    "summary": "In various surgical procedures, regions of interest (ROIs) such as organs or lesions are often occluded by overlying tissues, requiring surgeons to achieve adequate exposure for precise intervention.",
+    "summary": "Learning-Based Adaptive Control for Surgical Robotic Exposure Task on Deformable Tissues tackles the problem of using a surgical robot to pull or manipulate overlying soft tissue so an occluded organ or lesion becomes visible for intervention. From the provided text, the focus is an adaptive, learning-based controller for deformable tissue exposure, where the interesting challenge is maintaining useful exposure despite tissue motion, deformation, and uncertain mechanics.",
     "published": "2026-05-18T06:36:53+00:00",
     "updated": "2026-05-18T06:36:53+00:00",
     "authors": [
@@ -4926,8 +4926,8 @@
       "pdf_url": "https://arxiv.org/pdf/2605.17927v1",
       "comment": "Accepted to Robotics: Science and Systems (RSS) 2026. 12 pages, 9 figures",
       "first_seen": "2026-05-19",
-      "full_text": "In various surgical procedures, regions of interest (ROIs) such as organs or lesions are often occluded by overlying tissues, requiring surgeons to achieve adequate exposure for precise intervention. However, the irregular geometry, nonlinear biomechanical properties of overlying tissues, and limited intraoperative visibility of the ROI pose significant challenges to the autonomous execution of tissue retraction. To address this, we formulate a realistic model of the tissue retraction task and propose a learning-based adaptive control framework for achieving ROI exposure. The method optimizes control inputs online by monitoring changes in the visual boundary of the tissue, while leveraging a deep deformation estimation model trained on simulation data to identify the optimal grasping point and ensure the convergence and safety of the adaptive controller. Through simulations and real-world experiments on different deformable materials, it has been demonstrated that this framework exhibits zero-shot adaptation to similar tasks and can complete the autonomous retraction process, from initial grasp selection to full ROI exposure. Therefore, it has the potential to be applied in actual surgical assistance scenarios.",
-      "summary_kind": "truncation",
+      "full_text": "In various surgical procedures, regions of interest (ROIs) such as organs or lesions are often occluded by overlying tissues, requiring surgeons to achieve adequate exposure for precise intervention.",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.17927.jpg"
     },
     "tags": [
@@ -9257,7 +9257,7 @@
     "source": "arxiv",
     "title": "WorldArena 2.0: Extending Embodied World Model Benchmarking on Modality, Functionality and Platform",
     "url": "http://arxiv.org/abs/2605.17912v1",
-    "summary": "World models have emerged as a central paradigm for embodied intelligence, enabling agents to predict action-conditioned future and reason about environmental dynamics.",
+    "summary": "WorldArena 2.0 expands embodied world model evaluation beyond vision-only, offline, simulator-bound prediction into a benchmark spanning visuotactile inputs, interactive RL-environment use, and both simulated and real robotic platforms. It is designed to test not just whether a model predicts plausible futures, but whether its perceptual predictions and dynamics are useful for policy optimization and transfer across different embodiments and deployment settings.",
     "published": "2026-05-18T06:18:21+00:00",
     "updated": "2026-05-18T06:18:21+00:00",
     "authors": [
@@ -9297,7 +9297,7 @@
       "comment": null,
       "first_seen": "2026-05-19",
       "full_text": "World models have emerged as a central paradigm for embodied intelligence, enabling agents to predict action-conditioned future and reason about environmental dynamics. However, existing embodied world model benchmarks are still largely confined to vision-only prediction, offline embodied applications, and simulator-based evaluation, making them insufficient for assessing increasingly comprehensive world models. In this work, we introduce WorldArena 2.0, an expanded benchmark that systematically broadens embodied world model evaluation along three dimensions: modality, functionality, and platform. Along the modality dimension, WorldArena 2.0 extends evaluation from vision-only to visuotactile modalities, enabling assessment of multimodal perception and prediction. Along the functionality dimension, it extends beyond policy evaluation and planning to assess world models as interactive RL environments for policy optimization. Along the platform dimension, it moves beyond simulator-only evaluation to a diverse suite of simulated and real-world robotic settings across multiple embodiments. Under a standardized protocol, WorldArena 2.0 comprehensively evaluates perceptual quality, interactive utility, and cross-platform performance, providing a comprehensive testbed for tracking progress toward embodied world models. The benchmark is available at: https://world-arena.ai.",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",

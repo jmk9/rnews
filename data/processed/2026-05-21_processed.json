@@ -3948,7 +3948,7 @@
     "source": "arxiv",
     "title": "PointACT: Vision-Language-Action Models with Multi-Scale Point-Action Interaction",
     "url": "http://arxiv.org/abs/2605.21414v1",
-    "summary": "Vision-Language-Action (VLA) models have shown strong potential for general-purpose robotic manipulation by leveraging large pretrained vision-language backbones.",
+    "summary": "PointACT is a 3D-aware vision-language-action policy that feeds hierarchical point-cloud representations into action decoding, letting action tokens attend across local geometry and global scene structure through multi-scale point-action interaction and bottleneck window self-attention. On LIBERO and RLBench, it consistently outperforms monolithic and dual-system VLA baselines, including point-cloud-augmented variants, with a 10% success-rate gain on RLBench-10Tasks over pretrained VLA baselines. The ablations suggest the gains come from tightly coupling pretrained 2D semantic features with hierarchical 3D geometry, especially when the language-vision backbone is frozen and the action expert is trained from scratch.",
     "published": "2026-05-20T17:10:31+00:00",
     "updated": "2026-05-20T17:10:31+00:00",
     "authors": [
@@ -3966,7 +3966,7 @@
       "comment": "Accepted to RSS 2026; project webpage: https://cshizhe.github.io/projects/pointact.html",
       "first_seen": "2026-05-21",
       "full_text": "Vision-Language-Action (VLA) models have shown strong potential for general-purpose robotic manipulation by leveraging large pretrained vision-language backbones. However, most existing VLAs rely primarily on 2D visual representations, which limit their ability to reason about fine-grained geometry and spatial grounding - capabilities that are essential for precise and robust manipulation in 3D environments. In this paper, we propose PointACT, a dual-system 3D-aware VLA policy that integrates hierarchical 3D point cloud representations directly into the action decoding process. PointACT employs a multi-scale point-action interaction mechanism with efficient bottleneck window self-attention, enabling evolving action tokens to densely attend to both local geometric detail and global scene structure. We evaluate PointACT on the LIBERO and RLBench benchmarks and systematically compare it against monolithic and dual-system VLA baselines, including variants augmented with point cloud inputs. PointACT achieves consistent improvements across both benchmarks, increasing success rates by 10% on the challenging RLBench-10Tasks suite over state-of-the-art pretrained VLAs, with even larger gains when the vision-language backbone is frozen and the action expert is trained from scratch. Extensive ablation studies demonstrate that tightly coupling hierarchical 3D geometry with pretrained 2D semantic representations is critical for robust and spatially grounded robot control. Our results also highlight the promise of pretrained 3D representations for 3D-aware VLA policies.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.21414.jpg"
     },
     "tags": [
@@ -3992,7 +3992,7 @@
     "source": "arxiv",
     "title": "DriveMA: Rethinking Language Interfaces in Driving VLAs with One-Step Meta-Actions",
     "url": "http://arxiv.org/abs/2605.21273v1",
-    "summary": "Driving Vision-Language-Action Models (Driving VLAs) commonly introduce natural-language reasoning as an intermediate interface for end-to-end planning, but reasoning-centric interfaces face three practical bottlenecks: obtaining high-quality reasoning annotations is difficult, generating and understanding long reasoning chains is challenging for compact models, and inference latency is substantially increased.",
+    "summary": "DriveMA replaces long natural-language reasoning chains in driving vision-language-action models with concise one-step meta-actions that can be derived automatically from expert trajectories and used to ground trajectory prediction. It combines supervised action-centric training with turn-level credit-assignment RL to optimize meta-action correctness, trajectory quality, and consistency between the two, reaching 8.060 RFS on the Waymo End-to-End Driving Challenge with a 2B model and 8.079 with a 4B model, plus competitive NAVSIM results.",
     "published": "2026-05-20T15:05:36+00:00",
     "updated": "2026-05-20T15:05:36+00:00",
     "authors": [
@@ -4011,7 +4011,7 @@
       "comment": null,
       "first_seen": "2026-05-21",
       "full_text": "Driving Vision-Language-Action Models (Driving VLAs) commonly introduce natural-language reasoning as an intermediate interface for end-to-end planning, but reasoning-centric interfaces face three practical bottlenecks: obtaining high-quality reasoning annotations is difficult, generating and understanding long reasoning chains is challenging for compact models, and inference latency is substantially increased. In this paper, we rethink the design of language interfaces in Driving VLAs and show that concise one-step meta-actions are a simple yet effective alternative to verbose reasoning. Meta-actions provide semantic decision grounding while remaining low-entropy, and being automatically derivable from expert trajectories, enabling scalable supervision and reliable trajectory conditioning. Building on this interface, we propose DriveMA, which combines action-centric supervised training with a turn-level credit-assignment reinforcement learning framework that jointly optimizes meta-action correctness, trajectory quality, and trajectory--meta-action consistency. Experiments show that DriveMA already achieves a new state of the art on the Waymo End-to-End Driving Challenge with a 2B model, reaching a Rater Feedback Score (RFS) of 8.060, while its 4B version further improves the state of the art to 8.079; DriveMA also obtains competitive performance on NAVSIM. Ablations demonstrate that one-step meta-actions offer a better practical trade-off between expressiveness, predictability, and inference efficiency than natural-language reasoning or finer-grained action sequences. Code, data, and models will be released to facilitate future research.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.21273.jpg"
     },
     "tags": [
@@ -4534,7 +4534,7 @@
     "source": "arxiv",
     "title": "Q-SpiRL: Quantum Spiking Reinforcement Learning for Adaptive Robot Navigation",
     "url": "http://arxiv.org/abs/2605.20801v1",
-    "summary": "Adaptive robot navigation in dynamic environments requires policies that can reach the target reliably while producing efficient and stable trajectories. This paper presents Q-SpiRL, a quantum spiking reinforcement learning framework for obstacle-aware robot navigation.",
+    "summary": "Q-SpiRL studies robot navigation with a hybrid quantum spiking RL policy, comparing tabular Q-learning, classical MLP/SNN agents, and quantum-enhanced MLP/SNN variants in 20x20, 30x30, and 40x40 grid worlds with static and dynamic obstacles. Its QSNN combines spike-based temporal processing with a variational quantum feature transform, and achieved the best overall balance of reaching the goal, keeping paths efficient, and reducing turns, including up to 99% success in the hardest setting. The authors also ran the hybrid policy on IBM quantum hardware, showing that the approach can execute under real-device quantum conditions.",
     "published": "2026-05-20T06:45:24+00:00",
     "updated": "2026-05-20T06:45:24+00:00",
     "authors": [
@@ -4554,7 +4554,7 @@
       "comment": "11 pages, 6 figures",
       "first_seen": "2026-05-21",
       "full_text": "Adaptive robot navigation in dynamic environments requires policies that can reach the target reliably while producing efficient and stable trajectories. This paper presents Q-SpiRL, a quantum spiking reinforcement learning framework for obstacle-aware robot navigation. The framework develops and evaluates five agent families: tabular Q-learning, classical MLP, classical SNN, quantum-enhanced MLP (QMLP), and quantum-enhanced spiking neural network (QSNN). While all models are implemented under a unified training and evaluation pipeline, the QSNN is the central architecture of interest, as it combines spike-based temporal processing with variational quantum feature transformation. Experiments are conducted across three grid-world environments of increasing size, namely 20x20, 30x30, and 40x40, with both static and dynamic obstacles. Performance is assessed using success rate, success-weighted path length, path length, and turn rate under deterministic inference. Results show that QSNN achieves the strongest overall trade-off between task completion, trajectory efficiency, and motion smoothness, reaching up to 99% success rate while maintaining high path efficiency in the most challenging setting. Execution on IBM quantum hardware further demonstrates the feasibility of deploying the proposed hybrid policy under real-device conditions.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.20801.jpg"
     },
     "tags": [
@@ -4580,7 +4580,7 @@
     "source": "arxiv",
     "title": "Scalable Multi-robot Motion Planning via Hierarchical Subproblem Expansion and Workspace Decomposition Refinement",
     "url": "http://arxiv.org/abs/2605.20395v1",
-    "summary": "A fundamental challenge in multi-robot motion planning is achieving sufficient coordination to avoid inter-robot conflicts without incurring the large computational expense of searching the joint configuration space of the robot group.",
+    "summary": "Hierarchical Subproblem Expansion speeds up multi-robot motion planning by coordinating robots through discrete search over a workspace decomposition instead of immediately planning in the full joint configuration space. When conflicts or coupling remain, it refines the workspace representation so the planner can keep more robots in smaller decoupled subproblems, yielding planning-time improvements of up to an order of magnitude.",
     "published": "2026-05-19T18:44:09+00:00",
     "updated": "2026-05-19T18:44:09+00:00",
     "authors": [
@@ -4599,7 +4599,7 @@
       "comment": "Accepted to WAFR 2026",
       "first_seen": "2026-05-21",
       "full_text": "A fundamental challenge in multi-robot motion planning is achieving sufficient coordination to avoid inter-robot conflicts without incurring the large computational expense of searching the joint configuration space of the robot group. In this work, we present a method for multiple mobile robot motion planning that achieves an improvement in planning time up to an order of magnitude by leveraging the insight that we can use discrete search over a workspace decomposition to provide coordination between robots during planning. While prior work uses workspace topology to inform when coordination between robots is needed and then composes robots into their joint configuration space, we take a step further by iteratively refining our workspace representation to allow our planner to search smaller, decoupled configuration spaces.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.20395.jpg"
     },
     "tags": [
@@ -4690,7 +4690,7 @@
     "source": "arxiv",
     "title": "DEFLECT: Delay-Robust Execution via Flow-matching Likelihood-Estimated Counterfactual Tuning for VLA Policies",
     "url": "http://arxiv.org/abs/2605.19294v1",
-    "summary": "Vision-Language-Action (VLA) policies are typically deployed with asynchronous inference: the robot executes a previously predicted action chunk while the model computes the next one.",
+    "summary": "DEFLECT targets the latency mismatch in asynchronous VLA control, where action chunks are predicted from stale observations but executed after the robot state has already moved on. It post-trains existing async VLA policies offline by constructing fresh-versus-stale counterfactual action pairs from a frozen policy and using a flow-matching likelihood-ratio surrogate as a label-free preference signal, avoiding rewards, human labels, or online rollouts. On Kinetix it recovers performance in the severe-delay setting where naive rollover collapses, improving success by 6.4 points at 5-7 control steps of latency, with gains also transferring to a real-scale VLA and two real-robot tasks.",
     "published": "2026-05-19T03:14:11+00:00",
     "updated": "2026-05-19T03:14:11+00:00",
     "authors": [
@@ -4713,7 +4713,7 @@
       "comment": null,
       "first_seen": "2026-05-20",
       "full_text": "Vision-Language-Action (VLA) policies are typically deployed with asynchronous inference: the robot executes a previously predicted action chunk while the model computes the next one. This creates a prediction-execution misalignment: the chunk is conditioned on the observation taken before inference began, but executes in a physical state that has already drifted forward by several control steps; naive asynchronous rollover collapses from 89% to under 1% on Kinetix as the inference cycle covers up to seven control steps. We introduce DEFLECT, a fully offline post-training refinement that applies as a near drop-in upgrade to existing async-VLA stacks by converting latency itself into a label-free preference signal: counterfactual fresh/stale action pairs are constructed from a frozen reference policy and scored under the deployment-time conditioning via an implicit flow-matching likelihood-ratio surrogate, with no human labels, reward models, or online rollouts. DEFLECT substantially extends the usable delay envelope of async VLA control, with +6.4 success-rate gain in the high-latency regime (5-7 control steps), +4.6 when transferred to a real-scale VLA at the longest delay, and consistent improvements on two real-robot tasks (a bimanual conveyor pick-and-place and a reactive whack-a-mole).",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19294.jpg"
     },
     "tags": [
@@ -4852,7 +4852,7 @@
     "source": "arxiv",
     "title": "DeCoR: Design and Control Co-Optimization for Urban Streets Using Reinforcement Learning",
     "url": "http://arxiv.org/abs/2605.21311v1",
-    "summary": "Modern vision systems can detect, track, and forecast urban actors at scale, yet translating perception outputs to urban design remains limited. We introduce DeCoR, a two-stage reinforcement learning framework that leverages flow observations to co-optimize crosswalk layout and network-level signal control.",
+    "summary": "DeCoR uses reinforcement learning to connect urban sensing data to street redesign, first learning where and how wide to place crosswalks from pedestrian-flow graphs, then learning adaptive signal timings for each proposed layout. On a 750 m real corridor using video and Wi-Fi demand logs, it found a design that cut pedestrian travel time to the nearest crosswalk by 23% with fewer crossings, while its signal controller reduced pedestrian and vehicle waits by 79% and 65% versus fixed timing.",
     "published": "2026-05-20T15:39:06+00:00",
     "updated": "2026-05-20T15:39:06+00:00",
     "authors": [
@@ -4872,7 +4872,7 @@
       "comment": "22 pages, 8 figures",
       "first_seen": "2026-05-21",
       "full_text": "Modern vision systems can detect, track, and forecast urban actors at scale, yet translating perception outputs to urban design remains limited. We introduce DeCoR, a two-stage reinforcement learning framework that leverages flow observations to co-optimize crosswalk layout and network-level signal control. The design stage encodes the pedestrian network as a graph and learns a generative policy that parameterizes a Gaussian mixture model over crosswalk location and width, from which new crosswalks are sampled. For each layout, a shared control policy learns adaptive signal timings to minimize joint pedestrian and vehicle delay. On a 750 m real-world urban corridor with demand sensed from video and Wi-Fi logs, DeCoR learns a layout that reduces pedestrian arrival time to their nearest crosswalk by 23% while using fewer crosswalks than existing configurations. On the control side, DeCoR reduces pedestrian and vehicle wait time by 79% and 65%, respectively, relative to fixed-time signalization. Further, the control policy generalizes to demands outside of training and is robust to layout changes without retraining.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.21311.jpg"
     },
     "tags": [
@@ -4898,7 +4898,7 @@
     "source": "arxiv",
     "title": "Behavior-Consistent Deep Reinforcement Learning",
     "url": "http://arxiv.org/abs/2605.21214v1",
-    "summary": "Reinforcement learning (RL) often exhibits high variance across training runs, leading to unreliable performance and posing a major challenge to deployment in real-world domains.",
+    "summary": "Behavior-consistent RL targets the problem that independent RL runs can learn policies with very different behaviors even when returns look acceptable. The authors connect this to maximum-entropy RL, showing that Boltzmann-policy KL divergence can be bounded by setting temperature according to Q-function disagreement, then instantiate the idea as Q-value Expectile Disagreement (QED), a state-dependent temperature schedule using double-critic disagreement as a proxy. Across 18 continuous-control tasks, QED cuts cross-run policy divergence by roughly two orders of magnitude while preserving performance, with only modest sample-efficiency cost.",
     "published": "2026-05-20T14:08:33+00:00",
     "updated": "2026-05-20T14:08:33+00:00",
     "authors": [
@@ -4918,7 +4918,7 @@
       "comment": null,
       "first_seen": "2026-05-21",
       "full_text": "Reinforcement learning (RL) often exhibits high variance across training runs, leading to unreliable performance and posing a major challenge to deployment in real-world domains. In this work, we address the challenge of cross-run policy divergence by formalizing the problem of behavior-consistent RL, where the objective is to obtain policies that are both high-performing and distributionally similar across training runs. Our key observation is that maximum-entropy RL provides a direct mechanism for controlling behavioral divergence by anchoring runs to a common (uniform) prior. We prove that, for Boltzmann policies, choosing the temperature proportional to $Q$-function disagreement bounds the pairwise KL divergence between the induced policies. However, we also show that naïvely increasing entropy might impair policy optimization while amplifying off-policy error. Building upon these observations, we propose $Q$-value Expectile Disagreement (QED), a state-dependent temperature schedule that uses double-critic disagreement as a single-run proxy for cross-run disagreement. Empirically, we demonstrate that across 18 continuous-control tasks, QED reduces across-run divergence by two orders of magnitude without sacrificing performance, resulting in a considerable reduction in return variance at modest sample-efficiency costs.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.21214.jpg"
     },
     "tags": [
@@ -4944,7 +4944,7 @@
     "source": "arxiv",
     "title": "SubTGraph: Large-Scale Subterranean Environment Synthesis with Controllable Topological Variability for Robotic Autonomy Validation",
     "url": "http://arxiv.org/abs/2605.20917v1",
-    "summary": "Subterranean (SubT) environments have been a frontier for autonomous robotics, driven by the push for automation of mining operations and the interest in planetary exploration (Martian Lava Tubes). Due to the challenges involved in accessing real SubT environments, rigorous hardening of autonomy stacks in realistic simulation environments is critical.",
+    "summary": "SubTGraph procedurally generates large, multi-level subterranean simulation worlds by turning user-specified structural constraints into a cost matrix that guides Dijkstra-based assembly of DARPA World Generator topometric tiles. It can vary topology, dimensionality, and textures to create mines, caves, and lava tubes, with an open-source release plus 150 generated worlds for statistical autonomy testing. The authors demonstrate its use on structural semantic segmentation against topometric ground truth, multi-agent path planning trend analysis, and LIO SLAM stress tests that expose failure cases in difficult underground sections.",
     "published": "2026-05-20T09:00:37+00:00",
     "updated": "2026-05-20T09:00:37+00:00",
     "authors": [
@@ -4964,7 +4964,7 @@
       "comment": "16 pages, 18 figures",
       "first_seen": "2026-05-21",
       "full_text": "Subterranean (SubT) environments have been a frontier for autonomous robotics, driven by the push for automation of mining operations and the interest in planetary exploration (Martian Lava Tubes). Due to the challenges involved in accessing real SubT environments, rigorous hardening of autonomy stacks in realistic simulation environments is critical. This article fills a well-known gap, which relates to the unavailability of a large-scale simulation-based benchmarking infrastructure for rigorous statistical evaluation of robotic autonomy, due to which it is common for SubT research articles to present validation results in a few environments at best.   This article presents SubTGraph, a novel framework for rapid synthesis of multi-level SubT environments with high variability, incorporating user specifications related to topology, dimensionality, textures, etc., to generate distinct environments such as operational mines, natural caves and lava tubes. SubTGraph builds a cost matrix from user-specified structural constraints to guide the classical Dijkstra algorithm to procedurally generate SubT worlds utilizing topometric tiles from the DARPA World Generator. Three robotics case-studies are investigated to demonstrate the utility of SubTGraph for rigorous validation of different layers in the robotic autonomy stack. Structural semantic segmentation is validated against topometric ground truths, multi-agent path planning is widely tested for identification of patterns and trends in the algorithm behavior and LIO SLAM is stress-tested in challenging subterranean sections to identify failure cases. The SubTGraph world creation codebase is open-sourced (https://github.com/LTU-RAI/SubTGraph.git) along with a database consisting of 150 highly variable underground worlds.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.20917.jpg"
     },
     "tags": [
@@ -4989,7 +4989,7 @@
     "source": "arxiv",
     "title": "Design for Manufacturing: A Manufacturability Knowledge-Integrated Reinforcement Learning Framework for Free-Form Pipe Routing in Aeroengines",
     "url": "http://arxiv.org/abs/2605.20644v1",
-    "summary": "Design for manufacturing plays a critical role in advanced aeroengine development, where complex components necessitate careful consideration of manufacturability. However, current practices in pipe routing remain largely decoupled from down-stream manufacturing, leading to labor-intensive, trial-and-error iterations to achieve manufacturable designs.",
+    "summary": "FPRO treats aeroengine pipe routing as a Frenet-frame boundary value problem, generating free-form paths through curvature and torsion profiles while baking manufacturability limits directly into the reinforcement-learning search. Using PPO with staged rewards, it finds collision-free routes that can be mapped straight into six-axis free-bending machine motions. The experiments report smoother paths, faster convergence, better terminal alignment, obstacle avoidance, and manufacturability than Cartesian and RL baselines, with fabricated pipes closely matching the digital designs.",
     "published": "2026-05-20T03:07:00+00:00",
     "updated": "2026-05-20T03:07:00+00:00",
     "authors": [
@@ -5012,7 +5012,7 @@
       "comment": null,
       "first_seen": "2026-05-21",
       "full_text": "Design for manufacturing plays a critical role in advanced aeroengine development, where complex components necessitate careful consideration of manufacturability. However, current practices in pipe routing remain largely decoupled from down-stream manufacturing, leading to labor-intensive, trial-and-error iterations to achieve manufacturable designs. To address this problem, this study proposes the Frenet-based pipe routing optimization (FPRO) framework, a manufacturability knowledge-integrated reinforcement learning approach for free-form pipe design in aeroengines. FPRO formulates the routing problem as a boundary value problem in the Frenet frame. In this framework, the pipe path is represented by curvature and torsion profiles, which are generated using cubic Hermite interpolation. To integrate design and manufacturing, domain-specific manufacturing knowledge is embedded as constraints on the permissible ranges of curvature and torsion. The path optimization is performed using the proximal policy optimization algorithm with stochastic exploration and a stage-guided reward mechanism. A unified mapping formulation then translates the optimized path into motion trajectories for the bending die, enabling direct fabrication on a six-axis free-bending machine. Experimental results demonstrate that FPRO consistently generates collision-free, manufacturable paths with smoother geometric profiles compared to Cartesian-based methods. It also achieves faster convergence and superior performance in terminal alignment, path length, obstacle avoidance, and manufacturability compared to state-of-the-art reinforcement learning baselines. Real-world validation confirms the close geometric correspondence between the manufactured pipe and its digital design, validating the practical feasibility of FPRO.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.20644.jpg"
     },
     "tags": [
@@ -5038,7 +5038,7 @@
     "source": "arxiv",
     "title": "The Yes-Man Syndrome: Benchmarking Abstention in Embodied Robotic Agents",
     "url": "http://arxiv.org/abs/2605.20544v1",
-    "summary": "Vision-language models (VLMs) are used as high-level planners for embodied agents, translating natural language instructions and visual observations into action plans.",
+    "summary": "RoboAbstention tests whether vision-language-model planners for robots know when to refuse an instruction because the scene, task, or available perception makes it impossible, ambiguous, or based on a false premise. It builds 6,069 auditable image-grounded instructions from five robotics datasets using structured visual grounding, deterministic constraint derivation, and category-specific templates, then finds that frontier models still mostly “say yes”: Gemini 2.5 Flash abstains only 39.0% of the time and Gemini Robotics ER 1.6 Preview only 16.5%. Defensive prompting and in-context examples push abstention much higher, up to 93.6% for Gemini Robotics ER 1.6 Preview and 88.6% for GPT 5.4 Mini, but the benchmark shows embodied abstention remains brittle rather than solved.",
     "published": "2026-05-19T22:32:44+00:00",
     "updated": "2026-05-19T22:32:44+00:00",
     "authors": [
@@ -5059,7 +5059,7 @@
       "comment": null,
       "first_seen": "2026-05-21",
       "full_text": "Vision-language models (VLMs) are used as high-level planners for embodied agents, translating natural language instructions and visual observations into action plans. While prior work has studied abstention in LLMs, existing benchmarks are largely text-only and do not capture the perceptual grounding and physical constraints inherent to embodied robotics environments. In such settings, abstention requires recognizing when instructions are ambiguous, physically infeasible, based on false premises, or otherwise unresolvable given the available sensory modalities and context. To address this gap, we introduce a taxonomy to categorize abstention in the context of embodied robotics and present RoboAbstention, a scalable and auditable framework for generating abstention instructions grounded in images gathered from five robotics datasets. RoboAbstention instantiates the taxonomy through a three-phase pipeline: (1) structured visual grounding, (2) deterministic constraint derivation, and (3) controlled instruction generation via category-specific templates. This enables the construction of a diverse dataset with verifiable abstention conditions. We evaluate several frontier VLMs and find that all models exhibit significant weaknesses in abstention, including those with advanced reasoning capabilities. The best-performing model, Gemini 2.5 Flash, abstains on only 39.0% of our 6,069 benchmark instructions, while the embodied planner Gemini Robotics ER 1.6 Preview abstains on just 16.5%. We further explore methods for improving abstention in VLM planners, such as defensive prompting and in-context learning, and find that these interventions substantially improve performance, reaching 93.6% abstention rate for Gemini Robotics ER 1.6 Preview and 88.6% for GPT 5.4 Mini, yet no approach fully solves the problem. We open-source RoboAbstention at https://purseclab.github.io/RoboAbstention/.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.20544.jpg"
     },
     "tags": [
@@ -5162,7 +5162,7 @@
     "source": "arxiv",
     "title": "Domain-Adaptable Reinforcement Learning for Code Generation with Dense Rewards",
     "url": "http://arxiv.org/abs/2605.21180v1",
-    "summary": "Large language models show strong potential for automated code generation, but lack guarantees for correctness, quality, safety, and domain-specific constraints. For instance in robotics, where code generation is increasingly being used for planning and executing actions, awareness of the environment and physical constraints is critical.",
+    "summary": "Domain-adaptable RL fine-tunes code-generating LLMs with PPO using dense, execution-aware rewards for syntax, functional correctness, style, security, and simulator executability, with token-level reward mapping to assign credit from program outcomes back to generated tokens. Evaluated on MBPP/MBPP+ and RoboEval, it raises MBPP pass@1 by 19 absolute points and cuts robotic simulator execution failures by 51%, showing how code models can be steered toward both general correctness and robotics-specific physical/execution constraints.",
     "published": "2026-05-20T13:47:52+00:00",
     "updated": "2026-05-20T13:47:52+00:00",
     "authors": [
@@ -5182,7 +5182,7 @@
       "comment": "10 pages, 2 figures, under review",
       "first_seen": "2026-05-21",
       "full_text": "Large language models show strong potential for automated code generation, but lack guarantees for correctness, quality, safety, and domain-specific constraints. For instance in robotics, where code generation is increasingly being used for planning and executing actions, awareness of the environment and physical constraints is critical. To facilitate the adaption of code-generating LLMs to diverse requirements, including domain-specific ones, we present a reinforcement learning framework that fine-tunes pre-trained LLMs using proximal policy optimization. Our customizable execution-aware reward formula captures and optimizes syntax, functional correctness, code style, security, and simulator executability. A token-level reward mapping mechanism enables effective credit assignment from execution outcomes to generated tokens. The framework is evaluated on general-purpose code generation (MBPP/MBPP+) and robotic program synthesis (RoboEval). The results show substantial improvements in functional correctness and simulator executability, including an absolute pass@1 increase of 19% on MBPP and a reduction in execution failures by 51% on RoboEval. These findings demonstrate that structured reinforcement learning can effectively align language models to correct program generation and domain-specific requirements.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.21180.jpg"
     },
     "tags": [
@@ -5280,7 +5280,7 @@
     "source": "arxiv",
     "title": "CANINE: Coaching Visually Impaired Users for Interactive Navigation with a Robot Guide Dog",
     "url": "http://arxiv.org/abs/2605.19501v1",
-    "summary": "Robot guide dogs offer navigation assistance that greatly expands the independent mobility of the visually impaired, but their effective use requires subtle human-robot coordination that is difficult for users to learn from generic verbal instructions.",
+    "summary": "CANINE trains visually impaired users to navigate with a robot guide dog by breaking human-robot coordination into sub-skills and giving personalized verbal coaching during practice. It uses knowledge tracing to decide which weak skill to train next, then observes each episode and uses foundation models to infer why errors happened and generate targeted corrections. In controlled blindfolded-user studies it improved learning efficiency and final navigation performance over generic instructions, with gains persisting after two weeks and an exploratory visually impaired-user case study pointing to real deployment considerations.",
     "published": "2026-05-19T07:52:32+00:00",
     "updated": "2026-05-19T07:52:32+00:00",
     "authors": [
@@ -5300,7 +5300,7 @@
       "comment": "Accepted to RSS 2026",
       "first_seen": "2026-05-20",
       "full_text": "Robot guide dogs offer navigation assistance that greatly expands the independent mobility of the visually impaired, but their effective use requires subtle human-robot coordination that is difficult for users to learn from generic verbal instructions. To tackle this challenge, we present CANINE, an automated coaching system that trains users for interactive navigation with a robot guide dog, through personalized, adaptive verbal feedback. CANINE decomposes a complex coordination task into sub-skills and operates at two levels. At the high level, it decides what to train by tracking the learner's proficiency across sub-skills using knowledge tracing and prioritizing training on the weakest areas. At the low level, CANINE decides how to train each sub-skill by observing each human practice episode, using foundation models to infer the underlying causes of errors, and generating targeted verbal corrections adaptively. A controlled study with blindfolded participants, treated as a proxy population for quantitative evaluation, demonstrates that CANINE significantly improves both learning efficiency and final navigation performance compared to generic verbal instructions. We further validate CANINE through a retention study and an exploratory case study. The retention study shows lasting skill improvement after two weeks. The case study confirms CANINE's effectiveness in training a visually impaired user, while revealing additional design considerations for real-world deployment. Both are well aligned with the findings of the controlled study. Project page: https://cunjunyu.github.io/project/canine/",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19501.jpg"
     },
     "tags": [
@@ -5362,7 +5362,7 @@
     "source": "arxiv",
     "title": "Learning Robust Dexterous In-Hand Manipulation from Joint Sensors with Proprioceptive Transformer",
     "url": "http://arxiv.org/abs/2605.21330v1",
-    "summary": "In-hand object manipulation is a fundamental yet challenging capability for dexterous robots.",
+    "summary": "Proprioceptive Transformer trains a dexterous tendon-driven hand to rotate a cube using only joint position and velocity histories, with a privileged RL teacher distilled into a policy that runs without vision, tactile sensing, or explicit object tracking. The Transformer recovers useful implicit object-state information from temporal joint-sensor patterns, outperforming MLP-style baselines on the real ORCA hand with 3.1x higher rotation speed and 23.4% lower cube-position estimation RMSE.",
     "published": "2026-05-20T15:57:27+00:00",
     "updated": "2026-05-20T15:57:27+00:00",
     "authors": [
@@ -5381,7 +5381,7 @@
       "comment": "8 pages, 6 figures, 3 tables",
       "first_seen": "2026-05-21",
       "full_text": "In-hand object manipulation is a fundamental yet challenging capability for dexterous robots. Despite significant progress in dexterous manipulation, existing approaches rely heavily on vision or tactile sensing to track object states, while joint sensing -- the most readily available modality on any robotic hand -- remains largely overlooked, particularly for tendon-driven hands. In this paper, we study how far joint sensing alone can go by asking: (i) whether motor encoders or direct joint sensing provides better proprioceptive feedback, (ii) how to extract environment information from joint measurements, and (iii) whether joint-only control can achieve competitive real-world performance without external perception. We present the Proprioceptive Transformer (PT), an exteroceptive-free approach for continuous cube rotation on a tendon-driven dexterous hand that uses only joint sensing feedback. A teacher policy is first trained via reinforcement learning with privileged object information, then distilled into PT, which operates solely on joint position and velocity histories. The Transformer architecture effectively extracts implicit object state information from temporal patterns in joint sensor readings. Experiments on the real ORCA hand show that our approach achieves 3.1x higher rotation speed than baselines. We also demonstrate that our PT achieves a 23.4% lower RMSE for cube position estimation than the MLP baseline, indicating superior extraction of exteroceptive information from proprioceptive sources.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.21330.jpg"
     },
     "tags": [
@@ -5407,7 +5407,7 @@
     "source": "arxiv",
     "title": "Reinforcement Learning for Risk Adaptation via Differentiable CVaR Barrier Functions",
     "url": "http://arxiv.org/abs/2605.21257v1",
-    "summary": "Planning through crowded environments under uncertain obstacle motions remains difficult, as stochastic interactions often induce overly conservative behavior or reduced efficiency. To address this challenge, we propose an end-to-end risk adaptation framework for crowd navigation under obstacle-motion uncertainty modeled by a Gaussian mixture model.",
+    "summary": "Reinforcement Learning for Risk Adaptation via Differentiable CVaR Barrier Functions learns crowd-navigation policies that tune both control actions and risk parameters online, using Gaussian mixture models for uncertain obstacle motion and a quadratic-program safety layer built from differentiable CVaR barrier functions. The result is a robot that can move efficiently through dense, dynamic scenes while tightening probabilistic safety constraints only when the context demands it. Across varied obstacle densities, robot models, and three out-of-distribution tests, the method outperformed optimization-only, RL-only, and hybrid baselines on safety, efficiency, and generalization.",
     "published": "2026-05-20T14:45:15+00:00",
     "updated": "2026-05-20T14:45:15+00:00",
     "authors": [
@@ -5426,7 +5426,7 @@
       "comment": "Project page: https://anonymousrobotics9666.github.io/rlcvarbf/",
       "first_seen": "2026-05-21",
       "full_text": "Planning through crowded environments under uncertain obstacle motions remains difficult, as stochastic interactions often induce overly conservative behavior or reduced efficiency. To address this challenge, we propose an end-to-end risk adaptation framework for crowd navigation under obstacle-motion uncertainty modeled by a Gaussian mixture model. The framework combines reinforcement learning~(RL) with a differentiable quadratic-program safety layer based on Conditional Value-at-Risk~(CVaR) barrier functions, jointly learning nominal control input, risk level, and safety margin and enforcing explicit probabilistic safety constraints. This design enables context-aware adaptation, promoting efficient behavior while invoking caution only when necessary. We conduct extensive evaluations in dynamic, uncertain, and crowded environments across varying obstacle densities and robot models, and further assess generalization under three out-of-distribution cases. Comparisons across optimization-based, RL-based, and integrated RL and optimization methods are provided, and the proposed method is shown to deliver the strongest overall performance in safety, efficiency, and generalization under uncertainty.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.21257.jpg"
     },
     "tags": [
@@ -5487,7 +5487,7 @@
     "source": "arxiv",
     "title": "DelTA: Discriminative Token Credit Assignment for Reinforcement Learning from Verifiable Rewards",
     "url": "http://arxiv.org/abs/2605.21467v1",
-    "summary": "Reinforcement learning from verifiable rewards (RLVR) has emerged as a central technique for improving the reasoning capabilities of large language models. Despite its effectiveness, how response-level rewards translate into token-level probability changes remains poorly understood.",
+    "summary": "DelTA reframes RLVR updates as an implicit linear discriminator over token-gradient vectors, exposing how sequence-level rewards decide which token probabilities rise or fall during training. It addresses a failure mode where frequent shared patterns like formatting tokens dominate credit assignment by reweighting token directions that better separate high-reward from low-reward responses. On seven math benchmarks, it improves over same-scale baselines by 3.26 points on Qwen3-8B-Base and 2.62 points on Qwen3-14B-Base, with additional gains reported for code generation, another backbone, and out-of-domain tests.",
     "published": "2026-05-20T17:53:09+00:00",
     "updated": "2026-05-20T17:53:09+00:00",
     "authors": [
@@ -5505,7 +5505,7 @@
       "comment": null,
       "first_seen": "2026-05-21",
       "full_text": "Reinforcement learning from verifiable rewards (RLVR) has emerged as a central technique for improving the reasoning capabilities of large language models. Despite its effectiveness, how response-level rewards translate into token-level probability changes remains poorly understood. We introduce a discriminator view of RLVR updates, showing that the policy-gradient update direction implicitly acts as a linear discriminator over token-gradient vectors and thereby determines which token probabilities are increased or decreased during learning. Under standard sequence-level RLVR, this discriminator is constructed from positive- and negative-side centroids formed by advantage-weighted averaging of token-gradient vectors. However, such centroid construction can be dominated by shared high-frequency patterns, such as formatting tokens, diluting sparse yet discriminative directions that better distinguish high-reward responses from low-reward ones. To address this limitation, we propose $\\textbf{DelTA}$, a discriminative token credit assignment method that estimates token coefficients to amplify side-specific token-gradient directions and downweight shared or weakly discriminative ones. These coefficients reweight a self-normalized RLVR surrogate, making the effective side-wise centroids more contrastive and thereby reshaping the RLVR update direction. On seven mathematical benchmarks, DelTA outperforms the strongest same-scale baselines by 3.26 and 2.62 average points on Qwen3-8B-Base and Qwen3-14B-Base, respectively. Additional results on code generation, a different backbone, and out-of-domain evaluations further demonstrate the generalization ability of DelTA.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.21467.jpg"
     },
     "tags": [
@@ -5531,7 +5531,7 @@
     "source": "arxiv",
     "title": "Learning Structural Latent Points for Efficient Visual Representations in Robotic Manipulation",
     "url": "http://arxiv.org/abs/2605.21258v1",
-    "summary": "Current 3D-aware pretraining methods for embodied perception and manipulation are largely built on differentiable rendering frameworks, producing either fully implicit neural fields or fully explicit geometric primitives.",
+    "summary": "Structural latent points learn a compact hybrid 3D representation for robotic manipulation by inserting a point-wise latent VAE inside a point-cloud autoencoder, regularizing both point features and coordinates toward a Gaussian prior. The representation keeps rough shape and semantic structure without trying to store precise geometry, while a lightweight 3D Gaussian Splatting rendering pipeline shifts capacity toward the latent front end. On RLBench, ManiSkill2, and a real-robot platform, it improves task success, sample efficiency, and robustness to viewpoint and scene changes over strong baselines.",
     "published": "2026-05-20T14:48:01+00:00",
     "updated": "2026-05-20T14:48:01+00:00",
     "authors": [
@@ -5557,7 +5557,7 @@
       "comment": null,
       "first_seen": "2026-05-21",
       "full_text": "Current 3D-aware pretraining methods for embodied perception and manipulation are largely built on differentiable rendering frameworks, producing either fully implicit neural fields or fully explicit geometric primitives. Implicit representations, while expressive, lack explicit structural cues, whereas explicit ones preserve geometry but suffer from resolution limits and weak generalization. To address these limitations, we propose a novel pretraining framework that learns a hybrid representation-structural latent points. Specifically, we insert a point-wise latent variational autoencoder into the latent space of a point-cloud autoencoder, jointly regularizing point-wise features and coordinates toward a Gaussian prior. The resulting compact latent preserves coarse structural tendencies, which do not encode precise geometry but capture richer rough shape and semantic information, effectively combining the expressiveness of implicit representations with the structural priors of explicit ones. In addition, informed by shared design choices in prior work, we develop a streamlined, efficient 3DGS-based rendering pipeline that is deliberately kept lightweight, improving efficiency while leaving greater representational capacity to the front-end latent module. Extensive evaluations on RLBench, ManiSkill2, and a real-robot platform demonstrate consistent gains in task success, sample efficiency, and robustness to viewpoint and scene variations over strong baselines. Ablation studies further confirm that each component of our framework is critical to overall performance.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.21258.jpg"
     },
     "tags": [
@@ -5582,7 +5582,7 @@
     "source": "arxiv",
     "title": "Enhanced Reinforcement Learning-based Process Synthesis via Quantum Computing",
     "url": "http://arxiv.org/abs/2605.21213v1",
-    "summary": "In this work, we present quantum reinforcement learning (RL) as a solution strategy for process synthesis problems. Building on our prior work, we develop a generalized framework that formally poses process synthesis as a Markov decision process and introduces quantum-enhanced RL algorithms to solve it with improved scalability.",
+    "summary": "Quantum reinforcement learning is applied to process synthesis by casting flowsheet design as a Markov decision process and using new state-encoding algorithms that keep qubit requirements from growing directly with problem size. On flowsheet synthesis benchmarks with increasing unit counts, the quantum variants find optimal designs in small spaces and remain competitive at moderate scales, showing better per-parameter efficiency than a classical RL baseline under matched training conditions.",
     "published": "2026-05-20T14:08:25+00:00",
     "updated": "2026-05-20T14:08:25+00:00",
     "authors": [
@@ -5602,7 +5602,7 @@
       "comment": null,
       "first_seen": "2026-05-21",
       "full_text": "In this work, we present quantum reinforcement learning (RL) as a solution strategy for process synthesis problems. Building on our prior work, we develop a generalized framework that formally poses process synthesis as a Markov decision process and introduces quantum-enhanced RL algorithms to solve it with improved scalability. Earlier implementations of quantum-based RL for process synthesis were limited by qubit requirements, which scaled poorly with problem complexity. This work overcomes this challenge by introducing state encoding algorithms to decouple qubit requirements from problem size. A classical RL-based solution strategy is used as a baseline to benchmark the quantum algorithms under identical training conditions. All algorithms are evaluated across a flowsheet synthesis problem of increasing unit counts to analyze their performance and scalability. Results show that all approaches are capable of identifying the optimal flowsheet designs in small design spaces. For moderate-scale unit counts, quantum approaches demonstrate competitive performance on a per-episode basis and improved efficiency on a per-parameter basis versus the classical RL benchmark. This work provides a foundation for future quantum computing applications within process systems engineering, establishes a controlled benchmark for comparing classical and quantum algorithms, and shows that the proposed quantum variants remain competitive for the process synthesis problem examined in this work.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.21213.jpg"
     },
     "tags": [
@@ -5628,7 +5628,7 @@
     "source": "arxiv",
     "title": "Reinforcement Learning-based Control via Y-wise Affine Neural Networks: Comparative Case Studies for Chemical Processes",
     "url": "http://arxiv.org/abs/2605.21211v1",
-    "summary": "In this work we present an efficient and practically implementable approach for the application of reinforcement learning (RL)-based control in chemical process systems. This is an area that has yet to widely adopt RL-based control largely due to inherent challenges in trusting RL algorithms and the time-consuming process of training reliable agents.",
+    "summary": "YANN-RL initializes actor and critic networks with y-wise affine structure so RL controllers start from a more interpretable and trustworthy policy, rather than learning chemical process control entirely from scratch. Across PC-Gym case studies on a CSTR, four-tank system, and multistage extraction column, it needs less training data and time than PPO, SAC, DDPG, and TD3 while approaching nonlinear MPC performance without requiring a full nonlinear process model.",
     "published": "2026-05-20T14:07:02+00:00",
     "updated": "2026-05-20T14:07:02+00:00",
     "authors": [
@@ -5646,7 +5646,7 @@
       "comment": "Accepted for publication at the 23rd IFAC World Congress, 2026",
       "first_seen": "2026-05-21",
       "full_text": "In this work we present an efficient and practically implementable approach for the application of reinforcement learning (RL)-based control in chemical process systems. This is an area that has yet to widely adopt RL-based control largely due to inherent challenges in trusting RL algorithms and the time-consuming process of training reliable agents. To address these challenges, we leverage a class of RL algorithms termed Y-wise Affine Neural Network (YANN)- RL, which we have developed in our prior work (Braniff and Tian, 2025a). By strategically initializing actor and critic networks YANN-RL algorithms provide confident and interpretable starting points within control schemes. We apply this RL-based control approach to three different process engineering case studies publicly available on the PC-Gym library (Bloor et al., 2026): (i) a continuous stirred tank reactor (CSTR), (ii) a four-tank system, and (iii) a multistage extraction column. Our approach is compared to several popular RL algorithms (PPO, SAC, DDPG, and TD3) and is benchmarked against nonlinear model predictive control (NMPC). These case studies demonstrate that YANN-RL can greatly reduce the training time and data needed, can be deployed with confidence for chemical process systems, and can approach the performance of NMPC without the knowledge of a full nonlinear model.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.21211.jpg"
     },
     "tags": [
@@ -5672,7 +5672,7 @@
     "source": "arxiv",
     "title": "Learning First Integrals via Backward-Generated Data and Guided Reinforcement Learning",
     "url": "http://arxiv.org/abs/2605.21160v1",
-    "summary": "The discovery of first integrals is of fundamental scientific importance for understanding conservation laws in dynamical systems. However, existing symbolic computation tools and Large Language Models (LLMs) remain limited on this task because high-quality training data are scarce and successful solutions often depend on mathematical intuition.",
+    "summary": "FISolver targets automated discovery of first integrals by training an LLM on backward-generated examples, where differential equations are derived from sampled candidate integrals to create many equation-integral pairs. A compact math model is first supervised-finetuned on this data, then improved with reinforcement learning using a Levenshtein-distance shaped reward and data blending for harder sparse-example families. On challenging benchmarks, it outperforms larger mathematical LLMs and Mathematica while using substantially less compute, suggesting a practical data-driven path for finding conservation laws in dynamical systems.",
     "published": "2026-05-20T13:27:39+00:00",
     "updated": "2026-05-20T13:27:39+00:00",
     "authors": [
@@ -5690,7 +5690,7 @@
       "comment": "17 pages, 2 figures, 3 tables",
       "first_seen": "2026-05-21",
       "full_text": "The discovery of first integrals is of fundamental scientific importance for understanding conservation laws in dynamical systems. However, existing symbolic computation tools and Large Language Models (LLMs) remain limited on this task because high-quality training data are scarce and successful solutions often depend on mathematical intuition. This paper presents FISolver, an LLM-based solver developed to address this challenge. First, we introduce a \"Backward Generation\" algorithm that systematically builds large-scale datasets of (differential equation, first integral) pairs by deriving differential equations from sampled integrals, thereby alleviating the data scarcity bottleneck. Second, we apply supervised fine-tuning to a compact mathematical model and further improve its performance through reinforcement learning with a Levenshtein Distance-based shaped reward. In addition, we design data synthesis and blending strategies that support effective adaptation to difficult problem families from sparse examples. Experiments show that FISolver, while requiring substantially lower computational cost, significantly outperforms larger mathematical LLMs and commercial solvers such as Mathematica on challenging benchmarks, indicating a new data-driven route for automated discovery of first integrals.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.21160.jpg"
     },
     "tags": [
@@ -5716,7 +5716,7 @@
     "source": "arxiv",
     "title": "Grounding Driving VLA via Inverse Kinematics",
     "url": "http://arxiv.org/abs/2605.21061v1",
-    "summary": "Existing Driving VLAs predict trajectories while largely ignoring their visual tokens -- a phenomenon we trace not to insufficient training but to a structurally ill-posed task formulation.",
+    "summary": "Driving VLA is reframed as an inverse-kinematics problem: instead of predicting a trajectory from the current view plus ego state and language alone, the model is trained to infer a future visual scene and then decode motion from the current and future visual states. A separate cross-attention conditional diffusion Inverse Kinematics Network blocks the usual shortcut through ego status and text, forcing trajectory planning to use visual evidence. With only 0.5B parameters, the resulting model matches much larger 7B-8B driving VLAs on NAVSIM-v2 and nuScenes, with especially clear gains in dynamic cases such as turns.",
     "published": "2026-05-20T11:45:32+00:00",
     "updated": "2026-05-20T11:45:32+00:00",
     "authors": [
@@ -5734,7 +5734,7 @@
       "comment": null,
       "first_seen": "2026-05-21",
       "full_text": "Existing Driving VLAs predict trajectories while largely ignoring their visual tokens -- a phenomenon we trace not to insufficient training but to a structurally ill-posed task formulation. We show that trajectory recovery, when viewed through the lens of inverse kinematics, requires both a current and a future visual state as boundary conditions; existing VLAs supply only the former, which encourages the model to shortcut through ego status and text commands alone. To address this, we re-design Driving VLA in the style of an inverse kinematics solver. First, a next visual state prediction objective that requires the LLM to predict the future visual scene provides dense visual supervision and suppresses shortcut paths. Second, a separate Inverse Kinematics Network (a cross-attention-based conditional diffusion model) that takes only the current and future visual states as input is designed to suppress reliance on ego status and textual shortcuts during trajectory decoding. With this simple prescription alone, our 0.5B-scale model recovers visual grounding and reaches trajectory planning performance comparable to 7B--8B VLAs more than an order of magnitude larger, on both the closed-loop NAVSIM-v2 and the nuScenes benchmarks. Extensive analysis further shows that this improvement stems from a recovered ability to exploit visual features, with the effect being most pronounced in dynamic driving situations such as turning.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.21061.jpg"
     },
     "tags": [
@@ -5760,7 +5760,7 @@
     "source": "arxiv",
     "title": "Multi-Step Likelihood-Ratio Correction for Reinforcement Learning with Verifiable Rewards",
     "url": "http://arxiv.org/abs/2605.20865v1",
-    "summary": "Reinforcement learning with verifiable rewards (RLVR) plays a pivotal role in improving the reasoning ability of large language models. However, widely used PPO surrogate objectives are fundamentally local, as they rely on a local approximation of the exact policy gradient objective.",
+    "summary": "NFPO modifies PPO-style RLVR training by adding an N-step forward trace, using cumulative likelihood ratios over the next N-1 tokens instead of only a local token-level approximation. This creates a tunable path between stable but biased PPO surrogates and the exact policy-gradient objective, giving a more explicit handle on the bias-variance trade-off. The authors show tighter policy-improvement bounds for suitable N and report consistent gains on reasoning benchmarks.",
     "published": "2026-05-20T08:01:01+00:00",
     "updated": "2026-05-20T08:01:01+00:00",
     "authors": [
@@ -5782,7 +5782,7 @@
       "comment": null,
       "first_seen": "2026-05-21",
       "full_text": "Reinforcement learning with verifiable rewards (RLVR) plays a pivotal role in improving the reasoning ability of large language models. However, widely used PPO surrogate objectives are fundamentally local, as they rely on a local approximation of the exact policy gradient objective. While this approximation improves stability by reducing the variance induced by importance sampling, it also introduces structural bias into the surrogate objective, which must be controlled through trust region mechanisms. In this work, we introduce the $N$-step forward trace, which augments the PPO surrogate objective using the cumulative likelihood ratio of the next $N-1$ tokens. Building on this idea, we propose $N$-Step Forward-Trace Policy Optimization (NFPO), a practical RLVR algorithm that integrates the $N$-step forward trace into the masked policy gradient framework. NFPO provides a continuous bridge between the PPO surrogate objective and the exact policy gradient objective, offering a principled mechanism for controlling the bias-variance trade-off. Our theoretical analysis shows that, with an appropriate choice of $N$, the proposed objective yields a tighter policy-improvement bound than the standard PPO surrogate. Experiments on comprehensive reasoning benchmarks demonstrate that NFPO consistently improves performance, supporting our theoretical findings.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.20865.jpg"
     },
     "tags": [
@@ -5808,7 +5808,7 @@
     "source": "arxiv",
     "title": "TERDNet: Transformer Encoder-Recurrent Decoder Network for Scene Change Detection",
     "url": "http://arxiv.org/abs/2605.20822v1",
-    "summary": "In this work, we address the challenge of Scene Change Detection (SCD), where the goal is to identify variations between two images of the same location captured at different times.",
+    "summary": "TERDNet tackles scene change detection by pairing a transformer encoder for multi-level features with correlation-volume fusion and a recurrent 3-gate GRU decoder that iteratively refines the change mask before a convolution-interpolation upsampler restores detail. Across four public benchmarks it outperforms prior SCD methods, with ablations pointing to segmentation-based pretraining and the fusion design as important factors. Its robustness under viewpoint misalignment is especially relevant for robotic perception, where before/after images are rarely perfectly registered.",
     "published": "2026-05-20T07:18:24+00:00",
     "updated": "2026-05-20T07:18:24+00:00",
     "authors": [
@@ -5824,7 +5824,7 @@
       "comment": "8 pages, 4 figures. Accepted to the IEEE International Conference on Robotics and Automation (ICRA) 2026",
       "first_seen": "2026-05-21",
       "full_text": "In this work, we address the challenge of Scene Change Detection (SCD), where the goal is to identify variations between two images of the same location captured at different times. Existing SCD models often overlook the varying importance of features across layers, employ single-step decoders that confine refinement, and provide limited insight into encoder pretraining strategies. We propose TERDNet, a Transformer Encoder-Recurrent Decoder Network designed to overcome these limitations. TERDNet consists of a transformer-based encoder that extracts multi-level representations, a feature fusion module that integrates correlation volumes with these features, a recurrent 3-gate-GRU decoder that performs iterative refinement, and a combined convolution-interpolation upsampler that restores fine-grained resolution. Extensive experiments on four public benchmarks show that TERDNet consistently outperforms prior approaches and produces more accurate and detailed change masks. Ablation studies confirm the benefit of segmentation-based pretraining and the effectiveness of our fusion design. In addition, robustness tests under viewpoint misalignment confirm TERDNet's potential for deployment in real-world robotic systems, where reliable perception is critical. Our code is available at https://github.com/AutoCompSysLab/TERDNet.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.20822.jpg"
     },
     "tags": [
@@ -5849,7 +5849,7 @@
     "source": "arxiv",
     "title": "Robotics-Inspired Guardrails for Foundation Models in Socially Sensitive Domains",
     "url": "http://arxiv.org/abs/2605.19940v1",
-    "summary": "Foundation models are increasingly deployed in socially sensitive domains such as education, mental health, and caregiving, where failures are often cumulative and context-dependent.",
+    "summary": "Grounded Observer treats guardrails for foundation models as runtime control over whole interaction trajectories, borrowing ideas from robotics for enforcing constraints in uncertain closed-loop systems. Instead of judging isolated outputs, it monitors conversations for drift into undesirable regimes and intervenes during deployment, demonstrated in small talk, in-home autism therapy, and school behavioral de-escalation. The interesting shift is from empirical risk reduction toward mechanisms that can adapt to social context while moving closer to enforceable behavioral guarantees.",
     "published": "2026-05-19T15:00:06+00:00",
     "updated": "2026-05-19T15:00:06+00:00",
     "authors": [
@@ -5867,7 +5867,7 @@
       "comment": "Under review at Journal of Artificial Intelligence Research (JAIR)",
       "first_seen": "2026-05-20",
       "full_text": "Foundation models are increasingly deployed in socially sensitive domains such as education, mental health, and caregiving, where failures are often cumulative and context-dependent. Existing guardrail approaches -- ranging from training-time alignment to prompting, decoding constraints, and post-hoc moderation -- primarily provide empirical risk reduction rather than enforceable behavioral guarantees, and largely treat safety as a property of individual outputs rather than interaction trajectories. We reframe guardrails as a problem of runtime behavioral control over interaction trajectories, drawing on robotics to introduce formal constructs for constraint enforcement in uncertain, closed-loop systems. We instantiate these ideas in the Grounded Observer framework and apply it across three real-world deployments: small talk, in-home autism therapy, and behavioral de-escalation in schools. Across settings, the framework enables runtime interventions that mitigate drift into undesirable interaction regimes while adapting to diverse social contexts. We discuss extensions to the framework and propose research directions toward stronger guarantees.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19940.jpg"
     },
     "tags": [
