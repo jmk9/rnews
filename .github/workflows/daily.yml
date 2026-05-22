@@ -20,9 +20,10 @@ on:
       - "data/processed/**"
       - "data/state/**"
   schedule:
-    # 22:00 UTC daily = 07:00 KST. GitHub-scheduled cron can lag 5–30 min;
-    # this gives buffer before a typical 08:30 KST work start.
-    - cron: "0 22 * * *"
+    # 21:00 UTC = 06:00 KST. GitHub-scheduled cron often lags 30–60 min, so
+    # collection+thumbnails land by ~07:00; the hourly local codex cron then
+    # fills summaries on its 07:00/08:00 ticks — everything ready before 09:00.
+    - cron: "0 21 * * *"
   workflow_dispatch:
 
 permissions:
