@@ -1,11 +1,14 @@
 """Score each item for research relevance, then assign a reading priority bucket."""
 from __future__ import annotations
 
+import logging
 import math
 import re
 from typing import Any
 
 from utils.io import Item, days_since
+
+log = logging.getLogger("rnews.ranker")
 
 _GITHUB_RE = re.compile(r"github\.com/[\w.\-]+/[\w.\-]+", re.IGNORECASE)
 _CODE_HINTS = ("code is available", "we release", "we will release", "code will be released",
@@ -119,6 +122,18 @@ def rank_items(items: list[Item], cfg: dict[str, Any], *, filter_unrelated: bool
         it.score = score
         it.score_breakdown = breakdown
         it.priority = _assign_priority(score, cfg)
+
+    # arXiv is high-volume; drop low-relevance papers (navigation/SLAM/generic-ML
+    # noise that trips a keyword but misses our research interests) below a score
+    # floor. Other sources are unaffected.
+    if filter_unrelated:
+        min_score = float(sources_cfg.get("arxiv", {}).get("min_score", 0) or 0)
+        if min_score > 0:
+            before = len(items)
+            items = [it for it in items
+                     if it.source != "arxiv" or it.score >= min_score]
+            log.info("arxiv min_score=%.1f: dropped %d low-relevance papers",
+                     min_score, before - len(items))
 
     items.sort(key=lambda x: x.score, reverse=True)
     return items

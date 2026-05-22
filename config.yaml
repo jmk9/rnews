@@ -224,6 +224,10 @@ sources:
     categories: [cs.RO, cs.AI, cs.LG, cs.CV]
     days_back: 7
     max_results_per_category: 100
+    # arXiv is high-volume. Drop papers scoring below this relevance floor
+    # (navigation/SLAM/generic-ML noise that trips a keyword but misses our
+    # research interests). 0 disables. See ranking weights below for the scale.
+    min_score: 6
   github:
     enabled: true
     queries:
