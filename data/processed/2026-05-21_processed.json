@@ -8210,7 +8210,7 @@
     "source": "arxiv",
     "title": "Probing Embodied LLMs: When Higher Observation Fidelity Hurts Problem Solving",
     "url": "http://arxiv.org/abs/2605.20072v1",
-    "summary": "Large Language Models are increasingly proposed as cognitive components for robotic systems, yet their opaque decision processes make it difficult to explain success or failure in closed-loop embodied tasks.",
+    "summary": "Embodied LLM agents are tested on Lockbox, a sequential mechanical puzzle with hidden dependencies, while varying their observation fidelity across RGB, RGB-D, and ground-truth symbolic inputs. The surprising result is that raw RGB produces the best performance and perfect ground-truth observations the worst, with simulation showing that moderate perceptual noise can improve success by disrupting repetitive action loops. Randomly flipping perceived action outcomes peaks at a 40% flip rate, raising success 2.85x over the noise-free baseline, suggesting that benchmark scores may reflect a fragile interaction between perception errors and reasoning failures rather than robust embodied problem solving.",
     "published": "2026-05-19T16:27:00+00:00",
     "updated": "2026-05-19T16:27:00+00:00",
     "authors": [
@@ -8227,7 +8227,7 @@
       "comment": "Submitted to From Animals to Animats: The 18th International Conference on the Simulation of Adaptive Behavior (SAB)",
       "first_seen": "2026-05-20",
       "full_text": "Large Language Models are increasingly proposed as cognitive components for robotic systems, yet their opaque decision processes make it difficult to explain success or failure in closed-loop embodied tasks. Following an empirical AI methodology, we study embodied LLM agents behaviorally by varying the information available to the agent and measuring the resulting changes in behavior. Using the Lockbox, a sequential mechanical puzzle with hidden interdependencies, we evaluate LLMs across RGB, RGB-D, and ground-truth symbolic observations in a physical robotic setup and use controlled simulation to probe the resulting behavior. Counterintuitively, agents perform best under raw RGB input and worst under perfect ground-truth observations. In simulation, we probe this effect by randomly flipping perceived action outcomes and find that moderate noise improves performance, peaking at a 40% flip probability with a 2.85-fold success rate increase over the noise-free baseline. Further analysis links this gain to a reduction in repetitive action loops. These findings suggest that success rates alone are insufficient for evaluating LLMs, as measured performance may reflect the interaction between perceptual errors and reasoning failures rather than robust problem solving.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.20072.jpg"
     },
     "tags": [
@@ -8252,7 +8252,7 @@
     "source": "arxiv",
     "title": "Towards LLM-Assisted Architecture Recovery for Real-World ROS~2 Systems: An Agent-Based Multi-Level Approach to Hierarchical Structural Architecture Reconstruction",
     "url": "http://arxiv.org/abs/2605.20055v1",
-    "summary": "Explicit software architecture models are essential artifacts for communicating, analyzing, and evolving complex software-intensive systems.",
+    "summary": "An LLM-assisted recovery pipeline reconstructs hierarchical structural architectures for real ROS 2 systems by combining refined prompting with staged, multi-level intermediate representations built from ROS node lists and launch-file dependencies. Evaluated on a cooperative robotic-arm product disassembly system with heterogeneous ROS 2 artifacts, it improves structural consistency, scalability, and robustness over the authors’ earlier blueprint-guided approach, while still struggling with dynamic integration semantics in larger systems.",
     "published": "2026-05-19T16:14:33+00:00",
     "updated": "2026-05-19T16:14:33+00:00",
     "authors": [
@@ -8276,7 +8276,7 @@
       "comment": null,
       "first_seen": "2026-05-20",
       "full_text": "Explicit software architecture models are essential artifacts for communicating, analyzing, and evolving complex software-intensive systems. In ROS~2-based robotic systems, however, structural (de-)composition and integration semantics are often only implicitly encoded across distributed artifacts such as source code and launch files, making recovery of hierarchical architecture particularly difficult. Existing approaches mainly focus on node-level entities and communication wiring, while providing limited support for recovering hierarchical structural (de-)composition across multiple abstraction levels.   In this paper, we extend our previously proposed blueprint-guided LLM-assisted architecture recovery pipeline for ROS~2 systems through two major enhancements: (1) refined prompting to improve the consistency and controllability of architecture synthesis, and (2) a staged recovery strategy based on multi-level intermediate architectural representations that incorporate the atomic ROS node list and launch file dependencies, thereby enabling structurally constrained reconstruction across multiple abstraction levels.   The approach is evaluated on a real-world automated product disassembly system based on cooperative robotic arms and heterogeneous ROS~2 artifacts. Compared to our previous work, the considered case study exhibits substantially higher integration complexity and richer functionality. The results demonstrate improved structural consistency, scalability, and robustness of architecture recovery, while also revealing remaining challenges related to dynamic integration semantics in large-scale ROS~2 systems.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.20055.jpg"
     },
     "tags": [
@@ -8644,7 +8644,7 @@
     "source": "arxiv",
     "title": "\\textit{Stochastic} MeanFlow Policies: One-Step Generative Control with Entropic Mirror Descent",
     "url": "http://arxiv.org/abs/2605.21282v1",
-    "summary": "Online off-policy reinforcement learning (RL) is shaped by two coupled choices: the policy class and the update rule. Gaussian policies are fast and have tractable entropy, but struggle with multimodal action distributions. Generative policies are more expressive, but often require iterative sampling or lack tractable entropy estimates.",
+    "summary": "Stochastic MeanFlow Policies replace the usual Gaussian actor in online off-policy RL with a one-step generative policy that maps Gaussian noise through a MeanFlow transformation, aiming to capture multimodal action distributions without iterative sampling. The method folds this policy class into entropy-regularized mirror descent, using a tractable entropy surrogate so exploration and update stability can be optimized together. On seven MuJoCo benchmarks, it outperforms both Gaussian and generative-policy baselines while keeping single-step action inference.",
     "published": "2026-05-20T15:14:14+00:00",
     "updated": "2026-05-20T15:14:14+00:00",
     "authors": [
@@ -8668,7 +8668,7 @@
       "comment": null,
       "first_seen": "2026-05-21",
       "full_text": "Online off-policy reinforcement learning (RL) is shaped by two coupled choices: the policy class and the update rule. Gaussian policies are fast and have tractable entropy, but struggle with multimodal action distributions. Generative policies are more expressive, but often require iterative sampling or lack tractable entropy estimates. On the optimisation side, SAC-style soft policy improvement and mirror descent (MD) can be viewed as minimising different KL divergences: the former moves the policy towards a value-induced Boltzmann distribution, while the latter regularises each update against the previous policy. Combining entropy regularisation with an MD constraint is therefore attractive, as it supports exploration while stabilising policy improvement; however, the resulting target can be multimodal and is poorly matched by unimodal Gaussian policies. We propose Stochastic MeanFlow Policies (SMFP), a one-step generative policy class that maps Gaussian noise to actions through a MeanFlow transformation. This stochastic reparameterisation yields a tractable entropy surrogate and allows MeanFlow policies to be trained within off-policy mirror descent under a unified objective for exploratory yet stable improvement. Across seven MuJoCo benchmarks, SMFP improves over Gaussian and generative baselines while retaining single-step inference efficiency.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.21282.jpg"
     },
     "tags": [
@@ -8694,7 +8694,7 @@
     "source": "arxiv",
     "title": "Perception of Social Robots as Communication Partners in Healthcare for Older Adults",
     "url": "http://arxiv.org/abs/2605.21053v1",
-    "summary": "Addressing the global caregiver shortage through socially assistive robots necessitates a deep understanding of their psychological and physiological impacts on older adults during human-robot interaction (HRI).",
+    "summary": "A study of 35 adults aged 70+ compared healthcare-style interactions led by a social robot versus a human, using facial expressions, heart-rate variability, and questionnaires to assess stress and engagement. Older adults showed no significant difference in overall stress between the two conditions, accepted the robot as a valid interaction partner, and had slightly lower heart rates during robot-led sessions, suggesting structured tasks like health-sensing surveys could be offloaded without adding psychological strain.",
     "published": "2026-05-20T11:38:45+00:00",
     "updated": "2026-05-20T11:38:45+00:00",
     "authors": [
@@ -8716,7 +8716,7 @@
       "comment": "31 pages, 10 figures, Under review at International Journal of Social Robotics",
       "first_seen": "2026-05-21",
       "full_text": "Addressing the global caregiver shortage through socially assistive robots necessitates a deep understanding of their psychological and physiological impacts on older adults during human-robot interaction (HRI). This study addresses whether social robots can serve as effective interaction partners compared to humans, and if \"positive prompts\" can similarly enhance these interactions. We conducted a comparative study with 35 participants (aged 70+). Our multi-modal analysis, integrating facial expression data, heart rate variability, and subjective questionnaires, revealed no significant differences in overall stress levels between human and robot interactions. Facial expression analysis confirmed that the robot was accepted as a valid interaction partner, while physiological data showed slightly lower heart rates during robot interactions, suggesting a more relaxed state compared to human-led sessions. These findings indicate that social robots can engage older adults without inducing psychological strain and are capable of alleviating caregiver burden by performing structured tasks, such as health-sensing surveys. Future work should address the identified \"appearance-content mismatch\" in robot design to facilitate even more natural and effective interactions.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.21053.jpg"
     },
     "tags": [
@@ -8775,7 +8775,7 @@
     "source": "arxiv",
     "title": "VSCD: Video-based Scene Change Detection in Unaligned Scenes",
     "url": "http://arxiv.org/abs/2605.20821v1",
-    "summary": "Detecting what has changed in an environment is essential for long-term autonomy, yet most change detection settings assume fixed viewpoints, mild misalignment, or only a few changed objects.",
+    "summary": "VSCD tackles pixel-level change detection between two unsynchronized RGB videos of the same indoor space captured at different times with unconstrained camera motion, where many objects may appear or disappear. It introduces a 1.1M-frame annotated benchmark plus a real-world test set, and uses a query-centric multi-reference model that aligns reference features to each query frame through local patch correspondence before confidence-weighted fusion and mask decoding. The method outperforms strong image and video baselines and is demonstrated on a mobile robot for visual surveillance and incremental object learning.",
     "published": "2026-05-20T07:17:54+00:00",
     "updated": "2026-05-20T07:17:54+00:00",
     "authors": [
@@ -8792,7 +8792,7 @@
       "comment": "18 pages, 7 figures. Accepted to the 43rd International Conference on Machine Learning (ICML 2026)",
       "first_seen": "2026-05-21",
       "full_text": "Detecting what has changed in an environment is essential for long-term autonomy, yet most change detection settings assume fixed viewpoints, mild misalignment, or only a few changed objects. We introduce Video-based Scene Change Detection (VSCD), which predicts a pixel-wise change mask for each query frame, given a reference and a query RGB video of the same indoor space recorded at different times under unconstrained camera motion. The two videos are not temporally synchronized, and many object instances may appear or disappear. To study this setting, we build a large-scale benchmark with over 1.1 million frames annotated with pixel-accurate change masks, together with a real-world test set for evaluating transfer beyond simulation. We propose a query-centric multi-reference model that learns temporal matching implicitly from change-mask supervision, aligns candidate reference features to the query via local patch correspondence, and fuses per-candidate change features using frame-level and patch-level confidence before decoding a high-resolution mask once per frame. Our approach achieves state-of-the-art performance against strong image- and video-based baselines, and we validate its real-world impact by deploying it on a mobile robot for two downstream applications -- visual surveillance and object incremental learning.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.20821.jpg"
     },
     "tags": [
@@ -8851,7 +8851,7 @@
     "source": "arxiv",
     "title": "Minimalist Visual Inertial Odometry",
     "url": "http://arxiv.org/abs/2605.19990v1",
-    "summary": "Visual-Inertial Odometry(VIO), which is critical to mobile robot navigation, uses cameras with a large number of pixels. Capturing and processing camera images requires significant resources.",
+    "summary": "Minimalist Visual Inertial Odometry replaces conventional camera-heavy VIO with four downward-facing photodiodes viewed through optical Gabor masks plus an IMU, using the masked light signals to infer planar speed. The mask parameters and a Temporal Convolutional Network are jointly optimized in a physically grounded simulator, then the decoded linear speed is combined with IMU angular speed to recover a continuous trajectory. A prototype on a differential-drive robot tracks ground-truth motion across indoor and outdoor terrains without real-world fine-tuning, suggesting accurate odometry is possible with dramatically reduced visual sensing.",
     "published": "2026-05-19T15:27:28+00:00",
     "updated": "2026-05-19T15:27:28+00:00",
     "authors": [
@@ -8871,7 +8871,7 @@
       "comment": "This work has been submitted to the IEEE for possible publication",
       "first_seen": "2026-05-20",
       "full_text": "Visual-Inertial Odometry(VIO), which is critical to mobile robot navigation, uses cameras with a large number of pixels. Capturing and processing camera images requires significant resources. This work presents a minimalist approach to planar odometry, demonstrating that just four visual measurements and an IMU can provide robust motion estimation for differential-drive robots. Our key insight is that four downward-facing photodiodes that sense the world through optical Gabor masks produce signals that encode speed. Based on this, we jointly optimize the mask parameters alongside a Temporal Convolutional Network (TCN) using a physically-grounded simulator. The resulting model decodes speed from just the four measurements produced by the photodiodes. Pairing these estimates with the angular speed from an IMU yields a continuous planar trajectory. We validate our approach with a prototype sensor mounted on a differential drive robot. Across diverse indoor and outdoor terrains, our system closely tracks the reference ground truth without any real-world fine-tuning. Our work shows that minimalist sensing enables efficient and accurate planar odometry.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19990.jpg"
     },
     "tags": [
@@ -8896,7 +8896,7 @@
     "source": "arxiv",
     "title": "World-Ego Modeling for Long-Horizon Evolution in Hybrid Embodied Tasks",
     "url": "http://arxiv.org/abs/2605.19957v1",
-    "summary": "World models are widely explored in embodied intelligence, yet they typically predict distinct evolutions of the world and the ego within a single stream, where the world captures persistent instruction-agnostic scene regularities and the ego captures robot-centric instruction-conditioned dynamics.",
+    "summary": "World-Ego Modeling separates long-horizon prediction into instruction-agnostic scene evolution and robot-centric, instruction-conditioned dynamics, aiming to avoid the degradation that comes from mixing these signals in hybrid navigation-manipulation tasks. Its WEM instantiation pairs a separate world-ego planner with a cascade-parallel MoE diffusion generator, and is evaluated on the new HTEWorld benchmark of 125K clips, 4.5M frames, and 300 multi-turn trajectories, where it outperforms prior methods while staying competitive on manipulation-only benchmarks.",
     "published": "2026-05-19T15:10:27+00:00",
     "updated": "2026-05-19T15:10:27+00:00",
     "authors": [
@@ -8918,7 +8918,7 @@
       "comment": null,
       "first_seen": "2026-05-20",
       "full_text": "World models are widely explored in embodied intelligence, yet they typically predict distinct evolutions of the world and the ego within a single stream, where the world captures persistent instruction-agnostic scene regularities and the ego captures robot-centric instruction-conditioned dynamics. This world-ego entanglement leads to a degradation in long-horizon embodied scenarios, particularly in hybrid tasks with interleaved navigation and manipulation behaviors. In this paper, we introduce \\emph{World-Ego Modeling}, a new conceptual paradigm that decomposes future evolution into world and ego components. We define the world-ego boundary from three perspectives, i.e., motion-, semantic-, and intention-based views, and analyze three disentanglement strategies with post-, pre-, and full disentanglement. Further, we instantiate this paradigm as the World-Ego Model (WEM), a unified embodied world model that couples an implicit separate world-ego planner with a cascade-parallel mixture-of-experts (CP-MoE) diffusion generator. To enable rigorous evaluation, we further construct HTEWorld, the first benchmark for long-horizon world modeling with hybrid navigation-manipulation tasks, providing 125K video clips (over 4.5M frames) with fine-grained action annotations and 300 multi-turn evaluation trajectories (over 2K instructions). Extensive experiments show that WEM achieves state-of-the-art performance on HTEWorld while remaining competitive on existing manipulation-only benchmarks.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19957.jpg"
     },
     "tags": [
@@ -8944,7 +8944,7 @@
     "source": "arxiv",
     "title": "DAG-Based QoS-Aware Dynamic Task Placement for Networked Multi-Stage Control Pipelines",
     "url": "http://arxiv.org/abs/2605.19887v1",
-    "summary": "Current Physical AI (PAI) relies heavily on closed-loop visual-servoing pipelines, whose perception and planning stages may become computationally intensive onboard due to complex models embedded on robots.",
+    "summary": "DAG-Based QoS-Aware Dynamic Task Placement models a robot sensing-perception-planning-control loop as a directed acyclic graph, with each stage carrying compute, communication, and placement constraints across local hardware and edge resources. It chooses among interpretable placements such as fully local, static offload, and hybrid execution using a windowed QoS cost that tracks tail latency, deadline misses, hardware utilization, and a switching penalty, while hysteresis and minimum dwell time keep the controller from thrashing under network jitter. The current version is a work-in-progress theoretical framework with qualitative analysis and a planned two-phase simulation plus hardware-in-the-loop validation.",
     "published": "2026-05-19T14:17:02+00:00",
     "updated": "2026-05-19T14:17:02+00:00",
     "authors": [
@@ -8967,7 +8967,7 @@
       "comment": "4 pages, 1 figure, 1 algorithm, accepted as a Work-in-Progress (WiP) paper, on the 24th IEEE International Conference on Industrial Informatics (INDIN), 26-29 July, 2026, Melbourne, Australia",
       "first_seen": "2026-05-20",
       "full_text": "Current Physical AI (PAI) relies heavily on closed-loop visual-servoing pipelines, whose perception and planning stages may become computationally intensive onboard due to complex models embedded on robots. In practice, offloading the perception task to on-site edges statically is inappropriate for latency-sensitive, precise industrial settings over a standardized industrial network. This emphasizes the importance of Control-Communication-Computing (3C) co-design in industrial automation: monolithic local execution saturates AI-accelerated machine and robot hardware, while static edge offloading exposes the control loop to network jitter. Existing adaptive task placement (ATP) controllers can partially address the gap by relocating a single pipeline stage on binary threshold rules, without a multi-stage model and an explicit cost on placement switching. In this Work-in-Progress (WiP) paper, we propose a directed acyclic graph (DAG) based quality-of-service (QoS)-aware dynamic task placement (DTP) framework for sensing-perception-planning-control pipelines in networked robotics. This pipeline is formalized as a DAG with task-level and node-level attributes for compute cost, communication delay, and feasible placement sets; over a small interpretable candidate set (fully local, static offload, hybrid), a window-based cost function combines tail end-to-end latency, deadline violation rate, hardware utilization, and a Hamming-distance switching penalty, and a DTP algorithm with hysteresis and a minimum dwell-time bounds placement chatter. Our WiP paper presents the theoretical framework, a structured qualitative analysis, and a two-phase simulation plus hardware-in-the-loop validation roadmap.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19887.jpg"
     },
     "tags": [
@@ -8992,7 +8992,7 @@
     "source": "arxiv",
     "title": "Learning-Accelerated Optimization-based Trajectory Planning for Cooperative Aerial-Ground Handover Missions",
     "url": "http://arxiv.org/abs/2605.19562v1",
-    "summary": "This paper presents a learning-augmented trajectory planning framework for cooperative unmanned aerial vehicle (UAV) and unmanned ground vehicle (UGV) handover missions. While centralized trajectory optimization ensures dynamic feasibility and task optimality, its high computational cost limits real-time applicability.",
+    "summary": "A neural surrogate planner with decoupled encoder-decoder LSTMs predicts coordinated UAV-UGV handover trajectories from task specifications, then uses those predictions as warm starts for a centralized trajectory optimizer. The model-based optimizer still enforces dynamic feasibility and task quality, but the learned initialization makes it much faster: benchmarks report over a 3x speedup and a 100% optimization success rate compared with cold-start optimization.",
     "published": "2026-05-19T09:07:59+00:00",
     "updated": "2026-05-19T09:07:59+00:00",
     "authors": [
@@ -9012,7 +9012,7 @@
       "comment": "Preprint of a contribution accepted for publication in the RoManSy 2026 Springer proceedings",
       "first_seen": "2026-05-20",
       "full_text": "This paper presents a learning-augmented trajectory planning framework for cooperative unmanned aerial vehicle (UAV) and unmanned ground vehicle (UGV) handover missions. While centralized trajectory optimization ensures dynamic feasibility and task optimality, its high computational cost limits real-time applicability. We propose a neural surrogate planner utilizing decoupled encoder-decoder long short-term memory (LSTM) networks to generate coordinated handover trajectory predictions from the task specifications. These predictions serve as informed warm starts for the downstream centralized optimizer, thereby accelerating convergence to dynamically feasible solutions. Benchmark evaluations demonstrate that the learning-augmented planning framework achieves more than a threefold speedup and 100% optimization success rate compared to cold start optimization. The results indicate that combining data-driven inference with model-based refinement enables fast and reliable trajectory generation for heterogeneous multi-robot systems.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19562.jpg"
     },
     "tags": [
