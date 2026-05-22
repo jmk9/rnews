@@ -8467,7 +8467,7 @@
     "source": "arxiv",
     "title": "Imperfect World Models are Exploitable",
     "url": "http://arxiv.org/abs/2605.15960v1",
-    "summary": "We propose a novel definition of model exploitation in reinforcement learning. Informally, a world model is exploitable if it implies that one policy should be strictly preferred over another while the environment's true transition model implies the reverse. We analogize our definition with a prior characterization of reward hacking but show that the associated proof of inevitability does not transfer to exploitation. To overcome this obstruction, we develop a general theory of reward hacking and model exploitation that proves that exploitation is essentially unavoidable on large policy sets and yields the corresponding claim for hacking as a special case. Unfortunately, we also find that the conditions that guarantee unhackability in finite policy sets have no counterpart that precludes exploitation. Consequently, we introduce a relaxed notion of exploitation and derive a safe horizon within which it can be avoided. Taken together, our results establish a formal bridge between reward hacking and model exploitation and elucidate the limits of safe planning in world models.",
+    "summary": "Imperfect world models can mis-rank policies in a way that makes planning actively exploitable: the model says one policy is better while the real environment would prefer another. The paper formalizes this failure mode as an analogue of reward hacking, proves that exploitation is essentially unavoidable over large policy sets, and shows a sharper negative result than in finite reward hacking: the usual conditions that can guarantee unhackability do not have an equivalent protection against model exploitation. It then weakens the notion of exploitation to derive a safe planning horizon, clarifying when world-model planning can be trusted before model error becomes strategically dangerous.",
     "published": "2026-05-15T13:54:08+00:00",
     "updated": "2026-05-15T13:54:08+00:00",
     "authors": [
@@ -8486,7 +8486,9 @@
       "pdf_url": "https://arxiv.org/pdf/2605.15960v1",
       "comment": "17 pages, 3 figures, 2 tables",
       "first_seen": "2026-05-18",
-      "thumbnail_path": "thumbnails/arxiv/2605.15960.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.15960.jpg",
+      "full_text": "We propose a novel definition of model exploitation in reinforcement learning. Informally, a world model is exploitable if it implies that one policy should be strictly preferred over another while the environment's true transition model implies the reverse. We analogize our definition with a prior characterization of reward hacking but show that the associated proof of inevitability does not transfer to exploitation. To overcome this obstruction, we develop a general theory of reward hacking and model exploitation that proves that exploitation is essentially unavoidable on large policy sets and yields the corresponding claim for hacking as a special case. Unfortunately, we also find that the conditions that guarantee unhackability in finite policy sets have no counterpart that precludes exploitation. Consequently, we introduce a relaxed notion of exploitation and derive a safe horizon within which it can be avoided. Taken together, our results establish a formal bridge between reward hacking and model exploitation and elucidate the limits of safe planning in world models.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -8511,7 +8513,7 @@
     "source": "arxiv",
     "title": "Diffusion Policy for Coordinated Control of a Nonholonomic Mobile Base and Dual Arms in Door Opening and Passing",
     "url": "http://arxiv.org/abs/2605.15352v1",
-    "summary": "Opening heavy, self closing doors, especially those that require pulling remains a long standing challenge in robotics. Humans naturally employ both arms in a dexterous manner, rotating the handle, widening the gap, holding the door, switching arms when needed, and moving through while maintaining clearance.",
+    "summary": "Diffusion Policy is used to coordinate a nonholonomic mobile base with two robot arms for the full sequence of opening and passing through a heavy, self-closing pull door. The setup targets the kind of bimanual, whole-body behavior humans use naturally: turning the handle, widening and holding the gap, switching arms when needed, and moving the base through while maintaining clearance.",
     "published": "2026-05-14T19:23:46+00:00",
     "updated": "2026-05-14T19:23:46+00:00",
     "authors": [
@@ -8530,7 +8532,9 @@
       "primary_category": "cs.RO",
       "pdf_url": "https://arxiv.org/pdf/2605.15352v1",
       "comment": null,
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "Opening heavy, self closing doors, especially those that require pulling remains a long standing challenge in robotics. Humans naturally employ both arms in a dexterous manner, rotating the handle, widening the gap, holding the door, switching arms when needed, and moving through while maintaining clearance.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#IL",
@@ -8556,7 +8560,7 @@
     "source": "arxiv",
     "title": "EARL: Towards a Unified Analysis-Guided Reinforcement Learning Framework for Egocentric Interaction Reasoning and Pixel Grounding",
     "url": "http://arxiv.org/abs/2605.14742v1",
-    "summary": "Understanding human--environment interactions from egocentric vision is essential for assistive robotics and embodied intelligent agents, yet existing multimodal large language models (MLLMs) still struggle with accurate interaction reasoning and fine-grained pixel grounding.",
+    "summary": "EARL targets egocentric interaction understanding for assistive robots and embodied agents, combining analysis-guided reinforcement learning with multimodal language models to improve both high-level reasoning about human-environment interactions and fine-grained pixel grounding. The provided text frames it as a unified framework for cases where current MLLMs can talk about first-person scenes but still fail to localize and reason accurately enough for reliable embodied interaction.",
     "published": "2026-05-14T12:10:27+00:00",
     "updated": "2026-05-14T12:10:27+00:00",
     "authors": [
@@ -8575,7 +8579,9 @@
       "primary_category": "cs.CV",
       "pdf_url": "https://arxiv.org/pdf/2605.14742v1",
       "comment": "Accepted at ICML 2026. Project page: https://github.com/yuggiehk/EARL",
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "Understanding human--environment interactions from egocentric vision is essential for assistive robotics and embodied intelligent agents, yet existing multimodal large language models (MLLMs) still struggle with accurate interaction reasoning and fine-grained pixel grounding.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -8653,7 +8659,7 @@
     "source": "arxiv",
     "title": "Towards Robotic Dexterous Hand Intelligence: A Survey",
     "url": "http://arxiv.org/abs/2605.13925v2",
-    "summary": "Robotic dexterous hands are central to contact-rich manipulation, with rapid progress driven by advances in hardware, sensing, control, simulation, and data generation.",
+    "summary": "A survey of robotic dexterous hand intelligence maps progress across hand hardware, tactile and visual sensing, control methods, simulation, and data generation for contact-rich manipulation. It frames dexterous hands as an integrated AI-robotics problem rather than just an end-effector design problem, emphasizing how advances in embodiment, perception, policy learning, and synthetic or collected manipulation data are beginning to make high-DOF hands more capable in real-world tasks.",
     "published": "2026-05-13T15:23:17+00:00",
     "updated": "2026-05-15T03:40:55+00:00",
     "authors": [
@@ -8671,7 +8677,9 @@
       "primary_category": "cs.RO",
       "pdf_url": "https://arxiv.org/pdf/2605.13925v2",
       "comment": null,
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "Robotic dexterous hands are central to contact-rich manipulation, with rapid progress driven by advances in hardware, sensing, control, simulation, and data generation.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Manipulator"
@@ -8695,7 +8703,7 @@
     "source": "arxiv",
     "title": "parallelcbf: A composable safety-filter and auditability framework for tensor-parallel reinforcement learning",
     "url": "http://arxiv.org/abs/2605.15509v1",
-    "summary": "While Isaac Lab provides massive parallel UAV simulation, OmniSafe and safe-control-gym provide constrained-RL benchmarks, and CBFKit provides control-barrier-function synthesis tooling, no existing framework unifies these capabilities for end-to-end safety-constrained training.",
+    "summary": "parallelcbf aims to connect massive tensor-parallel UAV simulation in Isaac Lab with safety-constrained reinforcement learning and control-barrier-function tooling, so policies can be trained with safety filters built into the loop rather than evaluated afterward. The interesting part is its composable framing: it treats CBF-based safety filtering and auditability as first-class pieces of the RL pipeline, addressing a gap between fast parallel training environments, constrained-RL benchmarks, and CBF synthesis libraries.",
     "published": "2026-05-15T01:06:16+00:00",
     "updated": "2026-05-15T01:06:16+00:00",
     "authors": [
@@ -8711,7 +8719,9 @@
       "primary_category": "cs.LG",
       "pdf_url": "https://arxiv.org/pdf/2605.15509v1",
       "comment": null,
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "While Isaac Lab provides massive parallel UAV simulation, OmniSafe and safe-control-gym provide constrained-RL benchmarks, and CBFKit provides control-barrier-function synthesis tooling, no existing framework unifies these capabilities for end-to-end safety-constrained training.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -8736,7 +8746,7 @@
     "source": "arxiv",
     "title": "Energy-Efficient Quadruped Locomotion with Compliant Feet",
     "url": "http://arxiv.org/abs/2605.14411v1",
-    "summary": "Quadruped robots are often designed with rigid feet to simplify control and maintain stable contact during locomotion. While this approach is straightforward, it limits the ability of the legs to absorb impact forces and reuse stored elastic energy, leading to higher energy expenditure during locomotion.",
+    "summary": "Quadruped robots typically use rigid feet for simpler control and stable contact, but this paper explores compliant feet as a way to absorb impacts and recycle elastic energy during locomotion. The interesting mechanism is shifting some of the work normally handled by active control and motors into passive foot compliance, with the goal of reducing energy use while preserving effective gait stability.",
     "published": "2026-05-14T05:54:13+00:00",
     "updated": "2026-05-14T05:54:13+00:00",
     "authors": [
@@ -8752,7 +8762,9 @@
       "primary_category": "cs.RO",
       "pdf_url": "https://arxiv.org/pdf/2605.14411v1",
       "comment": "29 pages, 7 figures, supplemental videos link is mentioned in the paper",
-      "first_seen": "2026-05-18"
+      "first_seen": "2026-05-18",
+      "full_text": "Quadruped robots are often designed with rigid feet to simplify control and maintain stable contact during locomotion. While this approach is straightforward, it limits the ability of the legs to absorb impact forces and reuse stored elastic energy, leading to higher energy expenditure during locomotion.",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"

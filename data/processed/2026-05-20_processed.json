@@ -4952,7 +4952,7 @@
     "source": "arxiv",
     "title": "DocQT: Improving Document Forgery Localization Robustness via Diverse JPEG Quantization Tables",
     "url": "http://arxiv.org/abs/2605.19688v1",
-    "summary": "Document manipulation localization models achieve strong performance on public benchmarks yet fail to generalize to operational document workflows.",
+    "summary": "DocQT shows that document forgery localizers can fail in real insurance-document pipelines because training usually sees only libjpeg-style quality-factor compression, while operational JPEGs use much more varied quantization tables. Using a MAIF-derived bank of real quantization tables for augmentation improves localization on DocTamper and lowers pixel-level false positives on authentic operational documents, but the benefit appears only for models such as FFDN that explicitly take the quantization table as input.",
     "published": "2026-05-19T11:20:03+00:00",
     "updated": "2026-05-19T11:20:03+00:00",
     "authors": [
@@ -4970,7 +4970,7 @@
       "comment": null,
       "first_seen": "2026-05-20",
       "full_text": "Document manipulation localization models achieve strong performance on public benchmarks yet fail to generalize to operational document workflows. We identify a critical and overlooked source of this gap: the mismatch between the narrow distribution of JPEG quantization tables used during training -restricted to standard libjpeg quality factors -and the heterogeneous compression profiles encountered in real-world insurance document pipelines. To isolate this factor, we conduct a controlled factorial study comparing two architectures with contrasting levels of quantization table awareness -FFDN [2] and Mesorch [20] -each trained under either standard quality factor augmentation (Standard-QT ) or operationally calibrated quantization tables sampled from DocQT, a quantization-table bank derived from a MAIF operational image corpus (Real-QT ), and evaluated under three recompression conditions. Training under Real-QT yields substantial localization gains on DocTamper [15] and significantly reduces the pixel-level false positive rate on authentic operational documents, but only for architectures that explicitly ingest the quantization table as input. The released DocQT quantization-table dataset and compression-reproduction material are directly available at https://github.com/Kyliroco/Improving-Document-Forgery-Localization-Robustness-via-Diverse-JPEG-Quantization-Tables. These results demonstrate that standard quality factor augmentation does not adequately proxy operational compression diversity, and that architectural choices explicitly conditioning on the quantization table provide a meaningful robustness advantage for real-world deployment.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19688.jpg"
     },
     "tags": [
@@ -4995,7 +4995,7 @@
     "source": "arxiv",
     "title": "JAXenstein: Accelerated Benchmarking for First-Person Environments",
     "url": "http://arxiv.org/abs/2605.19926v1",
-    "summary": "The progression of reinforcement learning algorithms have been driven by challenging benchmarks. The rate in which a researcher can iterate on a problem setting directly impacts the speed of algorithm development. Modern machine learning has produced tools that allow for fast and scalable algorithm development like the JAX library.",
+    "summary": "JAXenstein is a JAX-based benchmark that recreates the Wolfenstein 3D rendering engine for fast reinforcement learning experiments in visual first-person environments. It fills a gap in the JAX RL ecosystem by providing partially observable, exploration-heavy first-person tasks, and runs several times faster than comparable vision benchmarks while remaining extensible to more complex domains.",
     "published": "2026-05-19T14:47:55+00:00",
     "updated": "2026-05-19T14:47:55+00:00",
     "authors": [
@@ -5011,7 +5011,7 @@
       "comment": "Main paper: 5 pages, supplementary material: 3 pages",
       "first_seen": "2026-05-20",
       "full_text": "The progression of reinforcement learning algorithms have been driven by challenging benchmarks. The rate in which a researcher can iterate on a problem setting directly impacts the speed of algorithm development. Modern machine learning has produced tools that allow for fast and scalable algorithm development like the JAX library. With the availability of these tools, a serious bottleneck in algorithm development is the availability of large and complex domains for experimentation. Most notably, the JAX reinforcement learning ecosystem does not have any benchmarks that test visual first-person tasks; these domains are crucial for testing both exploration and an agent's ability to overcome partial observability. We introduce JAXenstein: an open-source JAX-based benchmark that implements the Wolfenstein 3D rendering engine for fast and scalable experimentation in visual first-person tasks. JAXenstein is several times faster than comparable vision-based benchmarks, and is easily extensible to more complex first-person domains.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19926.jpg"
     },
     "tags": [
@@ -5037,7 +5037,7 @@
     "source": "arxiv",
     "title": "SceneCode: Executable World Programs for Editable Indoor Scenes with Articulated Objects",
     "url": "http://arxiv.org/abs/2605.19587v1",
-    "summary": "Indoor scene synthesis underpins embodied AI, robotic manipulation, and simulation-based policy evaluation, where a useful scene must specify not only what the environment looks like, but also how its objects are structured.",
+    "summary": "SceneCode turns language prompts for indoor environments into executable world programs rather than static mesh collections, using a room-level planner-designer-critic loop to produce object requests and then synthesize part-wise Blender Python programs for articulated assets. Those programs are repaired through execution feedback, compiled into simulation-ready geometry, and exported as SDF with articulation metadata, while a persistent registry keeps the scene traceable and locally editable. In evaluations, the generated scenes better follow prompts and yield cleaner, simulator-loadable articulated objects for downstream robot interaction.",
     "published": "2026-05-19T09:31:04+00:00",
     "updated": "2026-05-19T09:31:04+00:00",
     "authors": [
@@ -5058,7 +5058,7 @@
       "comment": null,
       "first_seen": "2026-05-20",
       "full_text": "Indoor scene synthesis underpins embodied AI, robotic manipulation, and simulation-based policy evaluation, where a useful scene must specify not only what the environment looks like, but also how its objects are structured. Existing pipelines, however, typically represent generated content as static meshes and inherit articulation only from curated asset libraries, which limits object-level controllability and prevents new interactable assets from being produced on demand. We address this gap by formulating physically interactable indoor scene synthesis as programmatic world generation, and present SceneCode, a framework that compiles a natural language prompt into an executable, code-driven indoor world rather than a collection of opaque meshes. A room-level agentic backbone first turns the prompt into a structured house layout and emits per-object AssetRequests through a planner--designer--critic loop. Each request is then routed to one of five code-generation strategies and converted into a synthesized part-wise Blender Python programs that are validated through an execution-guided repair-and-refine loop. The resulting programs are compiled into simulation-ready assets, and exported as SDF for physics simulation. A persistent scene-state registry links object requests, executable programs, rendered geometry, and simulation assets, turning scene assembly into a traceable and locally editable world-building process. We evaluate SceneCode across scene-level synthesis, object-level asset quality, human judgment, and downstream robot interaction. Results show that executable world programs improve prompt-faithful indoor scene generation and produce assets with cleaner mesh structure, and simulator-loadable articulation metadata. Project page: https://scene-code.github.io/.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19587.jpg"
     },
     "tags": [
@@ -5083,7 +5083,7 @@
     "source": "arxiv",
     "title": "KappaPlace: Learning Hyperspherical Uncertainty for Visual Place Recognition via Prototype-Anchored Supervision",
     "url": "http://arxiv.org/abs/2605.19435v1",
-    "summary": "Visual Place Recognition (VPR) is critical for autonomous navigation, yet state-of-the-art methods lack well-calibrated uncertainty estimation. Standard pipelines cannot reliably signal when a query is ambiguous or a match is likely incorrect, posing risks in safety-critical robotics.",
+    "summary": "KappaPlace adds calibrated uncertainty to visual place recognition by treating image descriptors as von Mises-Fisher variables and learning a concentration parameter, kappa, as an aleatoric uncertainty signal. Its prototype-anchored supervision uses latent class representatives to train this probabilistic representation, and it extends uncertainty from query-level confidence to match-level reliability for specific query-reference pairs. Across five VPR benchmarks, it cuts ECE@K by up to 50% versus existing uncertainty methods while preserving or improving retrieval recall, with both joint-training and frozen-backbone variants.",
     "published": "2026-05-19T06:45:27+00:00",
     "updated": "2026-05-19T06:45:27+00:00",
     "authors": [
@@ -5100,7 +5100,8 @@
       "comment": null,
       "first_seen": "2026-05-20",
       "full_text": "Visual Place Recognition (VPR) is critical for autonomous navigation, yet state-of-the-art methods lack well-calibrated uncertainty estimation. Standard pipelines cannot reliably signal when a query is ambiguous or a match is likely incorrect, posing risks in safety-critical robotics. We propose KappaPlace, a principled framework for learning uncertainty-aware VPR representations. Our core contribution is a Prototype-Anchored supervision strategy that leverages latent class representatives as targets for a probabilistic objective. By modeling image descriptors as von Mises-Fisher (vMF) variables, we learn a lightweight module to predict the concentration parameter as a direct proxy for aleatoric uncertainty. While existing VPR uncertainty methods are typically restricted to a query-centric view, we derive a novel match-level formulation to quantify the reliability of specific query-reference pairs. Across five diverse benchmarks, KappaPlace reduces Expected Calibration Error (ECE@K) by up to 50% compared to existing methods while maintaining or improving retrieval recall. We provide both a joint-training variant and a post-training extension for frozen backbones. Our results demonstrate that KappaPlace provides a robust, stable, and well-calibrated signal that enables reliable decision-making within the VPR pipeline. Our code is available at: https://github.com/mayayank95/UncertaintyAwareVPR",
-      "thumbnail_path": "thumbnails/arxiv/2605.19435.jpg"
+      "thumbnail_path": "thumbnails/arxiv/2605.19435.jpg",
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -5203,7 +5204,7 @@
     "source": "arxiv",
     "title": "Not What You Asked For: Typographic Attacks in Household Robot Manipulation",
     "url": "http://arxiv.org/abs/2605.18593v1",
-    "summary": "Open-vocabulary embodied AI agents increasingly rely on vision-language models such as CLIP for object perception and task grounding. However, the shared embedding space that enables this flexibility introduces a structural vulnerability to typographic attacks, where printed text in a physical scene semantically overrides visual judgment.",
+    "summary": "Open-vocabulary household robot agents that use CLIP-like vision-language models for grounding can be manipulated by typographic attacks: text placed in the scene can override what the robot should pick or interact with. The work studies this failure mode in household manipulation, showing how printed or visible words can steer perception and action away from the user’s intended instruction.",
     "published": "2026-05-18T16:06:29+00:00",
     "updated": "2026-05-18T16:06:29+00:00",
     "authors": [
@@ -5220,8 +5221,8 @@
       "pdf_url": "https://arxiv.org/pdf/2605.18593v1",
       "comment": "10 pages, 1 figure, IEEE conference format",
       "first_seen": "2026-05-19",
-      "full_text": "Open-vocabulary embodied AI agents increasingly rely on vision-language models such as CLIP for object perception and task grounding. However, the shared embedding space that enables this flexibility introduces a structural vulnerability to typographic attacks, where printed text in a physical scene semantically overrides visual judgment. While prior work has quantified this threat in static 2D benchmarks and 3D navigation tasks, its impact on the full Sense-Plan-Act pipeline of household robot manipulation remains unexplored.   This work evaluates typographic attacks in a Habitat-based simulation using the HomeRobot benchmark. We introduce a decoupled perception architecture that exposes a frozen CLIP encoder to adversarial stickers while maintaining geometric grounding via DETIC. In a controlled evaluation pool of 59 attributable episodes, the attack achieves an overall Attack Success Rate (ASR) of 67.8%, rising to 70.0% among fully successful episodes, under uncontrolled viewing angles and occlusion with no perceptual optimization.   Critically, we find that perceptual errors propagate through the persistent 3D semantic map to produce kinetic failures, defined here as physically executed grasping and transport of the wrong object driven by an adversarially poisoned semantic state. In these cases, the robot physically grasps and delivers the wrong object to a target receptacle. These results establish typographic misclassification as a real, measurable, and physically consequential threat to the safety of modular manipulation pipelines that prior typographic attack research has left unexamined.",
-      "summary_kind": "truncation",
+      "full_text": "Open-vocabulary embodied AI agents increasingly rely on vision-language models such as CLIP for object perception and task grounding.",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.18593.jpg"
     },
     "tags": [
@@ -5246,7 +5247,7 @@
     "source": "arxiv",
     "title": "A Dexterous and Compliant Gripper With Soft Hydraulic Actuation for Microgravity Manipulation",
     "url": "http://arxiv.org/abs/2605.17851v1",
-    "summary": "Astrobee's existing one-degree-of-freedom (DOF) underactuated compliant claw gripper enables perching on the International Space Station (ISS), but provides limited capability for continuous dexterous manipulation.",
+    "summary": "Astrobee’s simple compliant claw can perch on the ISS, but it cannot continuously manipulate objects with much dexterity. This work replaces that limitation with a dexterous, compliant gripper driven by soft hydraulic actuation, aiming to give free-flying robots a gentler and more capable way to grasp and manipulate objects in microgravity.",
     "published": "2026-05-18T04:46:46+00:00",
     "updated": "2026-05-18T04:46:46+00:00",
     "authors": [
@@ -5263,8 +5264,8 @@
       "pdf_url": "https://arxiv.org/pdf/2605.17851v1",
       "comment": "Accepted to the IEEE ICRA 2026 Space Robotics Workshop (SRW). 4 pages, 3 figures",
       "first_seen": "2026-05-19",
-      "full_text": "Astrobee's existing one-degree-of-freedom (DOF) underactuated compliant claw gripper enables perching on the International Space Station (ISS), but provides limited capability for continuous dexterous manipulation. More complex microgravity tasks require an end-effector that can maintain stable contact while limiting disturbance to the free-flying base, since contact forces directly couple into base motion. This article presents the integration of DexCoHand, a dexterous and compliant two-finger, 6-DOF gripper, with the Astrobee free-flying robot for microgravity manipulation. The system is evaluated in MuJoCo using Astrobee's standard handrail perching sequence, including approach, perching, and subsequent pan and tilt motions. Compared with Astrobee's existing gripper, DexCoHand preserves the commanded pan and tilt motions while reducing unintended cross-axis base motion. Hardware experiments on Earth further demonstrate DexCoHand's dexterous manipulation capabilities and its potential for more adaptable intelligent manipulation tasks.",
-      "summary_kind": "truncation",
+      "full_text": "Astrobee's existing one-degree-of-freedom (DOF) underactuated compliant claw gripper enables perching on the International Space Station (ISS), but provides limited capability for continuous dexterous manipulation.",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.17851.jpg"
     },
     "tags": [
@@ -9323,7 +9324,7 @@
     "source": "arxiv",
     "title": "PRISM-SLAM: Probabilistic Ray-Grounded Inference for Scale-aware Metric SLAM",
     "url": "http://arxiv.org/abs/2605.19257v1",
-    "summary": "Monocular SLAM historically suffers from scale ambiguity and tracking failure in dynamic environments. While recent vision foundation models (VFMs) provide remarkable zero-shot depth priors, naively integrating these deterministic predictions ignores predictive uncertainty and frame-to-frame scale inconsistencies.",
+    "summary": "PRISM-SLAM turns monocular RGB SLAM into a metric, scale-aware system by feeding vision-foundation-model depth priors into a Bayesian factor graph rather than treating them as fixed depth estimates. Its Plucker Ray-Distance Factor anchors observations in a globally consistent metric frame, while temporal depth-consistency uncertainty and DSUG soft-gating reduce the impact of dynamic objects without semantic segmentation. On TUM RGB-D and 7-Scenes, it runs at 30 FPS from RGB alone and produces metric SE(3) trajectories whose ATE is nearly identical to oracle-aligned Sim(3), indicating little need for post-hoc scale correction.",
     "published": "2026-05-19T02:10:04+00:00",
     "updated": "2026-05-19T02:10:04+00:00",
     "authors": [
@@ -9338,7 +9339,7 @@
       "comment": null,
       "first_seen": "2026-05-20",
       "full_text": "Monocular SLAM historically suffers from scale ambiguity and tracking failure in dynamic environments. While recent vision foundation models (VFMs) provide remarkable zero-shot depth priors, naively integrating these deterministic predictions ignores predictive uncertainty and frame-to-frame scale inconsistencies. We propose PRISM-SLAM, a real-time framework that rigorously integrates VFM priors into a structured Bayesian factor graph to achieve scale-aware, metric-consistent localization and mapping. Specifically, we introduce a Plücker Ray-Distance Factor to anchor monocular observations in absolute space within a globally consistent metric coordinate system, mathematically resolving scale drift by making the metric scale Fisher-identifiable. To handle environmental dynamics, we derive an epistemic uncertainty proxy from temporal depth consistency and formulate a Dynamic Scene Uncertainty Gating (DSUG) mechanism. This soft-gating approach probabilistically down-weights dynamic distractors without incurring the heavy computational overhead associated with traditional semantic segmentation masks. By employing a multi-process architecture that asynchronously processes VFM inference and geometric tracking, PRISM-SLAM provides verified metric output at 30 FPS using solely RGB input, bridging the gap between foundation models and real-world robotic applications. Evaluated on the TUM RGB-D and 7-Scenes benchmarks, PRISM-SLAM achieves a metric $SE(3)$ Absolute Trajectory Error (ATE) nearly identical to its oracle-aligned $Sim(3)$ error. This demonstrates that our system can produce deployment-ready metric trajectories by delivering robust metric SLAM solutions without any post-hoc scale correction. Project page: https://prismslam-cmd.github.io/prismslam_pr/",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19257.jpg"
     },
     "tags": [
@@ -9364,7 +9365,7 @@
     "source": "arxiv",
     "title": "TravExplorer: Cross-Floor Embodied Exploration via Traversability-Aware 3-D Planning",
     "url": "http://arxiv.org/abs/2605.19958v1",
-    "summary": "Zero-shot Object Navigation (ZSON) has shown promise for open-vocabulary target search in unseen environments, yet most existing systems remain tied to planar representations and single-floor assumptions. These assumptions become inadequate in real buildings, where navigation involves floors, stairs, landings, and vertically overlapping spaces.",
+    "summary": "TravExplorer tackles zero-shot object navigation in multi-floor buildings by combining open-vocabulary semantic search with a 3-D traversability map that separates obstacles from reachable support surfaces like floors, stairs, and landings. It uses traversable frontiers, stair landmarks, active perception, and foothold-guided 3-D planning to move between floors while tracking likely object locations from online segmentation and fast image-text matching. Across 4,195 HM3D/MP3D simulation episodes and 50 Unitree Go2 real-world trials, it outperforms representative ObjectNav baselines and demonstrates map-free cross-floor target search without human intervention.",
     "published": "2026-05-19T15:11:29+00:00",
     "updated": "2026-05-19T15:11:29+00:00",
     "authors": [
@@ -9385,7 +9386,7 @@
       "comment": null,
       "first_seen": "2026-05-20",
       "full_text": "Zero-shot Object Navigation (ZSON) has shown promise for open-vocabulary target search in unseen environments, yet most existing systems remain tied to planar representations and single-floor assumptions. These assumptions become inadequate in real buildings, where navigation involves floors, stairs, landings, and vertically overlapping spaces. This article presents TravExplorer, a cross-floor embodied exploration framework that couples zero-shot semantic guidance with traversability-aware 3-D planning. TravExplorer maintains a unified volumetric map that distinguishes occupied structures from robot-reachable support surfaces and extracts traversable frontiers from connected support surfaces, including floors, stairs, and landings. A FOV-aware active perception strategy further resolves incomplete observations during cross-floor traversal. To reduce semantic-reasoning latency, a lightweight guidance module aligns a probabilistic instance map from online open-vocabulary segmentation with a spatial value map from fast image-to-text matching. Based on these geometric and semantic memories, a hierarchical planner performs target-aware frontier touring over object hypotheses, traversable frontiers, and stair landmarks, and generates executable cross-floor motions through foothold-guided 3-D search and vertically constrained local trajectory optimization. Experiments over 4,195 simulated episodes on HM3D and MP3D demonstrate consistent advantages over representative ObjectNav baselines. Fifty real-world trials on a Unitree Go2 further validate open-vocabulary target search across single-floor and cross-floor indoor environments without prior maps or human intervention. The code will be released at https://github.com/wuyi2121/TravExplorer.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19958.jpg"
     },
     "tags": [
@@ -9411,7 +9412,7 @@
     "source": "arxiv",
     "title": "FineBench: Benchmarking and Enhancing Vision-Language Models for Fine-grained Human Activity Understanding",
     "url": "http://arxiv.org/abs/2605.19846v1",
-    "summary": "Vision-Language Models (VLMs) have demonstrated remarkable capabilities in general video understanding, yet they often struggle with the fine-grained comprehension crucial for real-world applications requiring nuanced interpretation of human actions and interactions.",
+    "summary": "FineBench tests fine-grained human activity understanding in VLMs with 199,420 multiple-choice QA pairs over 64 long-form 15-minute videos, densely covering person movement, interactions, object manipulation, compositional actions, and frame-level spatial/temporal grounding. The evaluations show a clear gap between stronger proprietary models such as GPT-5 and current open VLMs, especially in multi-person spatial reasoning and subtle motion distinctions. FineAgent addresses these failures with a modular Localizer-and-Descriptor pipeline that consistently improves open-model performance on the benchmark.",
     "published": "2026-05-19T13:40:26+00:00",
     "updated": "2026-05-19T13:40:26+00:00",
     "authors": [
@@ -9432,7 +9433,7 @@
       "comment": "CVPR'26 (Workshop on Video Large Language Models)",
       "first_seen": "2026-05-20",
       "full_text": "Vision-Language Models (VLMs) have demonstrated remarkable capabilities in general video understanding, yet they often struggle with the fine-grained comprehension crucial for real-world applications requiring nuanced interpretation of human actions and interactions. While some recent human-centric benchmarks evaluate aspects of model behaviour such as fairness/ethics, emotion perception, and broader human-centric metrics, they do not combine long-form videos, very dense QA coverage, and frame-level spatial/temporal grounding at scale. To bridge this gap, we introduce FineBench, a human-centric video question answering (VQA) benchmark specifically designed to assess fine-grained understanding. FineBench comprises 199,420 multiple-choice QA pairs densely annotated across 64 long-form videos (15 minutes each), focusing on detailed person movement, person interaction, and object manipulation, including compositional actions. Our extensive evaluation reveals that while proprietary models like GPT-5 achieve respectable performance, current open-source VLMs significantly underperform, struggling particularly with spatial reasoning in multi-person scenes and distinguishing subtle differences in human movements and interactions. To address these identified weaknesses, we propose FineAgent, a modular framework that enhances VLMs by leveraging a Localizer and a Descriptor. Experiments show that FineAgent consistently improves the performance of various open VLMs on FineBench. FineBench provides a rigorous testbed for future research into fine-grained human-centric video understanding, while FineAgent offers a practical approach to enhance such reasoning in current VLMs.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19846.jpg"
     },
     "tags": [
@@ -9457,7 +9458,7 @@
     "source": "arxiv",
     "title": "DexHoldem: Playing Texas Hold'em with Dexterous Embodied System",
     "url": "http://arxiv.org/abs/2605.18727v1",
-    "summary": "Evaluating embodied systems on real dexterous hardware requires more than isolated primitive skills: an agent must perceive a changing tabletop scene, choose a context-appropriate action, execute it with a dexterous hand, and leave the scene usable for later decisions.",
+    "summary": "DexHoldem turns Texas Hold’em into a real-hardware benchmark for dexterous embodied agents, requiring a ShadowHand system to perceive a changing card-and-chip scene, choose game-relevant actions, execute 14 manipulation primitives, and preserve the tabletop state for later decisions. It includes 1,470 teleoperated demonstrations plus separate benchmarks for physical policy execution and agentic perception; π₀.₅ leads primitive completion at 61.2%, while Opus 4.7 and GPT 5.5 split the best perception results on strict problem accuracy and field-wise accuracy. Closed-loop case studies show how waiting, recovery, human-help dispatches, and repeated primitive calls expose compounding errors that isolated manipulation or vision tests would miss.",
     "published": "2026-05-18T17:51:34+00:00",
     "updated": "2026-05-18T17:51:34+00:00",
     "authors": [
@@ -9481,7 +9482,7 @@
       "comment": "30 Pages",
       "first_seen": "2026-05-19",
       "full_text": "Evaluating embodied systems on real dexterous hardware requires more than isolated primitive skills: an agent must perceive a changing tabletop scene, choose a context-appropriate action, execute it with a dexterous hand, and leave the scene usable for later decisions. We introduce DexHoldem, a real-world system-level benchmark built around Texas Hold'em dexterous manipulation with a ShadowHand. DexHoldem provides 1,470 teleoperated demonstrations across 14 Texas Hold'em manipulation primitives, a standardized physical policy benchmark, and an agentic perception benchmark that tests whether agents can recover the structured game state needed for embodied decision making. On primitive execution, $π_{0.5}$ obtains the highest task completion rate ($61.2\\%$), while $π_{0.5}$ and $π_0$ tie on scene-preserving success rate ($47.5\\%$). On agentic perception, Opus 4.7 obtains the best strict problem-level accuracy ($34.3\\%$), while GPT 5.5 obtains the best average field-wise accuracy ($66.8\\%$), exposing a gap between isolated visual sub-capabilities and complete routing-relevant state recovery. Finally, we instantiate the full embodied-agent loop in three case studies, where waiting, recovery dispatches, human-help requests, and repeated primitive execution reveal how perception and policy errors accumulate during closed-loop deployment. DexHoldem therefore evaluates dexterous tabletop execution, agentic perception, and embodied decision routing in a shared physical setting. Project page: https://dexholdem.github.io/Dexholdem/.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.18727.jpg"
     },
     "tags": [
@@ -9506,7 +9507,7 @@
     "source": "arxiv",
     "title": "GeoX: Mastering Geospatial Reasoning Through Self-Play and Verifiable Rewards",
     "url": "http://arxiv.org/abs/2605.20006v1",
-    "summary": "Geospatial reasoning requires solving image-grounded problems over the complex spatial structure of a scene. However, developing this capability is hindered by the cost of annotating a vast and combinatorial question space.",
+    "summary": "GeoX trains geospatial reasoning in vision-language models through self-play: a single multimodal policy generates executable spatial problems from satellite or aerial images, then solves them via abduction, deduction, or induction over spatial primitives and image-understanding tools. Because a verifier can run the generated programs and turn the result into a reward signal, the system learns without large human-curated question sets, improving base VLMs by up to 5.5 points on average and matching or beating baselines trained on millions of curated examples.",
     "published": "2026-05-19T15:37:01+00:00",
     "updated": "2026-05-19T15:37:01+00:00",
     "authors": [
@@ -9524,7 +9525,7 @@
       "comment": "26 pages,12 figures, 9 tables",
       "first_seen": "2026-05-20",
       "full_text": "Geospatial reasoning requires solving image-grounded problems over the complex spatial structure of a scene. However, developing this capability is hindered by the cost of annotating a vast and combinatorial question space. We propose GeoX, a self-play framework that acquires spatial logic through executable programs that yield verifiable rewards, without relying on large-scale human-curated data Given a satellite or aerial image, our framework employs a single multimodal policy that proposes spatial problems as executable programs and solves them under three reasoning modes-abduction, deduction, and induction-over spatial primitives and an image understanding tool. A verifier executes each program to covert a reward signal that jointly optimizes the two roles via reinforcement learning. GeoX consistently improves its base VLMs by up to 5.5 points on average, matching or exceeding conventional baselines trained on millions of curated data. Along-side the proposed method, we release a benchmark for geospatial understanding accumulated through self-play.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.20006.jpg"
     },
     "tags": [
@@ -9550,7 +9551,7 @@
     "source": "arxiv",
     "title": "Projecting Latent RL Actions: Towards Generalizable and Scalable Graph Combinatorial Optimization",
     "url": "http://arxiv.org/abs/2605.19721v1",
-    "summary": "Graph combinatorial optimization (GCO) has attracted growing interest, as many NP-hard problems naturally admit graph formulations, yet their combinatorial explosion renders exact methods computationally intractable.",
+    "summary": "Projection agents solve graph combinatorial optimization by having an RL policy predict a continuous GNN-based latent action in one forward pass, then decode it to a valid discrete action with simple nearest-neighbor lookup. This sidesteps the scaling problems of large discrete action spaces while keeping observations and actions in a shared embedding space for fair comparison across RL-GCO methods. On diverse benchmarks, the approach reports up to 16.2x faster inference and up to 40% better generalization than existing solutions, and the released LaGCO-RL library automates latent action-space construction for reproducible experiments.",
     "published": "2026-05-19T11:55:44+00:00",
     "updated": "2026-05-19T11:55:44+00:00",
     "authors": [
@@ -9571,7 +9572,7 @@
       "comment": "Preprint",
       "first_seen": "2026-05-20",
       "full_text": "Graph combinatorial optimization (GCO) has attracted growing interest, as many NP-hard problems naturally admit graph formulations, yet their combinatorial explosion renders exact methods computationally intractable. Recent advances in Reinforcement Learning (RL) combined with Graph Neural Networks (GNNs) have significantly improved learning-based GCO solvers. However, existing approaches face limitations in both generalization across diverse graph instances and computational scalability as action spaces grow. To address both challenges, we introduce projection agents, a novel RL-GCO approach that operates directly in a continuous GNN-based action embedding space, predicting a desired latent action in a single forward pass and subsequently decoding it into a valid discrete action. Additionally, we enable fair comparison across RL methods through a shared embedding space for both observations and actions. Across diverse benchmarks, our approach achieves up to 16.2x faster inference and up to 40% better generalization than existing solutions using only simple nearest-neighbor decoding, while opening the door to strong RL performance in super-linear decision spaces with multiple interdependent variables. Finally, we release LaGCO-RL, a Python library that automates latent action-space construction and supports existing RL-GCO solutions, promoting reproducibility and adaptation to new GCO benchmarks.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2605.19721.jpg"
     },
     "tags": [
