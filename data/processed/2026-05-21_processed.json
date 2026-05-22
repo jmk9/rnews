@@ -3948,7 +3948,7 @@
     "source": "arxiv",
     "title": "PointACT: Vision-Language-Action Models with Multi-Scale Point-Action Interaction",
     "url": "http://arxiv.org/abs/2605.21414v1",
-    "summary": "PointACT is a 3D-aware vision-language-action policy that feeds hierarchical point-cloud representations into action decoding, letting action tokens attend across local geometry and global scene structure through multi-scale point-action interaction and bottleneck window self-attention. On LIBERO and RLBench, it consistently outperforms monolithic and dual-system VLA baselines, including point-cloud-augmented variants, with a 10% success-rate gain on RLBench-10Tasks over pretrained VLA baselines. The ablations suggest the gains come from tightly coupling pretrained 2D semantic features with hierarchical 3D geometry, especially when the language-vision backbone is frozen and the action expert is trained from scratch.",
+    "summary": "PointACT is a 3D-aware vision-language-action policy for robot manipulation that feeds hierarchical point-cloud features directly into action decoding, so the action tokens can attend across both local geometric details and global scene structure. Its multi-scale point-action interaction with bottleneck window self-attention improves success rates on LIBERO and RLBench, including a 10% gain on RLBench-10Tasks over pretrained VLA baselines. The ablations suggest the gains come from tightly coupling pretrained 2D semantic representations with 3D geometry, especially when the language-vision backbone is frozen and the action expert is trained from scratch.",
     "published": "2026-05-20T17:10:31+00:00",
     "updated": "2026-05-20T17:10:31+00:00",
     "authors": [
@@ -3992,7 +3992,7 @@
     "source": "arxiv",
     "title": "DriveMA: Rethinking Language Interfaces in Driving VLAs with One-Step Meta-Actions",
     "url": "http://arxiv.org/abs/2605.21273v1",
-    "summary": "DriveMA replaces long natural-language reasoning chains in driving vision-language-action models with concise one-step meta-actions that can be derived automatically from expert trajectories and used to ground trajectory prediction. It combines supervised action-centric training with turn-level credit-assignment RL to optimize meta-action correctness, trajectory quality, and consistency between the two, reaching 8.060 RFS on the Waymo End-to-End Driving Challenge with a 2B model and 8.079 with a 4B model, plus competitive NAVSIM results.",
+    "summary": "DriveMA replaces long natural-language reasoning chains in driving VLAs with concise one-step meta-actions that can be derived automatically from expert trajectories, giving the model semantic decision grounding without costly annotation or high-latency generation. It trains with action-centric supervision plus turn-level reinforcement learning that jointly rewards meta-action correctness, trajectory quality, and consistency between the two. With only a 2B model it reaches an RFS of 8.060 on the Waymo End-to-End Driving Challenge, and the 4B version raises that to 8.079, with ablations showing a better efficiency–predictability tradeoff than verbose reasoning or finer action sequences.",
     "published": "2026-05-20T15:05:36+00:00",
     "updated": "2026-05-20T15:05:36+00:00",
     "authors": [

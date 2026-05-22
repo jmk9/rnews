@@ -9708,7 +9708,7 @@
     "source": "arxiv",
     "title": "A Prototyping Framework for Distributed Control of Multi-Robot Systems",
     "url": "http://arxiv.org/abs/2605.15049v1",
-    "summary": "A prototyping framework is introduced for testing distributed control strategies in multi-robot systems, with an emphasis on moving distributed optimization algorithms out of theory and into practical experiments. It appears aimed at letting researchers implement and evaluate coordination/control methods across multiple robots without rebuilding the full experimental stack each time.",
+    "summary": "A prototyping framework is described for testing distributed optimization algorithms on multi-robot systems, with the goal of making it easier to move from theoretical controller designs to practical experiments. The emphasis is on distributed control, where robots coordinate through local computation and communication rather than a centralized supervisor, giving researchers a testbed for evaluating how such algorithms behave in realistic deployments.",
     "published": "2026-05-14T16:44:14+00:00",
     "updated": "2026-05-14T16:44:14+00:00",
     "authors": [
@@ -9752,7 +9752,7 @@
     "source": "arxiv",
     "title": "IntentVLA: Short-Horizon Intent Modeling for Aliased Robot Manipulation",
     "url": "http://arxiv.org/abs/2605.14712v1",
-    "summary": "IntentVLA targets a common ambiguity in robot imitation learning: nearly identical visual-language states can require different next action chunks depending on a demonstrator’s short-term intent, task phase, or recent history. It models these short-horizon intents explicitly so the policy can disambiguate aliased manipulation situations rather than averaging over conflicting demonstrations.",
+    "summary": "IntentVLA addresses action aliasing in robot imitation learning, where nearly identical visual-language inputs can legitimately lead to different short-horizon action chunks depending on a demonstrator’s immediate intent or task phase. It models those latent short-horizon intents explicitly, aiming to make vision-language-action policies less likely to average over multimodal demonstrations and more able to choose the right manipulation behavior for the current context.",
     "published": "2026-05-14T11:31:02+00:00",
     "updated": "2026-05-14T11:31:02+00:00",
     "authors": [
@@ -9805,7 +9805,7 @@
     "source": "arxiv",
     "title": "Safety-Constrained Reinforcement Learning with Post-Training Reachability Verification for Robot Navigation",
     "url": "http://arxiv.org/abs/2605.14174v1",
-    "summary": "Safety-constrained RL is paired with post-training reachability verification to catch navigation policies whose average cost looks acceptable but still permits rare, high-risk failures under perception uncertainty. The approach targets cluttered mobile-robot environments by treating tail-risk behavior as something to verify after learning, rather than relying only on cumulative-cost safety signals during training.",
+    "summary": "Safety-constrained RL is paired with post-training reachability verification to catch navigation policies whose average cost looks acceptable but still admits dangerous tail-risk behavior under perception uncertainty. The approach targets cluttered mobile-robot environments, using formal reachability analysis after training to assess whether learned policies can violate safety constraints in high-consequence scenarios.",
     "published": "2026-05-13T22:53:47+00:00",
     "updated": "2026-05-13T22:53:47+00:00",
     "authors": [
@@ -9851,7 +9851,7 @@
     "source": "arxiv",
     "title": "FrameSkip: Learning from Fewer but More Informative Frames in VLA Training",
     "url": "http://arxiv.org/abs/2605.13757v1",
-    "summary": "FrameSkip targets the inefficiency in VLA training pipelines that treat every teleoperated video frame as equally useful supervision. It learns from fewer, more informative frames in dense robot demonstration trajectories, aiming to reduce redundant training signal while preserving the action-relevant moments that matter for policy learning.",
+    "summary": "FrameSkip targets a common inefficiency in VLA training: treating every frame in dense teleoperated robot demonstrations as equally useful supervision. It learns from fewer but more informative frames, aiming to reduce redundant training signal while preserving the parts of trajectories that best teach the vision-language-action policy.",
     "published": "2026-05-13T16:38:05+00:00",
     "updated": "2026-05-13T16:38:05+00:00",
     "authors": [
@@ -9901,7 +9901,7 @@
     "source": "arxiv",
     "title": "Guide, Think, Act: Interactive Embodied Reasoning in Vision-Language-Action Models",
     "url": "http://arxiv.org/abs/2605.13632v1",
-    "summary": "GTA-VLA is an interactive vision-language-action framework that lets a user steer a robot policy with explicit visual cues, giving the model spatial guidance before it reasons and acts. The interesting part is the coupling of guidance, deliberation, and action inside an embodied policy, so users can influence not just the language goal but where and how the robot attends in the scene.",
+    "summary": "GTA-VLA is an interactive vision-language-action framework for robot control that lets a user steer embodied reasoning with explicit visual cues rather than relying only on a language instruction or passive scene understanding. The idea is to make robot policies spatially guideable: the model can use user-provided cues to guide where it attends, reasons, and acts in the environment.",
     "published": "2026-05-13T14:58:29+00:00",
     "updated": "2026-05-13T14:58:29+00:00",
     "authors": [
@@ -9950,7 +9950,7 @@
     "source": "arxiv",
     "title": "ALAM: Algebraically Consistent Latent Action Model for Vision-Language-Action Models",
     "url": "http://arxiv.org/abs/2605.10819v2",
-    "summary": "ALAM targets the robot-data bottleneck in vision-language-action models by learning latent actions from ordinary action-free videos, treating them as evidence of how scenes change without requiring robot control labels. The interesting piece is its algebraic consistency constraint: latent actions are trained to compose and invert coherently, so they behave more like reusable action operators than arbitrary video features.",
+    "summary": "ALAM targets the action-label bottleneck in vision-language-action training by learning latent actions from action-free videos, using algebraic consistency constraints so those latents behave like coherent robot action transformations rather than arbitrary video features. The interesting part is that it tries to turn abundant passive video into structured supervision for VLA models, making world-change evidence useful even when no robot control commands were recorded.",
     "published": "2026-05-11T16:37:07+00:00",
     "updated": "2026-05-13T09:16:02+00:00",
     "authors": [
@@ -10005,7 +10005,7 @@
     "source": "arxiv",
     "title": "Building Explicit World Model for Zero-Shot Open-World Object Manipulation",
     "url": "http://arxiv.org/abs/2603.13825v1",
-    "summary": "Building Explicit World Model for Zero-Shot Open-World Object Manipulation targets robot manipulation in unfamiliar object settings by shifting some of the burden away from Vision-Language-Action policies trained on costly robot demonstrations. It frames the problem around constructing an explicit world model, aiming to improve zero-shot generalization when robots encounter objects or situations outside their training distribution.",
+    "summary": "Building Explicit World Model for Zero-Shot Open-World Object Manipulation targets robotic object manipulation in settings where the robot must handle unfamiliar objects without task-specific demonstrations. It argues for giving the system an explicit world model rather than relying only on vision-language-action policies trained from large robot demonstration corpora, aiming to improve generalization when collecting coverage for every object and action is impractical.",
     "published": "2026-03-14T08:13:32+00:00",
     "updated": "2026-03-14T08:13:32+00:00",
     "authors": [
@@ -10048,7 +10048,7 @@
     "source": "arxiv",
     "title": "Towards Long-horizon Embodied Agents with Tool-Aligned Vision-Language-Action Models",
     "url": "http://arxiv.org/abs/2605.13119v1",
-    "summary": "Tool-aligned vision-language-action models aim to make embodied agents more capable on long-horizon robot tasks by pairing VLA-style action execution with mechanisms better suited to extended planning and heterogeneous physical operations. The framing is interesting because it treats long-horizon embodiment as both a closed-loop reasoning problem and a tool-use/alignment problem, rather than expecting a single VLA policy to handle every step end to end.",
+    "summary": "Tool-Aligned Vision-Language-Action models aim to make embodied agents handle long-horizon robot tasks by pairing VLA execution with tools that relieve the model from doing all closed-loop planning and low-level physical operation on its own. The idea is interesting because it treats long-horizon embodiment less as a single monolithic policy problem and more as a coordination problem between vision-language-action control and specialized tool use.",
     "published": "2026-05-13T07:40:34+00:00",
     "updated": "2026-05-13T07:40:34+00:00",
     "authors": [
@@ -10097,7 +10097,7 @@
     "source": "arxiv",
     "title": "ST-VLA: Enabling 4D-Aware Spatiotemporal Understanding for General Robot Manipulation",
     "url": "http://arxiv.org/abs/2603.13788v1",
-    "summary": "ST-VLA targets general robot manipulation by making a vision-language-action model reason jointly about semantics, 3D geometry, and how actions unfold over time. The aim is 4D-aware spatiotemporal understanding for open-world manipulation, where the robot must connect what objects are, where they are in space, and how long-horizon interactions should evolve.",
+    "summary": "ST-VLA targets general robot manipulation by giving a vision-language-action model explicit 4D spatiotemporal awareness, so it can reason jointly about object semantics, scene geometry, and how actions unfold over longer horizons. From the provided text, the emphasis is on open-world manipulation settings where understanding both spatial structure and temporal dynamics is necessary for reliable action planning.",
     "published": "2026-03-14T06:36:48+00:00",
     "updated": "2026-03-14T06:36:48+00:00",
     "authors": [
@@ -10148,7 +10148,7 @@
     "source": "arxiv",
     "title": "Premover: Fast Vision-Language-Action Control by Acting Before Instructions Are Complete",
     "url": "http://arxiv.org/abs/2605.12160v1",
-    "summary": "Premover targets the idle time in vision-language-action robot control by letting the policy begin acting while a user’s spoken or typed instruction is still unfolding, rather than waiting for the full command. The idea is aimed at real deployments where instruction entry can take several seconds, so early partial-language interpretation could reduce interaction latency if the robot can move safely before the request is complete.",
+    "summary": "Premover tackles the idle time in vision-language-action robots by letting the policy begin acting while a user is still typing or speaking, rather than waiting for a complete instruction. The interesting angle is a control setup for partial, evolving language input, aimed at shaving several seconds from real interactions where request entry itself becomes a bottleneck.",
     "published": "2026-05-12T14:10:54+00:00",
     "updated": "2026-05-12T14:10:54+00:00",
     "authors": [
@@ -10191,7 +10191,7 @@
     "source": "arxiv",
     "title": "DreamAvoid: Critical-Phase Test-Time Dreaming to Avoid Failures in VLA Policies",
     "url": "http://arxiv.org/abs/2605.11750v1",
-    "summary": "DreamAvoid targets a common failure mode in vision-language-action policies: small mistakes during delicate manipulation phases that quickly make recovery impossible. It uses test-time “dreaming” around those critical phases to anticipate likely failure trajectories and adjust behavior before the policy commits to an error.",
+    "summary": "DreamAvoid targets the brittle moments in vision-language-action manipulation policies where a small low-level action error can cascade into failure. It uses test-time “dreaming” around these critical phases to anticipate and avoid bad trajectories, aiming to make fine-grained robot manipulation more robust without retraining the underlying VLA policy.",
     "published": "2026-05-12T08:27:16+00:00",
     "updated": "2026-05-12T08:27:16+00:00",
     "authors": [
@@ -10240,7 +10240,7 @@
     "source": "arxiv",
     "title": "RIO: Flexible Real-Time Robot I/O for Cross-Embodiment Robot Learning",
     "url": "http://arxiv.org/abs/2605.11564v1",
-    "summary": "RIO targets the I/O bottleneck in cross-embodiment robot learning: getting vision-language-action models to interact flexibly and in real time across different robot platforms. From the provided abstract snippet, the paper positions RIO as infrastructure for making generalist robot policies less tied to a single embodiment, addressing a gap left by existing multi-task datasets, training recipes, and platform demos.",
+    "summary": "RIO targets cross-embodiment robot learning by standardizing the real-time input/output layer needed to run robot policies across different hardware platforms. The framing suggests a practical systems contribution: making Vision-Language-Action models easier to deploy, compare, and reuse beyond the specific robot embodiment they were trained or demonstrated on.",
     "published": "2026-05-12T05:49:52+00:00",
     "updated": "2026-05-12T05:49:52+00:00",
     "authors": [
@@ -10295,7 +10295,7 @@
     "source": "arxiv",
     "title": "Data-Asymmetric Latent Imagination and Reranking for 3D Robotic Imitation Learning",
     "url": "http://arxiv.org/abs/2605.10166v1",
-    "summary": "Data-Asymmetric Latent Imagination and Reranking tackles 3D robotic imitation learning when demonstrations include messy exploration, suboptimal behavior, or failed attempts rather than clean expert trajectories. It learns from this uneven data by imagining candidate latent trajectories and reranking them, aiming to recover useful action plans from imperfect real-world collection instead of assuming every demo shows the right behavior.",
+    "summary": "Data-Asymmetric Latent Imagination and Reranking targets 3D robotic imitation learning when demonstrations include exploratory, suboptimal, or failed behavior rather than clean expert rollouts. From the provided text, the central setup is to make learning robust to imperfect real-world trajectory data, but the excerpt does not include the specific mechanism, benchmarks, or results needed to summarize its empirical findings.",
     "published": "2026-05-11T08:16:13+00:00",
     "updated": "2026-05-11T08:16:13+00:00",
     "authors": [

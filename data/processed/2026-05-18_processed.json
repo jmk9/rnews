@@ -7245,7 +7245,7 @@
     "source": "arxiv",
     "title": "A Prototyping Framework for Distributed Control of Multi-Robot Systems",
     "url": "http://arxiv.org/abs/2605.15049v1",
-    "summary": "A prototyping framework is introduced for testing distributed control strategies in multi-robot systems, with an emphasis on moving distributed optimization algorithms out of theory and into practical experiments. It appears aimed at letting researchers implement and evaluate coordination/control methods across multiple robots without rebuilding the full experimental stack each time.",
+    "summary": "A prototyping framework is described for testing distributed optimization algorithms on multi-robot systems, with the goal of making it easier to move from theoretical controller designs to practical experiments. The emphasis is on distributed control, where robots coordinate through local computation and communication rather than a centralized supervisor, giving researchers a testbed for evaluating how such algorithms behave in realistic deployments.",
     "published": "2026-05-14T16:44:14+00:00",
     "updated": "2026-05-14T16:44:14+00:00",
     "authors": [
@@ -7289,7 +7289,7 @@
     "source": "arxiv",
     "title": "IntentVLA: Short-Horizon Intent Modeling for Aliased Robot Manipulation",
     "url": "http://arxiv.org/abs/2605.14712v1",
-    "summary": "IntentVLA targets a common ambiguity in robot imitation learning: nearly identical visual-language states can require different next action chunks depending on a demonstrator’s short-term intent, task phase, or recent history. It models these short-horizon intents explicitly so the policy can disambiguate aliased manipulation situations rather than averaging over conflicting demonstrations.",
+    "summary": "IntentVLA addresses action aliasing in robot imitation learning, where nearly identical visual-language inputs can legitimately lead to different short-horizon action chunks depending on a demonstrator’s immediate intent or task phase. It models those latent short-horizon intents explicitly, aiming to make vision-language-action policies less likely to average over multimodal demonstrations and more able to choose the right manipulation behavior for the current context.",
     "published": "2026-05-14T11:31:02+00:00",
     "updated": "2026-05-14T11:31:02+00:00",
     "authors": [
@@ -7342,7 +7342,7 @@
     "source": "arxiv",
     "title": "Safety-Constrained Reinforcement Learning with Post-Training Reachability Verification for Robot Navigation",
     "url": "http://arxiv.org/abs/2605.14174v1",
-    "summary": "Safety-constrained RL is paired with post-training reachability verification to catch navigation policies whose average cost looks acceptable but still permits rare, high-risk failures under perception uncertainty. The approach targets cluttered mobile-robot environments by treating tail-risk behavior as something to verify after learning, rather than relying only on cumulative-cost safety signals during training.",
+    "summary": "Safety-constrained RL is paired with post-training reachability verification to catch navigation policies whose average cost looks acceptable but still admits dangerous tail-risk behavior under perception uncertainty. The approach targets cluttered mobile-robot environments, using formal reachability analysis after training to assess whether learned policies can violate safety constraints in high-consequence scenarios.",
     "published": "2026-05-13T22:53:47+00:00",
     "updated": "2026-05-13T22:53:47+00:00",
     "authors": [
@@ -7388,7 +7388,7 @@
     "source": "arxiv",
     "title": "FrameSkip: Learning from Fewer but More Informative Frames in VLA Training",
     "url": "http://arxiv.org/abs/2605.13757v1",
-    "summary": "FrameSkip targets the inefficiency in VLA training pipelines that treat every teleoperated video frame as equally useful supervision. It learns from fewer, more informative frames in dense robot demonstration trajectories, aiming to reduce redundant training signal while preserving the action-relevant moments that matter for policy learning.",
+    "summary": "FrameSkip targets a common inefficiency in VLA training: treating every frame in dense teleoperated robot demonstrations as equally useful supervision. It learns from fewer but more informative frames, aiming to reduce redundant training signal while preserving the parts of trajectories that best teach the vision-language-action policy.",
     "published": "2026-05-13T16:38:05+00:00",
     "updated": "2026-05-13T16:38:05+00:00",
     "authors": [
