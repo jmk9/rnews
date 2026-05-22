@@ -87,6 +87,8 @@ body {
   font-size: .92rem;
 }
 #search-box:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 2px rgba(45,92,246,0.15); }
+/* Hide the browser's native search clear button — we have our own #search-clear. */
+#search-box::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
 #search-clear {
   position: absolute; right: .4rem; top: 50%; transform: translateY(-50%);
   margin-top: -.18rem;
