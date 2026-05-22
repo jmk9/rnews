@@ -67,7 +67,7 @@ jobs:
         if: github.event_name != 'push'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/extract_thumbnails.py --max-items 400
+        run: python scripts/extract_thumbnails.py --max-items 400 --recent-days 14
 
       - name: Build site (after collection + thumbnails)
         if: github.event_name != 'push'

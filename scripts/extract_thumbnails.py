@@ -22,6 +22,7 @@ import argparse
 import html as html_lib
 import io
 import json
+from datetime import datetime, timezone, timedelta
 import logging
 import os
 import re
@@ -266,6 +267,10 @@ def main() -> int:
     p = argparse.ArgumentParser()
     p.add_argument("--max-items", type=int, default=200,
                    help="Process at most this many top-scoring items.")
+    p.add_argument("--recent-days", type=int, default=14,
+                   help="Also include EVERY item newer than this many days, "
+                        "regardless of score — fresh papers score low (no stars/"
+                        "code) and would otherwise never get a thumbnail.")
     p.add_argument("--sources", default="arxiv,github,news",
                    help="Comma-separated list of sources to process.")
     args = p.parse_args()
@@ -285,6 +290,16 @@ def main() -> int:
         for it in by_id.values():
             if it.get("source") == "news":
                 pool[it["id"]] = it
+    # Always include RECENT items of any source: the latest papers/repos rank
+    # low on score, so a pure top-by-score cut leaves the freshest content
+    # thumbnail-less. Extraction is idempotent, so each daily run only fetches
+    # the genuinely new ones.
+    if args.recent_days > 0:
+        cutoff = (datetime.now(timezone.utc) - timedelta(days=args.recent_days)).strftime("%Y-%m-%d")
+        for it in by_id.values():
+            d = (it.get("published") or it.get("updated") or "")[:10]
+            if d and d >= cutoff:
+                pool[it["id"]] = it
     def _empty_summary(it: dict) -> bool:
         return not (it.get("summary") or "").strip()
     # News is fetched if it needs a thumbnail OR has no summary text (title-only
@@ -293,8 +308,11 @@ def main() -> int:
                   if it.get("source") in sources
                   and (_needs_thumb(it)
                        or (it.get("source") == "news" and _empty_summary(it)))]
-    log.info("Processing %d candidates (max=%d + all news, sources=%s)",
-             len(candidates), args.max_items, sources)
+    # Newest first: if a run is cut short (arXiv rate-limit, timeout), the
+    # freshest items — the ones a reader is most likely to see — get done.
+    candidates.sort(key=lambda x: (x.get("published") or x.get("updated") or ""), reverse=True)
+    log.info("Processing %d candidates (max=%d, recent=%dd + all news, sources=%s)",
+             len(candidates), args.max_items, args.recent_days, sources)
 
     updates: dict[str, dict[str, str]] = {}  # id -> {extra_key: value}
     summary_fills: dict[str, str] = {}        # id -> backfilled summary text
