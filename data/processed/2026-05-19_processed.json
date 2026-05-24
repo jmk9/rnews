@@ -67636,7 +67636,7 @@
     "source": "github",
     "title": "iit-DLSLab/basic-locomotion-isaaclab",
     "url": "https://github.com/iit-DLSLab/basic-locomotion-isaaclab",
-    "summary": "Overview Reinforcement learning implementation of quadruped locomotion in IsaacLab. It includes support for different robots available at DLS, with scripts for both sim-to-sim and sim-to-real transfer.",
+    "summary": "DLSLab’s `basic-locomotion-isaaclab` adds IsaacLab-based locomotion environments and training utilities for multiple quadruped robots. It is aimed at getting basic quadruped policies through the full path from simulation training to sim-to-sim checks and eventual sim-to-real transfer, making it useful as a practical starting point for robot locomotion experiments rather than a standalone algorithmic contribution.",
     "published": "2025-06-20T08:24:35Z",
     "updated": "2026-05-17T15:10:45Z",
     "authors": [
@@ -67658,7 +67658,7 @@
       "license": "BSD-3-Clause",
       "first_seen": "2026-05-18",
       "thumbnail": "https://raw.githubusercontent.com/iit-DLSLab/basic-locomotion-isaaclab/HEAD/./gifs/train.gif",
-      "full_text": "Overview Reinforcement learning implementation of quadruped locomotion in IsaacLab. It includes support for different robots available at DLS, with scripts for both sim-to-sim and sim-to-real transfer. Features: - Concurrent State Estimator - Rapid Motor Adaptation - Morphological Symmetries - Adversarial Motion Priors (big thanks to Giuseppe L'erario and Giulio Romualdi) - Identification of robot parameters for sim2real using pace via our repo sim2real-robot-identification - Sim-to-Sim in Mujoco - Sim-to-Real using ROS2 Features work in progress - done but not tested: - Dagger for depth-to-heightmap policy distillation - Depth-to-Heightmap NN for avoiding the distillation step above Real-world deployment via: - muse for state estimation (if no concurrent state estimation is used) - unitree-ros2-dls for unitree robot communication A list of robots and environments available is described below: Robot Model Environment Name Pattern --------------------- ------------------------------------------------------------ Aliengo, Go2, B2, HyQReal2 Locomotion- RobotModel -Flat-Blind Locomotion- RobotModel -Rough-Blind Locomotion- RobotModel -Rough-Vision Installation and Runs If you want only to deploy a trained policy on your robot, continue on README DEPLOY otherwise on README TRAIN. For the train, check first the compatibility with IsaacLab and rsl-rl at the top of this readme. They indicate the releases that we tested. Citing this work If you find the work useful and you adopt Morphological Symmetries, please consider citing one of our works: Leveraging Symmetry in RL-based Legged Locomotion Control (IROS-2024) Morphological symmetries in robotics (IJRR-2025): How to contribute PRs are very welcome (search for TODO in the issue, or add what you like)! Maintainer This repository is maintained by Giulio Turrisi.",
+      "full_text": "An IsaacLab extension by DLS for basic locomotion tasks on multiple quadruped robots, with sim-to-sim and sim-to-real pipelines",
       "readme": "Overview Reinforcement learning implementation of quadruped locomotion in IsaacLab. It includes support for different robots available at DLS, with scripts for both sim-to-sim and sim-to-real transfer. Features: - Concurrent State Estimator - Rapid Motor Adaptation - Morphological Symmetries - Adversarial Motion Priors (big thanks to Giuseppe L'erario and Giulio Romualdi) - Identification of robot parameters for sim2real using pace via our repo sim2real-robot-identification - Sim-to-Sim in Mujoco - Sim-to-Real using ROS2 Features work in progress - done but not tested: - Dagger for depth-to-heightmap policy distillation - Depth-to-Heightmap NN for avoiding the distillation step above Real-world deployment via: - muse for state estimation (if no concurrent state estimation is used) - unitree-ros2-dls for unitree robot communication A list of robots and environments available is described below: Robot Model Environment Name Pattern --------------------- ------------------------------------------------------------ Aliengo, Go2, B2, HyQReal2 Locomotion- RobotModel -Flat-Blind Locomotion- RobotModel -Rough-Blind Locomotion- RobotModel -Rough-Vision Installation and Runs If you want only to deploy a trained policy on your robot, continue on README DEPLOY otherwise on README TRAIN. For the train, check first the compatibility with IsaacLab and rsl-rl at the top of this readme. They indicate the releases that we tested. Citing this work If you find the work useful and you adopt Morphological Symmetries, please consider citing one of our works: Leveraging Symmetry in RL-based Legged Locomotion Control (IROS-2024) Morphological symmetries in robotics (IJRR-2025): How to contribute PRs are very welcome (search for TODO in the issue, or add what you like)! Maintainer This repository is maintained by Giulio Turrisi.",
       "summary_kind": "llm"
     },
@@ -68857,7 +68857,7 @@
     "source": "github",
     "title": "FALCON-VLA/FALCON",
     "url": "https://github.com/FALCON-VLA/FALCON",
-    "summary": "FALCON is a GitHub repo for a vision-language-action model for robot manipulation. It injects 3D spatial tokens into the action head, claiming robust spatial understanding and SOTA results across diverse manipulation tasks. Accepted at ICLR 2026.",
+    "summary": "FALCON is a vision-language-action model for robotic manipulation that feeds rich 3D spatial tokens directly into the action head, giving the policy more explicit spatial structure when choosing actions. The repo presents the ICLR 2026 implementation and emphasizes robust spatial understanding with reported state-of-the-art performance across diverse manipulation tasks.",
     "published": "2026-03-11T08:25:36Z",
     "updated": "2026-05-18T08:42:38Z",
     "authors": [
@@ -68880,7 +68880,7 @@
       "first_seen": "2026-05-18",
       "thumbnail": "https://raw.githubusercontent.com/FALCON-VLA/FALCON/HEAD/imgs/falcon_logo.png",
       "summary_kind": "llm",
-      "full_text": "🦅 FALCON: an effective vision-language-action model injects rich 3D spatial tokens into the action head, enabling robust spatial understanding and SOTA performance across diverse manipulation tasks. || Accepted at ICLR 2026."
+      "full_text": "[ICLR 2026] 🦅 FALCON: an effective vision-language-action model injects rich 3D spatial tokens into the action head, enabling robust spatial understanding and SOTA performance across diverse manipulation tasks."
     },
     "tags": [
       "#VLA",
@@ -69967,7 +69967,7 @@
     "source": "github",
     "title": "ncbdrck/multiros",
     "url": "https://github.com/ncbdrck/multiros",
-    "summary": "MultiROS is a ROS-based simulation environment built to run concurrent deep reinforcement learning experiments for robotics. It is meant to make training and evaluation scalable across complex robotic tasks, giving researchers a reusable setup for comparing agents in simulated ROS workflows.",
+    "summary": "MultiROS is a ROS-based simulation environment aimed at running concurrent deep reinforcement learning workflows for robotics. It gives researchers a scalable setup for training and evaluating RL agents on complex robotic tasks, making it useful when experiments need parallelism and repeatable simulation rather than a single hand-built environment.",
     "published": "2022-03-18T19:55:00Z",
     "updated": "2026-05-14T19:59:11Z",
     "authors": [
@@ -70018,7 +70018,7 @@
     "source": "github",
     "title": "HyperbolicCurve/Awesome-World-Action-Model",
     "url": "https://github.com/HyperbolicCurve/Awesome-World-Action-Model",
-    "summary": "GitHub awesome-list curating academic papers and resources on Vision-Language-Action and World Action Models. Useful as a reading hub, but it claims no new model, benchmark, code release, or robot results.",
+    "summary": "HyperbolicCurve/Awesome-World-Action-Model is a curated reading list for researchers tracking Vision-Language-Action models and World Action Models, collecting papers and related resources in one place. It is useful as a survey hub rather than a runnable system: the value is in mapping the fast-moving VLA/WAM literature and giving researchers a starting point for following methods that connect perception, language, action, and predictive world modeling.",
     "published": "2026-04-01T07:02:10Z",
     "updated": "2026-05-19T03:47:50Z",
     "authors": [
