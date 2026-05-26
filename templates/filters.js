@@ -101,10 +101,17 @@
 
     for (const it of items) {
       const tags = (it.dataset.tags || "").split(/\s+/).filter(Boolean);
+      // Source chip is dual-purpose: a real source value ("news"/"arxiv"/"github")
+      // OR a tag pseudo-source like "#Survey". GitHub explicitly excludes the
+      // survey/list bucket so the two are clean partitions of github content.
+      let sourceOk = true;
+      if (state.source === "#Survey") sourceOk = tags.indexOf("#Survey") !== -1;
+      else if (state.source === "github") sourceOk = it.dataset.source === "github" && tags.indexOf("#Survey") === -1;
+      else if (state.source) sourceOk = it.dataset.source === state.source;
       const ok =
         (!state.method || tags.indexOf(state.method) !== -1) &&
         (!state.platform || tags.indexOf(state.platform) !== -1) &&
-        (!state.source || it.dataset.source === state.source) &&
+        sourceOk &&
         (!state.priority || it.dataset.priority === state.priority) &&
         it.__ageDays <= timeLimit &&
         (searchTerms.length === 0 || searchTerms.every((t) => it.__searchText.indexOf(t) !== -1));
@@ -157,27 +164,43 @@
     });
   }
 
-  // ---- Source-aware filters ----------------------------------------------
-  // News carries no GitHub stars and published==created, so the Stars/Pushed
-  // sorts are meaningless there. Hide them while the News source is active
-  // (and fall back to the default Score sort if one was selected).
+  // ---- Source-aware More filters -----------------------------------------
+  // News: hide Stars/Pushed sort chips (no data on news).
+  // Survey: hide the whole Priority and Time groups (not meaningful for awesome
+  //         lists; Sort by stays so users can reorder).
   const NEWS_HIDDEN_SORTS = ["stars", "pushed"];
-  function syncSortAvailability() {
-    const newsOnly = state.source === "news";
-    let reset = false;
+  function _resetFilter(name) {
+    if (!state[name]) return;
+    state[name] = "";
+    document.querySelectorAll('.chip[data-filter="' + name + '"]').forEach((c) => {
+      c.classList.toggle("active", (c.dataset.value || "") === "");
+    });
+  }
+  function syncSourceAdaptiveUI() {
+    const src = state.source;
+    // (a) Hide Stars/Pushed sort chips when news, restore otherwise.
+    let resetSort = false;
     document.querySelectorAll('.chip[data-filter="sort"]').forEach((b) => {
       const v = b.dataset.value || "";
-      const hide = newsOnly && NEWS_HIDDEN_SORTS.indexOf(v) !== -1;
+      const hide = src === "news" && NEWS_HIDDEN_SORTS.indexOf(v) !== -1;
       b.hidden = hide;
-      if (hide && state.sort === v) reset = true;
+      if (hide && state.sort === v) resetSort = true;
     });
-    if (reset) {
-      state.sort = "";
-      document.querySelectorAll('.chip[data-filter="sort"]').forEach((b) => {
-        b.classList.toggle("active", (b.dataset.value || "") === "");
-      });
+    if (resetSort) {
+      _resetFilter("sort");
       applySort();
     }
+    // (b) For Survey, hide Priority + Time filter groups entirely.
+    const surveyOnly = src === "#Survey";
+    document.querySelectorAll(".more-filters-body .filter-group").forEach((g) => {
+      const chip = g.querySelector(".chip[data-filter]");
+      if (!chip) return;
+      const fname = chip.dataset.filter;
+      if (fname === "priority" || fname === "time") {
+        g.hidden = surveyOnly;
+        if (surveyOnly) _resetFilter(fname);
+      }
+    });
   }
 
   // ---- Chips --------------------------------------------------------------
@@ -189,7 +212,7 @@
       document.querySelectorAll('.chip[data-filter="' + filter + '"]').forEach((b) => {
         b.classList.toggle("active", (b.dataset.value || "") === value);
       });
-      if (filter === "source") syncSortAvailability();
+      if (filter === "source") syncSourceAdaptiveUI();
       if (filter === "sort") applySort();
       apply();
     });
