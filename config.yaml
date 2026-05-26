@@ -234,6 +234,10 @@ sources:
     # (navigation/SLAM/generic-ML noise that trips a keyword but misses our
     # research interests). 0 disables. See ranking weights below for the scale.
     min_score: 6
+    # Stricter cut for arXiv WITHOUT released code (papers-only). Keep only
+    # High-priority no-code papers scoring >= this threshold; drop Mid/Low and
+    # the lower-scoring High no-code papers. With-code arXiv is unaffected.
+    no_code_min_score: 16
   github:
     enabled: true
     queries:

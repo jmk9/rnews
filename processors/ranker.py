@@ -127,13 +127,28 @@ def rank_items(items: list[Item], cfg: dict[str, Any], *, filter_unrelated: bool
     # noise that trips a keyword but misses our research interests) below a score
     # floor. Other sources are unaffected.
     if filter_unrelated:
-        min_score = float(sources_cfg.get("arxiv", {}).get("min_score", 0) or 0)
+        arx_cfg = sources_cfg.get("arxiv", {}) or {}
+        min_score = float(arx_cfg.get("min_score", 0) or 0)
         if min_score > 0:
             before = len(items)
             items = [it for it in items
                      if it.source != "arxiv" or it.score >= min_score]
             log.info("arxiv min_score=%.1f: dropped %d low-relevance papers",
                      min_score, before - len(items))
+        # Stricter cut for arXiv WITHOUT code (the "Papers only" bucket is huge
+        # and most readers want code-bearing work first). Keep only High-priority
+        # no-code papers above no_code_min_score. Items with code are unaffected.
+        nc_min = float(arx_cfg.get("no_code_min_score", 0) or 0)
+        if nc_min > 0:
+            def _no_code(it: Item) -> bool:
+                return not bool((getattr(it, "score_breakdown", {}) or {}).get("has_code", 0))
+            before = len(items)
+            items = [it for it in items
+                     if it.source != "arxiv"
+                     or not _no_code(it)
+                     or (it.priority == "must_read" and it.score >= nc_min)]
+            log.info("arxiv no_code_min_score=%.1f (High-only): dropped %d papers-only",
+                     nc_min, before - len(items))
 
     items.sort(key=lambda x: x.score, reverse=True)
     return items
