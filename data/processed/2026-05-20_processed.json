@@ -655,7 +655,7 @@
     "source": "github",
     "title": "NVIDIA/warp",
     "url": "https://github.com/NVIDIA/warp",
-    "summary": "NVIDIA Warp is a Python framework for writing GPU-accelerated simulation and computation kernels, aimed at robotics, physics simulation, and machine learning workloads. It is useful when researchers need differentiable or high-throughput simulation code that stays close to Python while compiling performance-critical pieces for NVIDIA GPUs.",
+    "summary": "NVIDIA Warp is a Python framework for writing GPU-accelerated simulation code aimed at robotics, machine learning, and physically based modeling. It is useful when researchers need high-performance differentiable or parallel simulation kernels without dropping fully into low-level CUDA, especially for workflows that mix simulation with learning systems.",
     "published": "2022-03-18T21:56:23Z",
     "updated": "2026-05-20T23:12:04Z",
     "authors": [
@@ -890,7 +890,7 @@
     "source": "github",
     "title": "isaac-sim/IsaacLab-Arena",
     "url": "https://github.com/isaac-sim/IsaacLab-Arena",
-    "summary": "Isaac Lab - Arena extends NVIDIA Isaac Lab with a composable setup for building robotics simulation environments from interchangeable robots, objects, scenes, and tasks. It is aimed at quickly prototyping robot-learning problems and evaluating policies across different embodiments and environments, making it useful for testing how well learned behaviors transfer across simulated conditions.",
+    "summary": "IsaacLab-Arena extends NVIDIA Isaac Lab with a composable setup for building robotics simulation environments from interchangeable robots, objects, and scenes. It is aimed at quickly prototyping robot learning tasks and evaluating policies across different embodiments and environment configurations, making it useful for scaling simulation coverage beyond a single custom task setup.",
     "published": "2025-08-15T12:28:23Z",
     "updated": "2026-05-20T23:10:40Z",
     "authors": [
@@ -3646,7 +3646,7 @@
     "source": "github",
     "title": "MarcDcls/mjlab_upkie",
     "url": "https://github.com/MarcDcls/mjlab_upkie",
-    "summary": "GitHub repo of reinforcement-learning environments for the Upkie robot. It provides code for RL experiments on Upkie, with no reported benchmarks or real-robot validation in the description.",
+    "summary": "RL environments for the Upkie wheeled biped robot, packaged around training and evaluating reinforcement-learning controllers for balancing and locomotion. It is useful as a simulation and experimentation layer for researchers working on Upkie-specific control policies, though the provided description does not specify particular tasks, algorithms, or results.",
     "published": "2025-11-05T10:41:48Z",
     "updated": "2026-05-08T08:06:26Z",
     "authors": [
@@ -4498,7 +4498,7 @@
     "source": "news",
     "title": "Video Friday: Heavy Robotic Machinery Operates Itself",
     "url": "https://spectrum.ieee.org/video-friday-material-handling-robots",
-    "summary": "IEEE Spectrum’s Video Friday rounds up recent robotics demos, led by ETH Zurich’s autonomous bulk-material handling system running on a real 40-ton hydraulic material handler with an underactuated, free-swinging gripper. The collection also captures where embodied AI is moving now: unified autonomy stacks for lidar/radar/vision-based navigation across drones and legged robots, humanoid loco-manipulation under contact changes, and data-collection hardware such as Koala that mirrors robot gripper mechanics in a handheld human tool.",
+    "summary": "ETH Zurich showed a complete autonomous bulk-material handling system running on a real 40-ton hydraulic material handler, taking over a task normally done by human operators using heavy manipulators with free-swinging, underactuated grippers. The interesting part is the scale and deployment context: autonomy here is not a tabletop demo or scripted factory cell, but a full-size machine operating in a labor-intensive industrial workflow where contact dynamics and loose materials make control difficult.",
     "published": "2026-05-15T17:00:01+00:00",
     "updated": "2026-05-15T17:00:01+00:00",
     "authors": [
@@ -4534,7 +4534,7 @@
     "source": "news",
     "title": "Video Friday: AI Gives Robot Hands Humanlike Dexterity",
     "url": "https://spectrum.ieee.org/video-friday-robotic-hand-dexterity",
-    "summary": "IEEE Spectrum’s robotics roundup highlights Genesis AI’s GENE-26.5, described as an AI “brain” for robot hands that can handle unusually dexterous physical tasks: cooking a meal, cracking an egg one-handed, doing lab work, wire harnessing, and even playing piano. The claim is interesting because it frames manipulation as the next bottleneck in embodied AI, moving from locomotion and scripted grasping toward general-purpose, humanlike hand control across delicate, contact-rich tasks.",
+    "summary": "Genesis AI introduced GENE-26.5, an AI “brain” aimed at giving robot hands much more humanlike manipulation ability. The demo reel emphasizes dexterous, high-contact tasks such as cooking a full meal, cracking an egg one-handed, running lab experiments, wire harnessing, and playing piano, suggesting a push from single-purpose robot motions toward general physical skill.",
     "published": "2026-05-09T16:00:02+00:00",
     "updated": "2026-05-09T16:00:02+00:00",
     "authors": [
@@ -4640,7 +4640,7 @@
     "source": "news",
     "title": "Home Robot Safety Is All About Relationships",
     "url": "https://spectrum.ieee.org/domestic-humanoid-robot-safety-standards",
-    "summary": "ISO’s revision of its 12-year-old ISO 13482 safety standard for personal care robots is arriving just as domestic humanoids are moving from labs toward real homes, but Jae-Seong Lee argues it still treats safety too much as a property of the machine rather than of the human-robot relationship. The concern is that home robots trained and deployed amid children, older adults, clutter, visitors, and changing behavior need enforceable ways to test relational hazards such as unpredictability and autonomous decisions, not just advisory language about intended use. The standards fight is partly technical and partly normative: deciding whose gait, cognition, risk tolerance, and definition of normal home behavior get built into the safety baseline before products and deployment patterns harden.",
+    "summary": "ISO is revising ISO 13482 for personal care robots just as domestic humanoids are moving from prototypes into real homes, but Jae-Seong Lee argues the update still treats safety too much as a machine property rather than something produced by human-robot interaction. The hard problem is that home robots will be trained and deployed amid elderly users, children, clutter, pets, and changing behavior, where the robot alters the human’s actions and the human alters the robot’s perception and decisions. Lee’s concern is that without enforceable tests and inclusive criteria for this relational safety, standards may quietly bake in narrow assumptions about whose bodies, cognition, and risk thresholds count as normal.",
     "published": "2026-05-19T11:00:01+00:00",
     "updated": "2026-05-19T11:00:01+00:00",
     "authors": [
@@ -6792,7 +6792,7 @@
     "source": "news",
     "title": "Will Robotics Have a ChatGPT Moment?",
     "url": "https://spectrum.ieee.org/robotics-ai-breakthrough",
-    "summary": "AI is pushing robotics away from hand-programmed behavior toward learned perception, reasoning, and control, but the article argues that the field is unlikely to get a single ChatGPT-style breakthrough. The hard part is still grounding AI in the physical world: flashy humanoid demos like Unitree’s 2026 Spring Festival Gala performance mostly show scripted choreography and low-level motor control, while useful general-purpose robots need enormous, high-quality data across forces, timing, geometry, safety constraints, and changing environments. With robotics investment reaching $40.7 billion in 2025, the near-term path looks less like a universal home robot and more like carefully engineered systems that combine multiple AI tools for constrained, economically valuable tasks.",
+    "summary": "Robotics investment hit a record $40.7 billion in 2025, but the article argues that AI-powered robots are unlikely to get a single ChatGPT-like breakthrough because physical autonomy depends on coordinated perception, control, reasoning, safety, and task-specific engineering. It draws a sharp line between polished humanoid demos, such as Unitree robots at the 2026 Spring Festival Gala, and useful robots in factories, homes, warehouses, or disaster zones, where training data is sparse and the space of real-world configurations is effectively open-ended.",
     "published": "2026-05-20T11:00:01+00:00",
     "updated": "2026-05-20T11:00:01+00:00",
     "authors": [
