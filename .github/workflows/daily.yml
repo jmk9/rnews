@@ -85,8 +85,10 @@ jobs:
         # change data files and would commit nothing anyway.
         if: github.event_name != 'push'
         run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Commit as the repo owner so GitHub doesn't list github-actions[bot]
+          # as a separate contributor on the project.
+          git config user.name  "jmk9"
+          git config user.email "jmk9@plaif.com"
           git add data/processed data/state data/thumbnails
           if git diff --cached --quiet; then
             echo "no data changes to commit"
