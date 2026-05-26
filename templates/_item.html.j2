@@ -31,7 +31,7 @@
     <div class="item-header">
       <a class="item-title" href="{{ it.url }}" target="_blank" rel="noopener">{{ it.title }}</a>
       <span class="badge badge-{{ it.source }}">{{ it.source }}</span>
-      {% if it.priority %}<span class="badge badge-{{ it.priority }}">{{ priority_label(it.priority) }}</span>{% endif %}
+      {% if "#Survey" in (it.tags or []) %}<span class="badge badge-survey">SURVEY</span>{% elif it.priority %}<span class="badge badge-{{ it.priority }}">{{ priority_label(it.priority) }}</span>{% endif %}
       {% if it.extra and it.extra.is_new and it.source != "news" %}<span class="badge badge-new">NEW</span>{% endif %}
     </div>
     <div class="item-meta">

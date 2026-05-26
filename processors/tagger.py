@@ -1,9 +1,21 @@
 """Attach tags to items based on substring matches defined in config.yaml."""
 from __future__ import annotations
 
+import re
 from typing import Any
 
 from utils.io import Item
+
+
+# Repo-name patterns for awesome-list / paper-list / survey / notes type repos —
+# valuable as "maps of the field" but very different in nature from code repos,
+# so we tag them separately so they can be filtered and badged differently.
+_SURVEY_RX = re.compile(
+    r"\b(awesome|survey|review|paper[-_]?list|papers[-_]?list|paperlist|"
+    r"reading[-_]?list|curated|collection|resources|notes)\b",
+    re.IGNORECASE,
+)
+SURVEY_TAG = "#Survey"
 
 
 def _haystack(item: Item) -> str:
@@ -40,5 +52,11 @@ def tag_items(items: list[Item], cfg: dict[str, Any]) -> list[Item]:
                 tags.append(tag)
         if fallback_siblings and not (set(tags) & fallback_siblings):
             tags.append(OTHER_TAG)
+        # github survey/list/notes repos get their own type tag so the card can
+        # show a SURVEY badge in place of High/Mid/Low (it's not really a
+        # "code repo" the same way) and users can filter on it.
+        if it.source == "github" and _SURVEY_RX.search(it.title or ""):
+            if SURVEY_TAG not in tags:
+                tags.append(SURVEY_TAG)
         it.tags = tags
     return items
