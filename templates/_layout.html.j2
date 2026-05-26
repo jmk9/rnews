@@ -10,8 +10,10 @@
 </head>
 <body>
 <header class="site-header">
-  <h1><a href="{{ url_root }}index.html">{{ site.title }}</a></h1>
-  <p class="tagline">{{ site.description }}</p>
+  <h1 class="visually-hidden">{{ site.title }}</h1>
+  <a href="{{ url_root }}index.html" class="site-banner-link" aria-label="{{ site.title }} home">
+    <img src="{{ url_root }}banner.png?v={{ generated_ts }}" alt="{{ site.title }} — {{ site.description }}" class="site-banner">
+  </a>
   <p class="updated">Updated every morning, 07:00–09:00 KST · last build {{ generated }}</p>
 </header>
 <main>

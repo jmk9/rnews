@@ -169,6 +169,10 @@ def build_site(cfg: dict[str, Any]) -> Path:
         src = templates_dir / asset
         if src.exists():
             shutil.copy2(src, site_dir / asset)
+    # Banner image lives at the repo root so the README can use the same file.
+    banner = Path("banner.png")
+    if banner.exists():
+        shutil.copy2(banner, site_dir / "banner.png")
 
     # Copy locally-stored thumbnails (currently: arxiv figure crops produced by
     # scripts/extract_thumbnails.py) into the site so templates can reference
