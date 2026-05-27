@@ -955,7 +955,7 @@
     "source": "github",
     "title": "isaac-sim/IsaacLab-Arena",
     "url": "https://github.com/isaac-sim/IsaacLab-Arena",
-    "summary": "IsaacLab-Arena extends NVIDIA Isaac Lab with a composable setup for building robotics simulation environments from interchangeable robots, objects, and scenes. It is aimed at quickly prototyping robot learning tasks and evaluating policies across different embodiments and environment configurations, making it useful for scaling simulation coverage beyond a single custom task setup.",
+    "summary": "IsaacLab-Arena extends NVIDIA Isaac Lab with a composable setup for building robotics simulation environments from interchangeable robots, objects, and scenes. It is aimed at quickly prototyping robot learning tasks and evaluating policies across different embodiments and environment configurations, making it useful for scalable simulation studies rather than one-off task definitions.",
     "published": "2025-08-15T12:28:23Z",
     "updated": "2026-05-26T22:14:38Z",
     "authors": [
@@ -1040,7 +1040,7 @@
     "source": "github",
     "title": "MINT-SJTU/VLA-Pruner",
     "url": "https://github.com/MINT-SJTU/VLA-Pruner",
-    "summary": "The official implementation of VLA-Pruner: Temporal-Aware Dual-Level Visual Token Pruning for Efficient Vision-Language-Action Inference.",
+    "summary": "VLA-Pruner is the official code for a token-pruning method aimed at making vision-language-action models cheaper at inference time. It prunes visual tokens at two levels while accounting for temporal structure, targeting the redundant video/observation tokens that slow down robot policy execution without changing the overall VLA setup.",
     "published": "2025-11-24T14:00:22Z",
     "updated": "2026-05-26T15:10:44Z",
     "authors": [
@@ -1055,7 +1055,7 @@
       "license": "MIT",
       "first_seen": "2026-05-25",
       "full_text": "The official implementation of VLA-Pruner: Temporal-Aware Dual-Level Visual Token Pruning for Efficient Vision-Language-Action Inference.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/MINT-SJTU/VLA-Pruner/HEAD/./assert/observation-v4.png"
     },
     "tags": [
@@ -1538,7 +1538,7 @@
     "source": "github",
     "title": "iit-DLSLab/sim2real-robot-identification",
     "url": "https://github.com/iit-DLSLab/sim2real-robot-identification",
-    "summary": "A joints calibration routine for quadrupeds and manipulators to facilitate sim-to-real transfer from isaaclab and mujoco to real robots",
+    "summary": "Provides a joint-calibration routine for quadrupeds and manipulators aimed at reducing the mismatch between simulated and real robot kinematics. It is meant to support sim-to-real transfer from Isaac Lab and MuJoCo by identifying or correcting joint parameters before deploying policies or controllers on hardware.",
     "published": "2025-07-05T22:23:07Z",
     "updated": "2026-05-14T16:03:52Z",
     "authors": [
@@ -1560,7 +1560,7 @@
       "license": "BSD-3-Clause",
       "first_seen": "2026-05-18",
       "full_text": "A joints calibration routine for quadrupeds and manipulators to facilitate sim-to-real transfer from isaaclab and mujoco to real robots",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/iit-DLSLab/sim2real-robot-identification/HEAD/./gifs/z1_real.gif"
     },
     "tags": [
@@ -4166,7 +4166,7 @@
     "source": "arxiv",
     "title": "ParkingWorld: End-to-End Autonomous Parking Reinforcement Learning from Corrective Experience in 3DGS Simulation",
     "url": "http://arxiv.org/abs/2605.25029v1",
-    "summary": "ParkingWorld trains an end-to-end autonomous parking policy in a photorealistic 3D Gaussian Splatting simulator using CIL-SERL, a correction-in-the-loop reinforcement learning setup that learns from normal rollouts, human interventions, failed attempts, and rollback-based correction segments. Its multi-level replay buffers turn corrective experience into targeted training data, improving sample efficiency over standard RL and reducing dependence on large expert demonstration sets. Evaluations in both the 3DGS simulator and on a physical vehicle show higher parking success, efficiency, and safety across diverse parking scenarios.",
+    "summary": "ParkingWorld trains an end-to-end autonomous parking policy with CIL-SERL, a correction-in-the-loop reinforcement learning setup inside a photorealistic 3D Gaussian Splatting simulator reconstructed from real parking scenes. Its core mechanism is a multi-level replay buffer that separates and reconnects ordinary rollouts, human corrections, failed attempts, and rollback correction segments so training can focus on the cases where exploration breaks down. Evaluations in both simulation and on a physical vehicle report higher parking success, efficiency, and safety across diverse constrained parking scenarios.",
     "published": "2026-05-24T12:09:53+00:00",
     "updated": "2026-05-24T12:09:53+00:00",
     "authors": [
