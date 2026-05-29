@@ -61,20 +61,36 @@ _PUB_TIME = re.compile(
 )
 _TITLE_TAG = re.compile(r"<title[^>]*>([^<]+)</title>", re.IGNORECASE)
 _HREF = re.compile(r'<a[^>]+href=["\']([^"\']+)["\']', re.IGNORECASE)
+# Visible-text date patterns we'll try when no meta date is found. Order
+# matches "most specific first" — ISO, then "Mon DD YYYY", then "DD Mon YYYY".
+_MONTHS = (
+    r"Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|June?|July?|"
+    r"Aug(?:ust)?|Sept?(?:ember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?"
+)
+_BODY_DATE = re.compile(
+    r"\b("
+    r"\d{4}-\d{2}-\d{2}"                                 # 2026-05-27
+    r"|(?:" + _MONTHS + r")\s+\d{1,2}(?:,)?\s+\d{4}"     # May 27 2026 / May 27, 2026
+    r"|\d{1,2}\s+(?:" + _MONTHS + r")\s+\d{4}"           # 27 May 2026
+    r")\b",
+    re.IGNORECASE,
+)
+_LD_DATE = re.compile(
+    r'"date(?:Published|Created)"\s*:\s*"([^"]+)"',
+    re.IGNORECASE,
+)
+_TIME_TAG = re.compile(
+    r'<time[^>]+datetime=["\']([^"\']+)["\']',
+    re.IGNORECASE,
+)
+_TAG_STRIP = re.compile(r"<[^>]+>")
 
 
-def _normalize_date(raw: str) -> str:
-    """Return ISO-8601 for whatever date string a blog put in its meta.
-
-    Real-world data is messy: Skild ships "Mar 19, 2026"; others use ISO like
-    "2026-03-19T10:00:00Z"; some ship nothing. We need a sortable ISO string,
-    or the site builder's lexicographic news sort puts "Mar..." above "2026..."
-    and old posts land at the top of the page. Falls back to discovery time
-    when the meta is missing or unparseable.
-    """
+def _parse_date_string(raw: str) -> str:
+    """Parse any date-ish string into ISO-8601, or "" if unparseable."""
     raw = (raw or "").strip()
     if not raw:
-        return datetime.now(timezone.utc).isoformat()
+        return ""
     # Fast path: already ISO (starts with 4-digit year).
     if len(raw) >= 10 and raw[:4].isdigit() and raw[4] == "-":
         return raw
@@ -82,7 +98,44 @@ def _normalize_date(raw: str) -> str:
         from dateutil import parser as _dp  # type: ignore
         return _dp.parse(raw).isoformat()
     except Exception:
-        return datetime.now(timezone.utc).isoformat()
+        return ""
+
+
+def _extract_published(body: str, meta_raw: str) -> str:
+    """Find the article's publication date, trying multiple signals in order.
+
+    Many blogs (Genesis AI, Figure, 1X, Pi) ship neither article:published_time
+    in og meta nor JSON-LD, and the date only appears as visible text in the
+    article header ("May 27 2026" on Genesis). We sweep through, most reliable
+    first, and only fall back to discovery time if nothing parses.
+    """
+    # 1. og meta article:published_time (Skild ships "Mar 19, 2026"; some are ISO)
+    iso = _parse_date_string(meta_raw)
+    if iso:
+        return iso
+    # 2. JSON-LD datePublished (Webflow / many CMSes include it)
+    m = _LD_DATE.search(body)
+    if m:
+        iso = _parse_date_string(m.group(1))
+        if iso:
+            return iso
+    # 3. <time datetime="..."> tags
+    m = _TIME_TAG.search(body)
+    if m:
+        iso = _parse_date_string(m.group(1))
+        if iso:
+            return iso
+    # 4. Visible date string in the article header — strip HTML and grab the
+    #    first date-pattern hit. Limit to the first ~30k chars so we don't pick
+    #    up "Copyright 2026" in a footer.
+    text = _TAG_STRIP.sub(" ", body[:30000])
+    m = _BODY_DATE.search(text)
+    if m:
+        iso = _parse_date_string(m.group(1))
+        if iso:
+            return iso
+    # 5. Last resort: discovery time. Merge-on-save preserves this on re-runs.
+    return datetime.now(timezone.utc).isoformat()
 
 
 def _fetch(url: str, timeout: int = 20) -> str | None:
@@ -185,7 +238,7 @@ def _scrape_site(site: dict[str, Any], max_per_site: int) -> list[Item]:
         thumb = _first_group(_OG_IMG.search(body))
         if thumb and thumb.startswith("//"):
             thumb = "https:" + thumb
-        published = _normalize_date(_first_group(_PUB_TIME.search(body)))
+        published = _extract_published(body, _first_group(_PUB_TIME.search(body)))
 
         extra: dict[str, Any] = {"feed": name, "blog_scraper": True}
         if trusted:
