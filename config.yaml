@@ -294,6 +294,101 @@ sources:
         url: "https://www.aitimes.com/rss/allArticle.xml"
       - name: "인공지능신문"
         url: "https://www.aitimes.kr/rss/allArticle.xml"
+      # --- TRUSTED: first-party robotics-company tech blogs ---
+      # These bypass the must_match keyword filter (a launch post titled
+      # "Introducing Helix" should land even without "robot" in the title) and
+      # get a small score boost so they outrank generic media coverage of the
+      # same announcement.
+      - name: "Boston Dynamics Blog"
+        url: "https://bostondynamics.com/feed/"
+        trusted: true
+      - name: "Sanctuary AI Blog"
+        url: "https://sanctuary.ai/blog?format=rss"
+        trusted: true
+      - name: "Hello Robot Blog"
+        url: "https://hello-robot.com/feed/"
+        trusted: true
+      - name: "Disney Research"
+        url: "https://la.disneyresearch.com/feed/"
+        trusted: true
+      - name: "Diligent Robotics Blog"
+        url: "https://www.diligentrobots.com/blog?format=rss"
+        trusted: true
+      # --- TRUSTED: YouTube channels (Atom feeds; feedparser-compatible) ---
+      # Most hot robotics companies (Figure, 1X, Genesis AI, Skild, Apptronik,
+      # …) publish announcements primarily on YouTube and don't expose blog
+      # RSS. Pulling their channel feeds catches launches/demos directly.
+      - name: "Physical Intelligence (YouTube)"
+        url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCCVlN4Yra0QOz71FeVHbXhA"
+        trusted: true
+      - name: "Genesis AI (YouTube)"
+        url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCli9wb9Ft0-qQofCnOOD0_w"
+        trusted: true
+      - name: "Figure AI (YouTube)"
+        url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQxx-C4TAu2LdR9ZO0KVpdw"
+        trusted: true
+      - name: "1X Technologies (YouTube)"
+        url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCoHslVexR2q57wUoCRfdUsg"
+        trusted: true
+      - name: "Skild AI (YouTube)"
+        url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQPoxR_17d1lv7_MKPTY97w"
+        trusted: true
+      - name: "Boston Dynamics (YouTube)"
+        url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7vVhkEfw4nOGp8TyDk7RcQ"
+        trusted: true
+      - name: "Agility Robotics (YouTube)"
+        url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCN-StetwWuVYf-MU2_NVj4A"
+        trusted: true
+      - name: "Apptronik (YouTube)"
+        url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCo9jdosoSQtDgyTThukoCgg"
+        trusted: true
+      - name: "Sanctuary AI (YouTube)"
+        url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC_d_dGoi2ztmAgiDwRh3uJw"
+        trusted: true
+      - name: "Toyota Research Institute (YouTube)"
+        url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrwv6xSZGc05necevuufEog"
+        trusted: true
+      - name: "Unitree Robotics (YouTube)"
+        url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMbp4V8oxzHCMdOUP-3oWw"
+        trusted: true
+      - name: "Hello Robot (YouTube)"
+        url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCzoafc2G5uW5QuyTZ22OWRA"
+        trusted: true
+      - name: "Disney Research (YouTube)"
+        url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCM42XWqRoruK6bNkgbgoJMw"
+        trusted: true
+      - name: "Engineered Arts (YouTube)"
+        url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCVIo_UX--1R03WE_U3I6xEA"
+        trusted: true
+      - name: "Fourier Intelligence (YouTube)"
+        url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCyGZl0ZMc7HXSjby-SA6KEA"
+        trusted: true
+      - name: "Astribot (YouTube)"
+        url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCDjnC6m9_xW-PDeDCjv-jng"
+        trusted: true
+      - name: "LimX Dynamics (YouTube)"
+        url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsEQoUjBn7QDk8vWWbRmJkQ"
+        trusted: true
+      - name: "UBTECH (YouTube)"
+        url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCdYzpvcdKkvlfTc-Abe6cJQ"
+        trusted: true
+      - name: "Hugging Face (YouTube)"
+        url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCHlNU7kIZhRgSbhHvFoy72w"
+        trusted: true
+      - name: "NVIDIA Developer (YouTube)"
+        url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCBHcMCGaiJhv-ESTcWGJPcw"
+        trusted: true
+      - name: "Mujin (YouTube)"
+        url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCcy9ZRYN5DIWhk1SP9NcoQg"
+        trusted: true
+      - name: "Path Robotics (YouTube)"
+        url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCUW9wQaQoab7cb9PceqY2Ng"
+        trusted: true
+      - name: "Diligent Robotics (YouTube)"
+        url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCgy1uUOy1fxD5GRmwlZqzwg"
+        trusted: true
+      # NOTE: trusted_feed boost is +5 (config.ranking.trusted_feed). To add more
+      # later: append `- name/url: <feed>` with `trusted: true`.
 
 # Weights used by ranker.compute_score().
 # Sort policy: bias toward what people actually USE and TRUST.
@@ -311,6 +406,7 @@ ranking:
   github_stars_log: 5.0       # bumped — popularity dominates the ordering for repos
   github_forks_log: 2.0       # NEW — forks indicate real downstream usage
   real_robot: 3.0             # bumped — practical effectiveness signal for papers
+  trusted_feed: 5.0           # robotics-company tech blogs / YouTube channels — first-party signal
 
 # Priority thresholds applied to final score
 priority:

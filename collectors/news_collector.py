@@ -101,7 +101,7 @@ def _stable_id(url: str, title: str) -> str:
     return hashlib.sha1(seed.encode("utf-8")).hexdigest()[:12]
 
 
-def _to_item(entry: Any, feed_name: str) -> Item | None:
+def _to_item(entry: Any, feed_name: str, trusted: bool = False) -> Item | None:
     title = _strip_html(getattr(entry, "title", "") or entry.get("title", ""))
     url = getattr(entry, "link", "") or entry.get("link", "")
     if not title or not url:
@@ -117,6 +117,8 @@ def _to_item(entry: Any, feed_name: str) -> Item | None:
     author = getattr(entry, "author", "") or entry.get("author", "")
 
     extra: dict[str, Any] = {"feed": feed_name}
+    if trusted:
+        extra["trusted"] = True
     if thumbnail:
         extra["thumbnail"] = thumbnail
 
@@ -158,7 +160,11 @@ def collect(cfg: dict[str, Any]) -> list[Item]:
         url = str(feed.get("url") or "")
         if not url:
             continue
-        log.info("news: fetching %s (%s)", name, url)
+        # Trusted feeds are first-party tech blogs / YouTube channels from
+        # robotics companies — the ranker skips the must_match filter on these
+        # so an "Introducing Helix" post lands even without a keyword hit.
+        trusted = bool(feed.get("trusted", False))
+        log.info("news: fetching %s (%s)%s", name, url, " [trusted]" if trusted else "")
         try:
             parsed = feedparser.parse(url, request_headers={"User-Agent": "rnews/1.0"})
         except Exception as exc:
@@ -170,7 +176,7 @@ def collect(cfg: dict[str, Any]) -> list[Item]:
 
         per_feed_kept = 0
         for entry in parsed.entries[: max_per_feed * 2]:  # over-fetch then filter by date
-            item = _to_item(entry, name)
+            item = _to_item(entry, name, trusted=trusted)
             if item is None:
                 continue
             if item.published:

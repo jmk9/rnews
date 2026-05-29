@@ -37,7 +37,11 @@ def _filter_must_match(
         # image/video generation) even if they tripped a must_match keyword.
         if blocks and any(b in text for b in blocks):
             continue
-        if any(n in text for n in needles):
+        # Trusted feeds (robotics-company tech blogs / YouTube channels) skip
+        # the must_match check — they post about their own robots; a launch
+        # post titled "Introducing Helix" would otherwise be dropped.
+        extra = it.extra if isinstance(it.extra, dict) else {}
+        if extra.get("trusted") or any(n in text for n in needles):
             kept.append(it)
     return kept
 
@@ -86,6 +90,11 @@ def _score_one(item: Item, cfg: dict[str, Any], days_back: int) -> tuple[float, 
 
     real_robot = any(h in summary_lc for h in _REAL_ROBOT_HINTS)
     breakdown["real_robot"] = float(w.get("real_robot", 0)) if real_robot else 0.0
+
+    # First-party robotics-company posts get a baseline lift so they surface
+    # above generic media coverage of the same announcement.
+    extra = item.extra if isinstance(item.extra, dict) else {}
+    breakdown["trusted_feed"] = float(w.get("trusted_feed", 0)) if extra.get("trusted") else 0.0
 
     total = round(sum(breakdown.values()), 3)
     return total, breakdown
