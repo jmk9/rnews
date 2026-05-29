@@ -152,7 +152,8 @@
       "license": null,
       "first_seen": "2026-05-18",
       "full_text": "A Survey on Reinforcement Learning of Vision-Language-Action Models for Robotic Manipulation",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/Denghaoyuan123/Awesome-RL-VLA/HEAD/action.png"
     },
     "tags": [
       "#RL",
@@ -250,7 +251,8 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18",
       "full_text": "ProtoMotions 3 A GPU-Accelerated Framework for Simulated Humanoids (unverified AI generation) --- Overview ProtoMotions3 is a GPU-accelerated simulation and learning framework for training physically simulated digital humans and humanoid robots. Our mission is to provide a fast prototyping platform for various simulated humanoid learning tasks and environments—for researchers and practitioners in animation , robotics , and reinforcement learning —bridging efforts across communities. Modularity , extensibility , and scalability are at the core of ProtoMotions3. It is community-driven and permissively licensed under the Apache-2.0 license. Also check out MimicKit , our sibling repository for a lightweight framework for motion imitation learning. --- What You Can Do with ProtoMotions3 🏃 Large-Scale Motion Learning Train your fully physically simulated character to learn motion skills from the entire public AMASS human animation dataset ( 40+ hours ) within 12 hours on 4 A100s. 📈 Scalable Multi-GPU Training Scale training to even larger datasets with each GPU handling a subset of motions. For example, we have trained with 24 A100s with 13K motions on each GPU with the BONES dataset in SOMA skeleton format. Check out Quick Start and SEED BVH Data Preparation to play around with the dataset and pre-trained models today. 🔄 One-Command Retargeting Transfer (retarget) the entire AMASS dataset to your favorite robot with the built-in PyRoki -based optimizer—in one command. Note: As of v3, we use PyRoki for retargeting. Earlier versions used Mink. 🤖 Train Any Robot Train your robot to perform AMASS motor skills in 12 hours , by just changing one command argument: --robot-name=smpl → --robot-name=h1 2 and preparing retargeted motions (see here) 🔬 Sim2Sim Testing One-click test ( --simulator=isaacgym → --simulator=newton → --simulator=mujoco ) of robot control policies on H1 2 or G1 in different physics engines (NVIDIA Newton, MuJoCo CPU). Policies shown below only use observations you could actually get from real hardware. 🤖 From Sim to Real Train in simulation, deploy on real hardware. ProtoMotions trains one General Tracking Policy on entire BONES-SEED dataset ( 142K motions) and transfers directly to the Unitree G1 humanoid robot zero-shot. Our deployment pipeline exports a single ONNX model (with observation computation baked in), so deployment frameworks only need to provide raw sensor signals — no need to rewrite obs functions or match training internals. We tested on the Unitree G1 via the brilliant RoboJuDo framework, adding just one policy file with no mandatory changes to RoboJuDo core. 📖 Full Deployment Tutorial — from data preparation to real robot, fully reproducible. 🎨 High-Fidelity Rendering Test your policy in IsaacSim 5.0+ , which allows you to load beautifully rendered Gaussian splatting backgrounds (with Omniverse NuRec — this rendered scene is not physically interact-able yet). 🎬 Motion Authoring with Kimodo With Kimodo (NVIDIA's text-to-motion generation model), generate any motion from a text prompt and use ProtoMotions to train a physics-based policy that performs the motion — for both the SOMA animation character and the Unitree G1 robot. Policies trained this way can be deployed directly on real hardware. See Kimodo Data Preparation for how to convert Kimodo outputs to ProtoMotions format. Image Credit: NVIDIA Human Motion Modeling Research 🏗️ Procedural Scene Generation Procedurally generate many scenes for scalable Synthetic Data Generation (SDG) : start from a seed motion set, use RL to adapt motions to augmented scenes. 🎭 Generative Policies Train a generative policy (e.g., MaskedMimic ) that can autonomously choose its \"move\" to finish the task. ⛰️ Terrain Navigation Train your robot to hike challenging terrains! 🎯 Custom Environments Have a new task? Build it from modular components — no monolithic env class needed. Here's how the steering task is composed: Layer File What it does ------- ------ ------------",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/NVlabs/ProtoMotions/HEAD/data/static/vault.gif"
     },
     "tags": [
       "#VLA",
@@ -293,7 +295,7 @@
       "first_seen": "2026-05-18",
       "full_text": "A generative world for general-purpose robotics & embodied AI learning.",
       "summary_kind": "llm",
-      "thumbnail": "https://raw.githubusercontent.com/Genesis-Embodied-AI/genesis-world/HEAD/imgs/big_text.png"
+      "thumbnail": "https://raw.githubusercontent.com/YilingQiao/Genesis/readme-assets/videos/HeroShot_Final.png"
     },
     "tags": [
       "#Other"
@@ -375,7 +377,8 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18",
       "full_text": "This is a repository for reinforcement learning implementation for Unitree robots, based on IsaacLab.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://oss-global-cdn.unitree.com/static/d879adac250648c587d3681e90658b49_480x397.gif"
     },
     "tags": [
       "#RL",
@@ -417,7 +420,8 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18",
       "full_text": "MuJoCo Playground A comprehensive suite of GPU-accelerated environments for robot learning research and sim-to-real, built with MuJoCo MJX. Features include: - Classic control environments from dm control . - Quadruped and bipedal locomotion environments. - Non-prehensile and dexterous manipulation environments. - Vision-based support available via the MJWarp Batch Renderer. For more details, check out the project website. [!NOTE] We now support training with both the MuJoCo MJX JAX implementation, as well as the MuJoCo Warp implementation at HEAD. See this discussion post for more details. Installation You can install MuJoCo Playground directly from PyPI: [!IMPORTANT] We recommend users to install from source to get the latest features and bug fixes from MuJoCo. From Source [!IMPORTANT] Requires Python 3.10 or later. 1. git clone git@github.com:google-deepmind/mujoco playground.git && cd mujoco playground 2. Install uv, a faster alternative to pip 3. Create a virtual environment: uv venv --python 3.12 4. Activate it: source .venv/bin/activate 5. Install CUDA 12 jax: uv pip install -U \"jax[cuda12]\" --index-url https://pypi.org/simple Verify GPU backend: python -c \"import jax; print(jax.default backend())\" should print gpu. unset LD LIBRARY PATH may need to be run before running this command. 6. Install playground from source: uv --no-config sync --all-extras 7. Verify installation: uv --no-config run python -c \"import mujoco playground; print('Success')\" Note : Menagerie assets will be downloaded automatically the first time you load a locomotion or manipulation environment. You can trigger this with: uv --no-config run python -c \"from mujoco playground import locomotion; locomotion.load('G1JoystickFlatTerrain')\" Getting started Running from CLI For basic usage, navigate to the repo's directory, install from source with jax[cuda12] , and run: To train with MuJoCo Warp: Or with uv : Basic Tutorials Colab Description ------- ------------- Introduction to the Playground with DM Control Suite Locomotion Environments Manipulation Environments Vision Environments Training Visualization To interactively view trajectories throughout training with rscope, install it ( pip install rscope ) and run: FAQ How can I contribute? Get started by installing the library and exploring its features! Found a bug? Report it in the issue tracker. Interested in contributing? If you are a developer with robotics experience, we would love your help—check out the contribution guidelines for more details. Reproducibility / GPU Precision Issues Users with NVIDIA Ampere architecture GPUs (e.g., RTX 30 and 40 series) may experience reproducibility issues in mujoco playground due to JAX’s default use of TF32 for matrix multiplications. This lower precision can adversely affect RL training stability. To ensure consistent behavior with systems using full float32 precision (as on Turing GPUs), please run export JAX DEFAULT MATMUL PRECISION=highest in your terminal before starting your experiments (or add it to the end of /.bashrc ). To reproduce results using the same exact learning script as used in the paper, run the brax training script which is available here. There are slight differences in results when using the learning/train jax ppo.py script, see the issue here for more context. Citation If you use Playground in your scientific works, please cite it as follows: License and Disclaimer The texture used in the rough terrain for the locomotion environments is from Polyhaven and licensed under CC0. All other content in this repository is licensed under the Apache License, Version 2.0. A copy of this license is provided in the top-level LICENSE file in this repository. You can also obtain it from https://www.apache.org/licenses/LICENSE-2.0. This is not an officially supported Google product.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://github.com/google-deepmind/mujoco_playground/raw/main/assets/banner.png?raw=true"
     },
     "tags": [
       "#RL",
@@ -518,7 +522,8 @@
       "license": "MIT",
       "first_seen": "2026-05-18",
       "full_text": "A collection of robotics simulation environments for reinforcement learning",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/Farama-Foundation/Gymnasium-Robotics/main/docs/gymnasium-robotics.png"
     },
     "tags": [
       "#RL",
@@ -609,7 +614,8 @@
       "license": null,
       "first_seen": "2026-05-18",
       "full_text": "🤖 Awesome VLA & WAM 📜 A Curated List of Vision-Language-Action (VLA) and World Action Models (WAM) Research and Beyond Photo Credit: Gemini-Nano-Banana🍌 . Overview - 🎯 Aim - 📚 VLA Definition WAM Definition - 🔍 Survey Vision-Language-Action (VLA) Models - 🧠 General VLA - 🌐 VLA with 3D/4D Modelling - 🔥 VLA with Reinforcement Learning - 🪶 Efficient VLA - 🧪 VLA with Latent Actions - 🧭 Domain-Specific VLA (e.g., Humanoid, Dexterous, Tactile) - 🧷 Other Topics in VLA World Action Models (WAM) - 🗺️ General World Models - 🎬 World Action Models from VideoGen - 🌍 World Action Models from VLM - ✨ World Action Models from Scratch Other Policies - 🦾 Traditional Policies - 🦾 Code as Policy Resources - 💾 Robotics Datasets - 👨🏻 Ego Human Datasets - 📊 Benchmark / Environment - 🏞️ Physics Engine - 🖥️ Hardware Aim This is a curated list of VLA and WAM research, systematically organized to provide a comprehensive view of the recent advance in robotics foundation models. It will be continuously updated and refined, with the goal of clarifying the research context for scholars in the domain of robotics foundation models. If you have any new papers worth adding, please feel free to push or raise an issue. Join us in maintaining a high-quality VLA & WAM & More list. VLA Definition In short, VLA models are a type of robotics policy that inherits the pretrained VLMs' rich language grounding and visual understanding abilities to offer a scalable route toward general-purpose, language-conditioned robot policies. We can trace the origin and formal definition of the VLA to the work RT-2. - [⭐️] RT-2 , RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control. WAM Definition In short, WAM models are a type of robotics policy that leverages the world modeling capability (i.e., predicting future states) for action prediction. We refer to the great work DreamZero, which formally coins the name World Action Model, for details. - [⭐️] DreamZero , World Action Models are Zero-shot Policies. There is an intersection between VLA and WAM: WAMs built upon pretrained VLMs. These models are simultaneously both VLA and WAM. Survey - Vision-Language-Action (VLA) Models: Concepts, Progress, Applications and Challenges. - A Survey on Vision-Language-Action Models for Embodied AI. General VLA VLA with World Modeling - MolmoAct2 , MolmoAct2 Action Reasoning Models for Real-World Deployment. - RLDX-1 , RLDX-1 Technical Report. - StarVLA-α , StarVLA-α: Reducing Complexity in Vision-Language-Action Systems. - StarVLA , StarVLA: A Lego-like Codebase for Vision-Language-Action Model Developing. - VLANeXt , VLANeXt: Recipes for Building Strong VLA Models. - CoVer-VLA , Scaling Verification Can Be More Effective than Scaling Policy Learning for Vision-Language-Action Alignment. - [⭐️] Egoscale , EgoScale: Scaling Dexterous Manipulation with Diverse Egocentric Human Data. - HoloBrain-0 , HoloBrain-0 Technical Report. - ABot-M0 , ABot-M0: VLA Foundation Model for Robotic Manipulation with Action Manifold Learning. - SimVLA , SimVLA: A Simple VLA Baseline for Robotic Manipulation. - Lingbot-VLA , A Pragmatic VLA Foundation Model. - ACoT-VLA , ACoT-VLA: Action Chain-of-Thought for Vision-Language-Action Models. - [⭐️] Emergence of Human to Robot Transfer in Vision-Language-Action Models. - FASTer , FASTer: Toward Efficient Autoregressive Vision Language Action Modeling via Neural Action Tokenization. - GenieReasoner , Unified Embodied VLM Reasoning with Robotic Action via Autoregressive Discretized Pre-training. - [⭐️] π∗0.6 , π∗0.6: a VLA That Learns From Experience. - 10 Open Challenges Steering the Future of Vision-Language-Action Models. - AVA-VLA , AVA-VLA: Improving Vision-Language-Action models with Active Visual Attention. - AsyncVLA , AsyncVLA: Asynchronous Flow Matching for Vision-Language-Action Models. - VLA-0 , VLA-0: Building State-of-the-Art VLAs with Zero Modification. - X-VLA , X-VLA: Soft-Prompted Transformer as Scalable Cross-Embodiment Vision-Lang",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/DravenALG/awesome-vla-wam/HEAD/awesome-vla-wam.jpg"
     },
     "tags": [
       "#VLA",
@@ -755,7 +761,8 @@
       "license": "MIT",
       "first_seen": "2026-05-18",
       "full_text": "Meta-World is an open source benchmark for developing and evaluating multi-task and meta reinforcement learning algorithms for continuous control robotic manipulation environments, with various benchmarks to evaluate different aspects of reinforcement learning algorithms. The documentation website is at metaworld.farama.org, and we have a public discord server (which we also use to coordinate development work) that you can join here: https://discord.gg/bnJ6kubTg6 Installation To install Meta-World, use pip install metaworld We support and test for Python 3.8, 3.9, 3.10, 3.11 on Linux and macOS. We will accept PRs related to Windows, but do not officially support it. API The Meta-World API follows the Gymnasium API for environment creation and environment interactions. To create a benchmark and interact with it: Available Benchmarks Multi-Task Benchmarks The MT1, MT10, and MT50 benchmarks are the Multi-Task Benchmarks. These benchmarks are used to learn a multi-task policy that can learn 1, 10, or 50 training tasks simultaneously. MT1 benchmarks can be created with any of the 50 tasks available in Meta-World. In the MT10 and MT50 benchmarks, the observations returned by the benchmark will come with one-hot task IDs appended to the state. Meta-Learning Benchmarks The ML1, ML10, and ML45 benchmarks are 3 meta-reinforcement learning benchmarks available in Meta-World. The ML1 benchmark can be used with any of the 50 tasks available in Meta-World. The ML1 benchmark tests for few-shot adaptation to goal variations within a single task. The ML10 and ML45 both test few-shot adaptation to new tasks. ML10 comprises 10 train tasks with 5 test tasks, while ML45 comprises of 45 training tasks with 5 test tasks. Creating Multi-Task Benchmarks MT1 MT10 MT10 has two different versions that can be returned by . The first version is the synchronous version of the benchmark where all environments are contained within the same process. For users with limited compute resources, the synchronous option needs the least resources. Alternatively, for users with more compute we also provide the asynchronous version of the MT10 benchmark where each environment is isolated in it's own process and must use inter-process messaging via pipes to communicate. MT50 MT50 also contains two different versions, a synchronous and an asynchronous version, of the environments. Meta-Learning Benchmarks Each Meta-reinforcement learning benchmark has training and testing environments. These environments must be created separately as follows. ML1 ML10 Similar to the Multi-Task benchmarks, the ML10 and ML45 environments can be run in synchronous or asynchronous modes. ML45 Custom Benchmarks Finally, we also provide support for creating custom benchmarks by combining any number of Meta-World environments. The prefix 'mt' will return environments that are goal observable for Multi-Task reinforcement learning, while the prefix 'ml' will return environments that are partially observable for Meta-reinforcement learning. Like the included MT and ML benchmarks, these environments can also be run in synchronous or asynchronous mode. In order to create a custom benchmark, the user must provide a list of environment names with the suffix '-v3'. Development Roadmap We have a roadmap for future development work for Gymnasium available here: https://github.com/Farama-Foundation/Metaworld/issues/500 Benchmark Code Code for producing results found in the paper can be found at: https://github.com/rainx0r/metaworld-algorithms Citation You can cite Meta-World using our related paper (https://openreview.net/forum?id=1de3azE606) as:",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://github.com/Farama-Foundation/Metaworld/raw/master/metaworld-text.png"
     },
     "tags": [
       "#RL",
@@ -1078,7 +1085,8 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18",
       "full_text": "Vector OS: Cross-embodiment robot operating system with industrial-grade autonomous navigation, natural   language control, and sim-to-real transfer. Unitree Go2 + SO-ARM101. CMU Robotics Institute.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/VectorRobotics/vector-os-nano/HEAD/images/ascii-art.png"
     },
     "tags": [
       "#Other"
@@ -1119,7 +1127,8 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18",
       "full_text": "Train an SO-101 Robot From Sim-to-Real With NVIDIA Isaac Welcome to this workshop on sim-to-real transfer for the SO-101 robot! This repository contains the assets and code to accompany this learning content. The rest of this README will help you setup the environment and ensure everything is installed correctly. You can also use this repo as a basis for trying out your own tasks. Requirements This content was tested on the following GPUs: - NVIDIA RTX 6000 Pro (Blackwell) - NVIDIA RTX 5090 (Blackwell) - NVIDIA RTX 6000 (Ada) OS and Software tested: - Ubuntu Linux 22.04 - Docker - CUDA Toolkit - NVIDIA Container Toolkit Installation 1. Create directory and clone this repo Building the Docker images 2. Navigate to the repo Teleop & Simulation container 3. From the repo root directory, run: Real Robot & Inference Server - this may take a while to build For Blackwell architecture GPUs: 4. From the repo root directory, run: For Ada architecture GPUs: 4. From the repo root directory: 5. Continue with the course instructions here. Starting the images To start the Teleop & Simulation container: To start the Real Robot & Inference Server: Models and Datasets Downloading model weights First, install the HuggingFace command-line-interface (CLI) The models used in the course are listed in the course instructions here. You can either download them ahead of time, or as you get to them in the course. Tasks Tasks Debug envs - Lerobot-So101-Teleop-Base : Teleop debug - Lerobot-So101-Teleop-Task : Lightbox, cameras, non-task related debug Tasks - Lerobot-So101-Teleop-Vials-To-Rack - Main task for the workshop - pick up the vial and place it in the yellow rack - Lerobot-So101-Teleop-Vials-To-Rack-DR - Same as above but with domain randomization Eval - Lerobot-So101-Teleop-Vials-To-Rack-Eval - Evaluation without domain randomization (fixed orange robot, no lighting/mat DR) - Lerobot-So101-Teleop-Vials-To-Rack-DR-Eval - Evaluation with full domain randomization Commands - list envs - List environments in this repo - zero agent - Debug script with zero actions - random agent - Debug script with random actions - lerobot agent - LeRobot SO101 teleop script - lerobot eval - Model evaluation script - lerobot push dataset - LeRobot Dataset push to hub script Contributions We are not currently accepting contributions for this project.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/isaac-sim/Sim-to-Real-SO-101-Workshop/HEAD/images/so101_banner.png"
     },
     "tags": [
       "#Other"
@@ -1212,7 +1221,8 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18",
       "full_text": "RoboVerse: Towards a Unified Platform, Dataset and Benchmark for Scalable and Generalizable Robot Learning",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/RoboVerseOrg/RoboVerse/HEAD/docs/source/_static/Robo.png"
     },
     "tags": [
       "#IL",
@@ -1254,7 +1264,8 @@
       "license": "NOASSERTION",
       "first_seen": "2026-05-18",
       "full_text": "[ICML 2026] Latent Reasoning VLA: Latent Thinking and Prediction for Vision-Language-Action Models",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/LoveJu1y/LaRA-VLA/HEAD/assets/2.png"
     },
     "tags": [
       "#VLA",
@@ -1410,7 +1421,8 @@
       "license": "MIT",
       "first_seen": "2026-05-18",
       "full_text": "Modular Reinforcement Learning (RL) library (implemented in PyTorch, JAX, and NVIDIA Warp) with support for Gymnasium/Gym, NVIDIA Isaac Lab, MuJoCo Playground and other environments",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/Toni-SM/skrl/main/docs/source/_static/data/logo-light-mode.png"
     },
     "tags": [
       "#RL",
@@ -1452,7 +1464,8 @@
       "license": null,
       "first_seen": "2026-05-18",
       "full_text": "[arXiv'26] MMaDA-VLA: Large Diffusion Vision-Language-Action Model with Unified Multi-Modal Instruction and Generation",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/yliu-cs/MMaDA-VLA/HEAD/./assets/teaser.png"
     },
     "tags": [
       "#VLA",
@@ -1745,7 +1758,8 @@
       "license": "MIT",
       "first_seen": "2026-05-18",
       "full_text": "[ICRA 2026] VITRA: Scalable Vision-Language-Action Model Pretraining for Robotic Manipulation with Real-Life Human Activity Videos",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/microsoft/VITRA/HEAD/assets/teaser.jpg"
     },
     "tags": [
       "#VLA",
@@ -1787,7 +1801,8 @@
       "license": "NOASSERTION",
       "first_seen": "2026-05-18",
       "full_text": "Object-centric world-model and flow-policy reinforcement learning for multi-agent robotics in IsaacLab and ROS2. This repository documents the engineering solution evolved from a national top-three RoboCup China visual challenge entry",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/yubohann/Awesome-World-Model-Flow-RL-Multi-Agent-Robotic-Object-Centric/HEAD/./docs/media/%E6%9C%80%E7%BB%88%E5%9B%9E%E6%94%BE_%E4%B8%89%E8%A7%86%E8%A7%92%E5%90%8C%E6%AD%A5%E6%8B%BC%E6%8E%A5%E7%89%88.gif"
     },
     "tags": [
       "#RL",
@@ -1843,7 +1858,8 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18",
       "full_text": "A unified framework for robot learning",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://private-user-images.githubusercontent.com/12837145/257031961-04aff6da-f9fa-4f5f-abc6-cfcd70c6cd90.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODAwOTQ0NDcsIm5iZiI6MTc4MDA5NDE0NywicGF0aCI6Ii8xMjgzNzE0NS8yNTcwMzE5NjEtMDRhZmY2ZGEtZjlmYS00ZjVmLWFiYzYtY2ZjZDcwYzZjZDkwLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA1MjklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwNTI5VDIyMzU0N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTkwNmViOGRkZmYxYWRiN2U0N2JhMGUyZWVjZjdjZTg1MTM0YmIyZjc5ZWRlY2QzMDFiOGM5NDJlNjA3YjE3MzkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.L_lZ1hdMLeTqlnjbtPyjP9tIuDPkijBZGfaUBZQ-578"
     },
     "tags": [
       "#Other"
@@ -2133,7 +2149,8 @@
       "license": "BSD-2-Clause",
       "first_seen": "2026-05-18",
       "full_text": "A software framework integrating various imitation learning methods and benchmark environments for robotic manipulation",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://private-user-images.githubusercontent.com/6636600/567165162-4a4a6429-7e3c-4cfa-90b3-ed54dd9019a3.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODAwOTQ0MzIsIm5iZiI6MTc4MDA5NDEzMiwicGF0aCI6Ii82NjM2NjAwLzU2NzE2NTE2Mi00YTRhNjQyOS03ZTNjLTRjZmEtOTBiMy1lZDU0ZGQ5MDE5YTMucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MDUyOSUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjA1MjlUMjIzNTMyWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ZjgxYzA5M2ZlZDY0OWU5MzBkZTg1N2ZmOTAxYjc3ZmYwMjc3MDViYTA3M2IyMmVmZjJmNDdiNTQ4NGI1MGY3ZSZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.ttvNeEgkHf7t6D0A5Hi2dJV1frbYKT_hmi3wN07evW4"
     },
     "tags": [
       "#Manipulator"
@@ -2409,7 +2426,8 @@
       "license": null,
       "first_seen": "2026-05-18",
       "full_text": "LW-BenchHub is a unified benchmark hub built on Isaac Lab–Arena for embodied AI, providing consistent interfaces, realistic environments, multi-robot support, and large-scale evaluation. It includes Lightwheel-Libero-Tasks and Lightwheel-RoboCasa-Tasks with 268 tasks, reproducible RL configs, and a full pipeline for benchmarking robot policies.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/LightwheelAI/LW-BenchHub/HEAD/./images/lw-benchhub-kitchens.png"
     },
     "tags": [
       "#RL",
@@ -2456,7 +2474,8 @@
       "license": "BSD-3-Clause",
       "first_seen": "2026-05-18",
       "full_text": "A high-performance drone deep reinforcement learning platform built upon IsaacGym.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/emNavi/AirGym/HEAD/doc/pipeline-whitebg.png"
     },
     "tags": [
       "#RL",
@@ -2697,7 +2716,8 @@
       "license": "MIT",
       "first_seen": "2026-05-18",
       "full_text": "Biped robot locomotion with deep RL: Isaac Lab + MuJoCo, custom PPO/SAC/DDPG/D4PG/MPO, MLP/LSTM/Transformer, motion imitation, sim-to-real",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/AsterisCrack/BipedRobot/HEAD/media/robot.jpg"
     },
     "tags": [
       "#RL",
@@ -2749,7 +2769,8 @@
       "license": "MIT",
       "first_seen": "2026-05-18",
       "full_text": "Pytorch implementation of the models RT-1-X and RT-2-X from the paper: \"Open X-Embodiment: Robotic Learning Datasets and RT-X Models\"",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/kyegomez/RT-X/HEAD/agorabanner.png"
     },
     "tags": [
       "#Other"
@@ -2914,7 +2935,8 @@
       "license": null,
       "first_seen": "2026-05-18",
       "full_text": "A Sim-to-Real Single-Stage Planner for Off-Road Terrain",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/TJU-Aerial-Robotics/YOPO-Rally/HEAD/.media/yopo-sim.jpg"
     },
     "tags": [
       "#Other"
@@ -2955,7 +2977,8 @@
       "license": null,
       "first_seen": "2026-05-18",
       "full_text": "A Go2W legged-wheel robot locomotion reinforcement learning project based on NVIDIA Isaac Gym.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/ShengqianChen/DreamWaQ_Go2W/HEAD/docs/demos/gross.gif"
     },
     "tags": [
       "#RL",
@@ -3056,7 +3079,8 @@
       "license": "MIT",
       "first_seen": "2026-05-18",
       "full_text": "Reinforcement Learning for a Self Balancing Robot (MuJoCo, Stable Baselines3, PyTorch)",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/lachlanhurst/balance-robot-mujoco-rl/HEAD/./docs/mujoco_rl_robot.gif"
     },
     "tags": [
       "#RL",
@@ -3278,7 +3302,8 @@
       "license": "BSD-3-Clause",
       "first_seen": "2026-05-18",
       "full_text": "A differentiable physics engine and multibody dynamics library for control and robot learning.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://private-user-images.githubusercontent.com/56030908/451836733-89d0b4ca-7e0c-4f58-bf3e-9540e35b9a01.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODAwOTQ0NDMsIm5iZiI6MTc4MDA5NDE0MywicGF0aCI6Ii81NjAzMDkwOC80NTE4MzY3MzMtODlkMGI0Y2EtN2UwYy00ZjU4LWJmM2UtOTU0MGUzNWI5YTAxLmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA1MjklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwNTI5VDIyMzU0M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWEzNmUyZmQ1MGU2MDg4N2RlNTc0ZjQ0NjBkNWM1N2Q5ODNjOTJjYjY1ODk4ZTg2ZWVhMWJlYTQ0YTViYmI3ZGMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRmdpZiJ9.xeWnulprwcm2cBCnXRV9_YS7-eSiqo6q49dXhu4O_EM"
     },
     "tags": [
       "#Other"
@@ -3831,7 +3856,7 @@
       "first_seen": "2026-05-18",
       "full_text": "This repository contains Reinforcement Learning (RL) environments for the Upkie robot.",
       "summary_kind": "llm",
-      "thumbnail": "https://private-user-images.githubusercontent.com/55233639/535684194-f6293fbc-5c59-4e56-bc7f-0ee930503f11.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Nzk4MzUxMzYsIm5iZiI6MTc3OTgzNDgzNiwicGF0aCI6Ii81NTIzMzYzOS81MzU2ODQxOTQtZjYyOTNmYmMtNWM1OS00ZTU2LWJjN2YtMGVlOTMwNTAzZjExLmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA1MjYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwNTI2VDIyMzM1NlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTY3NmI1MTA1YmUxNDk0ZjIxMGUyNzk2NWJhNDJkNTY1ZGJhNWRhNDZhOTRiNGQzZjQ2ZGE2M2NmZTdhMTNmMGImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRmdpZiJ9.wzix1HrBdvgCXtQ_typEpK74NsR4KJV9LUZ6b7lVAWc"
+      "thumbnail": "https://private-user-images.githubusercontent.com/55233639/535684194-f6293fbc-5c59-4e56-bc7f-0ee930503f11.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODAwOTQ0MDMsIm5iZiI6MTc4MDA5NDEwMywicGF0aCI6Ii81NTIzMzYzOS81MzU2ODQxOTQtZjYyOTNmYmMtNWM1OS00ZTU2LWJjN2YtMGVlOTMwNTAzZjExLmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA1MjklMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwNTI5VDIyMzUwM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTlkM2QyOWFmMGI3MTE4MmI1MjQ2NmVkYmFkZDNkNzBhMzg3MmJlZTY4MDM3YzdkZjYzMjVkYTAxZjMyNWRmNzQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRmdpZiJ9.hUMBj0ttPkElEVcU97VQcDNkxgxpba4cWgXZrYnwu1Y"
     },
     "tags": [
       "#RL",
