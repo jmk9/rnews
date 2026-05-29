@@ -64,6 +64,41 @@ exclude_keywords:
   - 주식 시세
   - 주가 시세
 
+# Business-news patterns to DEMOTE (not exclude). Each match in the title
+# applies a negative score (config.ranking.demote_penalty, default -6) so
+# pure funding / investment headlines get pushed from High to Mid or Low
+# without dropping them entirely. Tech-content posts that happen to mention
+# funding still score high overall via their other signals.
+demote_keywords:
+  # English
+  - "raises $"
+  - " seed round"
+  - " series a"
+  - " series b"
+  - " series c"
+  - " series d"
+  - " funding round"
+  - "raised $"
+  - "valuation"
+  - "secures $"
+  - "secures funding"
+  - "led the round"
+  - "led by"
+  # Korean
+  - 투자 유치
+  - 시드 라운드
+  - 시드라운드
+  - 시리즈 a
+  - 시리즈 b
+  - 시리즈 c
+  - 시리즈 d
+  - 라운드서
+  - 조달
+  - 펀딩
+  - 기업가치
+  - 1조 원
+  - 라운드 마감
+
 # Research areas you care about most. Items matching these get a relevance boost.
 research_interests:
   - robot learning
@@ -442,6 +477,7 @@ ranking:
   github_forks_log: 2.0       # NEW — forks indicate real downstream usage
   real_robot: 3.0             # bumped — practical effectiveness signal for papers
   trusted_feed: 5.0           # robotics-company tech blogs / YouTube channels — first-party signal
+  demote_penalty: -6.0        # per demote_keyword hit in title; subtracts from score
 
 # Priority thresholds applied to final score
 priority:

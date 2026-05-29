@@ -96,6 +96,14 @@ def _score_one(item: Item, cfg: dict[str, Any], days_back: int) -> tuple[float, 
     extra = item.extra if isinstance(item.extra, dict) else {}
     breakdown["trusted_feed"] = float(w.get("trusted_feed", 0)) if extra.get("trusted") else 0.0
 
+    # Pure business headlines ("Series C", "시드 라운드", "raises $50M") get a
+    # negative bump in the title so they slide from High to Mid/Low — the
+    # user wants tech content above pure funding news. A post that does
+    # tech AND mentions funding can still score high via its other signals.
+    demote_terms = [p.lower() for p in cfg.get("demote_keywords", [])]
+    demote_hits = _count_hits(title_lc, demote_terms)
+    breakdown["demote"] = demote_hits * float(w.get("demote_penalty", 0))
+
     total = round(sum(breakdown.values()), 3)
     return total, breakdown
 
