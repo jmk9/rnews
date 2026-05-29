@@ -287,7 +287,7 @@
     "source": "github",
     "title": "Denghaoyuan123/Awesome-RL-VLA",
     "url": "https://github.com/Denghaoyuan123/Awesome-RL-VLA",
-    "summary": "Curated RL-VLA reading list for robotic manipulation, organizing papers by offline, online, offline+online, and test-time RL regimes. It adds comparison tables for action type, reward sparsity, MF/MB status, sim/real validation, base VLA, and policy class, but no new algorithm.",
+    "summary": "Awesome-RL-VLA is a curated survey repository on reinforcement learning for vision-language-action models in robotic manipulation. It is useful as a map of how RL is being used to improve embodied policies that connect visual observations, language instructions, and low-level actions, especially for researchers tracking methods and papers in robot foundation models.",
     "published": "2025-11-13T16:33:34Z",
     "updated": "2026-05-18T08:32:13Z",
     "authors": [
@@ -302,7 +302,7 @@
       "license": null,
       "first_seen": "2026-05-18",
       "thumbnail": "https://raw.githubusercontent.com/Denghaoyuan123/Awesome-RL-VLA/HEAD/action.png",
-      "full_text": "Awesome RL-VLA for Robotic Manipulation 🤖 [Paper] A curated list of papers and resources on Reinforcement Learning of Vision-Language-Action (RL-VLA) models for Robotic Manipulation. This repository provides a comprehensive overview of training paradigms, methodologies, and state-of-the-art approaches in RL-VLA research. 📢 Latest News 🔥 [November 2025] Our comprehensive survey paper \"A Survey on Reinforcement Learning of Vision-Language-Action Models for Robotic Manipulation\" is now available on TechRxiv! Stay tuned for future updates. 📖 Table of Contents - Awesome RL-VLA for Robotic Manipulation 🤖 - 📢 Latest News - 📖 Table of Contents - 🔍 Overview - 🚀 Training Paradigms - Offline RL-VLA - Online RL-VLA - Test-time RL-VLA - 📚 Paper Collection - Legend - Offline RL-VLA - Online RL-VLA - Offline + Online RL-VLA - Test-time RL-VLA - 🔗 Useful Resources - 🎯 RL-VLA Action Optimization - Base VLA Models - Datasets \\& Benchmarks - Frameworks \\& Tools - 🤝 Contributing - Contribution Guidelines - 📄 Citation - ⭐ Star History 🔍 Overview RL training is crucial for enabling VLAs to generalize out-of-distribution (OOD) from large-scale pre-trained data. Existing RL-VLA training paradigms can be categorized into three types based on how agents obtain and utilize feedback from the environment: - Online RL-VLA : Direct interaction with the environment during training - Offline RL-VLA : Learning from static datasets without further environmental interaction - Test-time RL-VLA : Models adapt their behavior during deployment without altering parameters 🚀 Training Paradigms Offline RL-VLA Offline RL trains VLA models on pre-collected static datasets, enabling learning independently from environment interactions. This paradigm is suitable for high-risk or resource-constrained deployment scenarios. Key Research Directions: - Data Utilization : Effective utilization of static datasets for policy improvement - Objective Modification : Customizing RL objectives for novel architectures and data augmentation Online RL-VLA Online RL-VLA enables interactive policy learning through continuous environment interaction, empowering pre-trained VLAs with adaptive closed-loop control capability for real-world OOD environments. Key Research Directions: - Policy Optimization : Direct policy improvement based on environmental rewards - Sample Efficiency : Learning effective policies with limited interaction budget - Active Exploration : Efficient exploration strategies for higher performance gains - Training Stability : Ensuring consistent policy updates and convergence - Infrastructure : Scalable frameworks for online RL-VLA training Test-time RL-VLA Test-time RL-VLA adapts behavior during deployment through lightweight updates, addressing the expensive cost of full model fine-tuning in real-world scenarios. Key Adaptation Mechanisms: - Value Guidance : Using pre-trained value functions to influence action selection - Memory Buffer Guidance : Retrieving relevant historical experiences during inference - Planning-guided Adaptation : Explicit reasoning over future action sequences 📚 Paper Collection Legend - Action : AR (Autoregressive), Diffusion, Flow (Flow-matching) - Reward : D (Dense Reward), S (Sparse Reward) - Model Type : MB (Model-based), MF (Model-free) - Environment : Sim. (Simulation), Real (Real-world) - Task : MT (Multi-task), ST (Single-task) - Policy : On-Policy, Off-Policy, Hybrid (mixed on/off-policy), Test-time (inference-time adaptation) Offline RL-VLA Method Date Publication Sim. Real Base VLA Model Action Reward Algorithm Policy Type Project -------- ------ ------------- ------ ------ ---------------- -------- -------- ----------- --- ------ --------- Q-Transformer 2023.10 CoRL23🔗 ✓ ✗ Transformer AR S CQL Off-Policy MF 🔗 PAC 2024.02 ICML24🔗 ✓ ✓ Perceiver-Actor-Critic AR S AC Off-Policy MF 🔗 GeRM(Quadruped Robot) 2024.03 IROS24🔗 ✓ ✗ Transformer-MoE AR S CQL Off-Policy MF 🔗 MoRE(Quadruped Robot) 2025.03 ICRA25🔗 ✗ ✓ MLLM-MoE AR S CQL Off-Policy MF -",
+      "full_text": "A Survey on Reinforcement Learning of Vision-Language-Action Models for Robotic Manipulation",
       "readme": "Awesome RL-VLA for Robotic Manipulation 🤖 [Paper] A curated list of papers and resources on Reinforcement Learning of Vision-Language-Action (RL-VLA) models for Robotic Manipulation. This repository provides a comprehensive overview of training paradigms, methodologies, and state-of-the-art approaches in RL-VLA research. 📢 Latest News 🔥 [November 2025] Our comprehensive survey paper \"A Survey on Reinforcement Learning of Vision-Language-Action Models for Robotic Manipulation\" is now available on TechRxiv! Stay tuned for future updates. 📖 Table of Contents - Awesome RL-VLA for Robotic Manipulation 🤖 - 📢 Latest News - 📖 Table of Contents - 🔍 Overview - 🚀 Training Paradigms - Offline RL-VLA - Online RL-VLA - Test-time RL-VLA - 📚 Paper Collection - Legend - Offline RL-VLA - Online RL-VLA - Offline + Online RL-VLA - Test-time RL-VLA - 🔗 Useful Resources - 🎯 RL-VLA Action Optimization - Base VLA Models - Datasets \\& Benchmarks - Frameworks \\& Tools - 🤝 Contributing - Contribution Guidelines - 📄 Citation - ⭐ Star History 🔍 Overview RL training is crucial for enabling VLAs to generalize out-of-distribution (OOD) from large-scale pre-trained data. Existing RL-VLA training paradigms can be categorized into three types based on how agents obtain and utilize feedback from the environment: - Online RL-VLA : Direct interaction with the environment during training - Offline RL-VLA : Learning from static datasets without further environmental interaction - Test-time RL-VLA : Models adapt their behavior during deployment without altering parameters 🚀 Training Paradigms Offline RL-VLA Offline RL trains VLA models on pre-collected static datasets, enabling learning independently from environment interactions. This paradigm is suitable for high-risk or resource-constrained deployment scenarios. Key Research Directions: - Data Utilization : Effective utilization of static datasets for policy improvement - Objective Modification : Customizing RL objectives for novel architectures and data augmentation Online RL-VLA Online RL-VLA enables interactive policy learning through continuous environment interaction, empowering pre-trained VLAs with adaptive closed-loop control capability for real-world OOD environments. Key Research Directions: - Policy Optimization : Direct policy improvement based on environmental rewards - Sample Efficiency : Learning effective policies with limited interaction budget - Active Exploration : Efficient exploration strategies for higher performance gains - Training Stability : Ensuring consistent policy updates and convergence - Infrastructure : Scalable frameworks for online RL-VLA training Test-time RL-VLA Test-time RL-VLA adapts behavior during deployment through lightweight updates, addressing the expensive cost of full model fine-tuning in real-world scenarios. Key Adaptation Mechanisms: - Value Guidance : Using pre-trained value functions to influence action selection - Memory Buffer Guidance : Retrieving relevant historical experiences during inference - Planning-guided Adaptation : Explicit reasoning over future action sequences 📚 Paper Collection Legend - Action : AR (Autoregressive), Diffusion, Flow (Flow-matching) - Reward : D (Dense Reward), S (Sparse Reward) - Model Type : MB (Model-based), MF (Model-free) - Environment : Sim. (Simulation), Real (Real-world) - Task : MT (Multi-task), ST (Single-task) - Policy : On-Policy, Off-Policy, Hybrid (mixed on/off-policy), Test-time (inference-time adaptation) Offline RL-VLA Method Date Publication Sim. Real Base VLA Model Action Reward Algorithm Policy Type Project -------- ------ ------------- ------ ------ ---------------- -------- -------- ----------- --- ------ --------- Q-Transformer 2023.10 CoRL23🔗 ✓ ✗ Transformer AR S CQL Off-Policy MF 🔗 PAC 2024.02 ICML24🔗 ✓ ✓ Perceiver-Actor-Critic AR S AC Off-Policy MF 🔗 GeRM(Quadruped Robot) 2024.03 IROS24🔗 ✓ ✗ Transformer-MoE AR S CQL Off-Policy MF 🔗 MoRE(Quadruped Robot) 2025.03 ICRA25🔗 ✗ ✓ MLLM-MoE AR S CQL Off-Policy MF -",
       "summary_kind": "llm"
     },
@@ -570,7 +570,7 @@
     "source": "github",
     "title": "unitreerobotics/unitree_rl_lab",
     "url": "https://github.com/unitreerobotics/unitree_rl_lab",
-    "summary": "IsaacLab-based RL environments let researchers train policies for Unitree Go2, H1, and G1-29dof robots, with standalone tasks and robot assets via USD or URDF. The repo also documents MuJoCo sim2sim validation and direct sim2real deployment, indicating integration rather than a new RL method.",
+    "summary": "unitree_rl_lab provides reinforcement learning implementations for Unitree robots built on IsaacLab, giving researchers a starting point for training and experimenting with learned robot behaviors in simulation. It is useful as a practical bridge between IsaacLab-based RL workflows and Unitree hardware targets, though the provided description does not specify supported robots, tasks, or reported performance.",
     "published": "2025-06-05T09:40:22Z",
     "updated": "2026-05-18T07:46:41Z",
     "authors": [
@@ -585,7 +585,7 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18",
       "thumbnail": "https://oss-global-cdn.unitree.com/static/d879adac250648c587d3681e90658b49_480x397.gif",
-      "full_text": "Unitree RL Lab Overview This project provides a set of reinforcement learning environments for Unitree robots, built on top of IsaacLab. Currently supports Unitree Go2 , H1 and G1-29dof robots. Isaac Lab Mujoco Physical --- --- --- Installation - Install Isaac Lab by following the installation guide. - Install the Unitree RL IsaacLab standalone environments. - Clone or copy this repository separately from the Isaac Lab installation (i.e. outside the IsaacLab directory): - Use a python interpreter that has Isaac Lab installed, install the library in editable mode using: - Download unitree robot description files Method 1: Using USD Files - Download unitree usd files from unitree model, keeping folder structure - Config UNITREE MODEL DIR in source/unitree rl lab/unitree rl lab/assets/robots/unitree.py . Method 2: Using URDF Files [Recommended] Only for Isaacsim = 5.0 - Download unitree robot urdf files from unitree ros - Config UNITREE ROS DIR in source/unitree rl lab/unitree rl lab/assets/robots/unitree.py . - [Optional]: change robot cfg.spawn if you want to use urdf files - Verify that the environments are correctly installed by: - Listing the available tasks: - Running a task: - Inference with a trained agent: Deploy After the model training is completed, we need to perform sim2sim on the trained strategy in Mujoco to test the performance of the model. Then deploy sim2real. Setup Sim2Sim Installing the unitree mujoco. - Set the robot at /simulate/config.yaml to g1 - Set domain id to 0 - Set enable elastic hand to 1 - Set use joystck to 1. Sim2Real You can use this program to control the robot directly, but make sure the on-borad control program has been closed. Acknowledgements This repository is built upon the support and contributions of the following open-source projects. Special thanks to: - IsaacLab: The foundation for training and running codes. - mujoco: Providing powerful simulation functionalities. - robot lab: Referenced for project structure and parts of the implementation. - whole body tracking: Versatile humanoid control framework for motion tracking.",
+      "full_text": "This is a repository for reinforcement learning implementation for Unitree robots, based on IsaacLab.",
       "readme": "Unitree RL Lab Overview This project provides a set of reinforcement learning environments for Unitree robots, built on top of IsaacLab. Currently supports Unitree Go2 , H1 and G1-29dof robots. Isaac Lab Mujoco Physical --- --- --- Installation - Install Isaac Lab by following the installation guide. - Install the Unitree RL IsaacLab standalone environments. - Clone or copy this repository separately from the Isaac Lab installation (i.e. outside the IsaacLab directory): - Use a python interpreter that has Isaac Lab installed, install the library in editable mode using: - Download unitree robot description files Method 1: Using USD Files - Download unitree usd files from unitree model, keeping folder structure - Config UNITREE MODEL DIR in source/unitree rl lab/unitree rl lab/assets/robots/unitree.py . Method 2: Using URDF Files [Recommended] Only for Isaacsim = 5.0 - Download unitree robot urdf files from unitree ros - Config UNITREE ROS DIR in source/unitree rl lab/unitree rl lab/assets/robots/unitree.py . - [Optional]: change robot cfg.spawn if you want to use urdf files - Verify that the environments are correctly installed by: - Listing the available tasks: - Running a task: - Inference with a trained agent: Deploy After the model training is completed, we need to perform sim2sim on the trained strategy in Mujoco to test the performance of the model. Then deploy sim2real. Setup Sim2Sim Installing the unitree mujoco. - Set the robot at /simulate/config.yaml to g1 - Set domain id to 0 - Set enable elastic hand to 1 - Set use joystck to 1. Sim2Real You can use this program to control the robot directly, but make sure the on-borad control program has been closed. Acknowledgements This repository is built upon the support and contributions of the following open-source projects. Special thanks to: - IsaacLab: The foundation for training and running codes. - mujoco: Providing powerful simulation functionalities. - robot lab: Referenced for project structure and parts of the implementation. - whole body tracking: Versatile humanoid control framework for motion tracking.",
       "summary_kind": "llm"
     },
@@ -1943,7 +1943,7 @@
     "source": "github",
     "title": "showlab/Awesome-Robotics-Diffusion",
     "url": "https://github.com/showlab/Awesome-Robotics-Diffusion",
-    "summary": "Awesome Robot Diffusion A curated list of recent robot learning papers incorporating diffusion models for manipulation, navigation, planning etc. The paper list is structured so that each paper falls into only one place. While some methods could fit into multiple places, we place each one in the most relevant class.",
+    "summary": "showlab/Awesome-Robotics-Diffusion collects recent robot learning papers that use diffusion models for robotics tasks, making it a quick index for tracking how diffusion is being applied across manipulation, planning, policy learning, and related settings. It is useful as a survey-style reading list rather than a standalone method or tool, helping researchers scan the literature and identify relevant papers in the diffusion-for-robotics space.",
     "published": "2024-12-23T14:18:36Z",
     "updated": "2026-05-18T06:42:50Z",
     "authors": [
@@ -1957,7 +1957,7 @@
       "open_issues": 0,
       "license": null,
       "first_seen": "2026-05-18",
-      "full_text": "Awesome Robot Diffusion A curated list of recent robot learning papers incorporating diffusion models for manipulation, navigation, planning etc. The paper list is structured so that each paper falls into only one place. While some methods could fit into multiple places, we place each one in the most relevant class. Please refer to our survey paper below for detailed review, which has been accepted to International Journal of Computer Vision (IJCV). Diffusion Models in Robotics: A survey Xiaokang Liu 1 &nbsp; Yuchen Ma 1 &nbsp; Chen Gao 1 &nbsp; Mike Zheng Shou 1 &nbsp; 1 Show Lab, National University of Singapore&nbsp; If our work helps you in your research, please kindly cite our paper 😀. ---- (Source: Make-A-Video , Tune-A-Video , and Fate/Zero .) -- Table of Contents - Benchmarks - Diffusion as Policy - Diffusion as Synthesizer - Task Objectives and Applications - Robot Learning Utilizing Diffusion Model Properties - Citation Benchmarks + Learning Complex Dexterous Manipulation with Deep Reinforcement Learning and Demonstrations (RSS 2018) + Meta-World: A Benchmark and Evaluation for Multi-Task and Meta Reinforcement Learning (CoRL 2020) + Bridge data: Boosting generalization of robotic skills with cross-domain datasets (RSS 2022) + Towards Human-Level Bimanual Dexterous Manipulation with Reinforcement Learning (NeurIPS 2022 Datasets and Benchmarks Track) + Dexart: Benchmarking generalizable dexterous manipulation with articulated objects (CVPR 2023) + BridgeData V2: A Dataset for Robot Learning at Scale (CoRL 2023) + CALVIN: A Benchmark for Language-conditioned Policy Learning for Long-horizon Robot Manipulation Tasks (RAL 2022) + RLBench: The Robot Learning Benchmark & Learning Environment (RAL 2020) + LIBERO: Benchmarking Knowledge Transfer in Lifelong Robot Learning (NeurIPS 2023 Dataset and Benchmark Track) Diffusion as Policy + Diffusion policy: Visuomotor policy learning via action diffusion (RSS 2023) Algorithmic Level (Diffusion Variations) SGM + Goal-conditioned imitation learning using score-based diffusion policies (RSS 2023) + Movement Primitive Diffusion: Learning Gentle Robotic Manipulation of Deformable Objects + Precise Pick-and-Place using Score-Based Diffusion Networks Consistency Model + Consistency policy: Accelerated visuomotor policies via consistency distillation (RSS 2024) + ManiCM: Real-time 3D Diffusion Policy via Consistency Model for Robotic Manipulation Flow Matching + Vision-Language-Affordance-based Robot Manipulation with Flow Matching (Sep 2024) + Flow Matching Imitation Learning for Multi-Support Manipulation + FlowPolicy: Enabling Fast and Robust 3D Flow-based Policy via Consistency Flow Matching for Robot Manipulation + ACTIONFLOW: Equivariant, Accurate, and Efficient Policies with Spatially Symmetric Flow Matching + Learning Robotic Manipulation Policies from Point Clouds with Conditional Flow Matching + Fast and Robust Visuomotor Riemannian Flow Matching Policy + Safe Flow Matching: Robot Motion Planning with Control Barrier Functions Architecture Level DiT + RDT-1B: a Diffusion Foundation Model for Bimanual Manipulation (Dec 2024) + Diffusion Transformer Policy + Scaling Diffusion Policy in Transformer to 1 Billion Parameters for Robotic Manipulation + Prediction with Action: Visual Policy Learning via Joint Denoising Process + The Ingredients for Robotic Diffusion Transformers Equivariant Architecture + EquiBot: SIM (3)-Equivariant Diffusion Policy for Generalizable and Data Efficient Learning (CoRL 2024) + Equivariant Diffusion Policy (CoRL 2024) + Diffusion-EDFs: Bi-equivariant Denoising Generative Modeling on SE(3) for Visual Robotic Manipulation + ET-SEED: Efficient Trajectory-Level SE(3) Equivariant Diffusion Policy Mamba Models + MaIL: Improving Imitation Learning with Mamba + Mamba Policy: Towards Efficient 3D Diffusion Policy with Hybrid Selective State models Hierarchical Design + SkillDiffuser: Interpretable Hierarchical Planning via Skill Abstractions in Diffusion-Based T",
+      "full_text": "A curated list of recent robot learning papers incorporating diffusion models for robotics tasks.",
       "readme": "Awesome Robot Diffusion A curated list of recent robot learning papers incorporating diffusion models for manipulation, navigation, planning etc. The paper list is structured so that each paper falls into only one place. While some methods could fit into multiple places, we place each one in the most relevant class. Please refer to our survey paper below for detailed review, which has been accepted to International Journal of Computer Vision (IJCV). Diffusion Models in Robotics: A survey Xiaokang Liu 1 &nbsp; Yuchen Ma 1 &nbsp; Chen Gao 1 &nbsp; Mike Zheng Shou 1 &nbsp; 1 Show Lab, National University of Singapore&nbsp; If our work helps you in your research, please kindly cite our paper 😀. ---- (Source: Make-A-Video , Tune-A-Video , and Fate/Zero .) -- Table of Contents - Benchmarks - Diffusion as Policy - Diffusion as Synthesizer - Task Objectives and Applications - Robot Learning Utilizing Diffusion Model Properties - Citation Benchmarks + Learning Complex Dexterous Manipulation with Deep Reinforcement Learning and Demonstrations (RSS 2018) + Meta-World: A Benchmark and Evaluation for Multi-Task and Meta Reinforcement Learning (CoRL 2020) + Bridge data: Boosting generalization of robotic skills with cross-domain datasets (RSS 2022) + Towards Human-Level Bimanual Dexterous Manipulation with Reinforcement Learning (NeurIPS 2022 Datasets and Benchmarks Track) + Dexart: Benchmarking generalizable dexterous manipulation with articulated objects (CVPR 2023) + BridgeData V2: A Dataset for Robot Learning at Scale (CoRL 2023) + CALVIN: A Benchmark for Language-conditioned Policy Learning for Long-horizon Robot Manipulation Tasks (RAL 2022) + RLBench: The Robot Learning Benchmark & Learning Environment (RAL 2020) + LIBERO: Benchmarking Knowledge Transfer in Lifelong Robot Learning (NeurIPS 2023 Dataset and Benchmark Track) Diffusion as Policy + Diffusion policy: Visuomotor policy learning via action diffusion (RSS 2023) Algorithmic Level (Diffusion Variations) SGM + Goal-conditioned imitation learning using score-based diffusion policies (RSS 2023) + Movement Primitive Diffusion: Learning Gentle Robotic Manipulation of Deformable Objects + Precise Pick-and-Place using Score-Based Diffusion Networks Consistency Model + Consistency policy: Accelerated visuomotor policies via consistency distillation (RSS 2024) + ManiCM: Real-time 3D Diffusion Policy via Consistency Model for Robotic Manipulation Flow Matching + Vision-Language-Affordance-based Robot Manipulation with Flow Matching (Sep 2024) + Flow Matching Imitation Learning for Multi-Support Manipulation + FlowPolicy: Enabling Fast and Robust 3D Flow-based Policy via Consistency Flow Matching for Robot Manipulation + ACTIONFLOW: Equivariant, Accurate, and Efficient Policies with Spatially Symmetric Flow Matching + Learning Robotic Manipulation Policies from Point Clouds with Conditional Flow Matching + Fast and Robust Visuomotor Riemannian Flow Matching Policy + Safe Flow Matching: Robot Motion Planning with Control Barrier Functions Architecture Level DiT + RDT-1B: a Diffusion Foundation Model for Bimanual Manipulation (Dec 2024) + Diffusion Transformer Policy + Scaling Diffusion Policy in Transformer to 1 Billion Parameters for Robotic Manipulation + Prediction with Action: Visual Policy Learning via Joint Denoising Process + The Ingredients for Robotic Diffusion Transformers Equivariant Architecture + EquiBot: SIM (3)-Equivariant Diffusion Policy for Generalizable and Data Efficient Learning (CoRL 2024) + Equivariant Diffusion Policy (CoRL 2024) + Diffusion-EDFs: Bi-equivariant Denoising Generative Modeling on SE(3) for Visual Robotic Manipulation + ET-SEED: Efficient Trajectory-Level SE(3) Equivariant Diffusion Policy Mamba Models + MaIL: Improving Imitation Learning with Mamba + Mamba Policy: Towards Efficient 3D Diffusion Policy with Hybrid Selective State models Hierarchical Design + SkillDiffuser: Interpretable Hierarchical Planning via Skill Abstractions in Diffusion-Based T",
       "summary_kind": "llm"
     },
@@ -1986,7 +1986,7 @@
     "source": "github",
     "title": "iit-DLSLab/basic-locomotion-isaaclab",
     "url": "https://github.com/iit-DLSLab/basic-locomotion-isaaclab",
-    "summary": "DLSLab’s `basic-locomotion-isaaclab` adds IsaacLab-based locomotion environments and training utilities for multiple quadruped robots. It is aimed at getting basic quadruped policies through the full path from simulation training to sim-to-sim checks and eventual sim-to-real transfer, making it useful as a practical starting point for robot locomotion experiments rather than a standalone algorithmic contribution.",
+    "summary": "DLSLab’s basic-locomotion-isaaclab is an IsaacLab extension for training and evaluating basic locomotion policies across multiple quadruped robots. It is aimed at practical deployment workflows, with pipelines for sim-to-sim transfer and sim-to-real experiments rather than only simulation demos.",
     "published": "2025-06-20T08:24:35Z",
     "updated": "2026-05-17T15:10:45Z",
     "authors": [
@@ -2121,7 +2121,7 @@
     "source": "github",
     "title": "VectorRobotics/vector-os-nano",
     "url": "https://github.com/VectorRobotics/vector-os-nano",
-    "summary": "GitHub repo for Vector OS, a cross-embodiment robot OS from CMU RI for Unitree Go2 and SO-ARM101. It claims industrial-grade autonomous navigation, natural-language control, and sim-to-real transfer on specific robot platforms.",
+    "summary": "Vector OS Nano is a cross-embodiment robot operating system aimed at running autonomous navigation and natural-language control across platforms, specifically highlighting Unitree Go2 and SO-ARM101 support. It appears geared toward sim-to-real robotics workflows, combining industrial-style navigation with language-command interfaces in a CMU Robotics Institute project.",
     "published": "2026-03-19T22:16:02Z",
     "updated": "2026-05-18T07:05:28Z",
     "authors": [
@@ -2251,7 +2251,7 @@
     "source": "github",
     "title": "Toni-SM/skrl",
     "url": "https://github.com/Toni-SM/skrl",
-    "summary": "skrl is a modular reinforcement-learning library implemented in PyTorch, JAX, and NVIDIA Warp. It supports Gymnasium/Gym, NVIDIA Isaac Lab, MuJoCo Playground, and other environments, with code released on GitHub.",
+    "summary": "skrl is a modular reinforcement learning library for training agents in PyTorch, JAX, and NVIDIA Warp across environments such as Gymnasium/Gym, NVIDIA Isaac Lab, and MuJoCo Playground. It is useful as an engineering toolkit for robotics and simulation-heavy RL workflows where researchers need interchangeable backends and environment integrations rather than a single monolithic training setup.",
     "published": "2021-10-18T07:53:11Z",
     "updated": "2026-05-11T09:35:05Z",
     "authors": [
@@ -2473,7 +2473,7 @@
     "source": "github",
     "title": "RoboVerseOrg/RoboVerse",
     "url": "https://github.com/RoboVerseOrg/RoboVerse",
-    "summary": "GitHub repo for RoboVerse, a unified robot-learning simulation platform, synthetic dataset and benchmark. It claims 510.5k trajectories across 276 manipulation task categories and 5.5k assets, with >50M state transitions. Code, docs and data are linked; benchmarks cover imitation learning and RL.",
+    "summary": "RoboVerse aims to bundle a unified robot-learning platform with datasets and benchmarks for studying scalable, generalizable robot policies. From the available description, it is positioned less as a single model than as shared infrastructure for comparing methods and building robot-learning pipelines across tasks and environments.",
     "published": "2025-04-04T03:00:06Z",
     "updated": "2026-05-18T17:08:28Z",
     "authors": [
@@ -3186,7 +3186,7 @@
     "source": "github",
     "title": "yubohann/Awesome-World-Model-Flow-RL-Multi-Agent-Robotic-Object-Centric",
     "url": "https://github.com/yubohann/Awesome-World-Model-Flow-RL-Multi-Agent-Robotic-Object-Centric",
-    "summary": "GitHub repo documenting an object-centric world-model and flow-policy RL approach for multi-agent robotics in IsaacLab and ROS2. It traces the engineering to a national top-three RoboCup China visual challenge entry, useful as an implementation reference.",
+    "summary": "Object-centric world modeling is paired with flow-policy reinforcement learning to train multi-agent robotic behavior in IsaacLab, with ROS2 integration for moving toward deployable systems. The repo appears to package the engineering pipeline behind a national top-three RoboCup China visual challenge entry, making it useful as a reference for object-focused perception/control experiments in multi-agent robotics.",
     "published": "2026-05-03T07:06:21Z",
     "updated": "2026-05-14T04:47:06Z",
     "authors": [
@@ -3427,7 +3427,7 @@
     "source": "github",
     "title": "ncbdrck/UniROS",
     "url": "https://github.com/ncbdrck/UniROS",
-    "summary": "UniROS provides a robotics reinforcement-learning workflow that can train policies in simulation and transfer them to real robots. It is useful as an end-to-end setup for experimenting with robot learning across sim and real-world environments, rather than treating those stages as separate pipelines.",
+    "summary": "UniROS provides a robotics reinforcement-learning setup for training policies across simulation and real hardware. It is useful as a unified workflow for developing, testing, and transferring robot learning experiments without having to treat simulated and real-world training as separate pipelines.",
     "published": "2023-12-07T09:27:33Z",
     "updated": "2026-05-14T19:59:10Z",
     "authors": [
@@ -3659,7 +3659,7 @@
     "source": "github",
     "title": "isri-aist/RoboManipBaselines",
     "url": "https://github.com/isri-aist/RoboManipBaselines",
-    "summary": "RoboManipBaselines is a GitHub software framework for robotic manipulation baselines. It integrates multiple imitation-learning methods with benchmark environments, giving researchers code to run and compare methods in one setup.",
+    "summary": "RoboManipBaselines is a software framework that brings together imitation learning methods and benchmark environments for robotic manipulation. It is useful as a common starting point for comparing manipulation policies, running baseline experiments, and testing imitation-learning approaches across standardized robot-control tasks.",
     "published": "2024-03-23T01:46:05Z",
     "updated": "2026-05-12T14:07:39Z",
     "authors": [
@@ -3705,7 +3705,7 @@
     "source": "github",
     "title": "arpitg1304/forge",
     "url": "https://github.com/arpitg1304/forge",
-    "summary": "forge is a robotics dataset utility for converting between RLDS, LeRobot v2/v3, Zarr, HDF5, and Rosbag formats while also supporting inspection, visualization, and analysis. It is aimed at making data plumbing easier across common robot-learning workflows, especially OpenVLA, Octo, LeRobot, and Diffusion Policy pipelines, with HuggingFace Hub integration for sharing and reuse.",
+    "summary": "forge is a robotics data toolkit for moving datasets between formats such as RLDS, LeRobot v2/v3, Zarr, HDF5, and Rosbag, with utilities to inspect, visualize, and analyze the converted data. It is aimed at workflows around OpenVLA, Octo, LeRobot, and Diffusion Policy, and integrates with HuggingFace Hub so datasets can be prepared and shared in the formats those robot-learning stacks expect.",
     "published": "2026-01-22T04:51:26Z",
     "updated": "2026-04-28T05:37:09Z",
     "authors": [
@@ -3735,7 +3735,7 @@
       "first_seen": "2026-05-18",
       "thumbnail": "https://raw.githubusercontent.com/arpitg1304/forge/HEAD/docs/assets/rerun_viz.png",
       "summary_kind": "llm",
-      "full_text": "Convert between robotics dataset formats (RLDS, LeRobot v2/v3, Zarr, HDF5, Rosbag). Inspect, visualize, and analyze datasets. Works with HuggingFace Hub. Built for OpenVLA, Octo, LeRobot, and Diffusion Policy workflows."
+      "full_text": "Robotics Data Toolkit | Convert between robotics dataset formats (RLDS, LeRobot v2/v3, Zarr, HDF5, Rosbag). Inspect, visualize, and analyze datasets. Works with HuggingFace Hub. Built for OpenVLA, Octo, LeRobot, and Diffusion Policy workflows."
     },
     "tags": [
       "#IL",
@@ -3852,7 +3852,7 @@
     "source": "github",
     "title": "DeepRoboticsLab/sdk_deploy",
     "url": "https://github.com/DeepRoboticsLab/sdk_deploy",
-    "summary": "DeepRoboticsLab/sdk_deploy provides deployment support for taking robot policies from simulation into both sim-to-sim testing and real Deep Robotics hardware. It currently targets the M20 and Lite3 robots, making it useful as a bridge between trained controllers and practical evaluation on supported quadruped platforms.",
+    "summary": "DeepRoboticsLab/sdk_deploy provides deployment code for moving robot policies from simulation to simulation and from simulation onto Deep Robotics hardware. It currently targets the M20 and Lite3 robots, making it useful as a practical bridge between trained control policies and real Deep Robotics platforms.",
     "published": "2025-11-08T13:09:36Z",
     "updated": "2026-05-13T01:47:17Z",
     "authors": [
@@ -4346,7 +4346,7 @@
     "source": "github",
     "title": "LightwheelAI/LW-BenchHub",
     "url": "https://github.com/LightwheelAI/LW-BenchHub",
-    "summary": "GitHub repo for LW-BenchHub, a unified embodied-AI benchmark hub built on Isaac Lab-Arena. It provides consistent interfaces, realistic environments, multi-robot support, and large-scale evaluation.",
+    "summary": "LW-BenchHub packages embodied-AI benchmarking around Isaac Lab–Arena, giving robot-policy researchers a common interface for realistic simulation, multi-robot tasks, reproducible RL configurations, and large-scale evaluation. It currently bundles Lightwheel-Libero-Tasks and Lightwheel-RoboCasa-Tasks, totaling 268 tasks, so it is most useful as an end-to-end testbed for comparing policies across manipulation and household-style environments without rebuilding the evaluation stack.",
     "published": "2025-07-26T11:15:01Z",
     "updated": "2026-05-18T07:37:55Z",
     "authors": [
@@ -4362,7 +4362,7 @@
       "first_seen": "2026-05-18",
       "thumbnail": "https://raw.githubusercontent.com/LightwheelAI/LW-BenchHub/HEAD/./images/lw-benchhub-kitchens.png",
       "summary_kind": "llm",
-      "full_text": "LW-BenchHub is a unified benchmark hub built on Isaac Lab–Arena for embodied AI, providing consistent interfaces, realistic environments, multi-robot support, and large-scale evaluation."
+      "full_text": "LW-BenchHub is a unified benchmark hub built on Isaac Lab–Arena for embodied AI, providing consistent interfaces, realistic environments, multi-robot support, and large-scale evaluation. It includes Lightwheel-Libero-Tasks and Lightwheel-RoboCasa-Tasks with 268 tasks, reproducible RL configs, and a full pipeline for benchmarking robot policies."
     },
     "tags": [
       "#RL",
@@ -4783,7 +4783,7 @@
     "source": "github",
     "title": "ShengqianChen/DreamWaQ_Go2W",
     "url": "https://github.com/ShengqianChen/DreamWaQ_Go2W",
-    "summary": "GitHub repo for RL locomotion on the Go2W legged-wheel robot using NVIDIA Isaac Gym. Code is available, but the snippet gives no benchmarks or real-robot results.",
+    "summary": "ShengqianChen/DreamWaQ_Go2W is an Isaac Gym reinforcement-learning project for training locomotion policies on the Unitree Go2W legged-wheel robot. It appears aimed at simulating and learning hybrid wheel-leg movement, making it useful as a starting point for researchers working on Go2W control policies or legged-wheeled locomotion experiments in NVIDIA’s GPU-accelerated simulator.",
     "published": "2025-05-26T13:03:44Z",
     "updated": "2026-05-12T16:47:47Z",
     "authors": [
@@ -5065,7 +5065,7 @@
     "source": "github",
     "title": "gbionics/jaxsim",
     "url": "https://github.com/gbionics/jaxsim",
-    "summary": "gbionics/jaxsim is a GitHub repo for differentiable physics and multibody dynamics. It targets control and robot-learning workflows; code is released, but no benchmarks or real-robot results are stated.",
+    "summary": "JaxSim is a differentiable rigid-body physics engine built in JAX for simulating multibody robots and exposing dynamics in a form useful for gradient-based control and robot learning. Its value is in combining robot dynamics, simulation, and automatic differentiation in one library, so researchers can prototype controllers or learning pipelines that need fast batched computation and derivatives through the physics.",
     "published": "2022-01-31T16:44:28Z",
     "updated": "2026-05-08T09:34:39Z",
     "authors": [
@@ -5128,7 +5128,7 @@
     "source": "github",
     "title": "lachlanhurst/balance-robot-mujoco-rl",
     "url": "https://github.com/lachlanhurst/balance-robot-mujoco-rl",
-    "summary": "GitHub repo for training a self-balancing robot controller with reinforcement learning in MuJoCo using Stable-Baselines3 and PyTorch. Actionable as released code, but the description gives no metrics or real-robot validation.",
+    "summary": "Implements a reinforcement-learning setup for training a self-balancing robot in MuJoCo, using Stable-Baselines3 and PyTorch as the learning stack. It is mainly useful as a practical simulation-and-training repo for experimenting with balance control policies before moving toward a physical robot or more complex locomotion tasks.",
     "published": "2024-09-14T03:56:17Z",
     "updated": "2026-05-12T23:52:22Z",
     "authors": [
@@ -5500,7 +5500,7 @@
     "source": "github",
     "title": "ncbdrck/realros",
     "url": "https://github.com/ncbdrck/realros",
-    "summary": "RealROS is a Python framework that connects reinforcement learning workflows directly to ROS so agents can train in real time on physical robots rather than only in simulation. It is organized as a modular toolkit for building real-world robotics environments, making it useful for researchers who want reusable RL infrastructure around ROS-controlled hardware.",
+    "summary": "RealROS is a Python framework that connects reinforcement-learning workflows directly to ROS, so agents can train and interact with physical robots in real time rather than only in simulation. Its value is in packaging real-world robot environments in a modular way, reducing the glue code needed to run RL experiments on hardware.",
     "published": "2023-07-18T14:37:04Z",
     "updated": "2026-05-14T19:59:13Z",
     "authors": [
@@ -5987,7 +5987,7 @@
     "source": "github",
     "title": "otr-ebla/mujoco-rl-nav",
     "url": "https://github.com/otr-ebla/mujoco-rl-nav",
-    "summary": "GitHub repo for reinforcement-learning-based human-aware mobile robot navigation in MuJoCo using laser-based perception. Actionable as released code for MuJoCo environments; no benchmarks or real-robot results are stated.",
+    "summary": "Implements a reinforcement-learning setup for human-aware mobile robot navigation in MuJoCo, using laser-based perception rather than vision or maps. It appears aimed at training and evaluating navigation policies that account for nearby people in simulated environments, making it useful as a lightweight testbed for social navigation experiments.",
     "published": "2025-05-16T09:32:07Z",
     "updated": "2026-05-13T08:09:02Z",
     "authors": [
@@ -6324,7 +6324,7 @@
     "source": "github",
     "title": "MarcDcls/mjlab_upkie",
     "url": "https://github.com/MarcDcls/mjlab_upkie",
-    "summary": "RL environments for the Upkie wheeled biped robot, packaged around training and evaluating reinforcement-learning controllers for balancing and locomotion. It is useful as a simulation and experimentation layer for researchers working on Upkie-specific control policies, though the provided description does not specify particular tasks, algorithms, or results.",
+    "summary": "MarcDcls/mjlab_upkie provides reinforcement-learning environments for training and evaluating control policies on the Upkie wheeled biped robot. It is useful as simulation infrastructure for researchers who want to prototype RL behaviors for Upkie without starting from a bare robot model or environment setup.",
     "published": "2025-11-05T10:41:48Z",
     "updated": "2026-05-08T08:06:26Z",
     "authors": [
@@ -7143,7 +7143,7 @@
     "source": "github",
     "title": "NJU-R-L-Group-Embodied-Lab/lavira-code",
     "url": "https://github.com/NJU-R-L-Group-Embodied-Lab/lavira-code",
-    "summary": "LaViRA targets zero-shot vision-and-language navigation in continuous environments by translating language and visual context into executable robot actions. The repository is the code release for an ICRA 2026 project, useful for researchers looking at embodied navigation methods that bridge high-level instructions and low-level robot control without task-specific training examples.",
+    "summary": "LaViRA targets zero-shot vision-and-language navigation in continuous robot environments by translating language and visual observations into robot actions. The repository appears to contain the code for the ICRA 2026 method, aimed at letting embodied agents follow natural-language instructions without task-specific training in the deployment environment.",
     "published": "2026-03-03T10:10:12Z",
     "updated": "2026-05-14T13:29:40Z",
     "authors": [
