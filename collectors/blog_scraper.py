@@ -68,11 +68,12 @@ _MONTHS = (
     r"Aug(?:ust)?|Sept?(?:ember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?"
 )
 _BODY_DATE = re.compile(
-    r"\b("
-    r"\d{4}-\d{2}-\d{2}"                                 # 2026-05-27
-    r"|(?:" + _MONTHS + r")\s+\d{1,2}(?:,)?\s+\d{4}"     # May 27 2026 / May 27, 2026
-    r"|\d{1,2}\s+(?:" + _MONTHS + r")\s+\d{4}"           # 27 May 2026
-    r")\b",
+    r"("
+    r"\b\d{4}-\d{2}-\d{2}\b"                                            # 2026-05-27
+    r"|\b(?:" + _MONTHS + r")\s+\d{1,2}(?:,)?\s+\d{4}\b"                # May 27 2026 / May 27, 2026
+    r"|\b\d{1,2}\s+(?:" + _MONTHS + r")\s+\d{4}\b"                      # 27 May 2026
+    r"|\b(?:" + _MONTHS + r")\s+\d{1,2}(?:,)?\s*['‘’]\d{2}\b" # JAN 27 '25 (1X format)
+    r")",
     re.IGNORECASE,
 )
 _LD_DATE = re.compile(
@@ -125,10 +126,11 @@ def _extract_published(body: str, meta_raw: str) -> str:
         iso = _parse_date_string(m.group(1))
         if iso:
             return iso
-    # 4. Visible date string in the article header — strip HTML and grab the
-    #    first date-pattern hit. Limit to the first ~30k chars so we don't pick
-    #    up "Copyright 2026" in a footer.
-    text = _TAG_STRIP.sub(" ", body[:30000])
+    # 4. Visible date string in the article header — strip HTML, decode
+    #    entities (1X ships JAN 27 &#x27;25), then grab the first date-pattern
+    #    hit. Limit to the first ~30k chars so we don't pick up a footer
+    #    "Copyright 2026".
+    text = html_lib.unescape(_TAG_STRIP.sub(" ", body[:30000]))
     m = _BODY_DATE.search(text)
     if m:
         iso = _parse_date_string(m.group(1))
