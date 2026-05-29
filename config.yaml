@@ -310,7 +310,8 @@ sources:
         trusted: true
       - name: "Disney Research"
         url: "https://la.disneyresearch.com/feed/"
-        trusted: true
+        # NOT trusted: covers graphics/animation/audio research alongside
+        # robotics — let must_match keyword filter pick the robot posts.
       - name: "Diligent Robotics Blog"
         url: "https://www.diligentrobots.com/blog?format=rss"
         trusted: true
@@ -356,7 +357,7 @@ sources:
         trusted: true
       - name: "Disney Research (YouTube)"
         url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCM42XWqRoruK6bNkgbgoJMw"
-        trusted: true
+        # NOT trusted: mixed graphics/CG/robotics — keyword-filter it.
       - name: "Engineered Arts (YouTube)"
         url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCVIo_UX--1R03WE_U3I6xEA"
         trusted: true
@@ -374,10 +375,12 @@ sources:
         trusted: true
       - name: "Hugging Face (YouTube)"
         url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCHlNU7kIZhRgSbhHvFoy72w"
-        trusted: true
+        # NOT trusted: mostly LLM/NLP/diffusion/Hub tutorials, robotics is a
+        # minority slice — keep the keyword filter so we don't get flooded.
       - name: "NVIDIA Developer (YouTube)"
         url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCBHcMCGaiJhv-ESTcWGJPcw"
-        trusted: true
+        # NOT trusted: covers CUDA / inference / general AI dev content;
+        # Isaac/robotics is a small fraction. Keyword-filter it.
       - name: "Mujin (YouTube)"
         url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCcy9ZRYN5DIWhk1SP9NcoQg"
         trusted: true
