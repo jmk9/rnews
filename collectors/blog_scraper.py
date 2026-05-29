@@ -26,6 +26,7 @@ import html as html_lib
 import logging
 import re
 import time
+from datetime import datetime, timezone
 from typing import Any
 from urllib.parse import urljoin, urlparse
 
@@ -163,6 +164,13 @@ def _scrape_site(site: dict[str, Any], max_per_site: int) -> list[Item]:
         if thumb and thumb.startswith("//"):
             thumb = "https:" + thumb
         published = _first_group(_PUB_TIME.search(body))
+        # Most Next.js/Webflow blog templates don't ship article:published_time
+        # meta. Without a date the site builder's news section sort puts these
+        # at the bottom and the `news_min_slots` cap drops them entirely. Fall
+        # back to discovery time — merge-on-save in main.py preserves the
+        # original timestamp on subsequent runs, so the date is stable.
+        if not published:
+            published = datetime.now(timezone.utc).isoformat()
 
         extra: dict[str, Any] = {"feed": name, "blog_scraper": True}
         if trusted:
