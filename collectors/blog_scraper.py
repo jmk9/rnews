@@ -63,6 +63,28 @@ _TITLE_TAG = re.compile(r"<title[^>]*>([^<]+)</title>", re.IGNORECASE)
 _HREF = re.compile(r'<a[^>]+href=["\']([^"\']+)["\']', re.IGNORECASE)
 
 
+def _normalize_date(raw: str) -> str:
+    """Return ISO-8601 for whatever date string a blog put in its meta.
+
+    Real-world data is messy: Skild ships "Mar 19, 2026"; others use ISO like
+    "2026-03-19T10:00:00Z"; some ship nothing. We need a sortable ISO string,
+    or the site builder's lexicographic news sort puts "Mar..." above "2026..."
+    and old posts land at the top of the page. Falls back to discovery time
+    when the meta is missing or unparseable.
+    """
+    raw = (raw or "").strip()
+    if not raw:
+        return datetime.now(timezone.utc).isoformat()
+    # Fast path: already ISO (starts with 4-digit year).
+    if len(raw) >= 10 and raw[:4].isdigit() and raw[4] == "-":
+        return raw
+    try:
+        from dateutil import parser as _dp  # type: ignore
+        return _dp.parse(raw).isoformat()
+    except Exception:
+        return datetime.now(timezone.utc).isoformat()
+
+
 def _fetch(url: str, timeout: int = 20) -> str | None:
     try:
         r = requests.get(
@@ -163,14 +185,7 @@ def _scrape_site(site: dict[str, Any], max_per_site: int) -> list[Item]:
         thumb = _first_group(_OG_IMG.search(body))
         if thumb and thumb.startswith("//"):
             thumb = "https:" + thumb
-        published = _first_group(_PUB_TIME.search(body))
-        # Most Next.js/Webflow blog templates don't ship article:published_time
-        # meta. Without a date the site builder's news section sort puts these
-        # at the bottom and the `news_min_slots` cap drops them entirely. Fall
-        # back to discovery time — merge-on-save in main.py preserves the
-        # original timestamp on subsequent runs, so the date is stable.
-        if not published:
-            published = datetime.now(timezone.utc).isoformat()
+        published = _normalize_date(_first_group(_PUB_TIME.search(body)))
 
         extra: dict[str, Any] = {"feed": name, "blog_scraper": True}
         if trusted:
