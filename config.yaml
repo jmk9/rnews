@@ -393,6 +393,38 @@ sources:
       # NOTE: trusted_feed boost is +5 (config.ranking.trusted_feed). To add more
       # later: append `- name/url: <feed>` with `trusted: true`.
 
+  # Hot robotics companies build their blogs on Next.js / Webflow / Squarespace
+  # without an RSS feed, so news_collector can't see them. This light scraper
+  # fetches each index page, extracts article links matching `link_pattern`,
+  # then pulls og:* metadata from each post. Items go in as `source: news`
+  # with `trusted: true` so they bypass must_match like other first-party feeds.
+  blog_scraper:
+    enabled: true
+    max_per_site: 8         # cap fresh articles per index per run (newest on top)
+    sites:
+      - name: "Genesis AI"
+        index_url: "https://www.genesis.ai/blog"
+        link_pattern: "^/blog/[^/?#]+$"
+        trusted: true
+      - name: "Physical Intelligence (π)"
+        index_url: "https://www.pi.website/blog"
+        # Their site has /blog/ (announcements) and /research/ (paper posts)
+        # — both are valuable first-party tech content.
+        link_pattern: "^/(blog|research)/[^/?#]+$"
+        trusted: true
+      - name: "Figure AI"
+        index_url: "https://www.figure.ai/news"
+        link_pattern: "^/news/[^/?#]+$"
+        trusted: true
+      - name: "1X Technologies"
+        index_url: "https://www.1x.tech/discover"
+        link_pattern: "^/discover/[^/?#]+$"
+        trusted: true
+      - name: "Skild AI"
+        index_url: "https://www.skild.ai/blogs"
+        link_pattern: "^/blogs/[^/?#]+$"
+        trusted: true
+
 # Weights used by ranker.compute_score().
 # Sort policy: bias toward what people actually USE and TRUST.
 #   - github_stars_log dominates for repos (popularity = trust proxy)

@@ -14,7 +14,7 @@ from typing import Any
 
 import yaml
 
-from collectors import arxiv_collector, github_collector, news_collector
+from collectors import arxiv_collector, blog_scraper, github_collector, news_collector
 from processors.deduplicator import deduplicate
 from processors.ranker import rank_items
 from processors.summarizer import make_summarizer, summarize_items
@@ -57,6 +57,10 @@ def run_collectors(cfg: dict[str, Any], source: str) -> list[Item]:
         items.extend(github_collector.collect(cfg))
     if source in ("all", "news"):
         items.extend(news_collector.collect(cfg))
+        # Robotics-company blogs without RSS (Genesis AI, Physical Intelligence,
+        # Figure, 1X, Skild, …) — same source="news" output, configured under
+        # sources.blog_scraper. Emits trusted items so they bypass must_match.
+        items.extend(blog_scraper.collect(cfg))
     return items
 
 
