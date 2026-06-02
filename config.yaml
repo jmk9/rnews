@@ -516,6 +516,12 @@ summarizer:
   claude_model: claude-haiku-4-5-20251001
   truncation_max_chars: 10000
 
+# Storage cap: keep only the newest N unique items across all snapshots.
+# main.py prunes after each save. Drops older items from snapshot files and
+# orphaned arxiv thumbnails. 0 disables the cap.
+data:
+  max_unique_items: 500
+
 # First-seen tracking: lets daily mode highlight only items new since the last run.
 state:
   seen_path: data/state/seen.json

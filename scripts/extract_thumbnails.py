@@ -321,20 +321,27 @@ def main() -> int:
         log.info("[%d/%d] %s %s: %s", i, len(candidates), src, it["id"], it["title"][:60])
         result: str | None = None
         key: str | None = None
-        if src == "arxiv":
-            result = extract_arxiv_thumb(it)
-            key = "thumbnail_path"
-        elif src == "github":
-            result = extract_github_thumb(it, token=token)
-            key = "thumbnail"
-            time.sleep(0.5 if token else 1.5)
-        elif src == "news":
-            img, desc = fetch_news_meta(it)
-            result, key = img, "thumbnail"
-            if desc and _empty_summary(it):
-                summary_fills[it["id"]] = desc
-                log.info("  -> summary backfilled (%d chars)", len(desc))
-            time.sleep(0.5)
+        # Wrap every per-item call: a malformed PDF crashing PyMuPDF or a
+        # weird HTTP response shouldn't kill the whole step. The CI workflow
+        # depends on this step succeeding to commit data downstream.
+        try:
+            if src == "arxiv":
+                result = extract_arxiv_thumb(it)
+                key = "thumbnail_path"
+            elif src == "github":
+                result = extract_github_thumb(it, token=token)
+                key = "thumbnail"
+                time.sleep(0.5 if token else 1.5)
+            elif src == "news":
+                img, desc = fetch_news_meta(it)
+                result, key = img, "thumbnail"
+                if desc and _empty_summary(it):
+                    summary_fills[it["id"]] = desc
+                    log.info("  -> summary backfilled (%d chars)", len(desc))
+                time.sleep(0.5)
+        except Exception as exc:
+            log.warning("  -> %s extractor crashed (%s); continuing", src, exc)
+            continue
         if result and key and _needs_thumb(it):
             updates[it["id"]] = {key: result}
             log.info("  -> %s", result[:90])

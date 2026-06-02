@@ -12,6 +12,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+import glob
+import os
+from pathlib import Path
+
 import yaml
 
 from collectors import arxiv_collector, blog_scraper, github_collector, news_collector
@@ -62,6 +66,60 @@ def run_collectors(cfg: dict[str, Any], source: str) -> list[Item]:
         # sources.blog_scraper. Emits trusted items so they bypass must_match.
         items.extend(blog_scraper.collect(cfg))
     return items
+
+
+def prune_to_max_unique(processed_dir: Path, max_items: int) -> None:
+    """Cap stored data to the newest max_items unique IDs across all snapshots.
+
+    Drops older items from each snapshot (by updated/published date desc).
+    Deletes snapshot files that end up empty, and cleans orphaned arxiv
+    thumbnail files. No-op when the total unique-id count is at or below cap.
+    """
+    if max_items <= 0:
+        return
+    files = sorted(glob.glob(str(processed_dir / "*_processed.json")))
+    if not files:
+        return
+    by_id: dict[str, dict[str, Any]] = {}
+    for fp in files:
+        for d in load_json(fp) or []:
+            cur = by_id.get(d["id"])
+            cur_date = (cur.get("updated") or cur.get("published") or "") if cur else ""
+            new_date = (d.get("updated") or d.get("published") or "")
+            if cur is None or new_date > cur_date:
+                by_id[d["id"]] = d
+    if len(by_id) <= max_items:
+        return
+    ranked = sorted(
+        by_id.values(),
+        key=lambda x: (x.get("updated") or x.get("published") or ""),
+        reverse=True,
+    )
+    keep_ids = {it["id"] for it in ranked[:max_items]}
+    dropped = len(by_id) - len(keep_ids)
+    kept_thumb_files: set[str] = set()
+    for fp in files:
+        data = load_json(fp) or []
+        new = [it for it in data if it["id"] in keep_ids]
+        if not new:
+            os.remove(fp)
+            log.info("prune: removed empty snapshot %s", fp)
+            continue
+        if len(new) != len(data):
+            save_json(fp, new)
+        for it in new:
+            tp = (it.get("extra") or {}).get("thumbnail_path")
+            if tp:
+                kept_thumb_files.add(os.path.basename(tp))
+    thumb_dir = Path("data/thumbnails/arxiv")
+    orphan = 0
+    if thumb_dir.exists():
+        for f in thumb_dir.iterdir():
+            if f.name not in kept_thumb_files:
+                f.unlink()
+                orphan += 1
+    log.info("prune: kept %d/%d unique items (dropped %d); removed %d orphan thumbs",
+             len(keep_ids), len(by_id), dropped, orphan)
 
 
 def annotate_first_seen(items: list[Item], cfg: dict[str, Any]) -> SeenStore:
@@ -298,6 +356,12 @@ def main(argv: list[str] | None = None) -> int:
     log.info("Wrote %s (%d items, %d merged from prior same-day snapshot) and %s",
              processed_path, len(merged), len(merged) - len(items) if len(merged) > len(items) else 0,
              raw_path)
+
+    # Bound total stored unique items so old snapshots don't accumulate
+    # indefinitely. Default 500; set sources.data.max_unique_items in
+    # config.yaml. Set to 0 to disable.
+    max_unique = int((cfg.get("data") or {}).get("max_unique_items", 500))
+    prune_to_max_unique(processed_dir, max_unique)
 
     if args.output in ("markdown", "both"):
         report_md = build_report(items_for_report, cfg, args.mode)

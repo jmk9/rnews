@@ -66,6 +66,9 @@ jobs:
 
       - name: Extract thumbnails for top items (arxiv PDF / github README / news og:image)
         if: github.event_name != 'push'
+        # Thumbnails are a nice-to-have; if extraction blows up we still want
+        # the collected data to commit and the site to build.
+        continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/extract_thumbnails.py --max-items 400 --recent-days 14
