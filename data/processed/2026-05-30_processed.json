@@ -1297,7 +1297,8 @@
       "license": "BSD-3-Clause",
       "first_seen": "2026-05-18",
       "full_text": "A joints calibration routine for quadrupeds and manipulators to facilitate sim-to-real transfer from isaaclab and mujoco to real robots",
-      "summary_kind": "truncation"
+      "summary_kind": "truncation",
+      "thumbnail": "https://raw.githubusercontent.com/iit-DLSLab/sim2real-robot-identification/HEAD/./gifs/z1_real.gif"
     },
     "tags": [
       "#Manipulator"
@@ -2133,7 +2134,8 @@
       "license": "NOASSERTION",
       "first_seen": "2026-05-18",
       "full_text": "An end-to-end open ecosystem for robot learning",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/allenai/molmospaces/HEAD/docs/images/MolmoSpacesLogo.png"
     },
     "tags": [
       "#Other"
@@ -2235,55 +2237,6 @@
       "recency": 2.429430231609623,
       "has_code": 0.0,
       "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:FALCON-VLA/FALCON",
-    "source": "github",
-    "title": "FALCON-VLA/FALCON",
-    "url": "https://github.com/FALCON-VLA/FALCON",
-    "summary": "[ICLR 2026] 🦅 FALCON: an effective vision-language-action model injects rich 3D spatial tokens into the action head, enabling robust spatial understanding and SOTA performance across diverse manipulation tasks.",
-    "published": "2026-03-11T08:25:36Z",
-    "updated": "2026-05-26T11:39:46Z",
-    "authors": [
-      "FALCON-VLA"
-    ],
-    "extra": {
-      "stars": 28,
-      "forks": 0,
-      "language": "Python",
-      "topics": [
-        "generalist-robot-policies",
-        "iclr",
-        "iclr2026",
-        "spatial-understanding",
-        "vision-language-action-model",
-        "vla"
-      ],
-      "open_issues": 0,
-      "license": "Apache-2.0",
-      "first_seen": "2026-05-18",
-      "full_text": "[ICLR 2026] 🦅 FALCON: an effective vision-language-action model injects rich 3D spatial tokens into the action head, enabling robust spatial understanding and SOTA performance across diverse manipulation tasks.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 27.362,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.0502362687524798,
-      "has_code": 6.0,
-      "github_stars_log": 7.31198998949478,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
@@ -3893,64 +3846,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2605.27582",
-    "source": "arxiv",
-    "title": "Uni-LaViRA: Language-Vision-Robot Actions Translation for Unified Embodied Navigation",
-    "url": "http://arxiv.org/abs/2605.27582v1",
-    "summary": "Embodied navigation requires an agent to map language and visual observations to a stream of spatial actions that drive a real robot through environments it has never seen. The dominant approach has been to scale vision-language-action (VLA) foundation models on ever-larger collections of robot trajectories.",
-    "published": "2026-05-26T18:52:04+00:00",
-    "updated": "2026-05-26T18:52:04+00:00",
-    "authors": [
-      "Hongyu Ding",
-      "Sizhuo Zhang",
-      "Ziming Xu",
-      "Jinwen Guo",
-      "Hongxiu Liu",
-      "Xingzhi Cheng",
-      "Zixuan Chen",
-      "Haifei Qi",
-      "Duo Wang",
-      "Hao Xu",
-      "Jieqi Shi",
-      "Yifan Zhang",
-      "Jing Huo",
-      "Jian Cheng",
-      "Yang Gao",
-      "Jiebo Luo"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2605.27582v1",
-      "comment": "Project page: https://xetroubadour.github.io/Uni-LaViRA/",
-      "first_seen": "2026-05-29",
-      "full_text": "Embodied navigation requires an agent to map language and visual observations to a stream of spatial actions that drive a real robot through environments it has never seen. The dominant approach has been to scale vision-language-action (VLA) foundation models on ever-larger collections of robot trajectories. This paper argues that, for navigation specifically, generality can be obtained structurally, not only through data scale. The underlying decision structure of navigation reduces to a single Language-Vision-Robot Actions Translation. The language action emits semantic-level directional command and the vision action emits a pixel-level visual target. Both outputs lie inside the natural output manifold of pretrained multimodal large language models (MLLMs), so the task can be reasoned about by an agent rather than learned from robot data. Therefore, we present Uni-LaViRA, a unified agentic architecture that extends the same insight to four task families (VLN-CE, ObjectNav, EQA, and Aerial-VLN) and to four heterogeneous real robots (Wheeled, Quadruped, Humanoid robot, and a self-built UAV) in a zero-shot manner. Two agent-loop mechanisms make this unification practical. TODO List Memory (TDM) rewrites a structured checklist of pending sub-goals at every step, reciting the unfinished items back into the agent's most recent attention window. Second Chance Backtrack (SCB) rolls the robot back to the pre-error state and conditions the agent's next plan on the failed sub-trajectory, turning single-pass navigation into a self-correcting process. With zero training effort, Uni-LaViRA reaches 60.7% SR on VLN-CE R2R, 51.3% on VLN-CE RxR, 77.7% on HM3D-v2, 60.0% on HM3D-OVON, 54.7% on MP3D-EQA, and 40.0% on OpenUAV, matching or even surpassing recent training navigation foundation models that consume millions of samples and thousands of GPU-hours.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Humanoid"
-    ],
-    "score": 19.115,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 6.0,
-      "recency": 2.114566632748016,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:elle-miller/multimodal_rl",
     "source": "github",
     "title": "elle-miller/multimodal_rl",
@@ -4773,44 +4668,6 @@
     "priority": "must_read"
   },
   {
-    "id": "news:5a54a8a997f2",
-    "source": "news",
-    "title": "Zeon Invests in Sanctuary AI and Partners to Advance Specialized Materials for Dexterous Robotics",
-    "url": "https://www.sanctuary.ai/blog/zeon-sanctuary-ai-announcement",
-    "summary": "Zeon and Sanctuary AI will collaborate on rugged elastomeric components for robotic hands deployable in industrial environments.",
-    "published": "2026-05-26T16:26:15+00:00",
-    "updated": "2026-05-26T16:26:15+00:00",
-    "authors": [
-      "Sanctuary AI"
-    ],
-    "extra": {
-      "feed": "Sanctuary AI Blog",
-      "trusted": true,
-      "thumbnail": "https://images.squarespace-cdn.com/content/v1/66e8617ff9cbf43e43b040ef/1779752388791-1XYS8BOKNZV9VYK6JNZ4/Zeon+x+Sanctuary+Logo+Lockup.png?format=1500w",
-      "first_seen": "2026-05-29",
-      "full_text": "Zeon and Sanctuary AI will collaborate on rugged elastomeric components for robotic hands deployable in industrial environments.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Manipulator"
-    ],
-    "score": 15.093,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.092867702378472,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:4ef0e8d1f68e",
     "source": "news",
     "title": "\"페인트 모션 후 라보나 킥\"…현대차, RL로 구현한 휴머노이드 제어 기술 공개",
@@ -5278,44 +5135,6 @@
       "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:0ca7ae14f72c",
-    "source": "news",
-    "title": "🎉 When steel meets soul, the waltz begins.",
-    "url": "https://www.youtube.com/watch?v=Tmi_H-CT5Pk",
-    "summary": "A human hand, a robot’s arm — together tracing circles of trust and precision. No missteps. No hesitation. Just pure, algorithmic grace.",
-    "published": "2026-05-26T09:39:40+00:00",
-    "updated": "2026-05-26T09:39:40+00:00",
-    "authors": [
-      "UBTECH Robotics"
-    ],
-    "extra": {
-      "feed": "UBTECH (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i1.ytimg.com/vi/Tmi_H-CT5Pk/hqdefault.jpg",
-      "first_seen": "2026-05-29",
-      "full_text": "A human hand, a robot’s arm — together tracing circles of trust and precision. No missteps. No hesitation. Just pure, algorithmic grace. Tag someone you’d waltz with — human or robot. #UBTECH #WalkerC1 #HumanoidRobot #CommercialRobotics #AI #Waltz #Dance Subscribe https://www.youtube.com/@UCdYzpvcdKkvlfTc-Abe6cJQ Learn more https://www.ubtrobot.com/en/humanoid/products/WalkerS2 Follow us https://www.facebook.com/ubtechroboticscorp/ https://twitter.com/UBTECHRobotics https://www.linkedin.com/company/ubtech-robotics/",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 12.032,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.0323642274578373,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
       "demote": -0.0
     },
     "priority": "must_read"
@@ -6093,78 +5912,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:df4627caf484",
-    "source": "news",
-    "title": "Mitsubishi Electric and Chiba Institute of Technology to Co-Research and Develop Homegrown Physical AI",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/05/26/mitsubishi-electric-and-chiba-institute-of-technology-to-co-research-and-develop-homegrown-physical-ai/26614",
-    "summary": "Co-Creation Center to help commercialize AI robotics solutions for public and private sectors",
-    "published": "2026-05-26T13:10:07+00:00",
-    "updated": "2026-05-26T13:10:07+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-05-26",
-      "full_text": "Co-Creation Center to help commercialize AI robotics solutions for public and private sectors",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 9.064,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.0636811969295636,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:bfea13d4458a",
-    "source": "news",
-    "title": "School of Football | The Basics | Boston Dynamics x Hyundai",
-    "url": "https://www.youtube.com/watch?v=ITCklufC25Y",
-    "summary": "Atlas takes its first steps into the world of football From basic drills to celebrations - every step is a beginning Next Starts Now #Hyundai #NextStartsNow #Atlas #BostonDynamics #SchoolofFootball #Robotics",
-    "published": "2026-05-26T13:00:11+00:00",
-    "updated": "2026-05-26T13:00:11+00:00",
-    "authors": [
-      "Boston Dynamics"
-    ],
-    "extra": {
-      "feed": "Boston Dynamics (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i2.ytimg.com/vi/ITCklufC25Y/hqdefault.jpg",
-      "first_seen": "2026-05-29",
-      "full_text": "Atlas takes its first steps into the world of football From basic drills to celebrations - every step is a beginning Next Starts Now #Hyundai #NextStartsNow #Atlas #BostonDynamics #SchoolofFootball #Robotics",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 9.062,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.062203019201389,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:f30547f683e6",
     "source": "news",
     "title": "현대차, FIFA 월드컵 기념 ‘아틀라스의 축구 도전기’ 캠페인 영상 공개",
@@ -6365,40 +6112,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.432029421510417,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:927e24abf6f0",
-    "source": "news",
-    "title": "Allient Inc. to Demonstrate Advanced Motion Solutions at Robotics Summit & Expo 2026",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/05/26/allient-inc-to-demonstrate-advanced-motion-solutions-at-robotics-summit-expo-2026/26616",
-    "summary": "",
-    "published": "2026-05-26T14:38:50+00:00",
-    "updated": "2026-05-26T14:38:50+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-05-26",
-      "full_text": "",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 8.077,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.076883081894841,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
