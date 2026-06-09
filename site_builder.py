@@ -79,57 +79,57 @@ def _has_code(it: dict[str, Any]) -> bool:
 def _apply_news_policy(
     news_items: list[dict[str, Any]],
     news_cfg: dict[str, Any],
-    now: datetime,
+    slots: int,
 ) -> list[dict[str, Any]]:
-    """For news only: reassign priority by score-quota tiers, then drop items
-    older than their tier's retention window.
+    """Pick `slots` news items split by score-quota tiers (default 60/30/10).
 
-    The user's product call: news should not be retained at equal priority
-    proportions. With quota 60/30/10 (high/mid/low) and retention 60/30/10
-    days respectively, the visible News section naturally skews toward High
-    over time — Low ages out fast, High stays exposed.
+    All news first gets a priority label by score percentile. Then visible
+    slots are allocated to each tier in the same ratio (e.g. 90 slots ->
+    54 High + 27 Mid + 9 Low), filled with the most recent items inside each
+    tier. The visible News section therefore has an exact 6:3:1 count ratio,
+    and old items naturally fall off as newer items in the same tier push
+    them out — no separate retention window needed.
     """
-    if not news_items:
+    if not news_items or slots <= 0:
         return []
     quota = news_cfg.get("priority_quota") or {"high": 0.6, "mid": 0.3, "low": 0.1}
-    retention = news_cfg.get("retention_days") or {
-        "must_read": 60, "save_for_later": 30, "low_priority": 10,
-    }
+    q_high = float(quota.get("high", 0.6))
+    q_mid = float(quota.get("mid", 0.3))
 
-    sorted_news = sorted(
-        news_items, key=lambda x: float(x.get("score") or 0), reverse=True
-    )
-    n = len(sorted_news)
-    high_cut = int(round(n * float(quota.get("high", 0.6))))
-    mid_cut = high_cut + int(round(n * float(quota.get("mid", 0.3))))
-
-    kept: list[dict[str, Any]] = []
-    for i, it in enumerate(sorted_news):
+    # Label every news item by its score percentile.
+    by_score = sorted(news_items, key=lambda x: float(x.get("score") or 0), reverse=True)
+    n = len(by_score)
+    high_cut = int(round(n * q_high))
+    mid_cut = high_cut + int(round(n * q_mid))
+    labeled: list[dict[str, Any]] = []
+    for i, it in enumerate(by_score):
         if i < high_cut:
             tier = "must_read"
         elif i < mid_cut:
             tier = "save_for_later"
         else:
             tier = "low_priority"
-
-        max_age = float(retention.get(tier, 10))
-        pub = it.get("updated") or it.get("published") or ""
-        if pub:
-            try:
-                dt = datetime.fromisoformat(pub.replace("Z", "+00:00"))
-                if dt.tzinfo is None:
-                    dt = dt.replace(tzinfo=timezone.utc)
-                if (now - dt).total_seconds() / 86400 > max_age:
-                    continue
-            except ValueError:
-                pass
-
-        # Shallow copy so we don't mutate the original dict shared across
-        # all_items views.
         it2 = dict(it)
         it2["priority"] = tier
-        kept.append(it2)
-    return kept
+        labeled.append(it2)
+
+    # Slot allocation by the same ratio. Floors leave a remainder; give it to
+    # the lowest tier so totals match exactly.
+    n_high = int(slots * q_high)
+    n_mid = int(slots * q_mid)
+    n_low = max(0, slots - n_high - n_mid)
+
+    def _by_date(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
+        return sorted(
+            items,
+            key=lambda x: (x.get("updated") or x.get("published") or ""),
+            reverse=True,
+        )
+
+    pool_high = _by_date([x for x in labeled if x["priority"] == "must_read"])
+    pool_mid = _by_date([x for x in labeled if x["priority"] == "save_for_later"])
+    pool_low = _by_date([x for x in labeled if x["priority"] == "low_priority"])
+    return pool_high[:n_high] + pool_mid[:n_mid] + pool_low[:n_low]
 
 
 def _load_all_processed(processed_dir: Path) -> list[dict[str, Any]]:
@@ -258,12 +258,11 @@ def build_site(cfg: dict[str, Any]) -> Path:
     # sort the News section by date, not score).
     non_news = [it for it in all_items if it.get("source") != "news"][:items_on_index]
     news_raw = [it for it in all_items if it.get("source") == "news"]
-    # Apply priority-quota reassignment + per-tier retention so High news stays
-    # exposed longer and Low ages out first.
+    # Allocate news_min_slots by the 60/30/10 score-quota; within each tier
+    # take the most recent items. Result: visible News is exactly 6:3:1
+    # High:Mid:Low by count, with each tier showing its newest items.
     news_cfg = (cfg.get("sources") or {}).get("news") or {}
-    news_all = _apply_news_policy(news_raw, news_cfg, datetime.now(timezone.utc))
-    news_all.sort(key=lambda x: (x.get("updated") or x.get("published") or ""), reverse=True)
-    news_subset = news_all[:news_min_slots]
+    news_subset = _apply_news_policy(news_raw, news_cfg, news_min_slots)
     seen_ids = {it.get("id") for it in non_news}
     index_items = non_news + [it for it in news_subset if it.get("id") not in seen_ids]
 

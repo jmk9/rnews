@@ -289,19 +289,17 @@ sources:
     enabled: true
     days_back: 21         # show items posted within the last 3 weeks
     max_per_feed: 40      # cap per feed so a noisy outlet can't drown the rest
-    # Priority-weighted retention for news (only — papers/repos unaffected).
-    # 1) Within the news pool, score-rank gets reassigned to tiers by quota:
-    #    top 60% -> High, next 30% -> Mid, bottom 10% -> Low.
-    # 2) Each tier has its own age cap, so Low ages out first and High stays
-    #    visible longest. Over time the visible news naturally skews toward High.
+    # Count-ratio policy for the visible News section (papers/repos unaffected).
+    # All news gets labeled by score percentile (top 60% -> High, next 30% ->
+    # Mid, bottom 10% -> Low). The visible slots (news_min_slots) are then
+    # allocated to each tier by the same ratio, picking the most recent items
+    # within each tier. Result: visible composition is exactly 6:3:1 High:Mid:Low
+    # by count. Old items naturally drop out as newer ones in the same tier push
+    # them off the most-recent shortlist — no explicit per-tier age cap.
     priority_quota:
       high: 0.6
       mid: 0.3
       low: 0.1
-    retention_days:
-      must_read: 60       # High kept up to ~2 months
-      save_for_later: 30  # Mid kept ~1 month
-      low_priority: 10    # Low drops after ~10 days
     feeds:
       # --- robotics-focused ---
       - name: "Robohub"
