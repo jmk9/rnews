@@ -145,57 +145,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:NVlabs/ProtoMotions",
-    "source": "github",
-    "title": "NVlabs/ProtoMotions",
-    "url": "https://github.com/NVlabs/ProtoMotions",
-    "summary": "GPU-accelerated ProtoMotions3 trains physically simulated humanoids on motion corpora, claiming AMASS-scale skill learning in 12 hours on 4 A100s. Distinctive pieces are PyRoki one-command retargeting, IsaacGym/Newton/MuJoCo sim-to-sim testing, and ONNX sim-to-real deployment for Unitree G1.",
-    "published": "2024-09-24T08:41:56Z",
-    "updated": "2026-05-07T02:09:47Z",
-    "authors": [
-      "NVlabs"
-    ],
-    "extra": {
-      "stars": 1666,
-      "forks": 194,
-      "language": "Python",
-      "topics": [
-        "character-animation",
-        "digital-human",
-        "humanoid",
-        "humanoid-robots",
-        "physics-simulation",
-        "reinforcement-learning"
-      ],
-      "open_issues": 21,
-      "license": "Apache-2.0",
-      "first_seen": "2026-05-18",
-      "thumbnail": "https://raw.githubusercontent.com/NVlabs/ProtoMotions/HEAD/data/static/vault.gif",
-      "full_text": "ProtoMotions 3 A GPU-Accelerated Framework for Simulated Humanoids (unverified AI generation) --- Overview ProtoMotions3 is a GPU-accelerated simulation and learning framework for training physically simulated digital humans and humanoid robots. Our mission is to provide a fast prototyping platform for various simulated humanoid learning tasks and environments—for researchers and practitioners in animation , robotics , and reinforcement learning —bridging efforts across communities. Modularity , extensibility , and scalability are at the core of ProtoMotions3. It is community-driven and permissively licensed under the Apache-2.0 license. Also check out MimicKit , our sibling repository for a lightweight framework for motion imitation learning. --- What You Can Do with ProtoMotions3 🏃 Large-Scale Motion Learning Train your fully physically simulated character to learn motion skills from the entire public AMASS human animation dataset ( 40+ hours ) within 12 hours on 4 A100s. 📈 Scalable Multi-GPU Training Scale training to even larger datasets with each GPU handling a subset of motions. For example, we have trained with 24 A100s with 13K motions on each GPU with the BONES dataset in SOMA skeleton format. Check out Quick Start and SEED BVH Data Preparation to play around with the dataset and pre-trained models today. 🔄 One-Command Retargeting Transfer (retarget) the entire AMASS dataset to your favorite robot with the built-in PyRoki -based optimizer—in one command. Note: As of v3, we use PyRoki for retargeting. Earlier versions used Mink. 🤖 Train Any Robot Train your robot to perform AMASS motor skills in 12 hours , by just changing one command argument: --robot-name=smpl → --robot-name=h1 2 and preparing retargeted motions (see here) 🔬 Sim2Sim Testing One-click test ( --simulator=isaacgym → --simulator=newton → --simulator=mujoco ) of robot control policies on H1 2 or G1 in different physics engines (NVIDIA Newton, MuJoCo CPU). Policies shown below only use observations you could actually get from real hardware. 🤖 From Sim to Real Train in simulation, deploy on real hardware. ProtoMotions trains one General Tracking Policy on entire BONES-SEED dataset ( 142K motions) and transfers directly to the Unitree G1 humanoid robot zero-shot. Our deployment pipeline exports a single ONNX model (with observation computation baked in), so deployment frameworks only need to provide raw sensor signals — no need to rewrite obs functions or match training internals. We tested on the Unitree G1 via the brilliant RoboJuDo framework, adding just one policy file with no mandatory changes to RoboJuDo core. 📖 Full Deployment Tutorial — from data preparation to real robot, fully reproducible. 🎨 High-Fidelity Rendering Test your policy in IsaacSim 5.0+ , which allows you to load beautifully rendered Gaussian splatting backgrounds (with Omniverse NuRec — this rendered scene is not physically interact-able yet). 🎬 Motion Authoring with Kimodo With Kimodo (NVIDIA's text-to-motion generation model), generate any motion from a text prompt and use ProtoMotions to train a physics-based policy that performs the motion — for both the SOMA animation character and the Unitree G1 robot. Policies trained this way can be deployed directly on real hardware. See Kimodo Data Preparation for how to convert Kimodo outputs to ProtoMotions format. Image Credit: NVIDIA Human Motion Modeling Research 🏗️ Procedural Scene Generation Procedurally generate many scenes for scalable Synthetic Data Generation (SDG) : start from a seed motion set, use RL to adapt motions to augmented scenes. 🎭 Generative Policies Train a generative policy (e.g., MaskedMimic ) that can autonomously choose its \"move\" to finish the task. ⛰️ Terrain Navigation Train your robot to hike challenging terrains! 🎯 Custom Environments Have a new task? Build it from modular components — no monolithic env class needed. Here's how the steering task is composed: Layer File What it does ------- ------ ------------",
-      "readme": "ProtoMotions 3 A GPU-Accelerated Framework for Simulated Humanoids (unverified AI generation) --- Overview ProtoMotions3 is a GPU-accelerated simulation and learning framework for training physically simulated digital humans and humanoid robots. Our mission is to provide a fast prototyping platform for various simulated humanoid learning tasks and environments—for researchers and practitioners in animation , robotics , and reinforcement learning —bridging efforts across communities. Modularity , extensibility , and scalability are at the core of ProtoMotions3. It is community-driven and permissively licensed under the Apache-2.0 license. Also check out MimicKit , our sibling repository for a lightweight framework for motion imitation learning. --- What You Can Do with ProtoMotions3 🏃 Large-Scale Motion Learning Train your fully physically simulated character to learn motion skills from the entire public AMASS human animation dataset ( 40+ hours ) within 12 hours on 4 A100s. 📈 Scalable Multi-GPU Training Scale training to even larger datasets with each GPU handling a subset of motions. For example, we have trained with 24 A100s with 13K motions on each GPU with the BONES dataset in SOMA skeleton format. Check out Quick Start and SEED BVH Data Preparation to play around with the dataset and pre-trained models today. 🔄 One-Command Retargeting Transfer (retarget) the entire AMASS dataset to your favorite robot with the built-in PyRoki -based optimizer—in one command. Note: As of v3, we use PyRoki for retargeting. Earlier versions used Mink. 🤖 Train Any Robot Train your robot to perform AMASS motor skills in 12 hours , by just changing one command argument: --robot-name=smpl → --robot-name=h1 2 and preparing retargeted motions (see here) 🔬 Sim2Sim Testing One-click test ( --simulator=isaacgym → --simulator=newton → --simulator=mujoco ) of robot control policies on H1 2 or G1 in different physics engines (NVIDIA Newton, MuJoCo CPU). Policies shown below only use observations you could actually get from real hardware. 🤖 From Sim to Real Train in simulation, deploy on real hardware. ProtoMotions trains one General Tracking Policy on entire BONES-SEED dataset ( 142K motions) and transfers directly to the Unitree G1 humanoid robot zero-shot. Our deployment pipeline exports a single ONNX model (with observation computation baked in), so deployment frameworks only need to provide raw sensor signals — no need to rewrite obs functions or match training internals. We tested on the Unitree G1 via the brilliant RoboJuDo framework, adding just one policy file with no mandatory changes to RoboJuDo core. 📖 Full Deployment Tutorial — from data preparation to real robot, fully reproducible. 🎨 High-Fidelity Rendering Test your policy in IsaacSim 5.0+ , which allows you to load beautifully rendered Gaussian splatting backgrounds (with Omniverse NuRec — this rendered scene is not physically interact-able yet). 🎬 Motion Authoring with Kimodo With Kimodo (NVIDIA's text-to-motion generation model), generate any motion from a text prompt and use ProtoMotions to train a physics-based policy that performs the motion — for both the SOMA animation character and the Unitree G1 robot. Policies trained this way can be deployed directly on real hardware. See Kimodo Data Preparation for how to convert Kimodo outputs to ProtoMotions format. Image Credit: NVIDIA Human Motion Modeling Research 🏗️ Procedural Scene Generation Procedurally generate many scenes for scalable Synthetic Data Generation (SDG) : start from a seed motion set, use RL to adapt motions to augmented scenes. 🎭 Generative Policies Train a generative policy (e.g., MaskedMimic ) that can autonomously choose its \"move\" to finish the task. ⛰️ Terrain Navigation Train your robot to hike challenging terrains! 🎯 Custom Environments Have a new task? Build it from modular components — no monolithic env class needed. Here's how the steering task is composed: Layer File What it does ------- ------ ------------",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#VLA",
-      "#Humanoid"
-    ],
-    "score": 44.955,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.2655900293371913,
-      "has_code": 6.0,
-      "github_stars_log": 16.109677999140025,
-      "github_forks_log": 4.580069222725036,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:Genesis-Embodied-AI/genesis-world",
     "source": "github",
     "title": "Genesis-Embodied-AI/genesis-world",
@@ -275,51 +224,6 @@
       "has_code": 6.0,
       "github_stars_log": 17.074031397505063,
       "github_forks_log": 5.564945248332572,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:google-deepmind/mujoco_playground",
-    "source": "github",
-    "title": "google-deepmind/mujoco_playground",
-    "url": "https://github.com/google-deepmind/mujoco_playground",
-    "summary": "GPU-accelerated MuJoCo MJX environments for robot RL and sim-to-real let researchers train on classic control, quadruped/biped locomotion, and dexterous or non-prehensile manipulation tasks. Distinctive support includes JAX MJX plus MuJoCo Warp backends and vision via MJWarp Batch Renderer.",
-    "published": "2024-12-03T22:39:09Z",
-    "updated": "2026-05-11T17:06:52Z",
-    "authors": [
-      "google-deepmind"
-    ],
-    "extra": {
-      "stars": 1946,
-      "forks": 319,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 88,
-      "license": "Apache-2.0",
-      "first_seen": "2026-05-18",
-      "thumbnail": "https://github.com/google-deepmind/mujoco_playground/raw/main/assets/banner.png?raw=true",
-      "full_text": "MuJoCo Playground A comprehensive suite of GPU-accelerated environments for robot learning research and sim-to-real, built with MuJoCo MJX. Features include: - Classic control environments from dm control . - Quadruped and bipedal locomotion environments. - Non-prehensile and dexterous manipulation environments. - Vision-based support available via the MJWarp Batch Renderer. For more details, check out the project website. [!NOTE] We now support training with both the MuJoCo MJX JAX implementation, as well as the MuJoCo Warp implementation at HEAD. See this discussion post for more details. Installation You can install MuJoCo Playground directly from PyPI: [!IMPORTANT] We recommend users to install from source to get the latest features and bug fixes from MuJoCo. From Source [!IMPORTANT] Requires Python 3.10 or later. 1. git clone git@github.com:google-deepmind/mujoco playground.git && cd mujoco playground 2. Install uv, a faster alternative to pip 3. Create a virtual environment: uv venv --python 3.12 4. Activate it: source .venv/bin/activate 5. Install CUDA 12 jax: uv pip install -U \"jax[cuda12]\" --index-url https://pypi.org/simple Verify GPU backend: python -c \"import jax; print(jax.default backend())\" should print gpu. unset LD LIBRARY PATH may need to be run before running this command. 6. Install playground from source: uv --no-config sync --all-extras 7. Verify installation: uv --no-config run python -c \"import mujoco playground; print('Success')\" Note : Menagerie assets will be downloaded automatically the first time you load a locomotion or manipulation environment. You can trigger this with: uv --no-config run python -c \"from mujoco playground import locomotion; locomotion.load('G1JoystickFlatTerrain')\" Getting started Running from CLI For basic usage, navigate to the repo's directory, install from source with jax[cuda12] , and run: To train with MuJoCo Warp: Or with uv : Basic Tutorials Colab Description ------- ------------- Introduction to the Playground with DM Control Suite Locomotion Environments Manipulation Environments Vision Environments Training Visualization To interactively view trajectories throughout training with rscope, install it ( pip install rscope ) and run: FAQ How can I contribute? Get started by installing the library and exploring its features! Found a bug? Report it in the issue tracker. Interested in contributing? If you are a developer with robotics experience, we would love your help—check out the contribution guidelines for more details. Reproducibility / GPU Precision Issues Users with NVIDIA Ampere architecture GPUs (e.g., RTX 30 and 40 series) may experience reproducibility issues in mujoco playground due to JAX’s default use of TF32 for matrix multiplications. This lower precision can adversely affect RL training stability. To ensure consistent behavior with systems using full float32 precision (as on Turing GPUs), please run export JAX DEFAULT MATMUL PRECISION=highest in your terminal before starting your experiments (or add it to the end of /.bashrc ). To reproduce results using the same exact learning script as used in the paper, run the brax training script which is available here. There are slight differences in results when using the learning/train jax ppo.py script, see the issue here for more context. Citation If you use Playground in your scientific works, please cite it as follows: License and Disclaimer The texture used in the rough terrain for the locomotion environments is from Polyhaven and licensed under CC0. All other content in this repository is licensed under the Apache License, Version 2.0. A copy of this license is provided in the top-level LICENSE file in this repository. You can also obtain it from https://www.apache.org/licenses/LICENSE-2.0. This is not an officially supported Google product.",
-      "readme": "MuJoCo Playground A comprehensive suite of GPU-accelerated environments for robot learning research and sim-to-real, built with MuJoCo MJX. Features include: - Classic control environments from dm control . - Quadruped and bipedal locomotion environments. - Non-prehensile and dexterous manipulation environments. - Vision-based support available via the MJWarp Batch Renderer. For more details, check out the project website. [!NOTE] We now support training with both the MuJoCo MJX JAX implementation, as well as the MuJoCo Warp implementation at HEAD. See this discussion post for more details. Installation You can install MuJoCo Playground directly from PyPI: [!IMPORTANT] We recommend users to install from source to get the latest features and bug fixes from MuJoCo. From Source [!IMPORTANT] Requires Python 3.10 or later. 1. git clone git@github.com:google-deepmind/mujoco playground.git && cd mujoco playground 2. Install uv, a faster alternative to pip 3. Create a virtual environment: uv venv --python 3.12 4. Activate it: source .venv/bin/activate 5. Install CUDA 12 jax: uv pip install -U \"jax[cuda12]\" --index-url https://pypi.org/simple Verify GPU backend: python -c \"import jax; print(jax.default backend())\" should print gpu. unset LD LIBRARY PATH may need to be run before running this command. 6. Install playground from source: uv --no-config sync --all-extras 7. Verify installation: uv --no-config run python -c \"import mujoco playground; print('Success')\" Note : Menagerie assets will be downloaded automatically the first time you load a locomotion or manipulation environment. You can trigger this with: uv --no-config run python -c \"from mujoco playground import locomotion; locomotion.load('G1JoystickFlatTerrain')\" Getting started Running from CLI For basic usage, navigate to the repo's directory, install from source with jax[cuda12] , and run: To train with MuJoCo Warp: Or with uv : Basic Tutorials Colab Description ------- ------------- Introduction to the Playground with DM Control Suite Locomotion Environments Manipulation Environments Vision Environments Training Visualization To interactively view trajectories throughout training with rscope, install it ( pip install rscope ) and run: FAQ How can I contribute? Get started by installing the library and exploring its features! Found a bug? Report it in the issue tracker. Interested in contributing? If you are a developer with robotics experience, we would love your help—check out the contribution guidelines for more details. Reproducibility / GPU Precision Issues Users with NVIDIA Ampere architecture GPUs (e.g., RTX 30 and 40 series) may experience reproducibility issues in mujoco playground due to JAX’s default use of TF32 for matrix multiplications. This lower precision can adversely affect RL training stability. To ensure consistent behavior with systems using full float32 precision (as on Turing GPUs), please run export JAX DEFAULT MATMUL PRECISION=highest in your terminal before starting your experiments (or add it to the end of /.bashrc ). To reproduce results using the same exact learning script as used in the paper, run the brax training script which is available here. There are slight differences in results when using the learning/train jax ppo.py script, see the issue here for more context. Citation If you use Playground in your scientific works, please cite it as follows: License and Disclaimer The texture used in the rough terrain for the locomotion environments is from Polyhaven and licensed under CC0. All other content in this repository is licensed under the Apache License, Version 2.0. A copy of this license is provided in the top-level LICENSE file in this repository. You can also obtain it from https://www.apache.org/licenses/LICENSE-2.0. This is not an officially supported Google product.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#Manipulator",
-      "#Humanoid"
-    ],
-    "score": 40.877,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 6.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.4196891805258485,
-      "has_code": 6.0,
-      "github_stars_log": 16.44682975760016,
-      "github_forks_log": 5.010299956639812,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
@@ -612,49 +516,6 @@
       "github_stars_log": 19.119326546622556,
       "github_forks_log": 5.4151403521958725,
       "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:fan-ziqi/rl_sar",
-    "source": "github",
-    "title": "fan-ziqi/rl_sar",
-    "url": "https://github.com/fan-ziqi/rl_sar",
-    "summary": "rl_sar collects simulation-to-real reinforcement learning workflows for deploying locomotion policies across quadruped, wheeled, and humanoid robots. It is aimed at validating robot RL algorithms in simulation and carrying them through to physical hardware, making it useful as a practical bridge between training experiments and real-world deployment.",
-    "published": "2024-03-06T09:06:25Z",
-    "updated": "2026-04-02T02:17:38Z",
-    "authors": [
-      "fan-ziqi"
-    ],
-    "extra": {
-      "stars": 1295,
-      "forks": 168,
-      "language": "C++",
-      "topics": [],
-      "open_issues": 17,
-      "license": "Apache-2.0",
-      "first_seen": "2026-05-18",
-      "full_text": "Simulation verification and physical deployment of robot reinforcement learning algorithms, suitable for quadruped robots, wheeled robots, and humanoid robots. \"sar\" represents \"simulation and real\"",
-      "readme": "rl sar 中文文档 This repository provides a framework for simulation verification and physical deployment of robot reinforcement learning algorithms, suitable for quadruped robots, wheeled robots, and humanoid robots. \"sar\" stands for \"simulation and real\" Supports both IsaacGym and IsaacSim Supports both ROS-Noetic and ROS2-Foxy/Humble Supports both libtorch and onnxruntime Supports both Linux and macOS (Only support Mujoco simulation) Supports both Gazebo and Mujoco (Partial support) Supports both Locomotion and Dance Support List: Robot Name (rname:=) Pre-Trained Policy Gazebo Mujoco Real - - - - - Unitree-A1 (a1) legged gym (IsaacGym) ✅ ❌ ✅ Unitree-Go2 (go2) himloco (IsaacGym) robot lab (IsaacSim) ✅ ✅ ✅ ✅ Unitree-Go2W (go2w) robot lab (IsaacSim) ✅ ✅ ✅ Unitree-B2 (b2) robot lab (IsaacSim) ✅ ✅ ⚪ Unitree-B2W (b2w) robot lab (IsaacSim) ✅ ✅ ⚪ Unitree-G1 (g1) robomimic/locomotion (IsaacGym) robomimic/charleston (IsaacGym) whole body tracking/dance 102 (IsaacSim) whole body tracking/gangnam style (IsaacSim) ✅ ✅ ✅ FFTAI-GR1T1 (gr1t1) (Only available on Ubuntu20.04) legged gym (IsaacGym) ✅ ❌ ⚪ FFTAI-GR1T2 (gr1t2) (Only available on Ubuntu20.04) legged gym (IsaacGym) ✅ ❌ ⚪ zhinao-L4W4 (l4w4) legged gym (IsaacGym) ✅ ❌ ✅ Deeprobotics-Lite3 (lite3) himloco (IsaacGym) ✅ ❌ ✅ Agibot-D1 (d1) robot lab (IsaacSim) ✅ ✅ ✅ DDTRobot-Tita (tita) robot lab (IsaacSim) ✅ ❌ ⚪ [!IMPORTANT] Python version temporarily suspended maintenance, please use v2.3 if necessary, may be re-released in the future. [!NOTE] If you want to train policy using IsaacLab(IsaacSim), please use robot lab project. The order of joints in robot lab cfg file joint names is the same as that defined in xxx/robot lab/config.yaml in this project. Discuss in Github Discussion or Discord. [!CAUTION] Disclaimer: User acknowledges that all risks and consequences arising from using this code shall be solely borne by the user, the author assumes no liability for any direct or indirect damages, and proper safety measures must be implemented prior to operation. Preparation Clone the repository To update Dependency Install the required packages: If you need to use ROS, install the following dependency packages: Compilation Execute the following script in the project root directory to compile the entire project: To compile specific packages individually, you can append the package names: To clean the build, use the following command. This will remove all compiled outputs and created symbolic links: If simulation is not needed and you only want to run on the robot, you can compile using CMake while disabling ROS (the compiled executables will be in cmake build/bin and libraries in cmake build/lib ): To use the Mujoco simulator For detailed usage instructions, you can check them via ./build.sh -h : [!TIP] If catkin build report errors: Unable to find either executable 'empy' or Python module 'em' , run catkin config -DPYTHON EXECUTABLE=/usr/bin/python3 before catkin build Running In the following text, \\ /\\ is used to represent different environments, such as go2/himloco and go2w/robot lab . Before running, copy the trained pt model file to rl sar/src/rl sar/policy/ / , and configure the parameters in / /config.yaml and /base.yaml . Simulation Gazebo Open a terminal, launch the gazebo simulation environment Open a new terminal, launch the control program [!TIP] IMPORTANT: After launching Gazebo, you must launch rl sim in a separate terminal to control the robot. Without rl sim , the robot will not be controlled and may fall over. If you cannot see the robot after launching Gazebo in Ubuntu 22.04, it means the robot was initialized outside the field of view. The robot's position will be automatically reset after launching rl sim. If the robot falls over during the standing process, use the keyboard R or the gamepad RB+Y to reset the robot. If Gazebo cannot be opened when you start it for the first time, you need to download the model package Mujoco Docker Docker support is available for simulation ",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 39.118,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 4.0,
-      "recency": 1.0991050754540894,
-      "has_code": 6.0,
-      "github_stars_log": 15.563025007672874,
-      "github_forks_log": 4.455773409227347,
-      "real_robot": 3.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -1966,48 +1827,6 @@
       "github_stars_log": 6.808639180087964,
       "github_forks_log": 0.6020599913279624,
       "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:martin-sedlacek/REALM",
-    "source": "github",
-    "title": "martin-sedlacek/REALM",
-    "url": "https://github.com/martin-sedlacek/REALM",
-    "summary": "REALM is an IEEE RA-L benchmark for testing how well robotic manipulation policies generalize, with real-to-sim validation built into the evaluation rather than relying only on simulated task variation. The repository appears to package the benchmark around the martin-sedlacek/REALM codebase, making it useful for researchers who want a concrete manipulation testbed where simulation results are anchored against real-world behavior.",
-    "published": "2025-12-22T13:16:33Z",
-    "updated": "2026-05-11T13:10:43Z",
-    "authors": [
-      "martin-sedlacek"
-    ],
-    "extra": {
-      "stars": 54,
-      "forks": 3,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 1,
-      "license": null,
-      "first_seen": "2026-05-18",
-      "summary_kind": "llm",
-      "full_text": "[IEEE RA-L] REALM: A Real-to-Sim Validated Benchmark for Generalization in Robotic Manipulation",
-      "thumbnail": "https://raw.githubusercontent.com/martin-sedlacek/REALM/HEAD/./images/realm_overview_fig.png"
-    },
-    "tags": [
-      "#Manipulator"
-    ],
-    "score": 24.32,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.414222744521605,
-      "has_code": 6.0,
-      "github_stars_log": 8.701813447471219,
-      "github_forks_log": 1.2041199826559248,
-      "real_robot": 3.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
