@@ -76,6 +76,62 @@ def _has_code(it: dict[str, Any]) -> bool:
     return bool(bd.get("has_code", 0))
 
 
+def _apply_news_policy(
+    news_items: list[dict[str, Any]],
+    news_cfg: dict[str, Any],
+    now: datetime,
+) -> list[dict[str, Any]]:
+    """For news only: reassign priority by score-quota tiers, then drop items
+    older than their tier's retention window.
+
+    The user's product call: news should not be retained at equal priority
+    proportions. With quota 60/30/10 (high/mid/low) and retention 60/30/10
+    days respectively, the visible News section naturally skews toward High
+    over time — Low ages out fast, High stays exposed.
+    """
+    if not news_items:
+        return []
+    quota = news_cfg.get("priority_quota") or {"high": 0.6, "mid": 0.3, "low": 0.1}
+    retention = news_cfg.get("retention_days") or {
+        "must_read": 60, "save_for_later": 30, "low_priority": 10,
+    }
+
+    sorted_news = sorted(
+        news_items, key=lambda x: float(x.get("score") or 0), reverse=True
+    )
+    n = len(sorted_news)
+    high_cut = int(round(n * float(quota.get("high", 0.6))))
+    mid_cut = high_cut + int(round(n * float(quota.get("mid", 0.3))))
+
+    kept: list[dict[str, Any]] = []
+    for i, it in enumerate(sorted_news):
+        if i < high_cut:
+            tier = "must_read"
+        elif i < mid_cut:
+            tier = "save_for_later"
+        else:
+            tier = "low_priority"
+
+        max_age = float(retention.get(tier, 10))
+        pub = it.get("updated") or it.get("published") or ""
+        if pub:
+            try:
+                dt = datetime.fromisoformat(pub.replace("Z", "+00:00"))
+                if dt.tzinfo is None:
+                    dt = dt.replace(tzinfo=timezone.utc)
+                if (now - dt).total_seconds() / 86400 > max_age:
+                    continue
+            except ValueError:
+                pass
+
+        # Shallow copy so we don't mutate the original dict shared across
+        # all_items views.
+        it2 = dict(it)
+        it2["priority"] = tier
+        kept.append(it2)
+    return kept
+
+
 def _load_all_processed(processed_dir: Path) -> list[dict[str, Any]]:
     """Merge every snapshot, keeping the highest-scoring copy of each item id."""
     by_id: dict[str, dict[str, Any]] = {}
@@ -201,7 +257,11 @@ def build_site(cfg: dict[str, Any]) -> Path:
     # top-N non-news by score, then the most RECENT news (news is timely — we
     # sort the News section by date, not score).
     non_news = [it for it in all_items if it.get("source") != "news"][:items_on_index]
-    news_all = [it for it in all_items if it.get("source") == "news"]
+    news_raw = [it for it in all_items if it.get("source") == "news"]
+    # Apply priority-quota reassignment + per-tier retention so High news stays
+    # exposed longer and Low ages out first.
+    news_cfg = (cfg.get("sources") or {}).get("news") or {}
+    news_all = _apply_news_policy(news_raw, news_cfg, datetime.now(timezone.utc))
     news_all.sort(key=lambda x: (x.get("updated") or x.get("published") or ""), reverse=True)
     news_subset = news_all[:news_min_slots]
     seen_ids = {it.get("id") for it in non_news}
