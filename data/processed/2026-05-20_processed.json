@@ -657,48 +657,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:isaac-sim/Sim-to-Real-SO-101-Workshop",
-    "source": "github",
-    "title": "isaac-sim/Sim-to-Real-SO-101-Workshop",
-    "url": "https://github.com/isaac-sim/Sim-to-Real-SO-101-Workshop",
-    "summary": "Train an SO-101 Robot From Sim-to-Real With NVIDIA Isaac Welcome to this workshop on sim-to-real transfer for the SO-101 robot! This repository contains the assets and code to accompany this learning content. The rest of this README will help you setup the environment and ensure everything is installed correctly.",
-    "published": "2026-03-17T12:27:51Z",
-    "updated": "2026-05-13T18:05:24Z",
-    "authors": [
-      "isaac-sim"
-    ],
-    "extra": {
-      "stars": 38,
-      "forks": 11,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 4,
-      "license": "Apache-2.0",
-      "first_seen": "2026-05-18",
-      "full_text": "Train an SO-101 Robot From Sim-to-Real With NVIDIA Isaac Welcome to this workshop on sim-to-real transfer for the SO-101 robot! This repository contains the assets and code to accompany this learning content. The rest of this README will help you setup the environment and ensure everything is installed correctly. You can also use this repo as a basis for trying out your own tasks. Requirements This content was tested on the following GPUs: - NVIDIA RTX 6000 Pro (Blackwell) - NVIDIA RTX 5090 (Blackwell) - NVIDIA RTX 6000 (Ada) OS and Software tested: - Ubuntu Linux 22.04 - Docker - CUDA Toolkit - NVIDIA Container Toolkit Installation 1. Create directory and clone this repo Building the Docker images 2. Navigate to the repo Teleop & Simulation container 3. From the repo root directory, run: Real Robot & Inference Server - this may take a while to build For Blackwell architecture GPUs: 4. From the repo root directory, run: For Ada architecture GPUs: 4. From the repo root directory: 5. Continue with the course instructions here. Starting the images To start the Teleop & Simulation container: To start the Real Robot & Inference Server: Models and Datasets Downloading model weights First, install the HuggingFace command-line-interface (CLI) The models used in the course are listed in the course instructions here. You can either download them ahead of time, or as you get to them in the course. Tasks Tasks Debug envs - Lerobot-So101-Teleop-Base : Teleop debug - Lerobot-So101-Teleop-Task : Lightbox, cameras, non-task related debug Tasks - Lerobot-So101-Teleop-Vials-To-Rack - Main task for the workshop - pick up the vial and place it in the yellow rack - Lerobot-So101-Teleop-Vials-To-Rack-DR - Same as above but with domain randomization Eval - Lerobot-So101-Teleop-Vials-To-Rack-Eval - Evaluation without domain randomization (fixed orange robot, no lighting/mat DR) - Lerobot-So101-Teleop-Vials-To-Rack-DR-Eval - Evaluation with full domain randomization Commands - list envs - List environments in this repo - zero agent - Debug script with zero actions - random agent - Debug script with random actions - lerobot agent - LeRobot SO101 teleop script - lerobot eval - Model evaluation script - lerobot push dataset - LeRobot Dataset push to hub script Contributions We are not currently accepting contributions for this project.",
-      "summary_kind": "llm",
-      "thumbnail": "https://raw.githubusercontent.com/isaac-sim/Sim-to-Real-SO-101-Workshop/HEAD/images/so101_banner.png"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 34.601,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.4877107620597996,
-      "has_code": 6.0,
-      "github_stars_log": 7.955323035132496,
-      "github_forks_log": 2.1583624920952498,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:ARISE-Initiative/robosuite",
     "source": "github",
     "title": "ARISE-Initiative/robosuite",
@@ -1257,66 +1215,6 @@
       "has_code": 6.0,
       "github_stars_log": 12.326914257242091,
       "github_forks_log": 3.1595671932336202,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:AsterisCrack/BipedRobot",
-    "source": "github",
-    "title": "AsterisCrack/BipedRobot",
-    "url": "https://github.com/AsterisCrack/BipedRobot",
-    "summary": "BipedRobot is a biped locomotion codebase built around Isaac Lab and MuJoCo, with custom implementations of PPO, SAC, DDPG, D4PG, and MPO for training walking policies. It supports MLP, LSTM, and Transformer policies plus motion imitation and sim-to-real workflows, making it useful as an experimental platform for comparing RL algorithms and network architectures on legged robot control.",
-    "published": "2022-07-26T16:05:39Z",
-    "updated": "2026-05-17T15:54:19Z",
-    "authors": [
-      "AsterisCrack"
-    ],
-    "extra": {
-      "stars": 15,
-      "forks": 4,
-      "language": "Python",
-      "topics": [
-        "bipedal-locomotion",
-        "deep-reinforcement-learning",
-        "humanoid",
-        "isaac-lab",
-        "legged-robots",
-        "locomotion",
-        "motion-imitation",
-        "mujoco",
-        "nvidia-isaac",
-        "ppo",
-        "pytorch",
-        "reinforcement-learning",
-        "robot-learning",
-        "robotics",
-        "sac",
-        "sim-to-real"
-      ],
-      "open_issues": 0,
-      "license": "MIT",
-      "first_seen": "2026-05-18",
-      "full_text": "Biped robot locomotion with deep RL: Isaac Lab + MuJoCo, custom PPO/SAC/DDPG/D4PG/MPO, MLP/LSTM/Transformer, motion imitation, sim-to-real",
-      "summary_kind": "llm",
-      "thumbnail": "https://raw.githubusercontent.com/AsterisCrack/BipedRobot/HEAD/media/robot.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Humanoid"
-    ],
-    "score": 26.037,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.618009758757716,
-      "has_code": 6.0,
-      "github_stars_log": 6.020599913279624,
-      "github_forks_log": 1.3979400086720377,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
