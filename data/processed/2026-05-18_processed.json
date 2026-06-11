@@ -429,48 +429,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:leggedrobotics/pace-sim2real",
-    "source": "github",
-    "title": "leggedrobotics/pace-sim2real",
-    "url": "https://github.com/leggedrobotics/pace-sim2real",
-    "summary": "PACE is a sim-to-real pipeline for legged robots that estimates actuator and joint dynamics using only standard joint encoder data, avoiding extra sensing or specialized identification hardware. The repo is aimed at making legged-robot simulation models match real hardware more closely, so policies trained in simulation transfer more reliably to physical robots.",
-    "published": "2025-09-05T14:41:15Z",
-    "updated": "2026-03-12T07:26:26Z",
-    "authors": [
-      "leggedrobotics"
-    ],
-    "extra": {
-      "stars": 484,
-      "forks": 41,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 1,
-      "license": "Apache-2.0",
-      "first_seen": "2026-05-18",
-      "full_text": "PACE: A systematic approach for sim-to-real transfer of legged robots, identifying actuator and joint dynamics with standard joint encoders.",
-      "readme": "⚙️ PACE — Sim-to-Real Transfer for Legged Robots PACE is a framework for sim-to-real transfer of diverse robotic systems , combining data-driven system identification with evolutionary optimization. It enables accurate actuator modeling and robust adaptation between simulation to reality by explicitly learning physically meaningful dynamics parameters. --- 🤖🐾 What is PACE? PACE (Precise Adaptation through Continuous Evolution) bridges the gap between simulation and real hardware by: Estimating actuator and joint dynamics directly from measured data Using CMA-ES for parameter optimization Applying learned parameters to improve sim-to-real locomotion performance Supporting multiple robot platforms and actuator types It is designed to integrate seamlessly with NVIDIA Isaac Lab and follows its task and environment conventions. --- 📦 Installation 1. Install Isaac Lab Follow the official Isaac Lab installation guide: https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/index.html We recommend using the conda or uv installation method, as this simplifies running Python scripts from the terminal and managing dependencies. 2. Clone this repository Clone or copy this project separately from the Isaac Lab installation (i.e. outside the IsaacLab directory): 3. Install PACE in editable mode Using a Python interpreter that has Isaac Lab installed: ⚠️ Isaac Sim version compatibility PACE is developed and tested against Isaac Sim 5.0 / Isaac Lab (latest) . If you run the examples on older versions (e.g. Isaac Sim 4.5), you may encounter warnings such as: These warnings are expected and indicate that certain physics properties (e.g. joint viscous friction) are not supported by the older simulator version. While the examples may still run, the physical fidelity and sim-to-real accuracy will be reduced. ✅ Recommended: Isaac Sim 5.0 or newer ⚠️ Legacy support: May run with limitations on F. Bjelonic, F. Tischhauser, and M. Hutter, Towards Bridging the Gap: Systematic Sim-to-Real Transfer for Diverse Legged Robots , arXiv:2509.06342, 2025. --- PACE — bringing simulation and reality closer, one parameter at a time.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 39.081,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 0.4062532236265429,
-      "has_code": 6.0,
-      "github_stars_log": 13.428708693011318,
-      "github_forks_log": 3.246498580795801,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:NVIDIA/warp",
     "source": "github",
     "title": "NVIDIA/warp",
@@ -515,55 +473,6 @@
       "has_code": 6.0,
       "github_stars_log": 19.119326546622556,
       "github_forks_log": 5.4151403521958725,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:Farama-Foundation/Metaworld",
-    "source": "github",
-    "title": "Farama-Foundation/Metaworld",
-    "url": "https://github.com/Farama-Foundation/Metaworld",
-    "summary": "Meta-World is an open source benchmark for developing and evaluating multi-task and meta reinforcement learning algorithms for continuous control robotic manipulation environments, with various benchmarks to evaluate different aspects of reinforcement learning algorithms.",
-    "published": "2019-09-09T19:00:02Z",
-    "updated": "2026-05-17T03:27:18Z",
-    "authors": [
-      "Farama-Foundation"
-    ],
-    "extra": {
-      "stars": 1819,
-      "forks": 343,
-      "language": "Python",
-      "topics": [
-        "benchmark-environments",
-        "meta-rl",
-        "mujoco",
-        "multi-task"
-      ],
-      "open_issues": 9,
-      "license": "MIT",
-      "first_seen": "2026-05-18",
-      "thumbnail": "https://github.com/Farama-Foundation/Metaworld/raw/master/metaworld-text.png",
-      "full_text": "Meta-World is an open source benchmark for developing and evaluating multi-task and meta reinforcement learning algorithms for continuous control robotic manipulation environments, with various benchmarks to evaluate different aspects of reinforcement learning algorithms. The documentation website is at metaworld.farama.org, and we have a public discord server (which we also use to coordinate development work) that you can join here: https://discord.gg/bnJ6kubTg6 Installation To install Meta-World, use pip install metaworld We support and test for Python 3.8, 3.9, 3.10, 3.11 on Linux and macOS. We will accept PRs related to Windows, but do not officially support it. API The Meta-World API follows the Gymnasium API for environment creation and environment interactions. To create a benchmark and interact with it: Available Benchmarks Multi-Task Benchmarks The MT1, MT10, and MT50 benchmarks are the Multi-Task Benchmarks. These benchmarks are used to learn a multi-task policy that can learn 1, 10, or 50 training tasks simultaneously. MT1 benchmarks can be created with any of the 50 tasks available in Meta-World. In the MT10 and MT50 benchmarks, the observations returned by the benchmark will come with one-hot task IDs appended to the state. Meta-Learning Benchmarks The ML1, ML10, and ML45 benchmarks are 3 meta-reinforcement learning benchmarks available in Meta-World. The ML1 benchmark can be used with any of the 50 tasks available in Meta-World. The ML1 benchmark tests for few-shot adaptation to goal variations within a single task. The ML10 and ML45 both test few-shot adaptation to new tasks. ML10 comprises 10 train tasks with 5 test tasks, while ML45 comprises of 45 training tasks with 5 test tasks. Creating Multi-Task Benchmarks MT1 MT10 MT10 has two different versions that can be returned by . The first version is the synchronous version of the benchmark where all environments are contained within the same process. For users with limited compute resources, the synchronous option needs the least resources. Alternatively, for users with more compute we also provide the asynchronous version of the MT10 benchmark where each environment is isolated in it's own process and must use inter-process messaging via pipes to communicate. MT50 MT50 also contains two different versions, a synchronous and an asynchronous version, of the environments. Meta-Learning Benchmarks Each Meta-reinforcement learning benchmark has training and testing environments. These environments must be created separately as follows. ML1 ML10 Similar to the Multi-Task benchmarks, the ML10 and ML45 environments can be run in synchronous or asynchronous modes. ML45 Custom Benchmarks Finally, we also provide support for creating custom benchmarks by combining any number of Meta-World environments. The prefix 'mt' will return environments that are goal observable for Multi-Task reinforcement learning, while the prefix 'ml' will return environments that are partially observable for Meta-reinforcement learning. Like the included MT and ML benchmarks, these environments can also be run in synchronous or asynchronous mode. In order to create a custom benchmark, the user must provide a list of environment names with the suffix '-v3'. Development Roadmap We have a roadmap for future development work for Gymnasium available here: https://github.com/Farama-Foundation/Metaworld/issues/500 Benchmark Code Code for producing results found in the paper can be found at: https://github.com/rainx0r/metaworld-algorithms Citation You can cite Meta-World using our related paper (https://openreview.net/forum?id=1de3azE606) as:",
-      "readme": "Meta-World is an open source benchmark for developing and evaluating multi-task and meta reinforcement learning algorithms for continuous control robotic manipulation environments, with various benchmarks to evaluate different aspects of reinforcement learning algorithms. The documentation website is at metaworld.farama.org, and we have a public discord server (which we also use to coordinate development work) that you can join here: https://discord.gg/bnJ6kubTg6 Installation To install Meta-World, use pip install metaworld We support and test for Python 3.8, 3.9, 3.10, 3.11 on Linux and macOS. We will accept PRs related to Windows, but do not officially support it. API The Meta-World API follows the Gymnasium API for environment creation and environment interactions. To create a benchmark and interact with it: Available Benchmarks Multi-Task Benchmarks The MT1, MT10, and MT50 benchmarks are the Multi-Task Benchmarks. These benchmarks are used to learn a multi-task policy that can learn 1, 10, or 50 training tasks simultaneously. MT1 benchmarks can be created with any of the 50 tasks available in Meta-World. In the MT10 and MT50 benchmarks, the observations returned by the benchmark will come with one-hot task IDs appended to the state. Meta-Learning Benchmarks The ML1, ML10, and ML45 benchmarks are 3 meta-reinforcement learning benchmarks available in Meta-World. The ML1 benchmark can be used with any of the 50 tasks available in Meta-World. The ML1 benchmark tests for few-shot adaptation to goal variations within a single task. The ML10 and ML45 both test few-shot adaptation to new tasks. ML10 comprises 10 train tasks with 5 test tasks, while ML45 comprises of 45 training tasks with 5 test tasks. Creating Multi-Task Benchmarks MT1 MT10 MT10 has two different versions that can be returned by . The first version is the synchronous version of the benchmark where all environments are contained within the same process. For users with limited compute resources, the synchronous option needs the least resources. Alternatively, for users with more compute we also provide the asynchronous version of the MT10 benchmark where each environment is isolated in it's own process and must use inter-process messaging via pipes to communicate. MT50 MT50 also contains two different versions, a synchronous and an asynchronous version, of the environments. Meta-Learning Benchmarks Each Meta-reinforcement learning benchmark has training and testing environments. These environments must be created separately as follows. ML1 ML10 Similar to the Multi-Task benchmarks, the ML10 and ML45 environments can be run in synchronous or asynchronous modes. ML45 Custom Benchmarks Finally, we also provide support for creating custom benchmarks by combining any number of Meta-World environments. The prefix 'mt' will return environments that are goal observable for Multi-Task reinforcement learning, while the prefix 'ml' will return environments that are partially observable for Meta-reinforcement learning. Like the included MT and ML benchmarks, these environments can also be run in synchronous or asynchronous mode. In order to create a custom benchmark, the user must provide a list of environment names with the suffix '-v3'. Development Roadmap We have a roadmap for future development work for Gymnasium available here: https://github.com/Farama-Foundation/Metaworld/issues/500 Benchmark Code Code for producing results found in the paper can be found at: https://github.com/rainx0r/metaworld-algorithms Citation You can cite Meta-World using our related paper (https://openreview.net/forum?id=1de3azE606) as:",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#Manipulator"
-    ],
-    "score": 35.974,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.600717729767747,
-      "has_code": 6.0,
-      "github_stars_log": 16.300356939925372,
-      "github_forks_log": 5.07311688514306,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
@@ -1111,64 +1020,6 @@
       "github_stars_log": 10.226614893933288,
       "github_forks_log": 2.1583624920952498,
       "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:arpitg1304/forge",
-    "source": "github",
-    "title": "arpitg1304/forge",
-    "url": "https://github.com/arpitg1304/forge",
-    "summary": "Forge is a robotics data toolkit for converting datasets across common formats including RLDS, LeRobot v2/v3, Zarr, HDF5, and Rosbag. It also supports inspection, visualization, and analysis, with HuggingFace Hub integration for workflows around OpenVLA, Octo, LeRobot, and Diffusion Policy.",
-    "published": "2026-01-22T04:51:26Z",
-    "updated": "2026-04-28T05:37:09Z",
-    "authors": [
-      "arpitg1304"
-    ],
-    "extra": {
-      "stars": 115,
-      "forks": 12,
-      "language": "Python",
-      "topics": [
-        "data-quality",
-        "data-quality-checks",
-        "dataset-conversion",
-        "hdf5",
-        "hdf5-to-rlds",
-        "lerobot",
-        "octo",
-        "openvla",
-        "physical-ai",
-        "rlds",
-        "rlds-to-lerobot",
-        "robotics",
-        "vla"
-      ],
-      "open_issues": 2,
-      "license": "MIT",
-      "first_seen": "2026-05-18",
-      "thumbnail": "https://raw.githubusercontent.com/arpitg1304/forge/HEAD/docs/assets/rerun_viz.png",
-      "summary_kind": "llm",
-      "full_text": "Robotics Data Toolkit | Convert between robotics dataset formats (RLDS, LeRobot v2/v3, Zarr, HDF5, Rosbag). Inspect, visualize, and analyze datasets. Works with HuggingFace Hub. Built for OpenVLA, Octo, LeRobot, and Diffusion Policy workflows."
-    },
-    "tags": [
-      "#IL",
-      "#VLA",
-      "#Other"
-    ],
-    "score": 28.521,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 4.0,
-      "recency": 1.970390183153549,
-      "has_code": 6.0,
-      "github_stars_log": 10.322289946134592,
-      "github_forks_log": 2.2278867046136734,
-      "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
