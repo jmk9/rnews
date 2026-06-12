@@ -531,61 +531,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:RobotControlStack/robot-control-stack",
-    "source": "github",
-    "title": "RobotControlStack/robot-control-stack",
-    "url": "https://github.com/RobotControlStack/robot-control-stack",
-    "summary": "RobotControlStack is a lightweight sim-to-real stack for training and deploying vision-language-action models and reinforcement-learning agents without depending on ROS. It provides native MuJoCo/Gymnasium wrappers with synchronous execution across common robot platforms including Franka, UR5e, xArm, and SO101, making it useful for researchers who want a leaner control and simulation pipeline for VLA or RL experiments.",
-    "published": "2024-02-29T12:40:59Z",
-    "updated": "2026-05-18T13:16:48Z",
-    "authors": [
-      "RobotControlStack"
-    ],
-    "extra": {
-      "stars": 94,
-      "forks": 10,
-      "language": "Python",
-      "topics": [
-        "franka",
-        "gymnasium",
-        "mujoco",
-        "reinforcement-learning",
-        "robot-learning",
-        "robot-manipulation",
-        "sim-to-real",
-        "vision-language-actions-models",
-        "vla-models"
-      ],
-      "open_issues": 17,
-      "license": "AGPL-3.0",
-      "first_seen": "2026-05-18",
-      "thumbnail": "https://raw.githubusercontent.com/RobotControlStack/robotcontrolstack.github.io/refs/heads/master/static/videos/grid.webp",
-      "full_text": "A lean, ROS-free sim-to-real framework for training and deploying Vision-Language-Action (VLA) models and RL agents. Native MuJoCo Gymnasium wrappers with synchronous execution for Franka, UR5e, xArm, and SO101.",
-      "readme": "A lean, ROS-free Sim-to-Real framework for training and deploying Vision-Language-Action (VLA) models and Reinforcement Learning (RL) agents. --- Robot Control Stack (RCS) is a flexible, native Gymnasium wrapper-based robot control interface designed specifically for modern robot learning and Vision-Language-Action (VLA) models. It completely unifies MuJoCo simulation and real-world physical robot control into a single, seamless API. Currently, RCS natively supports four robots out-of-the-box: Franka FR3/Panda, xArm7, UR5e, and SO101. 🚀 Why use Robot Control Stack? Traditional robotics middleware (like ROS/ROS2) and complex motion planning pipelines (like MoveIt or standard ros2 control ) are built for asynchronous, distributed systems. This often becomes a massive bottleneck when attempting to train modern, synchronous machine learning models. RCS is built differently: Zero ROS Overhead: No complex message-passing, middleware, or network configuration required. Run natively in Python with a lightweight C++ backend. Frictionless Sim-to-Real: Train your Reinforcement Learning or VLA policies in our MuJoCo Gymnasium wrapper, and deploy the exact same code directly to physical hardware. Synchronous Execution: Optimized specifically for the highly parallelized, synchronous data collection required by modern ML workflows. Ready-to-Use Apps: Ships with pre-built applications for data collection via teleoperation and remote model inference via vlagents. 🧩 Wrapper-Based Architecture RCS utilizes a highly modular, wrapper-based architecture, allowing you to easily stack capabilities (cameras, grippers, action spaces) as needed. 💻 Example: Composing your Environment Flexibly compose your Gymnasium environment to fit your exact training needs. For common environment compositions, factory functions such as rcs.envs.creators.SimEnvCreator are provided. Note: This and other examples can be found in the examples/ folder. 🛠️ Installation From Source Make sure that common build tools (i.e., build-essential ) and a C++ compiler like gcc or clang are installed on your system/conda/docker. RCS works best in Python 3.11, and all extensions have been tested to work in 3.11. For Python 3.11: The rcs realsense extension won't work due to the pyrealsense2 version RCS utilizes. For Python 3.12: The ompl python module is currently not available on PyPI. If OMPL is not used, it is safe to remove this dependency in pyproject.toml . Via PyPI/pip Coming soon... 🦾 Hardware Extensions RCS supports various hardware extensions to seamlessly connect your policies to the real world (e.g., FR3, xArm7, RealSense). These are located in the extensions directory. To install a specific robot extension (example for Franka FR3): For a full list of extensions and detailed documentation, visit robotcontrolstack.org/extensions . ⚠️ Troubleshooting & FAQ License error or group argument not found during installation? Make sure you are using a pip version =25.1 and setuptools version =45 . Dependency error during installation? Make sure you are using Python 3.11. RCS extensions currently do not support 3.12+ due to OMPL and RealSense dependencies. Simulation is running too slow? Check that you have enable on-demand rendering: SimCameraSet(..., render on demand=True) to render camera frames only once per step. Resolution and number of cameras in the scene has a large impact on simulation speed. Make sure to use a decent GPU when rendering is enabled. 📚 Documentation For full documentation, including advanced installation, modular usage, and API references, please visit: 👉 robotcontrolstack.org Useful quick-reference pages: - RCS Conventions for quaternion order, frames, Euler angles, and gripper semantics - Sim Scene Configuration for SimEnvCreatorConfig , scene frames, and example setup patterns 🤝 Contribution We welcome contributions from the robotics and ML community! For contribution guidelines, please check out robotcontrolstack.org/contributing . 📝 Citation If you find RC",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 34.619,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 6.0,
-      "recency": 2.647696896390432,
-      "has_code": 6.0,
-      "github_stars_log": 9.88861802644424,
-      "github_forks_log": 2.08278537031645,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:iit-DLSLab/basic-locomotion-isaaclab",
     "source": "github",
     "title": "iit-DLSLab/basic-locomotion-isaaclab",
@@ -672,57 +617,6 @@
       "has_code": 6.0,
       "github_stars_log": 12.993952533815577,
       "github_forks_log": 3.3979400086720375,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:ROBOTIS-GIT/robotis_lab",
-    "source": "github",
-    "title": "ROBOTIS-GIT/robotis_lab",
-    "url": "https://github.com/ROBOTIS-GIT/robotis_lab",
-    "summary": "ROBOTIS Lab collects hands-on tutorials for training reinforcement-learning and imitation-learning policies on ROBOTIS robots. Its practical value is the Sim2Real path: users can learn policies in simulation and then deploy them onto physical ROBOTIS hardware, making it useful as a bridge between robot-learning experiments and real robot execution.",
-    "published": "2025-07-14T12:30:59Z",
-    "updated": "2026-04-29T07:47:17Z",
-    "authors": [
-      "ROBOTIS-GIT"
-    ],
-    "extra": {
-      "stars": 102,
-      "forks": 19,
-      "language": "Python",
-      "topics": [
-        "imitation-learning",
-        "isaaclab",
-        "isaacsim",
-        "reinforcement-learning",
-        "robotics",
-        "robotis",
-        "robots",
-        "sim2real"
-      ],
-      "open_issues": 1,
-      "license": "Apache-2.0",
-      "first_seen": "2026-05-18",
-      "summary_kind": "llm",
-      "full_text": "This repository provides tutorials for reinforcement learning and imitation learning using ROBOTIS robots, and supports Sim2Real functionality for deploying the learned policies on real robots."
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 29.673,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.006735862347608,
-      "has_code": 6.0,
-      "github_stars_log": 10.064186123525861,
-      "github_forks_log": 2.6020599913279625,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
