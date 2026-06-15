@@ -48,49 +48,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:jonyzhang2023/awesome-embodied-vla-va-vln",
-    "source": "github",
-    "title": "jonyzhang2023/awesome-embodied-vla-va-vln",
-    "url": "https://github.com/jonyzhang2023/awesome-embodied-vla-va-vln",
-    "summary": "A curated list of state-of-the-art research in embodied AI, focusing on vision-language-action (VLA) models, vision-language navigation (VLN), and related multimodal learning approaches.",
-    "published": "2025-01-16T08:23:23Z",
-    "updated": "2026-06-02T13:40:16Z",
-    "authors": [
-      "jonyzhang2023"
-    ],
-    "extra": {
-      "stars": 3214,
-      "forks": 146,
-      "language": null,
-      "topics": [],
-      "open_issues": 0,
-      "license": null,
-      "first_seen": "2026-05-18",
-      "full_text": "A curated list of state-of-the-art research in embodied AI, focusing on vision-language-action (VLA) models, vision-language navigation (VLN), and related multimodal learning approaches.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Other",
-      "#Survey"
-    ],
-    "score": 44.364,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.4932253796354162,
-      "has_code": 6.0,
-      "github_stars_log": 17.535904886301203,
-      "github_forks_log": 4.334634669496352,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:huggingface/lerobot",
     "source": "github",
     "title": "huggingface/lerobot",
@@ -1065,106 +1022,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:ncbdrck/UniROS",
-    "source": "github",
-    "title": "ncbdrck/UniROS",
-    "url": "https://github.com/ncbdrck/UniROS",
-    "summary": "A comprehensive framework for reinforcement learning in robotics, which allows users to train their robots in both simulated and real-world environments.",
-    "published": "2023-12-07T09:27:33Z",
-    "updated": "2026-06-02T19:56:34Z",
-    "authors": [
-      "ncbdrck"
-    ],
-    "extra": {
-      "stars": 111,
-      "forks": 11,
-      "language": "Python",
-      "topics": [
-        "gym",
-        "gymnasium",
-        "gymnasium-robotics",
-        "multiros",
-        "realros",
-        "reinforcement-learning-environments",
-        "robotics",
-        "ros",
-        "uniros"
-      ],
-      "open_issues": 1,
-      "license": null,
-      "first_seen": "2026-05-18",
-      "full_text": "A comprehensive framework for reinforcement learning in robotics, which allows users to train their robots in both simulated and real-world environments.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 28.954,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.5492224037748015,
-      "has_code": 6.0,
-      "github_stars_log": 10.246090113350908,
-      "github_forks_log": 2.1583624920952498,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2606.04436",
-    "source": "arxiv",
-    "title": "3DThinkVLA: Endowing Vision-Language-Action Models with Latent 3D Priors via 3D-Thinking-Guided Co-training",
-    "url": "http://arxiv.org/abs/2606.04436v1",
-    "summary": "3DThinkVLA trains vision-language-action models to carry 3D spatial priors in their latent features, separating low-level geometry alignment from higher-level spatial reasoning distillation through a shared anchor token. At test time it drops the 3D foundation model and teacher branch, keeping only lightweight adapters so the policy can reason about manipulation from ordinary 2D images without 3D sensors or explicit chain-of-thought generation. The approach reports strong results across LIBERO, LIBERO-PLUS, SimplerEnv, and real-world manipulation while preserving the pretrained VLM’s capabilities.",
-    "published": "2026-06-03T04:34:07+00:00",
-    "updated": "2026-06-03T04:34:07+00:00",
-    "authors": [
-      "Jiaxin Shi",
-      "Xidong Zhang",
-      "Fucai Zhu",
-      "Zhe Li",
-      "Siyu Zhu",
-      "Weihao Yuan"
-    ],
-    "extra": {
-      "categories": [
-        "cs.CV",
-        "cs.RO"
-      ],
-      "primary_category": "cs.CV",
-      "pdf_url": "https://arxiv.org/pdf/2606.04436v1",
-      "comment": null,
-      "first_seen": "2026-06-04",
-      "full_text": "We propose a 3D-thinking-guided co-training framework that enables vision-language-action (VLA) models to perform 3D spatial reasoning implicitly during action prediction. Our core insight is that 3D geometry perception and 3D spatial reasoning are distinct capabilities that can be disentangled and injected at different feature hierarchies. During training, three tightly coupled components work in concert primarily within the latent space: (1) To gain geometric priors, a latent 3D geometry perception module aligns intermediate visual features with a 3D foundation model, acquiring low-level geometric cues without architectural modifications to the VLM backbone. (2) Complementing this, an online 3D reasoning distillation module mitigates the prompt-induced reasoning gap via a shared reasoning anchor token. During 3D VLM co-training, this anchor is emitted as the first output token to robustly encode spatial priors. During VLA training, it serves as an input token inserted between the task and action instructions, transferring high-level spatial thinking from explicit teacher reasoning prompts to student action prompts without chain-of-thought text generation. (3) These disentangled geometric and reasoning features are then united by a spatially augmented action integration, which jointly injects them into the action-query tokens as hierarchical spatial conditions to prevent action shortcuts. At deployment, our method retains only its lightweight adapters to perform implicit 3D reasoning, discarding the 3D foundation model and the teacher branch used for supervision. Consequently, it operates purely on 2D images without 3D sensors, external models, or explicit text generation while preventing catastrophic forgetting of the pretrained VLM, achieving state-of-the-art performance on LIBERO, LIBERO-PLUS, SimplerEnv, and real-world manipulation tasks.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 28.626,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.6262387746924603,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:lupinjia/LeggedGym-Ex",
     "source": "github",
     "title": "lupinjia/LeggedGym-Ex",
@@ -1304,47 +1161,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:surgical-robotics-ai/isaac-sim-surgical-robotics-challenge",
-    "source": "github",
-    "title": "surgical-robotics-ai/isaac-sim-surgical-robotics-challenge",
-    "url": "https://github.com/surgical-robotics-ai/isaac-sim-surgical-robotics-challenge",
-    "summary": "Isaac Sim implementation of the AMBF Surgical Robotics Challenge developed by Johns Hopkins LCSR Lab.",
-    "published": "2024-08-28T19:53:56Z",
-    "updated": "2026-06-03T13:12:42Z",
-    "authors": [
-      "surgical-robotics-ai"
-    ],
-    "extra": {
-      "stars": 15,
-      "forks": 2,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 0,
-      "license": null,
-      "first_seen": "2026-05-23",
-      "full_text": "Isaac Sim implementation of the AMBF Surgical Robotics Challenge developed by Johns Hopkins LCSR Lab.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 27.678,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.703408908511905,
-      "has_code": 6.0,
-      "github_stars_log": 6.020599913279624,
-      "github_forks_log": 0.9542425094393249,
-      "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -1516,68 +1332,6 @@
       "has_code": 6.0,
       "github_stars_log": 12.164846454372029,
       "github_forks_log": 2.510545010206612,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:gbionics/jaxsim",
-    "source": "github",
-    "title": "gbionics/jaxsim",
-    "url": "https://github.com/gbionics/jaxsim",
-    "summary": "A differentiable physics engine and multibody dynamics library for control and robot learning.",
-    "published": "2022-01-31T16:44:28Z",
-    "updated": "2026-06-03T12:41:23Z",
-    "authors": [
-      "gbionics"
-    ],
-    "extra": {
-      "stars": 197,
-      "forks": 22,
-      "language": "Python",
-      "topics": [
-        "aba",
-        "ad",
-        "automatic-differentiation",
-        "crba",
-        "dynamics",
-        "featherstone",
-        "jacobian",
-        "jax",
-        "jit",
-        "kinematics",
-        "ode",
-        "physics",
-        "physics-engine",
-        "rigid-body-dynamics",
-        "rnea",
-        "robotics",
-        "robotics-control",
-        "robotics-simulation",
-        "simulation",
-        "simulation-modeling"
-      ],
-      "open_issues": 8,
-      "license": "BSD-3-Clause",
-      "first_seen": "2026-05-18",
-      "full_text": "A differentiable physics engine and multibody dynamics library for control and robot learning.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 25.906,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.6987486936359124,
-      "has_code": 6.0,
-      "github_stars_log": 11.483325951307656,
-      "github_forks_log": 2.7234556720351857,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
@@ -1801,58 +1555,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:ncbdrck/realros",
-    "source": "github",
-    "title": "ncbdrck/realros",
-    "url": "https://github.com/ncbdrck/realros",
-    "summary": "RealROS is an open-source Python framework that seamlessly integrates with ROS (Robot Operating System) to create real-world robotics environments tailored for reinforcement learning (RL) applications. This modular framework simplifies RL development, enabling real-time training with physical robots",
-    "published": "2023-07-18T14:37:04Z",
-    "updated": "2026-06-02T18:07:27Z",
-    "authors": [
-      "ncbdrck"
-    ],
-    "extra": {
-      "stars": 22,
-      "forks": 3,
-      "language": "Python",
-      "topics": [
-        "gym",
-        "gymnasium",
-        "gymnasium-robotics",
-        "real-time",
-        "realros",
-        "reinforcement-learning",
-        "robotics",
-        "ros",
-        "uniros"
-      ],
-      "open_issues": 0,
-      "license": "MIT",
-      "first_seen": "2026-05-18",
-      "full_text": "RealROS is an open-source Python framework that seamlessly integrates with ROS (Robot Operating System) to create real-world robotics environments tailored for reinforcement learning (RL) applications. This modular framework simplifies RL development, enabling real-time training with physical robots",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 24.546,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.532984802447917,
-      "has_code": 6.0,
-      "github_stars_log": 6.808639180087964,
-      "github_forks_log": 1.2041199826559248,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:wuji-technology/wuji-mjlab",
     "source": "github",
     "title": "wuji-technology/wuji-mjlab",
@@ -1896,56 +1598,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:BDX-R/BDX-R-MjLab",
-    "source": "github",
-    "title": "BDX-R/BDX-R-MjLab",
-    "url": "https://github.com/BDX-R/BDX-R-MjLab",
-    "summary": "mjlab reinforcement learning for the BDX-R robot",
-    "published": "2025-09-29T10:41:08Z",
-    "updated": "2026-06-02T20:50:42Z",
-    "authors": [
-      "BDX-R"
-    ],
-    "extra": {
-      "stars": 67,
-      "forks": 9,
-      "language": "Python",
-      "topics": [
-        "bdx-r",
-        "isaaclab",
-        "mjlab",
-        "mujoco",
-        "mujoco-warp",
-        "reinforcement-learning",
-        "robotics"
-      ],
-      "open_issues": 1,
-      "license": "Apache-2.0",
-      "first_seen": "2026-05-18",
-      "full_text": "mjlab reinforcement learning for the BDX-R robot",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 23.72,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.557277957512401,
-      "has_code": 6.0,
-      "github_stars_log": 9.162544563531181,
-      "github_forks_log": 2.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:Roboparty/roboparty_train",
     "source": "github",
     "title": "Roboparty/roboparty_train",
@@ -1980,59 +1632,6 @@
       "has_code": 6.0,
       "github_stars_log": 10.2653922174171,
       "github_forks_log": 3.13640344813399,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:ncbdrck/multiros",
-    "source": "github",
-    "title": "ncbdrck/multiros",
-    "url": "https://github.com/ncbdrck/multiros",
-    "summary": "MultiROS is an open-source ROS based simulation environment designed for concurrent deep reinforcement learning. It provides a flexible and scalable framework for training and evaluating reinforcement learning agents for complex robotic tasks.",
-    "published": "2022-03-18T19:55:00Z",
-    "updated": "2026-06-02T19:56:17Z",
-    "authors": [
-      "ncbdrck"
-    ],
-    "extra": {
-      "stars": 39,
-      "forks": 7,
-      "language": "Python",
-      "topics": [
-        "deep-reinforcement-learning",
-        "gazebo",
-        "gym",
-        "gymnasium",
-        "gymnasium-robotics",
-        "multiros",
-        "reinforcement-learning",
-        "robotics",
-        "ros",
-        "uniros"
-      ],
-      "open_issues": 0,
-      "license": "MIT",
-      "first_seen": "2026-05-18",
-      "full_text": "MultiROS is an open-source ROS based simulation environment designed for concurrent deep reinforcement learning. It provides a flexible and scalable framework for training and evaluating reinforcement learning agents for complex robotic tasks.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 23.366,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.5491802391393854,
-      "has_code": 6.0,
-      "github_stars_log": 8.010299956639813,
-      "github_forks_log": 1.806179973983887,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
@@ -2181,93 +1780,6 @@
     "priority": "must_read"
   },
   {
-    "id": "news:dc5f4360678d",
-    "source": "news",
-    "title": "VinRobotics makes global debut of \"Make In Vietnam\" humanoid robot at leading global tech events",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/06/03/vinrobotics-makes-global-debut-of-make-in-vietnam-humanoid-robot-at-leading-global-tech-events/26665",
-    "summary": "On the opening day of ICRA 2026, VinRobotics' humanoid robot impressed attendees with its remote operation capabilities enabled by motion-capture technology integrated into a virtual reality headset, requiring no additional external devices.",
-    "published": "2026-06-03T12:45:50+00:00",
-    "updated": "2026-06-03T12:45:50+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-06-03",
-      "full_text": "On the opening day of ICRA 2026, VinRobotics' humanoid robot impressed attendees with its remote operation capabilities enabled by motion-capture technology integrated into a virtual reality headset, requiring no additional external devices.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 21.699,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.699410880012401,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2606.04718",
-    "source": "arxiv",
-    "title": "CoRe-MoE: Contrastive Reweighted Mixture of Experts for Multi-Terrain Humanoid Locomotion with Gait Adaptation",
-    "url": "http://arxiv.org/abs/2606.04718v1",
-    "summary": "CoRe-MoE trains humanoid locomotion in two stages: first a base RL policy learns stable walking, running, and smooth gait transitions, then a terrain-aware mixture-of-experts branch is added with a contrastive objective that pushes the gate toward structured terrain representations and clearer expert specialization. The final controller fuses the base gait policy with the terrain branch, preserving natural locomotion while adapting to stairs, slopes, steps, obstacles, and rough outdoor ground. In simulation it improves success rate, stability, and multi-terrain adaptability over baselines, and it transfers zero-shot to a Unitree G1 with robust walking and running under terrain variation and external disturbances.",
-    "published": "2026-06-03T10:51:46+00:00",
-    "updated": "2026-06-03T10:51:46+00:00",
-    "authors": [
-      "Kailun Huang",
-      "Zikang Xie",
-      "Yanzhe Xie",
-      "Panpan Liao",
-      "Fanghai Zhang",
-      "Yanheng Mai",
-      "Wenhao Xu",
-      "Yunheng Wang",
-      "Renjing Xu",
-      "Haohui Huang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2606.04718v1",
-      "comment": "Kailun Huang, Zikang Xie, Yanzhe Xie and Panpan Liao contributed equally to this work. Corresponding authors: Renjing Xu and Haohui Huang",
-      "first_seen": "2026-06-04",
-      "full_text": "Humans primarily rely on walking and running to traverse complex terrains, without resorting to unnecessarily complex motion patterns. Similarly, humanoid robots should achieve smooth transitions between walking and running while maintaining natural and stable locomotion. However, unifying gait transition and multi-terrain adaptation within a single policy remains challenging due to gradient interference and the distribution shift induced by terrain-dependent visual and dynamic variations. Although Mixture-of-Experts (MoE) architectures can alleviate multi-skill interference, naive joint training often fails to yield clear expert specialization, limiting their effectiveness. To address these challenges, we propose CoRe-MoE, a two-stage reinforcement learning framework that decouples gait generation from terrain adaptation. In the first stage, a stable locomotion policy is learned to produce natural walking and running behaviors with smooth transitions. In the second stage, a terrain-aware MoE branch is introduced and trained with a contrastive objective to shape the gating network, enabling it to capture structured terrain representations and promote expert specialization. The final action is obtained via weighted fusion of the base gait policy and the terrain-aware branch, allowing the policy to preserve stable locomotion patterns while adapting to complex terrains. Extensive simulation results demonstrate that the proposed method outperforms baseline approaches in terms of success rate, locomotion stability, and multi-terrain adaptability. Furthermore, zero-shot deployment on a Unitree G1 humanoid robot validates the effectiveness of our framework, achieving robust walking and running across stairs, slopes, steps, obstacles, and unstructured outdoor terrains, while maintaining accurate foothold placement and dynamic stability under external disturbances.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2606.04718.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Humanoid"
-    ],
-    "score": 21.682,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.682436695815972,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:assistive-autonomy/assistax",
     "source": "github",
     "title": "assistive-autonomy/assistax",
@@ -2310,49 +1822,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:Edmond1Cheng/MBDPO",
-    "source": "github",
-    "title": "Edmond1Cheng/MBDPO",
-    "url": "https://github.com/Edmond1Cheng/MBDPO",
-    "summary": "Scaling World-Model Reinforcement Learning Through Diffusion Policy Optimization",
-    "published": "2026-05-23T15:10:12Z",
-    "updated": "2026-06-03T06:33:15Z",
-    "authors": [
-      "Edmond1Cheng"
-    ],
-    "extra": {
-      "stars": 11,
-      "forks": 1,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 0,
-      "license": "MIT",
-      "first_seen": "2026-05-31",
-      "full_text": "Scaling World-Model Reinforcement Learning Through Diffusion Policy Optimization",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#IL",
-      "#Other"
-    ],
-    "score": 20.642,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.643966947175099,
-      "has_code": 6.0,
-      "github_stars_log": 5.395906230238125,
-      "github_forks_log": 0.6020599913279624,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:20c19f01ee13",
     "source": "news",
     "title": "베트남 '빈로보틱스', 휴머노이드 로봇 플랫폼 'VR-H3' 선보여",
@@ -2380,42 +1849,6 @@
       "research_interest_title": 5.0,
       "research_interest_abstract": 2.0,
       "recency": 2.9572456996279763,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:1d4bc3ce47a1",
-    "source": "news",
-    "title": "MGK로보틱스, 휴머노이드 플랫폼 'MICO' 앞세워 국내 로봇 시장 공략",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=46684",
-    "summary": "로봇 자동화 전문기업 MGK로보틱스(공동대표 민인식·박성현)가 글로벌 적응형 로봇(Adaptive Robot) 기업 플렉시브(Flexiv)의 휴머노이드 지능형 플랫폼 ‘MICO’를 국내 시장에 본격 소개하며 차세대 AI 로봇 사업 확대에 나선다.MGK로보틱스는 플렉시브 및 민줘 오토메이션(Minzhuo Automation)의 한국 공식 파트너로서 협동로봇과 지능형 로봇 솔루션의 국내 공급, 기술 지원, 자동화 시스템 구축을 담당하고 있다. 회사는 차세대 휴머노이드 플랫폼인 MICO를 통해 국내 로봇 시장 공략을 강화할 계획이다.MI",
-    "published": "2026-06-02T16:35:29+00:00",
-    "updated": "2026-06-02T16:35:29+00:00",
-    "authors": [
-      "박경일"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-06-02",
-      "full_text": "로봇 자동화 전문기업 MGK로보틱스(공동대표 민인식·박성현)가 글로벌 적응형 로봇(Adaptive Robot) 기업 플렉시브(Flexiv)의 휴머노이드 지능형 플랫폼 ‘MICO’를 국내 시장에 본격 소개하며 차세대 AI 로봇 사업 확대에 나선다.MGK로보틱스는 플렉시브 및 민줘 오토메이션(Minzhuo Automation)의 한국 공식 파트너로서 협동로봇과 지능형 로봇 솔루션의 국내 공급, 기술 지원, 자동화 시스템 구축을 담당하고 있다. 회사는 차세대 휴머노이드 플랫폼인 MICO를 통해 국내 로봇 시장 공략을 강화할 계획이다.MI",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 19.519,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.5192992701314485,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -2478,53 +1911,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2606.04749",
-    "source": "arxiv",
-    "title": "COP-Q: Safety-First Reinforcement Learning for Robot Control via Cholesky-Ordered Projection",
-    "url": "http://arxiv.org/abs/2606.04749v1",
-    "summary": "COP-Q is a safety-first off-policy RL method for robot control that estimates reward and safety Q-values jointly, using inter-objective covariance instead of treating each critic ensemble independently. It builds a joint confidence bound and applies Cholesky factorization to enforce priority ordering, keeping safety estimates conservative while relaxing unnecessary pessimism on reward. On Brax locomotion and Safety-Gymnasium navigation, it maintains strong constraint satisfaction while matching or improving sample efficiency over representative safe RL baselines.",
-    "published": "2026-06-03T11:30:10+00:00",
-    "updated": "2026-06-03T11:30:10+00:00",
-    "authors": [
-      "Guopeng Li",
-      "Moritz A. Zanger",
-      "Matthijs T. J. Spaan",
-      "Julian F. P. Kooij"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2606.04749v1",
-      "comment": "7 pages, 6 figures, 2 tables",
-      "first_seen": "2026-06-04",
-      "full_text": "Safe robot control requires maximizing return while satisfying safety constraints. In off-policy safe reinforcement learning, reward and safety Q-values are commonly learned by separate critic ensembles, with uncertainty handled independently for each objective. This objective-wise treatment neglects inter-objective correlation and can lead to overly conservative value estimates, thereby reducing sample efficiency. To address this issue, we propose Cholesky-Ordered Projection Q-learning (COP-Q), a safety-first method that incorporates inter-objective covariance into vector-valued Q-value estimation. COP-Q constructs a generalized confidence bound in the joint Q-value space and uses Cholesky factorization to encode objective priority in a sequential form. This preserves conservatism on safety while adaptively reducing excessive conservatism on the reward objective. The resulting estimate is used in both temporal-difference target computation and actor optimization. COP-Q incurs minimal computational overhead and is readily compatible with most existing deep Q-learning frameworks. Experiments on robot locomotion in Brax and safe navigation in Safety-Gymnasium, covering both hard- and soft-safety settings, demonstrate that COP-Q achieves strong safety performance together with competitive or improved sample efficiency relative to representative baselines.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2606.04749.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 18.688,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.688150979198909,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:8c2530bacfd4",
     "source": "news",
     "title": "Why robotics can’t advance without physical AI",
@@ -2557,123 +1943,6 @@
       "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2606.04812",
-    "source": "arxiv",
-    "title": "Scenario Generation for Risk-Aware Reinforcement Learning with Probably Approximately Safe Guarantees",
-    "url": "http://arxiv.org/abs/2606.04812v1",
-    "summary": "Risk-aware RL policies are verified by learning probabilistic barrier certificates from sampled trajectories, but transition perturbations can push agents into poorly explored states where violation bounds become loose. The method fits a VAE to the encountered state distribution and uses latent-state structure to build conservative lower-bound and looser upper-bound certificates, then actively samples the gap between them to stress the non-robust region during training. Experiments show that this targeted scenario generation tightens the safety bounds, giving sharper probably approximately safe guarantees.",
-    "published": "2026-06-03T12:36:43+00:00",
-    "updated": "2026-06-03T12:36:43+00:00",
-    "authors": [
-      "Mohit Prashant",
-      "Arvind Easwaran"
-    ],
-    "extra": {
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "primary_category": "cs.LG",
-      "pdf_url": "https://arxiv.org/pdf/2606.04812v1",
-      "comment": "8 pages, preprint",
-      "first_seen": "2026-06-04",
-      "full_text": "Guaranteeing safety is critical to the deployment of reinforcement learning (RL) agents in the real-world, especially as policies learned using deep RL may demonstrate susceptibility to transition perturbations that result in unknown or unsafe behaviour. A method of policy verification is to construct probabilistic barrier-certificates by sampling policy trajectories with respect to safety constraints, thereby demarcating known safe behaviour from unknown behaviour. Obtaining tight upper and lower bounds on the probability of violation of these constraints may be difficult if the policy is susceptible to transition uncertainty or perturbation that places the agent in insufficiently explored states. To address this, we approximate the distribution of the encountered state-space using a variational autoencoder (VAE) and construct upper and lower-bound barrier-certificates using latent characteristics of states to optimize for regions of known, safe behaviour with high confidence. We frame this in our work as a dual optimization problem where the lower-bound barrier-certificate presents a more conservative estimate of the safe region than the upper-bound barrier-certificate. Sampling states that lie within the set difference of the two during training, i.e. the non-robust region, allows us to tighten the upper and lower bounds to provide sharper probabilistic guarantees on safety. Within our study, we describe the guarantees placed and demonstrate the tightness of our bounds experimentally.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2606.04812.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 16.698,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.698054256207837,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:714cabf4da05",
-    "source": "news",
-    "title": "Mouser's Rise of the Robots Program Explores Humanoid Design Considerations",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/06/02/mousers-rise-of-the-robots-program-explores-humanoid-design-considerations/26660",
-    "summary": "The series shares how these robots have progressed from simple machinery to critical tools used in caregiving, industrial automation, education, and even in the harshest environments.",
-    "published": "2026-06-02T17:39:37+00:00",
-    "updated": "2026-06-02T17:39:37+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-06-02",
-      "full_text": "The series shares how these robots have progressed from simple machinery to critical tools used in caregiving, industrial automation, education, and even in the harshest environments.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 14.529,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.52884292359127,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:0c6fb8c0d9b6",
-    "source": "news",
-    "title": "Do robots need shoes? | Ask a Roboticist #atlas #robot #bostondynamics",
-    "url": "https://www.youtube.com/shorts/GvByvkp6k5s",
-    "summary": "If you've ever worked on your feet all day, you know how important a good pair of shoes is. Mechanical design engineer Chastity Kelly shares how we built Atlas functional feet.",
-    "published": "2026-06-02T13:56:37+00:00",
-    "updated": "2026-06-02T13:56:37+00:00",
-    "authors": [
-      "Boston Dynamics"
-    ],
-    "extra": {
-      "feed": "Boston Dynamics (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i4.ytimg.com/vi/GvByvkp6k5s/hqdefault.jpg",
-      "first_seen": "2026-06-02",
-      "full_text": "If you've ever worked on your feet all day, you know how important a good pair of shoes is. Mechanical design engineer Chastity Kelly shares how we built Atlas functional feet.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 13.496,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.495658395838294,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
       "demote": -0.0
     },
     "priority": "must_read"
@@ -2717,40 +1986,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:d31ce6fbe9ce",
-    "source": "news",
-    "title": "XELA Robotics to Unveil New Major Tactile Sensor Capabilities at Automate 2026",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/06/02/xela-robotics-to-unveil-new-major-tactile-sensor-capabilities-at-automate-2026-/26657",
-    "summary": "-First to develop robotic fingertips with sensitive nails for precision grasping of very thin objects; -Universal manipulation interface, enhanced magnetic interference compensation and improved ability to grasp fragile objects among many featured enhancements",
-    "published": "2026-06-02T13:08:57+00:00",
-    "updated": "2026-06-02T13:08:57+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-06-02",
-      "full_text": "-First to develop robotic fingertips with sensitive nails for precision grasping of very thin objects; -Universal manipulation interface, enhanced magnetic interference compensation and improved ability to grasp fragile objects among many featured enhancements",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Manipulator"
-    ],
-    "score": 12.489,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.488565145669643,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -2901,44 +2136,6 @@
       "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:885a474deee0",
-    "source": "news",
-    "title": "Luna & Oli: Work Diary at NIO Booth🤖⚡🚗",
-    "url": "https://www.youtube.com/watch?v=PJLwKjYrNfs",
-    "summary": "LimX Luna wows visitors at NIO’s stand of the Guangdong-Hong Kong-Macao Greater Bay Area (GBA) Auto Show 2026. LimX Oli joins in as an on-site fellow to walking visitors through NIO’s next-gen battery swap technology.⚡️ Together, the duo sets a new benchmark for interactive auto-show experiences. #limxdynamics #LimXLuna #HumanoidRobot #Autoshow #nio",
-    "published": "2026-06-02T12:30:22+00:00",
-    "updated": "2026-06-02T12:30:22+00:00",
-    "authors": [
-      "LimX Dynamics"
-    ],
-    "extra": {
-      "feed": "LimX Dynamics (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i1.ytimg.com/vi/PJLwKjYrNfs/hqdefault.jpg",
-      "first_seen": "2026-06-02",
-      "full_text": "LimX Luna wows visitors at NIO’s stand of the Guangdong-Hong Kong-Macao Greater Bay Area (GBA) Auto Show 2026. LimX Oli joins in as an on-site fellow to walking visitors through NIO’s next-gen battery swap technology.⚡️ Together, the duo sets a new benchmark for interactive auto-show experiences. #limxdynamics #LimXLuna #HumanoidRobot #Autoshow #nio",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 11.483,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.4828235724875993,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
       "demote": -0.0
     },
     "priority": "save_for_later"
@@ -3201,77 +2398,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:f5159295e7b6",
-    "source": "news",
-    "title": "Global robotics technology roadmap",
-    "url": "https://robohub.org/global-robotics-technology-roadmap/",
-    "summary": "Deborah Lupton / Pop Chips / Licenced by CC-BY 4.0. Henrik I Christensen, Professor of Computer Science & Engineering at University of California San Diego, has recently released a global robotics technology roadmap.",
-    "published": "2026-06-03T09:13:54+00:00",
-    "updated": "2026-06-03T09:13:54+00:00",
-    "authors": [
-      "Lucy Smith"
-    ],
-    "extra": {
-      "feed": "Robohub",
-      "first_seen": "2026-06-03",
-      "full_text": "Deborah Lupton / Pop Chips / Licenced by CC-BY 4.0. Henrik I Christensen, Professor of Computer Science & Engineering at University of California San Diego, has recently released a global robotics technology roadmap. This position paper focuses on Asia, Europe, and America and outlines the current state-of-the-art in robotics, and highlights the main opportunities. The […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 10.668,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.667873194077381,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:bf7e273d3edf",
-    "source": "news",
-    "title": "Robotiq Introduces IQ Platform to Automate Robotic Workcell Integration",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/06/02/robotiq-introduces-iq-platform-to-automate-robotic-workcell-integration-/26659",
-    "summary": "AI-enabled IQ platform helps manufacturers quickly convert unstructured project data, 3D site scans and production requirements into validated robotic Workcell designs",
-    "published": "2026-06-02T17:13:43+00:00",
-    "updated": "2026-06-02T17:13:43+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-06-02",
-      "full_text": "AI-enabled IQ platform helps manufacturers quickly convert unstructured project data, 3D site scans and production requirements into validated robotic Workcell designs",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 10.525,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.5249887568551586,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:3f2032899214",
     "source": "news",
     "title": "퀄컴, 로봇 개발 통합 플랫폼 '드래곤윙 IQ10 레퍼런스 디자인' 공개",
@@ -3497,40 +2623,6 @@
       "research_interest_abstract": 0.0,
       "recency": 2.7328111965600197,
       "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:473bd36fa827",
-    "source": "news",
-    "title": "LUMOS Robotics Offers 100 NIX Robots for Global Co-Creation After Mind-Blowing Street Dance Showcase",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/06/02/lumos-robotics-offers-100-nix-robots-for-global-co-creation-after-mind-blowing-street-dance-showcase/26655",
-    "summary": "Upgraded NIX showcases advanced dance, flipping and dynamic motion capabilities Startup to provide 100 robots and open SDK access to selected global partners",
-    "published": "2026-06-02T12:51:33+00:00",
-    "updated": "2026-06-02T12:51:33+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-06-02",
-      "full_text": "Upgraded NIX showcases advanced dance, flipping and dynamic motion capabilities Startup to provide 100 robots and open SDK access to selected global partners",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 9.486,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.4859758598859125,
-      "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
@@ -3908,148 +3000,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:a50862bdb135",
-    "source": "news",
-    "title": "BayCare Expands Autonomous Hospital Delivery with New Relay Robots at Winter Haven Hospitals",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/06/03/baycare-expands-autonomous-hospital-delivery-with-new-relay-robots-at-winter-haven-hospitals/26666",
-    "summary": "The expanded robot fleet addresses the critical healthcare labor shortage by automating non-clinical logistics to prioritize nurse-to-patient bedside time",
-    "published": "2026-06-03T13:02:11+00:00",
-    "updated": "2026-06-03T13:02:11+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-06-03",
-      "full_text": "The expanded robot fleet addresses the critical healthcare labor shortage by automating non-clinical logistics to prioritize nurse-to-patient bedside time",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 6.702,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.701843915801091,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:a8e92a8bab14",
-    "source": "news",
-    "title": "삼성전자 ‘비스포크 AI 스팀’ 로봇청소기, 월 판매 2만대 돌파",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=46682",
-    "summary": "삼성전자 ‘비스포크 AI 스팀’ 로봇청소기가 지난달 월 판매량 2만 대를 처음으로 돌파했다. 이는 전년 동기 대비 판매량이 약 60% 성장한 결과다.신혼가전 시장에서도 높은 선호도를 보이며, 5월 한 달간 신혼가전 패키지 구매 고객 3쌍 중 1쌍이 ‘비스포크 AI 스팀’을 선택했다.지난 3월 출시된 2026년형 ‘비스포크 AI 스팀’은 강력한 흡입력, AI 주행 성능뿐만 아니라 보안, 물걸레 스팀 살균을 통한 위생관리까지 로봇청소기 본연의 성능을 두루 갖췄다.‘비스포크 AI 스팀 울트라’와 ‘비스포크 AI 스팀 플러스’는 전작 대비",
-    "published": "2026-06-02T14:22:52+00:00",
-    "updated": "2026-06-02T14:22:52+00:00",
-    "authors": [
-      "박경일"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-06-02",
-      "full_text": "삼성전자 ‘비스포크 AI 스팀’ 로봇청소기가 지난달 월 판매량 2만 대를 처음으로 돌파했다. 이는 전년 동기 대비 판매량이 약 60% 성장한 결과다.신혼가전 시장에서도 높은 선호도를 보이며, 5월 한 달간 신혼가전 패키지 구매 고객 3쌍 중 1쌍이 ‘비스포크 AI 스팀’을 선택했다.지난 3월 출시된 2026년형 ‘비스포크 AI 스팀’은 강력한 흡입력, AI 주행 성능뿐만 아니라 보안, 물걸레 스팀 살균을 통한 위생관리까지 로봇청소기 본연의 성능을 두루 갖췄다.‘비스포크 AI 스팀 울트라’와 ‘비스포크 AI 스팀 플러스’는 전작 대비",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 6.5,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.4995646470312503,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:820ad3584b7a",
-    "source": "news",
-    "title": "세계 최대 로봇 학술대회 ' ICRA 2026', 오스트리아 빈에서 개막",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=46683",
-    "summary": "세계 최대 규모 로봇 및 자동화 분야 학술대회인 'IEEE ICRA 2026'이 오스트리아 빈에서 열린다. 이 행사는 오스트리아 빈 VIECON(비엔나 콩그레스&컨벤션 센터)에서 1일부터 5일까지 개최된다. ICRA는 IEEE 로봇 및 자동화학회(IEEE RAS)의 대표 학술대회로, 1984년부터 샌프란시스코·상하이 등 세계 각지를 순회하며 개최돼 왔다. 이번 행사에는 세계 최고 수준의 학자, 연구자, 산업계 인사 등 약 8000명이 참가할 것으로 예상된다. 행사는 로봇 및 자동화 분야의 최신 연구 성과를 공유하며, 워크숍·튜토리얼",
-    "published": "2026-06-02T14:18:59+00:00",
-    "updated": "2026-06-02T14:18:59+00:00",
-    "authors": [
-      "백승일"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-06-02",
-      "full_text": "세계 최대 규모 로봇 및 자동화 분야 학술대회인 'IEEE ICRA 2026'이 오스트리아 빈에서 열린다. 이 행사는 오스트리아 빈 VIECON(비엔나 콩그레스&컨벤션 센터)에서 1일부터 5일까지 개최된다. ICRA는 IEEE 로봇 및 자동화학회(IEEE RAS)의 대표 학술대회로, 1984년부터 샌프란시스코·상하이 등 세계 각지를 순회하며 개최돼 왔다. 이번 행사에는 세계 최고 수준의 학자, 연구자, 산업계 인사 등 약 8000명이 참가할 것으로 예상된다. 행사는 로봇 및 자동화 분야의 최신 연구 성과를 공유하며, 워크숍·튜토리얼",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 6.499,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.4989867699627974,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:84bdd61a11ed",
-    "source": "news",
-    "title": "휴로틱스, 세계적 재활로봇 허브 美 시카고 UIC에 'H-Medi' 수출",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=46680",
-    "summary": "웨어러블 로봇 전문 기업 휴로틱스(대표 이기욱)는 글로벌 재활 로봇 분야의 최대 허브로 꼽히는 미국 시카고 지역의 명문 일리노이대학교 시카고캠퍼스(UIC)에 보행 재활 소프트 웨어러블 로봇 'H-Medi(에이치-메디)'를 정식 수출했다고 2일 밝혔다. 미국 시카고 지역은 세계 최고 수준의 재활 병원과 연구소들이 밀집해 있어 글로벌 재활 로봇 산업의 중심지이자 메카로 평가받는다. UIC는 이번에 도입한 H-Medi를 기반으로 대학 내 물리치료학과는 물론, 연계 병원 및 최고 권위의 연구기관들과 광범위한 연구 협업을 추진하기 위해 구매",
-    "published": "2026-06-02T11:52:40+00:00",
-    "updated": "2026-06-02T11:52:40+00:00",
-    "authors": [
-      "최지호"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-06-02",
-      "full_text": "웨어러블 로봇 전문 기업 휴로틱스(대표 이기욱)는 글로벌 재활 로봇 분야의 최대 허브로 꼽히는 미국 시카고 지역의 명문 일리노이대학교 시카고캠퍼스(UIC)에 보행 재활 소프트 웨어러블 로봇 'H-Medi(에이치-메디)'를 정식 수출했다고 2일 밝혔다. 미국 시카고 지역은 세계 최고 수준의 재활 병원과 연구소들이 밀집해 있어 글로벌 재활 로봇 산업의 중심지이자 메카로 평가받는다. UIC는 이번에 도입한 H-Medi를 기반으로 대학 내 물리치료학과는 물론, 연계 병원 및 최고 권위의 연구기관들과 광범위한 연구 협업을 추진하기 위해 구매",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 6.477,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.4772134563864086,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:04e85b8916b7",
     "source": "news",
     "title": "Mobix Labs to Acquire U.S.-Built Drone Manufacturer Vision Aerial, Expanding Into Global Drone and Aerial Intelligence Markets",
@@ -4185,80 +3135,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.907166334037698,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:a2bed3a62ce7",
-    "source": "news",
-    "title": "Ambassadors of STEM",
-    "url": "https://news.mit.edu/2026/ambassadors-stem-0602",
-    "summary": "A new MIT student club for FIRST Robotics alumni aims to promote hands-on STEM education enrichment for K-12 students.",
-    "published": "2026-06-02T20:25:00+00:00",
-    "updated": "2026-06-02T20:25:00+00:00",
-    "authors": [
-      "Elizabeth Durant | Division of Graduate and Undergraduate Education"
-    ],
-    "extra": {
-      "feed": "MIT News — Robotics",
-      "thumbnail": "https://news.mit.edu/sites/default/files/styles/news_article__cover_image__original/public/images/202605/mit-robotics-club-with-Healey.jpg?itok=XZXc0p0a",
-      "first_seen": "2026-06-02",
-      "full_text": "A new MIT student club for FIRST Robotics alumni aims to promote hands-on STEM education enrichment for K-12 students.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 4.553,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.5534535403720238,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:05b07e428ec9",
-    "source": "news",
-    "title": "Cosmos 3 is here.",
-    "url": "https://www.youtube.com/shorts/Kgl9EFaliNU",
-    "summary": "#nvidiagtc #nvidiacosmos #nvidia #robotics #ai #autonomousvehicles",
-    "published": "2026-06-02T18:10:41+00:00",
-    "updated": "2026-06-02T18:10:41+00:00",
-    "authors": [
-      "NVIDIA Developer"
-    ],
-    "extra": {
-      "feed": "NVIDIA Developer (YouTube)",
-      "thumbnail": "https://i4.ytimg.com/vi/Kgl9EFaliNU/hqdefault.jpg",
-      "first_seen": "2026-06-02",
-      "full_text": "#nvidiagtc #nvidiacosmos #nvidia #robotics #ai #autonomousvehicles",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 4.533,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.533465932217262,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
