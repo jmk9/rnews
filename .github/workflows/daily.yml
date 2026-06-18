@@ -77,6 +77,16 @@ jobs:
         if: github.event_name != 'push'
         run: python main.py --site-only
 
+      - name: Send daily news email
+        # SMTP can flake — never let it fail the build / deploy. If creds are
+        # missing the script aborts cleanly with an error message in the log.
+        if: github.event_name != 'push'
+        continue-on-error: true
+        env:
+          RNEWS_SMTP_USER: ${{ secrets.RNEWS_SMTP_USER }}
+          RNEWS_SMTP_PASSWORD: ${{ secrets.RNEWS_SMTP_PASSWORD }}
+        run: python scripts/email_news.py
+
       - name: Rebuild site only (after code/template push)
         if: github.event_name == 'push'
         # No network on push — just re-render from data/processed already in

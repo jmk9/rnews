@@ -554,10 +554,11 @@ site:
 # file; they come from env vars RNEWS_SMTP_USER and RNEWS_SMTP_PASSWORD (locally:
 # export them; in CI: repo secrets). Run scripts/email_news.py to send.
 email:
-  enabled: false                  # turn on when you're ready for scheduled sends
+  enabled: true                   # scheduled CI sends are live (requires SMTP secrets in GitHub repo settings)
   from: ""                        # defaults to RNEWS_SMTP_USER if blank
   to:
-    - alsrb4696@gmail.com         # test recipient — add more lines for more people
+    - jwjeong@plaif.com         # test recipient — add more lines for more people
+    
   smtp_host: smtp.gmail.com       # Gmail (use app password, not regular pw)
   smtp_port: 587                  # STARTTLS
   subject_prefix: "[RNEWS] Robot news"
