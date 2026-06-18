@@ -548,3 +548,20 @@ site:
   items_on_index: 1500  # cap for non-news items (papers + repos)
   news_min_slots: 90   # ensure at least this many news items always visible
   top_tags: 16         # how many tag-filter chips to expose
+
+# Daily news email digest (HTML, sent via SMTP).
+# Recipients live here — add/remove freely. SMTP credentials NEVER go in this
+# file; they come from env vars RNEWS_SMTP_USER and RNEWS_SMTP_PASSWORD (locally:
+# export them; in CI: repo secrets). Run scripts/email_news.py to send.
+email:
+  enabled: false                  # turn on when you're ready for scheduled sends
+  from: ""                        # defaults to RNEWS_SMTP_USER if blank
+  to:
+    - alsrb4696@gmail.com         # test recipient — add more lines for more people
+  smtp_host: smtp.gmail.com       # Gmail (use app password, not regular pw)
+  smtp_port: 587                  # STARTTLS
+  subject_prefix: "[RNEWS] Robot news"
+  header: "RNEWS — daily robot news"
+  hours_window: 30                # only items first seen in this many hours
+  max_items: 25                   # safety cap on email length
+  site_url: ""                    # if blank, falls back to site.url then jmk9.github.io/rnews
