@@ -245,10 +245,24 @@ def _text_alt(items: list[dict]) -> str:
 
 def _send(subject: str, html: str, text: str, cfg: dict) -> None:
     email_cfg = cfg.get("email") or {}
-    user = os.environ.get("RNEWS_SMTP_USER", "")
-    password = os.environ.get("RNEWS_SMTP_PASSWORD", "")
+    # Strip NBSP and surrounding whitespace. Gmail's app-password page often
+    # uses non-breaking spaces between the 4-char groups; copy-pasting brings
+    # those along and smtplib's ASCII AUTH PLAIN encode then explodes with
+    # `UnicodeEncodeError: 'ascii' codec can't encode character '\xa0'`.
+    user = os.environ.get("RNEWS_SMTP_USER", "").replace("\xa0", "").strip()
+    password = os.environ.get("RNEWS_SMTP_PASSWORD", "").replace("\xa0", "").strip()
     if not user or not password:
         raise SystemExit("RNEWS_SMTP_USER and RNEWS_SMTP_PASSWORD must be set in env")
+    # Sanity check: any non-ASCII left in credentials will still fail at login.
+    try:
+        user.encode("ascii")
+        password.encode("ascii")
+    except UnicodeEncodeError as exc:
+        raise SystemExit(
+            "SMTP credentials contain non-ASCII characters — most likely a stray "
+            "non-breaking space from copy-paste. Retype the value by hand. "
+            f"(detail: {exc})"
+        )
 
     sender = email_cfg.get("from") or user
     recipients = list(email_cfg.get("to") or [])
