@@ -19,7 +19,8 @@
       "license": "MIT",
       "first_seen": "2026-05-18",
       "full_text": "A Paper List for Humanoid Robot Learning.",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/YanjieZe/awesome-humanoid-robot-learning/HEAD/assets/wordcloud.png"
     },
     "tags": [
       "#Humanoid",
@@ -1188,55 +1189,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2606.09215",
-    "source": "arxiv",
-    "title": "MotionWAM: Towards Foundation World Action Models for Real-Time Humanoid Loco-Manipulation",
-    "url": "http://arxiv.org/abs/2606.09215v1",
-    "summary": "World Action Models (WAMs) couple a video dynamics prior to the policy and have shown encouraging results on tabletop manipulation, but iterative denoising over high-dimensional video-action latents leaves them too slow for real-time humanoid loco-manipulation.",
-    "published": "2026-06-08T08:50:14+00:00",
-    "updated": "2026-06-08T08:50:14+00:00",
-    "authors": [
-      "Jia Zheng",
-      "Teli Ma",
-      "Yudong Fan",
-      "Zifan Wang",
-      "Shuo Yang",
-      "Junwei Liang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2606.09215v1",
-      "comment": null,
-      "first_seen": "2026-06-09",
-      "full_text": "World Action Models (WAMs) couple a video dynamics prior to the policy and have shown encouraging results on tabletop manipulation, but iterative denoising over high-dimensional video-action latents leaves them too slow for real-time humanoid loco-manipulation. The problem is compounded by the dominant hierarchical paradigm, in which a high-level manipulation policy controls only the upper body while a low-level controller tracks coarse base commands -- placing upper and lower body in inconsistent action spaces and reducing the legs to balance-preserving locomotion. We present MotionWAM, a real-time WAM that drives autonomous humanoid loco-manipulation from a single egocentric camera by conditioning the policy on the intermediate denoising features of a video world model. MotionWAM replaces the upper-lower split with a unified motion latent and predicts whole-body motion tokens that jointly cover locomotion, torso motion, height regulation, foot interaction, and hand manipulation in a single action space. A three-stage learning framework progressively adapts the video world model to egocentric visual dynamics and to the target humanoid embodiment. On nine real-world Unitree G1 tasks, MotionWAM runs in real time, substantially outperforms Vision-Language-Action (VLA) baselines fine-tuned on the same demonstrations by over 30% in overall success rate, and executes task-driven foot interaction that decoupled upper-lower policies cannot reach. Our results suggest that video-pretrained WAMs can be lifted from tabletop manipulation to coordinated, human-like whole-body humanoid control.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Manipulator",
-      "#Humanoid"
-    ],
-    "score": 29.446,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 8.0,
-      "recency": 2.446246795496032,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:hanruihua/ir-sim",
     "source": "github",
     "title": "hanruihua/ir-sim",
@@ -1591,7 +1543,8 @@
       "license": "NOASSERTION",
       "first_seen": "2026-05-27",
       "full_text": "HumanEgo: Zero-Shot Robot Learning from Minutes of Human Egocentric Videos",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/TX-Leo/HumanEgo/HEAD/assets/title/hero.png"
     },
     "tags": [
       "#Other"
@@ -3359,106 +3312,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2606.09286",
-    "source": "arxiv",
-    "title": "VAIC: Vision-Guided Humanoid Agile Object Interaction Control via Decoupled Commands",
-    "url": "http://arxiv.org/abs/2606.09286v1",
-    "summary": "Humanoid robots hold immense potential for real-world assistance, yet agile interaction with objects in unstructured environments demands tightly coupled whole-body coordination. Despite recent advancements, current controllers face a critical deployment gap.",
-    "published": "2026-06-08T09:52:55+00:00",
-    "updated": "2026-06-08T09:52:55+00:00",
-    "authors": [
-      "Dongting Li",
-      "Qianyang Wu",
-      "Xingyu Chen",
-      "Liang Li",
-      "Yuhang Lin",
-      "Sikai Wu",
-      "Guoyao Zhang",
-      "Mingliang Zhou",
-      "Diyun Xiang",
-      "Qiang Zhang",
-      "Renjing Xu",
-      "Jianzhu Ma"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2606.09286v1",
-      "comment": "Webpage: https://vaic-humanoid.github.io/",
-      "first_seen": "2026-06-09",
-      "full_text": "Humanoid robots hold immense potential for real-world assistance, yet agile interaction with objects in unstructured environments demands tightly coupled whole-body coordination. Despite recent advancements, current controllers face a critical deployment gap. They rely heavily on dense reference trajectories and perfect state observability, which inherently limits physical generalization. We present Vision Guided Agile Interaction Control (VAIC), a unified framework that bridges this gap by operating exclusively on onboard depth, historical proprioception, and a decoupled user command interface. VAIC employs a two-stage distillation paradigm. First, a privileged teacher policy masters diverse interaction skills using precise object kinematics and exact environmental states. Second, a deployable student policy distills these capabilities by replacing full body tracking with velocity targets across multiple axes and an interaction indicator for each frame. The student utilizes a recurrent object adaptation module to implicitly infer unobservable object dynamics from raw depth streams and proprioception. Evaluations and real-world deployments on the humanoid robot demonstrate that a single VAIC policy successfully executes highly diverse dynamic tasks. These tasks include box carrying, cart interaction, and skateboarding, consistently outperforming baselines and advancing autonomous humanoid deployment.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 17.456,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.455574673345734,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2606.09258",
-    "source": "arxiv",
-    "title": "Back to the Familiar Future: Failure Recovery for VLA Policies via Pre-Imagined Milestone Selection",
-    "url": "http://arxiv.org/abs/2606.09258v1",
-    "summary": "Vision-language-action (VLA) policies can deviate from nominal trajectories during manipulation, even when tasks remain physically feasible. Recovering from these deviations is challenging, as they push the policy into unfamiliar state spaces where direct re-planning frequently destabilizes action sequences.",
-    "published": "2026-06-08T09:30:38+00:00",
-    "updated": "2026-06-08T09:30:38+00:00",
-    "authors": [
-      "Suyeon Shin",
-      "Juwon Kim",
-      "Hyeonbin Park",
-      "Hyunseo Kim",
-      "Hyundo Lee",
-      "Hyung-Sin Kim",
-      "Byoung-Tak Zhang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2606.09258v1",
-      "comment": null,
-      "first_seen": "2026-06-09",
-      "full_text": "Vision-language-action (VLA) policies can deviate from nominal trajectories during manipulation, even when tasks remain physically feasible. Recovering from these deviations is challenging, as they push the policy into unfamiliar state spaces where direct re-planning frequently destabilizes action sequences. We propose Back to the Familiar Future (B2FF), a recovery framework for foresight-driven VLAs that leverages future visual conditioning as a recovery interface. Before execution, the VLA generates a milestone bank of familiar future states conditioned on the clean initial observation. At recovery time, a recoverability-aware selector selects a recovery milestone from this bank and enforces it as a fixed visual goal. This enables the VLA to robustly map off-trajectory observations back to a familiar future. On failure-injected LIBERO, under controlled recovery timing aligned with the injected failure, B2FF increases the average success rate of a baseline VLA from 56.3% to 74.0%, demonstrating that pre-imagined milestones can guide recovery without fine-tuning the low-level action generator.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 17.452,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.4522587007440477,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:bbKurt11/SDG_CardboardBox_detect",
     "source": "github",
     "title": "bbKurt11/SDG_CardboardBox_detect",
@@ -4324,44 +4177,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:270e8083106f",
-    "source": "news",
-    "title": "NVIDIA and Doosan Group Collaborate to Advance Physical AI and AI Factory Infrastructure",
-    "url": "https://blogs.nvidia.com/blog/nvidia-and-doosan-group-physical-ai/",
-    "summary": "NVIDIA and Doosan Group are expanding their collaboration to advance new opportunities across physical AI, robotics and AI factory infrastructure, spanning Doosan Robotics, Doosan Bobcat, Doosan Enerbility and Doosan Corporation Electro-Materials BG.",
-    "published": "2026-06-07T23:00:36+00:00",
-    "updated": "2026-06-07T23:00:36+00:00",
-    "authors": [
-      "Madison Huang"
-    ],
-    "extra": {
-      "feed": "NVIDIA Blog",
-      "thumbnail": "https://blogs.nvidia.com/wp-content/uploads/2026/06/kr-visit-blog-doosan-robotics-1920x1080-noncredit-842x450.jpg",
-      "first_seen": "2026-06-08",
-      "full_text": "NVIDIA and Doosan Group are expanding their collaboration to advance new opportunities across physical AI, robotics and AI factory infrastructure, spanning Doosan Robotics, Doosan Bobcat, Doosan Enerbility and Doosan Corporation Electro-Materials BG. The collaboration will bring together NVIDIA’s full-stack accelerated computing platforms with Doosan Group’s capabilities in industrial automation, power generation and advanced electronics materials […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 11.359,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.3585037169022818,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:95b1f1378eed",
     "source": "news",
     "title": "티로보틱스, ‘STK 2026’서 상용화 단계 피지컬 AI 기술 공개",
@@ -5100,44 +4915,6 @@
       "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:53ee3c9bc1da",
-    "source": "news",
-    "title": "Skibidi Orange 2",
-    "url": "https://www.youtube.com/shorts/0JqAYT_ltJQ",
-    "summary": "",
-    "published": "2026-06-07T08:31:46+00:00",
-    "updated": "2026-06-07T08:31:46+00:00",
-    "authors": [
-      "Figure_official"
-    ],
-    "extra": {
-      "feed": "Figure AI (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i1.ytimg.com/vi/0JqAYT_ltJQ/hqdefault.jpg",
-      "first_seen": "2026-06-07",
-      "full_text": "",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 7.229,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.2292130393973215,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
       "demote": -0.0
     },
     "priority": "save_for_later"
