@@ -555,9 +555,10 @@ site:
 # export them; in CI: repo secrets). Run scripts/email_news.py to send.
 email:
   enabled: true                   # scheduled CI sends are live (requires SMTP secrets in GitHub repo settings)
-  from: ""                        # defaults to RNEWS_SMTP_USER if blank
+  from: "jmk9@plaif.com"          # defaults to RNEWS_SMTP_USER if blank
   to:
     - jwjeong@plaif.com         # test recipient — add more lines for more people
+    - alsrb4696@gmail.com
     
   smtp_host: smtp.gmail.com       # Gmail (use app password, not regular pw)
   smtp_port: 587                  # STARTTLS
