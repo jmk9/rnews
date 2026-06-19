@@ -275,13 +275,9 @@ def _send(subject: str, html: str, text: str, cfg: dict) -> None:
     msg = EmailMessage()
     msg["Subject"] = subject
     msg["From"] = sender
-    # Recipients go in Bcc so a multi-coworker distribution doesn't leak the
-    # rest of the list to each reader. To: is set to the sender so the
-    # message has a valid To header (some clients flag Bcc-only mail as spam).
-    # send_message() honours Bcc for envelope routing and strips it before
-    # transmission, so recipients only see themselves.
-    msg["To"] = sender
-    msg["Bcc"] = ", ".join(recipients)
+    # Plain To: — every recipient in email.to gets the mail and sees the
+    # rest of the list. Sender does NOT receive a copy (they're not in To:).
+    msg["To"] = ", ".join(recipients)
     msg.set_content(text)
     msg.add_alternative(html, subtype="html")
 
