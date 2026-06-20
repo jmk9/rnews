@@ -362,48 +362,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:InternRobotics/NavDP",
-    "source": "github",
-    "title": "InternRobotics/NavDP",
-    "url": "https://github.com/InternRobotics/NavDP",
-    "summary": "[ICRA 2026] NavDP: Learning Sim-to-Real Navigation Diffusion Policy with Privileged Information Guidance",
-    "published": "2025-05-16T11:28:40Z",
-    "updated": "2026-06-08T11:15:23Z",
-    "authors": [
-      "InternRobotics"
-    ],
-    "extra": {
-      "stars": 645,
-      "forks": 50,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 8,
-      "license": null,
-      "first_seen": "2026-06-08",
-      "full_text": "[ICRA 2026] NavDP: Learning Sim-to-Real Navigation Diffusion Policy with Privileged Information Guidance",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#IL",
-      "#Other"
-    ],
-    "score": 38.152,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.686123739136905,
-      "has_code": 6.0,
-      "github_stars_log": 14.051162589975421,
-      "github_forks_log": 3.4151403521958725,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:mujocolab/mjlab",
     "source": "github",
     "title": "mujocolab/mjlab",
@@ -680,60 +638,6 @@
       "has_code": 6.0,
       "github_stars_log": 13.15213937512512,
       "github_forks_log": 3.5563025007672873,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2606.09337",
-    "source": "arxiv",
-    "title": "TORL-VLA: Tactile Guided Online Reinforcement Learning for Contact-Rich Manipulation",
-    "url": "http://arxiv.org/abs/2606.09337v1",
-    "summary": "TORL-VLA adapts vision-language-action policies online during contact-rich manipulation by combining a tactile-derived, wrench-aware reference policy with lightweight reinforcement learning. An intervention-censored critic avoids crediting pre-intervention actions for successes caused by human corrections, and real-robot tests on latch manipulation, coffee-cup placement, and egg handling show higher success rates and better time-bounded efficiency than strong baselines.",
-    "published": "2026-06-08T11:05:05+00:00",
-    "updated": "2026-06-08T11:05:05+00:00",
-    "authors": [
-      "Huaihang Zheng",
-      "Yi Yang",
-      "Kai Ma",
-      "Shenglin Xu",
-      "Tian Xie",
-      "Guozheng Li",
-      "Xiangyu Wang",
-      "Yiren Ma",
-      "Si Liu",
-      "Yinian Mao",
-      "Baoxu Liu"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2606.09337v1",
-      "comment": null,
-      "first_seen": "2026-06-09",
-      "full_text": "Vision-Language-Action (VLA) models have become a powerful framework for robotic manipulation, and recent studies have introduced tactile or force feedback into VLAs to address contact-rich tasks. However, these models are typically deployed as offline policies. When contact conditions shift from the training distribution, the policy cannot perform online adaptation, leading to problems such as inappropriate contact forces and inefficient retries. Therefore, we propose TORL-VLA, a tactile-guided online reinforcement learning framework that couples tactile feedback with policy refinement for contact-rich manipulation. Our method introduces a tactile-derived wrench-aware VLA to predict reference actions and future wrench sequences, while a lightweight online RL module is used to refine the reference actions. To stabilize learning from mixed exploratory policy-generated and human-intervention data, we introduce an intervention-censored critic that prevents post-intervention success from being wrongly credited to policy-generated actions preceding intervention. Real-robot experiments on long-horizon contact-rich tasks, including latch manipulation, coffee-cup placement, and egg handling, show that TORL-VLA improves success rates at both subtask and full-task levels, as well as time-bounded execution efficiency over strong baselines.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2606.09337.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 33.685,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 6.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 6.0,
-      "recency": 2.6845910146180554,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
@@ -2046,53 +1950,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2606.09416",
-    "source": "arxiv",
-    "title": "Harness Engineering for Physical AI: Robot Middleware Is the Harness Layer",
-    "url": "http://arxiv.org/abs/2606.09416v1",
-    "summary": "Robot middleware is reframed as the harness that mediates learned models across control, computation, and communication in deployed robots. The proposed ROS 2 Harness Profile adds projection gates for model outputs, isolation of inference and transmission budgets, and transfer to a verified baseline when checks fail, enforcing declared operating constraints across ROS 2, DDS, and Zenoh.",
-    "published": "2026-06-08T12:29:54+00:00",
-    "updated": "2026-06-08T12:29:54+00:00",
-    "authors": [
-      "Sanghoon Lee",
-      "Jiyeong Chae",
-      "Kyung-Joon Park"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.SE"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2606.09416v1",
-      "comment": "6 pages, 2 figures, 2 tables. Big Ideas track submission to the 27th ACM/IFIP International Middleware Conference (Middleware 2026)",
-      "first_seen": "2026-06-09",
-      "full_text": "Robot middleware faces a new role in the era of Physical AI. Learned policies, planners, and vision-language-action (VLA) models now enter deployed robots as causal participants on the control path, but the layer that integrates them with timing, scheduling, and network has not been named. Recent language-agent work names this layer the harness, the external system that mediates tools, manages state, bounds resources, and records execution. The robotics community has not yet adopted this framing, and we propose that robot middleware is that harness. A Physical AI harness differs from a software harness in where it intervenes. A software harness mediates at tool-call boundaries. A Physical AI harness must mediate at control, computing, and communication simultaneously, because a learned policy's output crosses all three: its commands shift the trajectory, its inference time shifts the schedule, and its payload shifts the bandwidth. Robot middleware is the lowest robot-stack layer with mediating abstractions over all three, so it is best positioned to compose their enforcement. It already provides most of what a harness needs but lacks the enforcement for an AI model. We name this missing enforcement as three functions: Projection gates each output at emission, Isolation bounds the model's execution and transmission slot, and Transfer falls back to a verified baseline when checks fail. Each appears today as hand-built application code in deployed robot systems, built on surfaces robot middleware already provides. Robot middleware should host them not as the best single-axis enforcer but as the layer that composes all three. We sketch this as a ROS 2 Harness Profile, a deployment artifact that carries an AI model's declared output region, inference budget, and operating regime while the middleware enforces them across ROS 2, DDS, and Zenoh.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2606.09416.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 20.697,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 6.0,
-      "recency": 2.69721254281498,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:assistive-autonomy/assistax",
     "source": "github",
     "title": "assistive-autonomy/assistax",
@@ -2389,58 +2246,6 @@
       "github_stars_log": 5.206963425791125,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2606.09447",
-    "source": "arxiv",
-    "title": "AliyunConsoleAgent: Training Web Agents in Real-World Cloud Environments via Distillation and Reinforcement Learning",
-    "url": "http://arxiv.org/abs/2606.09447v1",
-    "summary": "AliyunConsoleAgent trains a 32B web agent to verify cloud-console documentation using supervised distillation from frontier-model trajectories, followed by GRPO in real environments with deterministic resource provisioning and audit-log-based rewards. On 278 tasks, it reaches 63.52% success, within 1.82 percentage points of the best proprietary model’s 65.34%, while reducing inference cost by 92%.",
-    "published": "2026-06-08T12:55:42+00:00",
-    "updated": "2026-06-08T12:55:42+00:00",
-    "authors": [
-      "Bojie Rong",
-      "Zheyu Shen",
-      "Qiaoping Wang",
-      "Pengfei Kang",
-      "Yang Xu",
-      "Yawen Wei",
-      "Hanyu Wu",
-      "Zhi Zhao",
-      "Leihao Pei",
-      "Linquan Jiang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI",
-      "pdf_url": "https://arxiv.org/pdf/2606.09447v1",
-      "comment": null,
-      "first_seen": "2026-06-09",
-      "full_text": "We present AliyunConsoleAgent, a web agent framework for automated documentation verification in real-world cloud consoles. Major cloud platforms encompass hundreds of products with rapid feature iteration, causing console UIs to frequently diverge from their corresponding documentation. Verifying that documented procedures accurately reflect the current console and can be executed end-to-end demands an estimated 4 million recurring inspections annually, yet manual coverage remains below 1%. While agent systems built on frontier proprietary models achieve high success rates, their prohibitive cost and data privacy constraints preclude large-scale deployment. We propose a two-stage training paradigm: supervised fine-tuning (SFT) on distilled frontier-model trajectories, followed by reinforcement learning using Group Relative Policy Optimization (GRPO) and a dual-channel outcome reward model in real cloud environments. To support large-scale RL training, we construct a high-determinism rollout system featuring Terraform-based resource pre-provisioning and LLM-driven on-demand provisioning, which effectively isolates environment noise from the training signal. We further introduce a rule-based reward evaluation protocol grounded in backend audit logs, providing objective, reward-hacking-resistant outcome judgment. Our model evolves from mechanical instruction following to autonomous decision-making with cloud console and product-specific understanding. Experiments on a challenging 278-task benchmark where the best frontier model achieves only 65.34% demonstrate that AliyunConsoleAgent-32B achieves a 63.52% mean success rate -- a 20.24 percentage-point improvement over the base model, narrowing the gap to the best frontier proprietary model to 1.82 pp (bootstrap 95% CI [-1.27, 7.39]) -- at 92% lower inference cost.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2606.09447.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 16.701,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.7010518189732142,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -2783,53 +2588,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.7316867387202377,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "arxiv:2606.09390",
-    "source": "arxiv",
-    "title": "Real-time body pose non-verbal communication with a consistency-based reliability measure",
-    "url": "http://arxiv.org/abs/2606.09390v1",
-    "summary": "Recognizing ten communicative intents from 2D full-body pose, the study benchmarks skeleton graph classifiers and motion-forecasting networks across real and synthetic datasets, including throughput on an NVIDIA Orin Nano. It also uses autoregressive self-consistency as an unsupervised reliability signal, proving conditions under which agreement across successive predictions increases the probability of correctness while identifying confidently consistent failure cases.",
-    "published": "2026-06-08T12:05:23+00:00",
-    "updated": "2026-06-08T12:05:23+00:00",
-    "authors": [
-      "Alina Marcu",
-      "Dragos Costea",
-      "Cristina Lazar",
-      "Marius Leordeanu"
-    ],
-    "extra": {
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.RO"
-      ],
-      "primary_category": "cs.CV",
-      "pdf_url": "https://arxiv.org/pdf/2606.09390v1",
-      "comment": null,
-      "first_seen": "2026-06-09",
-      "full_text": "Body movement communicates intent at distances and in conditions where neither the face, nor speech can be captured. We study the recognition of communicative intent from 2D body pose alone. We argue that body motion is a reliable signal especially in scenarios that require real time low-cost on-device person-to-robot communication in long distance environments, such as rescue missions. However, existing resources do not isolate this signal. Affective corpora combine body, face, voice and text, while skeleton action-recognition benchmarks label the action performed rather than the message conveyed. We release a dataset of real frames of full-body pose covering ten communicative intents and we compare it against other real (IPC) and synthetic (MotionLCM, VEO3.1, Kimodo) ones that span a range of difficulty. We target systems that can run on a robot's limited onboard hardware. We benchmark multiple models, from skeleton graph classifiers to joint motion-forecasting networks, and report performance metrics together with frame rate on an embedded GPU (NVIDIA Orin~Nano), since speed matters as much as accuracy in our scenario. Finally, we show that a model's own autoregressive self-consistency works as an unsupervised reliability signal. We give a short proof that bounds the probability that a self-consistent prediction is correct, show that this probability grows with the number of consistent steps, and identify the conditions under which a confident prediction can still be false, benchmarked against industry-standard metrics.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2606.09390.jpg"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 9.694,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.6935642291617063,
       "has_code": 6.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -3241,42 +2999,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:3a8864f3359a",
-    "source": "news",
-    "title": "대동로보틱스, GS건설과 AI 필드로봇 연구개발 업무협약",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=46769",
-    "summary": "대동로보틱스의 AI 필드로봇이 건설현장으로 영역을 넓힌다.대동그룹의 AI 로봇 전문 계열사 대동로보틱스(대표 원유현, 강성철)는 GS건설과 '건설현장 자동화 및 스마트 건설 기술 분야 공동 연구개발 협력을 위한 업무협약(MOU)'을 체결했다고 8일 밝혔다.이번 협약은 건설현장 내 AI 필드로봇 기반의 스마트 건설 기술 협력 체계를 구축하고 관련 시장을 개척하는데 초점을 맞췄다. 이를 위해 양사는 ▲기존 AI 필드로봇 양산제품의 건설현장 활용 검토 ▲스마트 건설 운영 및 신기술 협력 ▲건설현장 특화 로봇 공동 연구개발 및 실증(PoC",
-    "published": "2026-06-08T10:11:27+00:00",
-    "updated": "2026-06-08T10:11:27+00:00",
-    "authors": [
-      "최지호"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-06-08",
-      "full_text": "대동로보틱스의 AI 필드로봇이 건설현장으로 영역을 넓힌다.대동그룹의 AI 로봇 전문 계열사 대동로보틱스(대표 원유현, 강성철)는 GS건설과 '건설현장 자동화 및 스마트 건설 기술 분야 공동 연구개발 협력을 위한 업무협약(MOU)'을 체결했다고 8일 밝혔다.이번 협약은 건설현장 내 AI 필드로봇 기반의 스마트 건설 기술 협력 체계를 구축하고 관련 시장을 개척하는데 초점을 맞췄다. 이를 위해 양사는 ▲기존 AI 필드로봇 양산제품의 건설현장 활용 검토 ▲스마트 건설 운영 및 신기술 협력 ▲건설현장 특화 로봇 공동 연구개발 및 실증(PoC",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 6.677,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.6766098372991074,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:d232f1668a5a",
     "source": "news",
     "title": "B&R Stores Introduces Simbe's Tally Inventory Robot In Stores Across Nebraska",
@@ -3302,42 +3024,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.9175448593427578,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:375c2f6aa3a5",
-    "source": "news",
-    "title": "인아그룹, 19일 ‘인아 로보틱스 랩 데이’ 개최…도입장벽 낮추기 나서",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=46770",
-    "summary": "인아그룹이 오는 6월 19일(금) 인아오리엔탈모터 서울사무소 로봇 랩(대회의실)에서 ‘인아 로보틱스 랩 데이(INA Robotics Lab Day)’를 개최한다. ‘인아 로보틱스 랩 데이’는 고객이 느끼는 로봇 도입의 장벽을 낮추고 로봇을 통한 자동화를 지원하기 위해 기획된 행사로, 인아오리엔탈모터, 인아텍앤코포 CORP 사업부, 인아엠씨티가 공동 주최한다. 이번 행사는 인아오리엔탈모터 소형 로봇 ‘KOVR’, 인아텍앤코포 CORP 사업부 ‘JEL’ 반도체 웨이퍼 이송 로봇, 인아엠씨티 ‘두산로보틱스’ 협동 로봇을 중심으로, 인아그",
-    "published": "2026-06-08T10:22:16+00:00",
-    "updated": "2026-06-08T10:22:16+00:00",
-    "authors": [
-      "최지호"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-06-08",
-      "full_text": "인아그룹이 오는 6월 19일(금) 인아오리엔탈모터 서울사무소 로봇 랩(대회의실)에서 ‘인아 로보틱스 랩 데이(INA Robotics Lab Day)’를 개최한다. ‘인아 로보틱스 랩 데이’는 고객이 느끼는 로봇 도입의 장벽을 낮추고 로봇을 통한 자동화를 지원하기 위해 기획된 행사로, 인아오리엔탈모터, 인아텍앤코포 CORP 사업부, 인아엠씨티가 공동 주최한다. 이번 행사는 인아오리엔탈모터 소형 로봇 ‘KOVR’, 인아텍앤코포 CORP 사업부 ‘JEL’ 반도체 웨이퍼 이송 로봇, 인아엠씨티 ‘두산로보틱스’ 협동 로봇을 중심으로, 인아그",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 5.678,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.678219460374504,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
