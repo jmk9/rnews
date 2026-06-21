@@ -511,58 +511,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2606.09827",
-    "source": "arxiv",
-    "title": "MemoryVLA++: Temporal Modeling via Memory and Imagination in Vision-Language-Action Models",
-    "url": "http://arxiv.org/abs/2606.09827v1",
-    "summary": "Temporal modeling is essential for robotic manipulation, as effective control requires both memory of past interactions and imagination of future states. However, most VLA models rely primarily on the current observation and therefore struggle with long-horizon, temporally dependent tasks.",
-    "published": "2026-06-08T17:59:53+00:00",
-    "updated": "2026-06-08T17:59:53+00:00",
-    "authors": [
-      "Hao Shi",
-      "Weiye Li",
-      "Bin Xie",
-      "Yulin Wang",
-      "Renping Zhou",
-      "Tiancai Wang",
-      "Xiangyu Zhang",
-      "Ping Luo",
-      "Gao Huang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2606.09827v1",
-      "comment": "The project is available at https://shihao1895.github.io/MemoryVLA-PP-Web",
-      "first_seen": "2026-06-09",
-      "full_text": "Temporal modeling is essential for robotic manipulation, as effective control requires both memory of past interactions and imagination of future states. However, most VLA models rely primarily on the current observation and therefore struggle with long-horizon, temporally dependent tasks. Cognitive science suggests that humans rely on working memory to buffer short-lived context, the hippocampal system to preserve episodic memory of past experience, and internal models to imagine possible future state evolution. Inspired by these mechanisms, we propose MemoryVLA++, a full temporal modeling framework that equips VLA models with memory and imagination for robotic manipulation. A pretrained VLM encodes the current observation into perceptual and cognitive tokens, forming working memory. These tokens query a Perceptual-Cognitive Memory Bank to retrieve relevant historical context. This bank stores low-level details and high-level semantics from past interactions, and is updated through redundancy-aware consolidation. A world model imagines future states in a denoising latent space, and the imagined latents are integrated under memory guidance to form full temporal-aware tokens. The resulting tokens condition a diffusion action expert to predict temporally consistent action sequences. We conduct extensive experiments on 5 simulation benchmarks and 3 categories of real-robot tasks across 3 robots, covering general manipulation, long-horizon temporal tasks, robustness, and generalization. Our method achieves strong performance across Libero, SimplerEnv, Mikasa-Robo, Calvin, Libero-Plus, and diverse real-robot tasks, validating the effectiveness of full temporal modeling with memory and imagination. For example, on real robots, it achieves +9%, +26%, +28% gains on general, memory-dependent, and imagination-dependent tasks. Project Page: https://shihao1895.github.io/MemoryVLA-PP-Web",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 35.528,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.5280399560863094,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:ARISE-Initiative/robosuite",
     "source": "github",
     "title": "ARISE-Initiative/robosuite",
@@ -1193,57 +1141,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2606.09630",
-    "source": "arxiv",
-    "title": "ReCoVLA: VLM-Guided Reward Compilation for Failure Recovery in Vision-Language-Action Policies",
-    "url": "http://arxiv.org/abs/2606.09630v1",
-    "summary": "Vision-language-action (VLA) policies provide strong priors for language-conditioned manipulation, but remain brittle in off-nominal states requiring targeted recovery.",
-    "published": "2026-06-08T15:29:09+00:00",
-    "updated": "2026-06-08T15:29:09+00:00",
-    "authors": [
-      "Haodi Hu",
-      "Chung-Ta Huang",
-      "Jing Liu",
-      "Ye Wang",
-      "Kei Suzuki",
-      "Matthew Brand",
-      "Toshiaki Koike-Akino"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2606.09630v1",
-      "comment": "19 pages, 7 figures",
-      "first_seen": "2026-06-09",
-      "full_text": "Vision-language-action (VLA) policies provide strong priors for language-conditioned manipulation, but remain brittle in off-nominal states requiring targeted recovery. We propose ReCoVLA -- a failure-conditioned residual recovery framework that keeps a pretrained VLA policy frozen, uses an external vision-language model (VLM) to infer the failure mode and recovery stage, and compiles a structured reward from task-relevant components. Rather than using the VLM to generate actions or rewards directly, ReCoVLA uses it as a semantic reward selector: it predicts a recovery descriptor and reward mask for in-simulation residual-policy training, followed by zero-shot sim-to-real deployment of the trained recovery policies. This decouples high-level failure understanding from low-level corrective control to support different VLAs. Experiments across short-horizon, long-horizon, and contact-rich manipulation tasks show that ReCoVLA outperforms the tested baselines on average. In simulation, our reward compiler improves average success from 36.7% for the fine-tuned $π_{0.5}$ baseline to 66.7%. In physical zero-shot sim-to-real experiments, ReCoVLA achieves the best average performance, with 61.7% success.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 28.506,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 6.0,
-      "recency": 2.5056093982738097,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:allenai/molmospaces",
     "source": "github",
     "title": "allenai/molmospaces",
@@ -1690,56 +1587,6 @@
       "has_code": 6.0,
       "github_stars_log": 10.467108425811176,
       "github_forks_log": 3.204119982655925,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2606.09499",
-    "source": "arxiv",
-    "title": "Targeting World Models to Compromise Robot Learning Pipelines",
-    "url": "http://arxiv.org/abs/2606.09499v1",
-    "summary": "World models have recently seen a rapid growth in both their popularity and capability as more data efficient tools for generating robot training data or simulating real world environments, with many works proposing their integration into the robot learning pipeline.",
-    "published": "2026-06-08T13:50:31+00:00",
-    "updated": "2026-06-08T13:50:31+00:00",
-    "authors": [
-      "Ethan Rathbun",
-      "Ahmed Agha",
-      "Saaduddin Mahmud",
-      "Christopher Amato",
-      "Alina Oprea",
-      "Eugene Bagdasarian"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CR"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2606.09499v1",
-      "comment": "8 Pages, CoRL Preprint",
-      "first_seen": "2026-06-09",
-      "full_text": "World models have recently seen a rapid growth in both their popularity and capability as more data efficient tools for generating robot training data or simulating real world environments, with many works proposing their integration into the robot learning pipeline. While highly practical, in this work we demonstrate that world models introduce a uniquely stealthy and effective data poisoning entry point into the robot learning supply chain that can result in the deployment of unsafe or otherwise compromised robotic policies despite training on seemingly safe ground truth training data. In contrast to traditional data poisoning techniques which directly implant dangerous trajectories into sold or uploaded datasets, our novel attack methods inject malicious prompts or compromising transition dynamics into visibly safe teleoperated datasets which are only activated once fed through a world model as input. This can result in the generation of synthetic, dangerous robot training trajectories and subsequently unsafe or compromised robot policies. We demonstrate the effectiveness of our attacks against both state of the art action conditioned and text conditioned world models, showing a full end-to-end backdoor on a downstream DRL policy and a proof-of-concept for the VLA setting. Overall these findings necessitate research into more secure world models and reevaluating their position within the robot learning supply chain.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Other"
-    ],
-    "score": 24.491,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 6.0,
-      "recency": 2.4909318178571427,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
@@ -2543,97 +2390,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2606.09740",
-    "source": "arxiv",
-    "title": "ProbeAct: Probe-Guided Training-Free Failure Recovery in Vision-Language-Action Models",
-    "url": "http://arxiv.org/abs/2606.09740v1",
-    "summary": "Vision-Language-Action (VLA) models demonstrate strong perfor-1 mance on language-conditioned robotic manipulation within their training dis-2 tribution, yet their generalization capabilities remain fundamentally limited.",
-    "published": "2026-06-08T17:04:24+00:00",
-    "updated": "2026-06-08T17:04:24+00:00",
-    "authors": [
-      "Fan Zhang",
-      "Seongbin Park",
-      "Baharan Mirzasoleiman",
-      "Shariar Talebi",
-      "Nader Sehatbakhsh"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2606.09740v1",
-      "comment": "under review",
-      "first_seen": "2026-06-09",
-      "full_text": "Vision-Language-Action (VLA) models demonstrate strong perfor-1 mance on language-conditioned robotic manipulation within their training dis-2 tribution, yet their generalization capabilities remain fundamentally limited. They3 lack the robustness required to handle perturbations, frequently failing when con-4 fronted with lighting changes, altered camera viewpoints, or small initial-state5 variations. We propose PROBEACT, a training-free runtime intervention frame-6 work that detects and recovers from grasping and placement failures in pre-7 trained VLA policies without modifying their weights or requiring additional8 demonstrations. PROBEACT combines three components: (i) a lightweight multi-9 target hidden-state probe that predicts the 3D positions of task-relevant objects10 from intermediate VLA features, with Hungarian-matched identity tracking for11 multi-object scenes; (ii) an object-agnostic kinematic state machine that detects12 grasp, transport, and placement failures using only gripper-internal signals and13 end-effector kinematics; and (iii) a hierarchical Control Barrier Function (CBF)14 filter that encodes repeated-failure locations as soft safe-set constraints, mini-15 mally correcting VLA actions while preserving baseline behavior. As a plug-and-16 play, training-free intervention loop, PROBEACT is orthogonal to existing train-17 ing pipelines. Evaluated on the LIBERO-plus benchmark, our framework acts as18 a universal safety net, improving the success rate of the OpenVLA-OFT model19 from 69.6% to 74.1%, while demonstrating broad applicability to both base and20 fine-tuned VLA policies.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 20.52,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 6.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.5197835062723213,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2606.09610",
-    "source": "arxiv",
-    "title": "Shape Formation for the Cooperative Transportation of Arbitrary Objects Using Multi-Agent Reinforcement Learning",
-    "url": "http://arxiv.org/abs/2606.09610v1",
-    "summary": "Cooperative object transportation is essential in numerous domains, including industrial to domestic services. A popular transportation strategy is to carry objects on top of multi-robot systems.",
-    "published": "2026-06-08T15:18:14+00:00",
-    "updated": "2026-06-08T15:18:14+00:00",
-    "authors": [
-      "Mohamed Sayed",
-      "Wolfram Burgard",
-      "Tanja Katharina Kaiser"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2606.09610v1",
-      "comment": null,
-      "first_seen": "2026-06-09",
-      "full_text": "Cooperative object transportation is essential in numerous domains, including industrial to domestic services. A popular transportation strategy is to carry objects on top of multi-robot systems. The corresponding task is typically solved by decomposing it into three interconnected subproblems: formation control, cooperative navigation, and collision avoidance. A particular challenge posed by real-world objects is their potentially arbitrary shape and non-uniform mass distribution, necessitating robot formations that securely support the object. In this work, we address the challenge of pattern formation control for transporting such real-world objects by proposing a novel multi-agent reinforcement learning approach. Our approach enables a multi-robot system to autonomously position itself underneath an object to support its weight while avoiding obstacles during the formation process. Our evaluations with diverse environments and varying numbers of robots show that our approach leads to policies that reliably produce balanced formations and generalize to cluttered scenes and objects with complex geometry and non-uniform mass distribution.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 20.504,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.503984893762401,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:assistive-autonomy/assistax",
     "source": "github",
     "title": "assistive-autonomy/assistax",
@@ -2791,53 +2547,6 @@
       "research_interest_abstract": 2.0,
       "recency": 2.663712069751984,
       "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2606.09749",
-    "source": "arxiv",
-    "title": "Your Model Already Knows: Attention-Guided Safety Filter for Vision-Language-Action Models",
-    "url": "http://arxiv.org/abs/2606.09749v1",
-    "summary": "Vision-Language-Action (VLA) models have demonstrated impressive end-to-end performance across a variety of robotic manipulation tasks. However, these policies offer no guarantees against collisions with task-irrelevant objects in the scene.",
-    "published": "2026-06-08T17:11:16+00:00",
-    "updated": "2026-06-08T17:11:16+00:00",
-    "authors": [
-      "Seongbin Park",
-      "Fan Zhang",
-      "Baharan Mirzasoleiman",
-      "Shahriar Talebi",
-      "Nader Sehatbakhsh"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2606.09749v1",
-      "comment": "Under review",
-      "first_seen": "2026-06-09",
-      "full_text": "Vision-Language-Action (VLA) models have demonstrated impressive end-to-end performance across a variety of robotic manipulation tasks. However, these policies offer no guarantees against collisions with task-irrelevant objects in the scene. Existing safety filters sidestep this problem by querying a vision-language model (VLM) to identify obstacles and their locations. This, however, is too slow to run in the control loop and can only be invoked at episode initialization, leaving the filter unable to track moving obstacles. We discover that a small number of attention heads within a VLA model reliably localize the object the policy intends to approach. These heads can be exploited within a training-free safety framework that obtains the active target from the attention heads at every step, treats the remainder of the scene as obstacles, and feeds these into a Control Barrier Function (CBF) filter. Together with a lightweight real-time object tracker, this allows for collision avoidance for non-static obstacles. We evaluate our framework on SafeLIBERO, which we extend with moving obstacles. On the original static benchmark, our method performs comparably to an oracle that uses privileged simulator state to identify the target, emulating a VLM-based identification step run once at episode initialization. On the dynamic variant, where the oracle's init-time target assignment becomes stale, our method substantially outperforms it by 43%, on average. Our findings suggest that the perceptual signals needed for real-time safety filtering are already present within VLA policies and can be exploited without additional training or heavy auxiliary models.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 19.521,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.5208053318824404,
-      "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
@@ -3832,44 +3541,6 @@
       "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:4caba6c56a99",
-    "source": "news",
-    "title": "Innovation at Agility: Workout Class",
-    "url": "https://www.youtube.com/watch?v=std5wteoa50",
-    "summary": "It turns out running a workout class is a decent way to stress-test whole-body range of motion. Coordinating fluid movement across every joint at once–timing, velocity, balance compensation–is one of the harder control problems in humanoid robotics.",
-    "published": "2026-06-08T16:48:56+00:00",
-    "updated": "2026-06-08T16:48:56+00:00",
-    "authors": [
-      "Agility"
-    ],
-    "extra": {
-      "feed": "Agility Robotics (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i4.ytimg.com/vi/std5wteoa50/hqdefault.jpg",
-      "first_seen": "2026-06-08",
-      "full_text": "It turns out running a workout class is a decent way to stress-test whole-body range of motion. Coordinating fluid movement across every joint at once–timing, velocity, balance compensation–is one of the harder control problems in humanoid robotics. It's also what lets Digit handle varied loads and adapt to real conditions on the warehouse floor. --------------------------------------- At Agility, we make robots that are made for work. Our robot Digit works alongside us in spaces designed for people. Digit handles the tedious and repetitive tasks meant for a machine, allowing companies and their people to focus on the work that requires the human element. Subscribe (hit the bell for notifications) https://www.youtube.com/c/AgilityRobotics Join our Team https://www.agilityrobotics.com/careers Follow our Journey https://twitter.com/agilityrobotics https://www.linkedin.com/company/agilityrobotics https://www.instagram.com/agility_robotics https://www.tiktok.com/@agility_robotics",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 12.517,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.517481887626488,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
       "demote": -0.0
     },
     "priority": "must_read"
