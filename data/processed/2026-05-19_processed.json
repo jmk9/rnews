@@ -192,7 +192,7 @@
     "source": "github",
     "title": "sou350121/VLA-Handbook",
     "url": "https://github.com/sou350121/VLA-Handbook",
-    "summary": "VLA-Handbook is a Chinese-language, practice-oriented study and interview guide for algorithm engineers entering vision-language-action robotics. It focuses on robotics-specific challenges rather than recycling general computer vision or NLP interview material.",
+    "summary": "VLA-Handbook is a Chinese, practice-oriented learning and interview guide for algorithm engineers moving into Vision-Language-Action robotics. It narrows the usual CV/NLP interview scope to robotics-specific issues, making it useful as a focused onboarding path for people who need to understand how VLA systems connect perception, language, and action in embodied settings.",
     "published": "2025-11-23T06:25:26Z",
     "updated": "2026-05-19T08:36:00Z",
     "authors": [
@@ -433,7 +433,7 @@
     "source": "github",
     "title": "iit-DLSLab/basic-locomotion-isaaclab",
     "url": "https://github.com/iit-DLSLab/basic-locomotion-isaaclab",
-    "summary": "An IsaacLab extension from DLS provides basic locomotion tasks for multiple quadruped robots, with pipelines for sim-to-sim transfer and sim-to-real deployment. It looks useful as a starting point for training and evaluating legged-locomotion policies across robot platforms while keeping the workflow aligned with IsaacLab’s tooling.",
+    "summary": "An IsaacLab DirectEnv implementation for training and testing basic quadruped locomotion policies across multiple robot platforms. It is useful as a starting point for legged-robot RL workflows because it includes paths for sim-to-sim transfer and sim-to-real deployment, not just in-simulator experiments.",
     "published": "2025-06-20T08:24:35Z",
     "updated": "2026-05-17T15:10:45Z",
     "authors": [
@@ -455,7 +455,7 @@
       "license": "BSD-3-Clause",
       "first_seen": "2026-05-18",
       "thumbnail": "https://raw.githubusercontent.com/iit-DLSLab/basic-locomotion-isaaclab/HEAD/./gifs/train.gif",
-      "full_text": "An IsaacLab extension by DLS for basic locomotion tasks on multiple quadruped robots, with sim-to-sim and sim-to-real pipelines",
+      "full_text": "An IsaacLab DirectEnv for basic quadrupedal locomotion tasks, with support for multiple quadruped robots, sim-to-sim, and sim-to-real pipelines",
       "readme": "Overview Reinforcement learning implementation of quadruped locomotion in IsaacLab. It includes support for different robots available at DLS, with scripts for both sim-to-sim and sim-to-real transfer. Features: - Concurrent State Estimator - Rapid Motor Adaptation - Morphological Symmetries - Adversarial Motion Priors (big thanks to Giuseppe L'erario and Giulio Romualdi) - Identification of robot parameters for sim2real using pace via our repo sim2real-robot-identification - Sim-to-Sim in Mujoco - Sim-to-Real using ROS2 Features work in progress - done but not tested: - Dagger for depth-to-heightmap policy distillation - Depth-to-Heightmap NN for avoiding the distillation step above Real-world deployment via: - muse for state estimation (if no concurrent state estimation is used) - unitree-ros2-dls for unitree robot communication A list of robots and environments available is described below: Robot Model Environment Name Pattern --------------------- ------------------------------------------------------------ Aliengo, Go2, B2, HyQReal2 Locomotion- RobotModel -Flat-Blind Locomotion- RobotModel -Rough-Blind Locomotion- RobotModel -Rough-Vision Installation and Runs If you want only to deploy a trained policy on your robot, continue on README DEPLOY otherwise on README TRAIN. For the train, check first the compatibility with IsaacLab and rsl-rl at the top of this readme. They indicate the releases that we tested. Citing this work If you find the work useful and you adopt Morphological Symmetries, please consider citing one of our works: Leveraging Symmetry in RL-based Legged Locomotion Control (IROS-2024) Morphological symmetries in robotics (IJRR-2025): How to contribute PRs are very welcome (search for TODO in the issue, or add what you like)! Maintainer This repository is maintained by Giulio Turrisi.",
       "summary_kind": "llm"
     },
