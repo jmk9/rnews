@@ -831,48 +831,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:showlab/Awesome-Robotics-Diffusion",
-    "source": "github",
-    "title": "showlab/Awesome-Robotics-Diffusion",
-    "url": "https://github.com/showlab/Awesome-Robotics-Diffusion",
-    "summary": "A curated list of recent robot learning papers incorporating diffusion models for robotics tasks.",
-    "published": "2024-12-23T14:18:36Z",
-    "updated": "2026-06-15T06:38:15Z",
-    "authors": [
-      "showlab"
-    ],
-    "extra": {
-      "stars": 341,
-      "forks": 10,
-      "language": null,
-      "topics": [],
-      "open_issues": 0,
-      "license": null,
-      "first_seen": "2026-05-18",
-      "full_text": "A curated list of recent robot learning papers incorporating diffusion models for robotics tasks.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other",
-      "#Survey"
-    ],
-    "score": 33.393,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.6405299710243058,
-      "has_code": 6.0,
-      "github_stars_log": 12.670130530280675,
-      "github_forks_log": 2.08278537031645,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:ARISE-Initiative/robosuite",
     "source": "github",
     "title": "ARISE-Initiative/robosuite",
@@ -1403,7 +1361,8 @@
       "license": "BSD-3-Clause",
       "first_seen": "2026-05-18",
       "full_text": "legged robot environments for reinforcement learning in multiple simulators (IsaacGym, Genesis, IsaacSim)",
-      "summary_kind": "truncation"
+      "summary_kind": "truncation",
+      "thumbnail": "https://github.com/lupinjia/leggedgym-ex-doc/raw/main/source/_static/images/ee_demo.gif?raw=true"
     },
     "tags": [
       "#RL",
@@ -1756,54 +1715,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2606.16572",
-    "source": "arxiv",
-    "title": "Steering Generative Reinforcement Learning into Stable Robotic Controller",
-    "url": "http://arxiv.org/abs/2606.16572v1",
-    "summary": "SteerGenPO turns a trained diffusion or flow-based generative policy into a deterministic robotic controller by replacing random latent sampling with a learned state-conditioned latent actor. That keeps the broad exploration benefits of generative RL during training, but produces steadier, more precise actions at deployment. Across six Isaac Lab benchmarks and a Unitree G1 locomotion task, it outperforms classical RL and generative RL baselines while giving more stable behavior and more reliable command following.",
-    "published": "2026-06-15T11:16:37+00:00",
-    "updated": "2026-06-15T11:16:37+00:00",
-    "authors": [
-      "Yixuan Wang",
-      "Shutong Ding",
-      "Ke Hu",
-      "Tianxiang Gui",
-      "Jingya Wang",
-      "Ye Shi"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2606.16572v1",
-      "comment": null,
-      "first_seen": "2026-06-16",
-      "full_text": "Diffusion and flow-based generative policies provide a powerful policy class for reinforcement learning by inducing rich stochastic exploration through iterative action generation. However, the stochasticity of diffusion policies is not suitable for stable and precise control in high-dimensional robotic systems, where small action variations can accumulate into inconsistent motion and reduced robustness. To address this issue, we propose SteerGenPO, a latent-space reinforcement learning framework that steers a trained generative policy into a robust deterministic robotic controller. The key idea is to replace stochastic latent sampling of the trained generative policy with a learned latent actor that predicts a state-dependent latent input for the generative policies. This separates exploration and control: stochastic generative sampling provides diverse action proposals during policy learning, while deterministic latent steering provides stable and adaptive control at deployment. We evaluate SteerGenPO on six Isaac Lab benchmarks and a Unitree G1 locomotion task. The results show SteerGenPO improves over both classical RL and generative RL baselines, while its deterministic latent steering produces more stable inference-time behaviors and more reliable command responses.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2606.16572.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Humanoid"
-    ],
-    "score": 24.682,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 6.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.681953600391865,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:kyegomez/RT-X",
     "source": "github",
     "title": "kyegomez/RT-X",
@@ -1992,154 +1903,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2606.16558",
-    "source": "arxiv",
-    "title": "ROSA-RL: Uncertainty-Aware Roundabout Optimized Speed Advisory with Reinforcement Learning",
-    "url": "http://arxiv.org/abs/2606.16558v1",
-    "summary": "ROSA-RL tackles roundabout entry in mixed traffic by forecasting whether the conflict zone will be occupied over the next five seconds, using a Transformer model to capture multi-agent interactions and uncertainty in human drivers’ future motion and intent. Those probabilistic occupancy predictions are fed into a reinforcement-learning speed advisory policy, letting automated or assisted vehicles adjust speed around uncertain gaps. In real-data-grounded simulations, it improves safety and traffic efficiency over a comparable model-based baseline and approaches the performance of an idealized system with fully known future occupancy.",
-    "published": "2026-06-15T11:00:08+00:00",
-    "updated": "2026-06-15T11:00:08+00:00",
-    "authors": [
-      "Anna-Lena Schlamp",
-      "Jeremias Gerner",
-      "Klaus Bogenberger",
-      "Werner Huber",
-      "Stefanie Schmidtner"
-    ],
-    "extra": {
-      "categories": [
-        "cs.AI",
-        "cs.RO",
-        "eess.SY"
-      ],
-      "primary_category": "cs.AI",
-      "pdf_url": "https://arxiv.org/pdf/2606.16558v1",
-      "comment": "8 pages, 2 figures, 2 tables. Copyright 2026 IEEE. This is the accepted manuscript for 2026 IEEE International Conference on Intelligent Transportation Systems (ITSC), not the final published version",
-      "first_seen": "2026-06-16",
-      "full_text": "Roundabouts challenge automated driving in mixed traffic, as heterogeneous and non-deterministic human behavior, unknown driving intentions, and high interaction complexity create uncertainty about whether the conflict zone will be blocked or available at the moment of entry. We present ROSA-RL -- uncertainty-aware Roundabout Optimized Speed Advisory with Reinforcement Learning. It enables safe and efficient roundabout entry for automated and human-driven vehicles in mixed traffic through probabilistic conflict forecasting. A Transformer-based model predicts conflict zone occupancy over a five-second horizon, capturing multi-agent interactions to anticipate upcoming conflicts and available gaps. The prediction outputs encode uncertainty in future motion and intent, and augment the state of a classical RL framework, enabling uncertainty-aware speed coordination. Evaluated in simulations grounded in real-world data, ROSA-RL can effectively handle uncertainty and outperform a comparable model-based baseline, closing the gap to an ideal setting assuming fully known occupancy while improving traffic efficiency and safety. The source code of this work is available under: github.com/urbanAIthi/ROSA-RL.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2606.16558.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 22.68,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.679500722787698,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2606.16490",
-    "source": "arxiv",
-    "title": "Robots that Collaborate: Sequential Asymmetric Imitation for Learning Coupled Robot Policies",
-    "url": "http://arxiv.org/abs/2606.16490v1",
-    "summary": "Sequential Asymmetric Imitation learns physically coupled two-robot manipulation from a staged single-teleoperator curriculum instead of requiring synchronized demonstrations from two operators or explicit inter-robot communication. One robot first learns from demos with a compliant human partner, the second learns against that deployed policy, and the first is then refined with sparse interventions around coordination failures like mistimed yielding, pulling, releasing, or repositioning. On real dual-robot tasks with rigid and deformable shared objects, the approach improves success, phase synchronization, and partner-contingent yielding over independent imitation and curriculum-ablation baselines.",
-    "published": "2026-06-15T09:55:58+00:00",
-    "updated": "2026-06-15T09:55:58+00:00",
-    "authors": [
-      "Yincong Chen",
-      "Ranpeng Qiu",
-      "Zihao Li",
-      "Yanan Zhou",
-      "Guoqiang Ren",
-      "Weiming Zhi"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2606.16490v1",
-      "comment": null,
-      "first_seen": "2026-06-16",
-      "full_text": "Collaborative mobile manipulation requires robots to coordinate with a partially observed partner while physically interacting through shared objects. This is difficult because failures often arise not from poor local skills, but from mistimed waiting, yielding, pulling, releasing, or repositioning. We study this problem with two bimanual mobile manipulators coupled through rigid and deformable objects. We propose Sequential Asymmetric Imitation (SAI), a single-teleoperator curriculum for learning coupled multi-robot behaviors without synchronized dual-operator demonstrations or explicit inter-robot communication. SAI trains Robot A from unilateral demonstrations with a compliant human partner, trains Robot B against the deployed Robot A policy, and then refines Robot A using sparse interventions near coordination failures. This staged process exposes the policies to increasingly realistic partner behaviors, including delay, phase mismatch,insufficient yielding, and interaction conflict. Across real-world dual-robot manipulation tasks, SAI improves task success, phase synchronization, and partner-contingent yielding over independent imitation and curriculum-ablation baselines. These results suggest that physically coupled collaboration can be learned through the structure of the imitation curriculum, rather than through synchronized multi-operator demonstrations or explicit coordination mechanisms.Project page:http://cyc0429.github.io/sai-project-page/",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2606.16490.jpg"
-    },
-    "tags": [
-      "#Manipulator",
-      "#Bimanual",
-      "#MobileManipulator"
-    ],
-    "score": 22.67,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.669952110508433,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2606.16253",
-    "source": "arxiv",
-    "title": "Learned Image Compression for Vision-Language-Action Models",
-    "url": "http://arxiv.org/abs/2606.16253v1",
-    "summary": "SPARC compresses multi-camera robot observations for VLA policies by spending bitrate where it matters for control, using a lightweight temporal mask selector over latent image features to adapt across camera views and image regions. It also adds a tilted rate loss to avoid entropy training wiping out rare but task-critical visual details. On RoboCasa365, VLABench, LIBERO, and remote-control deployments, it preserves robot success rates better than standard codecs, video codecs, and recent learned compression methods at the same bitrate.",
-    "published": "2026-06-15T05:55:58+00:00",
-    "updated": "2026-06-15T05:55:58+00:00",
-    "authors": [
-      "Hyeonjun Kim",
-      "Jegwang Ryu",
-      "Sangbeom Ha",
-      "Junhyeok Lee",
-      "Jun-Hyuk Kim",
-      "Hyemin Ahn",
-      "Jaeho Lee"
-    ],
-    "extra": {
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ],
-      "primary_category": "cs.CV",
-      "pdf_url": "https://arxiv.org/pdf/2606.16253v1",
-      "comment": null,
-      "first_seen": "2026-06-16",
-      "full_text": "Vision-language-action (VLA) models increasingly rely on high-frequency multi-camera observations, making visual communication a major bottleneck for real-time robotic control in bandwidth-constrained or distributed deployment settings. Existing image and video codecs, however, are designed to preserve generic visual fidelity rather than the control performance of downstream VLA policies. In this work, we introduce SPARC (SPatially Adaptive Rate Control), a learned image compression framework tailored for VLA-driven robots. Our key observation is that the importance of visual information varies substantially across both camera views and spatial regions within an image. Based on this observation, SPARC employs a lightweight temporal mask selector that adaptively allocates bitrate over latent representations according to task relevance while leveraging temporal context. We further introduce a tilted rate loss that stabilizes training by reducing the tendency of entropy-based objectives to over-suppress rare yet task-critical visual patterns. Experiments on diverse robotic benchmarks, including RoboCasa365, VLABench, and LIBERO, show that SPARC consistently achieves stronger control performance than conventional image/video codecs and recent learned compression methods under the same bitrate budget. We additionally demonstrate real-world deployment benefits in remote-control settings, where our method substantially improves the bitrate-success tradeoff.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2606.16253.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 21.634,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.6342378096701387,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:assistive-autonomy/assistax",
     "source": "github",
     "title": "assistive-autonomy/assistax",
@@ -2267,72 +2030,6 @@
       "research_interest_title": 5.0,
       "research_interest_abstract": 2.0,
       "recency": 2.6907928864484125,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2606.16533",
-    "source": "arxiv",
-    "title": "Kairos: A Native World Model Stack for Physical AI",
-    "url": "http://arxiv.org/abs/2606.16533v1",
-    "summary": "Kairos is a world-model stack for physical AI that treats world modeling as an operational system: it pretrains across open-world videos, human behavior, and robot interactions, then unifies understanding, generation, and prediction in one architecture. Its Hybrid Linear Temporal Attention mixes local sliding windows, dilated mid-range windows, and gated linear attention for persistent memory, with theoretical bounds aimed at limiting long-horizon error accumulation. The system is also co-designed for low-latency rollout generation on both server and consumer hardware, and reports strong results on embodied world-model, long-horizon, and action-policy benchmarks.",
-    "published": "2026-06-15T10:37:42+00:00",
-    "updated": "2026-06-15T10:37:42+00:00",
-    "authors": [
-      " Kairos Team",
-      "Fei Wang",
-      "Shan You",
-      "Qiming Zhang",
-      "Tao Huang",
-      "Zuoyi Fu",
-      "Zhisheng Zheng",
-      "Yunlong Xi",
-      "Feng Lv",
-      "Xiaoming Wu",
-      "Zeyu Liu",
-      "Cong Wan",
-      "Pu Li",
-      "Ruiqing Yang",
-      "Xiaoou Li",
-      "Wei Wang",
-      "Kangkang Zhu",
-      "Yuwei Zhang",
-      "Shi Fu",
-      "Xiaoning Wu",
-      "Xuzeng Fan",
-      "Dacheng Tao",
-      "Xiaogang Wang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.AI",
-        "cs.CV"
-      ],
-      "primary_category": "cs.AI",
-      "pdf_url": "https://arxiv.org/pdf/2606.16533v1",
-      "comment": null,
-      "first_seen": "2026-06-16",
-      "full_text": "World models are transitioning from passive visual generators to foundational, operational infrastructure for Physical AI: they must natively acquire world knowledge from heterogeneous experience, maintain persistent states over long horizons, and execute efficiently within real deployment constraints. We introduce Kairos, a native world model stack designed around these requirements. (1) Kairos learns the world by pioneering a Native Pre-training Paradigm governed by a Cross-Embodiment Data Curriculum, which organizes open-world videos, human behavioral data, and robot interactions into a progressive developmental pathway. (2) Kairos maintains the world by unified world understanding, generation, and prediction within a Native Unified Architecture equipped with Hybrid Linear Temporal Attention, where sliding-window attention captures local dynamics, dilated sliding windows capture mid-range dependencies, and gated linear attention maintains persistent global memory. We establish formal theoretical bounds demonstrating that this temporal factorization strictly limits error accumulation, mathematically guaranteeing state propagation across extended horizons. (3) Kairos runs the world by incorporating a Deployment-Aware System Co-Design to support low-latency rollout generation on server and consumer-grade hardware for real-world observation-action-feedback loops. Experiments on embodied world-model, long-horizon, and action-policy benchmarks show that Kairos achieves top level performance while offering a strong efficiency-capability trade-off. Together, these results position Kairos as a cohesive operational foundation for future self-evolving physical intelligence.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2606.16533.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 20.676,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.6761624172619047,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -2624,57 +2321,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2606.16542",
-    "source": "arxiv",
-    "title": "ADAPT: Analytical Disturbance-Aware Policy Training for Humanoid Locomotion",
-    "url": "http://arxiv.org/abs/2606.16542v1",
-    "summary": "ADAPT trains humanoid locomotion policies with an analytical whole-body disturbance observer that estimates residual external force and torque online from robot dynamics, without force/torque sensors. Feeding this physics-derived disturbance estimate into the policy gives a Unitree G1 better robustness than proprioception-only control under torso perturbations, standing pushes, asymmetric hand payloads, and out-of-distribution disturbances, while also enabling penalties that make lower-body motion lighter.",
-    "published": "2026-06-15T10:47:18+00:00",
-    "updated": "2026-06-15T10:47:18+00:00",
-    "authors": [
-      "Bofan Lyu",
-      "Jindou Jia",
-      "Kuangji Zuo",
-      "Yanshuo Lu",
-      "Shijia Han",
-      "Gen Li",
-      "Boyu Ma",
-      "Jingliang Li",
-      "Geng Li",
-      "Jianfei Yang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2606.16542v1",
-      "comment": null,
-      "first_seen": "2026-06-16",
-      "full_text": "Humanoids deployed in human-centered environments must handle force-interactive tasks, where external contacts introduce unexpected disturbances that disrupt locomotion accuracy and stability. Existing learning-based approaches rely on broad domain randomization, task-specific force objectives, or learning-based force estimators from motion history, each of which compromises accuracy, task transferability, or out-of-distribution (OOD) robustness. We present Analytical Disturbance-Aware Policy Training (ADAPT), a framework that equips humanoid policies with a physically grounded disturbance observer. The core of ADAPT is an analytical whole-body disturbance observer that estimates residual force/torque online with the accessible robot dynamics, without requiring force/torque sensors. Fed directly into the policy, the estimated disturbances give the humanoid an explicit, physics-derived sense of external force/torque that can generalize across diverse unseen scenes. Experiments on a Unitree G1 humanoid show that ADAPT achieves accurate disturbance prediction and stronger robustness than a proprioception-only baseline under torso perturbations, standing pushes, and asymmetric hand payloads, with improved velocity tracking even on OOD disturbances. Moreover, ADAPT enables penalizing inferred disturbances at lower-body joints to encourage lighter locomotion.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2606.16542.jpg"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 18.678,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.6775910004166668,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:4abf0fab65ec",
     "source": "news",
     "title": "中 애지봇 첫 오프라인 '휴머노이드 로봇' 매장 개업",
@@ -2922,42 +2568,6 @@
     "priority": "must_read"
   },
   {
-    "id": "news:ef0786024b70",
-    "source": "news",
-    "title": "Teradyne Robotics unveils production-ready physical AI applications at Automate 2026",
-    "url": "https://roboticsandautomationnews.com/2026/06/15/teradyne-robotics-unveils-production-ready-physical-ai-applications-at-automate-2026/102536/",
-    "summary": "Teradyne Robotics, the company that owns Universal Robots and Mobile Industrial Robots, will demonstrate how physical AI is transforming industrial automation at Automate 2026 in Chicago, June 22-25 at booth #1250. “Physical AI is on full display across our robotic solutions at Automate,” said Jean-Pierre Hathout, President of the Teradyne Robotics Group. “The demos we […]",
-    "published": "2026-06-15T07:19:32+00:00",
-    "updated": "2026-06-15T07:19:32+00:00",
-    "authors": [
-      "Sam Francis"
-    ],
-    "extra": {
-      "feed": "Robotics and Automation News",
-      "first_seen": "2026-06-15",
-      "full_text": "Teradyne Robotics, the company that owns Universal Robots and Mobile Industrial Robots, will demonstrate how physical AI is transforming industrial automation at Automate 2026 in Chicago, June 22-25 at booth #1250. “Physical AI is on full display across our robotic solutions at Automate,” said Jean-Pierre Hathout, President of the Teradyne Robotics Group. “The demos we […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 17.647,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.6466733122569446,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:NJU-R-L-Group-Embodied-Lab/lavira-code",
     "source": "github",
     "title": "NJU-R-L-Group-Embodied-Lab/lavira-code",
@@ -3052,55 +2662,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2606.16513",
-    "source": "arxiv",
-    "title": "Agile Fall Recovery for Quadrotors with Bidirectional Thrust via Reinforcement Learning",
-    "url": "http://arxiv.org/abs/2606.16513v1",
-    "summary": "An RL-trained recurrent policy recovers a fallen bidirectional-thrust quadrotor from arbitrary ground attitudes to stable hover using only lightweight, unreliable onboard sensing, without explicit state estimation. The setup combines asymmetric actor-critic training, an INDI tracking controller, and high-fidelity simulation of motor response and optical flow to handle partial observability, ground contact, and sim-to-real transfer. In real-world tests it transfers zero-shot and recovers robustly across different initial poses, wind disturbances, and added payloads.",
-    "published": "2026-06-15T10:15:10+00:00",
-    "updated": "2026-06-15T10:15:10+00:00",
-    "authors": [
-      "Anke Zhao",
-      "Yuhang Zhong",
-      "Kenghou Hoi",
-      "Junyu Mou",
-      "Junjie Wang",
-      "Lijie Wang",
-      "Jialiang Hou",
-      "Fei Gao"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2606.16513v1",
-      "comment": null,
-      "first_seen": "2026-06-16",
-      "full_text": "Autonomous fall recovery is a critical capability for quadrotors operating in real-world environments, where collisions or failures may leave the vehicle resting on the ground in an arbitrary attitude. This problem is challenging because recovery must be achieved under limited onboard sensing, in constrained free space, with ground contact, and in the presence of unknown disturbances. In this letter, we present an RL-based framework for autonomous fall recovery of a quadrotor from arbitrary ground attitudes to stable hover using only lightweight onboard sensors. To address severe partial observability and intermittent sensor invalidity, we train a recurrent policy within an asymmetric actor--critic architecture, leveraging an Incremental Nonlinear Dynamic Inversion (INDI) controller to track the policy output. Combined with high-fidelity simulations of motor response and optical flow, the overall training framework significantly reduces the sim-to-real gap. Simulation ablation studies validate the importance of the main design choices, while real-world experiments demonstrate zero-shot transfer and robust recovery under different initial attitudes, wind disturbances, and additional payloads. These results demonstrate that agile quadrotor fall recovery can be achieved without explicit state estimation using only limited and unreliable onboard sensing.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 16.673,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.6728092538814483,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "arxiv:2606.16601",
     "source": "arxiv",
     "title": "DifferAD-R1: A Difference-Guided IndustrialAnomaly Localization with Multimodal LargeLanguage Models",
@@ -3145,42 +2706,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:a200fbfe4ec7",
-    "source": "news",
-    "title": "How Sony AI’s table tennis robot is advancing physical AI",
-    "url": "https://roboticsandautomationnews.com/2026/06/15/how-sony-ais-table-tennis-robot-is-advancing-physical-ai/102542/",
-    "summary": "Although Omron and Kuka have demonstrated similar systems before, a table tennis-playing robot may still sound like a novelty to some. After all, industrial robots already assemble cars, sort parcels and weld metal with remarkable precision.",
-    "published": "2026-06-15T08:25:01+00:00",
-    "updated": "2026-06-15T08:25:01+00:00",
-    "authors": [
-      "Sam Francis"
-    ],
-    "extra": {
-      "feed": "Robotics and Automation News",
-      "first_seen": "2026-06-15",
-      "full_text": "Although Omron and Kuka have demonstrated similar systems before, a table tennis-playing robot may still sound like a novelty to some. After all, industrial robots already assemble cars, sort parcels and weld metal with remarkable precision. But for researchers working at the intersection of robotics and artificial intelligence, table tennis represents one of the most […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Manipulator"
-    ],
-    "score": 12.656,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.6564178561557537,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -3233,55 +2758,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 2.0,
       "recency": 2.7091634082415674,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "arxiv:2606.16590",
-    "source": "arxiv",
-    "title": "Infant Spontaneous Movement Noise Improves Exploration in Deep RL",
-    "url": "http://arxiv.org/abs/2606.16590v1",
-    "summary": "Infant end-effector velocity statistics are used to redesign RL exploration noise: instead of fixed white noise, the agent’s action noise becomes increasingly temporally autocorrelated over training, mirroring the developmental rise in colored-noise spectral exponent observed in babies. Across several deep RL environments, this infant-inspired schedule produces smoother, more structured exploratory trajectories and can improve learning efficiency over conventional exploration strategies.",
-    "published": "2026-06-15T11:35:06+00:00",
-    "updated": "2026-06-15T11:35:06+00:00",
-    "authors": [
-      "Francisco M. López",
-      "Markus R. Ernst",
-      "Francisco Cruz",
-      "Matej Hoffmann",
-      "and Jochen Triesch"
-    ],
-    "extra": {
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "q-bio.NC"
-      ],
-      "primary_category": "cs.LG",
-      "pdf_url": "https://arxiv.org/pdf/2606.16590v1",
-      "comment": "6 pages, 4 figures, 1 table. Accepted at IEEE ICDL 2026. Cite as: F. M. López, M. R. Ernst, F. Cruz, M. Hoffmann, and J. Triesch, \"Infant Spontaneous Movement Noise Improves Exploration in Deep RL\", in 2026 IEEE International Conference on Development and Learning (ICDL). IEEE, 2026, pp. 1-6",
-      "first_seen": "2026-06-16",
-      "full_text": "Exploration in deep reinforcement learning (RL) is commonly implemented as temporally uncorrelated white noise. However, recent works show that temporally correlated colored noise can improve exploration efficiency by producing smooth trajectories with better coverage of the state space. We inquire whether action noise inspired by infant spontaneous movements can also improve exploration in deep RL. We find that the power spectral densities of babies' end-effector velocities follow a colored noise process where the spectral exponent increases with age. Inspired by this developmental pattern, we introduce a mechanism that progressively increases the temporal auto-correlation of exploration noise during RL training, matching the infant statistics. Experiments across several RL environments show that infant-inspired noise produces structured exploratory behavior and can improve learning efficiency compared to conventional exploration strategies. These findings suggest that human motor and cognitive development can provide useful guidance for designing learning mechanisms in artificial agents. Our code is available at https://github.com/trieschlab/baby-noise-rl.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2606.16590.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Manipulator"
-    ],
-    "score": 11.685,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.6847040841021825,
       "has_code": 6.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -3469,78 +2945,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.696894045372024,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:ac44fa876135",
-    "source": "news",
-    "title": "Entangled robotic matter with cohesive motion",
-    "url": "https://robohub.org/entangled-robotic-matter-with-cohesive-motion/",
-    "summary": "By Syl Kacapyr Cornell engineers have developed a robotic collective that behaves less like a machine and more like a material that flows, reshapes and adapts to its environment without centralized control.",
-    "published": "2026-06-15T10:06:23+00:00",
-    "updated": "2026-06-15T10:06:23+00:00",
-    "authors": [
-      "Cornell University"
-    ],
-    "extra": {
-      "feed": "Robohub",
-      "first_seen": "2026-06-15",
-      "full_text": "By Syl Kacapyr Cornell engineers have developed a robotic collective that behaves less like a machine and more like a material that flows, reshapes and adapts to its environment without centralized control. The system, called the Cross-Link Collective, consists of dozens of small robots that have limited mobility individually, but together exhibit coordinated and sustained […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 10.672,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.671502189102182,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:f9b9bed81140",
-    "source": "news",
-    "title": "MassRobotics honors Stanford’s Allison Okamura and Seoul National University’s Ayoung Kim with 2026 robotics medals",
-    "url": "https://roboticsandautomationnews.com/2026/06/15/massrobotics-honors-stanfords-allison-okamura-and-seoul-national-universitys-ayoung-kim-with-2026-robotics-medals/102530/",
-    "summary": "MassRobotics, a robotics innovation organization, announced its 2026 Robotics Medal and Rising Star recipients at the recent IEEE ICRA conference in Vienna. The Robotics Medal is the world’s first major award to recognize the wide-ranging impact of female researchers focusing on the development of robotics around the globe.",
-    "published": "2026-06-15T06:59:51+00:00",
-    "updated": "2026-06-15T06:59:51+00:00",
-    "authors": [
-      "Sam Francis"
-    ],
-    "extra": {
-      "feed": "Robotics and Automation News",
-      "first_seen": "2026-06-15",
-      "full_text": "MassRobotics, a robotics innovation organization, announced its 2026 Robotics Medal and Rising Star recipients at the recent IEEE ICRA conference in Vienna. The Robotics Medal is the world’s first major award to recognize the wide-ranging impact of female researchers focusing on the development of robotics around the globe. The Robotics Medal is awarded to a […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 10.644,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.6437442446850197,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -3758,42 +3162,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.7576207320659725,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:d24609eb26eb",
-    "source": "news",
-    "title": "From oil platforms to power plants: Dietsmann showcases robotics-driven maintenance in Africa",
-    "url": "https://roboticsandautomationnews.com/2026/06/15/from-oil-platforms-to-power-plants-dietsmann-showcases-robotics-driven-maintenance-in-africa/102539/",
-    "summary": "Dietsmann, the independent specialist in operation and maintenance (O&M) services for energy production facilities, will participate as a Bronze Sponsor at African Energy Week (AEW) 2026 – taking place from October 12-16 in Cape Town.",
-    "published": "2026-06-15T07:44:04+00:00",
-    "updated": "2026-06-15T07:44:04+00:00",
-    "authors": [
-      "Sam Francis"
-    ],
-    "extra": {
-      "feed": "Robotics and Automation News",
-      "first_seen": "2026-06-15",
-      "full_text": "Dietsmann, the independent specialist in operation and maintenance (O&M) services for energy production facilities, will participate as a Bronze Sponsor at African Energy Week (AEW) 2026 – taking place from October 12-16 in Cape Town. The sponsorship deepens a presence in African energy that stretches back decades and reflects the company’s growing role in the […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 8.65,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.650324106016865,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -4410,42 +3778,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.6945775742286706,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "low_priority"
-  },
-  {
-    "id": "news:960be8cf28cc",
-    "source": "news",
-    "title": "“세계가 인정한 AI·홀로그래피 석학\"…DGIST 문인규 교수, 美 코네티컷대 명예의 전당 우뚝",
-    "url": "https://www.aitimes.kr/news/articleView.html?idxno=40499",
-    "summary": "DGIST(총장 이건우) 로봇및기계전자공학과 문인규 교수가 미국 코네티컷대학교(University of Connecticut, UConn) 공과대학이 선정하는 ‘Academy of Distinguished Engineers Class of 2026’ 회원으로 선정됐다.UConn Academy of Distinguished Engineers는 공학 분야에서 탁월한 성취와 지속적인 기여를 이룬 UConn 공과대학 동문 및 관계자를 엄선해 기리는 대표적인 명예 프로그램이다. 연구, 교육, 산업, 정책, 봉사 등 다양한 분야에서 공학 발전",
-    "published": "2026-06-15T10:48:24+00:00",
-    "updated": "2026-06-15T10:48:24+00:00",
-    "authors": [
-      "박현진 기자"
-    ],
-    "extra": {
-      "feed": "인공지능신문",
-      "first_seen": "2026-06-15",
-      "full_text": "DGIST(총장 이건우) 로봇및기계전자공학과 문인규 교수가 미국 코네티컷대학교(University of Connecticut, UConn) 공과대학이 선정하는 ‘Academy of Distinguished Engineers Class of 2026’ 회원으로 선정됐다.UConn Academy of Distinguished Engineers는 공학 분야에서 탁월한 성취와 지속적인 기여를 이룬 UConn 공과대학 동문 및 관계자를 엄선해 기리는 대표적인 명예 프로그램이다. 연구, 교육, 산업, 정책, 봉사 등 다양한 분야에서 공학 발전",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 3.678,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.6777546574727182,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
