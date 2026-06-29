@@ -323,6 +323,25 @@ def main() -> int:
         log.error("email.enabled is false; aborting. Set it true or pass --to.")
         return 1
 
+    # Skip scheduled sends on configured KST weekdays (default: Sat=5, Sun=6).
+    # Weekend news pipeline is sparse and not worth the daily inbox ping.
+    # Manual --to overrides and --dry-run always run, so you can still test
+    # / push a one-off on a weekend.
+    if not args.dry_run and not args.to:
+        skip_days = email_cfg.get("skip_weekdays_kst", [5, 6])
+        try:
+            skip_days = {int(d) for d in skip_days}
+        except (TypeError, ValueError):
+            skip_days = {5, 6}
+        kst_now = datetime.now(timezone.utc).astimezone(timezone(timedelta(hours=9)))
+        if kst_now.weekday() in skip_days:
+            log.info(
+                "skipping send: today is %s in KST (in skip_weekdays_kst=%s)",
+                kst_now.strftime("%A"),
+                sorted(skip_days),
+            )
+            return 0
+
     processed_dir = Path((cfg.get("paths") or {}).get("processed", "data/processed"))
     news = _load_all_news(processed_dir)
     log.info("loaded %d news items total", len(news))

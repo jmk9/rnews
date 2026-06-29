@@ -558,7 +558,8 @@ email:
   from: "jmk9@plaif.com"          # defaults to RNEWS_SMTP_USER if blank
   to:
     - jwjeong@plaif.com         # test recipient — add more lines for more people
-    - alsrb4696@gmail.com
+    - ih.rhee@plaif.com
+    - jmk9@plaif.com
     
   smtp_host: smtp.gmail.com       # Gmail (use app password, not regular pw)
   smtp_port: 587                  # STARTTLS
@@ -566,4 +567,7 @@ email:
   header: "RNEWS — daily robot news"
   hours_window: 30                # only items first seen in this many hours
   max_items: 25                   # safety cap on email length
+  # KST weekdays to skip the scheduled send (Mon=0 .. Sun=6). Weekend news is
+  # sparse so we default to Sat+Sun off. Manual --to / --dry-run bypass this.
+  skip_weekdays_kst: [5, 6]
   site_url: ""                    # if blank, falls back to site.url then jmk9.github.io/rnews
