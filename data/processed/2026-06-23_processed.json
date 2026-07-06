@@ -1535,57 +1535,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2606.23085",
-    "source": "arxiv",
-    "title": "Foresight: Failure Detection for Long-Horizon Robotic Manipulation with Action-Conditioned World Model Latents",
-    "url": "http://arxiv.org/abs/2606.23085v1",
-    "summary": "Foresight detects failures in long-horizon manipulation by monitoring action-conditioned world-model latents, requiring only task-level success or failure labels rather than dense temporal annotations. Functional conformal prediction adaptively calibrates its detection thresholds, and experiments across LIBERO-Long, ManiSkill-Long, BEHAVIOR-1K, and two real robot platforms show reliable monitoring across different vision-language-action policies.",
-    "published": "2026-06-22T09:32:28+00:00",
-    "updated": "2026-06-22T09:32:28+00:00",
-    "authors": [
-      "Haoran Zhang",
-      "Yifu Lu",
-      "Boyang Wang",
-      "Xuhui Kang",
-      "Yen-Ling Kuo",
-      "Zezhou Cheng",
-      "Mengdi Wang",
-      "Odest Chadwicke Jenkins"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2606.23085v1",
-      "comment": null,
-      "first_seen": "2026-06-23",
-      "full_text": "Long-horizon tasks are common in real-world robotic deployments, yet failure detection for such tasks remains underexplored. Detecting failures in long-horizon robotic tasks is particularly challenging because failure onset is often ambiguous and dense temporal annotations are typically unavailable. We present Foresight, a failure detection framework that monitors manipulation trajectories using latent representations from an action-conditioned world model. Foresight is trained using only final task-level success or failure labels. By leveraging predictive world-model embeddings, our method provides a unified framework for failure detection across different policies. We further use functional conformal prediction (FCP) to calibrate detection thresholds adaptively. We evaluate Foresight with state-of-the-art vision-language-action policies in simulation on LIBERO-Long, ManiSkill-Long, and BEHAVIOR-1K, compare it against state-of-the-artfailure detection methods, and validate it on real robots with three long-horizon tasks on a ReactorX-200 arm and one task on a Franka arm. Our results suggest that action-conditioned world-model embeddings provide a scalable representation for reliable failure monitoring in long-horizon manipulation.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2606.23085.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 27.673,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.6727268398511907,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:vikashplus/robohive",
     "source": "github",
     "title": "vikashplus/robohive",
@@ -1793,7 +1742,8 @@
       "license": "MIT",
       "first_seen": "2026-05-18",
       "full_text": "The Cloud Platform for Robot Learning",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/NeuracoreAI/neuracore/main/docs/assets/neuracore_logo.jpg"
     },
     "tags": [
       "#Other"
@@ -1808,57 +1758,6 @@
       "has_code": 6.0,
       "github_stars_log": 12.188752814101939,
       "github_forks_log": 2.5575072019056577,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:kyegomez/RT-X",
-    "source": "github",
-    "title": "kyegomez/RT-X",
-    "url": "https://github.com/kyegomez/RT-X",
-    "summary": "Pytorch implementation of the models RT-1-X and RT-2-X from the paper: \"Open X-Embodiment: Robotic Learning Datasets and RT-X Models\"",
-    "published": "2023-10-04T21:44:26Z",
-    "updated": "2026-06-22T12:12:51Z",
-    "authors": [
-      "kyegomez"
-    ],
-    "extra": {
-      "stars": 244,
-      "forks": 25,
-      "language": "Python",
-      "topics": [
-        "artificial-intelligence",
-        "attention-is-all-you-need",
-        "attention-model",
-        "computer-vision",
-        "gpt4",
-        "gpt4all",
-        "multimodal",
-        "vision",
-        "vision-transformer"
-      ],
-      "open_issues": 2,
-      "license": "MIT",
-      "first_seen": "2026-05-18",
-      "full_text": "Pytorch implementation of the models RT-1-X and RT-2-X from the paper: \"Open X-Embodiment: Robotic Learning Datasets and RT-X Models\"",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 25.472,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.69659339390625,
-      "has_code": 6.0,
-      "github_stars_log": 11.945830421822663,
-      "github_forks_log": 2.829946695941636,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
@@ -2020,52 +1919,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2606.23147",
-    "source": "arxiv",
-    "title": "Assistron: Bayesian Shared Autonomy with Off-the-shelf Vision-Language-Action Models",
-    "url": "http://arxiv.org/abs/2606.23147v1",
-    "summary": "Assistron uses an off-the-shelf vision-language-action model to execute macro-reaching motions from verbal commands, then detects failure-prone phases in contact-rich manipulation and requests targeted human intervention, incorporating that input through flow-matching guidance. Without fine-tuning the VLA, it improves success on a multi-task scene-recovery benchmark while reducing cognitive and physical workload relative to traditional teleoperation.",
-    "published": "2026-06-22T10:47:12+00:00",
-    "updated": "2026-06-22T10:47:12+00:00",
-    "authors": [
-      "Pinhao Song",
-      "Ze Fu",
-      "Yutong Hu",
-      "Renaud Detry"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2606.23147v1",
-      "comment": "Using VLA in assistive robotics",
-      "first_seen": "2026-06-23",
-      "full_text": "We propose Assistron, a shared autonomy model that leverages Vision-Language-Action (VLA) models to assist the user in daily activities. Our approach is grounded in two core principles: (1)~minimizing human cognitive and physical effort by leveraging VLA-driven autonomy for macro-movements, and (2)~prioritizing human intervention specifically at critical failure points. Driven by the user's verbal language commands, Assistron utilizes the VLA to autonomously execute macro-reaching trajectories, saving users' effort. In contact-rich interactions where VLAs tend to fail, Assistron employs a phase-aware interaction detection mechanism and solicits the user to intervene, in turn adjusting the VLA's action generation via flow matching guidance. Critically, our formulation eliminates the need for VLA fine-tuning, protecting its broad behavioral priors from catastrophic forgetting and ensuring the model does not become a narrow specialist. We validate our approach on a comprehensive multi-task scene recovery benchmark encompassing diverse daily manipulation skills. Empirical results demonstrate that Assistron significantly improves task success rates over pure autonomous baselines while significantly reducing human cognitive and physical workload compared to traditional teleoperation, offering a scalable, smooth, and effortless paradigm for assistive manipulation. The code is available in https://github.com/mousecpn/Assistron.git.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2606.23147.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 23.684,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.6838478719097223,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:HyperbolicCurve/Awesome-World-Action-Model",
     "source": "github",
     "title": "HyperbolicCurve/Awesome-World-Action-Model",
@@ -2109,43 +1962,6 @@
       "has_code": 6.0,
       "github_stars_log": 7.5257498915995305,
       "github_forks_log": 0.9542425094393249,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:50669c0a47ea",
-    "source": "news",
-    "title": "Interview with Sharpa’s Alicia Veneziani: ‘Dexterous manipulation is the key to useful humanoid robots’",
-    "url": "https://roboticsandautomationnews.com/2026/06/22/interview-with-sharpas-alicia-veneziani-dexterous-manipulation-is-the-key-to-useful-humanoid-robots/102683/",
-    "summary": "Much of the recent excitement surrounding humanoid robots has focused on increasingly impressive demonstrations of walking, running, jumping, and balancing. Yet many robotics experts argue that locomotion, while important, is only part of the challenge.",
-    "published": "2026-06-22T08:47:00+00:00",
-    "updated": "2026-06-22T08:47:00+00:00",
-    "authors": [
-      "Sam Francis"
-    ],
-    "extra": {
-      "feed": "Robotics and Automation News",
-      "first_seen": "2026-06-22",
-      "full_text": "Much of the recent excitement surrounding humanoid robots has focused on increasingly impressive demonstrations of walking, running, jumping, and balancing. Yet many robotics experts argue that locomotion, while important, is only part of the challenge. The bigger obstacle to creating genuinely useful humanoid robots may be something far more familiar to humans: the ability to […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Manipulator",
-      "#Humanoid"
-    ],
-    "score": 22.666,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.6659609413219245,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
@@ -2287,54 +2103,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2606.23249",
-    "source": "arxiv",
-    "title": "LP-NavOA: Integrated Local Navigation and Obstacle Avoidance for Humanoid Robots under Limited Perception",
-    "url": "http://arxiv.org/abs/2606.23249v1",
-    "summary": "LP-NavOA combines a frozen PPO whole-body locomotion policy with a recurrent local planner distilled from A* and waypoint teachers; using only proprioception, short-range range sensing, and body-frame goal direction, the planner adjusts heading commands to avoid obstacles and recover goals after occlusion. In MuJoCo cluttered layouts, it raises on-time arrival from 38–40% to 85–97% while reducing contact-heavy motion, and analysis on a Unitree G1 indicates the system can run on hardware without continuous joystick steering.",
-    "published": "2026-06-22T12:31:18+00:00",
-    "updated": "2026-06-22T12:31:18+00:00",
-    "authors": [
-      "Yukun Luo",
-      "Jianjun Ma",
-      "Yuyao Min",
-      "Jinzhe Li",
-      "Kaihong Huang",
-      "Peng Li"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2606.23249v1",
-      "comment": null,
-      "first_seen": "2026-06-23",
-      "full_text": "Humanoid local navigation in cluttered environments must jointly resolve obstacle avoidance, sparse-goal recovery, and stable whole-body locomotion under short-range and partially observable sensing. Explicit planner-control decompositions introduce latency and can mismatch agile humanoid command-tracking limits, while purely reactive controllers may lose the goal after obstacle occlusion. We present LP-NavOA, a limited-perception navigation and obstacle-avoidance framework for humanoid robots. A raycast-conditioned perception-action proximal policy optimization (PPO) locomotion backbone is first trained with a robot-centered circular heading-speed command and a shared command-side safety filter. With this backbone frozen, A-star and waypoint teachers generate rollouts for distilling a recurrent local planner that overwrites only the heading command at deployment, leaving the whole-body policy intact. At runtime, LP-NavOA uses proprioception, short-range local range sensing, and a body-frame goal direction, requiring no global map, waypoint stream, or external planner. In MuJoCo open-wall and indoor layouts, the distilled planner produces obstacle bypassing and post-avoidance goal recovery, raising teacher-calibrated on-time arrival from 38--40\\% to 85--97\\% and reducing brush/contact-heavy progress relative to a backbone-only controller. Ablations show that dynamic route shaping, teacher-active data collection, and the circular command interface are important for navigation efficiency and for training the 3.0\\,m/s backbone. A Unitree G1 deployment analysis demonstrates hardware executability without continuous joystick steering.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2606.23249.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Humanoid"
-    ],
-    "score": 19.699,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.6993389442261906,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -2740,106 +2508,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2606.23153",
-    "source": "arxiv",
-    "title": "Asymmetric physics enables efficient learning in quadrupedal robot swarms",
-    "url": "http://arxiv.org/abs/2606.23153v1",
-    "summary": "Asymmetric physics combines high-fidelity, non-differentiable simulation for realistic contacts with differentiable surrogate models that supply gradients, enabling end-to-end training of decentralized navigation and locomotion policies for swarms of up to 512 quadrupeds. Using only onboard forward-facing depth cameras and no communication, maps, or centralized planning, the learned policies coordinate through clutter and transfer zero-shot to six physical robots, producing behaviors such as predictive avoidance, right-side yielding, and pausing before bottlenecks.",
-    "published": "2026-06-22T10:58:43+00:00",
-    "updated": "2026-06-22T10:58:43+00:00",
-    "authors": [
-      "Yuang Zhang",
-      "Yunlong Song",
-      "Zhihao He",
-      "Zelin Ni",
-      "Kangyu Wang",
-      "Tianchi Liu",
-      "Yu Hu",
-      "Feng Yu",
-      "Danping Zou",
-      "Weiyao Lin"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2606.23153v1",
-      "comment": null,
-      "first_seen": "2026-06-23",
-      "full_text": "Animal collectives navigate cluttered environments through local coordination, yet robot swarms still struggle to reproduce this capability in the physical world. End-to-end learning offers a route to such coordination, but scaling it to embodied swarms remains difficult: standard sampling-based reinforcement learning becomes inefficient when visual perception, dense robot-robot interaction, and contact-rich locomotion must be learned together. Here we show that asymmetric physics enables efficient end-to-end learning of vision-based, decentralized control in large swarms of quadrupedal robots. During training, quadrupeds interact in shared environments, where a high-fidelity, non-differentiable simulator generates realistic motion and contact dynamics, and differentiable surrogate models provide gradients for navigation and locomotion policies. This separation enables up to 512 quadrupeds to learn coordinated navigation policies in obstacle-rich environments. At deployment, each robot acts from a single forward-facing depth camera, without explicit communication, centralized planning, or global maps. The policies generalize across forests, bridges, enclosures, narrow passages, and mazes, and zero-shot transfer to six physical quadrupeds across five real-world scenarios. The resulting swarms exhibit predictive avoidance, right-side yielding, pausing before bottlenecks, and wall following, showing that asymmetric physics enables efficient training of scalable decentralized control policies for quadrupedal robot swarms.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2606.23153.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 17.686,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.6855616619122022,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2606.23152",
-    "source": "arxiv",
-    "title": "ShotcreteDepth: A Bi-modal Dataset for Robust Robotic Depth Perception in Shotcrete Construction Environments",
-    "url": "http://arxiv.org/abs/2606.23152v1",
-    "summary": "ShotcreteDepth provides 11,252 synchronized stereo RGB and LiDAR samples captured during active shotcreting and at construction sites with severe turbidity and poor illumination, where depth observations are often noisy or incomplete. Its 220 evaluation annotations and lightweight LiDAR-labeling tool support realistic benchmarking of stereo matching, depth completion, and depth estimation for industrial robots operating under harsh conditions.",
-    "published": "2026-06-22T10:56:57+00:00",
-    "updated": "2026-06-22T10:56:57+00:00",
-    "authors": [
-      "Jakub Gregorek",
-      "Lars Arnold Dethlefsen",
-      "Patrick Schmidt",
-      "Mads Essenbæk",
-      "Jonas Flink Bentzen",
-      "Lazaros Nalpantidis"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2606.23152v1",
-      "comment": null,
-      "first_seen": "2026-06-23",
-      "full_text": "We introduce ShotcreteDepth, a bi-modal dataset from the construction domain that captures both an active shotcreting process and general construction environments. The dataset comprises stereo RGB imagery and LiDAR point clouds acquired under harsh real-world conditions, including high turbidity and poor illumination. Such conditions adversely affect sensor measurements, leading to incomplete and noisy observations that pose significant challenges for perception systems in autonomous applications. Alongside the dataset, we release a lightweight annotation tool designed for time-efficient labeling of LiDAR point clouds. ShotcreteDepth consists of 11,252 temporally synchronized data samples, of which 220 are annotated for evaluation purposes. The dataset supports research in stereo matching, depth completion, and depth estimation under conditions that closely reflect the operational complexities found in industrial settings. Project repository: https://github.com/dtu-pas/shotcrete-depth",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2606.23152.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 17.685,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.685298764918155,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "arxiv:2606.22998",
     "source": "arxiv",
     "title": "TEXEDO : Test Time Scaling for Controller-aware Language-conditioned Humanoid Motion Generation",
@@ -2881,80 +2549,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:b70757c1bf30",
-    "source": "news",
-    "title": "Inside NVIDIA Halos for Robotics: A Full-Stack Functional Safety System for Physical AI",
-    "url": "https://developer.nvidia.com/blog/inside-nvidia-halos-for-robotics-a-full-stack-functional-safety-system-for-physical-ai/",
-    "summary": "Physical AI—robots working autonomously alongside people in factories, warehouses, hospitals, and homes—is arriving faster than most expected. Traditional...",
-    "published": "2026-06-22T13:00:00+00:00",
-    "updated": "2026-06-22T13:00:00+00:00",
-    "authors": [
-      "Suhas Hariharapura Sheshadri"
-    ],
-    "extra": {
-      "feed": "NVIDIA Developer Blog",
-      "thumbnail": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/06/humanoid-robot-768x432.png",
-      "first_seen": "2026-06-22",
-      "full_text": "Physical AI—robots working autonomously alongside people in factories, warehouses, hospitals, and homes—is arriving faster than most expected. Traditional...",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 16.704,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.7036097482440478,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:981b8a8f9371",
-    "source": "news",
-    "title": "Can Robotics Hackathon Change Your Life?",
-    "url": "https://www.youtube.com/watch?v=FLxFBU-Kodk",
-    "summary": "One year ago thousands of people worked for 48h to build something cool with LeRobot library: https://huggingface.co/lerobot LeRobot Worldwide Hackathon was a global AI robotics challenge that took place June 14-15, 2025.",
-    "published": "2026-06-22T13:00:28+00:00",
-    "updated": "2026-06-22T13:00:28+00:00",
-    "authors": [
-      "Hugging Face"
-    ],
-    "extra": {
-      "feed": "Hugging Face (YouTube)",
-      "thumbnail": "https://i3.ytimg.com/vi/FLxFBU-Kodk/hqdefault.jpg",
-      "first_seen": "2026-06-22",
-      "full_text": "One year ago thousands of people worked for 48h to build something cool with LeRobot library: https://huggingface.co/lerobot LeRobot Worldwide Hackathon was a global AI robotics challenge that took place June 14-15, 2025. Discover how one weekend of open-source building launched careers, inspired new research, and turned total beginners into robotics experts. From folding t-shirts to Lego sorting factories, see what is possible when the community gets their hands dirty with open source AI and robotics. 🏆 See all winners from the event: https://huggingface.co/spaces/LeRobot-worldwide-hackathon/all-winners 🌍 Learn more about the hackathon: https://huggingface.co/LeRobot-worldwide-hackathon #robotics #lerobot",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 16.704,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.7036791893353174,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -3056,43 +2650,6 @@
       "research_interest_title": 5.0,
       "research_interest_abstract": 0.0,
       "recency": 2.715559154422123,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:cfb3296d29fc",
-    "source": "news",
-    "title": "Interview with Olo Robotics COO Eleanor Tang-Smith: Making robot programming accessible to everyone",
-    "url": "https://roboticsandautomationnews.com/2026/06/22/interview-with-olo-robotics-coo-eleanor-tang-smith-making-robot-programming-accessible-to-everyone/102712/",
-    "summary": "Robotics hardware has advanced rapidly in recent years. Autonomous mobile robots, quadrupeds, robotic arms, and even humanoid robots are becoming increasingly capable and commercially available. Yet for many organizations, one of the biggest barriers to adoption remains software.",
-    "published": "2026-06-22T12:08:05+00:00",
-    "updated": "2026-06-22T12:08:05+00:00",
-    "authors": [
-      "Sam Francis"
-    ],
-    "extra": {
-      "feed": "Robotics and Automation News",
-      "first_seen": "2026-06-22",
-      "full_text": "Robotics hardware has advanced rapidly in recent years. Autonomous mobile robots, quadrupeds, robotic arms, and even humanoid robots are becoming increasingly capable and commercially available. Yet for many organizations, one of the biggest barriers to adoption remains software. Building robotic applications typically requires specialist expertise in platforms such as ROS 2 (Robot Operating System 2), […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Manipulator",
-      "#Humanoid"
-    ],
-    "score": 14.696,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.69588405687748,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -3459,99 +3016,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "arxiv:2606.23206",
-    "source": "arxiv",
-    "title": "CFPO: Counterfactual Policy Optimization for Multimodal Reasoning",
-    "url": "http://arxiv.org/abs/2606.23206v1",
-    "summary": "CFPO trains vision-language models to rely on visual evidence by contrasting normal predictions with a counterfactual state in which critical visual cues are suppressed, enforcing causal consistency between perception and reasoning. It integrates with GRPO and DAPO without extra supervision or reward models, improving reasoning performance by 3.17–6.25% over standard RL baselines and 1.32–2.13% over PAPO.",
-    "published": "2026-06-22T11:51:51+00:00",
-    "updated": "2026-06-22T11:51:51+00:00",
-    "authors": [
-      "Zhangyuan Yu",
-      "Wanran Sun",
-      "Guangjing Yang",
-      "Xiaohu Wu",
-      "Qicheng Lao"
-    ],
-    "extra": {
-      "categories": [
-        "cs.CV",
-        "cs.CL"
-      ],
-      "primary_category": "cs.CV",
-      "pdf_url": "https://arxiv.org/pdf/2606.23206v1",
-      "comment": "Accepted to ICML 2026. 17 pages",
-      "first_seen": "2026-06-23",
-      "full_text": "Large Vision-Language Models (LVLMs) have demonstrated remarkable capabilities in multimodal reasoning. However, prevailing reinforcement learning (RL) paradigms lack explicit counterfactual enhancement and causal learning mechanisms. This fundamental deficiency results in severe grounding failures, manifesting as a tendency to ignore visual evidence in favor of language priors or exhibiting hallucination drift during long chain-of-thought reasoning. To address this root cause, we propose CounterFactual Policy Optimization (CFPO), a novel framework that enforces causal consistency between visual perception and textual reasoning. CFPO introduces a cross-modal counterfactual enhancement mechanism, which regularizes the policy by maximizing the discrepancy between the model's predictions and those from a counterfactual state where critical visual cues are suppressed. This approach seamlessly integrates with standard algorithms like GRPO and DAPO without requiring external reward models or additional supervision. Extensive experiments demonstrate that CFPO significantly improves reasoning fidelity, achieving consistent gains of 3.17%-6.25% over standard RL baselines and 1.32%-2.13% over the state-of-the-art perception-aware method (PAPO). Code is available at https://github.com/Raven-July/CFPO.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 11.693,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.693468395654762,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "arxiv:2606.23104",
-    "source": "arxiv",
-    "title": "ReNIO: Reweighting Negative Trajectory Importance for LLM On-Policy Distillation",
-    "url": "http://arxiv.org/abs/2606.23104v1",
-    "summary": "ReNIO improves LLM on-policy distillation by weighting student-generated trajectories according to token-level student-to-teacher probability ratios, emphasizing pivotal mistakes without needing final-answer correctness. Incorrect trajectories preserve more exploratory, reflective reasoning near the student’s capability boundary, and this reweighting yields relative gains of up to 8.9% for Qwen3-1.7B and 10% for R1-Distill-Qwen-7B across math reasoning and code generation tasks.",
-    "published": "2026-06-22T09:46:35+00:00",
-    "updated": "2026-06-22T09:46:35+00:00",
-    "authors": [
-      "Chen Lin",
-      "Kedi Chen",
-      "Wei Zhang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "primary_category": "cs.LG",
-      "pdf_url": "https://arxiv.org/pdf/2606.23104v1",
-      "comment": "15 pages",
-      "first_seen": "2026-06-23",
-      "full_text": "On-policy distillation (OPD) improves LLM reasoning by training a student model on its own generated outputs, but standard OPD treats all student-generated outputs (SGOs) equally regardless of their informativeness. We observe a consistent asymmetry in controlled filtering experiments: in both OPD and on-policy self distillation (OPSD), training only on incorrect SGOs outperforms training only on correct ones. Our further analysis suggests that models trained on correct-only SGOs tend to generate shorter reasoning traces and show weaker reflection behavior, while incorrect SGOs better preserve exploratory reasoning near the model's capability boundary. To exploit this signal without requiring full answer-containing rollouts, we introduce ReNIO, which Reweights Negative trajectory Importance for LLM On-policy distillation. By using the student-to-teacher probability ratio, ReNIO identifies pivotal tokens leading to wrong reasoning traces and aggregates their information into a normalized sample weight, inherently assigning larger weights to likely negative trajectories without observing the correctness of final-answer. Since Re-NIO only uses prefix-conditioned token probabilities, it preserves OPD's prefix training advantage over full-rollout reinforcement learning. Across both mathematical reasoning and code generation tasks, ReNIO improves both OPD and OPSD, with representative relative gains of up to 8.90% for Qwen3-1.7B and 10.00% for R1-Distill-Qwen-7B on mathematical reasoning benchmarks. Code repo: https://github.com/BDML-lab/ReNIO.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2606.23104.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 11.675,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.6748275239905754,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:bb760f326aef",
     "source": "news",
     "title": "Doosan Robotics Unveils AI Palletizing Solution PalletizHD+ at Automate 2026",
@@ -3622,114 +3086,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:1c07166e79f1",
-    "source": "news",
-    "title": "Interview with Digid’s Nils Könne and Christian Kreil: Nanoscale sensors could help solve robotics’ tactile sensing challenge",
-    "url": "https://roboticsandautomationnews.com/2026/06/22/interview-with-digids-nils-konne-and-christian-kreil-nanoscale-sensors-could-help-solve-robotics-tactile-sensing-challenge/102702/",
-    "summary": "The rapid rise of artificial intelligence and robotics has focused attention on software, large language models, and increasingly powerful processors. But for robots to operate effectively in the physical world, they also need something much more fundamental: the ability to sense and understand their environment.",
-    "published": "2026-06-22T11:30:15+00:00",
-    "updated": "2026-06-22T11:30:15+00:00",
-    "authors": [
-      "Sam Francis"
-    ],
-    "extra": {
-      "feed": "Robotics and Automation News",
-      "first_seen": "2026-06-22",
-      "full_text": "The rapid rise of artificial intelligence and robotics has focused attention on software, large language models, and increasingly powerful processors. But for robots to operate effectively in the physical world, they also need something much more fundamental: the ability to sense and understand their environment. That challenge is creating growing interest in advanced sensing technologies […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 10.69,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.6902540964434523,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:78718c131d33",
-    "source": "news",
-    "title": "Interview with Clearpath Robotics co-founder Ryan Gariepy: ‘Most industries in Canada are under-automated’",
-    "url": "https://roboticsandautomationnews.com/2026/06/22/interview-with-clearpath-robotics-co-founder-ryan-gariepy-most-industries-in-canada-are-under-automated/102695/",
-    "summary": "Canada has long been recognized for its contributions to robotics research, producing world-class universities, pioneering robotics startups, and innovative technologies that have found applications across manufacturing, logistics, agriculture, mining, and defense.",
-    "published": "2026-06-22T09:43:15+00:00",
-    "updated": "2026-06-22T09:43:15+00:00",
-    "authors": [
-      "Sam Francis"
-    ],
-    "extra": {
-      "feed": "Robotics and Automation News",
-      "first_seen": "2026-06-22",
-      "full_text": "Canada has long been recognized for its contributions to robotics research, producing world-class universities, pioneering robotics startups, and innovative technologies that have found applications across manufacturing, logistics, agriculture, mining, and defense. Yet despite this strong technical foundation, many observers argue that Canada has not always translated its research strengths into widespread industrial deployment at the […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 10.674,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.674331477271825,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:defc0d2e163b",
-    "source": "news",
-    "title": "Opinion: The AI infrastructure risk robotics leaders can’t afford to ignore",
-    "url": "https://roboticsandautomationnews.com/2026/06/22/opinion-the-ai-infrastructure-risk-robotics-leaders-cant-afford-to-ignore/102678/",
-    "summary": "By Nadine Akey, sales and marketing manager, Hutchinson Aerospace & Industry The robotics industry is entering a new phase of growth. Autonomous mobile robots navigate warehouses with increasing sophistication. Industrial robots are becoming smarter and more adaptive.",
-    "published": "2026-06-22T08:21:23+00:00",
-    "updated": "2026-06-22T08:21:23+00:00",
-    "authors": [
-      "Sam Francis"
-    ],
-    "extra": {
-      "feed": "Robotics and Automation News",
-      "first_seen": "2026-06-22",
-      "full_text": "By Nadine Akey, sales and marketing manager, Hutchinson Aerospace & Industry The robotics industry is entering a new phase of growth. Autonomous mobile robots navigate warehouses with increasing sophistication. Industrial robots are becoming smarter and more adaptive. AI-powered vision systems are transforming manufacturing, logistics and defense applications. Behind every one of these advances is a […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 10.662,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.662148937239583,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:656ad714c6fb",
     "source": "news",
     "title": "Innovation at Agility: The Digit Shuffle",
@@ -3763,50 +3119,6 @@
       "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 5.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "arxiv:2606.23258",
-    "source": "arxiv",
-    "title": "Conceptual Design of an Ecosystem for Real Farm Data Collection toward Agricultural AI Foundation Models",
-    "url": "http://arxiv.org/abs/2606.23258v1",
-    "summary": "An ecosystem for collecting real-farm data combines demand- and rarity-based pricing, revenue sharing with farmers, and authenticated device uploads to verify data provenance. Economic estimates of the value generated by agricultural robots suggest the model could remain sustainable for farmers, AI companies, and the platform while supplying trustworthy data for agricultural foundation models.",
-    "published": "2026-06-22T12:42:03+00:00",
-    "updated": "2026-06-22T12:42:03+00:00",
-    "authors": [
-      "Junsei Tanaka",
-      "Yoshihiro Sato"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2606.23258v1",
-      "comment": null,
-      "first_seen": "2026-06-23",
-      "full_text": "Data scarcity is a fundamental challenge in developing AI and foundation models for agricultural robots. Existing open-source data platforms do not provide sufficient incentives for data providers so long-term data collection remains difficult. Furthermore, advances in generative AI have introduced a new challenge of verifying that collected data genuinely originates from real farm environments. We propose an ecosystem for the sustainable collection and distribution of real farm data, integrating automatic pricing driven by demand and rarity, revenue sharing that distributes earnings to farmers as an incentive to keep providing data, and data authenticity guarantees through authenticated device uploads. To demonstrate the economic sustainability for all three parties among farmers, AI companies, and the platform, we estimate the economic value that agricultural robots stand to generate.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2606.23258.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 9.701,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.7009386467832344,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
       "demote": -0.0
     },
     "priority": "save_for_later"
@@ -4323,79 +3635,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:ce7bd0c6bec5",
-    "source": "news",
-    "title": "Eco Wave Power Turns Waves Into Watts With NVIDIA AI Infrastructure and Digital Twins",
-    "url": "https://blogs.nvidia.com/blog/eco-wave-power-ai-digital-twins/",
-    "summary": "The next era of AI will not be defined by compute alone. Its growth will be determined by energy. As accelerated computing scales across AI factories, agentic AI, industrial AI, edge computing and physical AI — including robotics and autonomous systems — global electricity demand is rising at unprecedented speed. In many regions, expanding grid […]",
-    "published": "2026-06-22T13:00:13+00:00",
-    "updated": "2026-06-22T13:00:13+00:00",
-    "authors": [
-      "Tenika Versey Walker"
-    ],
-    "extra": {
-      "feed": "NVIDIA Blog",
-      "thumbnail": "https://blogs.nvidia.com/wp-content/uploads/2026/06/eco-wave-1920x1080-1-842x450.jpg",
-      "first_seen": "2026-06-22",
-      "full_text": "The next era of AI will not be defined by compute alone. Its growth will be determined by energy. As accelerated computing scales across AI factories, agentic AI, industrial AI, edge computing and physical AI — including robotics and autonomous systems — global electricity demand is rising at unprecedented speed. In many regions, expanding grid […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 6.704,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.7036419901488093,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:470f03176580",
-    "source": "news",
-    "title": "KIRO 중부권연구센터 개소…미래 모빌리티·임바디드 AI 로봇 혁신거점 구축",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=47019",
-    "summary": "한국로봇융합연구원(KIRO, 원장 강기원)은 지난 19일 충남대학교 대학본부에서 열린 ‘오프로드 모빌리티 산학연 혁신연구원’ 개소식과 함께 ‘KIRO 중부권연구센터’ 현판식을 개최했다. KIRO는 이번 연구센터 개소를 계기로 충청권 산학연 협력 기반의 미래 모빌리티 및 로봇 기술 혁신 거점 구축에 본격 나설 계획이다.이날 행사에는 강기원 원장과 충남대학교 김정겸 총장을 비롯해 한국기계연구원, 한국자동차연구원, LS엠트론, 한온시스템 등 주요 산학연 기관 관계자들이 참석했다. 참석자들은 충남대학교 오프로드 모빌리티 산학연 혁신연구원의",
-    "published": "2026-06-22T11:22:18+00:00",
-    "updated": "2026-06-22T11:22:18+00:00",
-    "authors": [
-      "박경일"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-06-22",
-      "full_text": "한국로봇융합연구원(KIRO, 원장 강기원)은 지난 19일 충남대학교 대학본부에서 열린 ‘오프로드 모빌리티 산학연 혁신연구원’ 개소식과 함께 ‘KIRO 중부권연구센터’ 현판식을 개최했다. KIRO는 이번 연구센터 개소를 계기로 충청권 산학연 협력 기반의 미래 모빌리티 및 로봇 기술 혁신 거점 구축에 본격 나설 계획이다.이날 행사에는 강기원 원장과 충남대학교 김정겸 총장을 비롯해 한국기계연구원, 한국자동차연구원, LS엠트론, 한온시스템 등 주요 산학연 기관 관계자들이 참석했다. 참석자들은 충남대학교 오프로드 모빌리티 산학연 혁신연구원의",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 6.689,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.6890710563219247,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:0b42498fda95",
     "source": "news",
     "title": "AGIBOT Showcases Embodied AI Robots at VivaTech 2026 in Paris",
@@ -4529,78 +3768,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.8827714577901786,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:308c65b5bdb7",
-    "source": "news",
-    "title": "Interview with Paul Dawalibi: Can Ras Al Khaimah become the Silicon Valley of the Middle East?",
-    "url": "https://roboticsandautomationnews.com/2026/06/22/interview-with-paul-dawalibi-can-ras-al-khaimah-become-the-silicon-valley-of-the-middle-east/102688/",
-    "summary": "For decades, when technology companies looked to establish a presence in the Middle East, the conversation typically revolved around Dubai or Abu Dhabi.",
-    "published": "2026-06-22T09:15:53+00:00",
-    "updated": "2026-06-22T09:15:53+00:00",
-    "authors": [
-      "Sam Francis"
-    ],
-    "extra": {
-      "feed": "Robotics and Automation News",
-      "first_seen": "2026-06-22",
-      "full_text": "For decades, when technology companies looked to establish a presence in the Middle East, the conversation typically revolved around Dubai or Abu Dhabi. But as global competition for AI, robotics, and deep-tech investment intensifies, a growing number of smaller, more agile innovation hubs are seeking to carve out their own place in the technology landscape. […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 4.67,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.6702590565228173,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:4e355d5cc387",
-    "source": "news",
-    "title": "From audio tapes to AI: Interview with TDK investment director Ankur Saxena",
-    "url": "https://roboticsandautomationnews.com/2026/06/22/from-audio-tapes-to-ai-interview-with-tdk-investment-director-ankur-saxena/102671/",
-    "summary": "Artificial intelligence has become the dominant theme in technology investing, but when it comes to robotics, some investors argue that the industry may be drawing the wrong conclusions from recent breakthroughs in large language models and generative AI.",
-    "published": "2026-06-22T07:53:27+00:00",
-    "updated": "2026-06-22T07:53:27+00:00",
-    "authors": [
-      "Sam Francis"
-    ],
-    "extra": {
-      "feed": "Robotics and Automation News",
-      "first_seen": "2026-06-22",
-      "full_text": "Artificial intelligence has become the dominant theme in technology investing, but when it comes to robotics, some investors argue that the industry may be drawing the wrong conclusions from recent breakthroughs in large language models and generative AI. Among them is Ankur Saxena, investment director at TDK Ventures, the corporate venture capital arm of TDK […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 4.658,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.6579921911011906,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
