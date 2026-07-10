@@ -272,7 +272,7 @@
     "source": "github",
     "title": "sou350121/VLA-Handbook",
     "url": "https://github.com/sou350121/VLA-Handbook",
-    "summary": "本项目旨在为致力于进入VLA(Vision-Language-Action)领域的算法工程师提供一份全中文、实战导向的学习/面试手册。  不同于通用的 CV/NLP 面试指南，本项目聚焦于 Robotics 特有的挑战",
+    "summary": "VLA-Handbook is a Chinese, practice-oriented learning and interview guide for algorithm engineers entering Vision-Language-Action robotics. It narrows the usual CV/NLP interview scope to robotics-specific issues, making it useful as a field-focused onboarding and preparation resource rather than a general machine learning handbook.",
     "published": "2025-11-23T06:25:26Z",
     "updated": "2026-07-10T15:30:07Z",
     "authors": [
@@ -296,7 +296,7 @@
       "license": "CC-BY-4.0",
       "first_seen": "2026-05-18",
       "full_text": "本项目旨在为致力于进入VLA(Vision-Language-Action)领域的算法工程师提供一份全中文、实战导向的学习/面试手册。  不同于通用的 CV/NLP 面试指南，本项目聚焦于 Robotics 特有的挑战",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -825,7 +825,7 @@
     "source": "github",
     "title": "isaac-sim/IsaacLab-Arena",
     "url": "https://github.com/isaac-sim/IsaacLab-Arena",
-    "summary": "Isaac Lab - Arena is a robotics simulation framework that enhances NVIDIA Isaac Lab by providing a composable, scalable system for creating diverse simulation environments and evaluating robot learning policies. The framework enables developers to rapidly prototype and test robotic tasks with various robot embodiments, objects, and environments.",
+    "summary": "Isaac Lab - Arena extends NVIDIA Isaac Lab with a composable setup for building robotics simulation environments from interchangeable robots, objects, tasks, and scenes. It is aimed at rapid prototyping and policy evaluation, making it easier to test learned robot behaviors across different embodiments and environment configurations without rebuilding each simulation from scratch.",
     "published": "2025-08-15T12:28:23Z",
     "updated": "2026-07-10T20:08:10Z",
     "authors": [
@@ -840,7 +840,7 @@
       "license": "NOASSERTION",
       "first_seen": "2026-05-18",
       "full_text": "Isaac Lab - Arena is a robotics simulation framework that enhances NVIDIA Isaac Lab by providing a composable, scalable system for creating diverse simulation environments and evaluating robot learning policies. The framework enables developers to rapidly prototype and test robotic tasks with various robot embodiments, objects, and environments.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/isaac-sim/IsaacLab-Arena/HEAD/docs/images/static_apple_pick_and_place.gif"
     },
     "tags": [
@@ -1150,7 +1150,7 @@
     "source": "arxiv",
     "title": "LEEVLA: Seeing What Matters in Latent Environment Evolution for Vision-Language-Action",
     "url": "http://arxiv.org/abs/2607.08182v1",
-    "summary": "Vision-language-action (VLA) models aim to map multimodal inputs to robot actions. However, most existing approaches struggle to cover complex dynamic scenarios due to treating all visual tokens uniformly and reasoning with human-selected factors, which lack mechanisms to emphasize task-critical evidence and ignore underlying factors.",
+    "summary": "LEEVLA trains vision-language-action models to focus on task-relevant visual evidence in dynamic robot settings instead of treating all visual tokens equally. It combines drift-guided dynamic prioritization, which steers attention toward salient instruction-relevant regions, with structured feature flow generation, which predicts how those prioritized latent features evolve while preserving neighborhood topology. On VLA benchmarks, this task-aware where/how training setup consistently outperforms prior methods, suggesting that explicit evidence selection and structured latent dynamics help scale VLA behavior.",
     "published": "2026-07-09T07:28:21+00:00",
     "updated": "2026-07-09T07:28:21+00:00",
     "authors": [
@@ -1171,7 +1171,7 @@
       "comment": null,
       "first_seen": "2026-07-10",
       "full_text": "Vision-language-action (VLA) models aim to map multimodal inputs to robot actions. However, most existing approaches struggle to cover complex dynamic scenarios due to treating all visual tokens uniformly and reasoning with human-selected factors, which lack mechanisms to emphasize task-critical evidence and ignore underlying factors. To address this issue, we propose LEEVLA, a VLA architecture for seeing what matters in Latent Environment Evolution that explicitly guides the model toward informative regions while preserving the structured evolution of latent world representations. To identify salient and instruction-relevant regions, we introduce drift-guided dynamic prioritization (DGDP), which combines dynamic position prioritization (DPP) with semantic drift guidance (SDG) to guide the VLA agent where to attend during training. On top of this, we introduce structured feature flow generation (SFFG), which models how these prioritized features should evolve in latent space via prototype-to-periphery (P2P) prediction, and a mutual-neighborhood contrastive (MC) loss to maintain topological consistency among neighborhoods. Together, DGDP and SFFG form a task-aware \"where-how\" training framework. Extensive experiments on VLA benchmarks show that LEEVLA consistently outperforms prior methods, confirming that explicit task-evidence guidance and structured latent reasoning are both crucial for scalable VLA. Our code is available at https://github.com/LyuQi127/LEEVLA.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2607.08182.jpg"
     },
     "tags": [
@@ -1681,7 +1681,7 @@
     "source": "arxiv",
     "title": "FabriVLA: A Lightweight Vision-Language-Action Model for Precise Multi-Task Manipulation",
     "url": "http://arxiv.org/abs/2607.08575v1",
-    "summary": "We present FabriVLA, a lightweight Vision-Language-Action model for Precise Multi-Task Manipulation. FabriVLA combines an InternVL3.5 vision-language backbone with a flow-matching action head featuring gated self-attention across action tokens and shallow VLM layer fusion for enriched spatial context.",
+    "summary": "FabriVLA is a compact vision-language-action model for precise robot manipulation that pairs an InternVL3.5 backbone with a flow-matching action head, using gated self-attention over action tokens and shallow VLM layer fusion to sharpen spatial context. Trained in a single joint stage from a pretrained VLM plus a randomly initialized action head, it reaches 90.0% tier-average success on Meta-World MT50 across 50 tasks, suggesting that 1B-scale VLMs can support strong multi-task manipulation without very large VLA backbones.",
     "published": "2026-07-09T15:06:43+00:00",
     "updated": "2026-07-09T15:06:43+00:00",
     "authors": [
@@ -1703,7 +1703,7 @@
       "comment": null,
       "first_seen": "2026-07-10",
       "full_text": "We present FabriVLA, a lightweight Vision-Language-Action model for Precise Multi-Task Manipulation. FabriVLA combines an InternVL3.5 vision-language backbone with a flow-matching action head featuring gated self-attention across action tokens and shallow VLM layer fusion for enriched spatial context. The model is trained via single stage joint optimization from a pretrained VLM and randomly initialized action head. On the Meta-World MT50 benchmark spanning 50 diverse manipulation tasks, FabriVLA achieves a tier-average success rate of 90.0%, demonstrating that a compact VLA built on a 1B scale VLM can achieve strong performance without relying on multi billion parameter VLA backbones.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2607.08575.jpg"
     },
     "tags": [
@@ -1767,7 +1767,7 @@
     "source": "github",
     "title": "hetolin/PoseVLA",
     "url": "https://github.com/hetolin/PoseVLA",
-    "summary": "Universal Pose Pretraining for Generalizable Vision-Language-Action Policies(RSS2026)",
+    "summary": "PoseVLA is a vision-language-action policy built around universal pose pretraining, aimed at making robot policies transfer more reliably across embodiments, scenes, and tasks. The RSS 2026 framing suggests the interesting part is using pose as a shared intermediate structure for generalizable action learning, rather than relying only on end-to-end visual-language conditioning.",
     "published": "2026-06-23T06:27:06Z",
     "updated": "2026-07-06T11:02:28Z",
     "authors": [
@@ -1787,7 +1787,7 @@
       "license": "MIT",
       "first_seen": "2026-07-01",
       "full_text": "Universal Pose Pretraining for Generalizable Vision-Language-Action Policies(RSS2026)",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -2258,7 +2258,7 @@
     "source": "news",
     "title": "FORT Robotics extends physical AI safety platform with Nvidia Halos",
     "url": "https://roboticsandautomationnews.com/2026/07/10/fort-robotics-extends-physical-ai-safety-platform-with-nvidia-halos/103254/",
-    "summary": "FORT Robotics, the “Trust Layer” for physical AI, has announced joining the Nvidia Halos for Robotics ecosystem that’s bringing safety to autonomous robots.",
+    "summary": "FORT Robotics has joined Nvidia’s Halos for Robotics ecosystem and is extending its physical AI safety platform around Nvidia’s open-source Halos Outside-In Safety Blueprint. The company is showing an agentic safety application at Automate in Chicago, positioning its Trust Layer as infrastructure for monitoring and enforcing safety around autonomous robots, including humanoids.",
     "published": "2026-07-10T17:38:37+00:00",
     "updated": "2026-07-10T17:38:37+00:00",
     "authors": [
@@ -2268,7 +2268,7 @@
       "feed": "Robotics and Automation News",
       "first_seen": "2026-07-10",
       "full_text": "FORT Robotics, the “Trust Layer” for physical AI, has announced joining the Nvidia Halos for Robotics ecosystem that’s bringing safety to autonomous robots. FORT will demonstrate an agentic safety application built with the open source Nvidia Halos Outside-In Safety Blueprint this week at the Automate conference in Chicago and presenting in the Humanoid Robotics Pavilion […]",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://roboticsandautomationnews.com/wp-content/uploads/2026/07/fort-robotics-nvidia-1.png"
     },
     "tags": [
@@ -2565,7 +2565,7 @@
     "source": "github",
     "title": "engineai-robotics/engineai_rl_lab",
     "url": "https://github.com/engineai-robotics/engineai_rl_lab",
-    "summary": "This project provides a set of reinforcement learning environments based on Isaac Lab. It currently supports EngineAI PM01 and T800 robots, with implemented tasks including whole-body tracking.",
+    "summary": "EngineAI’s `engineai_rl_lab` packages Isaac Lab-based reinforcement learning environments for the PM01 and T800 robots, with whole-body tracking tasks already implemented. It is useful as a simulation and training starting point for researchers working on learned control for these specific humanoid platforms, especially if they want Isaac Lab integration rather than building robot environments from scratch.",
     "published": "2026-06-24T04:09:40Z",
     "updated": "2026-07-10T02:47:35Z",
     "authors": [
@@ -2580,7 +2580,7 @@
       "license": "BSD-3-Clause",
       "first_seen": "2026-07-03",
       "full_text": "This project provides a set of reinforcement learning environments based on Isaac Lab. It currently supports EngineAI PM01 and T800 robots, with implemented tasks including whole-body tracking.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/engineai-robotics/engineai_rl_lab/HEAD/./docs/train.gif"
     },
     "tags": [
@@ -2710,7 +2710,7 @@
     "source": "news",
     "title": "Video Friday: A World Cup for Robots",
     "url": "https://spectrum.ieee.org/video-friday-robot-world-cup",
-    "summary": "Video Friday is your weekly selection of awesome robotics videos , collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upcoming robotics events for the next few months. Please send us your events for inclusion.",
+    "summary": "IEEE Spectrum’s roundup highlights several concrete signs that humanoids and general-purpose robot learning are moving from demos toward harder physical tasks: RoboCup 2026 hosted the first full 11-vs-11 humanoid soccer match on hardware, Boston Dynamics put Atlas on a stadium pitch to deliver a match ball, and 1X showed 25-DoF tendon-driven hands with tactile sensing for dexterous manipulation. The most AI-centric item is Generalist’s GEN-1 robot-learning model, which reportedly reaches 99% average success on simple physical tasks where prior models got 64%, runs about 3x faster, and needs only 1 hour of robot data per task, suggesting a push toward commercially usable generalist manipulation rather than narrow lab behaviors.",
     "published": "2026-07-10T16:00:01+00:00",
     "updated": "2026-07-10T16:00:01+00:00",
     "authors": [
@@ -2721,7 +2721,7 @@
       "thumbnail": "https://spectrum.ieee.org/media-library/humanoid-robots-play-soccer-as-a-ball-flies-toward-the-goal-in-a-tournament-arena.jpg?id=67119515&width=980",
       "first_seen": "2026-07-10",
       "full_text": "Video Friday is your weekly selection of awesome robotics videos , collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upcoming robotics events for the next few months. Please send us your events for inclusion. RSS 2026 : 13–17 July 2026, SYDNEY Summer School on Multi-Robot Systems : 29 July–4 August 2026, PRAGUE Actuate 2026 : 18–19 August 2026, SAN FRANCISCO IROS 2026 : 27 September–1 October 2026, PITTSBURGH Humanoids Summit Seoul : 22–23 September 2026, SEOUL Enjoy today’s videos! For the first time, two full teams of humanoid robots played an 11-vs-11 soccer match on hardware, bringing one of robotics’ most ambitious long-term visions closer to reality. Never before have two full-sized humanoid robot teams played a soccer game against each other. [ RoboCup ] Engineers at MIT and EPFL in Lausanne, Switzerland, have designed a robot that can swim underwater, and flap out of the water to continue flying through air, much like a diving bird. The robot can help scientists study the mechanics that enable these actions in aquatic aviators and may help launch a new class of aerial-aquatic drones and vehicles. [ MIT ] We’re excited to announce our breakthrough robotic hands for the NEO platform: hands that match or exceed human-level dexterity, strength, safety, and reliability. Designed from the ground up, these 25-DoF hands combine 25 fully actuated degrees of freedom with a tendon-driven system, rich tactile sensing, and built-in compliance. The result is a hand capable of true in-hand manipulation, precision tool use, and delicate interaction. [ 1X ] This match, Tech United played against IRIS at the mid size league at RoboCup 2026 in Incheon South-Korea. [ Tech United ] Atlas arrived pitchside at NYNJ Stadium in front of 80,000 people gathered to see Brazil vs Norway. After performing some of the sport’s most memorable player celebrations, Atlas helped kick-off the second half by delivering the match ball! [ Boston Dynamics ] Navigating discrete terrain such as stepping stones remains a major challenge for legged robots. Conventional approaches often rely on dense environment reconstruction from cameras or LiDAR, which can be affected by latency, occlusions, and significant computational overhead. We show that proximity sensors integrated into the bottom of a quadruped’s feet enable safe, terrain-seeking autonomous locomotion. [ Paper ] On this holiday, Digit is on grill duty. It turns out precise force control is good for more than payload handling. Happy 4th of July from all of us at Agility. [ Agility ] We’ve created GEN-1, our latest milestone in scaling robot learning. We believe it to be the first general-purpose AI model that crosses a new performance threshold: mastery of simple physical tasks. It improves average success rates to 99% on tasks where previous models achieve 64%, completes tasks roughly 3x faster than state of the art, and requires only 1 hour of robot data for each of these results. GEN-1 unlocks commercial viability across a broad range of applications—and while it cannot solve all tasks today, it is a significant step towards our mission of creating generalist intelligence for the physical world. [ Generalist ] 4 years at Figure. [ Figure ] Reachy Mini is becoming your real AI companion. The Conversation App makes it able to talk fluently with you, help you with your to-do list, remind you of important tasks, and even chat about music. Long-term memory, voice interaction, always ready to help. [ Reachy Mini ] Is this sort of thing now a real job for humanoid robots, then? [ Unitree ] Quite a story, but is it a real job? [ EngineAI ] If you have a cute animal logo for your research I will always share it. [ BIEVR-LIO ] This is very delicate work, although the real challenge would be picking those nuts out of a jumbled bin full of randomly sized nuts, which is how most of us live our lives. [ Sanctuary ] Not for me, thank you, although I’m not saying that most of the other humanoid robots out there are any better looking, fundamentally. [ UBTECH ] Robotics professor, Dr. Christian Hubicki, judges robot soccer skills while knowing very little about soccer himself. [ ORL ] In this presentation, Brendan Schulman, Vice President of Policy at Boston Dynamics, outlines the critical role of government engagement in driving the success of the humanoid robotics industry. He demonstrates how legged robots like the Spot quadruped and Atlas humanoid are moving beyond factory settings to deliver real-world value in infrastructure inspection, industrial manufacturing, and public safety. Schulman highlights the intersection of AI and robotics, showcasing how large behavioral models and reinforcement learning enable robots to navigate slippery floors and autonomously avoid workplace hazards. Ultimately, he calls for a proactive national robotics strategy focused on workforce training, safety standards, and ethical frameworks to support supply chain resilience and global competitiveness. [ Humanoids Summit ]",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -2749,7 +2749,7 @@
     "source": "news",
     "title": "InDro Robotics Launches Axiom: A Budget-Friendly Humanoid-Style Platform for Physical AI Research",
     "url": "http://www.RoboticsTomorrow.com/news/2026/07/09/indro-robotics-launches-axiom-a-budget-friendly-humanoid-style-platform-for-physical-ai-research/26830",
-    "summary": "New modular robot lowers barrier to humanoid development; first customer units already shipping",
+    "summary": "InDro Robotics has launched Axiom, a modular humanoid-style robot platform aimed at making physical AI and humanoid development cheaper and more accessible. The company says the first customer units are already shipping, positioning Axiom as a practical research platform for teams that want humanoid-like hardware without the cost and complexity of building a full system from scratch.",
     "published": "2026-07-10T01:15:14+00:00",
     "updated": "2026-07-10T01:15:14+00:00",
     "authors": [],
@@ -2757,7 +2757,7 @@
       "feed": "Robotics Tomorrow",
       "first_seen": "2026-07-10",
       "full_text": "New modular robot lowers barrier to humanoid development; first customer units already shipping",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://www.roboticstomorrow.com/images/facebooknews.jpg"
     },
     "tags": [
@@ -2868,7 +2868,7 @@
     "source": "github",
     "title": "wertyuilife2/go2_rl_robotlab",
     "url": "https://github.com/wertyuilife2/go2_rl_robotlab",
-    "summary": "[RSS 2026] Toward Reliable Sim-to-Real Predictability for MoE-based Robust Quadrupedal Locomotion",
+    "summary": "go2_rl_robotlab is code for the RSS 2026 project Toward Reliable Sim-to-Real Predictability for MoE-based Robust Quadrupedal Locomotion, centered on robust locomotion policies for the Unitree Go2. The interesting thread is its focus on mixture-of-experts control and sim-to-real predictability: not just training a quadruped policy in simulation, but making its real-world behavior more reliably forecastable before deployment.",
     "published": "2026-03-22T17:57:12Z",
     "updated": "2026-07-10T14:20:34Z",
     "authors": [
@@ -2883,7 +2883,7 @@
       "license": "Apache-2.0",
       "first_seen": "2026-06-24",
       "full_text": "[RSS 2026] Toward Reliable Sim-to-Real Predictability for MoE-based Robust Quadrupedal Locomotion",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/wertyuilife2/go2_rl_robotlab/HEAD/resources/results/isaaclab_scene.png"
     },
     "tags": [
@@ -3204,7 +3204,7 @@
     "source": "github",
     "title": "Roboparty/roboparty_train",
     "url": "https://github.com/Roboparty/roboparty_train",
-    "summary": "Isaac Lab training workspace for Roboparty RPO locomotion policies, including RSL-RL, Sim2Sim, and motion retargeting tools.",
+    "summary": "Roboparty/roboparty_train is an Isaac Lab workspace for training Roboparty RPO locomotion policies, centered on RSL-RL reinforcement learning with supporting tools for sim-to-sim transfer and motion retargeting. It looks useful as a practical training and experimentation stack for developing, adapting, and validating robot locomotion controllers before moving toward deployment.",
     "published": "2025-07-12T07:08:23Z",
     "updated": "2026-07-10T11:20:13Z",
     "authors": [
@@ -3219,7 +3219,7 @@
       "license": null,
       "first_seen": "2026-05-29",
       "full_text": "Isaac Lab training workspace for Roboparty RPO locomotion policies, including RSL-RL, Sim2Sim, and motion retargeting tools.",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -3473,7 +3473,7 @@
     "source": "arxiv",
     "title": "Physics-Guided Biomechanical Gait Adaptation for Humanoid Locomotion on Extreme Sloped Terrains",
     "url": "http://arxiv.org/abs/2607.07830v1",
-    "summary": "Model-free reinforcement learning has enabled impressive humanoid locomotion; however, control on steep slopes remains largely unexplored. Unlike flat or discrete terrains, sloped terrains impose a persistent gravitational bias that demands simultaneous stability and posture control.",
+    "summary": "HumoSlope trains humanoid locomotion policies for steep, continuous slopes by first regularizing balance with a Zero Moment Point computed on the local inclined support plane, then using a Biomechanical Slope Gait Adapter to shape posture and leg coordination during training. The adapter uses privileged terrain descriptors to encourage taller, slope-appropriate gaits, such as hip-driven uphill propulsion and knee-biased downhill braking, while the deployed robot relies only on proprioception. In sim-to-real tests, the resulting blind controller traversed outdoor grass slopes up to 62.7% grade, or 32.1 degrees, without collapsing into the slow crouched gait seen with generic rewards.",
     "published": "2026-07-08T18:12:18+00:00",
     "updated": "2026-07-08T18:12:18+00:00",
     "authors": [
@@ -3496,7 +3496,7 @@
       "comment": "12 pages,6 figures",
       "first_seen": "2026-07-10",
       "full_text": "Model-free reinforcement learning has enabled impressive humanoid locomotion; however, control on steep slopes remains largely unexplored. Unlike flat or discrete terrains, sloped terrains impose a persistent gravitational bias that demands simultaneous stability and posture control. Consequently, under generic reward formulations, policies can converge to slow, conservative low-center-of-mass (CoM) crouched gaits.   In this work, we propose a novel two-stage physics-guided framework, dubbed HumoSlope, dedicated to robust humanoid locomotion on diverse sloped terrains. Specifically, Stage I establishes a terrain-consistent balance prior by introducing a slope-adaptive Zero Moment Point (ZMP) regularizer evaluated directly on the local inclined support plane rather than a world-horizontal reference. To prevent the resulting policy from defaulting to a crouched posture, Stage II introduces the Biomechanical Slope Gait Adapter (BSGA). Utilizing extracted macroscopic terrain descriptors as privileged, training-only signals, BSGA dynamically gates soft reward priors to modulate CoM height and lower-limb coordination based on the estimated slope geometry -- encouraging hip-dominant uphill propulsion and knee-oriented downhill braking. Crucially, the deployed actor remains entirely proprioceptive, requiring no online exteroceptive sensing.   Extensive Sim-to-Real experiments demonstrate that our framework effectively mitigates posture degeneration and enables blind, continuous traversal of outdoor grass slopes up to 62.7% ($32.1^\\circ$), validating a physics-guided approach to challenging slope terrain adaptation.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2607.07830.jpg"
     },
     "tags": [
@@ -3693,7 +3693,7 @@
     "source": "arxiv",
     "title": "Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents",
     "url": "http://arxiv.org/abs/2607.08448v1",
-    "summary": "Language-conditioned manipulation requires both precise contact-rich control and robust reasoning over language, scenes, and long horizons.",
+    "summary": "Harness VLA treats a frozen vision-language-action model as a retryable contact-rich manipulation primitive, while an agentic planner handles semantic re-grounding, staging, transport, navigation, release, and failure recovery using task-specific execution memory. By learning where a small fixed set of primitives succeeds or fails instead of finetuning the VLA or adding more skills, it pushes pretrained VLAs into perturbed settings such as goal re-binding, layout shifts, and unstable contacts. It improves over the strongest relevant baselines by 38.6 points on LIBERO-Pro and 25.4 points on RoboCasa365, and reaches 58.4% on RoboTwin clean-to-randomized bimanual manipulation.",
     "published": "2026-07-09T13:08:54+00:00",
     "updated": "2026-07-09T13:08:54+00:00",
     "authors": [
@@ -3723,7 +3723,7 @@
       "comment": null,
       "first_seen": "2026-07-10",
       "full_text": "Language-conditioned manipulation requires both precise contact-rich control and robust reasoning over language, scenes, and long horizons. End-to-end Vision-Language-Action (VLA) models provide strong local visuomotor skills, but they are trained on in-distribution task trajectories and often fail under deployment perturbations such as semantic retargeting, goal re-binding, spatial-layout shifts, and unstable local contacts. LLM coding agents provide complementary semantic and compositional reasoning, but purely analytic primitives struggle with irregular grasping, constrained placement, and articulated-object interaction. We present Harness VLA, a memory-augmented agentic framework that exposes a frozen VLA as a retryable contact-rich primitive and composes it with a small fixed library of analytic primitives for grounding, staging, transport, navigation, and release. Rather than expanding the skill library, the harness learns the operating range of these fixed primitives from task-specific execution traces, global success rules, and failure models. By lifting semantic re-grounding, non-contact execution, and VLA re-staging to the planner while reserving the frozen VLA for local contact-rich phases, Harness VLA extends pretrained VLAs beyond their original trajectory distribution without finetuning. Across perturbed tabletop, household kitchen, and clean-to-randomized bimanual manipulation, Harness VLA improves over the strongest relevant baselines by 38.6 and 25.4 percentage points on LIBERO-Pro and RoboCasa365, respectively, and reaches 58.4% on RoboTwin C2R.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2607.08448.jpg"
     },
     "tags": [
@@ -3790,7 +3790,7 @@
     "source": "arxiv",
     "title": "In vivo feasibility study of humanoid robots in surgery",
     "url": "http://arxiv.org/abs/2607.07972v1",
-    "summary": "Recent advances in actuation, control and learning have rapidly pushed humanoid robots from a distant vision towards near-term real-world deployment. Healthcare is a particularly pressing domain, in which staffing shortages and increasing care demand are widening the gap between clinical workload and available skilled labour.",
+    "summary": "Humanoid robots are tested as teleoperated assistants for laparoscopic surgery, using general-purpose instruments rather than a purpose-built surgical platform like da Vinci. The study spans benchtop characterization, dry-lab user studies across surgeon experience levels, and in vivo porcine experiments to measure whether current humanoids can meet surgical demands for precision, control, and safety. It positions humanoids as potentially useful in human-designed clinical environments while making clear that important technical gaps remain before surgical deployment.",
     "published": "2026-07-08T22:57:54+00:00",
     "updated": "2026-07-08T22:57:54+00:00",
     "authors": [
@@ -3814,7 +3814,7 @@
       "comment": null,
       "first_seen": "2026-07-10",
       "full_text": "Recent advances in actuation, control and learning have rapidly pushed humanoid robots from a distant vision towards near-term real-world deployment. Healthcare is a particularly pressing domain, in which staffing shortages and increasing care demand are widening the gap between clinical workload and available skilled labour. Although current automation has largely focused on digital and logistical tasks, much hospital work remains embodied, requiring mobility, manipulation and safe interaction in human-designed environments. Humanoid form factors offer unique potential, particularly for assisting with surgical tasks. Traditionally, robotic systems for surgery are purpose-built platforms such as Intuitive Surgical's da Vinci Surgical System, and it remains unclear how close current humanoid systems are to meeting the precision, control and safety requirements of minimally invasive surgery. Here we present a systematic evaluation of contemporary humanoid technology for laparoscopic surgical tasks. We develop a humanoid-based laparoscopic teleoperation framework using general-purpose instruments and assess its abilities through benchtop characterization, dry-laboratory user studies spanning diverse surgical experience levels and in vivo porcine studies. Across these evaluations, we quantify technical feasibility, task performance and clinical readiness relative to established surgical platforms. Together, our study provides an evidence-based assessment of current humanoid abilities and limitations for surgical applications, highlighting both their promise and key technical challenges that must be addressed before clinical deployment.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2607.07972.jpg"
     },
     "tags": [
@@ -4122,7 +4122,7 @@
     "source": "arxiv",
     "title": "Pelican-VLA 0.5: Attending Before Acting Benefits Generalization",
     "url": "http://arxiv.org/abs/2607.06655v2",
-    "summary": "In this report, we present Pelican-VLA 0.5, a unified VLA model that integrates vision-language understanding, future-frame generation, and action prediction within a single architecture.",
+    "summary": "Pelican-VLA 0.5 unifies vision-language understanding, future-frame generation, and robot action prediction in one VLA architecture. Its learnable Bottleneck Token sits between perception and action, forcing task-relevant visual information through a compact interface so the policy naturally attends to the object and contact region needed for manipulation, even without masks, object labels, attention supervision, or task-specific fine-tuning. The report shows this attention-level generalization holds in unseen scenes and across unseen robot embodiments, and is stronger than other open-source VLA baselines.",
     "published": "2026-07-07T17:50:22+00:00",
     "updated": "2026-07-09T16:46:08+00:00",
     "authors": [
@@ -4146,7 +4146,7 @@
       "comment": null,
       "first_seen": "2026-07-09",
       "full_text": "In this report, we present Pelican-VLA 0.5, a unified VLA model that integrates vision-language understanding, future-frame generation, and action prediction within a single architecture. Pelican-VLA 0.5 achieves attention-level generalization: without object annotations, segmentation masks, attention supervision, or task-specific fine-tuning, its action pathway already focuses on the manipulation-relevant object and contact region. This behavior persists across unseen scenes and unseen robot embodiments, and is substantially stronger than in other open-source VLA baselines. We verify that this ability originates from the learnable Bottleneck Token inserted between perception and action: by routing task-relevant visual information through a compact bottleneck, the tokens interface induces manipulation-centric attention during pre-training and remains effective across different policy structures, including a MoT-style architecture.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2607.06655.jpg"
     },
     "tags": [
@@ -4365,7 +4365,7 @@
     "source": "arxiv",
     "title": "DexVerse: A Modular Benchmark for Multi-Task, Multi-Embodiment Dexterous Manipulation",
     "url": "http://arxiv.org/abs/2607.08751v1",
-    "summary": "Building general-purpose dexterous manipulation policies requires benchmarks that go beyond isolated tasks to systematically evaluate policies across diverse interaction modes, sensory conditions, and robot embodiments.",
+    "summary": "DexVerse is a modular dexterous manipulation benchmark with 100 tasks covering grasping, relocation, articulated objects, tool use, bimanual coordination, non-prehensile control, contact-rich behavior, multi-goal execution, and long-horizon task sequences. It spans 3 robot arms and 6 dexterous hands, adds controllable visual variation in textures, lighting, backgrounds, and viewpoints, and includes 3,180 VR-teleoperated demonstrations with synchronized proprioceptive, RGB, depth, point-cloud, and state data. Baselines such as Diffusion Policy, DP3, OpenVLA, and π₀.₅ struggle across the 19-task evaluation, especially on task generalization and visuomotor robustness.",
     "published": "2026-07-09T17:50:47+00:00",
     "updated": "2026-07-09T17:50:47+00:00",
     "authors": [
@@ -4394,7 +4394,7 @@
       "comment": null,
       "first_seen": "2026-07-10",
       "full_text": "Building general-purpose dexterous manipulation policies requires benchmarks that go beyond isolated tasks to systematically evaluate policies across diverse interaction modes, sensory conditions, and robot embodiments. However, existing benchmarks remain limited in task and data diversity, embodiment coverage, or controllable visual variation, hindering studies of cross-task and cross-embodiment generalization. We present DexVerse, a large-scale and modular benchmark for dexterous manipulation. DexVerse includes 100 tasks spanning a broad range of manipulation skills, including object grasping and relocation, articulated-object interaction, functional tool use, bimanual coordination, non-prehensile control, contact-rich behaviors, multi-goal execution, and long-horizon multi-stage task completion. It supports 3 robot arms and 6 dexterous hands, and is extensible to new tasks, assets, and embodiments. To evaluate visuomotor generalization, DexVerse provides configurable visual variations in textures, background, lighting, and camera viewpoints. We further provide a VR-based teleoperation interface and 3,180 demonstrations with synchronized proprioceptive, RGB, depth, point-cloud, and state observations. We benchmark representative methods, including Diffusion Policy, DP3, OpenVLA, and $π_{0.5}$, across 19 tasks. Results reveal substantial challenges in task generalization and visuomotor robustness, establishing DexVerse as a promising testbed for general-purpose dexterous manipulation. Project page: https://ycyao216.github.io/DexVerse.site",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2607.08751.jpg"
     },
     "tags": [
@@ -4674,7 +4674,7 @@
     "source": "github",
     "title": "DAVIAN-Robotics/3D_HAMSTER",
     "url": "https://github.com/DAVIAN-Robotics/3D_HAMSTER",
-    "summary": "Code for \"3D HAMSTER: Enabling Robust Manipulation in Hierarchical Vision Language Action Models through 3D Trajectory Guidance\" (IROS 2026)",
+    "summary": "3D HAMSTER provides code for an IROS 2026 system that strengthens hierarchical vision-language-action manipulation models by guiding them with 3D trajectories. The core idea is to make robot manipulation more robust by grounding action generation in spatial trajectory guidance rather than relying only on high-level visual-language planning.",
     "published": "2026-06-29T12:57:43Z",
     "updated": "2026-07-01T13:03:10Z",
     "authors": [
@@ -4689,7 +4689,7 @@
       "license": null,
       "first_seen": "2026-07-10",
       "full_text": "Code for \"3D HAMSTER: Enabling Robust Manipulation in Hierarchical Vision Language Action Models through 3D Trajectory Guidance\" (IROS 2026)",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/DAVIAN-Robotics/3D_HAMSTER/HEAD/docs/static/images/method_figure.png"
     },
     "tags": [
@@ -5383,7 +5383,7 @@
     "source": "arxiv",
     "title": "SkillPlug: Unsupervised Skill Mining for Few-Shot Adaptation in Robotic Manipulation",
     "url": "http://arxiv.org/abs/2607.08354v1",
-    "summary": "Learning transferable visuomotor imitation policies that generalize across diverse manipulation tasks and adapt rapidly to new tasks from only a handful of demonstrations remains challenging.",
+    "summary": "SkillPlug adds a skill-conditioning layer to existing visuomotor imitation policies, then mines a shared library of compact, non-redundant manipulation primitives from raw multi-task demonstrations using self-supervised objectives. Once those skills are learned, it freezes them and adapts to unseen tasks by fine-tuning only a lightweight router and action head, improving multi-task performance and few-shot adaptation across two simulation benchmarks and a real robot.",
     "published": "2026-07-09T11:02:35+00:00",
     "updated": "2026-07-09T11:02:35+00:00",
     "authors": [
@@ -5399,7 +5399,7 @@
       "comment": "8 pages, 8 figures, published to RA-L",
       "first_seen": "2026-07-10",
       "full_text": "Learning transferable visuomotor imitation policies that generalize across diverse manipulation tasks and adapt rapidly to new tasks from only a handful of demonstrations remains challenging. Most modern policies are trained end-to-end to map observations directly to low-level actions, offering little explicit structure for reusing and recombining behaviors across tasks and making transfer data-inefficient under limited supervision. We propose SkillPlug, a plug-in framework that augments an existing visuomotor policy with a skill-conditioning module and mines a shared, transferable skill library from raw multi-task demonstrations. SkillPlug learns skills via self-supervised objectives that promote compact, reusable, and non-redundant behavior-level primitives, forming a task-shared prior for compositional control. After skill mining, we keep the learned skills fixed and specialize to unseen tasks by fine-tuning only lightweight router and action head, enabling efficient adaptation without full end-to-end retraining. We evaluate SkillPlug on two simulation benchmarks and on a real robot, and observe that the mined transferable skills consistently improve both multi-task performance and few-shot adaptation. Overall, SkillPlug offers a scalable way to mine reusable skills that improve data-efficient generalization in robotic manipulation.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2607.08354.jpg"
     },
     "tags": [
@@ -5707,7 +5707,7 @@
     "source": "arxiv",
     "title": "Track2Map: Online Deformable SLAM with Motion-Aware Pose Optimization in Robotic Surgery",
     "url": "http://arxiv.org/abs/2607.08408v1",
-    "summary": "Gaussian splatting is the current state-of-the-art for dense, deformable 3D anatomy reconstruction in robot-assisted minimally invasive surgery (RAMIS); however, most pipelines are offline and depend on accurate camera trajectory priors (often from robotic kinematics), limiting applicability when priors are missing or noisy.",
+    "summary": "Track2Map turns surgical video into an online deformable SLAM system, jointly optimizing camera poses and a 3D Gaussian Splatting reconstruction of moving anatomy without relying on clean robot-kinematic trajectory priors. It uses dense 2D point tracks to initialize tissue deformation and to separate camera motion from scene motion, including detecting static-camera periods to reduce drift during incremental mapping. On StereoMIS, it improves both reconstruction quality and camera trajectory estimates over competing SLAM methods and prior-based deformable reconstruction pipelines.",
     "published": "2026-07-09T12:34:55+00:00",
     "updated": "2026-07-09T12:34:55+00:00",
     "authors": [
@@ -5731,7 +5731,7 @@
       "comment": "Accepted at MICCAI 2026. This is the submitted version prior to peer review. The final authenticated version will be available on SpringerLink",
       "first_seen": "2026-07-10",
       "full_text": "Gaussian splatting is the current state-of-the-art for dense, deformable 3D anatomy reconstruction in robot-assisted minimally invasive surgery (RAMIS); however, most pipelines are offline and depend on accurate camera trajectory priors (often from robotic kinematics), limiting applicability when priors are missing or noisy. To address these limitations, we propose Track2Map, an online 3D Gaussian Splatting pipeline that jointly optimizes camera trajectory and 3D deformable scene representation directly from surgical video. Track2Map is therefore capable of robust 3D reconstructions when camera trajectory priors are either absent or noisy, and due to its online nature it effectively works as a Simultaneous Localisation and Mapping (SLAM) method. To stabilize optimization in the presence of tissue motion and ambiguous visual cues, we introduce a track-anchored deformation initialization using dense 2D point tracks. Track statistics are further utilized to disentangle camera motion from scene deformation by detecting static camera periods and reducing drift during incremental mapping. Experiments on StereoMIS show improved reconstruction quality and camera trajectory against competing SLAM methods, as well as compared to non-SLAM methods that utilize camera trajectory priors. The code is available at https://track2map.github.io/.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2607.08408.jpg"
     },
     "tags": [
@@ -5896,7 +5896,7 @@
     "source": "news",
     "title": "Multi-robot demo showcases new UK’s Plymouth subsea test range",
     "url": "https://roboticsandautomationnews.com/2026/07/10/multi-robot-demo-showcases-new-uks-plymouth-subsea-test-range/103246/",
-    "summary": "A new underwater trials site designed to accelerate UK marine autonomy and ocean sensing has completed its first major test thanks to a live, multi-marine surface and subsea robotic platform demonstration.",
+    "summary": "Plymouth’s Smart Sound Connect Subsurface project completed its first major trial, using a live mix of surface and subsea robotic platforms to demonstrate a new underwater test range for marine autonomy and ocean sensing. The site, led by the University of Plymouth with Plymouth Marine Laboratory as part of Smart Sound Plymouth, is meant to give UK teams a real-world environment for developing and validating autonomous marine systems faster.",
     "published": "2026-07-10T17:06:21+00:00",
     "updated": "2026-07-10T17:06:21+00:00",
     "authors": [
@@ -5906,7 +5906,7 @@
       "feed": "Robotics and Automation News",
       "first_seen": "2026-07-10",
       "full_text": "A new underwater trials site designed to accelerate UK marine autonomy and ocean sensing has completed its first major test thanks to a live, multi-marine surface and subsea robotic platform demonstration. The Smart Sound Connect Subsurface (SSCS) project, part of Smart Sound Plymouth, led by the University of Plymouth, with Plymouth Marine Laboratory (PML), saw […]",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://roboticsandautomationnews.com/wp-content/uploads/2026/07/plymouth-smart-sound-1.jpg"
     },
     "tags": [
@@ -6044,7 +6044,7 @@
     "source": "news",
     "title": "1X, '읽고 쓰는' 촉각 휴머노이드 손 공개...\"올해 1만개 대량 생산 가능\"",
     "url": "https://www.aitimes.com/news/articleView.html?idxno=212635",
-    "summary": "노르웨이 휴머노이드 로봇 스타트업 1X가 사람처럼 사물을 만지고 느끼며 조작할 수 있는 차세대 로봇 손 '네오의 손(NEO's Hands)'을 공개했다. 사람 수준의 손재주를 구현하기 위해 총 25자유도(DoF)를 갖춘 힘줄(Tendon) 구동 구조를 적용했으며, 올해 1만개를 생산할 수 있는 양산 체제도 구축했다고 밝혔다.1X는 8일(현지시간) 휴머노이드 플랫폼 '네오(NEO)'에 탑재될 새로운 로봇 손을 발표했다.이번 제품이 기존 로봇 손의 하드웨어 한계를 없애, AI가 사람 수준의 정교한 손동작을 수행할 수 있도록 설계됐다고",
+    "summary": "1X unveiled NEO’s Hands, a tendon-driven humanoid robot hand for its NEO platform that has 25 degrees of freedom and is designed to let AI perform more human-like manipulation through touch and fine motor control. The company says the hand removes hardware bottlenecks in existing robotic hands and that it has already built capacity to mass-produce up to 10,000 units this year.",
     "published": "2026-07-10T17:53:01+00:00",
     "updated": "2026-07-10T17:53:01+00:00",
     "authors": [
@@ -6054,7 +6054,7 @@
       "feed": "AI타임스",
       "first_seen": "2026-07-10",
       "full_text": "노르웨이 휴머노이드 로봇 스타트업 1X가 사람처럼 사물을 만지고 느끼며 조작할 수 있는 차세대 로봇 손 '네오의 손(NEO's Hands)'을 공개했다. 사람 수준의 손재주를 구현하기 위해 총 25자유도(DoF)를 갖춘 힘줄(Tendon) 구동 구조를 적용했으며, 올해 1만개를 생산할 수 있는 양산 체제도 구축했다고 밝혔다.1X는 8일(현지시간) 휴머노이드 플랫폼 '네오(NEO)'에 탑재될 새로운 로봇 손을 발표했다.이번 제품이 기존 로봇 손의 하드웨어 한계를 없애, AI가 사람 수준의 정교한 손동작을 수행할 수 있도록 설계됐다고",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.aitimes.com/news/photo/202607/212635_215952_3830.jpg"
     },
     "tags": [
@@ -6122,7 +6122,7 @@
     "source": "arxiv",
     "title": "MuScriptor: An Open Model for Multi-Instrument Music Transcription",
     "url": "http://arxiv.org/abs/2607.08168v1",
-    "summary": "Existing methods for automatic music transcription are often limited to single-instrument recordings or fail on complex, real music mixes. Although previous work utilizes synthetic training data, the resulting models generalize poorly, leading to largely unusable transcription output in realistic, multi-instrument settings.",
+    "summary": "MuScriptor is an open-weight model for transcribing real-world, multi-instrument music into usable notation across diverse genres, targeting the gap where single-instrument or synthetic-only systems break down on full mixes. It combines synthetic-data pretraining with fine-tuning on real music audio, reinforcement-learning post-training, and instrument-presence conditioning so users can steer which parts get transcribed.",
     "published": "2026-07-09T07:12:30+00:00",
     "updated": "2026-07-09T07:12:30+00:00",
     "authors": [
@@ -6142,7 +6142,7 @@
       "comment": null,
       "first_seen": "2026-07-10",
       "full_text": "Existing methods for automatic music transcription are often limited to single-instrument recordings or fail on complex, real music mixes. Although previous work utilizes synthetic training data, the resulting models generalize poorly, leading to largely unusable transcription output in realistic, multi-instrument settings. In this work, we analyze the effectiveness of synthetic data for pre-training while combining it with fine-tuning on real music audio and post-training using reinforcement learning. We further introduce conditioning on instrument presence to customize transcriptions. Finally, we release MuScriptor, an open-weight multi-instrument music transcription model that works on real-world music recordings from across a diverse range of musical genres.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2607.08168.jpg"
     },
     "tags": [
@@ -6170,7 +6170,7 @@
     "source": "arxiv",
     "title": "EVIS: A Physics-Grounded Event Camera Plugin for NVIDIA Isaac Sim",
     "url": "http://arxiv.org/abs/2607.08098v1",
-    "summary": "Event cameras offer microsecond temporal resolution, low latency, and high dynamic range, making them attractive for robotics. However, labeled event-camera data for a specific robot and scene is scarce and expensive to collect, which slows the development of event-based perception and control.",
+    "summary": "EVIS adds a physics-grounded event camera sensor to NVIDIA Isaac Sim, producing high-rate, fully labeled event streams from ordinary Isaac Sim / Isaac Lab scenes using a log-intensity contrast model with per-pixel asynchronous reference updates. It preserves simulator ground truth while offering configurable noise and motion blur, and its motion-vector interpolation mode renders sparse keyframes then warps intermediate frames so real-time generation on a single GPU is practical. The result is a practical way to train or test event-based robotics perception and control without collecting scarce labeled data from a physical robot and scene.",
     "published": "2026-07-09T04:13:31+00:00",
     "updated": "2026-07-09T04:13:31+00:00",
     "authors": [
@@ -6188,7 +6188,7 @@
       "comment": null,
       "first_seen": "2026-07-10",
       "full_text": "Event cameras offer microsecond temporal resolution, low latency, and high dynamic range, making them attractive for robotics. However, labeled event-camera data for a specific robot and scene is scarce and expensive to collect, which slows the development of event-based perception and control. We present EVIS: a physics-grounded event camera plugin for NVIDIA Isaac Sim that generates high-rate, fully labeled event streams directly inside a physics simulator. The plugin implements a faithful log-intensity contrast event model with per-pixel asynchronous reference updates; it migrates from a normal RGB camera with few changes and integrates into any Isaac Sim / Isaac Lab scene, inheriting the simulator's physics and frame-perfect ground truth. It is fully configurable, and offers an interpolation option that renders only sparse keyframes and synthesizes the in-between frames through bidirectional motion-vector warping, making real-time generation on a single GPU possible. Optional sensor noise and motion blur further narrow the gap to real cameras. The generated streams are directly usable by pretrained event networks for downstream tasks. Code repository: https://github.com/spikelab-jhu/isaac-sim-event-camera-plugin",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2607.08098.jpg"
     },
     "tags": [
@@ -6252,7 +6252,7 @@
     "source": "news",
     "title": "Richtech Robotics launches 24/7 interactive livestream featuring AI robot ADAM",
     "url": "https://roboticsandautomationnews.com/2026/07/10/richtech-robotics-launches-24-7-interactive-livestream-featuring-ai-robot-adam/103234/",
-    "summary": "Richtech Robotics, a Nevada-based provider of AI-driven service robots, has launched a new initiative: a live, 24/7 interactive streaming platform featuring the company’s AI-powered humanoid robot, ADAM.",
+    "summary": "Richtech Robotics has launched a 24/7 interactive livestream centered on ADAM, its AI-powered humanoid service robot, letting viewers chat with the robot in real time through a continuous broadcast. The move turns ADAM into a public-facing demo platform as much as a product showcase, emphasizing always-on human-robot interaction and giving the company a way to expose its service-robot interface to a broad audience beyond controlled deployments.",
     "published": "2026-07-10T16:29:33+00:00",
     "updated": "2026-07-10T16:29:33+00:00",
     "authors": [
@@ -6262,7 +6262,7 @@
       "feed": "Robotics and Automation News",
       "first_seen": "2026-07-10",
       "full_text": "Richtech Robotics, a Nevada-based provider of AI-driven service robots, has launched a new initiative: a live, 24/7 interactive streaming platform featuring the company’s AI-powered humanoid robot, ADAM. The immersive experience gives audiences around the world the ability to interact directly with ADAM in real-time through a livestream broadcast, enabling users to chat with the robot, […]",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://roboticsandautomationnews.com/wp-content/uploads/2026/07/richtech-adam-serving-coffee-1.jpg"
     },
     "tags": [
@@ -6465,7 +6465,7 @@
     "source": "news",
     "title": "알리바바, \"중국 스마트 하드웨어 제조사 15만 곳 이상이 '큐웬(Qwen)' 채택\"… 피지컬 AI 생태계 확산 가속",
     "url": "https://www.aitimes.kr/news/articleView.html?idxno=40933",
-    "summary": "알리바바 클라우드(Alibaba Cloud)가 자사의 대형언어모델(LLM) 및 멀티모달 AI 모델군인 큐웬(Qwen)이 중국 내 차세대 AI 하드웨어 생태계의 핵심 플랫폼으로 빠르게 자리 잡고 있다고 10일 밝혔다. 현재 중국 내 15만 개 이상의 스마트 하드웨어 제조업체가 큐원을 통합해 활용하고 있으며, 로봇·자동차·스마트폰·드론·AI 교육기기 등 다양한 분야에서 적용 사례가 확대되고 있다.알리바바 클라우드는 \"인공지능과 물리적 기기의 융합이 가속화되면서 큐원이 중국 피지컬 AI(Physical AI) 생태계의 핵심 기반 모델로",
+    "summary": "Alibaba Cloud says more than 150,000 smart hardware manufacturers in China have integrated its Qwen LLM and multimodal model family, spanning robots, cars, smartphones, drones, and AI education devices. The announcement positions Qwen less as a standalone chatbot model than as a shared physical-AI layer for device makers, suggesting Alibaba is trying to turn model adoption across hardware supply chains into ecosystem leverage.",
     "published": "2026-07-10T18:40:14+00:00",
     "updated": "2026-07-10T18:40:14+00:00",
     "authors": [
@@ -6475,7 +6475,7 @@
       "feed": "인공지능신문",
       "first_seen": "2026-07-10",
       "full_text": "알리바바 클라우드(Alibaba Cloud)가 자사의 대형언어모델(LLM) 및 멀티모달 AI 모델군인 큐웬(Qwen)이 중국 내 차세대 AI 하드웨어 생태계의 핵심 플랫폼으로 빠르게 자리 잡고 있다고 10일 밝혔다. 현재 중국 내 15만 개 이상의 스마트 하드웨어 제조업체가 큐원을 통합해 활용하고 있으며, 로봇·자동차·스마트폰·드론·AI 교육기기 등 다양한 분야에서 적용 사례가 확대되고 있다.알리바바 클라우드는 \"인공지능과 물리적 기기의 융합이 가속화되면서 큐원이 중국 피지컬 AI(Physical AI) 생태계의 핵심 기반 모델로",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.aitimes.kr/news/thumbnail/202607/40933_61686_3929_v150.jpg"
     },
     "tags": [
@@ -6614,7 +6614,7 @@
     "source": "news",
     "title": "LimX Luna's Official Debut in Korea! ✨",
     "url": "https://www.youtube.com/watch?v=muRAfIYJsOA",
-    "summary": "This week, LimX Luna marked its official debut in Korea at the '2026 Vocational Education Expo With Physical AI,' hosted by the Gyeongsangbuk-do Office of Education, alongside our partner JM Robotics! 🎉 Perfectly aligned with the event’s vision of advancing vocational education through Physical AI, Luna demonstrated the practical potential of Embodied AI.",
+    "summary": "LimX Luna made its official Korea debut at the 2026 Vocational Education Expo With Physical AI, appearing with JM Robotics at an event focused on bringing embodied AI into vocational education. The robot demonstrated dynamic, rhythm-synchronized movement rather than conventional mechanical motion, positioning Luna as both a showcase platform for Physical AI and an educational touchpoint for students entering robotics and AI fields.",
     "published": "2026-07-10T12:08:13+00:00",
     "updated": "2026-07-10T12:08:13+00:00",
     "authors": [
@@ -6626,7 +6626,7 @@
       "thumbnail": "https://i2.ytimg.com/vi/muRAfIYJsOA/hqdefault.jpg",
       "first_seen": "2026-07-10",
       "full_text": "This week, LimX Luna marked its official debut in Korea at the '2026 Vocational Education Expo With Physical AI,' hosted by the Gyeongsangbuk-do Office of Education, alongside our partner JM Robotics! 🎉 Perfectly aligned with the event’s vision of advancing vocational education through Physical AI, Luna demonstrated the practical potential of Embodied AI. Going beyond traditional robotics, Luna aims to inspire the next generation of tech talents who will lead the Physical AI era. On stage, Luna brought technology to life. Breaking away from conventional mechanical movements, Luna showcased its unique dynamic capabilities, moving to the rhythm and instantly engaging students and attendees. 👀🔥 Watch the video to see Luna's first performance in Korea! #LimXDynamics #LimXLuna #JMRobotics #PhysicalAI #EmbodiedAI",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -6689,7 +6689,7 @@
     "source": "arxiv",
     "title": "Compete Then Collaborate: Frontier AI Teachers Build a Verifiable Curriculum to Improve a Coding Student Beyond Imitation",
     "url": "http://arxiv.org/abs/2607.08255v1",
-    "summary": "Large language models increasingly serve as teachers generating training data for smaller students. Prior multi-teacher knowledge distillation methods merge outputs without determining which frontier model teaches best, often relying on an LLM judge biased toward its own outputs.",
+    "summary": "Four frontier models compete as coding teachers under execution-based judging, then collaborate to build a verifiable curriculum for Qwen2.5-Coder, avoiding self-biased LLM judging and exposing differences only on harder competition problems where Gemini leads at 77%. The striking result is that supervised imitation of verified teacher solutions can hurt an already-capable 7B/32B student, while using the same curriculum as an RLVR environment improves competition performance from 5.9% to 8.8%, suggesting the teacher value is in constructing executable learning environments rather than answers to copy.",
     "published": "2026-07-09T09:00:52+00:00",
     "updated": "2026-07-09T09:00:52+00:00",
     "authors": [
@@ -6704,7 +6704,7 @@
       "comment": "8 pages, 1 figure",
       "first_seen": "2026-07-10",
       "full_text": "Large language models increasingly serve as teachers generating training data for smaller students. Prior multi-teacher knowledge distillation methods merge outputs without determining which frontier model teaches best, often relying on an LLM judge biased toward its own outputs. We introduce a compete-then-collaborate framework where four frontier AI teachers (Claude, Codex-GPT, Grok, Gemini) are ranked head-to-head by an execution-based judge (unit tests and stdin-stdout checks) with fairness controls, and then collaborate to build a verifiable curriculum for a student (Qwen2.5-Coder). We report three findings. (1) Under execution verification, all teachers solve standard problems near-perfectly after self-correction (99-100%) due to a saturation effect, but harder competition problems separate them (Gemini 77% > Claude 69% = Codex 69% > Grok 50%); however, the robust student-side results do not depend on teacher ranking. (2) Imitation (SFT) on verified solutions does not improve, and can degrade, an already-competent student at 7B and 32B (e.g., from 76.7% to 72.7% on MBPP-test, and 5.9% to 2.9% on competition problems). (3) Using the same collaborative curriculum as a reinforcement learning with verifiable rewards (RLVR) environment improves the student (from 5.9% to 8.8% peak on competition problems, a +49% relative gain), reversing SFT's direction. The value of AI-teacher collaboration lies not in pooling answers to imitate, but in jointly constructing a verifiable environment where the student learns by doing. We release a reproducible on-prem pipeline (NVIDIA GB10) with framework patches for running GRPO on a bleeding-edge stack.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2607.08255.jpg"
     },
     "tags": [
@@ -6845,7 +6845,7 @@
     "source": "news",
     "title": "한국공학대 ‘제2회 ICROS 2026 4족보행로봇 경진대회’ 대상 수상",
     "url": "https://www.irobotnews.com/news/articleView.html?idxno=47377",
-    "summary": "한국공학대학교는 지능형로봇 혁신융합대학사업단 소속 학부생 팀 ‘포포텍’이 지난 1일 대구 EXCO에서 열린 ‘제2회 ICROS 2026 4족보행로봇 경진대회’에서 대상을 수상했다고 10일 밝혔다.이번 대회는 4족보행 로봇 기술의 발전을 촉진하고 연구자와 개발자 간 교류를 확대하기 위해 마련됐다. 참가팀들은 다양한 지형에서 자율보행 성능과 제어 기술을 겨루며 실제 환경에서 활용 가능한 로봇 기술을 선보였다.대상을 차지한 포포텍팀은 메카트로닉스공학부 정재훈, 한서영, 김동진, 양지은 학생으로 구성됐다. 팀은 자율보행 알고리즘과 정밀한",
+    "summary": "한국공학대 지능형로봇 혁신융합대학사업단의 학부생 팀 포포텍이 대구 EXCO에서 열린 제2회 ICROS 2026 4족보행로봇 경진대회에서 대상을 받았다. 이 대회는 다양한 지형에서 4족보행 로봇의 자율보행 성능과 제어 기술을 겨루는 자리로, 포포텍은 자율보행 알고리즘과 정밀 제어 역량을 앞세워 실제 환경 활용 가능성을 인정받았다.",
     "published": "2026-07-10T17:47:39+00:00",
     "updated": "2026-07-10T17:47:39+00:00",
     "authors": [
@@ -6855,7 +6855,7 @@
       "feed": "로봇신문 (irobotnews)",
       "first_seen": "2026-07-10",
       "full_text": "한국공학대학교는 지능형로봇 혁신융합대학사업단 소속 학부생 팀 ‘포포텍’이 지난 1일 대구 EXCO에서 열린 ‘제2회 ICROS 2026 4족보행로봇 경진대회’에서 대상을 수상했다고 10일 밝혔다.이번 대회는 4족보행 로봇 기술의 발전을 촉진하고 연구자와 개발자 간 교류를 확대하기 위해 마련됐다. 참가팀들은 다양한 지형에서 자율보행 성능과 제어 기술을 겨루며 실제 환경에서 활용 가능한 로봇 기술을 선보였다.대상을 차지한 포포텍팀은 메카트로닉스공학부 정재훈, 한서영, 김동진, 양지은 학생으로 구성됐다. 팀은 자율보행 알고리즘과 정밀한",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.irobotnews.com/news/photo/202607/47377_101800_465.jpg"
     },
     "tags": [
@@ -6882,7 +6882,7 @@
     "source": "news",
     "title": "Fieldwork Robotics secures SEED Innovations investment to scale berry harvesting robots",
     "url": "https://roboticsandautomationnews.com/2026/07/10/fieldwork-robotics-secures-seed-innovations-investment-to-scale-berry-harvesting-robots/103251/",
-    "summary": "Fieldwork Robotics, developers of selective, adaptive and modular harvesting robots, has agreed an investment from SEED Innovations, the AIM-quoted investing company chaired by prominent British businessman Jim Mellon. The investment forms part of a £2.5 million Seed+ fundraise and combined investment and grant funding announced in April 2026.",
+    "summary": "Fieldwork Robotics has secured investment from SEED Innovations as part of a £2.5 million Seed+ raise combining investment and grant funding announced in April 2026. The funding is meant to help scale its selective, adaptive, modular berry-harvesting robots, pointing to continued investor confidence in automation for labor-intensive soft-fruit production.",
     "published": "2026-07-10T17:29:23+00:00",
     "updated": "2026-07-10T17:29:23+00:00",
     "authors": [
@@ -6892,7 +6892,7 @@
       "feed": "Robotics and Automation News",
       "first_seen": "2026-07-10",
       "full_text": "Fieldwork Robotics, developers of selective, adaptive and modular harvesting robots, has agreed an investment from SEED Innovations, the AIM-quoted investing company chaired by prominent British businessman Jim Mellon. The investment forms part of a £2.5 million Seed+ fundraise and combined investment and grant funding announced in April 2026. Jim Mellon is one of the UK’s […]",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://roboticsandautomationnews.com/wp-content/uploads/2026/07/fieldwork-robotics-berry-picking-2.jpg"
     },
     "tags": [
@@ -6919,7 +6919,7 @@
     "source": "news",
     "title": "RoboDK unveils CAM software that cuts robotic machining deployment time ‘by up to 40 percent’",
     "url": "https://roboticsandautomationnews.com/2026/07/10/robodk-unveils-cam-software-that-cuts-robotic-machining-deployment-time-by-up-to-40-percent/103239/",
-    "summary": "RoboDK, a provider of offline programming and simulation software for robots, has launched RoboDK CAM software, demonstrating how robotic machining programs can be generated directly from CAD files. Designed to help people deploy robots with ease, RoboDK says its new CAM software can cut robotic machining deployment time “by up to 40 percent”. The live […]",
+    "summary": "RoboDK launched RoboDK CAM, software that generates robotic machining programs directly from CAD files inside its offline robot programming and simulation workflow. The company says the tool can reduce robotic machining deployment time by up to 40%, which matters for shops trying to move from CAD geometry to validated robot paths with less manual programming and setup overhead.",
     "published": "2026-07-10T16:37:45+00:00",
     "updated": "2026-07-10T16:37:45+00:00",
     "authors": [
@@ -6929,7 +6929,7 @@
       "feed": "Robotics and Automation News",
       "first_seen": "2026-07-10",
       "full_text": "RoboDK, a provider of offline programming and simulation software for robots, has launched RoboDK CAM software, demonstrating how robotic machining programs can be generated directly from CAD files. Designed to help people deploy robots with ease, RoboDK says its new CAM software can cut robotic machining deployment time “by up to 40 percent”. The live […]",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://roboticsandautomationnews.com/wp-content/uploads/2026/07/robodk-cam-MT-2.png"
     },
     "tags": [
@@ -6956,7 +6956,7 @@
     "source": "news",
     "title": "인천대, 한국피지컬AI협회와 협약…피지컬 AI 인재양성 본격화",
     "url": "https://www.irobotnews.com/news/articleView.html?idxno=47368",
-    "summary": "인천대학교(총장 이인재)는 지난 8일 대학본부에서 사단법인 한국피지컬AI협회(협회장 유태준)와 피지컬 AI 분야 산학협력 강화를 위한 업무협약을 체결했다고 밝혔다.양 기관은 이번 협약을 통해 피지컬 AI 전문인재 양성, 협회 회원기업 연계 산학협력 프로그램 운영, 공동 연구개발 및 실증사업 발굴을 중점 추진한다. 아울러 재직자 교육, 기술교류, 취업·채용 연계, 정부·지자체 R&D 및 국책사업 공동기획 등으로 협력 범위를 확대할 계획이다.피지컬 AI는 인공지능이 로봇, 모빌리티, 제조장비, 물류시스템 등 실제 산업 현장과 결합해 보",
+    "summary": "Incheon National University signed an agreement with the Korea Physical AI Association to build industry-academic programs around physical AI, including specialist training, joint R&D, field demonstrations, employee education, technology exchange, and hiring links. The effort matters because it ties university talent development directly to member companies and public R&D planning in areas where AI is being embedded into robots, mobility systems, manufacturing equipment, and logistics infrastructure.",
     "published": "2026-07-10T14:24:48+00:00",
     "updated": "2026-07-10T14:24:48+00:00",
     "authors": [
@@ -6966,7 +6966,7 @@
       "feed": "로봇신문 (irobotnews)",
       "first_seen": "2026-07-10",
       "full_text": "인천대학교(총장 이인재)는 지난 8일 대학본부에서 사단법인 한국피지컬AI협회(협회장 유태준)와 피지컬 AI 분야 산학협력 강화를 위한 업무협약을 체결했다고 밝혔다.양 기관은 이번 협약을 통해 피지컬 AI 전문인재 양성, 협회 회원기업 연계 산학협력 프로그램 운영, 공동 연구개발 및 실증사업 발굴을 중점 추진한다. 아울러 재직자 교육, 기술교류, 취업·채용 연계, 정부·지자체 R&D 및 국책사업 공동기획 등으로 협력 범위를 확대할 계획이다.피지컬 AI는 인공지능이 로봇, 모빌리티, 제조장비, 물류시스템 등 실제 산업 현장과 결합해 보",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.irobotnews.com/news/photo/202607/47368_101779_2212.png"
     },
     "tags": [
@@ -7273,7 +7273,7 @@
     "source": "news",
     "title": "Ground Robots Inherit the Kill Zone",
     "url": "https://spectrum.ieee.org/ukraine-ground-drones",
-    "summary": "Borys Drozhak has a vision: a frontline almost free of humans, patrolled by flying drones and ground robots, and continuously monitored by AI-controlled sensor networks. And it’s not a pipe dream. Ukrainian roboticists have made major strides in that direction over the past four years.",
+    "summary": "Ukraine is rapidly moving ground combat into the drone-dominated kill zone, fielding remotely operated UGVs like RoverTech’s 800 kg Zmyi for demining, logistics, evacuation, and armed assault while aerial drones provide reconnaissance and targeting. The Zmyi reportedly survives about 57 missions on average, far above the roughly seven-mission battlefield norm, helped by low noise, low heat signature, and rugged mobility. Zelenskyy’s order for 50,000 UGVs by the end of 2026 signals a shift from replacing lost vehicles to redesigning frontline tactics around expendable, networked robots that can resupply, evacuate, relay communications, and attack without putting soldiers directly into the most surveilled and lethal terrain.",
     "published": "2026-07-10T11:00:01+00:00",
     "updated": "2026-07-10T11:00:01+00:00",
     "authors": [
@@ -7284,7 +7284,7 @@
       "thumbnail": "https://spectrum.ieee.org/media-library/an-unmanned-ground-vehicle-moving-through-a-sparse-forest-landscape.jpg?id=67114838&width=980",
       "first_seen": "2026-07-10",
       "full_text": "Borys Drozhak has a vision: a frontline almost free of humans, patrolled by flying drones and ground robots, and continuously monitored by AI-controlled sensor networks. And it’s not a pipe dream. Ukrainian roboticists have made major strides in that direction over the past four years. Remotely controlled ground vehicles fitted with machine guns and grenade launchers now patrol the no-man’s land straddling the front, part of a robotic legion that has stymied Russia’s territorial ambitions so far this year. Drozhak is a co-founder and CEO of RoverTech , which manufactures the Zmyi, one of Ukraine’s most successful ground robots. Zmyi, Ukrainian for snake, is an 800-kilogram (1,700-pound) rover, 2.15 by 1.5 meters in size, with 75-centimeter diameter wheels. The Zmyi comes in various configurations—for demining, logistics, fighting fires, firing a machine gun, or launching grenades. According to Drozhak, the UGV is a record-breaker among Ukrainian ground robots. It’s engineered to be nearly noiseless and emit as little heat as possible, helping it to elude Russia’s intelligence, surveillance, and reconnaissance (ISR) drones. As a result, a Zmyi rover completes on average 57 missions across the kill zone before being destroyed. The kill zone is the roughly 35-kilometer-wide swath of land that straddles the front line; its width is variable and determined mainly by the growing range of the drones. “Usually, a UGV [uncrewed ground vehicle] on the battlefield lasts about seven missions,” Drozhak says. “The Zmyi is quite a bit bigger and stronger” in comparison with most other UGVs, “and can make it back even if two of its wheels get destroyed.” Drozhak is a software engineer turned roboticist whose story is echoed everywhere in the Ukrainian defense establishment. Before the Russian invasion, he was living a quiet life in Ireland, working for an international software development firm. He returned home shortly after the war began to help defend his homeland. Together with his friend, Vasyl Korenovskyi, who had been a mining engineer, he founded RoverTech with the goal of building robots to perform some of the most dangerous tasks in the war zone. In 2023, they rolled out their first product–the Zmyi de-miner. Earlier this year, one of RoverTech’s assault UGVs was part of a widely reported operation that forced a group of Russian soldiers to surrender without the presence of any Ukrainian troops. Such feats, Drozhak insists, are not rare on Ukrainian battlefields these days. UGVs are the latest chapter in the mil-tech race spurred by the war in Ukraine. Scores of Ukrainian start-ups have developed dozens of different small ground robots, each with typically multiple variants, over the past three years. They’re mostly replacing human-driven tanks and other military vehicles that used to criss-cross the war zone. These remotely controlled robotic vehicles cost a few tens of thousands of dollars apiece compared to millions for a traditional tank, and they can be tweaked and modified in front-line workshops to serve the most urgent needs. Zelenskyy Orders Up 50,000 More UGVs In April, Ukraine’s President Volodymyr Zelenskyy signed an order for the government to procure 50,000 UGVs for Ukraine’s military forces by the end of 2026. That’s more than three times as many as the government purchased in 2025, and a massive increase from the 2,000 procured in 2024, according to defense analyst Marc C. Lange . The rise of UGVs, Lange explains, is a direct response to the war-fighting revolution ushered in by the speedy evolution of unmanned aerial vehicles that came to define the war in Ukraine. As the number of drones zooming above the frontline rose and their range increased, the battle field became completely transparent. Today, anything that enters the kill zone gets hit by a first-person-view (FPV) kamikaze drone within minutes. “Any armored formation, any resupply and logistics vehicle, and any manned formation anywhere near the edge of the battle area has between seconds to a low amount of minutes before it gets turned to dust,” says Lange. “The Ukrainians were losing drivers. Traditional methods of evacuating injured soldiers became impossible. That space is basically unsurvivable.” Ukraine, suffering from a shortage of infantry , has taken that problem more seriously than Russia, which has a larger pool of fresh recruits to draw from. UGVs began ferrying supplies to troops at frontline positions in 2024. Gradually, they took over the complex and risky evacuations of the wounded, using special enclosures to protect the soldier being transported. But this year, Lange says, is “the year of the assault UGV.” Emerging Ukrainian tactics combine UGVs with real-time reconnaissance and surveillance from aerial drones, which discover enemy troops, often under cover of night. The reconnaissance data are then used by remote operators who guide UGVs as they stalk, corner, and shoot to kill. Oleg Fedoryshyn , the head of research and design at DevDroid , another prominent Ukrainian UGV developer, said the ground robots can be controlled from as far as 100 kilometers away using Starlink connectivity, LTE networks, or mesh-networked military radio systems. The UGVs can also carry strike UAVs, serve as communication relays for drones, or carry and launch communication relay drones that further extend the range of the attack vehicles. The UGV can lurk in position for up to one week without needing a battery charge, Fedoroshyn said, and wait for the enemy to move closer. “It’s better than to put people there,” he notes. “A guy with a machine gun is always the first target for the enemy.” The Droid TW 12.7, by DevDroid, is shown here outfitted with a .50-caliber M2 Browning machine gun that can be aimed and fired by a remote operator using a tablet and an encrypted communications link. DevDroid Fedoroshyn estimates that UGVs could eventually help cut the number of soldiers needed along the frontline by 30 to 40 percent. Drozhak is even more ambitious. He envisions a future front line that’s entirely automated, relying on sensors and other systems that are only occasionally serviced by humans. A guy with a machine gun is always the first target for the enemy. “Right now, we need a lot of UGVs because there are people on the front line and we need to deliver supplies to them,” he says. “But we can substitute many of them with sensor systems, servicing robots, and UGVs, and then we will not need that many for logistics. At some point, we could have only robots in the kill zone.” Ukraine, with a pre-war population of around 41 million, has lost over 150,000 fighters in the war since 2022, according to estimates by the Center for Strategic and International Studies and others. Hundreds of others have been mutilated or permanently disabled. Even those who return without physical injuries suffer lasting psychological trauma . Drozhak dreams that a future robot army would put an end to the ability of autocratic regimes worldwide to brutalize their neighbors. “There will be no need to push people on the battlefield anymore,” says Drozhak, the RoverTech CEO. “Once we achieve that in Ukraine, any country with a decent economy would be able to defend themselves just with technology.” RoverTech’s Tarantula active-protection system, which uses acoustic and visual sensors combined with AI algorithms to detect approaching killer drones, is the first step in that direction, he declares. “The future battlefield will rely on networks of robotic sensors and autonomous systems that can continuously monitor dangerous areas, provide early warning, and reduce the need for soldiers to expose themselves to direct threats,” he says. “Human operators will remain responsible for critical decisions, but increasingly advanced sensing technologies will help move people away from the most dangerous positions on the battlefield.” Why UGVs Are Vulnerable Militaries around the world were looking at UGVs prior to Russia’s 2022 invasion of Ukraine. But those were quite different, explains Samuel Bendett , a defense analyst at the consultancy CNA . They were larger, more complex, and conceived to operate in smaller numbers. The more compact forms now seen in Ukraine are the result of an evolution that paralleled that of the first-person-view (FPV) attack drones. Both needed to be cheap as they don’t last long and small to be less conspicuous. Now, the West is trying to understand the overall role of UGVs in future warfare . So far, in Bendett’s view, the impact of UGVs on warfare isn’t as profound as that of the FPVs and other aerial drones. “Not every terrain would be applicable to using a UGV,” Bendett explains. “So far, a lot fewer countries are seeking to integrate them into their combat operations than UAVs, which very much democratized the way of enabling short-range to mid-range strikes against adversaries.” UGVs, he points out, are much more susceptible to communication disruptions than UAVs, while being less suitable for autonomous operations and swarming due to the complexity of ground terrain. “With UAVs, communication is much easier,” according to Bendett. “There are no interferences between the ground station and the UAV save the distance, Earth’s curvature and the radio horizon. But on Earth, there’s lots of different obstacles that interfere with radio signals.” Most UGVs rely on Starlink as the first choice for operator control, but even that comes with problems. Starlink signals are easily disrupted by trees and buildings. And Russia, having been cut off from Starlink, is working hard to find ways to jam the system . On top of that, says Lange, as UAV autonomy progresses, UGVs could be left behind. The reason is that UGVs are likely to remain dependent on operator communication links for some time yet, and will therefore be vulnerable to enemy UAVs that can’t be stopped by jamming systems that still provide some protection today. “The low production cost of strike drones will mean that UGVs will have to endure a barrage of strikes,” Lange says, “That might be too much. The question is whether you can make UGVs more survivable on the frontline both in terms of command and control and the actual survivability of that many strikes.” Still, he thinks there’s “no path back from UGVs.” The idea of distributing a whole range of tasks in the past performed by a single large and expensive tank to a fleet of small, cheap UGVs provides more resilience against the omnipresent drones. Moreover, although many international commentators now say that Russia appears to be losing, the war grinds on—and so does the cat-and-mouse game of lethal innovation.",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#Manipulator"
@@ -7845,7 +7845,7 @@
     "source": "news",
     "title": "QuadRF can spot drones and see WiFi through my wall",
     "url": "https://www.jeffgeerling.com/blog/2026/quadrf-can-spot-drones-and-see-wifi-through-my-wall/",
-    "summary": "Article URL: https://www.jeffgeerling.com/blog/2026/quadrf-can-spot-drones-and-see-wifi-through-my-wall/ Comments URL: https://news.ycombinator.com/item?id=48861717 Points: 366 # Comments: 143",
+    "summary": "QuadRF is an RF-sensing system demonstrated by Jeff Geerling that can detect nearby drones and visualize WiFi activity through a wall. The interesting part is how much situational awareness it extracts from radio signals alone, turning commodity wireless emissions into a rough sensing layer for both security and indoor visibility.",
     "published": "2026-07-10T15:59:53+00:00",
     "updated": "2026-07-10T15:59:53+00:00",
     "authors": [
@@ -7855,7 +7855,7 @@
       "feed": "Hacker News (front page, filtered downstream)",
       "first_seen": "2026-07-10",
       "full_text": "Article URL: https://www.jeffgeerling.com/blog/2026/quadrf-can-spot-drones-and-see-wifi-through-my-wall/ Comments URL: https://news.ycombinator.com/item?id=48861717 Points: 366 # Comments: 143",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -7881,7 +7881,7 @@
     "source": "news",
     "title": "나우로보틱스, 6500평 운영 체계 구축…로봇 생산·공급 경쟁력 강화",
     "url": "https://www.aitimes.com/news/articleView.html?idxno=212637",
-    "summary": "지능형 로봇 전문 나우로보틱스는 제 2공장인 FA(Factory Automation) 센터 준공을 완료하고 본격적인 운영에 들어갔다고 10일 밝혔다. 나우로보틱스는 이번 준공을 통해 기존 본사, 신규 FA센터, 충남 내포 생산거점을 연계한 총 대지면적 약 2만1488㎡, 약 6500평 규모의 3개 거점 운영 체계를 구축했다.이번에 준공한 FA 센터는 대지면적 약 1000평 규모로, 공장자동화(FA) 시스템의 설계·제작·조립과 프로젝트 수행을 담당한다. 고객 생산환경에 최적화된 자동화 솔루션 제공 역량을 강화하고, 대형 프로젝트에 대",
+    "summary": "나우로보틱스가 약 1000평 규모의 제2공장 FA 센터를 준공하면서 본사, 신규 FA 센터, 충남 내포 생산거점을 잇는 총 약 2만1488㎡, 6500평 규모의 3거점 운영 체계를 갖췄다. 새 FA 센터는 공장자동화 시스템의 설계, 제작, 조립과 프로젝트 수행을 맡아 고객 생산환경에 맞춘 자동화 솔루션과 대형 프로젝트 대응력을 키우는 역할을 한다.",
     "published": "2026-07-10T15:46:12+00:00",
     "updated": "2026-07-10T15:46:12+00:00",
     "authors": [
@@ -7891,7 +7891,7 @@
       "feed": "AI타임스",
       "first_seen": "2026-07-10",
       "full_text": "지능형 로봇 전문 나우로보틱스는 제 2공장인 FA(Factory Automation) 센터 준공을 완료하고 본격적인 운영에 들어갔다고 10일 밝혔다. 나우로보틱스는 이번 준공을 통해 기존 본사, 신규 FA센터, 충남 내포 생산거점을 연계한 총 대지면적 약 2만1488㎡, 약 6500평 규모의 3개 거점 운영 체계를 구축했다.이번에 준공한 FA 센터는 대지면적 약 1000평 규모로, 공장자동화(FA) 시스템의 설계·제작·조립과 프로젝트 수행을 담당한다. 고객 생산환경에 최적화된 자동화 솔루션 제공 역량을 강화하고, 대형 프로젝트에 대",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.aitimes.com/news/photo/202607/212637_215953_4328.jpg"
     },
     "tags": [
@@ -7918,7 +7918,7 @@
     "source": "news",
     "title": "중국에선 마사지도 '로봇'이 대체...차오페이, 100대 로봇 매장 배치",
     "url": "https://www.irobotnews.com/news/articleView.html?idxno=47366",
-    "summary": "중국에서 여성 대상 건강 관리 및 마사지 체인 기업이 로봇을 대거 도입해 사람을 대신하고 있다.9일 중국 로봇 전문 포털 중국로봇망에 따르면 중국 AI 클라우드 지능형 로봇 기업 차오페이(俏妃)가 매장에 100대의 헬스케어 로봇을 배치했다. 차오페이는 전국에 4000개 이상의 매장을 보유한 여성용 건강 관리 및 마사지 기업으로, AI를 적용한 로봇 마사지를 핵심 사업으로 삼고 있다.차오페이가 개발한 AI 기반 클라우드 지능형 헬스케어 로봇은 '진단, 치료, 관리' 기능을 갖췄다.차오페이는 헬스케어 로봇 100대를 전국 각 매장에 배",
+    "summary": "China’s Qiaofei, a women’s health-management and massage chain with more than 4,000 stores, has deployed 100 AI cloud-based healthcare robots across its outlets. The robots are positioned as a core part of Qiaofei’s AI massage business, combining diagnosis, treatment, and care functions to replace or augment human massage and wellness staff at retail scale.",
     "published": "2026-07-10T13:23:51+00:00",
     "updated": "2026-07-10T13:23:51+00:00",
     "authors": [
@@ -7928,7 +7928,7 @@
       "feed": "로봇신문 (irobotnews)",
       "first_seen": "2026-07-10",
       "full_text": "중국에서 여성 대상 건강 관리 및 마사지 체인 기업이 로봇을 대거 도입해 사람을 대신하고 있다.9일 중국 로봇 전문 포털 중국로봇망에 따르면 중국 AI 클라우드 지능형 로봇 기업 차오페이(俏妃)가 매장에 100대의 헬스케어 로봇을 배치했다. 차오페이는 전국에 4000개 이상의 매장을 보유한 여성용 건강 관리 및 마사지 기업으로, AI를 적용한 로봇 마사지를 핵심 사업으로 삼고 있다.차오페이가 개발한 AI 기반 클라우드 지능형 헬스케어 로봇은 '진단, 치료, 관리' 기능을 갖췄다.차오페이는 헬스케어 로봇 100대를 전국 각 매장에 배",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.irobotnews.com/news/photo/202607/47366_101776_1250.jpg"
     },
     "tags": [
@@ -7955,7 +7955,7 @@
     "source": "news",
     "title": "벌·개미에게 배운 광산 자동화…호주 애들레이드대, 군집 로봇 기술 개발",
     "url": "https://www.irobotnews.com/news/articleView.html?idxno=47356",
-    "summary": "호주 애들레이드대(Adelaide University) 연구팀은 벌, 개미 등 사회성 곤충의 협업 방식을 모방한 광산용 군집 로봇 시스템을 개발했다고 10일 밝혔다.최근 광산업계는 자원 고갈로 인해 더욱 깊고 외진 지역으로 채굴 범위를 확대하고 있다. 작업 환경이 점점 위험해지면서 자동화 기술의 도입 필요성도 높아지고 있다. 그러나 현재 사용되는 자동화 시스템은 구축 비용이 높고 중앙 제어 시스템에 대한 의존도가 높아 장애 발생 시 전체 운영이 중단될 수 있다는 한계를 안고 있다.애들레이드대 연구팀은 이런 문제를 해결하기 위해 사회",
+    "summary": "Researchers at the University of Adelaide developed a mining swarm-robotics system inspired by how bees and ants coordinate without a fragile central controller. The idea is to make mine automation more resilient and scalable for deeper, more remote, and more dangerous extraction sites, where today’s expensive centralized systems can halt an entire operation when a single control point fails.",
     "published": "2026-07-10T11:18:09+00:00",
     "updated": "2026-07-10T11:18:09+00:00",
     "authors": [
@@ -7965,7 +7965,7 @@
       "feed": "로봇신문 (irobotnews)",
       "first_seen": "2026-07-10",
       "full_text": "호주 애들레이드대(Adelaide University) 연구팀은 벌, 개미 등 사회성 곤충의 협업 방식을 모방한 광산용 군집 로봇 시스템을 개발했다고 10일 밝혔다.최근 광산업계는 자원 고갈로 인해 더욱 깊고 외진 지역으로 채굴 범위를 확대하고 있다. 작업 환경이 점점 위험해지면서 자동화 기술의 도입 필요성도 높아지고 있다. 그러나 현재 사용되는 자동화 시스템은 구축 비용이 높고 중앙 제어 시스템에 대한 의존도가 높아 장애 발생 시 전체 운영이 중단될 수 있다는 한계를 안고 있다.애들레이드대 연구팀은 이런 문제를 해결하기 위해 사회",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.irobotnews.com/news/photo/202607/47356_101767_4820.png"
     },
     "tags": [
@@ -7992,7 +7992,7 @@
     "source": "news",
     "title": "에이프로-클로봇, AI·4족보행 로봇 융합 MOU 체결",
     "url": "https://www.irobotnews.com/news/articleView.html?idxno=47364",
-    "summary": "지능형 로봇 서비스 및 이기종 로봇 통합관제 전문기업 클로봇(대표 김창구)과 AI 기반 산업 안전진단 전문기업 에이프로(대표 임종현)는 4족보행 로봇(Spot)과 AI 기술을 융합한 산업현장 자율 안전점검(AX, Autonomous Inspection) 사업을 공동 추진하기 위한 업무협약을 체결했다고 10일 밝혔다.이번 협약을 통해 클로봇은 4족보행 로봇(Spot) 공급과 현장 도입, 신속한 유지보수 서비스를 담당하고 에이프로는 AI 알고리즘 개발과 로봇 연동, 현장 적용 지원을 맡아 산업 인프라 환경의 로봇 기반 자율 안전점검 서",
+    "summary": "클로봇과 에이프로가 Boston Dynamics Spot 기반 4족보행 로봇에 AI 안전진단 기술을 결합해 산업현장 자율 안전점검 사업을 공동 추진하기로 했다. 클로봇은 로봇 공급, 현장 도입, 유지보수를 맡고 에이프로는 AI 알고리즘 개발과 로봇 연동 및 적용을 담당해, 사람이 접근하기 어렵거나 반복 점검이 필요한 산업 인프라에서 로봇 기반 AX를 구현하려는 협력이다.",
     "published": "2026-07-10T11:02:14+00:00",
     "updated": "2026-07-10T11:02:14+00:00",
     "authors": [
@@ -8002,7 +8002,7 @@
       "feed": "로봇신문 (irobotnews)",
       "first_seen": "2026-07-10",
       "full_text": "지능형 로봇 서비스 및 이기종 로봇 통합관제 전문기업 클로봇(대표 김창구)과 AI 기반 산업 안전진단 전문기업 에이프로(대표 임종현)는 4족보행 로봇(Spot)과 AI 기술을 융합한 산업현장 자율 안전점검(AX, Autonomous Inspection) 사업을 공동 추진하기 위한 업무협약을 체결했다고 10일 밝혔다.이번 협약을 통해 클로봇은 4족보행 로봇(Spot) 공급과 현장 도입, 신속한 유지보수 서비스를 담당하고 에이프로는 AI 알고리즘 개발과 로봇 연동, 현장 적용 지원을 맡아 산업 인프라 환경의 로봇 기반 자율 안전점검 서",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.irobotnews.com/news/photo/202607/47364_101774_5817.png"
     },
     "tags": [
@@ -8390,7 +8390,7 @@
     "source": "news",
     "title": "SK하이닉스, 나스닥 상장 첫날 13% 급등…\"로봇·에이전트로 수요 폭발\"",
     "url": "https://www.aitimes.com/news/articleView.html?idxno=212651",
-    "summary": "SK하이닉스가 미국 나스닥 시장 데뷔 첫날 주가가 13% 이상 급등하며 글로벌 AI 반도체 시장의 핵심 공급망으로서의 위상을 입증했다.10일(현지시간) 나스닥 시장에 상장된 SK하이닉스의 미국 예탁증권(ADR)은 공모가인 149달러보다 13% 상승한 168.01달러(약 25만2400원)로 거래를 마쳤다. 장중 한때는 170달러까지 치솟기도 했다.SK하이닉스는 이번 나스닥 상장을 통해 총 265억달러(약 39조8136억원) 규모의 재원을 조달하는 데 성공했다. 이 자금을 차세대 AI 메모리 신공장 건설 및 설비 투자 등 공격적인 글로",
+    "summary": "SK하이닉스의 ADR이 나스닥 상장 첫날 공모가 149달러에서 13% 오른 168.01달러로 마감하며 AI 메모리 공급망에 대한 투자자 기대를 드러냈다. 회사는 상장으로 조달한 265억달러를 차세대 AI 메모리 신공장과 설비 투자에 투입할 계획이며, 로봇과 AI 에이전트 확산이 고대역폭 메모리 수요를 더 키울 것이라는 전망이 주가 상승의 배경으로 제시됐다.",
     "published": "2026-07-11T05:48:31+00:00",
     "updated": "2026-07-11T05:48:31+00:00",
     "authors": [
@@ -8400,7 +8400,7 @@
       "feed": "AI타임스",
       "first_seen": "2026-07-10",
       "full_text": "SK하이닉스가 미국 나스닥 시장 데뷔 첫날 주가가 13% 이상 급등하며 글로벌 AI 반도체 시장의 핵심 공급망으로서의 위상을 입증했다.10일(현지시간) 나스닥 시장에 상장된 SK하이닉스의 미국 예탁증권(ADR)은 공모가인 149달러보다 13% 상승한 168.01달러(약 25만2400원)로 거래를 마쳤다. 장중 한때는 170달러까지 치솟기도 했다.SK하이닉스는 이번 나스닥 상장을 통해 총 265억달러(약 39조8136억원) 규모의 재원을 조달하는 데 성공했다. 이 자금을 차세대 AI 메모리 신공장 건설 및 설비 투자 등 공격적인 글로",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.aitimes.com/news/photo/202607/212651_215970_4617.jpg"
     },
     "tags": [
@@ -8464,7 +8464,7 @@
     "source": "news",
     "title": "메이사, 국토부 ‘AX 스프린트’ 선정…“드론·로봇이 건설 현장 안전관리”",
     "url": "https://www.irobotnews.com/news/articleView.html?idxno=47359",
-    "summary": "공간 AI 기업 메이사(대표 최석원·김동영)가 국토교통부의 ‘AI 응용제품 신속 상용화 지원사업(AX 스프린트)’ 국토·교통 분야 과제에 최종 선정됐다고 10일 밝혔다.‘AX 스프린트’는 정부 11개 관계부처가 합동으로 추진하는 범부처 최대 규모의 AI 전환(AX) 프로젝트다. 단기간 내 시장 출시가 가능한 AI 응용제품의 상용화를 집중 지원하며, 총 246개 사업에 7540억원이 투입된다.메이사는 국토·교통 분야의 주관기관으로 선정돼 총사업비 40억원 규모의 사업을 수행한다. 사업명은 ‘건설 공정·안전 관리 AI 플랫폼 상용화’며",
+    "summary": "메이사가 국토교통부의 AX 스프린트 국토·교통 분야 과제에 선정돼 40억원 규모로 건설 공정·안전 관리 AI 플랫폼을 상용화한다. 드론과 로봇을 건설 현장 안전관리와 공정 모니터링에 결합하는 방향으로, 단기간 내 시장 출시 가능한 AI 응용제품을 정부가 집중 지원하는 7540억원 규모 AX 프로젝트의 일부다.",
     "published": "2026-07-10T10:40:37+00:00",
     "updated": "2026-07-10T10:40:37+00:00",
     "authors": [
@@ -8474,7 +8474,7 @@
       "feed": "로봇신문 (irobotnews)",
       "first_seen": "2026-07-10",
       "full_text": "공간 AI 기업 메이사(대표 최석원·김동영)가 국토교통부의 ‘AI 응용제품 신속 상용화 지원사업(AX 스프린트)’ 국토·교통 분야 과제에 최종 선정됐다고 10일 밝혔다.‘AX 스프린트’는 정부 11개 관계부처가 합동으로 추진하는 범부처 최대 규모의 AI 전환(AX) 프로젝트다. 단기간 내 시장 출시가 가능한 AI 응용제품의 상용화를 집중 지원하며, 총 246개 사업에 7540억원이 투입된다.메이사는 국토·교통 분야의 주관기관으로 선정돼 총사업비 40억원 규모의 사업을 수행한다. 사업명은 ‘건설 공정·안전 관리 AI 플랫폼 상용화’며",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.irobotnews.com/news/photo/202607/47359_101771_3947.png"
     },
     "tags": [
@@ -8501,7 +8501,7 @@
     "source": "news",
     "title": "SK인텔릭스, DDP에 웰니스 로봇 ‘나무엑스’ 공급한다",
     "url": "https://www.irobotnews.com/news/articleView.html?idxno=47358",
-    "summary": "SK인텔릭스(대표 안무인)가 서울디자인재단과 ‘서울시 디자인 산업 발전 및 DDP(동대문디자인플라자) 스마트 디자인 환경 조성을 위한 업무협약(MOU)’을 체결하고, DDP 방문객 대상으로 디자인과 AI 기술이 결합한 혁신적 디자인 공간 경험 제공 및 디자인 콘텐츠 확산에 나선다고 10일 밝혔다.지난 9일 서울 중구 DDP 디자인랩에서 열린 협약식에는 안무인 SK인텔릭스 대표와 차강희 서울디자인재단 대표를 비롯한 양사 주요 경영진이 참석했다. 양사는 이번 협약을 통해 DDP를 거점으로 디자인 산업의 미래 지향적 가치를 창출하고, 혁",
+    "summary": "SK인텔릭스가 서울디자인재단과 MOU를 맺고 동대문디자인플라자 방문객을 위한 웰니스 로봇 나무엑스를 공급한다. DDP를 거점으로 디자인 공간 경험에 AI 로봇 서비스를 접목하려는 시도로, 공공 디자인 시설에서 로봇 기반 방문객 경험과 디자인 콘텐츠 확산을 실험한다는 점이 눈에 띈다.",
     "published": "2026-07-10T10:24:06+00:00",
     "updated": "2026-07-10T10:24:06+00:00",
     "authors": [
@@ -8511,7 +8511,7 @@
       "feed": "로봇신문 (irobotnews)",
       "first_seen": "2026-07-10",
       "full_text": "SK인텔릭스(대표 안무인)가 서울디자인재단과 ‘서울시 디자인 산업 발전 및 DDP(동대문디자인플라자) 스마트 디자인 환경 조성을 위한 업무협약(MOU)’을 체결하고, DDP 방문객 대상으로 디자인과 AI 기술이 결합한 혁신적 디자인 공간 경험 제공 및 디자인 콘텐츠 확산에 나선다고 10일 밝혔다.지난 9일 서울 중구 DDP 디자인랩에서 열린 협약식에는 안무인 SK인텔릭스 대표와 차강희 서울디자인재단 대표를 비롯한 양사 주요 경영진이 참석했다. 양사는 이번 협약을 통해 DDP를 거점으로 디자인 산업의 미래 지향적 가치를 창출하고, 혁",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.irobotnews.com/news/photo/202607/47358_101770_2315.jpg"
     },
     "tags": [
@@ -8791,7 +8791,7 @@
     "source": "news",
     "title": "Cognibotics selected for €6.5 million in EU accelerator funding",
     "url": "https://roboticsandautomationnews.com/2026/07/10/cognibotics-selected-for-e6-5-million-in-eu-accelerator-funding/103230/",
-    "summary": "Cognibotics, a Swedish deep-tech robotics company, has been selected for €6.5 million in blended finance from the European Innovation Council Accelerator under the Horizon Europe programme of the European Union. The funding includes a €2.5 million grant and €4 million in equity financing.",
+    "summary": "Cognibotics, a Swedish deep-tech robotics company, has been selected for €6.5 million from the European Innovation Council Accelerator, split between a €2.5 million grant and €4 million in equity financing. The money is meant to push its robotics technology through further development and industrialisation, signaling EU backing for moving the company’s systems closer to commercial deployment.",
     "published": "2026-07-10T16:22:01+00:00",
     "updated": "2026-07-10T16:22:01+00:00",
     "authors": [
@@ -8801,7 +8801,7 @@
       "feed": "Robotics and Automation News",
       "first_seen": "2026-07-10",
       "full_text": "Cognibotics, a Swedish deep-tech robotics company, has been selected for €6.5 million in blended finance from the European Innovation Council Accelerator under the Horizon Europe programme of the European Union. The funding includes a €2.5 million grant and €4 million in equity financing. The funding will support the next stage of development and industrialisation of […]",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://roboticsandautomationnews.com/wp-content/uploads/2026/07/cognibotics-robot-1.jpg"
     },
     "tags": [
@@ -8935,7 +8935,7 @@
     "source": "news",
     "title": "휴로틱스, 인도네시아 최고 권위 국립병원 RSPON과 업무협약",
     "url": "https://www.irobotnews.com/news/articleView.html?idxno=47374",
-    "summary": "소프트 웨어러블 로봇 전문 기업 휴로틱스(대표 이기욱)가 인도네시아 최고 권위의 뇌졸중 및 뇌신경 전문 국립병원인 ‘RSPON(Rumah Sakit Pusat Otak Nasional)’과 웨어러블 로봇 ‘H-메디(Medi)’를 활용한 임상 및 연구 협력 업무협약(MOU)을 체결했다고 10일 밝혔다.이번 MOU는 지난달 말부터 인도네시아 현지에서 진행된 H-메디 메디컬 쇼케이스의 성공적인 성과를 바탕으로 전격 성사됐다.협약 파트너인 RSPON은 인도네시아 보건부 산하 최고 등급(Type A)의 국립 병원으로, 국가 차원에서 뇌졸중",
+    "summary": "Hurotics signed an MOU with Indonesia’s National Brain Center Hospital, RSPON, to collaborate on clinical and research work using its soft wearable robot H-Medi. The deal follows a local H-Medi medical showcase and matters because RSPON is Indonesia’s top Type A national hospital for stroke and neurological care, giving the device a high-profile clinical foothold in rehabilitation-focused settings.",
     "published": "2026-07-10T15:17:44+00:00",
     "updated": "2026-07-10T15:17:44+00:00",
     "authors": [
@@ -8945,7 +8945,7 @@
       "feed": "로봇신문 (irobotnews)",
       "first_seen": "2026-07-10",
       "full_text": "소프트 웨어러블 로봇 전문 기업 휴로틱스(대표 이기욱)가 인도네시아 최고 권위의 뇌졸중 및 뇌신경 전문 국립병원인 ‘RSPON(Rumah Sakit Pusat Otak Nasional)’과 웨어러블 로봇 ‘H-메디(Medi)’를 활용한 임상 및 연구 협력 업무협약(MOU)을 체결했다고 10일 밝혔다.이번 MOU는 지난달 말부터 인도네시아 현지에서 진행된 H-메디 메디컬 쇼케이스의 성공적인 성과를 바탕으로 전격 성사됐다.협약 파트너인 RSPON은 인도네시아 보건부 산하 최고 등급(Type A)의 국립 병원으로, 국가 차원에서 뇌졸중",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.irobotnews.com/news/photo/202607/47374_101790_146.jpg"
     },
     "tags": [
@@ -8972,7 +8972,7 @@
     "source": "news",
     "title": "나우로보틱스, 2공장 FA센터 준공…6500평 3개 거점 운영체계 구축",
     "url": "https://www.irobotnews.com/news/articleView.html?idxno=47370",
-    "summary": "지능형 로봇 전문기업 나우로보틱스가 2공장인 FA(Factory Automation) 센터의 준공을 완료하고 본격적인 운영에 들어갔다고 10일 밝혔다.이번 준공으로 나우로보틱스는 기존 본사, 신규 FA센터, 충남 내포 생산거점을 연계한 총 대지면적 약 2만1488㎡(약 6500평) 규모의 3개 거점 운영체계를 구축했다.이를 통해 회사는 연구개발(R&D), 자동화 시스템 구축, 산업용 로봇 양산 기능을 거점별로 전문화하며 향후 성장 기반을 한층 강화하게 됐다.FA 센터는 대지면적 약 1000평 규모로, 공장자동화(FA) 시스템의 설계",
+    "summary": "나우로보틱스가 약 1000평 규모의 2공장 FA센터를 완공하면서 본사, FA센터, 충남 내포 생산거점을 잇는 총 2만1488㎡, 약 6500평 규모의 3거점 운영체계를 갖췄다. 회사는 이를 통해 R&D, 공장자동화 시스템 구축, 산업용 로봇 양산 기능을 거점별로 나눠 운영하며 자동화·로봇 사업 확장에 필요한 생산 및 엔지니어링 기반을 강화하려는 흐름이다.",
     "published": "2026-07-10T14:50:06+00:00",
     "updated": "2026-07-10T14:50:06+00:00",
     "authors": [
@@ -8982,7 +8982,7 @@
       "feed": "로봇신문 (irobotnews)",
       "first_seen": "2026-07-10",
       "full_text": "지능형 로봇 전문기업 나우로보틱스가 2공장인 FA(Factory Automation) 센터의 준공을 완료하고 본격적인 운영에 들어갔다고 10일 밝혔다.이번 준공으로 나우로보틱스는 기존 본사, 신규 FA센터, 충남 내포 생산거점을 연계한 총 대지면적 약 2만1488㎡(약 6500평) 규모의 3개 거점 운영체계를 구축했다.이를 통해 회사는 연구개발(R&D), 자동화 시스템 구축, 산업용 로봇 양산 기능을 거점별로 전문화하며 향후 성장 기반을 한층 강화하게 됐다.FA 센터는 대지면적 약 1000평 규모로, 공장자동화(FA) 시스템의 설계",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.irobotnews.com/news/photo/202607/47370_101783_4639.jpg"
     },
     "tags": [
@@ -9009,7 +9009,7 @@
     "source": "news",
     "title": "獨 퀀텀 시스템즈, 방산용 eVTOL 드론으로 1조8000억원 유치",
     "url": "https://www.irobotnews.com/news/articleView.html?idxno=47367",
-    "summary": "독일의 방산용 무인항공기(UAS·드론) 공급업체 퀀텀 시스템즈(Quantum-Systems GmbH)가 12억 달러(약 1조8000억원) 규모의 시리즈 D 투자 유치에 성공했다고 더로봇리포트가 최근 보도했다.이 투자유치로 퀀텀의 기업가치는 80억달러(약 12조1000억원) 이상으로 치솟았다.플로리안 자이벨 퀀텀 시스템즈 공동 창업자이자 공동 CEO는 \"미래는 무인화에 있다. 방위 산업은 여러 영역을 가로질러 실시간으로 함께 작동할 수 있는 자율 시스템에 의해 정의될 것이다. 우리는 퀀텀 시스템즈를 통해 오늘날 우리가 알고 있는 방위",
+    "summary": "Quantum-Systems, a German supplier of defense unmanned aircraft, raised $1.2 billion in a Series D round, pushing its valuation above $8 billion. The scale of the financing signals how quickly military demand is shifting toward autonomous eVTOL drones and networked systems that can operate across domains in real time.",
     "published": "2026-07-10T13:35:32+00:00",
     "updated": "2026-07-10T13:35:32+00:00",
     "authors": [
@@ -9019,7 +9019,7 @@
       "feed": "로봇신문 (irobotnews)",
       "first_seen": "2026-07-10",
       "full_text": "독일의 방산용 무인항공기(UAS·드론) 공급업체 퀀텀 시스템즈(Quantum-Systems GmbH)가 12억 달러(약 1조8000억원) 규모의 시리즈 D 투자 유치에 성공했다고 더로봇리포트가 최근 보도했다.이 투자유치로 퀀텀의 기업가치는 80억달러(약 12조1000억원) 이상으로 치솟았다.플로리안 자이벨 퀀텀 시스템즈 공동 창업자이자 공동 CEO는 \"미래는 무인화에 있다. 방위 산업은 여러 영역을 가로질러 실시간으로 함께 작동할 수 있는 자율 시스템에 의해 정의될 것이다. 우리는 퀀텀 시스템즈를 통해 오늘날 우리가 알고 있는 방위",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.irobotnews.com/news/photo/202607/47367_101778_340.jpg"
     },
     "tags": [
@@ -9046,7 +9046,7 @@
     "source": "news",
     "title": "뉴로메카 박종훈 대표, 유상증자 청약 재원 41.6억원 확보",
     "url": "https://www.irobotnews.com/news/articleView.html?idxno=47362",
-    "summary": "AI·로봇 자동화 전문기업 뉴로메카의 박종훈 대표가 이달 말 유상증자 참여를 위한 청약 재원 약 41.6억원을 확보하고, 구주주 청약 참여를 준비하고 있다고 10일 밝혔다.박 대표는 사전 공시 절차에 따라 보유주식 8만주와 신주인수권증서 일부를 매각해 청약 재원을 마련했다. 이번 매각 이후에도 유상증자 청약에 필요한 신주인수권증서는 보유하고 있으며, 사전에 공시된 매각 절차는 모두 마무리됐다.박 대표는 관련 세금 등 제반 비용을 제외한 실수령액을 재원으로 배정 물량의 15%를 우선 청약하고, 잔여 자금 범위 내에서 초과청약 한도까지",
+    "summary": "Neuromeka CEO Park Jong-hoon secured about 4.16 billion won to participate in the company’s planned rights offering, raising the funds by selling 80,000 existing shares and part of his rights certificates. The company says he still holds the rights certificates needed for the subscription and plans to first subscribe for 15% of his allotted shares, signaling continued insider participation despite the share sale.",
     "published": "2026-07-10T10:52:10+00:00",
     "updated": "2026-07-10T10:52:10+00:00",
     "authors": [
@@ -9056,7 +9056,7 @@
       "feed": "로봇신문 (irobotnews)",
       "first_seen": "2026-07-10",
       "full_text": "AI·로봇 자동화 전문기업 뉴로메카의 박종훈 대표가 이달 말 유상증자 참여를 위한 청약 재원 약 41.6억원을 확보하고, 구주주 청약 참여를 준비하고 있다고 10일 밝혔다.박 대표는 사전 공시 절차에 따라 보유주식 8만주와 신주인수권증서 일부를 매각해 청약 재원을 마련했다. 이번 매각 이후에도 유상증자 청약에 필요한 신주인수권증서는 보유하고 있으며, 사전에 공시된 매각 절차는 모두 마무리됐다.박 대표는 관련 세금 등 제반 비용을 제외한 실수령액을 재원으로 배정 물량의 15%를 우선 청약하고, 잔여 자금 범위 내에서 초과청약 한도까지",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.irobotnews.com/news/photo/202607/47362_101773_4817.jpg"
     },
     "tags": [
@@ -9083,7 +9083,7 @@
     "source": "news",
     "title": "GIST-송원대-광주산학융합원, 싱가포르서 글로벌 AI 기업 연계 프로그램 운영",
     "url": "https://www.aitimes.kr/news/articleView.html?idxno=40917",
-    "summary": "최근 AI와 로봇 기술이 산업 전반의 혁신을 이끄는 핵심 기술로 자리 잡으면서, 지역 인재들에게 글로벌 AI 기술 동향과 산업 현장을 접할 수 있는 교육 기회를 확대해야 한다는 목소리가 높아지고 있다.이에 광주과학기술원(GIST·지스트, 총장 임기철)은 송원대학교, 광주산학융합원과 함께 구성한 컨소시엄을 통해 ‘지역성장 인재양성체계(앵커) 사업(구 RISE 사업)’의 일환으로 지난 6월 26일부터 7월 2일까지 5박 7일간 싱가포르에서 ‘2026학년도 글로벌 인공지능(AI) 기업 연계 융합 프로그램’을 운영했다고 10일 밝혔다.이번",
+    "summary": "GIST, Songwon University, and the Gwangju Industry-University Convergence Institute ran a 5-night, 7-day global AI industry-linked convergence program in Singapore from June 26 to July 2, 2026. The program exposed regional students to overseas AI technology trends and industrial sites, reflecting a push to connect local talent development with the AI and robotics capabilities now reshaping broader industry.",
     "published": "2026-07-10T08:38:04+00:00",
     "updated": "2026-07-10T08:38:04+00:00",
     "authors": [
@@ -9093,7 +9093,7 @@
       "feed": "인공지능신문",
       "first_seen": "2026-07-10",
       "full_text": "최근 AI와 로봇 기술이 산업 전반의 혁신을 이끄는 핵심 기술로 자리 잡으면서, 지역 인재들에게 글로벌 AI 기술 동향과 산업 현장을 접할 수 있는 교육 기회를 확대해야 한다는 목소리가 높아지고 있다.이에 광주과학기술원(GIST·지스트, 총장 임기철)은 송원대학교, 광주산학융합원과 함께 구성한 컨소시엄을 통해 ‘지역성장 인재양성체계(앵커) 사업(구 RISE 사업)’의 일환으로 지난 6월 26일부터 7월 2일까지 5박 7일간 싱가포르에서 ‘2026학년도 글로벌 인공지능(AI) 기업 연계 융합 프로그램’을 운영했다고 10일 밝혔다.이번",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.aitimes.kr/news/thumbnail/202607/40917_61669_3742_v150.jpg"
     },
     "tags": [
@@ -9228,7 +9228,7 @@
     "source": "news",
     "title": "中 로보테라, 2개월만에 또다시 2200억원 투자 유치",
     "url": "https://www.irobotnews.com/news/articleView.html?idxno=47365",
-    "summary": "중국 휴머노이드 로봇 기업 로보테라(ROBOTERA, 星动纪元)가 2개월 만에 또 한번 대규모 투자를 받았다.7일 로봇 전문 포털 중국로봇망에 따르면 로보테라는 10억위안(약 2200억원) 규모 투자를 유치했다.이번 투자는 중국 국무원국자위 국유 자본 운영 회사인 청퉁지진(诚通基金)이 이끌었다. 청퉁지진은 중국 국유 기업 차이나청퉁홀딩그룹(中国诚通)의 산하 기업이다. 차이나청퉁홀딩그룹은 1992년 설립된 국무원 국자위감독관리 담당 국유 기업이다. 청퉁지진 이외에도 여러 국유 자본 투자 기업들이 대거 참여했다.로보테라는 올해 4월 2",
+    "summary": "Chinese humanoid robotics company ROBOTERA raised 1 billion yuan, about 220 billion won, just two months after another major financing round. The new round was led by Chengtong Fund, tied to the state-owned China Chengtong Holdings Group, with additional participation from several state-capital investors, signaling strong government-backed interest in accelerating China’s humanoid robot sector.",
     "published": "2026-07-10T11:55:06+00:00",
     "updated": "2026-07-10T11:55:06+00:00",
     "authors": [
@@ -9238,7 +9238,7 @@
       "feed": "로봇신문 (irobotnews)",
       "first_seen": "2026-07-10",
       "full_text": "중국 휴머노이드 로봇 기업 로보테라(ROBOTERA, 星动纪元)가 2개월 만에 또 한번 대규모 투자를 받았다.7일 로봇 전문 포털 중국로봇망에 따르면 로보테라는 10억위안(약 2200억원) 규모 투자를 유치했다.이번 투자는 중국 국무원국자위 국유 자본 운영 회사인 청퉁지진(诚通基金)이 이끌었다. 청퉁지진은 중국 국유 기업 차이나청퉁홀딩그룹(中国诚通)의 산하 기업이다. 차이나청퉁홀딩그룹은 1992년 설립된 국무원 국자위감독관리 담당 국유 기업이다. 청퉁지진 이외에도 여러 국유 자본 투자 기업들이 대거 참여했다.로보테라는 올해 4월 2",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.irobotnews.com/news/photo/202607/47365_101775_5348.jpg"
     },
     "tags": [
@@ -9265,7 +9265,7 @@
     "source": "news",
     "title": "Hippo Harvest Closes $30 Million Series C Led by Cox Farms, Scaling Robotic Indoor Growing Technology and Expanding to New Markets",
     "url": "http://www.RoboticsTomorrow.com/news/2026/07/10/hippo-harvest-closes-30-million-series-c-led-by-cox-farms-scaling-robotic-indoor-growing-technology-and-expanding-to-new-markets/26832",
-    "summary": "Funding accelerates the company's next phase of growth as Hippo Harvest brings indoor-grown organic greens to retail buyers at scale.",
+    "summary": "Hippo Harvest raised a $30 million Series C led by Cox Farms to scale its robotic indoor growing technology and expand into new markets. The funding is aimed at bringing indoor-grown organic greens to retail buyers at larger volumes, suggesting the company is moving from proving the system toward broader commercial deployment.",
     "published": "2026-07-10T13:11:29+00:00",
     "updated": "2026-07-10T13:11:29+00:00",
     "authors": [],
@@ -9273,7 +9273,7 @@
       "feed": "Robotics Tomorrow",
       "first_seen": "2026-07-10",
       "full_text": "Funding accelerates the company's next phase of growth as Hippo Harvest brings indoor-grown organic greens to retail buyers at scale.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://www.roboticstomorrow.com/images/facebooknews.jpg"
     },
     "tags": [
