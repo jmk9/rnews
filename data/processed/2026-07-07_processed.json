@@ -785,53 +785,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.03146",
-    "source": "arxiv",
-    "title": "Exp2VLA: Enabling Vision-Language-Action for Drone Navigation from Expert Demonstrations",
-    "url": "http://arxiv.org/abs/2607.03146v1",
-    "summary": "Exp2VLA distills drone-control expertise from reinforcement learning, teleoperation, or other controllers into training data for fine-tuning compact vision-language-action models, so semantic navigation commands can map directly from perception and language to UAV actions. In multi-object simulation and simulation-in-the-loop experiments, the resulting models follow varied language instructions and generalize to unseen target compositions, suggesting a practical route from specialized drone controllers to reusable language-guided navigation policies.",
-    "published": "2026-07-03T09:37:48+00:00",
-    "updated": "2026-07-03T09:37:48+00:00",
-    "authors": [
-      "Van Huyen Dang",
-      "Kabilesh Rajendran",
-      "Erdi Sayar",
-      "Erdal Kayacan"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.03146v1",
-      "comment": null,
-      "first_seen": "2026-07-07",
-      "full_text": "Vision-language-action (VLA) models open a new path toward intuitive robot control by directly linking perception, language, and action in a single end-to-end framework. Yet for UAVs, practical adoption remains difficult because existing solutions are either computationally heavy or insufficiently capable in complex environments. In this work, we propose a practical expert-distillation pipeline (Exp2VLA) for language-conditioned drone navigation. The core idea is to distill expert behavior, obtained from reinforcement learning, teleoperation, or other controllers, into training data that can be used to fine-tune compact VLA models. This allows existing control strategies to be transferred into a unified language-guided navigation model, reducing manual system integration and lowering the barrier for deploying new robot behaviors. Experiments in both sim-to-sim and simulation-in-the-loop settings across multi-object scenes show that the fine-tuned models can handle varied semantic commands and generalize to unseen target compositions. The proposed framework demonstrates how expert-policy distillation can help mechatronic systems move from specialized control modules toward more flexible and reusable robot intelligence.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.03146.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Other"
-    ],
-    "score": 32.031,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 6.0,
-      "recency": 2.0307436867212303,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:dartsim/dart",
     "source": "github",
     "title": "dartsim/dart",
@@ -1040,48 +993,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:abmoRobotics/RLRoverLab",
-    "source": "github",
-    "title": "abmoRobotics/RLRoverLab",
-    "url": "https://github.com/abmoRobotics/RLRoverLab",
-    "summary": "Rover and space-related reinforcement learning environments implemented for Isaac Sim and Isaac Lab.",
-    "published": "2024-09-17T07:37:28Z",
-    "updated": "2026-07-03T08:30:33Z",
-    "authors": [
-      "abmoRobotics"
-    ],
-    "extra": {
-      "stars": 121,
-      "forks": 8,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 3,
-      "license": "Apache-2.0",
-      "first_seen": "2026-05-18",
-      "full_text": "Rover and space-related reinforcement learning environments implemented for Isaac Sim and Isaac Lab.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 30.361,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.02073623625,
-      "has_code": 6.0,
-      "github_stars_log": 10.431799153373742,
-      "github_forks_log": 1.9084850188786497,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:fbf67398269c",
     "source": "news",
     "title": "Japan Pioneered Humanoid Robots—Can It Now Catch China?",
@@ -1118,57 +1029,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.03693",
-    "source": "arxiv",
-    "title": "CoRE-VLA: Towards Scalable and Robust Vision-Language-Action Modeling via Conditional Routing of Experts",
-    "url": "http://arxiv.org/abs/2607.03693v1",
-    "summary": "CoRE-VLA makes VLA robot policies less tied to a fixed sensor suite by using context-conditioned sparse computation: sensor availability gates modality-specific experts, while task intent routes action representations to experts suited to the current subgoal. In experiments focused on depth as an auxiliary modality, it uses depth when present but degrades gracefully when depth is missing, outperforming dense-action-generator ablations and a strong pretrained VLA baseline on LIBERO, RoboCasa GR1 Tabletop, and real-world dual-arm manipulation, including zero-shot tests on unseen scenarios.",
-    "published": "2026-07-04T03:58:09+00:00",
-    "updated": "2026-07-04T03:58:09+00:00",
-    "authors": [
-      "Haozhe Zhang",
-      "Sixian Li",
-      "Yifei Zhang",
-      "Zezheng Huai",
-      "Hao Chen",
-      "Chunhua Shen",
-      "Jingjing Gong",
-      "Xipeng Qiu"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.03693v1",
-      "comment": null,
-      "first_seen": "2026-07-07",
-      "full_text": "Vision-language-action (VLA) models have advanced generalist robotic manipulation, yet real-world deployment reveals a fundamental challenge: robots are equipped with diverse and heterogeneous sensor configurations, auxiliary sensors can fail unexpectedly during operation, and different robot embodiments often lack certain sensors by design. A unified policy that can exploit auxiliary perceptual inputs when available while remaining reliable under sensor absence, whether incidental or by design, is therefore essential for practical deployment. However, existing VLA policies couple action generation to a fixed sensor set through shared dense computation, making them brittle when sensors are missing and limiting their ability to specialize across diverse tasks and long-horizon behaviors. We propose CoRE-VLA, a scalable and robust VLA framework that formulates action generation as context-conditioned sparse computation. Sensor availability gates modality-specialized experts, enabling graceful degradation under missing sensors without retraining. Task intent further routes action-side representations to task-relevant experts, improving specialization across diverse tasks and long-horizon subgoals. While the framework is designed to accommodate different auxiliary sensors, we focus on depth as a representative and practically important auxiliary modality in our experiments. Experiments on LIBERO, RoboCasa GR1 Tabletop, and real-world dual-arm manipulation show that CoRE-VLA achieves strong results on long-horizon and multi-task benchmarks, and outperforms both a dense-action-generator ablation and a strong pretrained VLA baseline, including in zero-shot generalization to unseen scenarios. Modality analysis shows that CoRE-VLA can exploit auxiliary depth when available while remaining robust when depth is unavailable during deployment.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.03693.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator",
-      "#Bimanual"
-    ],
-    "score": 30.194,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.1944862494122024,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -1396,54 +1256,6 @@
       "has_code": 6.0,
       "github_stars_log": 12.982985478132301,
       "github_forks_log": 3.4647875196459372,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.03512",
-    "source": "arxiv",
-    "title": "High-Precision Formation Control for Heterogeneous Multi-Robot Systems via Hierarchical Hybrid Physics-Informed Deep Reinforcement Learning",
-    "url": "http://arxiv.org/abs/2607.03512v1",
-    "summary": "HHy-PIDRL targets formation control in heterogeneous multi-robot systems by splitting the problem into a SAC-based navigation policy for an Ackermann-steering leader and a lower-level follower controller that combines physical feed-forward control, PD feedback, and an adaptive DRL residual. The hierarchy is meant to keep the sample-efficiency and stability advantages of model-based control while letting reinforcement learning compensate for uncertainty and disturbances. In experiments, both the leader navigation policy and the HM-DRL formation-control policies reached 100% success, with ablations used to test the role of the hybrid components.",
-    "published": "2026-07-03T17:38:17+00:00",
-    "updated": "2026-07-03T17:38:17+00:00",
-    "authors": [
-      "Yanzhou Li",
-      "Guangli Chen",
-      "Xiao-Meng Li",
-      "Wenjian Zhong",
-      "Yongkang Lu",
-      "Shenghuang He"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.03512v1",
-      "comment": null,
-      "first_seen": "2026-07-07",
-      "full_text": "Existing classical control methods commonly require precise models and struggle to cope with model uncertainties and external disturbances, while end-to-end reinforcement learning (RL) approaches suffer from low sample efficiency and poor convergence. To overcome these challenges, this paper proposes a hierarchical hybrid physics-informed deep reinforcement learning (HHy-PIDRL) framework, aiming to realize high-precision, highly responsive formation control for heterogeneous multi-robot systems (HMRSs). The proposed framework contains two layers. Specifically, first, the upper layer designs an autonomous navigation policy network for Ackermann-steering leader based on the Soft Actor-Critic (SAC) deep reinforcement learning (DRL) algorithm. Second, the lower module integrates a high-fidelity physical feed-forward controller, a classical proportional-derivative (PD) controller, and an adaptive DRL residual controller to propose an effective hybrid model and DRL (HM-DRL)-based formation control policy network. Third, a unique hierarchical reward function is designed for training Omnidirectional followers, which effectively guides agents toward a refined, stable control policy. Experimental results demonstrate that, the success rate of both the upper-layer autonomous navigation policy network and the HM-DRL based formation control policy networks reach 100%. Meanwhile, ablation experiments are conducted to verify the validity and credibility of the proposed method.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.03512.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 28.102,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.102244184675099,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
@@ -1941,98 +1753,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:EmptyBlueBox/DexLatent",
-    "source": "github",
-    "title": "EmptyBlueBox/DexLatent",
-    "url": "https://github.com/EmptyBlueBox/DexLatent",
-    "summary": "[CVPR 2026 Highlight] XL-VLA: Cross-Hand Latent Representation for Vision-Language-Action Models",
-    "published": "2026-02-28T06:59:49Z",
-    "updated": "2026-07-03T11:18:23Z",
-    "authors": [
-      "EmptyBlueBox"
-    ],
-    "extra": {
-      "stars": 101,
-      "forks": 10,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 1,
-      "license": "MIT",
-      "first_seen": "2026-07-03",
-      "full_text": "[CVPR 2026 Highlight] XL-VLA: Cross-Hand Latent Representation for Vision-Language-Action Models",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 26.171,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.045711436706349,
-      "has_code": 6.0,
-      "github_stars_log": 10.043000858809588,
-      "github_forks_log": 2.08278537031645,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.03387",
-    "source": "arxiv",
-    "title": "Feeling the Unexpected: ResTacVLA for Contact-Rich Manipulation via Residual Tactile Representation",
-    "url": "http://arxiv.org/abs/2607.03387v1",
-    "summary": "ResTacVLA adds touch to vision-language-action manipulation by feeding the model residual tactile signals: the mismatch between what vision predicts should happen and what the robot actually feels. It discretizes those residuals into latent contact primitives and gates them in when the visual prior is uncertain, so sparse tactile cues are emphasized during contact events rather than drowned out by visual features. On contact-rich manipulation tasks, it outperforms baselines and stays robust under unexpected dynamic disturbances.",
-    "published": "2026-07-03T14:42:30+00:00",
-    "updated": "2026-07-03T14:42:30+00:00",
-    "authors": [
-      "Pengwei Zhang",
-      "Bin Xie",
-      "Ce Hao",
-      "Xinpan Meng",
-      "Xinyu Guo",
-      "Fang Deng",
-      "Long Cheng",
-      "Tiancai Wang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.03387v1",
-      "comment": "8 pages, 6 figures, 3 tables. Accepted by IROS 2026, Project page: https://awilekong.github.io/ResTacVLA-Website/",
-      "first_seen": "2026-07-07",
-      "full_text": "Tactile perception is indispensable for contact-rich manipulation, yet integrating it into Vision-Language-Action (VLA) models often induces modality collapse, where high-bandwidth visual features overshadow sparse tactile cues. Inspired by Predictive Coding, a neural mechanism where the brain attenuates predictable inputs to prioritize surprising stimuli, we propose ResTacVLA. Rather than treating tactile data as raw input, we reformulate it as a Residual Tactile Representation capturing the discrepancy between visual priors and physical sensations. By filtering out visually predictable dynamics, this formulation transforms sparse tactile signals into dense, high-value information gain, thereby inherently resolving the bandwidth mismatch. These residuals are discretized through a Vector Quantized (VQ) bottleneck into Latent Contact Primitives that capture critical events missed by vision. Analogous to the neural surprise signal, we leverage the uncertainty of the visual prior to adaptively gate tactile integration, prioritizing residuals specifically during visually unreliable phases to explicitly prevent visual dominance. Experimental results show that ResTacVLA consistently outperforms all baselines on a diverse set of contact-rich manipulation tasks, while remaining robust to unexpected dynamic disturbances. Project page: https://awilekong.github.io/ResTacVLA-Website/",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.03387.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 26.076,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.0760859500496034,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:gbionics/jaxsim",
     "source": "github",
     "title": "gbionics/jaxsim",
@@ -2343,95 +2063,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:NJU-RLC/quadrupedal-agility",
-    "source": "github",
-    "title": "NJU-RLC/quadrupedal-agility",
-    "url": "https://github.com/NJU-RLC/quadrupedal-agility",
-    "summary": "Official implementation of \"Learning Diverse Natural Behaviors for Enhancing the Agility of Quadrupedal Robots\"",
-    "published": "2025-05-11T07:03:21Z",
-    "updated": "2026-07-02T14:54:09Z",
-    "authors": [
-      "NJU-RLC"
-    ],
-    "extra": {
-      "stars": 119,
-      "forks": 8,
-      "language": "Python",
-      "topics": [
-        "imitation-learning",
-        "isaac-gym",
-        "quadruped-robot",
-        "reinforcement-learning",
-        "robot-learning"
-      ],
-      "open_issues": 2,
-      "license": "MIT",
-      "first_seen": "2026-06-09",
-      "full_text": "Official implementation of \"Learning Diverse Natural Behaviors for Enhancing the Agility of Quadrupedal Robots\"",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 25.168,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 1.8635338585218255,
-      "has_code": 6.0,
-      "github_stars_log": 10.395906230238124,
-      "github_forks_log": 1.9084850188786497,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:haozhang04/LeggedSkillDeploy",
-    "source": "github",
-    "title": "haozhang04/LeggedSkillDeploy",
-    "url": "https://github.com/haozhang04/LeggedSkillDeploy",
-    "summary": "A deployment framework for reinforcement learning-based motion control of legged robots, covering bipedal, quadrupedal, wheeled-bipedal, and wheeled-quadrupedal robots.",
-    "published": "2026-01-23T13:09:16Z",
-    "updated": "2026-07-03T08:08:15Z",
-    "authors": [
-      "haozhang04"
-    ],
-    "extra": {
-      "stars": 113,
-      "forks": 7,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 0,
-      "license": null,
-      "first_seen": "2026-07-03",
-      "full_text": "A deployment framework for reinforcement learning-based motion control of legged robots, covering bipedal, quadrupedal, wheeled-bipedal, and wheeled-quadrupedal robots.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Humanoid"
-    ],
-    "score": 25.108,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.0174177870287697,
-      "has_code": 6.0,
-      "github_stars_log": 10.284524256682364,
-      "github_forks_log": 1.806179973983887,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:wuji-technology/wuji-mjlab",
     "source": "github",
     "title": "wuji-technology/wuji-mjlab",
@@ -2642,83 +2273,6 @@
       "github_forks_log": 0.9542425094393249,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:1a2ea7467932",
-    "source": "news",
-    "title": "UWORLD Ultra-Bionic Humanoid Robot U1 Pro — Up Close at the Global Launch Event",
-    "url": "https://www.youtube.com/watch?v=wdf3BORclRA",
-    "summary": "Get an up-close look at the UWORLD ultra-bionic humanoid robot and discover its remarkable detail and lifelike presence. #UBTECH #UWORLD #U1Pro #UltraBionic #HumanoidRobot #ConsumerRobotics #Robotics #AI Subscribe https://www.youtube.com/@UCdYzpvcdKkvlfTc-Abe6cJQ Learn more https://www.ubtrobot.com/en/humanoid/products/WalkerS2 Follow us https://www.facebook.com/ubtechroboticscorp/ https://twitter.com/UBTECHRobotics https://www.linkedin.com/company/ubtech-robotics/",
-    "published": "2026-07-03T12:00:15+00:00",
-    "updated": "2026-07-03T12:00:15+00:00",
-    "authors": [
-      "UBTECH Robotics"
-    ],
-    "extra": {
-      "feed": "UBTECH (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i4.ytimg.com/vi/wdf3BORclRA/hqdefault.jpg",
-      "first_seen": "2026-07-03",
-      "full_text": "Get an up-close look at the UWORLD ultra-bionic humanoid robot and discover its remarkable detail and lifelike presence. #UBTECH #UWORLD #U1Pro #UltraBionic #HumanoidRobot #ConsumerRobotics #Robotics #AI Subscribe https://www.youtube.com/@UCdYzpvcdKkvlfTc-Abe6cJQ Learn more https://www.ubtrobot.com/en/humanoid/products/WalkerS2 Follow us https://www.facebook.com/ubtechroboticscorp/ https://twitter.com/UBTECHRobotics https://www.linkedin.com/company/ubtech-robotics/",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 23.052,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.05194157984127,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:21972fc7ca30",
-    "source": "news",
-    "title": "UBTECH Launches UWORLD U1 — The World’s First Full-Size Mass-Produced Ultra-Bionic Humanoid Robot 🤖",
-    "url": "https://www.youtube.com/watch?v=jXRbNaFqByo",
-    "summary": "SHENZHEN, China — On June 30, 2026, UBTECH hosted its 2026 Global Launch Event in Shenzhen, unveiling its long-term vision for human–robot symbiosis and officially introducing the UWORLD U1 Series, the world’s first full-size ultra-bionic humanoid robot designed for mass production.",
-    "published": "2026-07-02T11:49:08+00:00",
-    "updated": "2026-07-02T11:49:08+00:00",
-    "authors": [
-      "UBTECH Robotics"
-    ],
-    "extra": {
-      "feed": "UBTECH (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i3.ytimg.com/vi/jXRbNaFqByo/hqdefault.jpg",
-      "first_seen": "2026-07-02",
-      "full_text": "SHENZHEN, China — On June 30, 2026, UBTECH hosted its 2026 Global Launch Event in Shenzhen, unveiling its long-term vision for human–robot symbiosis and officially introducing the UWORLD U1 Series, the world’s first full-size ultra-bionic humanoid robot designed for mass production. As of the day of the launch, cumulative orders for the UWORLD U1 Series had surpassed 13,361 units. Under the theme Endless Love, the event marked a step into a new era of hyper-bionic coexistence — from body to emotion, from symbiosis to resonance. Powered by a next-generation embodied intelligence system, UWORLD U1 redefines human–robot interaction with breakthrough capabilities, including: ·A full-body ultra-bionic design with 88 degrees of freedom, enabling highly natural human-like motion and expression ·The world’s first emotion-aware large language model, capable of recognizing 20+ fine-grained emotional states with over 90% accuracy ·A fast-and-slow cognitive architecture, combining real-time reaction (within 500ms) with deep reasoning powered by large-scale AI models ·A lifelike expression system with ultra-low latency lip-sync (as fast as 20ms), enabling seamless emotional communication ·An Agent Memory OS, allowing long-term personalized interaction and persistent companionship To everyone who witnessed it, supported it, and believed in it — thank you for being part of this moment. From now on, you’ll never be alone. #UBTECH #UWORLD #HumanoidRobot #ConsumerRobotics #Robotics #AI #globallaunch Subscribe https://www.youtube.com/@UCdYzpvcdKkvlfTc-Abe6cJQ Learn more https://www.ubtrobot.com/en/humanoid/products/WalkerS2 Follow us https://www.facebook.com/ubtechroboticscorp/ https://twitter.com/UBTECHRobotics https://www.linkedin.com/company/ubtech-robotics/",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Humanoid"
-    ],
-    "score": 22.836,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 1.8360015994543653,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
       "demote": -0.0
     },
     "priority": "must_read"
@@ -3380,50 +2934,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:yechen056/UR5e-DP-Family",
-    "source": "github",
-    "title": "yechen056/UR5e-DP-Family",
-    "url": "https://github.com/yechen056/UR5e-DP-Family",
-    "summary": "A practical repository for deploying the Diffusion Policy family on UR5e robots.",
-    "published": "2026-04-18T10:55:05Z",
-    "updated": "2026-07-02T12:22:25Z",
-    "authors": [
-      "yechen056"
-    ],
-    "extra": {
-      "stars": 22,
-      "forks": 1,
-      "language": "Python",
-      "topics": [
-        "robotics-ur5e-diffusion-policy-imitation-learning"
-      ],
-      "open_issues": 0,
-      "license": "MIT",
-      "first_seen": "2026-05-18",
-      "full_text": "A practical repository for deploying the Diffusion Policy family on UR5e robots.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#IL",
-      "#Manipulator"
-    ],
-    "score": 19.252,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 1.840954493139881,
-      "has_code": 6.0,
-      "github_stars_log": 6.808639180087964,
-      "github_forks_log": 0.6020599913279624,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:aparame/RL_UR5_IsaacLab",
     "source": "github",
     "title": "aparame/RL_UR5_IsaacLab",
@@ -3472,57 +2982,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.03449",
-    "source": "arxiv",
-    "title": "HiMe: Hierarchical Embodied Memory for Long-Horizon Vision-Language-Action Control",
-    "url": "http://arxiv.org/abs/2607.03449v1",
-    "summary": "HiMe splits long-horizon VLA control into a fast Executor for real-time actions, a Sentry that maintains working memory, and a slower Planner for strategic reasoning, avoiding the mismatch between models that can think deeply and models that can act quickly. Its memory system uses cross-modal semantic schemas with Add, Update, and Delete operations, letting the robot revise its internal knowledge over time. In experiments, this hierarchy improves success rates over flat memory baselines and can self-correct based on human preferences.",
-    "published": "2026-07-03T16:06:48+00:00",
-    "updated": "2026-07-03T16:06:48+00:00",
-    "authors": [
-      "Li Ji",
-      "Siyin Wang",
-      "Pengfang Qian",
-      "Xiaopeng Yu",
-      "Yihai Tian",
-      "Zhaoye Fei",
-      "Jingjing Gong",
-      "Xipeng Qiu"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.03449v1",
-      "comment": null,
-      "first_seen": "2026-07-07",
-      "full_text": "Current Vision-Language-Action (VLA) models excel at robotic manipulation but often struggle with non-Markovian tasks requiring long-term memory and reasoning due to their reliance on immediate observations. Existing solutions face a ''frequency-competence paradox,'' where stronger reasoning models are too slow for real-time control, while faster models lack sufficient reasoning capabilities. To resolve this architectural misalignment, we propose HiMe, a Hierarchical Embodied Memory framework that decouples embodied intelligence into a high-frequency Executor for execution, a Sentry for working memory, and a Planner for long-term strategy. We also introduce a dynamic knowledge system based on cross-modal semantic schemas and active management mechanisms, allowing robots to maintain memory plasticity through ''Add, Update, and Delete'' operations. This hierarchical design effectively balances the conflict between real-time execution and slow thinking planning, significantly improving success rates in long-horizon tasks. Experiments demonstrate that this approach not only outperforms flat memory baselines but also exhibits the novel ability to self-correct its internal knowledge based on human preferences.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.03449.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 19.089,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.088630593075397,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "arxiv:2607.04880",
     "source": "arxiv",
     "title": "PRISM: Personalized Robotic Dataset Generation via Image-based Scene and Motion Synthesis",
@@ -3561,40 +3020,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 2.0,
       "recency": 2.6770209781026786,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:11bb6da3a49e",
-    "source": "news",
-    "title": "Pudu Robotics Brings Physical AI into Everyday Life at Davos Tech Summit's Robot City",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/07/03/pudu-robotics-brings-physical-ai-into-everyday-life-at-davos-tech-summits-robot-city/26801",
-    "summary": "Deployed across retail, hospitality and public spaces, Pudu Robotics demonstrates how commercial service robots are already creating value in real-world environments.",
-    "published": "2026-07-03T13:54:54+00:00",
-    "updated": "2026-07-03T13:54:54+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-07-03",
-      "full_text": "Deployed across retail, hospitality and public spaces, Pudu Robotics demonstrates how commercial service robots are already creating value in real-world environments.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 18.069,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.0690025971478176,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -3671,40 +3096,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:479d6089ed17",
-    "source": "news",
-    "title": "First Humanoid Application Centre in the Netherlands opened at MICS: humanoid robots from demo to practical application",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/07/02/first-humanoid-application-centre-in-the-netherlands-opened-at-mics-humanoid-robots-from-demo-to-practical-application-/26800",
-    "summary": "New innovation centre in the Netherlands brings together robotics, AI, and the manufacturing industry to accelerate the introduction of humanoid robots into the workplace.",
-    "published": "2026-07-02T14:31:50+00:00",
-    "updated": "2026-07-02T14:31:50+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-07-02",
-      "full_text": "New innovation centre in the Netherlands brings together robotics, AI, and the manufacturing industry to accelerate the introduction of humanoid robots into the workplace.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 17.86,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 1.8602129145386903,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -3855,152 +3246,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.03616",
-    "source": "arxiv",
-    "title": "ROBOCYCLE: Autonomous Dual-Arm Robotic Manipulation and Coordination for Recycling Applications",
-    "url": "http://arxiv.org/abs/2607.03616v1",
-    "summary": "ROBOCYCLE is a dual-arm recycling robot that combines multi-view RGB-D sensing, RF-DETR instance segmentation, and AnyGrasp 6-DoF grasp planning to handle cluttered, transparent, irregular, and deformable waste. It works from segmented point clouds to generate grasp poses and coordinate bimanual actions, including tasks like unscrewing PET bottle caps to meet Tokyo-area recycling rules. In experiments, the system reached 90.3% grasp success and 84.3% overall task success, suggesting a practical path toward autonomous sorting in real waste-management settings.",
-    "published": "2026-07-03T22:14:48+00:00",
-    "updated": "2026-07-03T22:14:48+00:00",
-    "authors": [
-      "Rubén de J. Hilario-Cruz",
-      "Jesus A. García-González",
-      "Enrique Coronado",
-      "Arturo E. Cerón-López"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.03616v1",
-      "comment": null,
-      "first_seen": "2026-07-07",
-      "full_text": "As urban waste volumes escalate and labor shortages intensify, automated waste sorting systems are becoming a necessity. However, current robotic solutions often struggle with the 3D perception and manipulation of transparent, deformable, or cluttered objects. This work introduces ROBOCYCLE, an autonomous dual-arm robotic recycling platform designed to meet the recycling standards of the Tokyo metropolitan area. Our approach integrates multi-view RGB-D perception, transformer-based instance segmentation using RF-DETR, and 6-DoF grasp planning via the Anygrasp SDK. By processing segmentated point clouds, the system generates robust candidate poses for irregular and deformable waste. The system achieved a 90.3% grasp success rate and 84.3% overall task success rate, effectively performing complex coordinated tasks such as unscrewing PET bottle caps. The proposed platform offers a scalable solution for autonomous waste management in real-world human environments.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.03616.jpg"
-    },
-    "tags": [
-      "#Manipulator",
-      "#Bimanual"
-    ],
-    "score": 17.143,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.1433924990625,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.03570",
-    "source": "arxiv",
-    "title": "Cross-Embodiment Robot Manipulation via a Unified Hand Action Space",
-    "url": "http://arxiv.org/abs/2607.03570v1",
-    "summary": "UHAS gives dexterous manipulation policies a shared action interface across different robotic hands by representing hand actions as geometric deformations of a canonical sphere, then using Cascade Inverse Kinematics to translate those actions into each hand’s joint configuration. Policies trained with reinforcement learning in this space on in-hand cube reorientation transfer across Allegro, LEAP, Shadow, and MANO-style hands, including zero-shot transfer to unseen hands, quick embodiment-specific finetuning, and real-world deployment.",
-    "published": "2026-07-03T19:19:20+00:00",
-    "updated": "2026-07-03T19:19:20+00:00",
-    "authors": [
-      "Luis Felipe Casas",
-      "Robert Teal",
-      "Keval Shah",
-      "Abhijit Tadepalli",
-      "Wanxin Jin",
-      "Yu Xiang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.03570v1",
-      "comment": null,
-      "first_seen": "2026-07-07",
-      "full_text": "Robot manipulation policies are typically tied to specific robotic hand embodiments, limiting the transfer of learned behaviors across platforms with different kinematic structures. In this work, we propose the Unified Hand Action Space (UHAS), a sphere-based unified action representation for cross-embodiment dexterous manipulation. UHAS represents robotic hand actions as geometric deformations of a canonical sphere and uses a Cascade Inverse Kinematics (CIK) algorithm to map the shared representation to embodiment-specific joint configurations. Using reinforcement learning, we train dexterous manipulation policies directly in the proposed action space for in-hand cube reorientation tasks. We evaluate our method in both simulation and real-world experiments across multiple robotic hands, including the Allegro Hand, LEAP Hand, Shadow Hand, and MANO Human Hand. Experimental results demonstrate effective dexterous manipulation, zero-shot transfer to unseen hands, rapid finetuning across embodiments, and successful real-world deployment. Our experiments show that the proposed UHAS representation enables stable dexterous control and cross-embodiment policy transfer across robotic hands.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.03570.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Manipulator"
-    ],
-    "score": 17.117,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.1172813878025796,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.03454",
-    "source": "arxiv",
-    "title": "ADP: Adversarial Dynamics Priors for Physically Grounded Humanoid Locomotion",
-    "url": "http://arxiv.org/abs/2607.03454v1",
-    "summary": "ADP trains humanoid locomotion policies with adversarial priors over dynamics features rather than kinematic style, using CoM motion, centroidal momentum, contact forces, and contact states drawn from trajectory-optimized reference rollouts. The discriminator keeps policy trajectories near physically plausible reference dynamics without explicit motion tracking, which makes recovery after perturbations more grounded. Against AMP, ADP raises the 80%-success impulse threshold by 16.7% while cutting direction-averaged recovery time by 47.9% and velocity tracking error by 35.4%.",
-    "published": "2026-07-03T16:12:43+00:00",
-    "updated": "2026-07-03T16:12:43+00:00",
-    "authors": [
-      "Seokju Lee",
-      "Jeongtae Lee",
-      "Jeonghyeok Lim",
-      "Jeonguk Kang",
-      "Byungwook Lee",
-      "Seungho Han",
-      "Keun Ha Choi",
-      "Dongil Park",
-      "Kyung-Soo Kim"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.03454v1",
-      "comment": "8 pages, 6 figures",
-      "first_seen": "2026-07-07",
-      "full_text": "In this paper, we propose Adversarial Dynamics Priors (ADP) for perturbation-resilient humanoid locomotion control. Existing motion prior-based methods induce natural motion styles by imitating kinematic motion features, but they do not directly regularize dynamics features, such as CoM motion, centroidal momentum, contact forces, and contact states. To address this limitation, we replace kinematic motion-style feature with selected dynamics features extracted from locomotion trajectories as the target of adversarial regularization.To this end, we use trajectory optimization to construct a reference dataset and train a discriminator to evaluate whether policy-induced temporal windows are consistent with the resulting reference distribution.Without explicit motion tracking, ADP encourages policy rollouts to remain close to the reference support, even after perturbations. Experimental results show that, compared with AMP, the strongest baseline in our evaluation, ADP improves the $80\\%$-success impulse threshold ($J_{80}$) by $16.7\\%$, while reducing direction-averaged recovery time and velocity tracking error by $47.9\\%$ and $35.4\\%$, respectively.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.03454.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Humanoid"
-    ],
-    "score": 17.09,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.089511049580853,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "arxiv:2607.04854",
     "source": "arxiv",
     "title": "CARL: Constraint-Aware Reinforcement Learning for Planning with LLMs",
@@ -4099,54 +3344,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.03163",
-    "source": "arxiv",
-    "title": "Beyond Point-Attached Semantics: Object-Centric Semantic Fields for Generalizable Manipulation",
-    "url": "http://arxiv.org/abs/2607.03163v1",
-    "summary": "Beyond Point-Attached Semantics learns an object-centric continuous semantic field that maps explicit 3D query locations to part-aware embeddings conditioned on an object point cloud, rather than tying semantics to viewpoint-dependent sampled points. Trained on part-annotated object models and then frozen, it supplies manipulation policies with stable cues for functional regions like handles, tool heads, openings, and graspable areas. In RoboTwin simulation and real-world bimanual manipulation, these semantic point clouds improve performance over raw point clouds, 2D feature lifting, and discrete 3D point-wise feature baselines.",
-    "published": "2026-07-03T10:05:39+00:00",
-    "updated": "2026-07-03T10:05:39+00:00",
-    "authors": [
-      "Zheng Sun",
-      "Lerong Zhang",
-      "Zhihao Li",
-      "Zhuo Li",
-      "Quentin Rouxel",
-      "Fei Chen"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.03163v1",
-      "comment": null,
-      "first_seen": "2026-07-07",
-      "full_text": "Generalizable robot manipulation requires stable 3D understanding of functional object parts, such as handles, tool heads, openings, and graspable regions. Raw point clouds provide geometry but lack explicit part semantics, and their sampled points vary with viewpoint, sensor configuration, and object instance. Existing 2D feature lifting and discrete 3D point-wise features enrich point clouds with semantics, but the resulting features remain attached to observation-dependent samples. We propose an object-centric continuous semantic field that conditions on an object point cloud and reads part-aware semantic embeddings at explicit 3D query locations. The field is trained from part-annotated object models and then frozen to generate semantic point clouds as object-level conditioning for manipulation policies. Experiments on RoboTwin simulation tasks and real-world bimanual object manipulation show that our representation provides more stable functional-part cues and improves policy performance over raw point-cloud, 2D feature lifting, and 3D point-wise feature baselines. Project Page: \\href{https://zainzh.github.io/beyond-point-attached-semantics}{https://zainzh.github.io/beyond-point-attached-semantics}.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.03163.jpg"
-    },
-    "tags": [
-      "#Manipulator",
-      "#Bimanual"
-    ],
-    "score": 16.035,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.034888032108135,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:88260a081cf0",
     "source": "news",
     "title": "삼성, 영남에 60조원 투자… ‘글로벌 피지컬 AI 혁신 클러스터’ 구축",
@@ -4177,54 +3374,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.03553",
-    "source": "arxiv",
-    "title": "iVISION-2DCD: A Long-Term Change Detection Dataset for Large-Scale Outdoor Construction Monitoring",
-    "url": "http://arxiv.org/abs/2607.03553v1",
-    "summary": "iVISION-2DCD is a synthetic benchmark for viewpoint-robust 2D change detection on large outdoor construction sites, built from dense LiDAR point clouds with photorealistic image pairs and precise change annotations. It targets the practical problem that UAV data collection on active sites is safety-constrained and yields limited, misaligned viewpoints, using novel view synthesis plus semi-automated semantic segmentation and change-label generation to preserve hard real-world cases. Evaluations with existing 2D change-detection algorithms show the dataset exposes challenges not covered by current benchmarks in construction monitoring.",
-    "published": "2026-07-03T18:29:13+00:00",
-    "updated": "2026-07-03T18:29:13+00:00",
-    "authors": [
-      "Dayou Mao",
-      "Yuchen Lin",
-      "Ashkan Ebadi",
-      "John Zelek",
-      "Alexander Wong",
-      "Yuhao Chen"
-    ],
-    "extra": {
-      "categories": [
-        "cs.CV",
-        "cs.RO"
-      ],
-      "primary_category": "cs.CV",
-      "pdf_url": "https://arxiv.org/pdf/2607.03553v1",
-      "comment": "11 pages, 7 figures, 1 table. Accepted for publication at the 2026 IEEE International Conference on Robotics and Automation (ICRA 2026). Project page: https://danielmao2019.github.io/iVISION-2DCD-dataset.github.io/",
-      "first_seen": "2026-07-07",
-      "full_text": "Automation in construction is essential for reducing costs and human errors in large-scale projects. We approach the construction progress monitoring from the aspect of detecting changes in construction sites. As construction buildings continue to evolve in geometry and appearance over time, change detection need to be performed from arbitrary camera viewpoints. This necessitates developing 2D Change Detection (2DCD) algorithms that operate robustly across diverse camera perspectives at construction sites. While developing and evaluating such systems is data-intensive, no open-source benchmark dataset exists at the intersection of 2D change detection and construction automation research. Data collection using Unmanned Aerial Vehicles (UAVs) is gaining its popularity in outdoor large-scale surveying. However, in active construction sites conducting drone missions equipped with high-end sensors imposes safety concerns. Flight trajectory and collected camera viewpoints can be significantly limited. To address this critical gap, we introduce iVISION-2DCD, a large-scale synthetically generated dataset from dense LiDAR point clouds with photorealistic input images and accurate ground truth annotations. Our dataset formally defines the problem of viewpoint-robust 2DCD at construction sites and captures the inherent complexities of real-world deployment. In this paper, we present our systematic methodology for synthetic data generation, developing novel view synthesis techniques to overcome bi-temporal alignment and viewpoint diversity challenges, and implementing semi-automated semantic segmentation with change label generation while preserving challenging real-world cases. Benchmark evaluations using state-of-the-art 2DCD algorithms demonstrate that iVISION-2DCD poses novel research challenges for the computer vision and robotics communities.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.03553.jpg"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 14.11,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.109823550133928,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -4294,42 +3443,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 2.0,
       "recency": 2.9258180750223213,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:2b9835fdaca2",
-    "source": "news",
-    "title": "#RoboCup2026 – humanoid league day 1",
-    "url": "https://robohub.org/robocup2026-humanoid-league-day-1/",
-    "summary": "Image credit: RoboCup Federation. RoboCup 2026 kicked off today in Incheon, South Korea, with the league competitions running until 5 July. It’s an exciting time for RoboCup, as there have been some updates to the leagues and competition format. Most prominently, the soccer leagues will have a primary focus on humanoid robots. In a series […]",
-    "published": "2026-07-02T14:14:34+00:00",
-    "updated": "2026-07-02T14:14:34+00:00",
-    "authors": [
-      "Lucy Smith"
-    ],
-    "extra": {
-      "feed": "Robohub",
-      "first_seen": "2026-07-02",
-      "full_text": "Image credit: RoboCup Federation. RoboCup 2026 kicked off today in Incheon, South Korea, with the league competitions running until 5 July. It’s an exciting time for RoboCup, as there have been some updates to the leagues and competition format. Most prominently, the soccer leagues will have a primary focus on humanoid robots. In a series […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 13.858,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 1.8576434777083335,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -4418,42 +3531,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:6c548e6019f1",
-    "source": "news",
-    "title": "#RoboCup2026 – humanoid league day 2",
-    "url": "https://robohub.org/robocup2026-humanoid-league-day-2/",
-    "summary": "The second day’s play at RoboCup 2026 has drawn to a close with another bumper set of matches. Teams have come from far and wide to take part in the humanoid soccer competition this year, with 17 different countries represented. China is the most represented country, boasting 15 teams across the three divisions. Other countries […]",
-    "published": "2026-07-03T18:36:55+00:00",
-    "updated": "2026-07-03T18:36:55+00:00",
-    "authors": [
-      "Lucy Smith"
-    ],
-    "extra": {
-      "feed": "Robohub",
-      "first_seen": "2026-07-03",
-      "full_text": "The second day’s play at RoboCup 2026 has drawn to a close with another bumper set of matches. Teams have come from far and wide to take part in the humanoid soccer competition this year, with 17 different countries represented. China is the most represented country, boasting 15 teams across the three divisions. Other countries […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 13.111,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.1109693707688493,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -5146,44 +4223,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:f6c96571bf38",
-    "source": "news",
-    "title": "Innovation at Agility: Lunch Duty",
-    "url": "https://www.youtube.com/shorts/FKkg7_-U5TE",
-    "summary": "On this holiday, Digit is on grill duty. It turns out precise force control is good for more than payload handling. Happy 4th of July from all of us at Agility. --------------------------------------- At Agility, we make robots that are made for work. Our robot Digit works alongside us in spaces designed for people.",
-    "published": "2026-07-03T13:00:30+00:00",
-    "updated": "2026-07-03T13:00:30+00:00",
-    "authors": [
-      "Agility"
-    ],
-    "extra": {
-      "feed": "Agility Robotics (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i3.ytimg.com/vi/FKkg7_-U5TE/hqdefault.jpg",
-      "first_seen": "2026-07-03",
-      "full_text": "On this holiday, Digit is on grill duty. It turns out precise force control is good for more than payload handling. Happy 4th of July from all of us at Agility. --------------------------------------- At Agility, we make robots that are made for work. Our robot Digit works alongside us in spaces designed for people. Digit handles the tedious and repetitive tasks meant for a machine, allowing companies and their people to focus on the work that requires the human element. Subscribe (hit the bell for notifications) https://www.youtube.com/c/AgilityRobotics Join our Team https://www.agilityrobotics.com/careers Follow our Journey https://twitter.com/agilityrobotics https://www.linkedin.com/company/agilityrobotics https://www.instagram.com/agility_robotics https://www.tiktok.com/@agility_robotics",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 9.061,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.0609073547594243,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:902f8f46dd8e",
     "source": "news",
     "title": "Robbyant Unveils LingBot-Depth 2.0 and LingBot-Vision to Redefine Robotic Spatial Perception",
@@ -5245,40 +4284,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.69431757452877,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:c768530db684",
-    "source": "news",
-    "title": "VeriSilicon Introduces CPP2000 Camera Post-Processing IP for Embodied Robotics and Mobile Vision Applications",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/07/03/verisilicon-introduces-cpp2000-camera-post-processing-ip-for-embodied-robotics-and-mobile-vision-applications/26802",
-    "summary": "Enhancing image quality and visual perception for moving-camera systems",
-    "published": "2026-07-03T13:58:29+00:00",
-    "updated": "2026-07-03T13:58:29+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-07-03",
-      "full_text": "Enhancing image quality and visual perception for moving-camera systems",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 8.07,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.0695358313417658,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -5396,150 +4401,6 @@
       "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:b2f7963d4a0c",
-    "source": "news",
-    "title": "Productive Robotics Equips Manufacturers With Zero Programming End-To-End Automation At IMTS",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/07/02/productive-robotics-equips-manufacturers-with-zero-programming-end-to-end-automation-at-imts/26799",
-    "summary": "",
-    "published": "2026-07-02T13:28:39+00:00",
-    "updated": "2026-07-02T13:28:39+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-07-02",
-      "full_text": "",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 7.851,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 1.8508106327331348,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:6960127709b2",
-    "source": "news",
-    "title": "Jane Heffner is New President of International Federation of Robotics",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/07/02/jane-heffner-is-new-president-of-international-federation-of-robotics/26798",
-    "summary": "",
-    "published": "2026-07-02T13:27:17+00:00",
-    "updated": "2026-07-02T13:27:17+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-07-02",
-      "full_text": "",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 7.851,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 1.8506072596676586,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:b8cc1c4e0d0b",
-    "source": "news",
-    "title": "Skibidi Orange 4 (Widescreen)",
-    "url": "https://www.youtube.com/watch?v=F7QDai1sTG8",
-    "summary": "",
-    "published": "2026-07-03T22:33:10+00:00",
-    "updated": "2026-07-03T22:33:10+00:00",
-    "authors": [
-      "Figure_official"
-    ],
-    "extra": {
-      "feed": "Figure AI (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i3.ytimg.com/vi/F7QDai1sTG8/hqdefault.jpg",
-      "first_seen": "2026-07-04",
-      "full_text": "",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 7.146,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.14612560937004,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:70a0ac732a57",
-    "source": "news",
-    "title": "Skibidi Orange 4",
-    "url": "https://www.youtube.com/shorts/rIrTHk8hnLU",
-    "summary": "",
-    "published": "2026-07-03T22:32:13+00:00",
-    "updated": "2026-07-03T22:32:13+00:00",
-    "authors": [
-      "Figure_official"
-    ],
-    "extra": {
-      "feed": "Figure AI (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i3.ytimg.com/vi/rIrTHk8hnLU/hqdefault.jpg",
-      "first_seen": "2026-07-04",
-      "full_text": "",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 7.146,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.1459842402752978,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
       "demote": -0.0
     },
     "priority": "save_for_later"
@@ -6310,42 +5171,6 @@
       "demote": -6.0
     },
     "priority": "save_for_later"
-  },
-  {
-    "id": "news:a87238856741",
-    "source": "news",
-    "title": "Reflections from ICRA 2026",
-    "url": "https://robohub.org/reflections-from-icra-2026/",
-    "summary": "From the 1st-5th June, the robots descended on Vienna. The 2026 IEEE International Conference on Robotics & Automation (ICRA) brought together the top minds in robotics for one short week to showcase the latest technologies, form new collaborations, and exchange ideas. Held at the Messe Wien, a stone’s throw from the bank of the Danube, […]",
-    "published": "2026-07-02T15:20:41+00:00",
-    "updated": "2026-07-02T15:20:41+00:00",
-    "authors": [
-      "Ella Scallan"
-    ],
-    "extra": {
-      "feed": "Robohub",
-      "first_seen": "2026-07-02",
-      "full_text": "From the 1st-5th June, the robots descended on Vienna. The 2026 IEEE International Conference on Robotics & Automation (ICRA) brought together the top minds in robotics for one short week to showcase the latest technologies, form new collaborations, and exchange ideas. Held at the Messe Wien, a stone’s throw from the bank of the Danube, […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 3.867,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 1.8674822674925595,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "low_priority"
   },
   {
     "id": "news:c31017d86ac5",
