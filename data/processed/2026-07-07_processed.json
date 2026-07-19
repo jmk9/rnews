@@ -2096,102 +2096,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.04591",
-    "source": "arxiv",
-    "title": "Simple-to-Complex Structured Demonstrations for Vision-Language-Action Learning",
-    "url": "http://arxiv.org/abs/2607.04591v1",
-    "summary": "Simple-to-Complex Structured Demonstrations studies how the ordering and structure of robot demonstrations affect vision-language-action learning, using a dual-arm setup where complex manipulation tasks are broken into sub-skills, collected in standardized environments, and arranged from easier to harder trajectories. On block grasping and sorting and towel folding, this curriculum-style demonstration strategy improves success rates and training stability compared with collecting only full end-to-end task demonstrations, suggesting that dataset organization itself can materially affect long-horizon manipulation performance.",
-    "published": "2026-07-06T01:38:43+00:00",
-    "updated": "2026-07-06T01:38:43+00:00",
-    "authors": [
-      "Xinchuan Qiu",
-      "Yi Yu"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.04591v1",
-      "comment": "20 pages",
-      "first_seen": "2026-07-07",
-      "full_text": "Vision-Language-Action (VLA) models have demonstrated strong capabilities in robotic manipulation by integrating visual perception, language understanding, and robot action generation. Existing research has primarily focused on improving model architectures, training strategies, and dataset scale, while little attention has been paid to how demonstrations are collected and organized. We identify demonstration organization as a fundamental yet overlooked aspect of imitation learning, as it directly affects policy learning efficiency, training stability, and policy generalization. To address this gap, we propose a simple-to-complex structured demonstration collection strategy for VLA learning using a dual-arm robotic platform. Our approach systematically organizes data through three general principles: (i) decomposing complex manipulation tasks into progressively learnable sub-skills, (ii) standardizing the interaction environment to reduce unnecessary variability, and (iii) organizing demonstrations according to progressively increasing task complexity. This structured design enables VLA models to first acquire fundamental manipulation skills before learning increasingly complex task compositions, facilitating more effective learning of long-horizon manipulation tasks. We evaluate the proposed strategy on two representative robotic manipulation tasks: block grasping and sorting, and towel folding. Experimental results show consistent improvements in task success rate and training stability compared with the baseline method of directly collecting end-to-end complete task trajectories. These findings highlight demonstration organization as a previously underexplored but important factor in VLA learning and provide practical insights into efficient skill acquisition, scalable dataset construction, and long-horizon robotic manipulation.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.04591.jpg"
-    },
-    "tags": [
-      "#IL",
-      "#VLA",
-      "#Manipulator",
-      "#Bimanual"
-    ],
-    "score": 22.602,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 8.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.602308674439484,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.04546",
-    "source": "arxiv",
-    "title": "Mask2Real-WM: Segmentation Masks as a Sim-to-Real Bridge for Controllable Dexterous World Models",
-    "url": "http://arxiv.org/abs/2607.04546v1",
-    "summary": "Mask2Real-WM predicts dexterous manipulation futures by splitting the problem into mask dynamics and image rendering: a 23-DoF action-conditioned model forecasts future segmentation masks, then a ControlNet-augmented Stable Video Diffusion renderer turns those masks into photorealistic video. Because segmentation masks transfer more cleanly from simulation to real data, the dynamics model can pretrain on over 50 hours of synthetic data and adapt with under 2.5 hours of real demonstrations. On a dexterous pick-and-place benchmark, the mask-based, simulation-pretrained setup preserves fine per-joint action controllability across all 23 DoF, while monolithic RGB predictors mostly capture coarse hand and end-effector motion.",
-    "published": "2026-07-05T23:29:23+00:00",
-    "updated": "2026-07-05T23:29:23+00:00",
-    "authors": [
-      "Riccardo O. Feingold",
-      "Davide Liconti",
-      "Chenyu Yang",
-      "Robert K. Katzschmann"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.04546v1",
-      "comment": "23 pages, 24 figures, 4 tables. Preprint. Project page: https://srl-ethz.github.io/Mask2Real-WM/",
-      "first_seen": "2026-07-07",
-      "full_text": "Action-conditioned world models allow robots to predict the future consequences of candidate actions without additional physical interaction, supporting policy evaluation, planning, and data augmentation. We present Mask2Real-WM, a two-stage action-conditioned world model for dexterous manipulation that decouples pixel prediction into a dynamics model and a rendering model. The dynamics model predicts future segmentation masks from past masks and 23-DoF action sequences. The rendering model maps the predicted masks to photorealistic RGB using a ControlNet-augmented Stable Video Diffusion backbone. The smaller sim-to-real gap in segmentation space enables the dynamics model to benefit from large-scale pretraining on over 50 h of synthetic simulation data, followed by fine-tuning on fewer than 2.5 h of real demonstrations. Experiments on a dexterous pick-and-place benchmark show that mask conditioning and simulation pretraining are both required for per-DoF action controllability across all 23 degrees of freedom. In contrast, monolithic baselines capture broad hand and end-effector trajectories but do not reliably reflect fine-grained, per-joint action effects.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.04546.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Manipulator"
-    ],
-    "score": 22.583,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.583062642321429,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:Kunal-Somani/trajlens",
     "source": "github",
     "title": "Kunal-Somani/trajlens",
@@ -2863,52 +2767,6 @@
       "has_code": 6.0,
       "github_stars_log": 8.217263382430938,
       "github_forks_log": 1.6901960800285136,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.04609",
-    "source": "arxiv",
-    "title": "SEAM: Smooth Execution of Action-Chunked Motion for Vision-Language-Action Policies",
-    "url": "http://arxiv.org/abs/2607.04609v1",
-    "summary": "SEAM smooths action-chunked vision-language-action policies at inference time by using the unexecuted tail of the previous action chunk as a consistency reference for the next one. Its Velocity-guided Loss Steering applies a closed-form correction after each Euler denoising step, avoiding backpropagation, rejection sampling, or retraining. On LIBERO-10 with pi_0.5, it cuts boundary jerk by 28% and chunk transition discontinuity by 27% while keeping task success and denoising cost near the baseline.",
-    "published": "2026-07-06T02:32:10+00:00",
-    "updated": "2026-07-06T02:32:10+00:00",
-    "authors": [
-      "Dijia Zhan",
-      "Xuemiao Xu",
-      "Jinyi Li",
-      "Jie Tang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.04609v1",
-      "comment": "8 pages, 4 figures, 5 tables",
-      "first_seen": "2026-07-07",
-      "full_text": "Vision-Language-Action (VLA) policies that execute fixed-length action chunks can exhibit multimodal bifurcation: a cross-chunk inconsistency in which adjacent chunks generated from independent Gaussian latents can converge to incompatible trajectory modes, producing abrupt discontinuities at chunk boundaries. Existing remedies either require backpropagation through the policy at each denoising step, rely on rejection sampling, or require retraining, each trading computational cost or task reliability for smoother transitions. We propose SEAM (Smooth Execution of Action-Chunked Motion), a training-free inference-time method for flow matching VLAs. SEAM exploits a simple synchronous-execution insight: after the robot consumes the executed prefix, the previous chunk's unexecuted tail is already available as an analytic consistency reference. Its core mechanism, Velocity-guided Loss Steering (VLS), derives a time-dependent target from this tail and applies a closed-form correction after each Euler step without backpropagating through the policy network. On LIBERO-10 with pi_0.5, SEAM reduces boundary jerk by 28%, reduces chunk transition discontinuity by 27%, preserves baseline-level task success, and keeps denoising-loop cost near the unguided baseline.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.04609.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 17.61,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.6102625436805553,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
@@ -4631,42 +4489,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.7071151936631948,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:114b02928b83",
-    "source": "news",
-    "title": "세계 1만5천 AI 석학들 서울 총 집결… ICML 2026, 한국 AI 위상 높인다",
-    "url": "https://www.aitimes.kr/news/articleView.html?idxno=40833",
-    "summary": "세계 최고 권위의 머신러닝 학술대회인 국제머신러닝학회(ICML 2026, International Conference on Machine Learning)가 6일부터 11일까지 6일간 서울 코엑스 전관에서 개최된다. 전 세계 인공지능(AI) 연구자와 기업 관계자 약 1만5000명이 참가하는 이번 행사는 서울에서 열리는 국제 학술행사 가운데 최대 규모 중 하나로 기록될 전망이다.ICML은 신경망, 생성형 AI, 대형언어모델(LLM), 강화학습, 컴퓨터 비전, 로보틱스 등 현대 AI 기술의 핵심 연구 성과가 발표되는 머신러닝 분야 최고",
-    "published": "2026-07-05T16:22:48+00:00",
-    "updated": "2026-07-05T16:22:48+00:00",
-    "authors": [
-      "최광민 기자"
-    ],
-    "extra": {
-      "feed": "인공지능신문",
-      "first_seen": "2026-07-05",
-      "full_text": "세계 최고 권위의 머신러닝 학술대회인 국제머신러닝학회(ICML 2026, International Conference on Machine Learning)가 6일부터 11일까지 6일간 서울 코엑스 전관에서 개최된다. 전 세계 인공지능(AI) 연구자와 기업 관계자 약 1만5000명이 참가하는 이번 행사는 서울에서 열리는 국제 학술행사 가운데 최대 규모 중 하나로 기록될 전망이다.ICML은 신경망, 생성형 AI, 대형언어모델(LLM), 강화학습, 컴퓨터 비전, 로보틱스 등 현대 AI 기술의 핵심 연구 성과가 발표되는 머신러닝 분야 최고",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 5.52,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.5195829507862104,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
