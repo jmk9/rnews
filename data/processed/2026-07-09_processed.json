@@ -220,55 +220,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:NVlabs/ProtoMotions",
-    "source": "github",
-    "title": "NVlabs/ProtoMotions",
-    "url": "https://github.com/NVlabs/ProtoMotions",
-    "summary": "ProtoMotions is a GPU-accelerated simulation and learning framework for training physically simulated digital humans and humanoid robots.",
-    "published": "2024-09-24T08:41:56Z",
-    "updated": "2026-07-06T20:00:13Z",
-    "authors": [
-      "NVlabs"
-    ],
-    "extra": {
-      "stars": 2017,
-      "forks": 279,
-      "language": "Python",
-      "topics": [
-        "character-animation",
-        "digital-human",
-        "humanoid",
-        "humanoid-robots",
-        "physics-simulation",
-        "reinforcement-learning"
-      ],
-      "open_issues": 13,
-      "license": "Apache-2.0",
-      "first_seen": "2026-05-18",
-      "full_text": "ProtoMotions is a GPU-accelerated simulation and learning framework for training physically simulated digital humans and humanoid robots.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Humanoid"
-    ],
-    "score": 41.755,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.3360452950272816,
-      "has_code": 6.0,
-      "github_stars_log": 16.524605809504457,
-      "github_forks_log": 4.894316062684439,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:sou350121/VLA-Handbook",
     "source": "github",
     "title": "sou350121/VLA-Handbook",
@@ -1034,55 +985,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:YuZhaoshu/Efficient-VLAs-Survey",
-    "source": "github",
-    "title": "YuZhaoshu/Efficient-VLAs-Survey",
-    "url": "https://github.com/YuZhaoshu/Efficient-VLAs-Survey",
-    "summary": "🔥This is a curated list of \"A survey on Efficient Vision-Language Action Models\" research. We will continue to maintain and update the repository, so follow us to keep up with the latest developments!!!",
-    "published": "2025-09-12T09:36:09Z",
-    "updated": "2026-07-07T00:56:32Z",
-    "authors": [
-      "YuZhaoshu"
-    ],
-    "extra": {
-      "stars": 168,
-      "forks": 7,
-      "language": null,
-      "topics": [
-        "efficient",
-        "embodied-ai",
-        "vision-language-action",
-        "vision-language-action-model",
-        "vla"
-      ],
-      "open_issues": 0,
-      "license": null,
-      "first_seen": "2026-05-18",
-      "full_text": "🔥This is a curated list of \"A survey on Efficient Vision-Language Action Models\" research. We will continue to maintain and update the repository, so follow us to keep up with the latest developments!!!",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Other",
-      "#Survey"
-    ],
-    "score": 29.326,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.380140034952877,
-      "has_code": 6.0,
-      "github_stars_log": 11.139433523068368,
-      "github_forks_log": 1.806179973983887,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:hanruihua/ir-sim",
     "source": "github",
     "title": "hanruihua/ir-sim",
@@ -1483,57 +1385,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.05396",
-    "source": "arxiv",
-    "title": "From Fixed to Free Cameras: Calibration-Free View-Robust Vision-Language-Action Model",
-    "url": "http://arxiv.org/abs/2607.05396v1",
-    "summary": "Real-world robot deployment rarely maintains the training-stage camera setup, where cameras often experience repositioning or remounting depending on actual scenarios.",
-    "published": "2026-07-06T17:59:59+00:00",
-    "updated": "2026-07-06T17:59:59+00:00",
-    "authors": [
-      "Wenhao Li",
-      "Xueying Jiang",
-      "Quanhao Qian",
-      "Deli Zhao",
-      "Shijian Lu",
-      "Gongjie Zhang",
-      "Ran Xu"
-    ],
-    "extra": {
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.LG",
-        "cs.RO"
-      ],
-      "primary_category": "cs.CV",
-      "pdf_url": "https://arxiv.org/pdf/2607.05396v1",
-      "comment": null,
-      "first_seen": "2026-07-07",
-      "full_text": "Real-world robot deployment rarely maintains the training-stage camera setup, where cameras often experience repositioning or remounting depending on actual scenarios. Existing view-robust Vision-Language-Action (VLA) policies tolerate such camera variations only when the camera extrinsics are explicitly provided, making them fragile and hard to use especially when view robustness is critical. We argue that the policy should not be told where the camera is, but rather figure it out by itself. To this end, we introduce Camera-Centric VLA (CamVLA), a new VLA model that decouples manipulation controls from camera geometry by predicting (i) a camera-centric end-effector action expressed in the local camera frame, and (ii) a 6-DoF hand-eye matrix relating cameras to the robot base. A deterministic geometric transformation composes the two predictions into a robot base-frame action. This disentangles how I should move in pose-independent camera-centric action generation from where I am looking from in camera-perspective geometric grounding. The resulting policy is calibration-free, depth-free, and single-view, requiring only a single monocular RGB image as the visual observation and task instruction at deployment. Evaluations in both simulation and real-world robot data show that CamVLA consistently improves success rates across diverse unseen viewpoints. Project page: https://alibaba-damo-academy.github.io/CamVLA/.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 27.318,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.3181534355059528,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:MINT-SJTU/Evo-1",
     "source": "github",
     "title": "MINT-SJTU/Evo-1",
@@ -1553,7 +1404,8 @@
       "license": "MIT",
       "first_seen": "2026-05-18",
       "full_text": "Evo-1: Lightweight Vision-Language-Action Model with Preserved Semantic Alignment",
-      "summary_kind": "truncation"
+      "summary_kind": "truncation",
+      "thumbnail": "https://raw.githubusercontent.com/MINT-SJTU/Evo-1/HEAD/readme_pics/taolin.jpg"
     },
     "tags": [
       "#VLA",
@@ -2087,62 +1939,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:strands-labs/robots-sim",
-    "source": "github",
-    "title": "strands-labs/robots-sim",
-    "url": "https://github.com/strands-labs/robots-sim",
-    "summary": "Simulated environments for robot agent evaluation and reinforcement learning.",
-    "published": "2026-02-19T19:44:01Z",
-    "updated": "2026-07-07T02:08:25Z",
-    "authors": [
-      "strands-labs"
-    ],
-    "extra": {
-      "stars": 34,
-      "forks": 10,
-      "language": "Python",
-      "topics": [
-        "agentic",
-        "agentic-ai",
-        "ai",
-        "genai",
-        "machine-learning",
-        "python",
-        "robots",
-        "simulation",
-        "strands-agents",
-        "strands-labs",
-        "vision-language-action",
-        "vla"
-      ],
-      "open_issues": 9,
-      "license": "Apache-2.0",
-      "first_seen": "2026-05-18",
-      "full_text": "Simulated environments for robot agent evaluation and reinforcement learning.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Other"
-    ],
-    "score": 25.194,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.390836958373016,
-      "has_code": 6.0,
-      "github_stars_log": 7.720340221751378,
-      "github_forks_log": 2.08278537031645,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:wuji-technology/wuji-mjlab",
     "source": "github",
     "title": "wuji-technology/wuji-mjlab",
@@ -2408,44 +2204,6 @@
     "priority": "must_read"
   },
   {
-    "id": "news:7842abd62c1b",
-    "source": "news",
-    "title": "Alan Walker x UWORLD — The World’s First Musician with an Ultra-Bionic Humanoid Robot",
-    "url": "https://www.youtube.com/watch?v=cerMKU_6tac",
-    "summary": "We are proud to announce Alan Walker as UWORLD’s first Global Entertainment IP Ambassador, who will also become the world’s first musician to have an ultra-bionic humanoid robot. This partnership officially ushers in a new era where entertainment meets ultra‑bionic humanoid robotics—bringing future-forward experiences closer to everyone.",
-    "published": "2026-07-06T12:00:08+00:00",
-    "updated": "2026-07-06T12:00:08+00:00",
-    "authors": [
-      "UBTECH Robotics"
-    ],
-    "extra": {
-      "feed": "UBTECH (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i4.ytimg.com/vi/cerMKU_6tac/hqdefault.jpg",
-      "first_seen": "2026-07-06",
-      "full_text": "We are proud to announce Alan Walker as UWORLD’s first Global Entertainment IP Ambassador, who will also become the world’s first musician to have an ultra-bionic humanoid robot. This partnership officially ushers in a new era where entertainment meets ultra‑bionic humanoid robotics—bringing future-forward experiences closer to everyone. Welcome to the world of Walker. #UWORLD #UBTECH #AlanWalker #AI #Robotics #HumanoidRobot #IP #Musician Subscribe https://www.youtube.com/@UCdYzpvcdKkvlfTc-Abe6cJQ Learn more https://www.ubtrobot.com/en/humanoid/products/WalkerS2 Follow us https://www.facebook.com/ubtechroboticscorp/ https://twitter.com/UBTECHRobotics https://www.linkedin.com/company/ubtech-robotics/",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 23.265,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.2646043038368058,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:HyperbolicCurve/Awesome-World-Action-Model",
     "source": "github",
     "title": "HyperbolicCurve/Awesome-World-Action-Model",
@@ -2696,62 +2454,6 @@
       "research_interest_abstract": 4.0,
       "recency": 2.5071812174751984,
       "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.05377",
-    "source": "arxiv",
-    "title": "Cortex: A Bidirectionally Aligned Embodied Agent Framework for Long-horizon Manipulation",
-    "url": "http://arxiv.org/abs/2607.05377v1",
-    "summary": "While recent Vision-Language-Action (VLA) models show promise toward generalist manipulation policies, they struggle with long-horizon tasks due to their Markovian nature-relying solely on current observations. Hierarchical dual-system methods address this but suffer from a gap between high-level planning semantics and low-level execution kinematics.",
-    "published": "2026-07-06T17:55:05+00:00",
-    "updated": "2026-07-06T17:55:05+00:00",
-    "authors": [
-      "Jiaqi Peng",
-      "Xiqian Yu",
-      "Delin Feng",
-      "Yuqiang Yang",
-      "Wenzhe Cai",
-      "Jing Xiong",
-      "Ganlin Yang",
-      "Jinliang Zheng",
-      "Jiafei Cao",
-      "Xueyuan Wei",
-      "Jiangmiao Pang",
-      "Yuan Shen",
-      "Tai Wang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.05377v1",
-      "comment": "Project website: https://steinate.github.io/cortex.github.io/",
-      "first_seen": "2026-07-07",
-      "full_text": "While recent Vision-Language-Action (VLA) models show promise toward generalist manipulation policies, they struggle with long-horizon tasks due to their Markovian nature-relying solely on current observations. Hierarchical dual-system methods address this but suffer from a gap between high-level planning semantics and low-level execution kinematics. We introduce Cortex, a bidirectionally aligned embodied agent framework with a customized planning interface that conveys executable and tractable subtask plans from high-level VLM to low-level VLA. Specifically, we standardize manipulation subtasks into 32 canonical skill primitives and inject tractability principles, such as representative object attributes and improved trajectory reachability, into the data generation pipeline. This enables automatic annotation of over 4k hours of open-source video data and generation of 30 hours of simulation data. We further devise an event-balanced sampling strategy to construct training data for fine-tuning the framework to better handle planning ambiguity during subtask transitions, enhanced by carefully designed harness engineering from task contexts to skill constraints during inference. Both open-loop VLM and closed-loop system evaluations demonstrate Cortex's efficacy, e.g., it outperforms monolithic baselines by 3.1% on Libero-long and 4.1% on RoboTwin. Notably, Cortex's generalist VLM enables zero-shot completion of unseen real-world long-horizon tasks, such as multi-stage chemistry experiments, by simply combining with a fine-tuned VLA-a capability infeasible through VLA fine-tuning alone.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 22.317,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.317424268201885,
-      "has_code": 6.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 3.0,
@@ -3046,42 +2748,6 @@
       "recency": 2.831052731123512,
       "has_code": 6.0,
       "github_stars_log": 5.395906230238125,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:3e7040a08347",
-    "source": "news",
-    "title": "This humanoid robotics company is going public, but its CEO isn’t promising a robot in your home anytime soon",
-    "url": "https://techcrunch.com/2026/07/05/this-humanoid-robotics-company-is-going-public-but-its-ceo-isnt-promising-a-robot-in-your-home-anytime-soon/",
-    "summary": "While other humanoid startups chase sky-high valuations, Agility Robotics is betting its future on execution — and a SPAC.",
-    "published": "2026-07-06T06:05:29+00:00",
-    "updated": "2026-07-06T06:05:29+00:00",
-    "authors": [
-      "Connie Loizos"
-    ],
-    "extra": {
-      "feed": "TechCrunch — Robotics",
-      "first_seen": "2026-07-06",
-      "full_text": "While other humanoid startups chase sky-high valuations, Agility Robotics is betting its future on execution — and a SPAC.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 21.212,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.2118290140426584,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
@@ -4360,86 +4026,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.05777",
-    "source": "arxiv",
-    "title": "Observation Quality Matters: Robust Multi-Fisheye Calibration via Failure-Oriented Analysis",
-    "url": "http://arxiv.org/abs/2607.05777v1",
-    "summary": "Reliable calibration of multi-fisheye camera systems remains challenging as rig size, camera arrangement diversity, and field of view increase. Existing pipelines can jointly optimize intrinsics, extrinsics, and target poses, but their success still depends heavily on empirical capture rules and the quality of the observations supplied to the solver.",
-    "published": "2026-07-07T03:07:23+00:00",
-    "updated": "2026-07-07T03:07:23+00:00",
-    "authors": [
-      "Peize Liu",
-      "Zhe Tong",
-      "Chen Feng",
-      "Shaojie Shen"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.05777v1",
-      "comment": "9 pages, 7 figures, 6 tables. Code: https://github.com/HKUST-Aerial-Robotics/CO-Calib",
-      "first_seen": "2026-07-08",
-      "full_text": "Reliable calibration of multi-fisheye camera systems remains challenging as rig size, camera arrangement diversity, and field of view increase. Existing pipelines can jointly optimize intrinsics, extrinsics, and target poses, but their success still depends heavily on empirical capture rules and the quality of the observations supplied to the solver. This paper studies this dependency through a failure-oriented analysis. We reveal that calibration failures are not sufficiently explained by detector recall loss or global image-plane distribution imbalance. Instead, the dominant failure factor lies in intrinsic initialization: observations with limited radial span couple focal scale with fisheye projection-shape parameters, producing ill-conditioned updates. Guided by this insight, we propose CO-Calib, a plug-in calibration-data construction framework that combines a robust learning-based target detector with an error-analysis-guided frame selector. CO-Calib constructs initialization-friendly anchors, co-visible multi-camera constraints, and coverage-completion frames without changing the existing calibration workflow or optimization backend. Extensive experiments on synthetic and real multi-fisheye systems demonstrate that CO-Calib improves the overall success rate from 68.1% to 99.3%, increases extrinsic accuracy, and augments real-world calibration stability. The source code will be made publicly available at https://github.com/HKUST-Aerial-Robotics/CO-Calib.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 13.4,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.399611769794147,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:3b9e95e06d7b",
-    "source": "news",
-    "title": "#RoboCup2026 – humanoid league knockout stages",
-    "url": "https://robohub.org/robocup2026-humanoid-league-knockout-stages/",
-    "summary": "This weekend saw the finale of the league competitions at RoboCup 2026 in Incheon, South Korea, with the winners in the small, middle, and large humanoid divisions decided.",
-    "published": "2026-07-06T10:15:49+00:00",
-    "updated": "2026-07-06T10:15:49+00:00",
-    "authors": [
-      "Lucy Smith"
-    ],
-    "extra": {
-      "feed": "Robohub",
-      "first_seen": "2026-07-06",
-      "full_text": "This weekend saw the finale of the league competitions at RoboCup 2026 in Incheon, South Korea, with the winners in the small, middle, and large humanoid divisions decided. Congratulations to the following teams, who finished in the top three positions in each size class: Small division Invic, Wuhan University, China Hamburg Bit-Bots, Universität Hamburg, Germany […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 13.249,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.2490810042832337,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:4316d5ef5219",
     "source": "news",
     "title": "NEO’s Hands | An API to the Physical World",
@@ -4792,74 +4378,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.4894927024404763,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:2ece5d604ed6",
-    "source": "news",
-    "title": "Humanoids Summit Continues Global Expansion with Seoul Edition",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/07/06/humanoids-summit-continues-global-expansion-with-seoul-edition/26805",
-    "summary": "",
-    "published": "2026-07-06T13:22:00+00:00",
-    "updated": "2026-07-06T13:22:00+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-07-06",
-      "full_text": "",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 10.277,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.2767868492088295,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:defc0f0a2335",
-    "source": "news",
-    "title": "Harmonic Drive Advances Surgical Robotics Supply With Innovative LPA 20 Compact Actuator Control Component",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/07/06/harmonic-drive-advances-surgical-robotics-supply-with-innovative-lpa-20-compact-actuator-control-component/26804",
-    "summary": "Harmonic Drive's launch of the LPA 20 integrated servo actuator strengthens the company's position as a top supplier of surgical robotic motion control components, delivering precision and a compact design to address critical challenges for original equipment manufacturers (OEMs).",
-    "published": "2026-07-06T13:19:54+00:00",
-    "updated": "2026-07-06T13:19:54+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-07-06",
-      "full_text": "Harmonic Drive's launch of the LPA 20 integrated servo actuator strengthens the company's position as a top supplier of surgical robotic motion control components, delivering precision and a compact design to address critical challenges for original equipment manufacturers (OEMs).",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 10.276,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.2764743491021826,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -5784,40 +5302,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.657320084489087,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:372a4f75dc01",
-    "source": "news",
-    "title": "LeRobot v0.6.0: Imagine, Evaluate, Improve",
-    "url": "https://huggingface.co/blog/lerobot-release-v060",
-    "summary": "",
-    "published": "2026-07-07T00:00:00+00:00",
-    "updated": "2026-07-07T00:00:00+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Hugging Face Blog",
-      "first_seen": "2026-07-06",
-      "full_text": "",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 5.372,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.3717273260590277,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,

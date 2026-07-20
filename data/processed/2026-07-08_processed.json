@@ -221,55 +221,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:NVlabs/ProtoMotions",
-    "source": "github",
-    "title": "NVlabs/ProtoMotions",
-    "url": "https://github.com/NVlabs/ProtoMotions",
-    "summary": "ProtoMotions is a GPU-accelerated simulation and learning framework for training physically simulated digital humans and humanoid robots.",
-    "published": "2024-09-24T08:41:56Z",
-    "updated": "2026-07-06T20:00:13Z",
-    "authors": [
-      "NVlabs"
-    ],
-    "extra": {
-      "stars": 1992,
-      "forks": 248,
-      "language": "Python",
-      "topics": [
-        "character-animation",
-        "digital-human",
-        "humanoid",
-        "humanoid-robots",
-        "physics-simulation",
-        "reinforcement-learning"
-      ],
-      "open_issues": 15,
-      "license": "Apache-2.0",
-      "first_seen": "2026-05-18",
-      "full_text": "ProtoMotions is a GPU-accelerated simulation and learning framework for training physically simulated digital humans and humanoid robots.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Humanoid"
-    ],
-    "score": 41.843,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.5528281035094245,
-      "has_code": 6.0,
-      "github_stars_log": 16.497536493502437,
-      "github_forks_log": 4.792398694191473,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:sou350121/VLA-Handbook",
     "source": "github",
     "title": "sou350121/VLA-Handbook",
@@ -935,55 +886,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:YuZhaoshu/Efficient-VLAs-Survey",
-    "source": "github",
-    "title": "YuZhaoshu/Efficient-VLAs-Survey",
-    "url": "https://github.com/YuZhaoshu/Efficient-VLAs-Survey",
-    "summary": "🔥This is a curated list of \"A survey on Efficient Vision-Language Action Models\" research. We will continue to maintain and update the repository, so follow us to keep up with the latest developments!!!",
-    "published": "2025-09-12T09:36:09Z",
-    "updated": "2026-07-07T00:56:32Z",
-    "authors": [
-      "YuZhaoshu"
-    ],
-    "extra": {
-      "stars": 167,
-      "forks": 7,
-      "language": null,
-      "topics": [
-        "efficient",
-        "embodied-ai",
-        "vision-language-action",
-        "vision-language-action-model",
-        "vla"
-      ],
-      "open_issues": 0,
-      "license": null,
-      "first_seen": "2026-05-18",
-      "full_text": "🔥This is a curated list of \"A survey on Efficient Vision-Language Action Models\" research. We will continue to maintain and update the repository, so follow us to keep up with the latest developments!!!",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Other",
-      "#Survey"
-    ],
-    "score": 29.53,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.5969228432787697,
-      "has_code": 6.0,
-      "github_stars_log": 11.126546408629315,
-      "github_forks_log": 1.806179973983887,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:hanruihua/ir-sim",
     "source": "github",
     "title": "hanruihua/ir-sim",
@@ -1213,57 +1115,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.05396",
-    "source": "arxiv",
-    "title": "From Fixed to Free Cameras: Calibration-Free View-Robust Vision-Language-Action Model",
-    "url": "http://arxiv.org/abs/2607.05396v1",
-    "summary": "Real-world robot deployment rarely maintains the training-stage camera setup, where cameras often experience repositioning or remounting depending on actual scenarios.",
-    "published": "2026-07-06T17:59:59+00:00",
-    "updated": "2026-07-06T17:59:59+00:00",
-    "authors": [
-      "Wenhao Li",
-      "Xueying Jiang",
-      "Quanhao Qian",
-      "Deli Zhao",
-      "Shijian Lu",
-      "Gongjie Zhang",
-      "Ran Xu"
-    ],
-    "extra": {
-      "categories": [
-        "cs.CV",
-        "cs.AI",
-        "cs.LG",
-        "cs.RO"
-      ],
-      "primary_category": "cs.CV",
-      "pdf_url": "https://arxiv.org/pdf/2607.05396v1",
-      "comment": null,
-      "first_seen": "2026-07-07",
-      "full_text": "Real-world robot deployment rarely maintains the training-stage camera setup, where cameras often experience repositioning or remounting depending on actual scenarios. Existing view-robust Vision-Language-Action (VLA) policies tolerate such camera variations only when the camera extrinsics are explicitly provided, making them fragile and hard to use especially when view robustness is critical. We argue that the policy should not be told where the camera is, but rather figure it out by itself. To this end, we introduce Camera-Centric VLA (CamVLA), a new VLA model that decouples manipulation controls from camera geometry by predicting (i) a camera-centric end-effector action expressed in the local camera frame, and (ii) a 6-DoF hand-eye matrix relating cameras to the robot base. A deterministic geometric transformation composes the two predictions into a robot base-frame action. This disentangles how I should move in pose-independent camera-centric action generation from where I am looking from in camera-perspective geometric grounding. The resulting policy is calibration-free, depth-free, and single-view, requiring only a single monocular RGB image as the visual observation and task instruction at deployment. Evaluations in both simulation and real-world robot data show that CamVLA consistently improves success rates across diverse unseen viewpoints. Project page: https://alibaba-damo-academy.github.io/CamVLA/.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 27.535,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.534936249171627,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:MINT-SJTU/Evo-1",
     "source": "github",
     "title": "MINT-SJTU/Evo-1",
@@ -1283,7 +1134,8 @@
       "license": "MIT",
       "first_seen": "2026-05-18",
       "full_text": "Evo-1: Lightweight Vision-Language-Action Model with Preserved Semantic Alignment",
-      "summary_kind": "truncation"
+      "summary_kind": "truncation",
+      "thumbnail": "https://raw.githubusercontent.com/MINT-SJTU/Evo-1/HEAD/readme_pics/taolin.jpg"
     },
     "tags": [
       "#VLA",
@@ -1512,55 +1364,6 @@
       "github_forks_log": 0.0,
       "real_robot": 3.0,
       "trusted_feed": 5.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.04816",
-    "source": "arxiv",
-    "title": "CAC-VLA: Context-Gated Action Conditioning for Vision-Language-Action Models",
-    "url": "http://arxiv.org/abs/2607.04816v1",
-    "summary": "Vision-Language-Action (VLA) models have become a promising paradigm for generalist robot manipulation, where visual-language representations are used to condition continuous action generation.",
-    "published": "2026-07-06T08:50:05+00:00",
-    "updated": "2026-07-06T08:50:05+00:00",
-    "authors": [
-      "Yifu Xiong",
-      "Wenhao Yu",
-      "Jiaxuan Lin",
-      "Bojun Zou",
-      "Jiahao Li",
-      "Lu Zhang",
-      "Yanyong Zhang",
-      "Jianmin Ji"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.04816v1",
-      "comment": "16 pages, 6 figures",
-      "first_seen": "2026-07-07",
-      "full_text": "Vision-Language-Action (VLA) models have become a promising paradigm for generalist robot manipulation, where visual-language representations are used to condition continuous action generation. However, these representations are not explicitly optimized for action conditioning, leaving the action expert to bridge the gap between multimodal understanding and precise motor control. Recent action-reasoning methods introduce additional modules to generate explicit action plans or action-space reasoning signals, demonstrating the benefit of action-level guidance but often requiring separate action-generation frameworks. We propose CAC-VLA, a Context-Gated Action Conditioning framework that learns a lightweight latent-action interface directly within the VLM. Instead of generating executable trajectories, CAC-VLA trains the VLM to predict coarse-to-fine latent actions, which are structured representations encoded from future action segments, and adaptively leverages them to condition the action expert via a context gate. This enables VLM-native action conditioning while calibrating the influence of latent-action guidance on expert action generation. Experiments on LIBERO and LIBERO-Plus demonstrate the effectiveness of CAC-VLA, achieving 98.3% average success rate on LIBERO and 89.5% LIBERO-Plus, suggesting that context-gated latent-action conditioning is an effective interface for continuous expert control.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 26.453,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.4531058891542656,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
       "demote": -0.0
     },
     "priority": "must_read"
@@ -1816,51 +1619,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.04940",
-    "source": "arxiv",
-    "title": "Closing the Reality Gap: Zero-Shot Sim-to-Real Deployment for Dexterous Force-Based Grasping and Manipulation",
-    "url": "http://arxiv.org/abs/2607.04940v1",
-    "summary": "Human-like dexterous hands with multiple fingers offer human-level manipulation capabilities but remain difficult to train the control policies that can deploy on real hardware due to contact-rich physics and imperfect actuation.",
-    "published": "2026-07-06T11:15:36+00:00",
-    "updated": "2026-07-06T11:15:36+00:00",
-    "authors": [
-      "Zhe Zhao",
-      "Zhibin Li",
-      "Yilin Ou",
-      "Mengshi Qi"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.04940v1",
-      "comment": "9 pages, 9 figures. arXiv admin note: substantial text overlap with arXiv:2601.02778",
-      "first_seen": "2026-07-07",
-      "full_text": "Human-like dexterous hands with multiple fingers offer human-level manipulation capabilities but remain difficult to train the control policies that can deploy on real hardware due to contact-rich physics and imperfect actuation. We present a sim-to-real reinforcement learning method that leverages dense tactile feedback combined with joint torque sensing to explicitly regulate physical interactions. To enable effective sim-to-real transfer, we introduce (i) a computationally fast tactile simulation that computes distances between dense virtual tactile units and the object via parallel forward kinematics, providing high-rate, high-resolution touch signals needed by RL; (ii) a current-to-torque calibration that eliminates the need for torque sensors on dexterous hands by mapping motor current to joint torque; and (iii) actuator dynamics modeling with randomization to account for non-ideal torque-speed effects and bridge the actuation gaps. Using an asymmetric actor-critic PPO pipeline, we train policies entirely in simulation and deploy them directly to a five-finger hand. The resulting policies demonstrate two essential human-hand skills: (1) command-based controllable grasp force tracking and (2) reorientation of objects in the hand, both of which are robustly executed without fine-tuning on the robot. By combining tactile and torque in the observation space with scalable sensing and actuation modeling, our system provides a practical solution to achieve reliable dexterous manipulation. To our knowledge, this is the first demonstration of controllable grasping on a multi-finger dexterous hand trained entirely in simulation and transferred zero-shot on real hardware.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Manipulator"
-    ],
-    "score": 25.475,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.4747601555704364,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:wertyuilife2/go2_rl_robotlab",
     "source": "github",
     "title": "wertyuilife2/go2_rl_robotlab",
@@ -1896,62 +1654,6 @@
       "has_code": 6.0,
       "github_stars_log": 7.385606273598312,
       "github_forks_log": 1.2041199826559248,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:strands-labs/robots-sim",
-    "source": "github",
-    "title": "strands-labs/robots-sim",
-    "url": "https://github.com/strands-labs/robots-sim",
-    "summary": "Simulated environments for robot agent evaluation and reinforcement learning.",
-    "published": "2026-02-19T19:44:01Z",
-    "updated": "2026-07-07T02:08:25Z",
-    "authors": [
-      "strands-labs"
-    ],
-    "extra": {
-      "stars": 34,
-      "forks": 10,
-      "language": "Python",
-      "topics": [
-        "agentic",
-        "agentic-ai",
-        "ai",
-        "genai",
-        "machine-learning",
-        "python",
-        "robots",
-        "simulation",
-        "strands-agents",
-        "strands-labs",
-        "vision-language-action",
-        "vla"
-      ],
-      "open_issues": 9,
-      "license": "Apache-2.0",
-      "first_seen": "2026-05-18",
-      "full_text": "Simulated environments for robot agent evaluation and reinforcement learning.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Other"
-    ],
-    "score": 25.411,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.6076197668154766,
-      "has_code": 6.0,
-      "github_stars_log": 7.720340221751378,
-      "github_forks_log": 2.08278537031645,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
@@ -2115,44 +1817,6 @@
       "research_interest_title": 5.0,
       "research_interest_abstract": 2.0,
       "recency": 2.910037907616567,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:7842abd62c1b",
-    "source": "news",
-    "title": "Alan Walker x UWORLD — The World’s First Musician with an Ultra-Bionic Humanoid Robot",
-    "url": "https://www.youtube.com/watch?v=cerMKU_6tac",
-    "summary": "We are proud to announce Alan Walker as UWORLD’s first Global Entertainment IP Ambassador, who will also become the world’s first musician to have an ultra-bionic humanoid robot. This partnership officially ushers in a new era where entertainment meets ultra‑bionic humanoid robotics—bringing future-forward experiences closer to everyone.",
-    "published": "2026-07-06T12:00:08+00:00",
-    "updated": "2026-07-06T12:00:08+00:00",
-    "authors": [
-      "UBTECH Robotics"
-    ],
-    "extra": {
-      "feed": "UBTECH (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i4.ytimg.com/vi/cerMKU_6tac/hqdefault.jpg",
-      "first_seen": "2026-07-06",
-      "full_text": "We are proud to announce Alan Walker as UWORLD’s first Global Entertainment IP Ambassador, who will also become the world’s first musician to have an ultra-bionic humanoid robot. This partnership officially ushers in a new era where entertainment meets ultra‑bionic humanoid robotics—bringing future-forward experiences closer to everyone. Welcome to the world of Walker. #UWORLD #UBTECH #AlanWalker #AI #Robotics #HumanoidRobot #IP #Musician",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 23.481,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.4813871138492063,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -2333,112 +1997,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.05377",
-    "source": "arxiv",
-    "title": "Cortex: A Bidirectionally Aligned Embodied Agent Framework for Long-horizon Manipulation",
-    "url": "http://arxiv.org/abs/2607.05377v1",
-    "summary": "While recent Vision-Language-Action (VLA) models show promise toward generalist manipulation policies, they struggle with long-horizon tasks due to their Markovian nature-relying solely on current observations. Hierarchical dual-system methods address this but suffer from a gap between high-level planning semantics and low-level execution kinematics.",
-    "published": "2026-07-06T17:55:05+00:00",
-    "updated": "2026-07-06T17:55:05+00:00",
-    "authors": [
-      "Jiaqi Peng",
-      "Xiqian Yu",
-      "Delin Feng",
-      "Yuqiang Yang",
-      "Wenzhe Cai",
-      "Jing Xiong",
-      "Ganlin Yang",
-      "Jinliang Zheng",
-      "Jiafei Cao",
-      "Xueyuan Wei",
-      "Jiangmiao Pang",
-      "Yuan Shen",
-      "Tai Wang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.05377v1",
-      "comment": "Project website: https://steinate.github.io/cortex.github.io/",
-      "first_seen": "2026-07-07",
-      "full_text": "While recent Vision-Language-Action (VLA) models show promise toward generalist manipulation policies, they struggle with long-horizon tasks due to their Markovian nature-relying solely on current observations. Hierarchical dual-system methods address this but suffer from a gap between high-level planning semantics and low-level execution kinematics. We introduce Cortex, a bidirectionally aligned embodied agent framework with a customized planning interface that conveys executable and tractable subtask plans from high-level VLM to low-level VLA. Specifically, we standardize manipulation subtasks into 32 canonical skill primitives and inject tractability principles, such as representative object attributes and improved trajectory reachability, into the data generation pipeline. This enables automatic annotation of over 4k hours of open-source video data and generation of 30 hours of simulation data. We further devise an event-balanced sampling strategy to construct training data for fine-tuning the framework to better handle planning ambiguity during subtask transitions, enhanced by carefully designed harness engineering from task contexts to skill constraints during inference. Both open-loop VLM and closed-loop system evaluations demonstrate Cortex's efficacy, e.g., it outperforms monolithic baselines by 3.1% on Libero-long and 4.1% on RoboTwin. Notably, Cortex's generalist VLM enables zero-shot completion of unseen real-world long-horizon tasks, such as multi-stage chemistry experiments, by simply combining with a fine-tuned VLA-a capability infeasible through VLA fine-tuning alone.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 22.534,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.5342070819146825,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.04972",
-    "source": "arxiv",
-    "title": "Multi-Robot Open Adaptive Teaming Across Unseen Environments, Partners, and Scales",
-    "url": "http://arxiv.org/abs/2607.04972v1",
-    "summary": "Deploying robot teams in the real world requires simultaneous adaptation to unseen environments, unknown partners, and varying team sizes, yet existing approaches often address these challenges in isolation under the closed-world assumption of fixed teammates.",
-    "published": "2026-07-06T12:02:02+00:00",
-    "updated": "2026-07-06T12:02:02+00:00",
-    "authors": [
-      "Yang Li",
-      "Feng Xue",
-      "Fan Mo",
-      "Yunhao Liu",
-      "Jianhong Wang",
-      "Ying Wen",
-      "Qingrui Zhang",
-      "Shaoshuai Mou",
-      "Wei Pan"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.04972v1",
-      "comment": null,
-      "first_seen": "2026-07-07",
-      "full_text": "Deploying robot teams in the real world requires simultaneous adaptation to unseen environments, unknown partners, and varying team sizes, yet existing approaches often address these challenges in isolation under the closed-world assumption of fixed teammates. We formalize this as open adaptive multi-robot teaming and propose a hypergraphic-form game formulation that captures team-level cooperative relationships beyond pairwise interactions, providing a principled foundation for coordination structure inference when team composition changes dynamically within episodes. Unlike graph neural network architectures, this is a game-theoretic construct for modeling strategic interactions and payoff structures among agents. Building on this formulation, we develop the Hypergraphic Open-ended Learning Algorithm (HOLA), which progressively expands partner and environment diversity during training rather than optimizing for fixed configurations. Evaluated on cooperative pursuit with multi-drone and multi-quadruped platforms, HOLA outperforms all baselines across all three adaptability dimensions. Learned policies transfer directly to physical hardware without fine-tuning, with successful deployments on Crazyflie and Zsibot L1 platforms confirming robust real-world coordination in novel environments with unseen teammates.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 22.482,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.4816698780084323,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:Kunal-Somani/trajlens",
     "source": "github",
     "title": "Kunal-Somani/trajlens",
@@ -2576,91 +2134,6 @@
     "priority": "must_read"
   },
   {
-    "id": "news:3e7040a08347",
-    "source": "news",
-    "title": "This humanoid robotics company is going public, but its CEO isn’t promising a robot in your home anytime soon",
-    "url": "https://techcrunch.com/2026/07/05/this-humanoid-robotics-company-is-going-public-but-its-ceo-isnt-promising-a-robot-in-your-home-anytime-soon/",
-    "summary": "While other humanoid startups chase sky-high valuations, Agility Robotics is betting its future on execution — and a SPAC.",
-    "published": "2026-07-06T06:05:29+00:00",
-    "updated": "2026-07-06T06:05:29+00:00",
-    "authors": [
-      "Connie Loizos"
-    ],
-    "extra": {
-      "feed": "TechCrunch — Robotics",
-      "first_seen": "2026-07-06",
-      "full_text": "While other humanoid startups chase sky-high valuations, Agility Robotics is betting its future on execution — and a SPAC.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 21.429,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.4286118230357143,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.04616",
-    "source": "arxiv",
-    "title": "SILO: Simulation-in-the-Loop Sim-to-Real Transfer for Multi-Stage Cable Routing",
-    "url": "http://arxiv.org/abs/2607.04616v1",
-    "summary": "Linear-deformable manipulation remains challenging due to the complex deformations of objects such as cables and ropes.",
-    "published": "2026-07-06T02:48:10+00:00",
-    "updated": "2026-07-06T02:48:10+00:00",
-    "authors": [
-      "Stone Tao",
-      "Jie Xu",
-      "Hesam Rabeti",
-      "Yashraj Narang",
-      "Yijie Guo",
-      "Iretiayo Akinola"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.04616v1",
-      "comment": "Website: https://silo-cable-routing.github.io/",
-      "first_seen": "2026-07-07",
-      "full_text": "Linear-deformable manipulation remains challenging due to the complex deformations of objects such as cables and ropes. Prior data-driven approaches, particularly imitation learning, have shown some promise in narrowly defined settings but typically require thousands of demonstrations for specific tasks and cable types, limiting scalability and generalization. We introduce a sim-to-real reinforcement learning (RL) framework for multi-stage cable routing that leverages GPU-parallelized simulation to approximate linear deformable behaviors. Training across thousands of parallel simulations enables the learned policies to generalize across diverse cable geometries and deformation patterns. To bridge the sim-to-real gap, we propose a novel deployment strategy that combines a Simulation In the LOop (SILO) execution framework, localized RL policies, and robust cable state estimation. On real-world cable routing tasks, our approach achieves higher success rates and 2x reduction in cycle times compared to prior state-of-the-art learning methods. To our knowledge, this is the first successful sim-to-real transfer of RL policies for multi-stage cable routing. Videos and additional visualizations are available at https://silo-cable-routing.github.io/",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#IL",
-      "#Manipulator"
-    ],
-    "score": 21.399,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.399249240813492,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:chang-xinhai/Awesome-Dexterous-Manipulation",
     "source": "github",
     "title": "chang-xinhai/Awesome-Dexterous-Manipulation",
@@ -2746,96 +2219,6 @@
       "recency": 2.7411440614955356,
       "has_code": 0.0,
       "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.04652",
-    "source": "arxiv",
-    "title": "KAM-WM: Kinematic Affordance Maps from Latent World Models for Robot Manipulation",
-    "url": "http://arxiv.org/abs/2607.04652v1",
-    "summary": "Learning manipulation from few demonstrations requires visual priors that capture not only where to interact, but also how the interaction should begin; static priors such as segmentation masks encode only the former.",
-    "published": "2026-07-06T04:17:15+00:00",
-    "updated": "2026-07-06T04:17:15+00:00",
-    "authors": [
-      "Xinyu Shao",
-      "Keru Zhou",
-      "Guowei Huang",
-      "Yajun Gao",
-      "Tongtong Cao",
-      "Xiu Li"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.04652v1",
-      "comment": "16 pages, 8 figures, preprint",
-      "first_seen": "2026-07-07",
-      "full_text": "Learning manipulation from few demonstrations requires visual priors that capture not only where to interact, but also how the interaction should begin; static priors such as segmentation masks encode only the former. We present KAM-WM, a framework that extracts a coarse directional interaction cue from a frozen latent video world model without rollout or world-model fine-tuning. KAM-WM queries a Flow Matching image-to-video backbone once and interprets its single-step latent velocity as a Kinematic Affordance Map (KAM), which provides task-conditioned interaction regions and coarse motion structure. A lightweight Perceiver compresses KAM into tokens that condition a diffusion policy together with RGB observations and proprioception. Across LIBERO and RoboTwin2.0, KAM-WM reaches 90.6% average success on LIBERO and achieves 65.7% and 22.4% success rates in the Easy and Hard settings on RoboTwin2.0, respectively. Controlled comparisons against a zero-order mask prior suggest that part of the gains comes from directional information beyond spatial localization alone. These results indicate that, in the evaluated settings, a frozen video model can provide a useful first-order visual prior for control without the test-time cost of future rollout.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#IL",
-      "#Manipulator"
-    ],
-    "score": 20.413,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.4125056896279764,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:AshrafGalibShaik/Difotrain",
-    "source": "github",
-    "title": "AshrafGalibShaik/Difotrain",
-    "url": "https://github.com/AshrafGalibShaik/Difotrain",
-    "summary": "An embodiment-agnostic framework for training Vision-Language-Action (VLA) models from the real world",
-    "published": "2026-01-10T08:57:50Z",
-    "updated": "2026-07-06T06:45:06Z",
-    "authors": [
-      "AshrafGalibShaik"
-    ],
-    "extra": {
-      "stars": 11,
-      "forks": 0,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 0,
-      "license": "MIT",
-      "first_seen": "2026-07-02",
-      "full_text": "An embodiment-agnostic framework for training Vision-Language-Action (VLA) models from the real world",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 19.83,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.4345071677306547,
-      "has_code": 6.0,
-      "github_stars_log": 5.395906230238125,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
@@ -3134,53 +2517,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.04880",
-    "source": "arxiv",
-    "title": "PRISM: Personalized Robotic Dataset Generation via Image-based Scene and Motion Synthesis",
-    "url": "http://arxiv.org/abs/2607.04880v1",
-    "summary": "Recent advances in large-scale pretrained vision-language-action models have improved robot policy learning, but directly deploying such policies in user-specific environments remains challenging due to limited generalization, which inevitably requires collecting a dataset tailored to the target environment.",
-    "published": "2026-07-06T10:00:47+00:00",
-    "updated": "2026-07-06T10:00:47+00:00",
-    "authors": [
-      "Dogyu Ko",
-      "Haneul Kim",
-      "Chanyoung Yeo",
-      "Dowoon Lee",
-      "Taeho Park",
-      "Hyoseok Hwang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.04880v1",
-      "comment": null,
-      "first_seen": "2026-07-07",
-      "full_text": "Recent advances in large-scale pretrained vision-language-action models have improved robot policy learning, but directly deploying such policies in user-specific environments remains challenging due to limited generalization, which inevitably requires collecting a dataset tailored to the target environment. Teleoperation yields well-aligned data but is costly and difficult to scale, whereas simulation scales easily but struggles to resemble the target environment and generate task-specific trajectories. To meet both simultaneously, we propose PRISM, an end-to-end pipeline that generates personalized robotic datasets from a single image and a natural-language instruction. PRISM constructs digital cousin scenes that are semantically and geometrically aligned with the user environment yet diverse at the instance level, and synthesizes executable demonstrations without human teleoperation. Extensive experiments show that policies trained on PRISM-generated datasets outperform those trained on baseline-generated datasets on LIBERO and LIBERO-Plus, achieve up to 100\\% success rate on three real-world manipulation tasks, and maintain stronger performance when evaluated in environments that differ from those seen during training.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 18.464,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.463626722839782,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:5b5c786200ec",
     "source": "news",
     "title": "삼현, 휴머노이드용 액추에이터 ‘액슬론(AXLON)’ 첫 공개",
@@ -3335,51 +2671,6 @@
       "research_interest_title": 5.0,
       "research_interest_abstract": 2.0,
       "recency": 2.657133671376488,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.05122",
-    "source": "arxiv",
-    "title": "Green for Go, Red for No: Visual Grounding via Semantic Segmentation for VLA Navigation Policies",
-    "url": "http://arxiv.org/abs/2607.05122v1",
-    "summary": "Vision-language-action (VLA) models enable robot navigation from natural language and visual goals, but remain susceptible to perceptual distractions and ambiguous scene interpretations. This paper presents the first empirical evaluation of visual grounding for VLA navigation policies.",
-    "published": "2026-07-06T14:11:27+00:00",
-    "updated": "2026-07-06T14:11:27+00:00",
-    "authors": [
-      "Adrian Szvoren",
-      "Dimitrios Kanoulas",
-      "Nilufer Tuptuk"
-    ],
-    "extra": {
-      "categories": [
-        "cs.CV",
-        "cs.RO"
-      ],
-      "primary_category": "cs.CV",
-      "pdf_url": "https://arxiv.org/pdf/2607.05122v1",
-      "comment": "Accepted for RSS 2026 workshop",
-      "first_seen": "2026-07-07",
-      "full_text": "Vision-language-action (VLA) models enable robot navigation from natural language and visual goals, but remain susceptible to perceptual distractions and ambiguous scene interpretations. This paper presents the first empirical evaluation of visual grounding for VLA navigation policies. We propose a real-time segmentation-based grounding method that highlights traversable areas in green and non-traversable areas in red using SegFormer. Two variants are evaluated: observation-only segmentation and joint observation-goal augmentation. Using OmniVLA on the Grand Tour dataset, we show that visual grounding reduces the mean waypoint error by 27-44% at the farthest waypoint, depending on the instruction length. The benefits are greater for long instructions than for short instructions, and grounding provides little improvement for image goals. Normalized error analysis indicates that grounding primarily acts as a trajectory length regularizer, reducing the predicted path length by 30% without improving per-unit-distance reasoning. Our results indicate that visual grounding offers a simple, computationally inexpensive method to improve VLA navigation without model retraining, although it cannot compensate for missing training signals in out-of-distribution instructions.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 17.501,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.500928311220238,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -3624,87 +2915,6 @@
       "research_interest_abstract": 0.0,
       "recency": 2.6686416082291666,
       "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.05777",
-    "source": "arxiv",
-    "title": "Observation Quality Matters: Robust Multi-Fisheye Calibration via Failure-Oriented Analysis",
-    "url": "http://arxiv.org/abs/2607.05777v1",
-    "summary": "CO-Calib targets a practical weak point in multi-fisheye camera calibration: failures often come less from missed detections or uneven image coverage than from poor intrinsic initialization when observations have too little radial span, which entangles focal scale with fisheye projection parameters. It adds a plug-in data-construction layer with a learning-based target detector and frame selection driven by error analysis, choosing initialization anchors, co-visible multi-camera constraints, and coverage-completion frames without changing the downstream optimizer. On synthetic and real rigs, it raises calibration success from 68.1% to 99.3% and improves extrinsic accuracy and real-world stability.",
-    "published": "2026-07-07T03:07:23+00:00",
-    "updated": "2026-07-07T03:07:23+00:00",
-    "authors": [
-      "Peize Liu",
-      "Zhe Tong",
-      "Chen Feng",
-      "Shaojie Shen"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.05777v1",
-      "comment": "9 pages, 7 figures, 6 tables. Code: https://github.com/HKUST-Aerial-Robotics/CO-Calib",
-      "first_seen": "2026-07-08",
-      "full_text": "Reliable calibration of multi-fisheye camera systems remains challenging as rig size, camera arrangement diversity, and field of view increase. Existing pipelines can jointly optimize intrinsics, extrinsics, and target poses, but their success still depends heavily on empirical capture rules and the quality of the observations supplied to the solver. This paper studies this dependency through a failure-oriented analysis. We reveal that calibration failures are not sufficiently explained by detector recall loss or global image-plane distribution imbalance. Instead, the dominant failure factor lies in intrinsic initialization: observations with limited radial span couple focal scale with fisheye projection-shape parameters, producing ill-conditioned updates. Guided by this insight, we propose CO-Calib, a plug-in calibration-data construction framework that combines a robust learning-based target detector with an error-analysis-guided frame selector. CO-Calib constructs initialization-friendly anchors, co-visible multi-camera constraints, and coverage-completion frames without changing the existing calibration workflow or optimization backend. Extensive experiments on synthetic and real multi-fisheye systems demonstrate that CO-Calib improves the overall success rate from 68.1% to 99.3%, increases extrinsic accuracy, and augments real-world calibration stability. The source code will be made publicly available at https://github.com/HKUST-Aerial-Robotics/CO-Calib.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.05777.jpg"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 13.616,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.6163945834002975,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:3b9e95e06d7b",
-    "source": "news",
-    "title": "#RoboCup2026 – humanoid league knockout stages",
-    "url": "https://robohub.org/robocup2026-humanoid-league-knockout-stages/",
-    "summary": "This weekend saw the finale of the league competitions at RoboCup 2026 in Incheon, South Korea, with the winners in the small, middle, and large humanoid divisions decided.",
-    "published": "2026-07-06T10:15:49+00:00",
-    "updated": "2026-07-06T10:15:49+00:00",
-    "authors": [
-      "Lucy Smith"
-    ],
-    "extra": {
-      "feed": "Robohub",
-      "first_seen": "2026-07-06",
-      "full_text": "This weekend saw the finale of the league competitions at RoboCup 2026 in Incheon, South Korea, with the winners in the small, middle, and large humanoid divisions decided. Congratulations to the following teams, who finished in the top three positions in each size class: Small division Invic, Wuhan University, China Hamburg Bit-Bots, Universität Hamburg, Germany […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 13.466,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.465863812847222,
-      "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
@@ -4053,74 +3263,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.706275511612103,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:2ece5d604ed6",
-    "source": "news",
-    "title": "Humanoids Summit Continues Global Expansion with Seoul Edition",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/07/06/humanoids-summit-continues-global-expansion-with-seoul-edition/26805",
-    "summary": "",
-    "published": "2026-07-06T13:22:00+00:00",
-    "updated": "2026-07-06T13:22:00+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-07-06",
-      "full_text": "",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 10.494,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.4935696583829365,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:defc0f0a2335",
-    "source": "news",
-    "title": "Harmonic Drive Advances Surgical Robotics Supply With Innovative LPA 20 Compact Actuator Control Component",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/07/06/harmonic-drive-advances-surgical-robotics-supply-with-innovative-lpa-20-compact-actuator-control-component/26804",
-    "summary": "Harmonic Drive's launch of the LPA 20 integrated servo actuator strengthens the company's position as a top supplier of surgical robotic motion control components, delivering precision and a compact design to address critical challenges for original equipment manufacturers (OEMs).",
-    "published": "2026-07-06T13:19:54+00:00",
-    "updated": "2026-07-06T13:19:54+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-07-06",
-      "full_text": "Harmonic Drive's launch of the LPA 20 integrated servo actuator strengthens the company's position as a top supplier of surgical robotic motion control components, delivering precision and a compact design to address critical challenges for original equipment manufacturers (OEMs).",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 10.493,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.493257158315972,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -4605,42 +3747,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:bac547da9744",
-    "source": "news",
-    "title": "현대차, 월드컵 16강전 무대서 세계 축구팬에 ‘아틀라스 퍼포먼스’ 선사",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=47292",
-    "summary": "현대자동차가 'FIFA 월드컵 2026'에서 보스턴 다이나믹스의 휴머노이드 로봇 '아틀라스(Atlas)'와 함께 전 세계 축구팬들에게 새로운 미래 모빌리티 경험을 선사하며 첨단 로보틱스 선도 기업으로서의 위상을 뽐냈다. 현대차는 5일(현지시간) 미국 뉴저지에 위치한 뉴욕 뉴저지 스타디움에서 열린 16강전 하프타임에서 아틀라스가 심판에게 경기구를 전달하는 퍼포먼스를 성공적으로 시연했다고 밝혔다. 이날 아틀라스는 하프타임 종료 직전, 선수 입장 터널에서 등장해 관중들을 향해 해리 케인, 엘링 홀란드, 마테우스 쿠냐, 손흥민 등 세계적인",
-    "published": "2026-07-06T17:20:24+00:00",
-    "updated": "2026-07-06T17:20:24+00:00",
-    "authors": [
-      "최지호"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-07-06",
-      "full_text": "현대자동차가 'FIFA 월드컵 2026'에서 보스턴 다이나믹스의 휴머노이드 로봇 '아틀라스(Atlas)'와 함께 전 세계 축구팬들에게 새로운 미래 모빌리티 경험을 선사하며 첨단 로보틱스 선도 기업으로서의 위상을 뽐냈다. 현대차는 5일(현지시간) 미국 뉴저지에 위치한 뉴욕 뉴저지 스타디움에서 열린 16강전 하프타임에서 아틀라스가 심판에게 경기구를 전달하는 퍼포먼스를 성공적으로 시연했다고 밝혔다. 이날 아틀라스는 하프타임 종료 직전, 선수 입장 터널에서 등장해 관중들을 향해 해리 케인, 엘링 홀란드, 마테우스 쿠냐, 손흥민 등 세계적인",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 6.529,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.529045845920139,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:e831f2d7df84",
     "source": "news",
     "title": "시에라베이스, ‘AI·스마트 산업안전기술 챌린지’ 고용노동부 장관상",
@@ -4778,76 +3884,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 2.0,
       "recency": 2.6770443579910714,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:372a4f75dc01",
-    "source": "news",
-    "title": "LeRobot v0.6.0: Imagine, Evaluate, Improve",
-    "url": "https://huggingface.co/blog/lerobot-release-v060",
-    "summary": "",
-    "published": "2026-07-07T00:00:00+00:00",
-    "updated": "2026-07-07T00:00:00+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Hugging Face Blog",
-      "first_seen": "2026-07-06",
-      "full_text": "",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 5.589,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.5885101350074406,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:76b605ee0909",
-    "source": "news",
-    "title": "서울대 로보틱스연구소, 국가연구소(NRL 2.0) 선정",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=47293",
-    "summary": "서울대학교 로보틱스연구소(소장 조규진)가 과학기술정보통신부와 교육부가 공동추진하는 2026년 국가연구소 사업에 최종 선정됐다. 연구소는 앞으로 10년간 정부 지원을 바탕으로 로봇의 몸과 지능을 함께 설계하는 차세대 피지컬 AI 원천기술 개발과 창업 생태계 구축을 추진한다.국가연구소 사업(NRL 2.0)은 세계와 경쟁하고 지역과 상생할 수 있는 역량을 지닌 대학 부설연구소를 선정해, 첨단기술 분야에서 글로벌 경쟁력을 갖춘 연구소로 육성하는 범 정부차원의 연구지원 사업이다. 선정된 연구소는 최대 10년간 연 100억원 수준의 연구비와",
-    "published": "2026-07-06T17:51:05+00:00",
-    "updated": "2026-07-06T17:51:05+00:00",
-    "authors": [
-      "최지호"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-07-07",
-      "full_text": "서울대학교 로보틱스연구소(소장 조규진)가 과학기술정보통신부와 교육부가 공동추진하는 2026년 국가연구소 사업에 최종 선정됐다. 연구소는 앞으로 10년간 정부 지원을 바탕으로 로봇의 몸과 지능을 함께 설계하는 차세대 피지컬 AI 원천기술 개발과 창업 생태계 구축을 추진한다.국가연구소 사업(NRL 2.0)은 세계와 경쟁하고 지역과 상생할 수 있는 역량을 지닌 대학 부설연구소를 선정해, 첨단기술 분야에서 글로벌 경쟁력을 갖춘 연구소로 육성하는 범 정부차원의 연구지원 사업이다. 선정된 연구소는 최대 10년간 연 100억원 수준의 연구비와",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 5.534,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.5336118182242062,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
