@@ -316,7 +316,7 @@
     "source": "github",
     "title": "google-deepmind/mujoco_playground",
     "url": "https://github.com/google-deepmind/mujoco_playground",
-    "summary": "An open-source library for GPU-accelerated robot learning and sim-to-real transfer.",
+    "summary": "MuJoCo Playground is an open-source library for training robot policies with GPU-accelerated simulation and moving them toward real-world deployment. It is aimed at robot learning workflows where fast iteration, scalable reinforcement learning, and sim-to-real transfer matter, using MuJoCo as the physics backbone.",
     "published": "2024-12-03T22:39:09Z",
     "updated": "2026-07-22T20:34:52Z",
     "authors": [
@@ -331,7 +331,7 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18",
       "full_text": "An open-source library for GPU-accelerated robot learning and sim-to-real transfer.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://github.com/google-deepmind/mujoco_playground/raw/main/assets/banner.png?raw=true"
     },
     "tags": [
@@ -1046,7 +1046,7 @@
     "source": "github",
     "title": "ROBOTIS-GIT/cyclo_lab",
     "url": "https://github.com/ROBOTIS-GIT/cyclo_lab",
-    "summary": "This repository provides tutorials for reinforcement learning and imitation learning using ROBOTIS robots, and supports Sim2Real functionality for deploying the learned policies on real robots.",
+    "summary": "ROBOTIS-GIT/cyclo_lab collects tutorials for training ROBOTIS robots with reinforcement learning and imitation learning, with an emphasis on moving policies from simulation onto physical hardware. It looks useful as a practical Sim2Real learning resource for researchers or developers working with ROBOTIS platforms who want end-to-end examples rather than just standalone algorithms.",
     "published": "2025-07-14T12:30:59Z",
     "updated": "2026-07-22T09:14:01Z",
     "authors": [
@@ -1070,7 +1070,7 @@
       "license": "Apache-2.0",
       "first_seen": "2026-06-26",
       "full_text": "This repository provides tutorials for reinforcement learning and imitation learning using ROBOTIS robots, and supports Sim2Real functionality for deploying the learned policies on real robots.",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -1098,7 +1098,7 @@
     "source": "github",
     "title": "isaac-sim/IsaacLab-Arena",
     "url": "https://github.com/isaac-sim/IsaacLab-Arena",
-    "summary": "Isaac Lab - Arena is a robotics simulation framework that enhances NVIDIA Isaac Lab by providing a composable, scalable system for creating diverse simulation environments and evaluating robot learning policies. The framework enables developers to rapidly prototype and test robotic tasks with various robot embodiments, objects, and environments.",
+    "summary": "Isaac Lab - Arena extends NVIDIA Isaac Lab with a composable simulation layer for building robot-learning environments from interchangeable robots, objects, tasks, and scenes. It is aimed at quickly prototyping diverse robotics tasks and evaluating learned policies across different embodiments and environment configurations, making it useful for scaling simulation coverage beyond one-off Isaac Lab setups.",
     "published": "2025-08-15T12:28:23Z",
     "updated": "2026-07-22T20:43:07Z",
     "authors": [
@@ -1113,7 +1113,7 @@
       "license": "NOASSERTION",
       "first_seen": "2026-05-18",
       "full_text": "Isaac Lab - Arena is a robotics simulation framework that enhances NVIDIA Isaac Lab by providing a composable, scalable system for creating diverse simulation environments and evaluating robot learning policies. The framework enables developers to rapidly prototype and test robotic tasks with various robot embodiments, objects, and environments.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/isaac-sim/IsaacLab-Arena/HEAD/docs/images/static_apple_pick_and_place.gif"
     },
     "tags": [
@@ -1423,7 +1423,7 @@
     "source": "github",
     "title": "dartsim/dart",
     "url": "https://github.com/dartsim/dart",
-    "summary": "Research-focused C++23 physics engine for robotics, animation, and machine learning, with Python bindings",
+    "summary": "DART is a research-focused C++23 physics engine for robotics, animation, and machine learning, with Python bindings for easier integration into experiments and tooling. It is useful when a project needs simulation infrastructure that can sit close to robotics or ML workflows while still exposing a modern C++ core.",
     "published": "2011-09-19T21:53:51Z",
     "updated": "2026-07-22T21:51:23Z",
     "authors": [
@@ -1457,7 +1457,7 @@
       "license": "BSD-2-Clause",
       "first_seen": "2026-05-22",
       "full_text": "Research-focused C++23 physics engine for robotics, animation, and machine learning, with Python bindings",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/dartsim/dart/main/docs/dart_logo_377x107.jpg"
     },
     "tags": [
@@ -2189,7 +2189,7 @@
     "source": "arxiv",
     "title": "The Open Ant: A Robot Platform for Reinforcement Learning Research",
     "url": "http://arxiv.org/abs/2607.18488v1",
-    "summary": "Reinforcement learning (RL) research has demonstrated success in both physical and simulated domains; however, the predominant methodology remains rooted in simulations. The predominance of simulations makes translating research to physical reality uncertain for both algorithms and researchers.",
+    "summary": "Open Ant is an open-source physical counterpart to the Gymnasium Ant environment, built to let reinforcement learning researchers move more directly between simulation and real robot experiments. The platform can learn competent walking from scratch on hardware in about an hour using either SARSA(λ) or Soft Actor-Critic, and policies trained in its simulator also transfer to the real robot. The authors also emphasize practical research usability: new users can get to first results quickly, and the robot is designed to be repaired, modified, and updated when hardware breaks.",
     "published": "2026-07-20T20:18:29+00:00",
     "updated": "2026-07-20T20:18:29+00:00",
     "authors": [
@@ -2212,7 +2212,7 @@
       "comment": "Published in the Reinforcement Learning Conference",
       "first_seen": "2026-07-22",
       "full_text": "Reinforcement learning (RL) research has demonstrated success in both physical and simulated domains; however, the predominant methodology remains rooted in simulations. The predominance of simulations makes translating research to physical reality uncertain for both algorithms and researchers. We propose a physical platform that is designed to simplify the transition. In this paper, we present the Open Ant: a physical variant of the commonly used Gymnasium Ant environment, along with a simulation. We demonstrate that competent walking policies can be learned from scratch in approximately one hour directly from the physical robot's experience for two substantially different RL algorithms: SARSA($λ$) and Soft Actor-Critic (SAC). Separately, we show policies that were learned in simulation transfer to reality. We also examine how well the platform supports a nimble experimental ecosystem. Specifically, we observe the speed with which new users from diverse backgrounds achieve their first success with the platform, and how easily the platform can be repaired and updated when hardware issues arise. Both the hardware design and software are available as open-source on GitHub for ease of customization. In summary, we advocate for the use of the Open Ant for RL researchers who frequently use simulated environments, so they can more easily include robot experiments in their evaluations.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2607.18488.jpg"
     },
     "tags": [
@@ -2405,7 +2405,7 @@
     "source": "github",
     "title": "learnsyslab/uq_vla",
     "url": "https://github.com/learnsyslab/uq_vla",
-    "summary": "Official code repository for \"Uncertainty Quantification for Flow-Based Vision-Language-Action Models\".",
+    "summary": "learnsyslab/uq_vla provides the official implementation for Uncertainty Quantification for Flow-Based Vision-Language-Action Models. It focuses on estimating uncertainty in flow-based VLA policies, which is useful for understanding when a robot action model is confident versus when its predictions may be unreliable.",
     "published": "2026-07-12T06:06:39Z",
     "updated": "2026-07-12T09:07:44Z",
     "authors": [
@@ -2420,7 +2420,7 @@
       "license": "Apache-2.0",
       "first_seen": "2026-07-17",
       "full_text": "Official code repository for \"Uncertainty Quantification for Flow-Based Vision-Language-Action Models\".",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -2624,7 +2624,7 @@
     "source": "github",
     "title": "open-edge-platform/physical-ai-studio",
     "url": "https://github.com/open-edge-platform/physical-ai-studio",
-    "summary": "Physical AI Studio is an end-to-end framework for training robots to perform tasks through imitation learning from human demonstrations.",
+    "summary": "Physical AI Studio provides an end-to-end imitation-learning pipeline for training robots from human demonstrations. It is aimed at turning demonstration data into task-performing robot policies, making it useful for researchers or teams who want a practical workflow for physical AI experimentation rather than isolated training components.",
     "published": "2025-08-28T21:17:43Z",
     "updated": "2026-07-22T15:31:10Z",
     "authors": [
@@ -2639,7 +2639,7 @@
       "license": "Apache-2.0",
       "first_seen": "2026-07-16",
       "full_text": "Physical AI Studio is an end-to-end framework for training robots to perform tasks through imitation learning from human demonstrations.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/open-edge-platform/physical-ai-studio/HEAD/docs/assets/physical_ai_studio.png"
     },
     "tags": [
@@ -2703,7 +2703,7 @@
     "source": "arxiv",
     "title": "RoboInter1.5: A Holistic Intermediate Representation Suite for Embodied World Modeling and Robotic Manipulation",
     "url": "http://arxiv.org/abs/2607.18709v1",
-    "summary": "Existing robot datasets remain expensive to curate, embodiment-specific, and insufficiently annotated with the fine-grained structure required for generalizable reasoning, execution, or long-horizon environment dynamics simulation.",
+    "summary": "RoboInter1.5 expands RoboInter1.0 into a dense intermediate-representation suite for robotic manipulation and embodied world modeling, with RoboInter-Data covering over 230k manipulation episodes across 571 scenes and annotations for subtasks, primitive skills, grounding, segmentation, affordances, grasp poses, contacts, and motion traces. Those structured signals are used not just for interpretation, but to train and benchmark embodied VQA, improve VLA action execution through plan-then-execute variants, and condition RoboInter-World to predict future physical states in a more controllable way.",
     "published": "2026-07-21T05:05:01+00:00",
     "updated": "2026-07-21T05:05:01+00:00",
     "authors": [
@@ -2725,7 +2725,7 @@
       "comment": "28 pages. arXiv admin note: substantial text overlap with arXiv:2602.09973",
       "first_seen": "2026-07-22",
       "full_text": "Existing robot datasets remain expensive to curate, embodiment-specific, and insufficiently annotated with the fine-grained structure required for generalizable reasoning, execution, or long-horizon environment dynamics simulation. Building on our prior work, RoboInter1.0, we present RoboInter1.5, an extended and holistic suite of intermediate representations for both robotic manipulation and embodied world modeling. RoboInter1.5 provides a unified resource of data, benchmarks, and models centered on dense manipulation-oriented intermediate representations. Specifically, RoboInter-Data contains over 230k manipulation episodes across 571 scenes with dense per-frame annotations covering more than ten types of intermediate representations, including subtasks, primitive skills, object and gripper grounding, segmentation, affordance, grasp poses, contact points, motion traces, etc. Built upon these annotations, RoboInter-VQA introduces spatial and temporal embodied VQA tasks to benchmark and improve the intermediate-representation reasoning capabilities of our RoboInter-VLM. RoboInter-VLA further studies how such representations benefit action execution through implicit, explicit, and modular plan-then-execute paradigms. To better model the physical world, we further introduce RoboInter-World, which leverages intermediate representations as structured conditioning signals for controllable prediction of future world states. Extensive evaluations demonstrate that RoboInter1.5 provides a unified spatiotemporal scaffolding for intermediate representations. Rather than treating intermediate representations merely as interpretable signals, RoboInter1.5 conceptualizes them as a bidirectional interface that both regularizes low-level action spaces and constrains the latent rollouts of open-world physical simulators.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2607.18709.jpg"
     },
     "tags": [
@@ -2998,7 +2998,7 @@
     "source": "arxiv",
     "title": "Towards Torque-Driven Reinforcement Learning for Quadruped Locomotion",
     "url": "http://arxiv.org/abs/2607.18365v1",
-    "summary": "Reinforcement learning (RL) for legged robots is advancing locomotion, demonstrating its ability to adapt to new and challenging terrain. Traditionally, these RL locomotion frameworks are position-based, making the policy less adaptable to terrain types and requiring state estimation techniques in the observation space, i.e., linear velocity.",
+    "summary": "Torque-driven RL is applied to heavyweight, high-torque quadruped locomotion, replacing the more common position-control setup and avoiding reliance on current linear velocity in the policy observations. In Isaac Sim/Isaac Lab experiments on a Unitree B1, the policy tracks commanded motion across rough terrain, reaches 3.5 m/s and 1.5 rad/s, and can climb and descend stairs without exteroceptive sensing.",
     "published": "2026-07-20T16:35:53+00:00",
     "updated": "2026-07-20T16:35:53+00:00",
     "authors": [
@@ -3014,7 +3014,7 @@
       "comment": "6 pages, 4 figures. Accepted manuscript. Published in the 2026 IEEE/SICE International Symposium on System Integration (SII), pp. 1259-1264",
       "first_seen": "2026-07-22",
       "full_text": "Reinforcement learning (RL) for legged robots is advancing locomotion, demonstrating its ability to adapt to new and challenging terrain. Traditionally, these RL locomotion frameworks are position-based, making the policy less adaptable to terrain types and requiring state estimation techniques in the observation space, i.e., linear velocity. Moreover, these RL frameworks often use small, lightweight quadrupeds that are limited in their viability for high-complexity tasks due to hardware constraints. This work explores an RL torque control framework for heavyweight high-torque quadrupeds. The RL framework in this paper can traverse rough terrain and effectively track a desired linear velocity without requiring knowledge of the agent's current velocity. Using Nvidia's Isaac Sim and Isaac Lab, simulation results of the RL torque control policy are shown on the Unitree B1 quadruped, achieving speeds of 3.5 m/s and 1.5 rad/s. In addition, the quadruped can walk up and down stairs without the aid of an exteroceptive sensor.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2607.18365.jpg"
     },
     "tags": [
@@ -3611,7 +3611,7 @@
     "source": "arxiv",
     "title": "Reinforcement Learning for Delivery Drone-Based Participatory Sensing in Dynamic Environments",
     "url": "http://arxiv.org/abs/2607.18874v1",
-    "summary": "Using Unmanned Aerial Vehicle (UAV) for urban sensing has emerged as a powerful paradigm to monitor the status of the city, e.g., air quality and noise levels, through agile aerial crowdsourcing.",
+    "summary": "SensUAV models joint package delivery and urban sensing for UAV fleets under changing wind conditions, where drones must choose sensing tasks while also adapting velocity to preserve energy and performance. TSRL handles the problem with two coupled reinforcement-learning layers: a macro task-embedding dispatcher that scales task assignment across many drones, and a micro wind-aware controller that adjusts flight speed in dynamic environments. On real-world Hangzhou and Shanghai datasets, it improves average system profit over baselines by 20.1% and 46.6%, respectively.",
     "published": "2026-07-21T09:06:23+00:00",
     "updated": "2026-07-21T09:06:23+00:00",
     "authors": [
@@ -3632,7 +3632,7 @@
       "comment": null,
       "first_seen": "2026-07-22",
       "full_text": "Using Unmanned Aerial Vehicle (UAV) for urban sensing has emerged as a powerful paradigm to monitor the status of the city, e.g., air quality and noise levels, through agile aerial crowdsourcing. Despite this potential, existing UAV-based sensing approaches overlook environmental disturbances like wind that drastically impact drone velocity and energy efficiency. Consequently, directly applying existing methods to this joint delivery and sensing paradigm in dynamic environments faces two severe challenges: (1) scalability bottlenecks as fleet sizes expand; and (2) multi-timescale decision heterogeneity between macro task dispatching and micro velocity control. To tackle these, we formalize the problem as SensUAV and propose a Two TimeScale Reinforcement Learning framework (TSRL). Specifically, TSRL separates decision-making into two cooperative layers. At the macro level, a task-embedding sensing dispatcher handles scalability by separately encoding distinct task features and sequentially evaluating UAV suitability before task selection. At the micro level, a wind-aware velocity controller learns fine-grained velocity scheduling to adapt to dynamic environmental variations. Extensive experiments on real-world datasets demonstrate that TSRL significantly outperforms baselines, achieving average system profit improvements of 20.1% in Hangzhou and 46.6% in Shanghai.",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -3898,7 +3898,7 @@
     "source": "news",
     "title": "Training Agents 3: Reinforcement Learning",
     "url": "https://www.youtube.com/watch?v=ztdTed5egrM",
-    "summary": "Training Agents, Session 3: from a fine-tuned baseline to reinforcement learning with GRPO. In this live session, we'll move past imitation and start training on outcomes.",
+    "summary": "A live Training Agents session walks through moving an agent model from supervised fine-tuning into reinforcement learning with GRPO, using TRL to sample multiple completions per prompt and train from their relative reward scores without a value model, reward model, or critic. It focuses on practical agent post-training mechanics: writing verifiable reward functions, running GRPO on Hugging Face Jobs, interpreting reward/KL/length curves, and spotting failure modes like reward hacking, collapse, and length gaming.",
     "published": "2026-07-22T13:04:13+00:00",
     "updated": "2026-07-22T13:04:13+00:00",
     "authors": [
@@ -3909,7 +3909,7 @@
       "thumbnail": "https://i3.ytimg.com/vi/ztdTed5egrM/hqdefault.jpg",
       "first_seen": "2026-07-22",
       "full_text": "Training Agents, Session 3: from a fine-tuned baseline to reinforcement learning with GRPO. In this live session, we'll move past imitation and start training on outcomes. We'll take the model from the earlier sessions and run Group Relative Policy Optimization: sample multiple completions per prompt, score them with a reward function, and use the group's relative scores as the training signal — no value model, no reward model, no critic to train. Everything runs in TRL. What we'll cover: - Why GRPO after SFT, and what RL adds that imitation can't - How GRPO works: group sampling, relative advantages, and why that replaces a critic - Writing verifiable reward functions for agent tasks - Running TRL GRPO on Hugging Face Jobs - Reading the training curves: reward, KL, and completion length - Common failure modes: reward hacking, collapse, and length gaming Repo: https://github.com/burtenshaw/training-agents This is part of the Training Agents series: using coding agents to design, run, monitor, and review post-training experiments, while training models to become better agents.",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -3936,7 +3936,7 @@
     "source": "arxiv",
     "title": "Beyond Score Prediction: LLM-Based Essay Scoring and Feedback Generation via Reinforcement Learning with Rubric Rewards",
     "url": "http://arxiv.org/abs/2607.19219v1",
-    "summary": "Large language models (LLMs) have been widely applied to automated essay scoring (AES) and automated feedback generation (AFG). However, existing studies rely primarily on prompt engineering or supervised fine-tuning, while systematic research on reinforcement learning (RL) post-training and automated evaluation of feedback quality remains limited.",
+    "summary": "RLAES trains an LLM to score essays and generate feedback together using reinforcement learning rewards tied to a 166-item rubric-based feedback evaluator, rather than optimizing only for score prediction. Its adaptive gated reward scheme applies feedback evaluation only when needed, while adjacent contrastive reasoning helps calibrate neighboring score levels. On ASAP, RLAES-AGFO reaches QWK 0.803, the best reported among LLM-based methods in the text, while preserving feedback quality comparable to GPT-5.5 and avoiding the degradation seen with score-only RL.",
     "published": "2026-07-21T15:49:02+00:00",
     "updated": "2026-07-21T15:49:02+00:00",
     "authors": [
@@ -3955,7 +3955,7 @@
       "comment": "12 pages, 4 figures, 9 tables",
       "first_seen": "2026-07-22",
       "full_text": "Large language models (LLMs) have been widely applied to automated essay scoring (AES) and automated feedback generation (AFG). However, existing studies rely primarily on prompt engineering or supervised fine-tuning, while systematic research on reinforcement learning (RL) post-training and automated evaluation of feedback quality remains limited. We propose RLAES, a unified LLM framework that jointly optimizes essay scoring and feedback generation through RL. To make feedback quality measurable, interpretable, and usable for training, we introduce Rubric-based Feedback Evaluation (RFE), an essay-grounded feedback evaluation framework comprising 166 fine-grained binary rubric items and an LLM-as-judge. Building on RFE, we propose Adaptive Gated Feedback Optimization (AGFO), which activates rubric-based feedback rewards on demand during RL, reducing evaluation overhead while improving feedback quality. We also propose Adjacent Contrastive Reasoning (ACR) to improve ordinal score calibration by explicitly contrasting adjacent score levels. Experimental results show that the RFE framework captures essay-feedback consistency, exhibits strong pairwise discriminative power, and closely aligns with expert preferences. On the ASAP benchmark, RLAES-AGFO achieves the best scoring performance among LLM-based methods (QWK = 0.803), while maintaining feedback quality comparable to GPT-5.5 and avoiding the feedback degradation observed under score-only RL. Code and datasets are publicly available at https://github.com/hellomuyi/RLAES.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2607.19219.jpg"
     },
     "tags": [
@@ -3983,7 +3983,7 @@
     "source": "arxiv",
     "title": "Agentic Real2Sim: Physics-based World Modeling with Vision-Language Agents",
     "url": "http://arxiv.org/abs/2607.19190v1",
-    "summary": "Real-to-sim conversion for robotic interaction with objects remains labor-intensive because it requires more than visual reconstruction: a streamlined real2sim process must recover scene geometries and object states, infer physical parameters, and assemble actors, objects, cameras, poses, and trajectories into a runnable physical simulation.",
+    "summary": "Agentic Real2Sim uses vision-language agents to turn real recordings of robot-object interactions into runnable simulation episodes, handling geometry, object states, physical parameters, cameras, poses, trajectories, and simulator assembly rather than just visual reconstruction. It is evaluated across rigid manipulation, deformable-object interaction, and humanoid motion scenes, showing a single agentic pipeline can cover cases usually served by separate Real2Sim workflows. The authors also report that an open-weight VLM backend achieves comparable conversion success to frontier models at much lower cost, making the generated real-aligned twins plausible for policy learning and evaluation.",
     "published": "2026-07-21T15:23:38+00:00",
     "updated": "2026-07-21T15:23:38+00:00",
     "authors": [
@@ -4021,7 +4021,7 @@
       "comment": null,
       "first_seen": "2026-07-22",
       "full_text": "Real-to-sim conversion for robotic interaction with objects remains labor-intensive because it requires more than visual reconstruction: a streamlined real2sim process must recover scene geometries and object states, infer physical parameters, and assemble actors, objects, cameras, poses, and trajectories into a runnable physical simulation. Today this process still depends on manual tuning of visual foundation models, mesh cleanup, coordinate-frame alignment, and brittle workflow glue across visual perception tools and simulators. We introduce \\textit{Agentic Real2Sim}, a framework for generalized physical world modeling with vision-language agents, converting a real-world recording of object-robot interaction into a simulatable episodic twin which preserves observations, geometries, robot interactions, and object states. We evaluate Agentic Real2Sim on rigid-object manipulation, deformable-object interaction, and humanoid motion scenes, spanning domains that are usually handled by separate Real2Sim pipelines, marking a first step toward scalable conversion. The framework's agentic decisions can be driven by an open-weight VLM backend at a small fraction of the cost of frontier models, while attaining comparable conversion success rate. We aim to use the resulting real-world-aligned twins for downstream robotics tasks, specifically policy learning and evaluation. The project site is available at https://ericchen321.github.io/agentic_real2sim.github.io/.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2607.19190.jpg"
     },
     "tags": [
@@ -4135,7 +4135,7 @@
     "source": "github",
     "title": "lololem/diamants-collab",
     "url": "https://github.com/lololem/diamants-collab",
-    "summary": "DIAMANTS is an open-source platform for distributed intelligence and swarm robotics. It unites ROS2, Python/Mesa, WebGL, and Kubernetes into a scalable stack that enables real-time orchestration of autonomous systems, from collaborative simulation to large-scale drone operations in the field.",
+    "summary": "DIAMANTS combines ROS2, Python/Mesa, WebGL, and Kubernetes into a distributed stack for swarm robotics, spanning collaborative simulation through real-time orchestration of autonomous systems. It is aimed at scaling from software experiments to field deployments such as large drone operations, where coordinating many agents across simulation, visualization, and infrastructure becomes the central engineering problem.",
     "published": "2025-09-15T13:18:28Z",
     "updated": "2026-07-22T17:52:08Z",
     "authors": [
@@ -4171,7 +4171,7 @@
       "license": "MIT",
       "first_seen": "2026-07-22",
       "full_text": "DIAMANTS is an open-source platform for distributed intelligence and swarm robotics. It unites ROS2, Python/Mesa, WebGL, and Kubernetes into a scalable stack that enables real-time orchestration of autonomous systems, from collaborative simulation to large-scale drone operations in the field.",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -4518,7 +4518,7 @@
     "source": "arxiv",
     "title": "Motion Primitive Discovery in a Humanoid Robot via Self-Organising Maps for Phase Recognition",
     "url": "http://arxiv.org/abs/2607.18737v1",
-    "summary": "Understanding the computational basis of action recognition is a central challenge in social cognition as well as in human-robot interaction. Inspired by the Mirror Neuron System (MNS), we propose a two-level architecture for motor primitive discovery and online phase recognition applied to the NICO humanoid robot.",
+    "summary": "A two-stage, mirror-neuron-inspired architecture trains separate Self-Organising Maps on NICO humanoid arm and hand kinematics from simulated executions of seven actions, using correlation-pruned motion features to discover compact motor primitives. The resulting SOM activation trajectories, fed into an Echo State Network as sequences of best-matching units, are enough to recognize ongoing movement phases online, with arm and hand maps capturing complementary structure and contextual cues adding only modest refinement.",
     "published": "2026-07-21T05:53:29+00:00",
     "updated": "2026-07-21T05:53:29+00:00",
     "authors": [
@@ -4534,7 +4534,7 @@
       "comment": "12 pages, 4 figures",
       "first_seen": "2026-07-22",
       "full_text": "Understanding the computational basis of action recognition is a central challenge in social cognition as well as in human-robot interaction. Inspired by the Mirror Neuron System (MNS), we propose a two-level architecture for motor primitive discovery and online phase recognition applied to the NICO humanoid robot. At the first level, two Self-Organising Maps (SOMs) learn topographic representations of arm kinematics (A-SOM) and hand kinematics (H-SOM) from simulated trials covering seven motor actions. The maps are trained on non-redundant features identified through hierarchical correlation analysis of motion trajectories. The results show that the two SOMs encode complementary aspects of motor behaviour. At the second level, an Echo State Network (ESN) evaluates whether temporal trajectories of SOM activations, represented by consecutive best-matching units, are sufficient for online recognition of the currently executed movement phase. The results show that SOM-based trajectories preserve the dominant phase-discriminative structure of the movement, while contextual information provides only a secondary refinement. Our contribution is the integration of established SOM and ESN methods within an MNS-inspired architecture for motor primitive representation and online phase recognition. The results are compatible with the computational hypothesis that self-organised motor representations, when temporally integrated, can support accurate online recognition of ongoing movement phases.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2607.18737.jpg"
     },
     "tags": [
@@ -4604,7 +4604,7 @@
     "source": "arxiv",
     "title": "FARO: Feasibility-Aware Robot Motion Optimization",
     "url": "http://arxiv.org/abs/2607.18362v1",
-    "summary": "Fast planning of novel behaviors in unseen scenarios remains a fundamental challenge in robotics. The high-dimensional, hybrid, and underactuated nature of humanoid loco-manipulation continues to hinder the realization of this goal.",
+    "summary": "FARO speeds up humanoid loco-manipulation planning by taking candidate contact sequences and rapidly testing whether they can be turned into dynamically consistent trajectories through a nested kino-dynamic optimizer. It pairs this feasibility checker with tree search and an LLM-based contact-plan sampler, improving the search for workable behaviors in unseen scenes, and the resulting motions can be tracked by an RL controller well enough for real-world execution.",
     "published": "2026-07-20T14:22:41+00:00",
     "updated": "2026-07-20T14:22:41+00:00",
     "authors": [
@@ -4622,7 +4622,7 @@
       "comment": null,
       "first_seen": "2026-07-22",
       "full_text": "Fast planning of novel behaviors in unseen scenarios remains a fundamental challenge in robotics. The high-dimensional, hybrid, and underactuated nature of humanoid loco-manipulation continues to hinder the realization of this goal. In this paper, we address this challenge by proposing a nested kino-dynamic framework for rapid feasibility checking and dynamically consistent trajectory generation given a candidate contact sequence. By integrating this module with a feasibility-guided tree search and a Large Language Model (LLM)-based contact plan sampling strategy, we demonstrate that the proposed framework can substantially improve the search process. Furthermore, we show that the generated trajectories can be tracked using a reinforcement learning (RL)-based controller and show that the resulting trajectories are of sufficiently high quality for execution in real-world loco-manipulation scenarios. A supplementary video is available at: https://youtu.be/R6qCHoCormQ.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2607.18362.jpg"
     },
     "tags": [
@@ -5144,7 +5144,7 @@
     "source": "news",
     "title": "Build and Optimize Robotics and Edge AI with the New Jetson Thor T2000 and T3000",
     "url": "https://www.youtube.com/watch?v=930DlHopjws",
-    "summary": "As robotics and edge AI move into real-world deployment, developers need compact, power-efficient computing that can run foundation models and advanced AI workloads at the edge. Join NVIDIA product managers and engineers for a technical overview of the new NVIDIA Jetson Thor T2000 and T3000 modules.",
+    "summary": "NVIDIA is presenting the Jetson Thor T2000 and T3000 modules as compact edge-AI compute options for robotics systems that need to run foundation-model and advanced AI workloads outside the cloud. The technical focus is less on headline performance numbers than on deployment mechanics: managing memory constraints across the Jetson software stack, shrinking real robotics and edge-AI pipelines, and using Jetson Agent Skills to fit more capable workloads onto lower-memory configurations.",
     "published": "2026-07-22T18:53:46+00:00",
     "updated": "2026-07-22T18:53:46+00:00",
     "authors": [
@@ -5155,7 +5155,7 @@
       "thumbnail": "https://i2.ytimg.com/vi/930DlHopjws/hqdefault.jpg",
       "first_seen": "2026-07-17",
       "full_text": "As robotics and edge AI move into real-world deployment, developers need compact, power-efficient computing that can run foundation models and advanced AI workloads at the edge. Join NVIDIA product managers and engineers for a technical overview of the new NVIDIA Jetson Thor T2000 and T3000 modules. Explore practical strategies for overcoming memory constraints, optimizing robotics and edge AI applications, and using Jetson Agent Skills to run more capable workloads on lower-memory configurations. What you’ll learn: - How the new Jetson Thor T2000 and T3000 support scalable robotics and edge AI deployments - How to address memory constraints across the Jetson software stack - How to use Jetson Agent Skills to optimize memory usage - Practical techniques for reducing the memory footprint of real-world robotics and edge AI pipelines",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -5295,7 +5295,7 @@
     "source": "arxiv",
     "title": "MVP-Tac: A Miniaturized Dual-Modal Vision and Photoelastic Tactile Sensor for Robot-Assisted Minimally Invasive Surgery",
     "url": "http://arxiv.org/abs/2607.18660v1",
-    "summary": "Robot-assisted minimally invasive surgery (RMIS) offers major benefits over open and conventional laparoscopic procedures, yet it still lacks tactile feedback for palpation while operating under strict requirements to preserve reliable vision for navigation and safety.",
+    "summary": "MVP-Tac is a miniaturized sensor for robot-assisted minimally invasive surgery that combines normal visual navigation with tactile palpation in the same camera-based device. It uses reflective photoelastic imaging, where a thin elastomer generates stress-dependent interferograms under contact, while a semi-transparent membrane and controllable lighting let the system switch between visual and tactile modes. In tests, it calibrated forces from 0 to 2 N, classified tissue-phantom tumors with 97% accuracy for exposed tumors and 92% for subdermal tumors, and worked in a simulated colonoscopy with both 3D luminal photomapping and in situ hardness classification.",
     "published": "2026-07-21T03:08:14+00:00",
     "updated": "2026-07-21T03:08:14+00:00",
     "authors": [
@@ -5321,7 +5321,7 @@
       "comment": "8 pages, 8 figures. To appear in IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2026",
       "first_seen": "2026-07-22",
       "full_text": "Robot-assisted minimally invasive surgery (RMIS) offers major benefits over open and conventional laparoscopic procedures, yet it still lacks tactile feedback for palpation while operating under strict requirements to preserve reliable vision for navigation and safety. In practice, visual feedback is indispensable, and tactile solutions that cannot coexist with vision are difficult to translate into RMIS tools. To address both needs, we introduce MVP-Tac, a compact, vision-based tactile sensor that provides co-located vision and tactile sensing. MVP-Tac uses reflective photoelastic imaging: a thin photoelastic elastomer produces stress-dependent interferograms under contact that are captured by an embedded camera through a miniaturized reflective polariscope. A semi-transparent membrane and controllable illumination enable switching between visual mode and tactile mode, enabling tactile perception without sacrificing vision. We validate MVP-Tac through force calibration in the 0 to 2 N range and demonstrate its potential for tumor palpation via video-based hardness classification on tissue phantoms, achieving 97% accuracy for exposed-tumor classification and 92% accuracy for subdermal-tumor classification. Finally, we conduct a simulated colonoscopy to validate both visual and tactile modalities in a constrained lumen, including vision-guided 3D photomapping of the luminal wall and in situ hardness classification of localized nodules. Overall, MVP-Tac provides a practical path toward restoring clinically useful palpation in RMIS while maintaining essential visual feedback. The design, fabrication, and firmware of MVP-Tac are open-sourced at https://mvp-tac.github.io/",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2607.18660.jpg"
     },
     "tags": [
@@ -5539,7 +5539,7 @@
     "source": "news",
     "title": "딥로보틱스, WAIC 2026서 산업용 로봇 기술력 선보여",
     "url": "https://www.irobotnews.com/news/articleView.html?idxno=47536",
-    "summary": "지난 17일 상하이에서 역대 최대 규모의 2026 세계인공지능대회(WAIC 2026)가 정식 개최됐다. 전 세계 1100여 개 기업이 참가했으며, 30만 명 이상의 관람객이 행사장을 방문한 가운데 체화형 지능 기술을 선도하는 글로벌 기업 딥로보틱스(DEEP Robotics)는 WAIC 2026에서 신제품 라인업과 여섯 가지 표준 산업 솔루션, 업계 최초 특수 로봇 2종을 공개하며 강력한 기술력을 입증했다.전시 제품 라인업은 휴머노이드, 바퀴다리형, 4족보행 로봇으로 구성된다. 신형 링크스 S10은 배터리 포함 무게가 20kg 미만으",
+    "summary": "DEEP Robotics used WAIC 2026 in Shanghai to show a broad industrial robot lineup spanning humanoid, wheeled-legged, and quadruped systems, alongside six standardized industrial solutions and two first-of-their-kind special-purpose robots. The announcement positions the company around embodied intelligence for real deployments rather than single-form-factor demos, with the new Lynx S10 highlighted as a sub-20 kg robot including its battery.",
     "published": "2026-07-22T13:38:14+00:00",
     "updated": "2026-07-22T13:38:14+00:00",
     "authors": [
@@ -5549,7 +5549,7 @@
       "feed": "로봇신문 (irobotnews)",
       "first_seen": "2026-07-22",
       "full_text": "지난 17일 상하이에서 역대 최대 규모의 2026 세계인공지능대회(WAIC 2026)가 정식 개최됐다. 전 세계 1100여 개 기업이 참가했으며, 30만 명 이상의 관람객이 행사장을 방문한 가운데 체화형 지능 기술을 선도하는 글로벌 기업 딥로보틱스(DEEP Robotics)는 WAIC 2026에서 신제품 라인업과 여섯 가지 표준 산업 솔루션, 업계 최초 특수 로봇 2종을 공개하며 강력한 기술력을 입증했다.전시 제품 라인업은 휴머노이드, 바퀴다리형, 4족보행 로봇으로 구성된다. 신형 링크스 S10은 배터리 포함 무게가 20kg 미만으",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.irobotnews.com/news/photo/202607/47536_102071_3721.jpg"
     },
     "tags": [
@@ -5576,7 +5576,7 @@
     "source": "news",
     "title": "유진투자증권 \"삼성전자, RX 사업추진실 출범으로 로봇사업 역량 통합\"",
     "url": "https://www.irobotnews.com/news/articleView.html?idxno=47528",
-    "summary": "삼성전자가 대표이사 직속의 로봇 전담 조직을 신설하며 로봇 사업을 그룹의 핵심 성장축으로 본격 육성한다. 그동안 연구개발 조직별로 분산돼 있던 로봇 역량을 하나로 묶고, 휴머노이드 개발부터 제조현장 적용, 사업화까지 일원화된 체계를 구축하겠다는 전략이다.유진투자증권은 22일 발표한 보고서(제목:시작된 삼성전자의 로봇 사업)에서 삼성전자의 대표이사 직속 'RX(Robotics eXperience) 사업추진실' 출범을 계기로 국내 로봇 산업이 새로운 성장 국면에 진입할 가능성이 높다고 전망했다.이번에 신설된 RX 사업추진실은 삼성전자,",
+    "summary": "Samsung Electronics has created a CEO-direct robotics unit, the RX Robotics eXperience Business Promotion Office, to consolidate robot capabilities that had been scattered across R&D groups. Eugene Investment & Securities argues this signals a more serious push to make robotics a core growth business, spanning humanoid development, factory deployment, and commercialization under one integrated structure.",
     "published": "2026-07-22T13:14:27+00:00",
     "updated": "2026-07-22T13:14:27+00:00",
     "authors": [
@@ -5586,7 +5586,7 @@
       "feed": "로봇신문 (irobotnews)",
       "first_seen": "2026-07-22",
       "full_text": "삼성전자가 대표이사 직속의 로봇 전담 조직을 신설하며 로봇 사업을 그룹의 핵심 성장축으로 본격 육성한다. 그동안 연구개발 조직별로 분산돼 있던 로봇 역량을 하나로 묶고, 휴머노이드 개발부터 제조현장 적용, 사업화까지 일원화된 체계를 구축하겠다는 전략이다.유진투자증권은 22일 발표한 보고서(제목:시작된 삼성전자의 로봇 사업)에서 삼성전자의 대표이사 직속 'RX(Robotics eXperience) 사업추진실' 출범을 계기로 국내 로봇 산업이 새로운 성장 국면에 진입할 가능성이 높다고 전망했다.이번에 신설된 RX 사업추진실은 삼성전자,",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.irobotnews.com/news/photo/202607/47528_102057_529.png"
     },
     "tags": [
@@ -5613,7 +5613,7 @@
     "source": "news",
     "title": "The Untold Story of Lumo-2 | Astribot R&D Team Deep Dive",
     "url": "https://www.youtube.com/watch?v=xB0HiZlJfMs",
-    "summary": "🧠 From explicit planning to implicit reasoning 🏠 Temporal reasoning, Physical understanding & Long-horizon task 🤝 Agent Philia: self-named and self-reflections 💬 Human-robot coexistence talk Research & videos: www.astribot.com/research/Lumo2 #Astribot #Lumo2 #physicalai #humanoidrobots #embodiedai #AgentPhilia",
+    "summary": "Astribot’s R&D team is previewing Lumo-2, a humanoid robotics effort aimed at moving from explicit task planning toward more implicit reasoning for household, long-horizon behavior. The team frames the system around temporal reasoning, physical understanding, and “Agent Philia,” a self-named agent concept with self-reflection, positioning Lumo-2 as part of a broader push toward human-robot coexistence rather than isolated manipulation demos.",
     "published": "2026-07-22T10:16:21+00:00",
     "updated": "2026-07-22T10:16:21+00:00",
     "authors": [
@@ -5625,7 +5625,7 @@
       "thumbnail": "https://i1.ytimg.com/vi/xB0HiZlJfMs/hqdefault.jpg",
       "first_seen": "2026-07-22",
       "full_text": "🧠 From explicit planning to implicit reasoning 🏠 Temporal reasoning, Physical understanding & Long-horizon task 🤝 Agent Philia: self-named and self-reflections 💬 Human-robot coexistence talk Research & videos: www.astribot.com/research/Lumo2 #Astribot #Lumo2 #physicalai #humanoidrobots #embodiedai #AgentPhilia",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#Humanoid"
@@ -5723,7 +5723,7 @@
     "source": "arxiv",
     "title": "OmniReasoner: Thinking with Long Audio-Video via Native Tool Use",
     "url": "http://arxiv.org/abs/2607.19339v1",
-    "summary": "Long audio-video reasoning is difficult for omnimodal LLMs because the decisive evidence is often sparse, cross-modal, and too expensive to preserve with uniformly high-fidelity inputs.",
+    "summary": "OmniReasoner trains omnimodal LLMs to handle long audio-video streams by first scanning a cheap global preview, then selectively calling a zoom-in tool on a specific time interval for denser audio and visual evidence before answering. Its TimeAnchor mechanism keeps those temporal tool calls consistent across sparse and dense sampling rates, while a Temporal Augmented Data Engine creates synthetic tool-use trajectories without manual interval labels. Across omnimodal and video benchmarks, the approach improves answer accuracy and temporal grounding while spending high-fidelity computation only on informative segments.",
     "published": "2026-07-21T17:57:50+00:00",
     "updated": "2026-07-21T17:57:50+00:00",
     "authors": [
@@ -5748,7 +5748,7 @@
       "comment": null,
       "first_seen": "2026-07-22",
       "full_text": "Long audio-video reasoning is difficult for omnimodal LLMs because the decisive evidence is often sparse, cross-modal, and too expensive to preserve with uniformly high-fidelity inputs. We introduce OmniReasoner, a tool-use post-training framework for Thinking with Long Audio-Video: omni-modal LLMs learn, via supervised fine-tuning and reinforcement learning, to decide whether and where to call a zoom-in tool before answering. OmniReasoner first builds a low-cost global preview of the full stream and then, when needed, calls the zoom-in tool with a requested temporal interval for higher-fidelity visual and audio inspection before answering. Because the model observes different sampling granularities before and after this call -- a sparse global preview and a denser local clip -- we introduce TimeAnchor, which keeps the tool's temporal argument valid and round-trip-consistent across these granularities, rather than tied to frame indices from a particular sampling rate. To make this tool-use behavior trainable without expensive manual interval annotation, we build a Temporal Augmented Data Engine that synthesizes tool-use post-training trajectories by video editing and composition. Experiments across omnimodal and video benchmarks show that OmniReasoner improves both answer accuracy and temporal grounding while concentrating high-fidelity computation on informative regions. Code is available at https://github.com/RockyChen0205/OmniReasoner.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2607.19339.jpg"
     },
     "tags": [
@@ -5776,7 +5776,7 @@
     "source": "arxiv",
     "title": "Reasoning Before Translation: Enhancing Legal Machine Translation with Structured Reasoning",
     "url": "http://arxiv.org/abs/2607.19181v1",
-    "summary": "Neural machine translation (NMT) in the legal domain is a linguistically and conceptually demanding task, primarily due to the complexity of legal language and the high level of precision it requires. The recent emergence of reasoning-capable language models opens new possibilities for tackling such challenges.",
+    "summary": "Legal machine translation is tested as a structured-reasoning problem on multilingual Swiss statutes, comparing small models such as Qwen3.5 4B/9B and Gemma 3 12B under supervised fine-tuning and reinforcement learning against frontier reasoning models. Reinforcement learning with verifiable rewards improves legal NMT more than supervised fine-tuning, bringing enhanced small models close to current reasoning models while still trailing them, with gains tapering as model size increases.",
     "published": "2026-07-21T15:15:56+00:00",
     "updated": "2026-07-21T15:15:56+00:00",
     "authors": [
@@ -5799,7 +5799,7 @@
       "comment": "Code available at https://github.com/aixiuxiuxiu/Legal-MT-SFT-RL",
       "first_seen": "2026-07-22",
       "full_text": "Neural machine translation (NMT) in the legal domain is a linguistically and conceptually demanding task, primarily due to the complexity of legal language and the high level of precision it requires. The recent emergence of reasoning-capable language models opens new possibilities for tackling such challenges. They add to a set of other previously proposed techniques to enhance the translation quality, which includes supervised fine-tuning and reinforcement learning.   In this work, we perform a comparison between these various approaches. More particularly, we evaluate small language models such as Qwen3.5 4B, Qwen3.5 9B, and Gemma 3 12B enhanced with various re-training paradigms and compare their performances against frontier reasoning models. We focus on the Swiss legal system, which -- with its unique multilingual statutes -- offers a particularly challenging testbed for reasoning-augmented models. Our results show that the quality of small ``base'' models can be greatly enhanced, and that reinforcement learning with verifiable rewards can be applied to NMT in the legal domain and surpasses the translation quality of supervised fine-tuning. The performance of enhanced small models is close to the one of state-of-the-art reasoning models yet remains inferior. We also note that re-training paradigms yield diminishing returns as model size increase. The code and models are publicly available at https://github.com/aixiuxiuxiu/Legal-MT-SFT-RL.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2607.19181.jpg"
     },
     "tags": [
@@ -5863,7 +5863,7 @@
     "source": "news",
     "title": "Humanoid Raises $152 Million at $1.35 Billion Post-Money Valuation, Becoming Europe's First Pure-Play Humanoid Robotics Unicorn",
     "url": "http://www.RoboticsTomorrow.com/news/2026/07/21/humanoid-raises-152-million-at-135-billion-post-money-valuation-becoming-europes-first-pure-play-humanoid-robotics-unicorn/26866",
-    "summary": "-Humanoid announces its Series A investment round, reaching a $1.35 billion valuation just two years after founding. -It is the largest ever Series A for humanoid-first robotics company in Europe positioning Humanoid as the leading humanoid-first robotics unicorn in the UK and continental Europe. -The new capital will accelerate Humanoid's next-generation robot development, commercial deployments with global industrial leaders, and evolution of the proprietary AI platform on the path toward general-purpose humanoids. -The investment marks a defining moment for Europe's tech ecosystem, showing that globally competitive Physical AI companies can be built and scaled in Europe.",
+    "summary": "Humanoid raised a $152 million Series A at a $1.35 billion post-money valuation, making it Europe’s first pure-play humanoid robotics unicorn just two years after launch. The funding is meant to speed development of its next-generation humanoid robots, expand commercial deployments with industrial partners, and build out its proprietary AI platform toward more general-purpose physical AI.",
     "published": "2026-07-21T13:36:53+00:00",
     "updated": "2026-07-21T13:36:53+00:00",
     "authors": [],
@@ -5871,7 +5871,7 @@
       "feed": "Robotics Tomorrow",
       "first_seen": "2026-07-22",
       "full_text": "-Humanoid announces its Series A investment round, reaching a $1.35 billion valuation just two years after founding. -It is the largest ever Series A for humanoid-first robotics company in Europe positioning Humanoid as the leading humanoid-first robotics unicorn in the UK and continental Europe. -The new capital will accelerate Humanoid's next-generation robot development, commercial deployments with global industrial leaders, and evolution of the proprietary AI platform on the path toward general-purpose humanoids. -The investment marks a defining moment for Europe's tech ecosystem, showing that globally competitive Physical AI companies can be built and scaled in Europe.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://www.roboticstomorrow.com/images/facebooknews.jpg"
     },
     "tags": [
@@ -5970,7 +5970,7 @@
     "source": "news",
     "title": "인천대, 피지컬 AI 선도하는 인재 양성 허브 구축 추진",
     "url": "https://www.irobotnews.com/news/articleView.html?idxno=47545",
-    "summary": "인천대학교(총장 이인재)는 교육부 초광역 성장엔진 인재 육성 정책에 부합하는 피지컬 AI 인재 양성 체계 구축에 나선다고 22일 밝혔다. 인천대학교의 피지컬 AI 인재 육성은 대학에서 산업 현장으로 이어지는 전주기 모델을 지향한다.인천대는 피지컬 AI 기술이 핵심인 세계 로보컵대회 SML(Smart Manufacturing League) 부문 1위와 RISE(앵커) 사업 피지컬 AI(로봇) 특성화 분야 성과로 검증된 실전 역량을 바탕으로 다양한 기업 및 대학들과 협력을 강화해 나갈 예정이다. 또한 인천광역시 RISE(앵커) 사업을",
+    "summary": "Incheon National University is building a “physical AI” talent-development hub aligned with South Korea’s Ministry of Education regional growth-engine policy, aiming to connect university training directly to industrial deployment. The effort builds on the university’s RoboCup Smart Manufacturing League first-place result and its RISE anchor-program work in robot-focused physical AI, with plans to expand collaboration across companies and universities.",
     "published": "2026-07-22T17:31:49+00:00",
     "updated": "2026-07-22T17:31:49+00:00",
     "authors": [
@@ -5980,7 +5980,7 @@
       "feed": "로봇신문 (irobotnews)",
       "first_seen": "2026-07-22",
       "full_text": "인천대학교(총장 이인재)는 교육부 초광역 성장엔진 인재 육성 정책에 부합하는 피지컬 AI 인재 양성 체계 구축에 나선다고 22일 밝혔다. 인천대학교의 피지컬 AI 인재 육성은 대학에서 산업 현장으로 이어지는 전주기 모델을 지향한다.인천대는 피지컬 AI 기술이 핵심인 세계 로보컵대회 SML(Smart Manufacturing League) 부문 1위와 RISE(앵커) 사업 피지컬 AI(로봇) 특성화 분야 성과로 검증된 실전 역량을 바탕으로 다양한 기업 및 대학들과 협력을 강화해 나갈 예정이다. 또한 인천광역시 RISE(앵커) 사업을",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.irobotnews.com/news/photo/202607/47545_102082_3047.png"
     },
     "tags": [
@@ -6007,7 +6007,7 @@
     "source": "news",
     "title": "Voxelmaps Rebrands as Robotic Data",
     "url": "http://www.RoboticsTomorrow.com/news/2026/07/21/voxelmaps-rebrands-as-robotic-data/26862",
-    "summary": "Reflecting the company's market-driven evolution in the trillion-dollar Physical AI era",
+    "summary": "Voxelmaps has rebranded as Robotic Data, positioning itself around data infrastructure for “Physical AI” as robotics and embodied AI move from mapping-style datasets toward large-scale real-world training and validation data. The announcement mainly signals a market and identity shift rather than a technical result: the company wants to be seen as a data partner for robotics systems operating in physical environments.",
     "published": "2026-07-21T13:23:43+00:00",
     "updated": "2026-07-21T13:23:43+00:00",
     "authors": [],
@@ -6015,7 +6015,7 @@
       "feed": "Robotics Tomorrow",
       "first_seen": "2026-07-22",
       "full_text": "Reflecting the company's market-driven evolution in the trillion-dollar Physical AI era",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://www.roboticstomorrow.com/images/facebooknews.jpg"
     },
     "tags": [
@@ -6280,7 +6280,7 @@
     "source": "news",
     "title": "Gritt launches with $32.4 million to build physical AI for infrastructure",
     "url": "https://roboticsandautomationnews.com/2026/07/22/gritt-launches-with-32-4-million-to-build-physical-ai-for-infrastructure/103564/",
-    "summary": "Gritt, the company building an intelligent system combining robotics and AI to accelerate the world’s infrastructure buildout, has launched with $32.4 million in pre-seed and Series A funding.",
+    "summary": "Gritt has launched with $32.4 million in pre-seed and Series A funding to build robotics-and-AI systems for infrastructure construction. Its $26 million Series A, led by Obvious Ventures with backing from Union Square Ventures and Active Impact Investments, signals investor interest in applying physical AI to speed up large-scale buildout rather than keeping automation confined to software workflows.",
     "published": "2026-07-22T05:42:22+00:00",
     "updated": "2026-07-22T05:42:22+00:00",
     "authors": [
@@ -6290,7 +6290,7 @@
       "feed": "Robotics and Automation News",
       "first_seen": "2026-07-22",
       "full_text": "Gritt, the company building an intelligent system combining robotics and AI to accelerate the world’s infrastructure buildout, has launched with $32.4 million in pre-seed and Series A funding. The $26 million Series A was led by Obvious Ventures, with participation from Union Square Ventures and Active Impact Investments, and support from previous investors First Round […]",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://roboticsandautomationnews.com/wp-content/uploads/2026/07/gritt-robot-1.jpg"
     },
     "tags": [
@@ -6318,7 +6318,7 @@
     "source": "news",
     "title": "Humanoid raises $152 million at $1.35 billion valuation, becoming ‘Europe’s first pure-play humanoid robotics unicorn’",
     "url": "https://roboticsandautomationnews.com/2026/07/22/humanoid-raises-152-million-at-1-35-billion-valuation-becoming-europes-first-pure-play-humanoid-robotics-unicorn/103561/",
-    "summary": "Humanoid, a UK-based AI and robotics company building industrial humanoid robots, today announced a $152 million Series A financing at a $1.35 billion post-money valuation. This funding brings the total amount raised to date to $270 million. The round was led by Prime Movers Lab, a venture capital firm focused on investments in breakthrough scientific […]",
+    "summary": "UK robotics startup Humanoid raised a $152 million Series A led by Prime Movers Lab, valuing the company at $1.35 billion and bringing its total funding to $270 million. The company is building industrial humanoid robots, and the round is being positioned as making it Europe’s first pure-play humanoid robotics unicorn, a sign that investor interest in embodied AI is extending beyond U.S. and China-centered robotics firms.",
     "published": "2026-07-22T05:29:55+00:00",
     "updated": "2026-07-22T05:29:55+00:00",
     "authors": [
@@ -6328,7 +6328,7 @@
       "feed": "Robotics and Automation News",
       "first_seen": "2026-07-22",
       "full_text": "Humanoid, a UK-based AI and robotics company building industrial humanoid robots, today announced a $152 million Series A financing at a $1.35 billion post-money valuation. This funding brings the total amount raised to date to $270 million. The round was led by Prime Movers Lab, a venture capital firm focused on investments in breakthrough scientific […]",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://roboticsandautomationnews.com/wp-content/uploads/2026/07/thehumanoid-1.png"
     },
     "tags": [
@@ -6355,7 +6355,7 @@
     "source": "news",
     "title": "Elite Robots Collaborates with Generalist AI on Next-Gen Embodied AI",
     "url": "http://www.RoboticsTomorrow.com/news/2026/07/21/elite-robots-collaborates-with-generalist-ai-on-next-gen-embodied-ai/26864",
-    "summary": "As part of this breakthrough project, Elite Robots collaborated with Generalist AI to support real-world data collection and algorithm validation on its cobot platform.",
+    "summary": "Elite Robots is partnering with Generalist AI to use its cobot platform for real-world embodied-AI data collection and algorithm validation. The collaboration matters because it ties Generalist AI’s robot-learning work to physical collaborative robots, giving the algorithms a hardware testbed beyond simulation or lab-only demonstrations.",
     "published": "2026-07-21T13:26:33+00:00",
     "updated": "2026-07-21T13:26:33+00:00",
     "authors": [],
@@ -6363,7 +6363,7 @@
       "feed": "Robotics Tomorrow",
       "first_seen": "2026-07-22",
       "full_text": "As part of this breakthrough project, Elite Robots collaborated with Generalist AI to support real-world data collection and algorithm validation on its cobot platform.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://www.roboticstomorrow.com/images/facebooknews.jpg"
     },
     "tags": [
@@ -6715,7 +6715,7 @@
     "source": "news",
     "title": "Palladyne AI Announces U.S. Air Force Exercise of Additional $2.9 Million STRATFI Contract Option Using Palladyne IQ Embodied AI Architecture for Autonomous Robotic Systems, Bringing Total Award to $10.6 Million",
     "url": "http://www.RoboticsTomorrow.com/news/2026/07/22/palladyne-ai-announces-us-air-force-exercise-of-additional-29-million-stratfi-contract-option-using-palladyne-iq-embodied-ai-architecture-for-autonomous-robotic-systems-bringing-total-award-to-106-million/26878",
-    "summary": "The option exercise reflects the Air Force’s continued satisfaction with the performance and progress of Palladyne AI’s Palladyne IQ™ embodied AI architecture for autonomous robotic systems.",
+    "summary": "Palladyne AI says the U.S. Air Force exercised an additional $2.9 million STRATFI contract option for its Palladyne IQ embodied AI architecture, bringing the total award to $10.6 million. The announcement signals continued Air Force support for Palladyne IQ’s use in autonomous robotic systems, though the release provides few technical details beyond its focus on embodied AI for autonomy.",
     "published": "2026-07-22T13:07:11+00:00",
     "updated": "2026-07-22T13:07:11+00:00",
     "authors": [],
@@ -6723,7 +6723,7 @@
       "feed": "Robotics Tomorrow",
       "first_seen": "2026-07-22",
       "full_text": "The option exercise reflects the Air Force’s continued satisfaction with the performance and progress of Palladyne AI’s Palladyne IQ™ embodied AI architecture for autonomous robotic systems.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://www.roboticstomorrow.com/images/facebooknews.jpg"
     },
     "tags": [
@@ -6750,7 +6750,7 @@
     "source": "news",
     "title": "Microagi to Build Future of AI Robotics on Google Cloud",
     "url": "http://www.RoboticsTomorrow.com/news/2026/07/22/microagi-to-build-future-of-ai-robotics-on-google-cloud/26877",
-    "summary": "Munich-based AI startup to use Google Cloud's AI infrastructure and NVIDIA Blackwell platform to ingest massive physical datasets and train task-specific 'embodied AI' models.",
+    "summary": "Microagi is partnering with Google Cloud to train task-specific embodied AI models for robotics, using Google Cloud’s AI infrastructure together with NVIDIA’s Blackwell platform. The company’s bet is that ingesting very large physical-world datasets on this stack will help build robot models that can learn and execute real tasks more effectively, rather than relying only on general-purpose AI systems.",
     "published": "2026-07-22T13:01:41+00:00",
     "updated": "2026-07-22T13:01:41+00:00",
     "authors": [],
@@ -6758,7 +6758,7 @@
       "feed": "Robotics Tomorrow",
       "first_seen": "2026-07-22",
       "full_text": "Munich-based AI startup to use Google Cloud's AI infrastructure and NVIDIA Blackwell platform to ingest massive physical datasets and train task-specific 'embodied AI' models.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://www.roboticstomorrow.com/images/facebooknews.jpg"
     },
     "tags": [
@@ -6855,7 +6855,7 @@
     "source": "news",
     "title": "Logistics Firms, Robotics Startups and D2C Brands Set Up Shop in Industry City, Fueling a Retail Tech Hub in Brooklyn",
     "url": "http://www.RoboticsTomorrow.com/news/2026/07/21/logistics-firms-robotics-startups-and-d2c-brands-set-up-shop-in-industry-city-fueling-a-retail-tech-hub-in-brooklyn/26870",
-    "summary": "Highline Commerce, Ultra Robotics and a Growing Roster of Retail Tech Companies Are Now Manufacturing and Fulfilling in the Country’s Most Competitive Market",
+    "summary": "Industry City in Brooklyn is drawing logistics, robotics, and direct-to-consumer retail companies such as Highline Commerce and Ultra Robotics, with firms using the campus for manufacturing, fulfillment, and related retail-tech operations. The move matters because it clusters automation, commerce infrastructure, and last-mile logistics inside one of the country’s most competitive consumer markets, positioning the site as a practical hub for companies trying to shorten the path from production to delivery.",
     "published": "2026-07-21T18:38:35+00:00",
     "updated": "2026-07-21T18:38:35+00:00",
     "authors": [],
@@ -6863,7 +6863,7 @@
       "feed": "Robotics Tomorrow",
       "first_seen": "2026-07-22",
       "full_text": "Highline Commerce, Ultra Robotics and a Growing Roster of Retail Tech Companies Are Now Manufacturing and Fulfilling in the Country’s Most Competitive Market",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://www.roboticstomorrow.com/images/facebooknews.jpg"
     },
     "tags": [
@@ -6890,7 +6890,7 @@
     "source": "news",
     "title": "PRODUCTIVE ROBOTICS ENGINEERS NEW FULLY INTEGRATED METAL DUST COLLECTOR FOR AUTOMATED DEBURRING AND POLISHING CELL",
     "url": "http://www.RoboticsTomorrow.com/news/2026/07/21/productive-robotics-engineers-new-fully-integrated-metal-dust-collector-for-automated-deburring-and-polishing-cell/26867",
-    "summary": "The cell, operated by the company’s OB7 from its line of zero-programming collaborative robots, offers a compact, enclosed workstation that prevents abrasive dust and metal fines from contaminating the shop floor environment.",
+    "summary": "Productive Robotics has built a fully integrated metal dust collector into an automated deburring and polishing cell using its OB7 zero-programming collaborative robot. The enclosed workstation is meant to keep abrasive dust and metal fines contained during finishing operations, making robotic deburring and polishing cleaner and easier to deploy on a shop floor.",
     "published": "2026-07-21T18:31:06+00:00",
     "updated": "2026-07-21T18:31:06+00:00",
     "authors": [],
@@ -6898,7 +6898,7 @@
       "feed": "Robotics Tomorrow",
       "first_seen": "2026-07-22",
       "full_text": "The cell, operated by the company’s OB7 from its line of zero-programming collaborative robots, offers a compact, enclosed workstation that prevents abrasive dust and metal fines from contaminating the shop floor environment.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://www.roboticstomorrow.com/images/facebooknews.jpg"
     },
     "tags": [
@@ -7067,7 +7067,7 @@
     "source": "news",
     "title": "Spot Mariana Minerals | Boston Dynamics",
     "url": "https://www.youtube.com/watch?v=KywMP9_SyRg",
-    "summary": "Mariana Minerals is the world's first software-first mining company, using rich data sources from the field to optimize their operations. They are deploying Spot at their Copper One facility in Utah to help capture the data they need, automating routine inspections and reducing strain on operators in the field.",
+    "summary": "Mariana Minerals is deploying Boston Dynamics’ Spot robot at its Copper One facility in Utah to automate routine mining inspections and collect richer field data. The move fits the company’s software-first mining model: using on-site data streams to optimize operations while reducing the physical burden on human operators in the field.",
     "published": "2026-07-22T13:59:31+00:00",
     "updated": "2026-07-22T13:59:31+00:00",
     "authors": [
@@ -7079,7 +7079,7 @@
       "thumbnail": "https://i4.ytimg.com/vi/KywMP9_SyRg/hqdefault.jpg",
       "first_seen": "2026-07-22",
       "full_text": "Mariana Minerals is the world's first software-first mining company, using rich data sources from the field to optimize their operations. They are deploying Spot at their Copper One facility in Utah to help capture the data they need, automating routine inspections and reducing strain on operators in the field.",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -7105,7 +7105,7 @@
     "source": "news",
     "title": "When robots start to feel: HBK and Siléane bring tactile intelligence to high-speed cosmetics packaging",
     "url": "https://roboticsandautomationnews.com/2026/07/22/when-robots-start-to-feel-hbk-and-sileane-bring-tactile-intelligence-to-high-speed-cosmetics-packaging/103567/",
-    "summary": "France-based advanced robotics specialist Siléane has partnered with Hottinger Brüel & Kjær (HBK), to deliver a groundbreaking automated gripping solution for a global cosmetics manufacturer.",
+    "summary": "Siléane and HBK have built an automated gripping setup for a global cosmetics packaging line that puts smart sensing directly into the robot’s end-of-arm tooling. The system validates grip quality in real time, aiming to catch handling problems immediately while maintaining the speed, precision, and reliability needed for regulated high-volume packaging.",
     "published": "2026-07-22T05:51:32+00:00",
     "updated": "2026-07-22T05:51:32+00:00",
     "authors": [
@@ -7115,7 +7115,7 @@
       "feed": "Robotics and Automation News",
       "first_seen": "2026-07-22",
       "full_text": "France-based advanced robotics specialist Siléane has partnered with Hottinger Brüel & Kjær (HBK), to deliver a groundbreaking automated gripping solution for a global cosmetics manufacturer. By embedding smart sensing directly into the end-of-arm tooling, the project provides real-time grip quality validation, ensuring precision and reliability in highly regulated, fast-moving packaging lines. The challenge: High-speed, high-volume […]",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://roboticsandautomationnews.com/wp-content/uploads/2026/07/hbk-cosmetics-robot-1.jpg"
     },
     "tags": [
@@ -7389,7 +7389,7 @@
     "source": "news",
     "title": "“미래 인재, 로봇산업을 만나다”…‘청소년 로봇 아카데미’ 개최",
     "url": "https://www.irobotnews.com/news/articleView.html?idxno=47541",
-    "summary": "대구광역시는 7월 21일과 22일 양일간 대구경북과학기술원(DGIST)에서 지역 청소년 120명을 대상으로 ‘청소년 로봇 아카데미’를 성공적으로 개최했다.이번 아카데미는 대구시가 주력 미래산업인 로봇산업을 지역 청소년들이 직접 체험하고 미래 진로를 설계할 수 있도록 동아일보, DGIST와 함께 기획한 프로그램이다. 참가자는 지난 6월 25일부터 온라인으로 모집했으며, 접수 당일 마감될 정도로 뜨거운 관심을 보였다.교육은 온라인 기초교육과 현장 오프라인 체험 과정으로 구성됐다. 지난 7월 1일부터 진행된 온라인 교육에서는 로봇의 역사",
+    "summary": "Daegu held a two-day Youth Robot Academy at DGIST on July 21-22 for 120 local students, organized with Dong-A Ilbo and DGIST to give teenagers hands-on exposure to the city’s strategic robotics industry. The program combined online basics starting July 1 with in-person activities, and demand was high enough that registration closed on the first day after opening June 25.",
     "published": "2026-07-22T16:48:01+00:00",
     "updated": "2026-07-22T16:48:01+00:00",
     "authors": [
@@ -7399,7 +7399,7 @@
       "feed": "로봇신문 (irobotnews)",
       "first_seen": "2026-07-22",
       "full_text": "대구광역시는 7월 21일과 22일 양일간 대구경북과학기술원(DGIST)에서 지역 청소년 120명을 대상으로 ‘청소년 로봇 아카데미’를 성공적으로 개최했다.이번 아카데미는 대구시가 주력 미래산업인 로봇산업을 지역 청소년들이 직접 체험하고 미래 진로를 설계할 수 있도록 동아일보, DGIST와 함께 기획한 프로그램이다. 참가자는 지난 6월 25일부터 온라인으로 모집했으며, 접수 당일 마감될 정도로 뜨거운 관심을 보였다.교육은 온라인 기초교육과 현장 오프라인 체험 과정으로 구성됐다. 지난 7월 1일부터 진행된 온라인 교육에서는 로봇의 역사",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.irobotnews.com/news/photo/202607/47541_102076_37.jpg"
     },
     "tags": [
@@ -7792,7 +7792,7 @@
     "source": "news",
     "title": "日, 국가 AI 모델 승부수 띄웠다…소니·소프트뱅크·NEC·혼다 주도 '국산 멀티모달 AI' 개발 본격화",
     "url": "https://www.aitimes.kr/news/articleView.html?idxno=41096",
-    "summary": "일본이 소니그룹(Sony Group), 소프트뱅크(SoftBank), NEC, 혼다(Honda)를 중심으로 국가 차원의 멀티모달 인공지능(AI) 개발 프로젝트를 본격 가동한다. 일본 산업계와 연구기관이 총결집해 AI 로봇과 피지컬 인공지능(Physical AI)의 핵심이 될 국산 기반모델을 개발하겠다는 구상이다.일본 AI 기업 노에트라(Noetra)는 자사 주요 투자사인 소니그룹, 소프트뱅크, NEC, 혼다와 함께 국산 멀티모달 기반모델 개발을 위한 연구개발 체계를 지난 16일 본격 출범했다. 이번 프로젝트는 일본이 생성형 AI와",
+    "summary": "Japan has launched a national effort to build domestic multimodal foundation models for AI robots and physical AI, led by Noetra with backing from Sony Group, SoftBank, NEC, and Honda. The project matters because it brings major Japanese industrial players together around sovereign AI infrastructure for robotics, positioning multimodal model development as a strategic capability rather than a standalone software effort.",
     "published": "2026-07-22T23:24:05+00:00",
     "updated": "2026-07-22T23:24:05+00:00",
     "authors": [
@@ -7802,7 +7802,7 @@
       "feed": "인공지능신문",
       "first_seen": "2026-07-22",
       "full_text": "일본이 소니그룹(Sony Group), 소프트뱅크(SoftBank), NEC, 혼다(Honda)를 중심으로 국가 차원의 멀티모달 인공지능(AI) 개발 프로젝트를 본격 가동한다. 일본 산업계와 연구기관이 총결집해 AI 로봇과 피지컬 인공지능(Physical AI)의 핵심이 될 국산 기반모델을 개발하겠다는 구상이다.일본 AI 기업 노에트라(Noetra)는 자사 주요 투자사인 소니그룹, 소프트뱅크, NEC, 혼다와 함께 국산 멀티모달 기반모델 개발을 위한 연구개발 체계를 지난 16일 본격 출범했다. 이번 프로젝트는 일본이 생성형 AI와",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.aitimes.kr/news/thumbnail/202607/41096_61901_2229_v150.jpg"
     },
     "tags": [
@@ -7829,7 +7829,7 @@
     "source": "news",
     "title": "英 국방부, AI·로봇 기반 미래 공중전 역량 강화...차세대 전투기 기술 개발에 1.4조원 추가 투자",
     "url": "https://www.aitimes.kr/news/articleView.html?idxno=41091",
-    "summary": "영국 정부가 차세대 공중전 기술 확보를 위해 7억800만 파운드(약 1조4천억 원)를 추가 투자한다. 이번 투자는 인공지능(AI), 디지털 엔지니어링, 첨단 제조기술 등을 활용한 미래 전투기 개발을 가속화하기 위한 것으로, 영국 공군(RAF)의 차세대 전력 구축과 글로벌 전투기 개발 경쟁력 확보를 목표로 한다.영국 국방부(MOD)는 22일(현지시간) 판버러 국제에어쇼(Farnborough International Airshow)에서 BAE 시스템즈(BAE Systems)와 미래 전투항공체계(FCAS, Future Combat Air",
+    "summary": "The UK Ministry of Defence is adding £708 million, about ₩1.4 trillion, to its Future Combat Air System effort, with BAE Systems leading work on AI, digital engineering, and advanced manufacturing for next-generation combat aircraft. Announced at the Farnborough International Airshow, the funding is meant to accelerate future RAF air-combat capabilities and keep the UK competitive in the global race to build AI-enabled fighter systems.",
     "published": "2026-07-22T19:30:56+00:00",
     "updated": "2026-07-22T19:30:56+00:00",
     "authors": [
@@ -7839,7 +7839,7 @@
       "feed": "인공지능신문",
       "first_seen": "2026-07-22",
       "full_text": "영국 정부가 차세대 공중전 기술 확보를 위해 7억800만 파운드(약 1조4천억 원)를 추가 투자한다. 이번 투자는 인공지능(AI), 디지털 엔지니어링, 첨단 제조기술 등을 활용한 미래 전투기 개발을 가속화하기 위한 것으로, 영국 공군(RAF)의 차세대 전력 구축과 글로벌 전투기 개발 경쟁력 확보를 목표로 한다.영국 국방부(MOD)는 22일(현지시간) 판버러 국제에어쇼(Farnborough International Airshow)에서 BAE 시스템즈(BAE Systems)와 미래 전투항공체계(FCAS, Future Combat Air",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.aitimes.kr/news/thumbnail/202607/41091_61896_224_v150.jpg"
     },
     "tags": [
@@ -7866,7 +7866,7 @@
     "source": "news",
     "title": "Roboteon Delivers Unified Fleet Management and Orchestration for Mobile Robots and Autonomous AGVs in Manufacturing",
     "url": "http://www.RoboticsTomorrow.com/news/2026/07/21/roboteon-delivers-unified-fleet-management-and-orchestration-for-mobile-robots-and-autonomous-agvs-in-manufacturing/26868",
-    "summary": "Powerful Software Platform Orchestrates Automated Material Flows, Improves Visibility, Control, Productivity, and Throughput",
+    "summary": "Roboteon has released a unified fleet management and orchestration platform for mobile robots and autonomous AGVs in manufacturing environments. It coordinates automated material flows across robot fleets while giving operators better visibility and control, aiming to raise productivity and throughput in facilities using mixed or distributed automation.",
     "published": "2026-07-21T18:32:57+00:00",
     "updated": "2026-07-21T18:32:57+00:00",
     "authors": [],
@@ -7874,7 +7874,7 @@
       "feed": "Robotics Tomorrow",
       "first_seen": "2026-07-22",
       "full_text": "Powerful Software Platform Orchestrates Automated Material Flows, Improves Visibility, Control, Productivity, and Throughput",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://www.roboticstomorrow.com/images/facebooknews.jpg"
     },
     "tags": [
@@ -8195,7 +8195,7 @@
     "source": "news",
     "title": "에이블랩스, 美 ‘ADLM 2026’ 참가…자동화 ODM·OEM 파트너십 모색",
     "url": "https://www.irobotnews.com/news/articleView.html?idxno=47538",
-    "summary": "실험실 자동화 전문기업 에이블랩스(대표 신상)는 미국 캘리포니아 애너하임에서 오는 7월 26일부터 30일까지 열리는 세계 최대 진단의료기기 전시회 ‘ADLM(Association for Diagnostics & Laboratory Medicine) 2026’에 참가한다고 22일 밝혔다.회사는 이번 행사에서 1·8채널 자동 피펫팅 로봇 노터블(NOTABLE) 실물을 시연하는 한편, 글로벌 진단기업을 대상으로 한 자동화 ODM(제조자개발생산)·OEM(주문자상표부착생산) 파트너십 발굴에 나선다.ADLM 2026은 매년 수만 명의 임상 검",
+    "summary": "ABLE Labs will show its NOTABLE 1- and 8-channel automated pipetting robots at ADLM 2026 in Anaheim, using the diagnostics and laboratory medicine meeting to court global diagnostic companies. The emphasis is less on a new technical result than on commercialization: the company is positioning its lab-automation platform for ODM and OEM partnerships in clinical diagnostics workflows.",
     "published": "2026-07-22T14:48:23+00:00",
     "updated": "2026-07-22T14:48:23+00:00",
     "authors": [
@@ -8205,7 +8205,7 @@
       "feed": "로봇신문 (irobotnews)",
       "first_seen": "2026-07-22",
       "full_text": "실험실 자동화 전문기업 에이블랩스(대표 신상)는 미국 캘리포니아 애너하임에서 오는 7월 26일부터 30일까지 열리는 세계 최대 진단의료기기 전시회 ‘ADLM(Association for Diagnostics & Laboratory Medicine) 2026’에 참가한다고 22일 밝혔다.회사는 이번 행사에서 1·8채널 자동 피펫팅 로봇 노터블(NOTABLE) 실물을 시연하는 한편, 글로벌 진단기업을 대상으로 한 자동화 ODM(제조자개발생산)·OEM(주문자상표부착생산) 파트너십 발굴에 나선다.ADLM 2026은 매년 수만 명의 임상 검",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.irobotnews.com/news/photo/202607/47538_102073_4652.png"
     },
     "tags": [
@@ -8232,7 +8232,7 @@
     "source": "news",
     "title": "NVIDIA Open Sources First GPU-Accelerated Medical Physics Simulation Framework",
     "url": "https://blogs.nvidia.com/blog/medical-physics-simulation-open-source/",
-    "summary": "Before a healthcare robot can be useful in the real world, it has to learn how the physical world pushes back. Anatomy varies. Instruments bend, press, slip and interact with tissue. Imaging can be noisy or incomplete. And the rare, edge scenarios developers most need to understand don’t appear on schedule. That creates one of […]",
+    "summary": "NVIDIA has open sourced a GPU-accelerated medical physics simulation framework aimed at training and testing healthcare robots in realistic, variable clinical conditions. It lets developers model anatomy, deformable instruments, tissue interactions, noisy imaging, and rare edge cases that are hard to capture in real-world data, making robot learning and validation more scalable before deployment.",
     "published": "2026-07-22T13:00:11+00:00",
     "updated": "2026-07-22T13:00:11+00:00",
     "authors": [
@@ -8243,7 +8243,7 @@
       "thumbnail": "https://blogs.nvidia.com/wp-content/uploads/2026/07/medical-physica-simulation-842x450.png",
       "first_seen": "2026-07-22",
       "full_text": "Before a healthcare robot can be useful in the real world, it has to learn how the physical world pushes back. Anatomy varies. Instruments bend, press, slip and interact with tissue. Imaging can be noisy or incomplete. And the rare, edge scenarios developers most need to understand don’t appear on schedule. That creates one of […]",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
