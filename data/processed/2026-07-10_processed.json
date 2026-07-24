@@ -916,56 +916,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.08575",
-    "source": "arxiv",
-    "title": "FabriVLA: A Lightweight Vision-Language-Action Model for Precise Multi-Task Manipulation",
-    "url": "http://arxiv.org/abs/2607.08575v1",
-    "summary": "FabriVLA is a compact vision-language-action model for precise robot manipulation that pairs an InternVL3.5 backbone with a flow-matching action head, using gated self-attention over action tokens and shallow VLM layer fusion to sharpen spatial context. Trained in a single joint stage from a pretrained VLM plus a randomly initialized action head, it reaches 90.0% tier-average success on Meta-World MT50 across 50 tasks, suggesting that 1B-scale VLMs can support strong multi-task manipulation without very large VLA backbones.",
-    "published": "2026-07-09T15:06:43+00:00",
-    "updated": "2026-07-09T15:06:43+00:00",
-    "authors": [
-      "Shiyuan Yang",
-      "Borong Zhang",
-      "Jizheng Zhang",
-      "Zhijia Tao",
-      "Junfei Guo",
-      "Donglai Ran",
-      "Xu Bian",
-      "Qingbiao Li"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.08575v1",
-      "comment": null,
-      "first_seen": "2026-07-10",
-      "full_text": "We present FabriVLA, a lightweight Vision-Language-Action model for Precise Multi-Task Manipulation. FabriVLA combines an InternVL3.5 vision-language backbone with a flow-matching action head featuring gated self-attention across action tokens and shallow VLM layer fusion for enriched spatial context. The model is trained via single stage joint optimization from a pretrained VLM and randomly initialized action head. On the Meta-World MT50 benchmark spanning 50 diverse manipulation tasks, FabriVLA achieves a tier-average success rate of 90.0%, demonstrating that a compact VLA built on a 1B scale VLM can achieve strong performance without relying on multi billion parameter VLA backbones.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.08575.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 28.724,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.7239679468774805,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:hetolin/PoseVLA",
     "source": "github",
     "title": "hetolin/PoseVLA",
@@ -1280,7 +1230,8 @@
       "license": "MIT",
       "first_seen": "2026-05-18",
       "full_text": "The Cloud Platform for Robot Learning",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/NeuracoreAI/neuracore/main/docs/assets/neuracore_logo.jpg"
     },
     "tags": [
       "#Other"
@@ -1392,111 +1343,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:engineai-robotics/engineai_rl_lab",
-    "source": "github",
-    "title": "engineai-robotics/engineai_rl_lab",
-    "url": "https://github.com/engineai-robotics/engineai_rl_lab",
-    "summary": "EngineAI’s `engineai_rl_lab` packages Isaac Lab-based reinforcement learning environments for the PM01 and T800 robots, with whole-body tracking tasks already implemented. It is useful as a simulation and training starting point for researchers working on learned control for these specific humanoid platforms, especially if they want Isaac Lab integration rather than building robot environments from scratch.",
-    "published": "2026-06-24T04:09:40Z",
-    "updated": "2026-07-10T02:47:35Z",
-    "authors": [
-      "engineai-robotics"
-    ],
-    "extra": {
-      "stars": 14,
-      "forks": 1,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 0,
-      "license": "BSD-3-Clause",
-      "first_seen": "2026-07-03",
-      "full_text": "This project provides a set of reinforcement learning environments based on Isaac Lab. It currently supports EngineAI PM01 and T800 robots, with implemented tasks including whole-body tracking.",
-      "summary_kind": "llm",
-      "thumbnail": "https://raw.githubusercontent.com/engineai-robotics/engineai_rl_lab/HEAD/./docs/train.gif"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 26.311,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.8282635594742063,
-      "has_code": 6.0,
-      "github_stars_log": 5.880456295278407,
-      "github_forks_log": 0.6020599913279624,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:gbionics/jaxsim",
-    "source": "github",
-    "title": "gbionics/jaxsim",
-    "url": "https://github.com/gbionics/jaxsim",
-    "summary": "A differentiable physics engine and multibody dynamics library for control and robot learning.",
-    "published": "2022-01-31T16:44:28Z",
-    "updated": "2026-07-10T08:40:48Z",
-    "authors": [
-      "gbionics"
-    ],
-    "extra": {
-      "stars": 200,
-      "forks": 23,
-      "language": "Python",
-      "topics": [
-        "aba",
-        "ad",
-        "automatic-differentiation",
-        "crba",
-        "dynamics",
-        "featherstone",
-        "jacobian",
-        "jax",
-        "jit",
-        "kinematics",
-        "ode",
-        "physics",
-        "physics-engine",
-        "rigid-body-dynamics",
-        "rnea",
-        "robotics",
-        "robotics-control",
-        "robotics-simulation",
-        "simulation",
-        "simulation-modeling"
-      ],
-      "open_issues": 8,
-      "license": "BSD-3-Clause",
-      "first_seen": "2026-05-18",
-      "full_text": "A differentiable physics engine and multibody dynamics library for control and robot learning.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 26.157,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.880825565969742,
-      "has_code": 6.0,
-      "github_stars_log": 11.515980287102446,
-      "github_forks_log": 2.760422483423212,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:e37bb20b58dc",
     "source": "news",
     "title": "Video Friday: A World Cup for Robots",
@@ -1530,41 +1376,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:cc14748f67eb",
-    "source": "news",
-    "title": "InDro Robotics Launches Axiom: A Budget-Friendly Humanoid-Style Platform for Physical AI Research",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/07/09/indro-robotics-launches-axiom-a-budget-friendly-humanoid-style-platform-for-physical-ai-research/26830",
-    "summary": "InDro Robotics has launched Axiom, a modular humanoid-style robot platform aimed at making physical AI and humanoid development cheaper and more accessible. The company says the first customer units are already shipping, positioning Axiom as a practical research platform for teams that want humanoid-like hardware without the cost and complexity of building a full system from scratch.",
-    "published": "2026-07-10T01:15:14+00:00",
-    "updated": "2026-07-10T01:15:14+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-07-10",
-      "full_text": "New modular robot lowers barrier to humanoid development; first customer units already shipping",
-      "summary_kind": "llm",
-      "thumbnail": "https://www.roboticstomorrow.com/images/facebooknews.jpg"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 25.815,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.8145209911309523,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -1648,50 +1459,6 @@
       "has_code": 6.0,
       "github_stars_log": 11.288392874345924,
       "github_forks_log": 2.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:acl21/diwa",
-    "source": "github",
-    "title": "acl21/diwa",
-    "url": "https://github.com/acl21/diwa",
-    "summary": "DiWA: Diffusion Policy Adaptation with World Models",
-    "published": "2025-05-26T16:10:36Z",
-    "updated": "2026-07-10T08:38:43Z",
-    "authors": [
-      "acl21"
-    ],
-    "extra": {
-      "stars": 82,
-      "forks": 4,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 6,
-      "license": "GPL-3.0",
-      "first_seen": "2026-05-18",
-      "full_text": "DiWA: Diffusion Policy Adaptation with World Models",
-      "summary_kind": "llm",
-      "thumbnail": "https://github.com/acl21/diwa/raw/main/docs/diwa_cover.png"
-    },
-    "tags": [
-      "#RL",
-      "#IL",
-      "#Other"
-    ],
-    "score": 24.874,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.880515545610119,
-      "has_code": 6.0,
-      "github_stars_log": 9.59539046188037,
-      "github_forks_log": 1.3979400086720377,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
@@ -1923,58 +1690,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.06655",
-    "source": "arxiv",
-    "title": "Pelican-VLA 0.5: Attending Before Acting Benefits Generalization",
-    "url": "http://arxiv.org/abs/2607.06655v2",
-    "summary": "Pelican-VLA 0.5 unifies vision-language understanding, future-frame generation, and robot action prediction in one VLA architecture. Its learnable Bottleneck Token sits between perception and action, forcing task-relevant visual information through a compact interface so the policy naturally attends to the object and contact region needed for manipulation, even without masks, object labels, attention supervision, or task-specific fine-tuning. The report shows this attention-level generalization holds in unseen scenes and across unseen robot embodiments, and is stronger than other open-source VLA baselines.",
-    "published": "2026-07-07T17:50:22+00:00",
-    "updated": "2026-07-09T16:46:08+00:00",
-    "authors": [
-      "Zeyuan Ding",
-      "Wenhai Liu",
-      "Yang Xu",
-      "Jiayu Hu",
-      "Yinda Chen",
-      "Yi Zhang",
-      "Yong Dai",
-      "Jian Tang",
-      "Xiaozhu Ju"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.06655v2",
-      "comment": null,
-      "first_seen": "2026-07-09",
-      "full_text": "In this report, we present Pelican-VLA 0.5, a unified VLA model that integrates vision-language understanding, future-frame generation, and action prediction within a single architecture. Pelican-VLA 0.5 achieves attention-level generalization: without object annotations, segmentation masks, attention supervision, or task-specific fine-tuning, its action pathway already focuses on the manipulation-relevant object and contact region. This behavior persists across unseen scenes and unseen robot embodiments, and is substantially stronger than in other open-source VLA baselines. We verify that this ability originates from the learnable Bottleneck Token inserted between perception and action: by routing task-relevant visual information through a compact bottleneck, the tokens interface induces manipulation-centric attention during pre-training and remains effective across different policy structures, including a MoT-style architecture.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.06655.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 21.739,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.7387620819940475,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:chang-xinhai/Awesome-Dexterous-Manipulation",
     "source": "github",
     "title": "chang-xinhai/Awesome-Dexterous-Manipulation",
@@ -2026,106 +1741,6 @@
       "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.08751",
-    "source": "arxiv",
-    "title": "DexVerse: A Modular Benchmark for Multi-Task, Multi-Embodiment Dexterous Manipulation",
-    "url": "http://arxiv.org/abs/2607.08751v1",
-    "summary": "DexVerse is a modular dexterous manipulation benchmark with 100 tasks covering grasping, relocation, articulated objects, tool use, bimanual coordination, non-prehensile control, contact-rich behavior, multi-goal execution, and long-horizon task sequences. It spans 3 robot arms and 6 dexterous hands, adds controllable visual variation in textures, lighting, backgrounds, and viewpoints, and includes 3,180 VR-teleoperated demonstrations with synchronized proprioceptive, RGB, depth, point-cloud, and state data. Baselines such as Diffusion Policy, DP3, OpenVLA, and π₀.₅ struggle across the 19-task evaluation, especially on task generalization and visuomotor robustness.",
-    "published": "2026-07-09T17:50:47+00:00",
-    "updated": "2026-07-09T17:50:47+00:00",
-    "authors": [
-      "Yunchao Yao",
-      "Zhuxiu Xu",
-      "Tianqi Zhang",
-      "Zixian Liu",
-      "Sikai Li",
-      "Zhenyu Wei",
-      "Feng Chen",
-      "Dihong Huang",
-      "Kechang Wan",
-      "Chenyang Ma",
-      "Shuqi Zhao",
-      "Shenghua Gao",
-      "Masayoshi Tomizuka",
-      "Yi Ma",
-      "Mingyu Ding"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.08751v1",
-      "comment": null,
-      "first_seen": "2026-07-10",
-      "full_text": "Building general-purpose dexterous manipulation policies requires benchmarks that go beyond isolated tasks to systematically evaluate policies across diverse interaction modes, sensory conditions, and robot embodiments. However, existing benchmarks remain limited in task and data diversity, embodiment coverage, or controllable visual variation, hindering studies of cross-task and cross-embodiment generalization. We present DexVerse, a large-scale and modular benchmark for dexterous manipulation. DexVerse includes 100 tasks spanning a broad range of manipulation skills, including object grasping and relocation, articulated-object interaction, functional tool use, bimanual coordination, non-prehensile control, contact-rich behaviors, multi-goal execution, and long-horizon multi-stage task completion. It supports 3 robot arms and 6 dexterous hands, and is extensible to new tasks, assets, and embodiments. To evaluate visuomotor generalization, DexVerse provides configurable visual variations in textures, background, lighting, and camera viewpoints. We further provide a VR-based teleoperation interface and 3,180 demonstrations with synchronized proprioceptive, RGB, depth, point-cloud, and state observations. We benchmark representative methods, including Diffusion Policy, DP3, OpenVLA, and $π_{0.5}$, across 19 tasks. Results reveal substantial challenges in task generalization and visuomotor robustness, establishing DexVerse as a promising testbed for general-purpose dexterous manipulation. Project page: https://ycyao216.github.io/DexVerse.site",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.08751.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#IL",
-      "#VLA",
-      "#Manipulator",
-      "#Bimanual"
-    ],
-    "score": 20.748,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.748382630875496,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:a7d0b4c7b0c6",
-    "source": "news",
-    "title": "NEO’s Hands",
-    "url": "https://www.youtube.com/watch?v=QRyXV3csReA",
-    "summary": "The new 25-DoF robotic hands for the NEO platform mark a fundamental leap in physical AI. 1X has developed hands that achieve human-level dexterity, strength, safety, and reliability.",
-    "published": "2026-07-09T16:15:06+00:00",
-    "updated": "2026-07-09T16:15:06+00:00",
-    "authors": [
-      "1X"
-    ],
-    "extra": {
-      "feed": "1X Technologies (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i2.ytimg.com/vi/QRyXV3csReA/hqdefault.jpg",
-      "first_seen": "2026-07-09",
-      "full_text": "The new 25-DoF robotic hands for the NEO platform mark a fundamental leap in physical AI. 1X has developed hands that achieve human-level dexterity, strength, safety, and reliability. With 25 fully actuated degrees of freedom in the fingers, palm, and thumb including a 3-DoF wrist, a closed-loop tendon-driven system, and high-resolution tactile sensing, these hands enable true in-hand manipulation and precision interaction across countless everyday tasks– from assembling LEGO and installing light bulbs to zipping jackets, pouring tea, and using tools with human-like adaptability (and infinitely more). Strong yet inherently safe and compliant, IP68 waterproof and food-safe, and built to endure millions of cycles, the new hands don’t just expand NEO’s capabilities. They unlock high-quality, real-world manipulation data at scale, accelerating the training of robust world models and bringing general-purpose autonomy closer than ever. About 1X: 1X is a leading U.S. based AI and robotics company, developing NEO–the home robot. 1X’s mission is to create an abundant future through safe, intelligent humanoids. Connect with 1X: Website: www.1x.tech X: https://x.com/1x_tech LinkedIn: https://www.linkedin.com/company/1x-technologies Instagram: https://www.instagram.com/1x.technologies",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Manipulator",
-      "#Humanoid"
-    ],
-    "score": 20.734,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 6.0,
-      "recency": 2.734144001934524,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 5.0,
       "demote": -0.0
     },
     "priority": "must_read"
@@ -2272,42 +1887,6 @@
     "priority": "must_read"
   },
   {
-    "id": "news:a298d17c9cff",
-    "source": "news",
-    "title": "후지쯔, 카네기멜론대 로봇 혁신센터 입주…피지컬 AI 공동 연구 확대",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=47350",
-    "summary": "후지쯔가 미국 카네기멜론대학교(CMU)의 '로봇혁신센터(RIC·Robotics Innovation Center)'에 입주하며 피지컬 AI 연구 협력을 한층 강화한다. 이번 입주는 지난 4월 양측이 설립한 '후지쯔-카네기멜론 피지컬 AI 연구센터(Fujitsu-Carnegie Mellon Physical AI Research Center)'의 연구를 본격 추진하기 위해 이뤄졌다. CMU는 8일(현지시간) 후지쯔가 피츠버그 헤이즐우드 그린(Hazelwood Green)에 위치한 로봇혁신센터의 새로운 기업 입주기관으로 합류했다고 밝혔다.",
-    "published": "2026-07-09T15:27:56+00:00",
-    "updated": "2026-07-09T15:27:56+00:00",
-    "authors": [
-      "백승일"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-07-09",
-      "full_text": "후지쯔가 미국 카네기멜론대학교(CMU)의 '로봇혁신센터(RIC·Robotics Innovation Center)'에 입주하며 피지컬 AI 연구 협력을 한층 강화한다. 이번 입주는 지난 4월 양측이 설립한 '후지쯔-카네기멜론 피지컬 AI 연구센터(Fujitsu-Carnegie Mellon Physical AI Research Center)'의 연구를 본격 추진하기 위해 이뤄졌다. CMU는 8일(현지시간) 후지쯔가 피츠버그 헤이즐우드 그린(Hazelwood Green)에 위치한 로봇혁신센터의 새로운 기업 입주기관으로 합류했다고 밝혔다.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 17.727,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.7271251542509924,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:thanhndv212/figaroh-plus",
     "source": "github",
     "title": "thanhndv212/figaroh-plus",
@@ -2397,45 +1976,6 @@
     "priority": "must_read"
   },
   {
-    "id": "news:b47e6b95d7ff",
-    "source": "news",
-    "title": "Robots Doing Stuff #61 | Bimanual Nut Pick and Threading",
-    "url": "https://www.youtube.com/watch?v=Kg3hWbaioDA",
-    "summary": "This is a real customer task: one step in a longer multi-part sequence we’re training in our labs. Threading requires precise alignment, force control, and fine manipulation. These are foundational capabilities for industrial dexterity applications that are currently inaccessible with traditional automation.",
-    "published": "2026-07-09T16:42:33+00:00",
-    "updated": "2026-07-09T16:42:33+00:00",
-    "authors": [
-      "Sanctuary AI"
-    ],
-    "extra": {
-      "feed": "Sanctuary AI (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i4.ytimg.com/vi/Kg3hWbaioDA/hqdefault.jpg",
-      "first_seen": "2026-07-09",
-      "full_text": "This is a real customer task: one step in a longer multi-part sequence we’re training in our labs. Threading requires precise alignment, force control, and fine manipulation. These are foundational capabilities for industrial dexterity applications that are currently inaccessible with traditional automation. We teleoperate these tasks to collect the data that trains our Physical AI. Next stop: autonomous. Visit www.sanctuary.ai to learn more about our Physical AI-enabled automation solutions. #Dexterity #DexterousHand #RobotHand #Robotics #RobotsDoingStuff #SanctuaryAI",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Manipulator",
-      "#Bimanual"
-    ],
-    "score": 15.738,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.738228822222222,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:6169e0becc9e",
     "source": "news",
     "title": "1X, '읽고 쓰는' 촉각 휴머노이드 손 공개...\"올해 1만개 대량 생산 가능\"",
@@ -2500,40 +2040,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 2.0,
       "recency": 2.9505800195138887,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:ed4f8dd60b5d",
-    "source": "news",
-    "title": "ABB Robotics collaborates with Roche to bring physical AI to laboratories",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/07/09/abb-robotics-collaborates-with-roche-to-bring-physical-ai-to-laboratories-/26827",
-    "summary": "",
-    "published": "2026-07-09T16:56:48+00:00",
-    "updated": "2026-07-09T16:56:48+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-07-09",
-      "full_text": "",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 13.74,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.740349364092262,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -2616,43 +2122,6 @@
       "real_robot": 0.0,
       "trusted_feed": 5.0,
       "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:23cded97c821",
-    "source": "news",
-    "title": "Humanoid robots controlled by surgeons did world-first operation on live pigs",
-    "url": "https://arstechnica.com/ai/2026/07/humanoid-robots-controlled-by-surgeons-did-world-first-operation-on-live-pigs/",
-    "summary": "Preclinical trial is testing the feasibility of humanoid robots in surgery.",
-    "published": "2026-07-09T20:12:03+00:00",
-    "updated": "2026-07-09T20:12:03+00:00",
-    "authors": [
-      "Jeremy Hsu"
-    ],
-    "extra": {
-      "feed": "Ars Technica",
-      "thumbnail": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/humanoid-robot-surgeons-500x500.png",
-      "first_seen": "2026-07-09",
-      "full_text": "Preclinical trial is testing the feasibility of humanoid robots in surgery.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 11.769,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.7694044238516864,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -6.0
     },
     "priority": "save_for_later"
   },
@@ -3064,115 +2533,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:842101746f18",
-    "source": "news",
-    "title": "2026 제어·로봇·시스템학회 학술대회, 1400여 명 참가 성황리 폐막",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=47355",
-    "summary": "제어·로봇·시스템학회(회장 오준호)는 지난 7월 1일부터 4일까지 대구 EXCO에서 개최한 '2026 제41회 제어·로봇·시스템학회 학술대회(ICROS 2026)'를 전국 산·학·연 연구자와 산업계 관계자 등 약 1400명이 참가한 가운데 성황리에 마무리했다고 9일 밝혔다.올해로 41회를 맞은 ICROS 학술대회는 국내 제어·로봇 분야를 대표하는 학술행사로, 공동대회장으로 대구경북과학기술원 박석호 교수를 선임하여 ‘AI와 함께 진화하는 제어·로봇’을 주제로 개최되었다. 이번 학술대회에서는 총 589편의 최신 연구논문이 발표되었으며,",
-    "published": "2026-07-09T18:01:01+00:00",
-    "updated": "2026-07-09T18:01:01+00:00",
-    "authors": [
-      "박경일"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-07-09",
-      "full_text": "제어·로봇·시스템학회(회장 오준호)는 지난 7월 1일부터 4일까지 대구 EXCO에서 개최한 '2026 제41회 제어·로봇·시스템학회 학술대회(ICROS 2026)'를 전국 산·학·연 연구자와 산업계 관계자 등 약 1400명이 참가한 가운데 성황리에 마무리했다고 9일 밝혔다.올해로 41회를 맞은 ICROS 학술대회는 국내 제어·로봇 분야를 대표하는 학술행사로, 공동대회장으로 대구경북과학기술원 박석호 교수를 선임하여 ‘AI와 함께 진화하는 제어·로봇’을 주제로 개최되었다. 이번 학술대회에서는 총 589편의 최신 연구논문이 발표되었으며,",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 6.75,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.7499054122743054,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:f1bef13102fe",
-    "source": "news",
-    "title": "Tiny robot boats build floating structures",
-    "url": "https://news.mit.edu/2026/tiny-robot-boats-build-floating-structures-0709",
-    "summary": "MIT researchers developed FloatForm, a swarm of small aquatic robots that snap together like ants forming a raft, assembling into reconfigurable structures on the water.",
-    "published": "2026-07-09T15:50:00+00:00",
-    "updated": "2026-07-09T15:50:00+00:00",
-    "authors": [
-      "Rachel Gordon | MIT CSAIL"
-    ],
-    "extra": {
-      "feed": "MIT News — Robotics",
-      "thumbnail": "https://news.mit.edu/sites/default/files/styles/news_article__cover_image__original/public/images/202607/MIT-csail-Floatform.jpg?itok=6Oxx8qDt",
-      "first_seen": "2026-07-09",
-      "full_text": "MIT researchers developed FloatForm, a swarm of small aquatic robots that snap together like ants forming a raft, assembling into reconfigurable structures on the water.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 6.73,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.730408889265873,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:35a81929cf25",
-    "source": "news",
-    "title": "中 1~5월 로봇 수출 1000만대 돌파…수출액 4.5조원 육박",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=47352",
-    "summary": "중국의 로봇 수출액이 5개월 만에 4조원을 넘어섰다.로봇 전문 포털 중국로봇망에 따르면 중국 관영 방송 CCTV가 세관 통계를 인용해 올해 로봇 산업 1~5월 수출 대수가 1037만7000대에 달했다고 밝혔다. 수출 총액은 199억9000만위안(약 4조4399억원)이었다.로봇은 세계 150여 개 국가로 판매됐으며, 유럽과 동남아 지역이 핵심 수출 지역이었다. 상하이 항구를 통해 이뤄진 수출액이 83억6000만위안(약 1조8583억원)으로, 전국 총 수출액의 40%를 차지했다는 점도 특징이다.세부적으로 로봇 청소기가 포함돼 있는 청소",
-    "published": "2026-07-09T15:17:46+00:00",
-    "updated": "2026-07-09T15:17:46+00:00",
-    "authors": [
-      "유효정"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-07-09",
-      "full_text": "중국의 로봇 수출액이 5개월 만에 4조원을 넘어섰다.로봇 전문 포털 중국로봇망에 따르면 중국 관영 방송 CCTV가 세관 통계를 인용해 올해 로봇 산업 1~5월 수출 대수가 1037만7000대에 달했다고 밝혔다. 수출 총액은 199억9000만위안(약 4조4399억원)이었다.로봇은 세계 150여 개 국가로 판매됐으며, 유럽과 동남아 지역이 핵심 수출 지역이었다. 상하이 항구를 통해 이뤄진 수출액이 83억6000만위안(약 1조8583억원)으로, 전국 총 수출액의 40%를 차지했다는 점도 특징이다.세부적으로 로봇 청소기가 포함돼 있는 청소",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 6.726,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.7256122573387893,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:27b136047c64",
     "source": "news",
     "title": "SK하이닉스, 나스닥 상장 첫날 13% 급등…\"로봇·에이전트로 수요 폭발\"",
@@ -3237,151 +2597,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.942973369627976,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:1cab7d140fdf",
-    "source": "news",
-    "title": "메이사, 국토부 ‘AX 스프린트’ 선정…“드론·로봇이 건설 현장 안전관리”",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=47359",
-    "summary": "메이사가 국토교통부의 AX 스프린트 국토·교통 분야 과제에 선정돼 40억원 규모로 건설 공정·안전 관리 AI 플랫폼을 상용화한다. 드론과 로봇을 건설 현장 안전관리와 공정 모니터링에 결합하는 방향으로, 단기간 내 시장 출시 가능한 AI 응용제품을 정부가 집중 지원하는 7540억원 규모 AX 프로젝트의 일부다.",
-    "published": "2026-07-10T10:40:37+00:00",
-    "updated": "2026-07-10T10:40:37+00:00",
-    "authors": [
-      "최지호"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-07-10",
-      "full_text": "공간 AI 기업 메이사(대표 최석원·김동영)가 국토교통부의 ‘AI 응용제품 신속 상용화 지원사업(AX 스프린트)’ 국토·교통 분야 과제에 최종 선정됐다고 10일 밝혔다.‘AX 스프린트’는 정부 11개 관계부처가 합동으로 추진하는 범부처 최대 규모의 AI 전환(AX) 프로젝트다. 단기간 내 시장 출시가 가능한 AI 응용제품의 상용화를 집중 지원하며, 총 246개 사업에 7540억원이 투입된다.메이사는 국토·교통 분야의 주관기관으로 선정돼 총사업비 40억원 규모의 사업을 수행한다. 사업명은 ‘건설 공정·안전 관리 AI 플랫폼 상용화’며",
-      "summary_kind": "llm",
-      "thumbnail": "https://cdn.irobotnews.com/news/photo/202607/47359_101771_3947.png"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 5.899,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.8986554124429564,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:a2f309b785ab",
-    "source": "news",
-    "title": "SK인텔릭스, DDP에 웰니스 로봇 ‘나무엑스’ 공급한다",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=47358",
-    "summary": "SK인텔릭스가 서울디자인재단과 MOU를 맺고 동대문디자인플라자 방문객을 위한 웰니스 로봇 나무엑스를 공급한다. DDP를 거점으로 디자인 공간 경험에 AI 로봇 서비스를 접목하려는 시도로, 공공 디자인 시설에서 로봇 기반 방문객 경험과 디자인 콘텐츠 확산을 실험한다는 점이 눈에 띈다.",
-    "published": "2026-07-10T10:24:06+00:00",
-    "updated": "2026-07-10T10:24:06+00:00",
-    "authors": [
-      "최지호"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-07-10",
-      "full_text": "SK인텔릭스(대표 안무인)가 서울디자인재단과 ‘서울시 디자인 산업 발전 및 DDP(동대문디자인플라자) 스마트 디자인 환경 조성을 위한 업무협약(MOU)’을 체결하고, DDP 방문객 대상으로 디자인과 AI 기술이 결합한 혁신적 디자인 공간 경험 제공 및 디자인 콘텐츠 확산에 나선다고 10일 밝혔다.지난 9일 서울 중구 DDP 디자인랩에서 열린 협약식에는 안무인 SK인텔릭스 대표와 차강희 서울디자인재단 대표를 비롯한 양사 주요 경영진이 참석했다. 양사는 이번 협약을 통해 DDP를 거점으로 디자인 산업의 미래 지향적 가치를 창출하고, 혁",
-      "summary_kind": "llm",
-      "thumbnail": "https://cdn.irobotnews.com/news/photo/202607/47358_101770_2315.jpg"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 5.896,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.8961975750570437,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:d9b5d2d1d651",
-    "source": "news",
-    "title": "New flapping robot swims and flies like a diving bird",
-    "url": "https://news.mit.edu/2026/new-flapping-robot-swims-and-flies-like-diving-bird-0709",
-    "summary": "MIT engineers’ design could lead to a new class of aerial-aquatic vehicles for ocean exploration.",
-    "published": "2026-07-09T18:00:00+00:00",
-    "updated": "2026-07-09T18:00:00+00:00",
-    "authors": [
-      "Jennifer Chu | MIT News"
-    ],
-    "extra": {
-      "feed": "MIT News — Robotics",
-      "thumbnail": "https://news.mit.edu/sites/default/files/styles/news_article__cover_image__original/public/images/202607/MIT-flapping-robot-01-press.jpg?itok=8PB63O4l",
-      "first_seen": "2026-07-09",
-      "full_text": "MIT engineers’ design could lead to a new class of aerial-aquatic vehicles for ocean exploration.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 5.75,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.749754127425595,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:6186c97652be",
-    "source": "news",
-    "title": "Commercial UAV Expo Debuts DRONERESPONDERS Program Management Course, Unveils Public Safety Summit Program",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/07/09/commercial-uav-expo-debuts-droneresponders-program-management-course-unveils-public-safety-summit-program/26825",
-    "summary": "",
-    "published": "2026-07-09T14:36:53+00:00",
-    "updated": "2026-07-09T14:36:53+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-07-09",
-      "full_text": "",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 5.72,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.719528431502976,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -3531,80 +2746,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.9246846788194443,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "low_priority"
-  },
-  {
-    "id": "news:020926d15acc",
-    "source": "news",
-    "title": "뉴로메카 박종훈 대표, 유상증자 청약 재원 41.6억원 확보",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=47362",
-    "summary": "Neuromeka CEO Park Jong-hoon secured about 4.16 billion won to participate in the company’s planned rights offering, raising the funds by selling 80,000 existing shares and part of his rights certificates. The company says he still holds the rights certificates needed for the subscription and plans to first subscribe for 15% of his allotted shares, signaling continued insider participation despite the share sale.",
-    "published": "2026-07-10T10:52:10+00:00",
-    "updated": "2026-07-10T10:52:10+00:00",
-    "authors": [
-      "최지호"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-07-10",
-      "full_text": "AI·로봇 자동화 전문기업 뉴로메카의 박종훈 대표가 이달 말 유상증자 참여를 위한 청약 재원 약 41.6억원을 확보하고, 구주주 청약 참여를 준비하고 있다고 10일 밝혔다.박 대표는 사전 공시 절차에 따라 보유주식 8만주와 신주인수권증서 일부를 매각해 청약 재원을 마련했다. 이번 매각 이후에도 유상증자 청약에 필요한 신주인수권증서는 보유하고 있으며, 사전에 공시된 매각 절차는 모두 마무리됐다.박 대표는 관련 세금 등 제반 비용을 제외한 실수령액을 재원으로 배정 물량의 15%를 우선 청약하고, 잔여 자금 범위 내에서 초과청약 한도까지",
-      "summary_kind": "llm",
-      "thumbnail": "https://cdn.irobotnews.com/news/photo/202607/47362_101773_4817.jpg"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 3.9,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.900374162524802,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "low_priority"
-  },
-  {
-    "id": "news:445a90fa21b3",
-    "source": "news",
-    "title": "GIST-송원대-광주산학융합원, 싱가포르서 글로벌 AI 기업 연계 프로그램 운영",
-    "url": "https://www.aitimes.kr/news/articleView.html?idxno=40917",
-    "summary": "GIST, Songwon University, and the Gwangju Industry-University Convergence Institute ran a 5-night, 7-day global AI industry-linked convergence program in Singapore from June 26 to July 2, 2026. The program exposed regional students to overseas AI technology trends and industrial sites, reflecting a push to connect local talent development with the AI and robotics capabilities now reshaping broader industry.",
-    "published": "2026-07-10T08:38:04+00:00",
-    "updated": "2026-07-10T08:38:04+00:00",
-    "authors": [
-      "박현진 기자"
-    ],
-    "extra": {
-      "feed": "인공지능신문",
-      "first_seen": "2026-07-10",
-      "full_text": "최근 AI와 로봇 기술이 산업 전반의 혁신을 이끄는 핵심 기술로 자리 잡으면서, 지역 인재들에게 글로벌 AI 기술 동향과 산업 현장을 접할 수 있는 교육 기회를 확대해야 한다는 목소리가 높아지고 있다.이에 광주과학기술원(GIST·지스트, 총장 임기철)은 송원대학교, 광주산학융합원과 함께 구성한 컨소시엄을 통해 ‘지역성장 인재양성체계(앵커) 사업(구 RISE 사업)’의 일환으로 지난 6월 26일부터 7월 2일까지 5박 7일간 싱가포르에서 ‘2026학년도 글로벌 인공지능(AI) 기업 연계 융합 프로그램’을 운영했다고 10일 밝혔다.이번",
-      "summary_kind": "llm",
-      "thumbnail": "https://cdn.aitimes.kr/news/thumbnail/202607/40917_61669_3742_v150.jpg"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 3.88,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.880418803829365,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
