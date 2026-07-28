@@ -138,7 +138,7 @@
     "source": "github",
     "title": "sou350121/VLA-Handbook",
     "url": "https://github.com/sou350121/VLA-Handbook",
-    "summary": "VLA-Handbook is a Chinese, practice-oriented learning and interview guide for algorithm engineers moving into Vision-Language-Action robotics. It focuses on robotics-specific issues rather than generic CV or NLP preparation, making it most useful as a structured entry point for understanding what VLA systems require in real robot settings.",
+    "summary": "VLA-Handbook is a Chinese, practice-oriented learning and interview guide for algorithm engineers moving into Vision-Language-Action robotics. It narrows the usual CV/NLP interview scope to robotics-specific issues, aiming to help readers understand the field’s distinct challenges rather than treating VLA as just another multimodal modeling topic.",
     "published": "2025-11-23T06:25:26Z",
     "updated": "2026-07-25T15:30:09Z",
     "authors": [
@@ -685,7 +685,7 @@
     "source": "github",
     "title": "isaac-sim/IsaacLab-Arena",
     "url": "https://github.com/isaac-sim/IsaacLab-Arena",
-    "summary": "IsaacLab-Arena extends NVIDIA Isaac Lab with a composable simulation layer for building robot learning environments from interchangeable robots, objects, and scene setups. It is aimed at rapid prototyping and policy evaluation across diverse embodiments and tasks, making it useful when researchers need scalable, repeatable simulation coverage rather than one-off environment definitions.",
+    "summary": "Isaac Lab - Arena extends NVIDIA Isaac Lab with a composable setup for building robot simulation environments from interchangeable robots, objects, and scenes. It is aimed at quickly prototyping tasks and evaluating robot learning policies across diverse embodiments and environment configurations, making it useful for scaling simulation experiments without rebuilding each setup from scratch.",
     "published": "2025-08-15T12:28:23Z",
     "updated": "2026-07-25T13:34:48Z",
     "authors": [
@@ -2803,7 +2803,7 @@
     "source": "github",
     "title": "phi-monster/Galahad",
     "url": "https://github.com/phi-monster/Galahad",
-    "summary": "Galahad targets instruction blindness in vision-language-action policies, packaging the paper, trained model, deconfounded datasets, data generator, and measurement battery used to diagnose when policies ignore language instructions. Its low-rank data cure is aimed at separating visual confounds from instruction-following behavior, making the repo useful for researchers who want to measure and reduce shortcut-driven failures in robot policies.",
+    "summary": "Galahad studies instruction blindness in vision-language-action policies, packaging the paper, model, deconfounded datasets, generator, and measurement battery around that diagnosis. It frames the failure as a data problem and offers a low-rank data cure, giving researchers tools to measure when policies ignore language instructions and to generate cleaner evaluations or training data around that behavior.",
     "published": "2026-07-17T17:13:51Z",
     "updated": "2026-07-25T14:45:50Z",
     "authors": [
@@ -3426,7 +3426,7 @@
     "source": "news",
     "title": "Training Agents 3: Reinforcement Learning",
     "url": "https://www.youtube.com/watch?v=ztdTed5egrM",
-    "summary": "Training Agents, Session 3: from a fine-tuned baseline to reinforcement learning with GRPO. In this live session, we'll move past imitation and start training on outcomes.",
+    "summary": "A live Training Agents session walks through moving an agent model from supervised fine-tuning into reinforcement learning with GRPO, using TRL to sample multiple completions per prompt, score them with verifiable reward functions, and train from relative group scores without a value model, reward model, or critic. It focuses on the practical mechanics that matter for post-training agent behavior: why RL adds signal imitation cannot, how to read reward/KL/length curves, and how failures like reward hacking, collapse, and length gaming show up.",
     "published": "2026-07-22T13:04:13+00:00",
     "updated": "2026-07-22T13:04:13+00:00",
     "authors": [
@@ -3437,7 +3437,7 @@
       "thumbnail": "https://i3.ytimg.com/vi/ztdTed5egrM/hqdefault.jpg",
       "first_seen": "2026-07-22",
       "full_text": "Training Agents, Session 3: from a fine-tuned baseline to reinforcement learning with GRPO. In this live session, we'll move past imitation and start training on outcomes. We'll take the model from the earlier sessions and run Group Relative Policy Optimization: sample multiple completions per prompt, score them with a reward function, and use the group's relative scores as the training signal — no value model, no reward model, no critic to train. Everything runs in TRL. What we'll cover: - Why GRPO after SFT, and what RL adds that imitation can't - How GRPO works: group sampling, relative advantages, and why that replaces a critic - Writing verifiable reward functions for agent tasks - Running TRL GRPO on Hugging Face Jobs - Reading the training curves: reward, KL, and completion length - Common failure modes: reward hacking, collapse, and length gaming Repo: https://github.com/burtenshaw/training-agents This is part of the Training Agents series: using coding agents to design, run, monitor, and review post-training experiments, while training models to become better agents.",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
