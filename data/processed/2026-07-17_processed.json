@@ -205,7 +205,8 @@
       "license": null,
       "first_seen": "2026-05-18",
       "full_text": "A Curated List of Vision-Language-Action (VLA) and World Action Models (WAM) Research and Beyond",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/DravenALG/awesome-vla-wam/HEAD/awesome-vla-wam.jpg"
     },
     "tags": [
       "#VLA",
@@ -590,63 +591,6 @@
       "github_stars_log": 10.484550065040281,
       "github_forks_log": 2.1583624920952498,
       "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.13653",
-    "source": "arxiv",
-    "title": "Exploratory, Communicative, and Deployable: Vision-Driven Embodied Agents for Open-World Mobile Manipulation",
-    "url": "http://arxiv.org/abs/2607.13653v1",
-    "summary": "REAL trains vision-driven mobile manipulation agents under deployment-like conditions: no privileged simulator state, incomplete instructions, active visual exploration, and simulated human interaction for intent disambiguation. It pairs sim-to-real-consistent APIs with task compositions for supervised fine-tuning and online RL, then evaluates on REAL-Bench, a 241-task suite covering exploration, distractors, articulated objects, and interactive clarification. The trained agent reaches 56.9% success on interactive tasks against stronger commercial VLM baselines and transfers to a physical dual-arm mobile robot with 78.3% end-to-end success across 60 household episodes.",
-    "published": "2026-07-15T09:55:45+00:00",
-    "updated": "2026-07-15T09:55:45+00:00",
-    "authors": [
-      "Boyu Mi",
-      "Mengchen Ma",
-      "Yifei Yao",
-      "Xing Gao",
-      "Junting Chen",
-      "Yangzi Li",
-      "Zihou Zhu",
-      "Guohao Li",
-      "Zhenfei Yin",
-      "Tai Wang",
-      "Yao Mu",
-      "Jiangmiao Pang",
-      "Hanqing Wang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.CV",
-        "cs.RO"
-      ],
-      "primary_category": "cs.CV",
-      "pdf_url": "https://arxiv.org/pdf/2607.13653v1",
-      "comment": "Accepted to ECCV 2026. 57 pages. Code available at https://github.com/InternRobotics/REAL",
-      "first_seen": "2026-07-16",
-      "full_text": "Real-world deployment of embodied agents requires active exploration, visual grounding, and interactive intent disambiguation. However, existing frameworks often rely on privileged simulator states or assume complete instructions, bypassing realistic deployment challenges. To bridge this gap, we present REAL, an agentic framework for open-world mobile manipulation. REAL establishes sim-to-real-consistent environment APIs without oracle perception and integrates a simulated user to enable human-in-the-loop interaction. Within this environment, we design diverse task compositions to drive data collection, supervised fine-tuning, and online reinforcement learning, systematically optimizing agent performance. To comprehensively evaluate this approach, we introduce REAL-Bench, a benchmark spanning 241 tasks across active exploration, visual distraction, articulated manipulation, and interactive disambiguation.   Experimental results demonstrate that our trained agent outperforms leading commercial closed-source VLMs on interactive tasks with a 56.9% success rate. Further empirical analysis reveals that our hierarchical training pipeline successfully aligns the model's tool-use capabilities while maintaining robust open-vocabulary reasoning under extended exploration horizons. Finally, we deploy and evaluate our framework on a physical dual-arm mobile robot, where it achieves a 78.3% end-to-end success rate over 60 real-world episodes. These physical trials demonstrate robust zero-shot transferability to unseen household scenarios, validating that our sim-to-real-consistent design successfully bridges the reality gap for long-horizon mobile manipulation. Code is available at https://github.com/InternRobotics/REAL.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#Manipulator",
-      "#Bimanual",
-      "#MobileManipulator"
-    ],
-    "score": 34.465,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 6.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 6.0,
-      "recency": 2.464636621329365,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -1504,49 +1448,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.13478",
-    "source": "arxiv",
-    "title": "VAMP-MR: Vector-Accelerated Motion Planning and Execution for Multi-Robot-Arms",
-    "url": "http://arxiv.org/abs/2607.13478v1",
-    "summary": "VAMP-MR speeds up multi-robot-arm motion planning by pairing classical planners with vectorized collision checking built on CPU SIMD instructions, targeting the collision-checking bottleneck that dominates search- and sampling-based methods. The planners generate collision-free multi-arm motions and accelerate both planning and execution postprocessing by up to two orders of magnitude, making near real-time planning more practical for industrial manipulation setups.",
-    "published": "2026-07-15T06:13:50+00:00",
-    "updated": "2026-07-15T06:13:50+00:00",
-    "authors": [
-      "Philip Huang",
-      "Chenrui Gao",
-      "Jiaoyang Li"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.13478v1",
-      "comment": "8 pages, 6 figures, 3 tables. To appear in the Proceedings of IROS 2026",
-      "first_seen": "2026-07-16",
-      "full_text": "Multi-robot-arm motion planning is a key challenge in deploying multiple manipulators for industrial tasks such as manufacturing. Existing search-based and sampling-based solvers often require significant computation time to produce collision-free, high-quality motions suitable for safe real-world execution. In this work, we introduce a new suite of multi-robot-arm motion planners capable of near real-time motion generation, combining classical planning algorithms with state-of-the-art vectorized collision-checking techniques. Based on CPU SIMD instructions, our new planners accelerate their primary bottleneck, collision checking, and achieve up to two orders of magnitude speedup in both motion planning and execution postprocessing for multi-arm manipulation tasks. We also release our implementation to lower the barrier for research and development of multi-robot-arm planning and manipulation problems. Code is available at https://vamp-mr.github.io/vamp-mr",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#Manipulator"
-    ],
-    "score": 27.432,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.431613305339782,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:D-Robotics/hobot_stereonet",
     "source": "github",
     "title": "D-Robotics/hobot_stereonet",
@@ -2153,46 +2054,6 @@
       "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:bb6824eef9d8",
-    "source": "news",
-    "title": "LimX COSA 0.5: LimX Dynamics' Humanoid Brain System Updated",
-    "url": "https://www.youtube.com/watch?v=vxFnOu7kf6Y",
-    "summary": "No teleoperation. No cuts. Long take. One of the world's few complete demonstrations of long-horizon mobile manipulation, bringing fully autonomous humanoid robots another step closer to us. #limxdynamics #BrainSystem #physicalai #humanoidrobot",
-    "published": "2026-07-15T06:11:25+00:00",
-    "updated": "2026-07-15T06:11:25+00:00",
-    "authors": [
-      "LimX Dynamics"
-    ],
-    "extra": {
-      "feed": "LimX Dynamics (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i3.ytimg.com/vi/vxFnOu7kf6Y/hqdefault.jpg",
-      "first_seen": "2026-07-15",
-      "full_text": "No teleoperation. No cuts. Long take. One of the world's few complete demonstrations of long-horizon mobile manipulation, bringing fully autonomous humanoid robots another step closer to us. #limxdynamics #BrainSystem #physicalai #humanoidrobot",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Manipulator",
-      "#MobileManipulator",
-      "#Humanoid"
-    ],
-    "score": 23.431,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.431253653358135,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
       "demote": -0.0
     },
     "priority": "must_read"
@@ -2832,55 +2693,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.13579",
-    "source": "arxiv",
-    "title": "Agile perceptive multi-skill locomotion for quadrupedal robots in the wild",
-    "url": "http://arxiv.org/abs/2607.13579v1",
-    "summary": "APT-RL trains a single onboard quadruped policy that can switch smoothly among locomotion skills using perception alone, with the skills pretrained from large 2D motion datasets generated by trajectory optimization over simplified dynamics. The resulting skill priors transfer to real robots and extend to 3D terrain, letting the system handle stairs, hurdles, stepping stones, gaps, branches, indoor obstacles, and rough outdoor terrain without external sensing or computation. In real-world tests it performs high-speed agile traversal, including drop-down maneuvers with instantaneous peak speeds up to 6 m/s.",
-    "published": "2026-07-15T08:22:52+00:00",
-    "updated": "2026-07-15T08:22:52+00:00",
-    "authors": [
-      "Jun-Gill Kang",
-      "Jaehyun Park",
-      "Tae-Gyu Song",
-      "Joon-Ha Kim",
-      "Seungwoo Hong",
-      "Hae-Won Park"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.13579v1",
-      "comment": "Project page: https://skillquadsr.github.io/ ,This is the author's version of the work. It is posted here by permission of the AAAS for personal use, not for redistribution. The definitive version was published in Science Robotics on 7.15.2026; doi: 10.1126/scirobotics.adz7397. Jun-Gill Kang and Jaehyun Park are co-first authors. Seungwoo Hong and Hae-Won Park are co-corresponding authors",
-      "first_seen": "2026-07-16",
-      "full_text": "Enabling quadrupedal robots to traverse complex terrains-from rugged outdoor environments to urban landscapes-requires seamless integration of multiple motor skills, smooth transitions between gaits, and high-speed perceptive locomotion using only onboard sensors. We present APT-RL (Action Pretrained Transformer-based Reinforcement Learning), a unified framework that enables multi-skill locomotion to achieve high-speed traversal in complex environments through autonomous skill transitions utilizing only onboard perception and computation. Our approach generates large-scale, feature-rich 2D motion datasets through trajectory optimization with simplified dynamics. These datasets enable training of diverse, reusable locomotion skills that transfer effectively to a real quadruped robot operating on complex uneven terrains. The resulting high-quality skills serve as strong priors for efficient learning of complex downstream tasks and extend naturally to 3D environments, enabling smooth, high-speed multi-skill locomotion in deployed policy. Real-world experiments demonstrate the framework's capabilities: the robot performs agile maneuvers through complex indoor obstacles and outdoor wild environments, including dynamic drop-down maneuvers that reach instantaneous peak speeds of up to 6 meters per second. A single onboard policy enables robust traversal of diverse obstacles, including stairs, hurdles, stepping stones, gaps, and fallen branches, demonstrating the versatility and effectiveness of our approach.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 20.451,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.4508146952604166,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:936e231728ff",
     "source": "news",
     "title": "1X unveils 25-degree-of-freedom humanoid robot hands for NEO",
@@ -3125,62 +2937,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.13472",
-    "source": "arxiv",
-    "title": "EgoHTR: Egocentric 4D Demonstrations of Human Terrain Traversal",
-    "url": "http://arxiv.org/abs/2607.13472v1",
-    "summary": "EgoHTR builds a dataset and reconstruction pipeline for learning humanoid terrain traversal from egocentric human demonstrations, pairing wearable sensors with a portable 3D scanner to capture scene-aligned 4D motion in difficult outdoor environments. It contains 55 human-terrain sequences and more than 150k frames, is validated against motion-capture ground truth, and is used to train perceptive locomotion policies that replay reconstructed reference motions on a Unitree G1 humanoid.",
-    "published": "2026-07-15T06:02:41+00:00",
-    "updated": "2026-07-15T06:02:41+00:00",
-    "authors": [
-      "Alex Brandes",
-      "Haig Conti Georges Sajelian",
-      "Manthan Patel",
-      "Dominik Hollidt",
-      "Chenhao Li",
-      "Matthias Heyrman",
-      "Oliver Hausdoerfer",
-      "Manuel Kaufmann",
-      "Xi Wang",
-      "Jonas Frey",
-      "Angela P. Schoellig",
-      "Christian Holz",
-      "Marc Pollefeys",
-      "Marco Hutter"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.13472v1",
-      "comment": "Project webpage: https://egohtr.github.io",
-      "first_seen": "2026-07-16",
-      "full_text": "Deploying humanoid robots in unstructured terrain remains an open problem. While classic reinforcement learning struggles with the sheer complexity of real-world interactions, more promising methods leveraging human priors remain limited to models lacking contextual awareness. The restricted motion synthesis is a direct consequence of existing dataset pipelines failing to capture human-scene sequences in challenging environments. To bridge this gap between humanoid learning and scene reconstruction, we introduce the Egocentric Human-Terrain Reconstruction (EgoHTR) dataset. We develop and open-source a reconstruction pipeline capturing 55 scene-aligned 4D human motion sequences in diverse, complex environments using a multi-sensor setup of egocentric wearables and a portable 3D scanner. The resulting dataset comprises over 150k frames, which we evaluate against motion-capture ground truth, demonstrating state-of-the-art accuracy and establishing a rigorous benchmark for human motion analysis and synthesis. Further, we leverage this data to train perceptive locomotion policies, demonstrating hardware deployment on a Unitree G1 for reconstructed reference motions. Our pipeline enables community-driven dataset extensions and factors the problem to help researchers build foundational, context-aware robots that reliably traverse uneven terrain.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#Humanoid"
-    ],
-    "score": 19.43,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.4299540788244047,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:NuclearVenom/BulletLab",
     "source": "github",
     "title": "NuclearVenom/BulletLab",
@@ -3271,102 +3027,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.13597",
-    "source": "arxiv",
-    "title": "Semantic Anchoring for Robotic Action Representations",
-    "url": "http://arxiv.org/abs/2607.13597v1",
-    "summary": "Semantic Anchoring targets a failure mode in Vision-Language-Action models where robot fine-tuning erodes the semantic structure inherited from pretrained vision-language encoders, hurting task success and out-of-distribution generalization. It adds a plug-and-play training method that anchors action representations to a semantic manifold while splitting them into shared semantic and private channels, then discards these extra components at inference so the deployed model is unchanged. Across VLA backbones in simulation and real-world benchmarks, it reports gains up to 18.7% on real-world in-distribution tasks and 21.5% on out-of-distribution generalization.",
-    "published": "2026-07-15T08:45:15+00:00",
-    "updated": "2026-07-15T08:45:15+00:00",
-    "authors": [
-      "Yuan Xu",
-      "Youheng Shi",
-      "Chengyang Li",
-      "Wentao Zhu",
-      "Yizhou Wang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.13597v1",
-      "comment": null,
-      "first_seen": "2026-07-16",
-      "full_text": "Vision-Language-Action (VLA) models inherit rich semantic representations from pretrained Vision-Language Models, yet fine-tuning on limited robot demonstrations degrades this structure and undermines generalization. A fundamental question therefore arises: what constitutes a good action representation? Inspired by the mirror neuron theory's insight that observation and execution share an intention-level encoding, we examine whether a robot's action representations preserve the semantic structure captured by pretrained encoders. Systematic probing confirms that this structure erodes during finetuning, and that its quality synchronizes with both task success and out-of-distribution generalization. We further introduce a plug-and-play method that anchors action representations to a semantic manifold while decomposing representations into a shared semantic channel and a private channel, all discarded at inference, leaving the deployed model unchanged. Validated on different VLA backbones across simulation and real-world benchmarks, our method yields up to +18.7% on real-world in-distribution tasks and +21.5% on out-of-distribution generalization.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 18.454,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.454145548864087,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.13553",
-    "source": "arxiv",
-    "title": "Flow-aware Optimal Navigation in Unsteady Flows through Reinforcement Learning",
-    "url": "http://arxiv.org/abs/2607.13553v1",
-    "summary": "TD3 reinforcement learning is used to train autonomous agents to navigate to arbitrary targets in a chaotic, time-varying double-gyre flow using only bio-inspired local sensing rather than full prior knowledge of the flow field. Across five observation strategies, agents that can sense and remember recent local velocity measurements perform best overall, while velocity sensing favors energy-efficient paths and vorticity sensing helps map flow structure and approach targets closely. Supplying explicit global flow parameters actually hurts performance, suggesting that learned navigation policies may generalize better when they rely on implicit local flow cues.",
-    "published": "2026-07-15T07:57:26+00:00",
-    "updated": "2026-07-15T07:57:26+00:00",
-    "authors": [
-      "Andrea Maria Braghin",
-      "Nicolò Botteghi",
-      "Matteo Tomasetto",
-      "Andrea Manzoni",
-      "Gabriele Cazzulani"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.LG",
-        "eess.SY"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.13553v1",
-      "comment": null,
-      "first_seen": "2026-07-16",
-      "full_text": "Autonomous robotic navigation in nonstationary time-varying fluid flows remains a fundamental challenge due to partial observability and the unpredictability of realistic environments. While classical optimal control frameworks employed in robotics require unrealistic a-priori global flow knowledge, biological systems are able to navigate successfully by exploiting localized sensory cues. In this work we present a reinforcement learning approach using the TD3 algorithm to train autonomous agents to reach arbitrary targets within a parametric, chaotic double-gyre flow. To investigate optimal sensory mechanisms, we evaluate five bio-inspired observation strategies based on relative position, local velocity or local vorticity measures, and short-term memory variants. Additionally, we analyze the impact of providing agents with explicit global flow parameters. Numerical results demonstrate that an agent that is able to sense and remember a set number of flow velocity measures achieves the highest performance. The experiments reveal a trade-off in sensor utility: velocity-aware agents optimize energy efficiency, whereas vorticity sensors provide superior structural mapping and achieve better target proximity. Incorporating explicit global flow parameters is shown to decrease navigation performance. This behavior suggests that reinforcement learning-based autonomous systems develop more robust and general policies when restricted to implicit flow representations. The presented results offer insights for improving the transition of bio-inspired robotic navigation from simulation to real-world environments.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 18.447,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.447029972829861,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -3510,45 +3170,6 @@
     "priority": "must_read"
   },
   {
-    "id": "news:2acb67b4fb10",
-    "source": "news",
-    "title": "Meet Lumo-2, our latent World-Action Model for long-horizon, real-world manipulation.",
-    "url": "https://www.youtube.com/watch?v=Q0WMUDF3JKI",
-    "summary": "•🕵️‍ Predictive world dynamics •🧠 Human-to-Robot learning •💡 Long-horizon manipulation •🏠 20+ real household tasks Research & videos: www.astribot.com/research/Lumo2 #Astribot #Lumo2 #HumanoidRobots",
-    "published": "2026-07-14T13:03:37+00:00",
-    "updated": "2026-07-14T13:03:37+00:00",
-    "authors": [
-      "Astribot"
-    ],
-    "extra": {
-      "feed": "Astribot (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i2.ytimg.com/vi/Q0WMUDF3JKI/hqdefault.jpg",
-      "first_seen": "2026-07-14",
-      "full_text": "•🕵️‍ Predictive world dynamics •🧠 Human-to-Robot learning •💡 Long-horizon manipulation •🏠 20+ real household tasks Research & videos: www.astribot.com/research/Lumo2 #Astribot #Lumo2 #HumanoidRobots",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Manipulator",
-      "#Humanoid"
-    ],
-    "score": 17.278,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.2783072249627976,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "arxiv:2607.14333",
     "source": "arxiv",
     "title": "SD-MAR: Multi-image Analytical Reasoning via Synthetic Data and Reinforcement Learning",
@@ -3592,97 +3213,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.13624",
-    "source": "arxiv",
-    "title": "From Language to Navigation Goals: A Vision-Language Approach for Semantic Navigation of Mobile Robots Using RGB-D Perception",
-    "url": "http://arxiv.org/abs/2607.13624v1",
-    "summary": "A ROS 2 navigation pipeline turns natural-language requests such as going to the mail box into executable Nav2 goals by grounding the referenced object in RGB-D perception, estimating its position, and sending the robot toward it. It is built as portable ROS 2 modules and was tested in simulation and on a TurtleBot3 Waffle and Unitree Go2 with a RealSense camera, where it handled both direct and contextual commands while giving natural-language feedback.",
-    "published": "2026-07-15T09:15:21+00:00",
-    "updated": "2026-07-15T09:15:21+00:00",
-    "authors": [
-      "Jose Martínez-Fajardo",
-      "Pablo Pueyo",
-      "Fernando Caballero",
-      "Luis Merino"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.13624v1",
-      "comment": "8 pages, 7 figures, 3 tables",
-      "first_seen": "2026-07-16",
-      "full_text": "Natural language interaction provides an intuitive way for non-expert users to communicate with robotic platforms. However, transforming user requests into executable navigation actions remains a challenging task, requiring the integration of language understanding, environment perception, and autonomous navigation. This work presents a language-driven navigation framework that enables mobile robots to interpret user requests in natural language to move the robot to a destination and autonomously navigate towards it.   The framework is composed of modular ROS 2 components that cooperate to transform natural language instructions into navigation actions. Given a natural language request referring to a target in the environment (e.g., \"go to the mail box\"), the system identifies the referenced object, estimates its position using RGB-D data, and generates a navigation goal, which is then executed through the ROS 2 Nav2 navigation stack. The ROS 2-based implementation facilitates portability across different robotic platforms, requiring only the configuration of the corresponding topics and services.   The system is evaluated in both simulation and real-world scenarios using a TurtleBot3 Waffle and a Unitree Go2 robot with a RealSense camera. Experimental results show that the framework successfully interprets both direct commands and contextual requests, generates meaningful natural-language feedback, and navigates towards the desired target. These results demonstrate the feasibility of combining semantic perception and autonomous navigation to provide an intuitive human-robot interaction paradigm. Code will be released as open source upon acceptance.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 16.459,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.4586247162078374,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.13461",
-    "source": "arxiv",
-    "title": "Joint On-and-Off Policy Learning for Vision-and-Language Navigation",
-    "url": "http://arxiv.org/abs/2607.13461v1",
-    "summary": "JOP-VLN combines the two dominant training routes for vision-and-language navigation: off-policy imitation from expert and DAgger-generated trajectories, and on-policy reinforcement learning for exploration and reasoning. Its three-stage pipeline first learns basic navigation from demonstrations, then uses DAgger trajectories to improve recovery from mistakes, and finally trains with high-entropy trajectory sampling plus error-correction-prioritized sorting. On VLN-CE, it reports 69.9% success on R2R and 68.0% on RxR, with the R2R result claimed as a new best.",
-    "published": "2026-07-15T05:46:34+00:00",
-    "updated": "2026-07-15T05:46:34+00:00",
-    "authors": [
-      "Qingrong He",
-      "Lin Zhao",
-      "Kevin Zheng",
-      "Liang Lin"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.13461v1",
-      "comment": "Accepted by IROS 2026",
-      "first_seen": "2026-07-16",
-      "full_text": "Vision-and-Language Navigation (VLN) necessitates an embodied agent to navigate in the physical world by adhering to natural language instructions. Recent advancements in Vision-Language Models (VLM) have propelled the development of VLM-based VLN methods with two predominant paradigms: (1) imitation learning (IL) on expert demonstrations, followed by the Dataset Aggregation (DAgger) algorithm to bolster error recovery capabilities; (2) reinforcement learning (RL) driven by verifiable rewards to enhance reasoning and exploration. A notable gap is the absence of integration between these two distinct paradigms. This paper introduces JOP-VLN, a novel VLN framework that synergistically combines off-policy imitation learning and on-policy exploration within a three-stage training pipeline. Initially, IL is employed on expert demonstrations to acquire basic navigation skills. Subsequently, the DAgger algorithm is utilized to generate heuristic exploration trajectories, which are then used for imitation learning to improve error recovery capabilities. Finally, a joint on-and-off policy learning framework is implemented, featuring high-entropy trajectory sampling to enhance RL training efficiency and an error-correction-prioritized trajectory sorting strategy for effective error correction. Extensive experiments demonstrate the efficacy of JOP-VLN, achieving success rates of 69.9% and 68.0% on the VLN-CE R2R and RxR benchmarks, respectively, setting a new state-of-the-art on R2R. Project page: https://qingrongh.github.io/JOP-VLN.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#IL",
-      "#Other"
-    ],
-    "score": 16.428,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.4275557651165673,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -4235,44 +3765,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:3ca52ba6732a",
-    "source": "news",
-    "title": "How to Run Agent-Led Autoresearch with NVIDIA NeMo RL and NeMo Gym",
-    "url": "https://www.youtube.com/watch?v=qP0uXRbg9hc",
-    "summary": "Build an autonomous agent-led reinforcement learning research workflow using agent skills that leverage NVIDIA NeMo RL, NeMo Gym and Brev. This tutorial shows how Codex can configure a GPU environment, run experiments and track results using reusable agent skills for Brev etiquette, session memory, and autoresearch. This workflow covers two examples: 1.",
-    "published": "2026-07-14T16:00:25+00:00",
-    "updated": "2026-07-14T16:00:25+00:00",
-    "authors": [
-      "NVIDIA Developer"
-    ],
-    "extra": {
-      "feed": "NVIDIA Developer (YouTube)",
-      "thumbnail": "https://i2.ytimg.com/vi/qP0uXRbg9hc/hqdefault.jpg",
-      "first_seen": "2026-07-14",
-      "full_text": "Build an autonomous agent-led reinforcement learning research workflow using agent skills that leverage NVIDIA NeMo RL, NeMo Gym and Brev. This tutorial shows how Codex can configure a GPU environment, run experiments and track results using reusable agent skills for Brev etiquette, session memory, and autoresearch. This workflow covers two examples: 1. Visual counting with RL: Create a visual star-count environment for Qwen3-VL-2B-Instruct, scale training, and improve reported accuracy from 25.0% to 96.875%. 2. Paper-to-code validation: Demonstrate how an agent can help translate a research paper into code and start validation training, while the researcher remains responsible for goals, budgets, and final judgment. Tech blog: Brev Launchable: https://brev.nvidia.com/launchable/deploy?launchableID=env-3ECKNnhrpAkQVmcfgA88kFWW7v7 NeMo RL on GitHub: https://github.com/NVIDIA-NeMo/RL NeMo Gym on GitHub: https://github.com/NVIDIA-NeMo/Gym 0:00 - Agent-Led Coding and Research 0:21 - What Is Autoresearch? 0:47 - Three Capabilities in the Workflow 1:27 - NVIDIA NeMo RL, NeMo Gym and Brev 1:42 - Three Agent Skills for Codex 2:42 - Setting Up the Brev Environment 4:31 - Paper-to-Code Workflow 6:25 - Goal-Driven Autoresearch and Scaling 8:06 - Key Takeaways 8:39 - Learn More and Try It Yourself",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 11.305,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.304616746741071,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:afdbefda2da1",
     "source": "news",
     "title": "中 브이봇, '등에 팔 달린' 4족 로봇개 개발",
@@ -4518,40 +4010,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.472950086222718,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:8a4d92d878c7",
-    "source": "news",
-    "title": "Impossible Metals to Open Advanced Marine Robotics Hub in Pittsburgh, Building the Next Generation of American Mineral Robotics",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/07/14/impossible-metals-to-open-advanced-marine-robotics-hub-in-pittsburgh-building-the-next-generation-of-american-mineral-robotics/26837",
-    "summary": "New hub will develop dual-use autonomy for ocean science, naval systems, and a China-free critical-mineral supply chain, forging partnerships with Pittsburgh's world-leading robotics talent",
-    "published": "2026-07-14T16:35:12+00:00",
-    "updated": "2026-07-14T16:35:12+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-07-14",
-      "full_text": "New hub will develop dual-use autonomy for ocean science, naval systems, and a China-free critical-mineral supply chain, forging partnerships with Pittsburgh's world-leading robotics talent",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 10.31,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.309792845882937,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -5066,40 +4524,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:98a702da5350",
-    "source": "news",
-    "title": "ELECTRICAL CONNECTORS & TERMINALS DESIGNED FOR AUTOMATION SYSTEMS AND ROBOTICS",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/07/14/electrical-connectors-terminals-designed-for-automation-systems-and-robotics/26836",
-    "summary": "ETCO Incorporated has introduced a line of standard and custom electrical connectors and terminals for a wide range of applications that must withstand intense operations, constant motion, and vibration.",
-    "published": "2026-07-14T13:02:14+00:00",
-    "updated": "2026-07-14T13:02:14+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-07-14",
-      "full_text": "ETCO Incorporated has introduced a line of standard and custom electrical connectors and terminals for a wide range of applications that must withstand intense operations, constant motion, and vibration.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 8.278,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.2781013775520833,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:fa577ebaf2fc",
     "source": "news",
     "title": "BrainCo Debuts World's First Integrated Brain-to-Robot AI R&D Platform at WAIC 2026",
@@ -5204,44 +4628,6 @@
       "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:7d72da8ff6b5",
-    "source": "news",
-    "title": "Going the Extra Mile with Spot | Boston Dynamics",
-    "url": "https://www.youtube.com/watch?v=EI1zFxLVkrs",
-    "summary": "Boston Dynamics is testing a last-mile delivery solution. Spot will help get packages from van to doorstep with less strain and greater efficiency. Learn more about how and why we're taking on one of the biggest supply chain challenges: https://bostondynamics.com/blog/bridging-the-porch-gap/",
-    "published": "2026-07-14T14:14:48+00:00",
-    "updated": "2026-07-14T14:14:48+00:00",
-    "authors": [
-      "Boston Dynamics"
-    ],
-    "extra": {
-      "feed": "Boston Dynamics (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i2.ytimg.com/vi/EI1zFxLVkrs/hqdefault.jpg",
-      "first_seen": "2026-07-14",
-      "full_text": "Boston Dynamics is testing a last-mile delivery solution. Spot will help get packages from van to doorstep with less strain and greater efficiency. Learn more about how and why we're taking on one of the biggest supply chain challenges: https://bostondynamics.com/blog/bridging-the-porch-gap/",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 7.289,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.2888999844742064,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
       "demote": -0.0
     },
     "priority": "save_for_later"
@@ -5562,42 +4948,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.7301028630505955,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:00633f0728af",
-    "source": "news",
-    "title": "A flapping robot swims and flies like a diving bird",
-    "url": "https://robohub.org/a-flapping-robot-swims-and-flies-like-a-diving-bird/",
-    "summary": "Image copyright: Raphael Zufferey. By Jennifer Chu Loons, gulls, puffins, and petrels are some of the 100 species of birds that can both fly and swim. These diving birds can plunge in water to swim after prey, and then leap back into the air to fly away. Now, inspired by these naturally aquatic aviators, engineers […]",
-    "published": "2026-07-15T10:03:17+00:00",
-    "updated": "2026-07-15T10:03:17+00:00",
-    "authors": [
-      "EPFL"
-    ],
-    "extra": {
-      "feed": "Robohub",
-      "first_seen": "2026-07-15",
-      "full_text": "Image copyright: Raphael Zufferey. By Jennifer Chu Loons, gulls, puffins, and petrels are some of the 100 species of birds that can both fly and swim. These diving birds can plunge in water to swim after prey, and then leap back into the air to fly away. Now, inspired by these naturally aquatic aviators, engineers […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 5.466,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.4657576376339287,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
