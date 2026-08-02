@@ -887,52 +887,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.14852",
-    "source": "arxiv",
-    "title": "Towards Human-like Physical Intelligence: LifelongVision-Language-Action Learning for Robotic Manipulation",
-    "url": "http://arxiv.org/abs/2607.14852v1",
-    "summary": "LifelongVLA tackles continual learning for robotic manipulation by splitting VLA adaptation into short-term and long-term LoRA pathways, with a task-aware gate controlling how much the system favors fast plasticity versus stable retention. It also uses stochastic, cache-efficient skill replay to preserve prior manipulation behaviors without storing full trajectories. Experiments, including deployment on an xArm robot, show better skill expansion and retention than existing baselines while reducing the need for retraining.",
-    "published": "2026-07-16T11:22:06+00:00",
-    "updated": "2026-07-16T11:22:06+00:00",
-    "authors": [
-      "Yao He",
-      "Gan Sun",
-      "Wenqi Liang",
-      "Fazeng Li",
-      "Yang Cong"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.14852v1",
-      "comment": null,
-      "first_seen": "2026-07-17",
-      "full_text": "Similar to the natural capabilities of humans to sequentially learn new tasks, robots with Vision-Language-Action (VLA) models should possess lifelong learning ability to learn a new task when deployed in open-world environments. However, most recently proposed lifelong learning models aim to effectively learn the current task (plasticity) or maintain high accuracy on previous tasks (stability), while the plasticity-stability trade-off remains largely unsolved in robotic manipulation models. To address this fundamental challenge, we propose a cache-efficient lifelong Vision-Language-Action learning framework for robotic manipulation (i.e., LifelongVLA), which alleviates the plasticity-stability trade-off with a dual-timescale adaptation mechanism while achieving low-cost robotic deployment with a cache-efficient replay strategy. More concretely, we propose a dual-timescale LoRA gating module to decompose VLA adaptation into two lightweight pathways: a short-term adapter for plasticity and a long-term adapter for stable consolidation. These pathways are integrated via a task-aware gate, enabling explicit control of the plasticity-stability trade-off. In the skill replay phase, a cache-efficient stochastic replay strategy is proposed to preserve more balanced retention signals without full-trajectory storage. Finally, experiments show that LifelongVLA outperforms existing baselines, demonstrating efficient skill expansion, robust retention of learned manipulation behaviors, and reduced reliance on retraining for real-world deployment on an xArm robot.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 31.263,
-    "score_breakdown": {
-      "title_keyword": 12.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.26346180906498,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:cvlab-kaist/Geometric-Action-Model",
     "source": "github",
     "title": "cvlab-kaist/Geometric-Action-Model",
@@ -1258,60 +1212,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.15004",
-    "source": "arxiv",
-    "title": "CosFly-VLA: A Spatially Aware Vision-Language-Action Model for UAV Tracking",
-    "url": "http://arxiv.org/abs/2607.15004v1",
-    "summary": "CosFly-VLA is a UAV tracking policy designed to keep following dynamic targets through urban occlusions by jointly predicting target grounding, visibility, and continuous flight actions rather than relying only on visible-frame imitation. It is trained with spatially grounded continued pretraining over 500k mixed examples, curriculum SFT for hard and long occlusions, CoT recovery traces, and closed-loop RL rewards for stand-off tracking, grounding, collision avoidance, and success. Against OpenVLA, the 0.8B model cuts open-loop ADE by 34.1% on seen tests and 35.3% on unseen tests, with closed-loop RL raising success rate by 29.8% and 2.5% respectively.",
-    "published": "2026-07-16T13:52:08+00:00",
-    "updated": "2026-07-16T13:52:08+00:00",
-    "authors": [
-      "Ruilong Ren",
-      "Songsheng Cheng",
-      "Yunpeng Zhou",
-      "Hanxuan Chen",
-      "Xiangyue Wang",
-      "Tianle Zeng",
-      "Shuai Yuan",
-      "Binbo Li",
-      "Hanzhong Guo",
-      "Ji Pei",
-      "Da Zhang",
-      "Kangli Wang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.15004v1",
-      "comment": null,
-      "first_seen": "2026-07-17",
-      "full_text": "Dynamic target tracking is essential for Unmanned Aerial Vehicles (UAVs) operating in complex urban environments, where both the target and the camera viewpoint change continuously. Existing Vision-Language-Action (VLA) policies can track visible targets effectively, but their performance often degrades when buildings, vegetation, or roadside objects block the line of sight. During sustained occlusion, a policy may lose the target state, execute actions toward an incorrect region, and amplify this error through subsequent observations until re-acquisition becomes impossible. To this end, we present CosFly-VLA, a spatially aware VLA model that jointly grounds the target, estimates its visibility, and generates continuous flight actions through a structured prediction interface. To train this policy, we use a large-scale recipe over diverse data sources. Spatially Grounded Continued Pretraining (CPT) on a 500k mixed pool injects UAV-view depth, distance, and 3-D spatial reasoning. A three-stage Curriculum-based Supervised Fine-Tuning (SFT) process then specializes the tracker through multi-head warm-up followed by two-stage curriculum learning over natural and hard / long-occlusion data. Chain-of-Thought (CoT) training subsequently teaches recovery-oriented reasoning traces before structured answers. Finally, a closed-loop Reinforcement Learning (RL) stage optimizes tracking behavior with a multi-component reward covering stand-off tracking, grounding quality, collision avoidance, and task success. Relative to OpenVLA, CosFly-VLA-0.8B reduces open-loop Average Displacement Error (ADE) by 34.1% on seen-test and 35.3% on unseen-test. Closed-loop optimization improves Success Rate (SR) by 29.8% and 2.5%, respectively. These results demonstrate progress from visible-frame imitation toward spatially grounded action-closed-loop control, evaluated under a shared oracle state history.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Other"
-    ],
-    "score": 27.286,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 6.0,
-      "recency": 2.285788198965774,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -2207,48 +2107,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:assistive-autonomy/assistax",
-    "source": "github",
-    "title": "assistive-autonomy/assistax",
-    "url": "https://github.com/assistive-autonomy/assistax",
-    "summary": "Assistax is a hardware-accelerated reinforcement learning benchmark for assistive robotics, focused on evaluating policies for robot assistance tasks efficiently. From the available description, it appears aimed at making assistive autonomy experiments faster and more standardized rather than presenting a specific algorithmic result.",
-    "published": "2025-07-24T20:28:40Z",
-    "updated": "2026-07-16T15:27:03Z",
-    "authors": [
-      "assistive-autonomy"
-    ],
-    "extra": {
-      "stars": 16,
-      "forks": 3,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 1,
-      "license": "Apache-2.0",
-      "first_seen": "2026-06-02",
-      "full_text": "Assistax: A Hardware-Accelerated Reinforcement Learning Benchmark for Assistive Robotic",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 20.656,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.2999126802108134,
-      "has_code": 6.0,
-      "github_stars_log": 6.15224460689137,
-      "github_forks_log": 1.2041199826559248,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:567ec81065f3",
     "source": "news",
     "title": "Agility Robotics opens new Fremont facility to accelerate physical AI development",
@@ -2508,51 +2366,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.14781",
-    "source": "arxiv",
-    "title": "Curvature-Constrained and Constant-Speed Distributed Simultaneous Arrival Control for Multi-Robot Systems",
-    "url": "http://arxiv.org/abs/2607.14781v1",
-    "summary": "A distributed switching controller coordinates fixed-wing-style robots that must fly curvature-constrained Dubins paths at constant, possibly different speeds so they reach a target simultaneously. The method uses a maximum-consensus protocol over neighbors, a virtual time variable, and a hybrid of optimal control with saturated proportional control to make each robot track the largest local arrival-time estimate. Simulations and experiments show the scheme is scalable and real-time with low communication overhead, and the analysis proves optimal arrival time in certain cases.",
-    "published": "2026-07-16T09:59:16+00:00",
-    "updated": "2026-07-16T09:59:16+00:00",
-    "authors": [
-      "Zhouru Xiao",
-      "Yang Lu",
-      "Weijia Yao",
-      "Min Liu",
-      "Yaonan Wang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.14781v1",
-      "comment": "Accepted to 2026 IEEE International Conference on Robotics and Automation (ICRA)",
-      "first_seen": "2026-07-17",
-      "full_text": "The simultaneous arrival of multiple mobile robots at a target point is crucial for cooperation tasks such as cooperative encirclement, disaster relief, and environmental monitoring. Although the simultaneous arrival problem itself is already complex, the problem becomes more challenging when there are constraints on the robot trajectory curvatures and the speeds are required to be constant (possibly different for different robots), and the control law for robots needs to be distributed. These constraints are typical for a multi-robot system consisting of, e.g., fixed-wing UAVs. To address this challenge, this paper proposes a distributed switching control method based on the maximum consensus protocol. By exploiting the geometric properties of Dubins paths along with optimization principles, a virtual time variable is introduced, and a hybrid control law that combines optimal control with saturated proportional control is designed. Under the proposed control law, each robot is driven to approach the maximum virtual time among its neighbors, thereby achieving simultaneous arrival under some mild conditions. Furthermore, we prove that in certain cases the proposed method attains a theoretically optimal arrival time. The approach is scalable and real-time, with low communication overhead. Its effectiveness and robustness are validated through extensive simulations and experiments.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 17.251,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.2511354196056548,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:66ea6055751a",
     "source": "news",
     "title": "美 월든 로보틱스, 범용 피지컬 AI·로봇 기술로 4500억원 유치",
@@ -2695,53 +2508,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.15058",
-    "source": "arxiv",
-    "title": "SUFLECA: Scaling Up Feature Learning for CAD-to-image Alignment",
-    "url": "http://arxiv.org/abs/2607.15058v1",
-    "summary": "SUFLECA estimates an object’s 9D pose from a single RGB image by learning compact, geometry-aware CAD/image features from Normalized Object Coordinates supervision over 674K real and synthetic images, then enforcing one-to-one geometrically consistent matches. The result is zero-shot CAD alignment that runs in under a second per object without iterative pose refinement and is more robust to occlusion and sim-to-real shift than appearance-based matching. On ScanNet25k it reaches 33.4% category and 42.3% instance accuracy, beating the strongest zero-shot baseline by 10.3 and 12.2 points while also surpassing fully supervised methods on that benchmark.",
-    "published": "2026-07-16T14:32:34+00:00",
-    "updated": "2026-07-16T14:32:34+00:00",
-    "authors": [
-      "Saad Ejaz",
-      "Miguel Fernandez-Cortizas",
-      "Javier Civera",
-      "Holger Voos",
-      "Jose Luis Sanchez-Lopez"
-    ],
-    "extra": {
-      "categories": [
-        "cs.CV",
-        "cs.RO"
-      ],
-      "primary_category": "cs.CV",
-      "pdf_url": "https://arxiv.org/pdf/2607.15058v1",
-      "comment": null,
-      "first_seen": "2026-07-17",
-      "full_text": "CAD-to-image alignment aims to estimate an object's 9D pose (rotation, translation, and anisotropic scale) from a single RGB image, enabling applications in robotics and augmented reality. Recent zero-shot methods use visual foundation models to match image regions to CAD models, yet typically their correspondences are appearance-driven and degrade under occlusion or sim-to-real domain shift. To address these limitations, we introduce SUFLECA (Scaling Up Feature LEarning for CAD Alignment), a weakly-supervised framework for zero-shot CAD alignment with two key contributions. First, SUFLECA scales up geometry-grounded feature learning from pretrained visual representations through Normalized Object Coordinates (NOCs) supervision on 674K images spanning 12 real and synthetic datasets, learning compact geometry-aware features that generalize across domains. Second, we propose a geometrically consistent matching algorithm that establishes reliable one-to-one CAD-to-image correspondences. Together, these contributions enable accurate, sub-second alignment per object instance without iterative pose refinement. On ScanNet25k, SUFLECA achieves 33.4%/42.3% category/instance accuracy, outperforming, with a smaller computational footprint, the strongest zero-shot baseline by 10.3/12.2 percentage points and, for the first time on this benchmark, even surpassing fully supervised methods. Code is available at: https://github.com/snt-arg/SUFLECA",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 13.292,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.2918050645858132,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -2898,100 +2664,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.14934",
-    "source": "arxiv",
-    "title": "Still image and spatial-temporal tomato data enabling detection, segmentation, tracking, and video-instance segmentation using strong and weak labels",
-    "url": "http://arxiv.org/abs/2607.14934v1",
-    "summary": "BUTom21 and BUTom-ST21 provide robot-acquired tomato plant imagery from commercial-like growing conditions, pairing still images with manual annotations and video data with AI-generated pseudo-labels. Both datasets include pixel-level fruit ripeness labels, while the spatial-temporal videos add individual fruit counts and ripeness over time, making them useful for detection, segmentation, tracking, video instance segmentation, and field phenotyping.",
-    "published": "2026-07-16T12:47:55+00:00",
-    "updated": "2026-07-16T12:47:55+00:00",
-    "authors": [
-      "Michael Halstead",
-      "Esra Guclu",
-      "Mohamed Farag",
-      "Enrico Pallotta",
-      "Christian Hund",
-      "Ribana Roscher",
-      "Maren Bennewitz",
-      "Juergen Gall",
-      "Cyrill Stachniss",
-      "Chris McCool"
-    ],
-    "extra": {
-      "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV",
-      "pdf_url": "https://arxiv.org/pdf/2607.14934v1",
-      "comment": "21 pages, 2 figures, 9 tables. Two novel datasets released - link to repository in document",
-      "first_seen": "2026-07-17",
-      "full_text": "In this manuscript we release two datasets for visual sensing of tomato plants grown in commercial-like settings and acquired using a robot. The first is BUTom21 which consists of still images and manual annotations. The second is BUTom-ST21 which consists of video-based data and semi-automated annotations through AI-based methods, referred to as pseudo-labels. In both cases, we provide pixel-level labels for the ripeness of the fruit. The aim is to provide the research community a challenging set of real-world imagery to explore methods to sense and estimate the state of tomato plants and their fruit, which is an important horticultural crop. Importantly, the spatial-temporal dataset provides individual fruit count and ripeness information enabling researchers to push the boundaries of field-based phenotyping.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 12.276,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.276232130106647,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.14842",
-    "source": "arxiv",
-    "title": "KineFuse: Kinematic-Aware Haptic Fusion for In-Hand Occluded-Object Pose Tracking",
-    "url": "http://arxiv.org/abs/2607.14842v1",
-    "summary": "KineFuse augments a pretrained visual 6D pose tracker for dexterous in-hand manipulation by fusing sparse hand signals — proprioception, proximal force/torque, and binary contact — through a kinematic-aware finger-level encoder designed for camera occlusions from the manipulating fingers. The paper shows that sequential open-loop tracking, unlike per-frame refinement, exposes large architectural differences: compact 4-token finger-level haptic fusion beats flat and joint-level representations, learns cross-modal gating that reserves haptics mainly for rotation, and improves downstream reorientation success with supporting real-world demos.",
-    "published": "2026-07-16T11:07:47+00:00",
-    "updated": "2026-07-16T11:07:47+00:00",
-    "authors": [
-      "Chanyoung Ahn",
-      "Jaesung Lee",
-      "Sungwoo Park",
-      "Donghyun Hwang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.14842v1",
-      "comment": "8 pages, 10 figures. Accepted for presentation at the 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)",
-      "first_seen": "2026-07-17",
-      "full_text": "Dexterous in-hand manipulation requires continuous 6D pose tracking, yet the manipulating fingers inevitably occlude the object from the camera. We study how to structure the sparse haptic signals already available on multi-fingered hands, including proprioception, proximal force/torque, and binary contact, to complement a pretrained visual pose tracker under occlusion. We propose a kinematic-aware finger-level encoder and systematically compare it against four alternative designs through three levels of evaluation: per-frame refinement, sequential open-loop tracking, and closed-loop manipulation. Our experiments reveal that (i) per-frame evaluation cannot distinguish encoder quality, while sequential tracking amplifies architectural differences by up to 15 times; (ii) the structured encoder learns task-specific cross-modal gating, using vision exclusively for translation and dedicating one attention head to haptics for rotation, without explicit supervision; and (iii) compact finger-level tokenization with 4 tokens outperforms both flat fusion and joint-level representations, which suppress vision through norm dominance. We validate that improved tracking yields higher success in a downstream reorientation task and provide qualitative real-world demonstrations. Our project page is available at https://cold-young.github.io/kine-fuse/.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#Manipulator"
-    ],
-    "score": 12.261,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.2613313525322423,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:acac9e6e80d6",
     "source": "news",
     "title": "Fujitsu partners with Fanuc, Yaskawa and Kawasaki to advance physical AI using Nvidia technology",
@@ -3102,53 +2774,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 2.0,
       "recency": 2.3059047516666666,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "arxiv:2607.14974",
-    "source": "arxiv",
-    "title": "On Success and Simplicity: A Second Look at Transferable Vision-Language Attack Pipeline",
-    "url": "http://arxiv.org/abs/2607.14974v1",
-    "summary": "SimVLA revisits transferable adversarial attacks on vision-language pretraining models and argues that much of the recent complexity in loss design and multi-stage text/image perturbation is counterproductive. By fixing three cross-modal interaction and over-processing issues, including a cross-modal word identification strategy, it improves transferability while cutting compute: on Flickr30k text-image retrieval, it raises R@1 transferability by 8.01-14.71% over the prior baseline using about 35.73% of the time and 46.26% of peak VRAM.",
-    "published": "2026-07-16T13:28:59+00:00",
-    "updated": "2026-07-16T13:28:59+00:00",
-    "authors": [
-      "Yuchen Ren",
-      "Zhengyu Zhao",
-      "Chenhao Lin",
-      "Bo Yang",
-      "Chao Shen"
-    ],
-    "extra": {
-      "categories": [
-        "cs.CV",
-        "cs.CR"
-      ],
-      "primary_category": "cs.CV",
-      "pdf_url": "https://arxiv.org/pdf/2607.14974v1",
-      "comment": "Accepted for publication in IEEE Transactions on Information Forensics and Security (TIFS)",
-      "first_seen": "2026-07-17",
-      "full_text": "Vision-Language Pre-training Models (VLPMs) are known to be vulnerable to adversarial attacks. Recent transferable attacks on VLPMs have followed a common pipeline with complicated loss functions or multi-stage text/image attacks. However, in this paper, we demonstrate that such a sophisticated attack pipeline can be simpler yet more successful. Specifically, we identify three previously overlooked issues caused by inappropriate cross-modal interactions and excessive operations. To address them, we propose the Simple Vision-Language Attack (SimVLA) pipeline, which observably improves transferability and efficiency. Experiments on four datasets and three downstream tasks validate the superiority of our pipeline. For instance, on Flickr30k text-image retrieval dataset, our SimVLA outperforms the SOTA baseline in R@1 transferability by 8.01\\%-14.71\\%, while consuming only about 35.73\\% of the time and 46.26\\% of the max VRAM. Overall, the superiority of our SimVLA highlights the importance of leveraging domain knowledge (e.g., our proposed cross-modal word identification), while blindly pursuing intricate operations (e.g, complex loss functions and redundant multi-stage designs) may even be harmful. We hope our SimVLA can serve as a simple yet effective backbone for future extensions. Code is available at https://github.com/RYC-98/SimVLA.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 11.282,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.282343241361607,
       "has_code": 6.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -3450,40 +3075,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:8d5941ee1f3d",
-    "source": "news",
-    "title": "Coco Robotics Brings Autonomous Delivery to Washington, D.C.",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/07/16/coco-robotics-brings-autonomous-delivery-to-washington-dc/26850",
-    "summary": "Coco Robotics has expanded its autonomous delivery robot service to Washington, D.C., adding the nation’s capital to a rollout across major U.S. cities. The move matters less as a technical reveal than as a scaling signal: Coco is trying to turn sidewalk robot delivery from a localized pilot into a broader urban logistics network.",
-    "published": "2026-07-16T13:12:02+00:00",
-    "updated": "2026-07-16T13:12:02+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-07-16",
-      "full_text": "Expansion marks Coco's latest step in scaling its fleet across major U.S. cities, including the nation's capital",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 8.28,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.2798209038442465,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:fa577ebaf2fc",
     "source": "news",
     "title": "BrainCo Debuts World's First Integrated Brain-to-Robot AI R&D Platform at WAIC 2026",
@@ -3726,114 +3317,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.3130227853546628,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:d92342984de4",
-    "source": "news",
-    "title": "KAIST, 동물처럼 상황 판단해 걷고 뛰고 점프하는 로봇 구현",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=47463",
-    "summary": "KAIST researchers developed a quadruped robot control system that lets a single controller choose and switch in real time between walking, running, jumping, and other locomotion modes. The robot adapts its gait to terrain such as stairs, gaps, and forest paths, making legged robots more animal-like in how they judge surroundings and move stably through outdoor environments.",
-    "published": "2026-07-16T15:22:44+00:00",
-    "updated": "2026-07-16T15:22:44+00:00",
-    "authors": [
-      "최지호"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-07-16",
-      "full_text": "‘어떻게 걸을 것인가'를 로봇이 스스로 결정하는 시대가 열렸다. 계단에서는 보행 방식을 바꾸고, 틈은 뛰어넘고, 숲길에서는 균형을 잡는 등 사람이나 동물처럼 주변 환경에 맞춰 알맞는 보행 전략을 스스로 선택하는 4족보행 로봇이 등장했다.KAIST(총장 배충식)는 기계공학과 박해원 교수 연구팀이 하나의 제어기로 걷기와 달리기, 점프 등 다양한 보행 기술을 실시간으로 선택·전환하며, 실제 야외 환경에서도 빠르고 안정적으로 이동할 수 있는 사족 보행 로봇 핵심 제어기술을 개발했다고 16일 밝혔다.4족보행 로봇은 네 개의 다리를 이용해 움",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 6.299,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.2992703050570436,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:058d731b4ada",
-    "source": "news",
-    "title": "로엔서지컬, 목포시의료원에 ‘자메닉스’ 공급…신장결석 로봇수술 7건 성공",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=47456",
-    "summary": "Roen Surgical’s AI-based kidney stone surgery robot Zamenix has been introduced at Mokpo City Medical Center, the first deployment of the system in South Jeolla, with 7 procedures completed since May. The system matters for a region with many older and higher-risk patients because it supports less physically burdensome robotic treatment for kidney stones that might otherwise require abdominal or back incisions when large or deeply located.",
-    "published": "2026-07-16T11:29:25+00:00",
-    "updated": "2026-07-16T11:29:25+00:00",
-    "authors": [
-      "최지호"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-07-16",
-      "full_text": "수술로봇 플랫폼 기업 로엔서지컬(대표 권동수)은 전남 서남권 대표 공공의료기관인 목포시의료원이 AI 기반 신장결석 수술로봇 '자메닉스(Zamenix)'를 전남 지역 최초로 도입해 성공적으로 운용하고 있다고 16일 밝혔다. 목포시의료원은 지난 5월 자메닉스를 도입해 현재까지 총 7건의 수술을 완료했다.목포를 비롯한 전남 서남권 지역은 인구 고령화율이 높고 기저질환을 가진 고위험군 환자 비중이 큰 편이다. 기존의 결석 수술은 크기가 크거나 신장 깊숙이 위치한 경우 복부나 허리를 절개해야 해 고령 환자들에게 신체적 부담이 컸다.지역 환자",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 6.265,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.264550562906746,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:18732a40fe43",
-    "source": "news",
-    "title": "SK인텔릭스, 웰니스 로봇 '나무엑스' 레드닷 디자인 어워드 본상 수상",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=47450",
-    "summary": "SK인텔릭스의 웰니스 로봇 나무엑스가 독일 레드닷 디자인 어워드 2026 브랜드&커뮤니케이션 디자인 부문에서 본상을 받았다. 기사에 제공된 정보만으로는 로봇의 구체적 AI 기능이나 작동 메커니즘은 드러나지 않지만, 세계 최초 웰니스 로봇으로 포지셔닝된 제품이 국제 디자인상에서 인정받았다는 점에서 인간-로봇 상호작용과 생활형 로봇의 제품화 측면에서 의미가 있다.",
-    "published": "2026-07-16T10:00:01+00:00",
-    "updated": "2026-07-16T10:00:01+00:00",
-    "authors": [
-      "최지호"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-07-16",
-      "full_text": "SK인텔릭스(대표 안무인)가 세계 3대 디자인 어워드로 꼽히는 독일의 '레드닷 디자인 어워드 2026(Red Dot Design Award 2026)' 브랜드&커뮤니케이션 디자인 부문에서 세계 최초 웰니스 로봇 나무엑스(NAMUHX)로 본상(Winner)을 수상하며 글로벌 디자인 경쟁력을 다시 한 번 입증했다고 16일 밝혔다.‘레드닷 디자인 어워드’는 1955년 제정된 독일의 디자인 공모전으로, 독일의 ‘iF (iF Design Award)’, 미국의 ‘IDEA(International Design Excellence Awards)",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 6.251,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.251246991391369,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,

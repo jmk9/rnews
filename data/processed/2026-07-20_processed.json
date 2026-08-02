@@ -688,7 +688,8 @@
       "license": "MIT",
       "first_seen": "2026-05-18",
       "full_text": "Collections of robotics environments geared towards benchmarking multi-task and meta reinforcement learning",
-      "summary_kind": "truncation"
+      "summary_kind": "truncation",
+      "thumbnail": "https://github.com/Farama-Foundation/Metaworld/raw/main/metaworld-text.png"
     },
     "tags": [
       "#RL",
@@ -1051,52 +1052,6 @@
       "github_stars_log": 15.32603064027156,
       "github_forks_log": 4.960013885914301,
       "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.14852",
-    "source": "arxiv",
-    "title": "Towards Human-like Physical Intelligence: LifelongVision-Language-Action Learning for Robotic Manipulation",
-    "url": "http://arxiv.org/abs/2607.14852v1",
-    "summary": "Similar to the natural capabilities of humans to sequentially learn new tasks, robots with Vision-Language-Action (VLA) models should possess lifelong learning ability to learn a new task when deployed in open-world environments.",
-    "published": "2026-07-16T11:22:06+00:00",
-    "updated": "2026-07-16T11:22:06+00:00",
-    "authors": [
-      "Yao He",
-      "Gan Sun",
-      "Wenqi Liang",
-      "Fazeng Li",
-      "Yang Cong"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.14852v1",
-      "comment": null,
-      "first_seen": "2026-07-17",
-      "full_text": "Similar to the natural capabilities of humans to sequentially learn new tasks, robots with Vision-Language-Action (VLA) models should possess lifelong learning ability to learn a new task when deployed in open-world environments. However, most recently proposed lifelong learning models aim to effectively learn the current task (plasticity) or maintain high accuracy on previous tasks (stability), while the plasticity-stability trade-off remains largely unsolved in robotic manipulation models. To address this fundamental challenge, we propose a cache-efficient lifelong Vision-Language-Action learning framework for robotic manipulation (i.e., LifelongVLA), which alleviates the plasticity-stability trade-off with a dual-timescale adaptation mechanism while achieving low-cost robotic deployment with a cache-efficient replay strategy. More concretely, we propose a dual-timescale LoRA gating module to decompose VLA adaptation into two lightweight pathways: a short-term adapter for plasticity and a long-term adapter for stable consolidation. These pathways are integrated via a task-aware gate, enabling explicit control of the plasticity-stability trade-off. In the skill replay phase, a cache-efficient stochastic replay strategy is proposed to preserve more balanced retention signals without full-trajectory storage. Finally, experiments show that LifelongVLA outperforms existing baselines, demonstrating efficient skill expansion, robust retention of learned manipulation behaviors, and reduced reliance on retraining for real-world deployment on an xArm robot.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 31.048,
-    "score_breakdown": {
-      "title_keyword": 12.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.047982796922123,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -1512,60 +1467,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.15004",
-    "source": "arxiv",
-    "title": "CosFly-VLA: A Spatially Aware Vision-Language-Action Model for UAV Tracking",
-    "url": "http://arxiv.org/abs/2607.15004v1",
-    "summary": "Dynamic target tracking is essential for Unmanned Aerial Vehicles (UAVs) operating in complex urban environments, where both the target and the camera viewpoint change continuously.",
-    "published": "2026-07-16T13:52:08+00:00",
-    "updated": "2026-07-16T13:52:08+00:00",
-    "authors": [
-      "Ruilong Ren",
-      "Songsheng Cheng",
-      "Yunpeng Zhou",
-      "Hanxuan Chen",
-      "Xiangyue Wang",
-      "Tianle Zeng",
-      "Shuai Yuan",
-      "Binbo Li",
-      "Hanzhong Guo",
-      "Ji Pei",
-      "Da Zhang",
-      "Kangli Wang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.15004v1",
-      "comment": null,
-      "first_seen": "2026-07-17",
-      "full_text": "Dynamic target tracking is essential for Unmanned Aerial Vehicles (UAVs) operating in complex urban environments, where both the target and the camera viewpoint change continuously. Existing Vision-Language-Action (VLA) policies can track visible targets effectively, but their performance often degrades when buildings, vegetation, or roadside objects block the line of sight. During sustained occlusion, a policy may lose the target state, execute actions toward an incorrect region, and amplify this error through subsequent observations until re-acquisition becomes impossible. To this end, we present CosFly-VLA, a spatially aware VLA model that jointly grounds the target, estimates its visibility, and generates continuous flight actions through a structured prediction interface. To train this policy, we use a large-scale recipe over diverse data sources. Spatially Grounded Continued Pretraining (CPT) on a 500k mixed pool injects UAV-view depth, distance, and 3-D spatial reasoning. A three-stage Curriculum-based Supervised Fine-Tuning (SFT) process then specializes the tracker through multi-head warm-up followed by two-stage curriculum learning over natural and hard / long-occlusion data. Chain-of-Thought (CoT) training subsequently teaches recovery-oriented reasoning traces before structured answers. Finally, a closed-loop Reinforcement Learning (RL) stage optimizes tracking behavior with a multi-component reward covering stand-off tracking, grounding quality, collision avoidance, and task success. Relative to OpenVLA, CosFly-VLA-0.8B reduces open-loop Average Displacement Error (ADE) by 34.1% on seen-test and 35.3% on unseen-test. Closed-loop optimization improves Success Rate (SR) by 29.8% and 2.5%, respectively. These results demonstrate progress from visible-frame imitation toward spatially grounded action-closed-loop control, evaluated under a shared oracle state history.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Other"
-    ],
-    "score": 27.07,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 6.0,
-      "recency": 2.070309186780754,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -2594,48 +2495,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:assistive-autonomy/assistax",
-    "source": "github",
-    "title": "assistive-autonomy/assistax",
-    "url": "https://github.com/assistive-autonomy/assistax",
-    "summary": "Assistax: A Hardware-Accelerated Reinforcement Learning Benchmark for Assistive Robotic",
-    "published": "2025-07-24T20:28:40Z",
-    "updated": "2026-07-16T15:27:03Z",
-    "authors": [
-      "assistive-autonomy"
-    ],
-    "extra": {
-      "stars": 16,
-      "forks": 3,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 1,
-      "license": "Apache-2.0",
-      "first_seen": "2026-06-02",
-      "full_text": "Assistax: A Hardware-Accelerated Reinforcement Learning Benchmark for Assistive Robotic",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 20.441,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.0844336765649802,
-      "has_code": 6.0,
-      "github_stars_log": 6.15224460689137,
-      "github_forks_log": 1.2041199826559248,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "arxiv:2607.16074",
     "source": "arxiv",
     "title": "JoyNexus: Service-Oriented Multi-Tenant Post-Training for VLA Models",
@@ -3249,51 +3108,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.14781",
-    "source": "arxiv",
-    "title": "Curvature-Constrained and Constant-Speed Distributed Simultaneous Arrival Control for Multi-Robot Systems",
-    "url": "http://arxiv.org/abs/2607.14781v1",
-    "summary": "The simultaneous arrival of multiple mobile robots at a target point is crucial for cooperation tasks such as cooperative encirclement, disaster relief, and environmental monitoring.",
-    "published": "2026-07-16T09:59:16+00:00",
-    "updated": "2026-07-16T09:59:16+00:00",
-    "authors": [
-      "Zhouru Xiao",
-      "Yang Lu",
-      "Weijia Yao",
-      "Min Liu",
-      "Yaonan Wang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.14781v1",
-      "comment": "Accepted to 2026 IEEE International Conference on Robotics and Automation (ICRA)",
-      "first_seen": "2026-07-17",
-      "full_text": "The simultaneous arrival of multiple mobile robots at a target point is crucial for cooperation tasks such as cooperative encirclement, disaster relief, and environmental monitoring. Although the simultaneous arrival problem itself is already complex, the problem becomes more challenging when there are constraints on the robot trajectory curvatures and the speeds are required to be constant (possibly different for different robots), and the control law for robots needs to be distributed. These constraints are typical for a multi-robot system consisting of, e.g., fixed-wing UAVs. To address this challenge, this paper proposes a distributed switching control method based on the maximum consensus protocol. By exploiting the geometric properties of Dubins paths along with optimization principles, a virtual time variable is introduced, and a hybrid control law that combines optimal control with saturated proportional control is designed. Under the proposed control law, each robot is driven to approach the maximum virtual time among its neighbors, thereby achieving simultaneous arrival under some mild conditions. Furthermore, we prove that in certain cases the proposed method attains a theoretically optimal arrival time. The approach is scalable and real-time, with low communication overhead. Its effectiveness and robustness are validated through extensive simulations and experiments.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 17.036,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.035656407480159,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "arxiv:2607.16062",
     "source": "arxiv",
     "title": "When Model Merging Rivals Joint Multi-Task Reinforcement Learning: A Task-Vector Geometry Analysis",
@@ -3722,53 +3536,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.15058",
-    "source": "arxiv",
-    "title": "SUFLECA: Scaling Up Feature Learning for CAD-to-image Alignment",
-    "url": "http://arxiv.org/abs/2607.15058v1",
-    "summary": "CAD-to-image alignment aims to estimate an object's 9D pose (rotation, translation, and anisotropic scale) from a single RGB image, enabling applications in robotics and augmented reality.",
-    "published": "2026-07-16T14:32:34+00:00",
-    "updated": "2026-07-16T14:32:34+00:00",
-    "authors": [
-      "Saad Ejaz",
-      "Miguel Fernandez-Cortizas",
-      "Javier Civera",
-      "Holger Voos",
-      "Jose Luis Sanchez-Lopez"
-    ],
-    "extra": {
-      "categories": [
-        "cs.CV",
-        "cs.RO"
-      ],
-      "primary_category": "cs.CV",
-      "pdf_url": "https://arxiv.org/pdf/2607.15058v1",
-      "comment": null,
-      "first_seen": "2026-07-17",
-      "full_text": "CAD-to-image alignment aims to estimate an object's 9D pose (rotation, translation, and anisotropic scale) from a single RGB image, enabling applications in robotics and augmented reality. Recent zero-shot methods use visual foundation models to match image regions to CAD models, yet typically their correspondences are appearance-driven and degrade under occlusion or sim-to-real domain shift. To address these limitations, we introduce SUFLECA (Scaling Up Feature LEarning for CAD Alignment), a weakly-supervised framework for zero-shot CAD alignment with two key contributions. First, SUFLECA scales up geometry-grounded feature learning from pretrained visual representations through Normalized Object Coordinates (NOCs) supervision on 674K images spanning 12 real and synthetic datasets, learning compact geometry-aware features that generalize across domains. Second, we propose a geometrically consistent matching algorithm that establishes reliable one-to-one CAD-to-image correspondences. Together, these contributions enable accurate, sub-second alignment per object instance without iterative pose refinement. On ScanNet25k, SUFLECA achieves 33.4%/42.3% category/instance accuracy, outperforming, with a smaller computational footprint, the strongest zero-shot baseline by 10.3/12.2 percentage points and, for the first time on this benchmark, even surpassing fully supervised methods. Code is available at: https://github.com/snt-arg/SUFLECA",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 13.076,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.0763260523983136,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:0e0d72098dd6",
     "source": "news",
     "title": "iM증권 \"LG, 자회사 수직계열화로 피지컬 AI 밸류체인 완성\"",
@@ -4130,50 +3897,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.14842",
-    "source": "arxiv",
-    "title": "KineFuse: Kinematic-Aware Haptic Fusion for In-Hand Occluded-Object Pose Tracking",
-    "url": "http://arxiv.org/abs/2607.14842v1",
-    "summary": "Dexterous in-hand manipulation requires continuous 6D pose tracking, yet the manipulating fingers inevitably occlude the object from the camera.",
-    "published": "2026-07-16T11:07:47+00:00",
-    "updated": "2026-07-16T11:07:47+00:00",
-    "authors": [
-      "Chanyoung Ahn",
-      "Jaesung Lee",
-      "Sungwoo Park",
-      "Donghyun Hwang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.14842v1",
-      "comment": "8 pages, 10 figures. Accepted for presentation at the 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)",
-      "first_seen": "2026-07-17",
-      "full_text": "Dexterous in-hand manipulation requires continuous 6D pose tracking, yet the manipulating fingers inevitably occlude the object from the camera. We study how to structure the sparse haptic signals already available on multi-fingered hands, including proprioception, proximal force/torque, and binary contact, to complement a pretrained visual pose tracker under occlusion. We propose a kinematic-aware finger-level encoder and systematically compare it against four alternative designs through three levels of evaluation: per-frame refinement, sequential open-loop tracking, and closed-loop manipulation. Our experiments reveal that (i) per-frame evaluation cannot distinguish encoder quality, while sequential tracking amplifies architectural differences by up to 15 times; (ii) the structured encoder learns task-specific cross-modal gating, using vision exclusively for translation and dedicating one attention head to haptics for rotation, without explicit supervision; and (iii) compact finger-level tokenization with 4 tokens outperforms both flat fusion and joint-level representations, which suppress vision through norm dominance. We validate that improved tracking yields higher success in a downstream reorientation task and provide qualitative real-world demonstrations. Our project page is available at https://cold-young.github.io/kine-fuse/.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Manipulator"
-    ],
-    "score": 12.046,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.045852340391865,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -4753,40 +4476,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.090728315997024,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:8d5941ee1f3d",
-    "source": "news",
-    "title": "Coco Robotics Brings Autonomous Delivery to Washington, D.C.",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/07/16/coco-robotics-brings-autonomous-delivery-to-washington-dc/26850",
-    "summary": "Expansion marks Coco's latest step in scaling its fleet across major U.S. cities, including the nation's capital",
-    "published": "2026-07-16T13:12:02+00:00",
-    "updated": "2026-07-16T13:12:02+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-07-16",
-      "full_text": "Expansion marks Coco's latest step in scaling its fleet across major U.S. cities, including the nation's capital",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 8.064,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.064341900282738,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
