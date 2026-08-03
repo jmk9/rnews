@@ -231,7 +231,7 @@
     "source": "github",
     "title": "sou350121/VLA-Handbook",
     "url": "https://github.com/sou350121/VLA-Handbook",
-    "summary": "VLA-Handbook is a Chinese, practice-oriented learning and interview guide for algorithm engineers trying to enter Vision-Language-Action robotics. It narrows the usual CV/NLP interview scope to robotics-specific issues, making it useful as a structured entry point for people who need both field context and preparation material.",
+    "summary": "VLA-Handbook is a Chinese, practice-oriented learning and interview guide for algorithm engineers entering Vision-Language-Action robotics. It focuses on robotics-specific challenges rather than general CV/NLP interview prep, making it useful as a field-specific roadmap for people trying to build or evaluate VLA systems.",
     "published": "2025-11-23T06:25:26Z",
     "updated": "2026-07-31T15:00:43Z",
     "authors": [
@@ -282,7 +282,7 @@
     "source": "github",
     "title": "DravenALG/awesome-vla-wam",
     "url": "https://github.com/DravenALG/awesome-vla-wam",
-    "summary": "DravenALG/awesome-vla-wam is a curated reading list for Vision-Language-Action models and World Action Models, gathering research around robot policies that connect perception, language, action, and learned world dynamics. It is useful as a survey and tracking resource rather than a runnable system, especially for researchers trying to follow the fast-moving VLA/WAM literature and adjacent work.",
+    "summary": "DravenALG/awesome-vla-wam is a curated reading list for Vision-Language-Action models and World Action Models, collecting research around agents that connect perception, language understanding, and executable actions. It is useful as a map of the VLA/WAM literature rather than a runnable system, especially for tracking papers, related resources, and emerging directions in embodied AI and robot policy learning.",
     "published": "2026-02-06T12:16:20Z",
     "updated": "2026-07-31T21:00:31Z",
     "authors": [
@@ -685,7 +685,7 @@
     "source": "github",
     "title": "H-EmbodVis/TurboVLA",
     "url": "https://github.com/H-EmbodVis/TurboVLA",
-    "summary": "TurboVLA is a real-time vision-language-action model implementation aimed at running robot policies at 32 Hz on a single RTX 4090 while using under 1 GB of VRAM. Its appeal is practical deployment: it targets the latency and memory constraints that usually make large VLA models awkward for closed-loop control, suggesting a path to high-frequency embodied AI without heavyweight inference hardware.",
+    "summary": "TurboVLA is a vision-language-action model implementation focused on real-time robot control, reporting 32 Hz inference on an RTX 4090 while using under 1 GB of VRAM. The emphasis is practical deployment speed and memory efficiency, making it useful for researchers who want VLA policies that can run at control-relevant rates without heavy GPU overhead.",
     "published": "2026-07-28T04:04:22Z",
     "updated": "2026-07-31T17:45:13Z",
     "authors": [
@@ -728,7 +728,7 @@
     "source": "github",
     "title": "NVIDIA/warp",
     "url": "https://github.com/NVIDIA/warp",
-    "summary": "A Python framework for GPU-accelerated simulation, robotics, and machine learning.",
+    "summary": "NVIDIA Warp is a Python toolkit for writing GPU-accelerated simulation and geometry code that can plug into robotics and machine-learning workflows. It is useful when you need fast differentiable or physics-heavy computation in Python without dropping entirely into custom CUDA infrastructure.",
     "published": "2022-03-18T21:56:23Z",
     "updated": "2026-07-31T11:43:18Z",
     "authors": [
@@ -751,7 +751,7 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18",
       "full_text": "A Python framework for GPU-accelerated simulation, robotics, and machine learning.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://github.com/NVIDIA/warp/raw/main/docs/img/header.jpg"
     },
     "tags": [
@@ -964,7 +964,7 @@
     "source": "github",
     "title": "iit-DLSLab/sim2real-robot-identification",
     "url": "https://github.com/iit-DLSLab/sim2real-robot-identification",
-    "summary": "A joints calibration routine for quadrupeds and manipulators to facilitate sim-to-real transfer from isaaclab and mujoco to real robots",
+    "summary": "A joint calibration routine targets the practical mismatch that makes policies trained in Isaac Lab or MuJoCo fail when moved onto real quadrupeds or manipulators. It appears to be a sim-to-real support tool for identifying or correcting robot joint parameters so simulated control behavior lines up more closely with hardware.",
     "published": "2025-07-05T22:23:07Z",
     "updated": "2026-07-30T16:44:39Z",
     "authors": [
@@ -986,7 +986,7 @@
       "license": "BSD-3-Clause",
       "first_seen": "2026-05-18",
       "full_text": "A joints calibration routine for quadrupeds and manipulators to facilitate sim-to-real transfer from isaaclab and mujoco to real robots",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/iit-DLSLab/sim2real-robot-identification/HEAD/./gifs/z1_real.gif"
     },
     "tags": [
@@ -1572,7 +1572,7 @@
     "source": "github",
     "title": "dartsim/dart",
     "url": "https://github.com/dartsim/dart",
-    "summary": "DART is a research-oriented C++23 physics engine aimed at robotics, animation, and machine learning, with Python bindings for easier experimentation. It is most useful as a simulation and dynamics toolkit for building robotics or embodied-AI research workflows where accurate physics modeling needs to integrate with modern C++ and Python code.",
+    "summary": "DART is a research-oriented C++23 physics engine built for robotics, animation, and machine learning, with Python bindings for easier experimentation. It is useful when a project needs controllable rigid-body dynamics, simulation infrastructure, and robotics-friendly APIs rather than a game-focused physics stack.",
     "published": "2011-09-19T21:53:51Z",
     "updated": "2026-07-31T18:28:12Z",
     "authors": [
@@ -2534,7 +2534,7 @@
     "source": "github",
     "title": "GlimmerLab/Awesome-Embodied-AI-Robot",
     "url": "https://github.com/GlimmerLab/Awesome-Embodied-AI-Robot",
-    "summary": "🤖 RoboLLM Hub | A curated collection of embodied AI and robot learning resources.具身智能与机器人学习资源集合，包含最新论文、代码与工具。👉",
+    "summary": "RoboLLM Hub is a curated Awesome-style index for embodied AI and robot learning, collecting papers, code, tools, and related resources in one place. It is useful as a scanning hub for researchers tracking recent work across robot learning and embodied intelligence, especially when they want pointers to implementations and resources rather than a single method or benchmark result.",
     "published": "2024-10-29T14:57:59Z",
     "updated": "2026-07-27T03:56:57Z",
     "authors": [
@@ -2549,7 +2549,7 @@
       "license": null,
       "first_seen": "2026-05-18",
       "full_text": "🤖 RoboLLM Hub | A curated collection of embodied AI and robot learning resources.具身智能与机器人学习资源集合，包含最新论文、代码与工具。👉",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://contrib.rocks/image?repo=GlimmerLab/Awesome-Embodied-AI"
     },
     "tags": [
@@ -2577,7 +2577,7 @@
     "source": "github",
     "title": "open-edge-platform/physical-ai-studio",
     "url": "https://github.com/open-edge-platform/physical-ai-studio",
-    "summary": "Physical AI Studio is an end-to-end framework for training robots to perform tasks through imitation learning from human demonstrations.",
+    "summary": "Physical AI Studio provides an end-to-end imitation-learning pipeline for training robots from human demonstrations. It is aimed at turning collected demonstrations into robot task policies within a single workflow, making it useful as a practical development framework for physical AI experiments rather than just a model or dataset.",
     "published": "2025-08-28T21:17:43Z",
     "updated": "2026-07-31T13:31:21Z",
     "authors": [
@@ -2592,7 +2592,7 @@
       "license": "Apache-2.0",
       "first_seen": "2026-07-16",
       "full_text": "Physical AI Studio is an end-to-end framework for training robots to perform tasks through imitation learning from human demonstrations.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/open-edge-platform/physical-ai-studio/HEAD/docs/assets/physical_ai_studio.png"
     },
     "tags": [
@@ -2701,7 +2701,7 @@
     "source": "github",
     "title": "kyegomez/RT-X",
     "url": "https://github.com/kyegomez/RT-X",
-    "summary": "Pytorch implementation of the models RT-1-X and RT-2-X from the paper: \"Open X-Embodiment: Robotic Learning Datasets and RT-X Models\"",
+    "summary": "PyTorch implementation of RT-1-X and RT-2-X, the robot policy models from Open X-Embodiment that train across diverse robotic datasets to support cross-embodiment generalization. It is useful as a starting point for researchers who want to inspect or adapt the RT-X architectures in code rather than work only from the paper’s description.",
     "published": "2023-10-04T21:44:26Z",
     "updated": "2026-07-28T02:57:08Z",
     "authors": [
@@ -2726,7 +2726,7 @@
       "license": "MIT",
       "first_seen": "2026-05-18",
       "full_text": "Pytorch implementation of the models RT-1-X and RT-2-X from the paper: \"Open X-Embodiment: Robotic Learning Datasets and RT-X Models\"",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/kyegomez/RT-X/HEAD/agorabanner.png"
     },
     "tags": [
@@ -3127,7 +3127,7 @@
     "source": "github",
     "title": "phi-monster/Galahad",
     "url": "https://github.com/phi-monster/Galahad",
-    "summary": "phi-monster/Galahad packages a study of instruction blindness in vision-language-action policies, with the paper, trained model, deconfounded datasets, data generator, and measurement suite in one place. It focuses on diagnosing when robot policies ignore language instructions and tests a low-rank data intervention as a practical cure, making the repo useful both for reproducing the result and for evaluating whether a VLA model is actually conditioning on instructions.",
+    "summary": "Galahad packages a study of instruction blindness in vision-language-action policies, where robots appear competent visually but fail to condition reliably on language commands. It includes the paper, model, deconfounded datasets, a data generator, and a measurement battery, centered on diagnosing the failure mode and testing a low-rank data intervention as a cure.",
     "published": "2026-07-17T17:13:51Z",
     "updated": "2026-07-25T14:45:50Z",
     "authors": [
@@ -4206,7 +4206,7 @@
     "source": "github",
     "title": "NuclearVenom/BulletLab",
     "url": "https://github.com/NuclearVenom/BulletLab",
-    "summary": "A robotics experimentation framework build over PyBullet that transforms URDF models into intuitive Python objects, with modern ImGui-based UI, controls, telemetry, visualization, and reinforcement learning workflows.",
+    "summary": "BulletLab wraps PyBullet robotics experiments so URDF models become easier-to-use Python objects rather than low-level simulation artifacts. It pairs that object interface with an ImGui-based UI for controls, telemetry, visualization, and reinforcement-learning workflows, making it useful for quickly building and inspecting simulated robot experiments.",
     "published": "2026-06-13T17:24:46Z",
     "updated": "2026-07-27T17:54:49Z",
     "authors": [
@@ -4230,7 +4230,7 @@
       "license": "MIT",
       "first_seen": "2026-06-17",
       "full_text": "A robotics experimentation framework build over PyBullet that transforms URDF models into intuitive Python objects, with modern ImGui-based UI, controls, telemetry, visualization, and reinforcement learning workflows.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/NuclearVenom/BulletLab/main/docs/assets/logo.png"
     },
     "tags": [
