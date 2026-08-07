@@ -407,7 +407,7 @@
     "source": "github",
     "title": "google-deepmind/mujoco_playground",
     "url": "https://github.com/google-deepmind/mujoco_playground",
-    "summary": "MuJoCo Playground is an open-source library for training robot policies with GPU-accelerated simulation in MuJoCo, aimed at making large-scale robot learning faster and easier to run. It is especially useful for sim-to-real workflows, where researchers need to iterate quickly in simulation and then transfer learned behaviors onto physical robots.",
+    "summary": "MuJoCo Playground is an open-source library for GPU-accelerated robot learning, aimed at training control policies efficiently in simulation and carrying them over to real robots. It is useful as infrastructure for sim-to-real experiments, giving researchers a ready environment built around MuJoCo for scaling robot learning workflows rather than assembling the simulation and transfer stack from scratch.",
     "published": "2024-12-03T22:39:09Z",
     "updated": "2026-08-05T16:13:13Z",
     "authors": [
@@ -818,7 +818,7 @@
     "source": "github",
     "title": "RobotControlStack/robot-control-stack",
     "url": "https://github.com/RobotControlStack/robot-control-stack",
-    "summary": "RobotControlStack is a ROS-free sim-to-real stack for training and deploying Vision-Language-Action models and reinforcement learning agents. It centers on native MuJoCo Gymnasium wrappers with synchronous execution, targeting common robot arms including Franka, UR5e, xArm, and SO101, so it looks useful for researchers who want a leaner path from simulation experiments to hardware deployment.",
+    "summary": "RobotControlStack is a compact sim-to-real stack for training and deploying Vision-Language-Action models and reinforcement learning agents without depending on ROS. It provides native MuJoCo Gymnasium wrappers with synchronous execution for common robot platforms including Franka, UR5e, xArm, and SO101, making it useful for controlled robot learning experiments that need a lean path from simulation to hardware.",
     "published": "2024-02-29T12:40:59Z",
     "updated": "2026-08-05T14:13:49Z",
     "authors": [
@@ -872,7 +872,7 @@
     "source": "github",
     "title": "isaac-sim/IsaacLab-Arena",
     "url": "https://github.com/isaac-sim/IsaacLab-Arena",
-    "summary": "Isaac Lab - Arena extends NVIDIA Isaac Lab with a composable robotics simulation layer for building and evaluating robot-learning environments. It is aimed at quickly prototyping tasks across different robot embodiments, objects, and scene setups, making it useful for scaling policy evaluation and comparing how learned behaviors transfer across simulated conditions.",
+    "summary": "Isaac Lab - Arena extends NVIDIA Isaac Lab with a composable simulation layer for building robotics environments from interchangeable robots, objects, and task settings. It is aimed at rapidly prototyping embodied learning tasks and evaluating robot policies across diverse simulated setups, making it useful for scaling experiments without rebuilding each environment from scratch.",
     "published": "2025-08-15T12:28:23Z",
     "updated": "2026-08-05T21:45:43Z",
     "authors": [
@@ -1617,7 +1617,7 @@
     "source": "github",
     "title": "marmotlab/RL2-VLA",
     "url": "https://github.com/marmotlab/RL2-VLA",
-    "summary": "RL²-VLA targets vision-language-action models with adaptive reinforcement-learning latent compositional steering, aiming to improve robot policies through test-time scaling rather than only retraining or prompting. The repository appears to accompany the RL²-VLA project and paper, but the provided text only gives the title and project page, so the concrete benchmarks, results, and implementation details are not specified here.",
+    "summary": "RL²-VLA implements adaptive RL latent compositional steering for vision-language-action models, aimed at improving robot policy behavior through test-time scaling rather than only retraining or prompting. The repo appears to accompany the RL²-VLA project and is useful for researchers interested in how latent steering and reinforcement learning can be composed to adapt VLA models at inference time.",
     "published": "2026-07-28T20:10:38Z",
     "updated": "2026-08-02T16:47:19Z",
     "authors": [
@@ -2247,7 +2247,7 @@
     "source": "github",
     "title": "sun254667/awesome-touch",
     "url": "https://github.com/sun254667/awesome-touch",
-    "summary": "awesome-touch curates tactile sensing resources for robotic manipulation, with papers, datasets, benchmarks, simulators, and software frameworks organized for learning and research use. Its focus is contact-rich manipulation and the growing effort to connect touch signals with Vision-Language-Action models and world models, making it useful as a map of where tactile perception is being plugged into modern robot learning systems.",
+    "summary": "awesome-touch curates tactile-sensing resources for robotic manipulation, spanning papers, datasets, benchmarks, simulators, and software frameworks. It is especially useful for tracking how touch is being combined with Vision-Language-Action models and world models for contact-rich manipulation, where visual perception alone often misses forces, slip, texture, and contact geometry.",
     "published": "2026-08-02T03:37:25Z",
     "updated": "2026-08-02T03:43:20Z",
     "authors": [
@@ -2342,7 +2342,7 @@
     "source": "github",
     "title": "castacks/AirStack",
     "url": "https://github.com/castacks/AirStack",
-    "summary": "Agent-native framework for rapid sim-to-real deployment of embodied AI for field robotics. Closed-loop, one-to-one workflow with hardware, self validating. Checkout develop branch for latest features.",
+    "summary": "AirStack is an agent-native robotics stack aimed at moving embodied AI policies from simulation onto field robots quickly, while keeping the sim and hardware workflows closely matched. Its interesting angle is the closed-loop, one-to-one deployment path with real hardware and built-in self-validation, which should help researchers test whether behaviors that look good in simulation actually hold up in field conditions.",
     "published": "2024-06-07T21:22:29Z",
     "updated": "2026-08-05T19:11:16Z",
     "authors": [
@@ -2361,7 +2361,7 @@
       "license": "MIT",
       "first_seen": "2026-08-04",
       "full_text": "Agent-native framework for rapid sim-to-real deployment of embodied AI for field robotics. Closed-loop, one-to-one workflow with hardware, self validating. Checkout develop branch for latest features.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/castacks/AirStack/HEAD/assets/logo_horizontal_color.png"
     },
     "tags": [
@@ -3498,7 +3498,7 @@
     "source": "github",
     "title": "sylvestf/WCM",
     "url": "https://github.com/sylvestf/WCM",
-    "summary": "WCM is the official codebase for World Critic Model, a vision-language-action reinforcement learning approach built around a critic that evaluates robot behavior using world-model-style feedback. The repository appears intended for reproducing or building on the accompanying WCM paper rather than as a general-purpose robotics toolkit, with the useful signal being its implementation of the world critic mechanism for VLA reinforcement learning.",
+    "summary": "WCM is the official codebase for World Critic Model, a vision-language-action reinforcement learning approach built around a critic that evaluates behavior in a world-aware way. The available description is sparse, but the repo appears aimed at training or using WCM for robot policies that connect visual observations, language instructions, and actions through reinforcement learning.",
     "published": "2026-07-21T07:15:19Z",
     "updated": "2026-08-05T15:10:24Z",
     "authors": [
