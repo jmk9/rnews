@@ -19,7 +19,8 @@
       "license": null,
       "first_seen": "2026-05-18",
       "full_text": "A curated list of state-of-the-art research in embodied AI, focusing on vision-language-action (VLA) models, vision-language navigation (VLN), and related multimodal learning approaches.",
-      "summary_kind": "truncation"
+      "summary_kind": "truncation",
+      "thumbnail": "https://api.star-history.com/svg?repos=jonyzhang2023/awesome-embodied-vla-va-vln&amp;type=Date"
     },
     "tags": [
       "#VLA",
@@ -2266,7 +2267,8 @@
       "license": null,
       "first_seen": "2026-05-18",
       "full_text": "[IEEE RA-L 2026] REALM: A Real-to-Sim Validated Benchmark for Generalization in Robotic Manipulation",
-      "summary_kind": "truncation"
+      "summary_kind": "truncation",
+      "thumbnail": "https://raw.githubusercontent.com/martin-sedlacek/REALM/HEAD/./images/realm_overview_fig.png"
     },
     "tags": [
       "#Manipulator"
@@ -2281,52 +2283,6 @@
       "has_code": 6.0,
       "github_stars_log": 9.064566783214277,
       "github_forks_log": 1.3979400086720377,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.21960",
-    "source": "arxiv",
-    "title": "Adaptive Undulatory Locomotion of Snake-like Robots in Dynamic Viscous Environments via Deep Reinforcement Learning",
-    "url": "http://arxiv.org/abs/2607.21960v1",
-    "summary": "Deep reinforcement learning is used to make snake-like robots adapt their undulatory gait as fluid viscosity changes, treating the missing fluid-state measurements as a partially observable control problem. An asymmetric actor-critic setup trains a simulator-only teacher with privileged viscosity information, then distills it into a proprioception-only student policy. Across viscosity shifts from 10^-7 to 10^-2 m^2/s, the learned controller discovers non-sinusoidal gaits that improve speed and transport efficiency beyond conventional sinusoidal or kinematic controllers.",
-    "published": "2026-07-24T04:14:36+00:00",
-    "updated": "2026-07-24T04:14:36+00:00",
-    "authors": [
-      "Tsuyoshi Kimoto",
-      "Akio Yamano",
-      "Kohei Honda",
-      "Takashi Iwasa"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.21960v1",
-      "comment": "23 pages, 6 figures. Submitted to a journal",
-      "first_seen": "2026-07-27",
-      "full_text": "This paper demonstrates how deep reinforcement learning (DRL) enables adaptive locomotion of snake-like robots in dynamically changing viscous environments, overcoming the inherent performance limitations of classical predefined control methods. The lack of direct onboard sensors for fluid properties necessitates formulating this task as a partially observable Markov decision process. By employing an asymmetric actor-critic framework, a teacher policy trained using privileged information available only in the physics simulator distills its knowledge into a student policy that relies solely on proprioceptive sensor information. Simulation results across a wide range of dynamic viscosity changes ($10^{-7}$ to $10^{-2} m^2/s$) reveal that the DRL agent autonomously acquires non-sinusoidal adaptive gaits. These gaits improve propulsion velocity and transport efficiency, breaking the inherent limits of conventional sinusoidal and kinematic control. The findings establish that implicit environment inference via privileged information distillation is an effective approach to bypass the constraints of classical models under unpredictable fluid dynamics.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.21960.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 21.198,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.197737544734623,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
@@ -2453,56 +2409,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.21918",
-    "source": "arxiv",
-    "title": "Action-Conditioned World Model for Goal Plane Probe Guidance in Robotic Ultrasound",
-    "url": "http://arxiv.org/abs/2607.21918v1",
-    "summary": "An action-conditioned latent diffusion world model learns ultrasound dynamics from recent frames, probe motions, and time offsets, then supplies rewards to fine-tune a goal-conditioned temporal transformer that plans ordered probe movements toward target neck scan planes. On a self-collected robotic ultrasound dataset, the model preserves action-dependent anatomical structure during target-directed scans, and in real closed-loop tests it reaches 70.0% success for carotid guidance and 65.0% for thyroid guidance.",
-    "published": "2026-07-24T02:48:13+00:00",
-    "updated": "2026-07-24T02:48:13+00:00",
-    "authors": [
-      "Siqi Fan",
-      "Mingcong Chen",
-      "Ran Liu",
-      "Zixuan Yang",
-      "Xiaoyu Fu",
-      "Xiaoqing Gao",
-      "Yunhui Liu",
-      "Hongbin Liu"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.21918v1",
-      "comment": null,
-      "first_seen": "2026-07-27",
-      "full_text": "We present an action-conditioned world model framework for goal plane probe guidance in robotic ultrasound, with a focus on neck ultrasound scanning. Autonomous ultrasound tasks often require large numbers of probe-motion trajectories for training, but collecting high-quality demonstrations is labor-intensive and explicit simulators are difficult to build because ultrasound appearance depends on contact, tissue deformation, and view-dependent acoustic artifacts. We address this problem with a two-stage model-based learning pipeline. First, a latent conditional diffusion world model predicts future ultrasound observations from recent context frames, probe motions and temporal offset. Second, a goal-conditioned temporal transformer predicts ordered probe motions and is fine-tuned using rewards from the frozen world model. Experiments on the self-collected dataset show that the world model preserves action-dependent anatomical structure on target-directed scans. In real-world closed loop experiments, the framework achieves success rates of 70.0\\% for carotid guidance and 65.0\\% for thyroid guidance. These results demonstrate the potential of learned ultrasound dynamics for training goal-directed robotic probe navigation.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.21918.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 20.185,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.184882881862599,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:NuclearVenom/BulletLab",
     "source": "github",
     "title": "NuclearVenom/BulletLab",
@@ -2583,48 +2489,6 @@
       "recency": 2.7682285912748017,
       "has_code": 0.0,
       "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:jingyu198/HUGE-Bench",
-    "source": "github",
-    "title": "jingyu198/HUGE-Bench",
-    "url": "https://github.com/jingyu198/HUGE-Bench",
-    "summary": "[ECCV 2026] HUGE-Bench: A Benchmark for High-Level UAV Vision-Language-Action Tasks",
-    "published": "2026-03-18T13:51:10Z",
-    "updated": "2026-07-24T07:16:56Z",
-    "authors": [
-      "jingyu198"
-    ],
-    "extra": {
-      "stars": 41,
-      "forks": 0,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 4,
-      "license": "MIT",
-      "first_seen": "2026-06-24",
-      "full_text": "[ECCV 2026] HUGE-Bench: A Benchmark for High-Level UAV Vision-Language-Action Tasks",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 19.341,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.224870469980159,
-      "has_code": 6.0,
-      "github_stars_log": 8.116246451989502,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
@@ -2724,62 +2588,6 @@
       "research_interest_abstract": 2.0,
       "recency": 1.847978091123512,
       "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.21588",
-    "source": "arxiv",
-    "title": "AXIS: A Growable Community-Driven Data Engine for Scalable Robot Manipulation",
-    "url": "http://arxiv.org/abs/2607.21588v1",
-    "summary": "Learning effective robot manipulation policies requires diverse, high-quality demonstrations, yet existing data pipelines are often difficult to scale because they rely on specialized hardware, centralized operators, or fixed task suites.",
-    "published": "2026-07-23T17:58:08+00:00",
-    "updated": "2026-07-23T17:58:08+00:00",
-    "authors": [
-      "Mengfei Zhao",
-      "Dihong Huang",
-      "Yikai Tang",
-      "Peihao Li",
-      "Mingxuan Yan",
-      "Ruiqi Zhuang",
-      "Yanjia Huang",
-      "Jie Wang",
-      "Hai Zhai",
-      "Tony Zhou",
-      "Rui Zhang",
-      "Zhexi Luo",
-      "Yuchen Huang",
-      "Jianfei Yang",
-      "Jiachen Li"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.21588v1",
-      "comment": "Project Website: https://axisaiorg.github.io/AXIS-V1/",
-      "first_seen": "2026-07-24",
-      "full_text": "Learning effective robot manipulation policies requires diverse, high-quality demonstrations, yet existing data pipelines are often difficult to scale because they rely on specialized hardware, centralized operators, or fixed task suites. We present AXIS, a growable community-driven data engine and benchmark for scalable robot learning, which enables browser-based teleoperation for large-scale demonstration collection, automatically generates and validates new manipulation tasks, and transforms community-collected demonstrations into training-ready data through automated success checking, quality filtering, trajectory smoothing, and visual and physics-based augmentation. The AXIS dataset currently contains 207 diverse tasks and 50K+ trajectories. Meanwhile, AXIS organizes data into task snapshots and evaluates policies with a systematic held-out protocol. We compare vision-language-action (VLA) policies under a unified AXIS evaluation suite and analyze scaling behavior across different data volumes. Continual pretraining on AXIS substantially improves the overall success rate of $π_{0.5}$ by 5.8%, outperforms the model pretrained on RoboCasa365 by 37.3%, and exhibits consistent scaling with increasing data volume, with the largest gains observed under layout, sensor-noise, and camera perturbations.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 18.106,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 6.0,
-      "recency": 2.1060014328645833,
-      "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
@@ -2898,184 +2706,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:Robot-Nav/legbot_lab",
-    "source": "github",
-    "title": "Robot-Nav/legbot_lab",
-    "url": "https://github.com/Robot-Nav/legbot_lab",
-    "summary": "legbot四足机器人Isaac lab训练框架，包含PPO、PPO+MoE+CTS，可实现多种地形下的鲁棒运动控制。",
-    "published": "2026-06-23T06:36:52Z",
-    "updated": "2026-07-23T09:40:14Z",
-    "authors": [
-      "Robot-Nav"
-    ],
-    "extra": {
-      "stars": 12,
-      "forks": 0,
-      "language": "C++",
-      "topics": [
-        "cts",
-        "moe",
-        "ppo"
-      ],
-      "open_issues": 0,
-      "license": "Apache-2.0",
-      "first_seen": "2026-07-21",
-      "full_text": "legbot四足机器人Isaac lab训练框架，包含PPO、PPO+MoE+CTS，可实现多种地形下的鲁棒运动控制。",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 17.602,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.0319091584747024,
-      "has_code": 6.0,
-      "github_stars_log": 5.569716761534184,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.21725",
-    "source": "arxiv",
-    "title": "Addressing the Orchestration Gap in Generalist Robots via Physical Agency",
-    "url": "http://arxiv.org/abs/2607.21725v1",
-    "summary": "Pigey treats generalist robot control as an orchestration problem: a high-level physical agent plans, breaks goals into subgoals, invokes frozen VLA policies or parameterized skills, checks outcomes from observations, and recovers when execution fails. By wrapping existing low-level policies rather than retraining them, it closes much of the “orchestration gap,” raising LIBERO-PRO performance from 12.8% to 53.3% without task-specific fine-tuning and pushing a real robot from near-zero to over 90% success on reasoning-limited manipulation tasks.",
-    "published": "2026-07-23T18:18:32+00:00",
-    "updated": "2026-07-23T18:18:32+00:00",
-    "authors": [
-      "Liane Galanti",
-      "Dhruv Shah",
-      "Tri Dao"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.21725v1",
-      "comment": null,
-      "first_seen": "2026-07-27",
-      "full_text": "General-purpose robots need to reason about their actions, combining perception, world knowledge, planning, success detection, recovery, and low-level control. Today's state-of-the-art models attempt to combine all these capabilities into the learned policy via large-scale pre-training. Instead, we show that these capabilities can be decomposed into a general language-conditioned policy/control agent and a high-level agent manager/orchestrator. Rather than training policies to reason via pre-training, we build a closed-loop physical agent orchestrator that can do high-level planning, decompose the goal into achievable subgoals, command low-level motor commands, track and verify the outcome from low-level observations, and recover from failures. Our Physical Agency orchestrator (Pigey) can control existing vision-language-action (VLA) policies as well as parametrized skills to solve complex reasoning tasks in the real world, without any additional data collection or post-training. We evaluate Pigey extensively across simulation benchmarks and challenging real-world robotic manipulation tasks, and demonstrate significant performance improvements over existing generalist policies. On LIBERO-PRO, Pigey advances the state-of-the-art by over 4x (12.8% -> 53.3%) with no task-specific fine-tuning. On a real robot, Pigey lifts the frozen policy from near-zero to over 90% on reasoning-limited tasks. We call the difference between what frozen motor skills achieve alone and inside the agentic loop the orchestration gap.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.21725.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 17.109,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.109037147385913,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.20992",
-    "source": "arxiv",
-    "title": "Distributed Model-Based Diffusion For Scalable Multi-Robot Trajectory Optimization",
-    "url": "http://arxiv.org/abs/2607.20992v1",
-    "summary": "Trajectory optimization for multi-robot systems remains a critical challenge, particularly when navigating highly non-convex, non-linear, and non-differentiable environments.",
-    "published": "2026-07-23T07:16:59+00:00",
-    "updated": "2026-07-23T07:16:59+00:00",
-    "authors": [
-      "Haejoon Lee",
-      "Xinyi Wang",
-      "Taekyung Kim",
-      "Dimitra Panagou"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.20992v1",
-      "comment": "9 pages, 4 figures",
-      "first_seen": "2026-07-24",
-      "full_text": "Trajectory optimization for multi-robot systems remains a critical challenge, particularly when navigating highly non-convex, non-linear, and non-differentiable environments. While Model-Based Diffusion (MBD) has recently emerged as a promising sampling-based optimization paradigm for single-robot trajectory generation, extending it to multi-robot systems results in a centralized, high-dimensional inference problem that (i) suffers from poor sample efficiency due to the curse of dimensionality and (ii) requires global access to all robots' dynamics, constraints, and objectives. To address this, we propose Distributed Model-Based Diffusion (DMBD), a distributed server-robot framework that decomposes the reverse diffusion process into local conditional reverse diffusion processes. This decomposition enables each robot to iteratively perform denoising independently within its own control subspace while conditioning on the current trajectory estimates of the other robots that are aggregated and broadcast by the server. Extensive simulations in goal swapping, multi-floor coverage, parking, and rush-hour scenarios demonstrate that DMBD achieves strong scalability, solving many challenging coordination tasks in sub-seconds and significantly outperforming existing baselines.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 17.011,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.010592203809524,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.20772",
-    "source": "arxiv",
-    "title": "Socially Consistent Multi-Robot Navigation Using Decoupled Planning and Trajectory Coordination",
-    "url": "http://arxiv.org/abs/2607.20772v1",
-    "summary": "The successful integration of mobile robots in human-centric environments requires navigation that is not only safe and efficient, but also predictable and aligned with social conventions, key precursors for human comfort and acceptance.",
-    "published": "2026-07-22T22:38:07+00:00",
-    "updated": "2026-07-22T22:38:07+00:00",
-    "authors": [
-      "Matthew M. Sato",
-      "Kincho H. Law"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.20772v1",
-      "comment": "Submitted to Civil Engineering Sciences",
-      "first_seen": "2026-07-24",
-      "full_text": "The successful integration of mobile robots in human-centric environments requires navigation that is not only safe and efficient, but also predictable and aligned with social conventions, key precursors for human comfort and acceptance. While significant research addresses short-term human-aware planning, these methods often lack mechanisms for ensuring consistent and predictable behaviors across long horizons. Without socially aware long-term planners, local planners are overburdened, resulting in inefficient and locally reactive movements that undermine predictability. This paper introduces a partially decentralized framework that generates predictable and socially consistent multi-robot motion by decoupling global path planning from trajectory coordination. First, we propose a modified A* planner that embeds macroscopic social norms into the planner cost function. Planned paths are shared across mobile robots to collaboratively build a social graph of established routes, which enforces path consistency and reduces future planning effort. Second, we leverage the emergent structure of the socially constrained paths to formulate the multi-robot trajectory coordination problem as a mixed-integer convex program. The convex program enables efficient computation of conflict- free trajectories, scaling effectively to large fleets and supporting dynamic task assignment. Our results demonstrate that enforcing social consistency at the path planning stage produces predictable, socially compliant mobile robot paths and simplifies the otherwise complex problem of multi-robot coordination.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 16.933,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 1.9333799009424606,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:75e8c2f785b6",
     "source": "news",
     "title": "日 NTT도코모, 피지컬 AI 스타트업 설립…경비 보안로봇 시장 공략",
@@ -3103,54 +2733,6 @@
       "research_interest_abstract": 4.0,
       "recency": 2.767670555379464,
       "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.20912",
-    "source": "arxiv",
-    "title": "URF: A Unified Robot Control-Policy Framework for Stable Contact Aware Manipulation",
-    "url": "http://arxiv.org/abs/2607.20912v1",
-    "summary": "Learning-based manipulation policies usually predict robot actions from sensory observations and leave their execution to a separate low-level controller.",
-    "published": "2026-07-23T04:46:19+00:00",
-    "updated": "2026-07-23T04:46:19+00:00",
-    "authors": [
-      "Jiyou Shin",
-      "Youngjin Seo",
-      "Jaeseog Won",
-      "Sungwon Seo",
-      "Hyunjun Kim",
-      "Seokmin Yoon",
-      "Tuan Luong",
-      "Hyungpil Moon"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.20912v1",
-      "comment": "8 pages, 5 figures, 2 tables. Submitted to IEEE Robotics and Automation Letters (RA-L)",
-      "first_seen": "2026-07-24",
-      "full_text": "Learning-based manipulation policies usually predict robot actions from sensory observations and leave their execution to a separate low-level controller. In rigid contact, this separation can be problematic: the same motion to a virtual target or compliant motion command can lead to unstable contact, tracking error, excessive loading, or tool damage, depending on the low-level controller. In this paper, we propose a \\textit{Unified Robot Control-Policy Framework} (URF), which connects compliant action prediction with unified impedance-admittance control. Given multimodal observations, URF predicts a virtual target, a stiffness matrix, and an impedance-admittance switch ratio. The switch ratio determines when the controller should behave more like admittance control for accurate motion tracking and when it should move toward impedance control for safer rigid contact. Because demonstration data do not provide ground-truth environment stiffness, we construct switch-ratio labels from measured contact forces and use them to supervise controller-mode prediction. Across box-flipping and line-pressing tasks, URF achieves higher task success rates while reducing failure modes observed with admittance-only execution, including rapid force buildup, large force oscillations, tool breakage, and robot safety stops. These results suggest that contact-aware policies benefit from predicting not only compliant actions but also the controller behavior used to execute them. Project page: https://jiyou384.github.io/urf_project_page/",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Manipulator"
-    ],
-    "score": 15.988,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 1.9881715682341272,
-      "has_code": 6.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
@@ -3193,44 +2775,6 @@
       "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:4b86d3352e35",
-    "source": "news",
-    "title": "Robots Doing Stuff #62 | In-Hand Reorientation & Drilling",
-    "url": "https://www.youtube.com/watch?v=Ycv8N16XPPc",
-    "summary": "Part 2 of the customer task from episode #61. Fastening with a power drill combines precise positioning, controlled force application, and coordinated tool use, all while maintaining a secure grasp on the tool and aligning the nut driver perfectly to target.",
-    "published": "2026-07-23T17:23:55+00:00",
-    "updated": "2026-07-23T17:23:55+00:00",
-    "authors": [
-      "Sanctuary AI"
-    ],
-    "extra": {
-      "feed": "Sanctuary AI (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i2.ytimg.com/vi/Ycv8N16XPPc/hqdefault.jpg",
-      "first_seen": "2026-07-23",
-      "full_text": "Part 2 of the customer task from episode #61. Fastening with a power drill combines precise positioning, controlled force application, and coordinated tool use, all while maintaining a secure grasp on the tool and aligning the nut driver perfectly to target. These are the kinds of dexterous manipulation skills required for industrial automation beyond the reach of traditional robotics. Collecting training data during these sessions is a key part in our policy training process. Visit www.sanctuary.ai to learn more about our Physical AI-enabled automation solutions. #Dexterity #DexterousHand #RobotHand #Robotics #RobotsDoingStuff #SanctuaryAI",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Manipulator"
-    ],
-    "score": 15.101,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.1009096410491073,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
       "demote": -0.0
     },
     "priority": "must_read"
@@ -3318,322 +2862,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.21802",
-    "source": "arxiv",
-    "title": "StARS: Socially Appropriate Robot Actions via a Recommender System-Driven Approach",
-    "url": "http://arxiv.org/abs/2607.21802v1",
-    "summary": "StARS treats socially appropriate robot action selection as a personalized preference-modeling problem, using a recommender-system setup where annotators are users, scenes are items, and candidate robot-action ratings are predicted from collaborative signals plus learned scene representations. Because it is model-agnostic, it can sit on top of different scene encoders and backbones, and on MannersDB+ and SocNav1 it consistently improves agreement with annotators, including under sparse preference feedback.",
-    "published": "2026-07-23T20:38:07+00:00",
-    "updated": "2026-07-23T20:38:07+00:00",
-    "authors": [
-      "Erencem Ozbey",
-      "Fethiye Irmak Dogan",
-      "Jin Huang",
-      "Hatice Gunes"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.IR"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.21802v1",
-      "comment": "IROS 2026",
-      "first_seen": "2026-07-27",
-      "full_text": "Social appropriateness in human-robot interaction (HRI) is not universal: different people can judge the same robot action differently in the same situation. To capture this inter-subject variability, we reformulate socially appropriate action generation as a preference modelling problem inspired by recommender systems, treating annotators as users, contexts/scenes as items, and appropriateness scores over a set of candidate robot actions as targets. We propose StARS, a novel model-agnostic framework that integrates collaborative filtering with learnable scene representations to generate user-specific appropriateness scores over candidate robot actions. StARS is model-agnostic: it can be integrated with various scene encoders and backbones, enabling personalisation without redesigning the underlying model. We evaluate StARS on two socially aware robotics datasets, MannersDB+ and SocNav1, and analyse robustness under sparse preference feedback. Across datasets and backbones, StARS consistently improves performance and agreement with annotators, supporting personalised action selection aligned with user norms. Our code is publicly available at https://github.com/Cambridge-AFAR/StARS.git.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.21802.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 13.13,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.129808476932044,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.21071",
-    "source": "arxiv",
-    "title": "TransBiolab: A Real-World Multi-View Dataset of Cluttered Transparent Biomedical Objects",
-    "url": "http://arxiv.org/abs/2607.21071v1",
-    "summary": "Autonomous biomedical laboratories increasingly rely on visual perception to recognize, localize, and manipulate transparent plasticware, yet high-quality real-world datasets for this setting remain limited.",
-    "published": "2026-07-23T09:04:11+00:00",
-    "updated": "2026-07-23T09:04:11+00:00",
-    "authors": [
-      "Ke Ma",
-      "Yifei Wang",
-      "Meng Wang",
-      "Tian Xia"
-    ],
-    "extra": {
-      "categories": [
-        "cs.CV",
-        "cs.MM",
-        "cs.RO"
-      ],
-      "primary_category": "cs.CV",
-      "pdf_url": "https://arxiv.org/pdf/2607.21071v1",
-      "comment": "9 pages, 10 figures, accepted by ACM Multimedia 2026",
-      "first_seen": "2026-07-24",
-      "full_text": "Autonomous biomedical laboratories increasingly rely on visual perception to recognize, localize, and manipulate transparent plasticware, yet high-quality real-world datasets for this setting remain limited. The scarcity of domain-relevant data is particularly restrictive in cluttered multi-object scenes, where mutual occlusion and view-dependent appearance changes remain challenging even for contemporary visual foundation models. Existing transparent-object datasets have advanced segmentation, depth, and pose estimation, but they usually do not evaluate the combined setting of multi-object clutter, occlusion, and calibrated multi-view capture that characterizes real laboratory manipulation scenes. To address this gap, we present TrainsBiolab, a real-world RGB-D dataset of cluttered transparent biomedical objects captured as calibrated multi-view sequences. TrainsBiolab contains 161,315 frames from 98 scenes and 1.03M instance annotations over 15 laboratory object types, including 6D poses, full and visible masks, depth, and per-frame camera calibration. The dataset is organized along three axes that reflect operational difficulty: object category, the total number of objects in a frame, and camera viewpoint. We further define dataset-centric benchmarks for segmentation, depth estimation and completion, and 6D pose estimation, and report a system-level robot manipulation evaluation enabled by the released annotations and calibrations. By focusing on repeated transparent instances, clutter, and multi-view laboratory capture, TrainsBiolab provides a resource for segmentation, depth estimation, 6D pose estimation, and multi-view reasoning in autonomous laboratory manipulation. Project page: https://dualtransparency.github.io/TransBiolab/.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 13.027,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.026544585699405,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:7c557e6e946b",
-    "source": "news",
-    "title": "Build and Optimize Robotics and Edge AI with the New Jetson Thor T2000 and T3000",
-    "url": "https://www.youtube.com/watch?v=930DlHopjws",
-    "summary": "As robotics and edge AI move into real-world deployment, developers need compact, power-efficient computing that can run foundation models and advanced AI workloads at the edge. Join NVIDIA product managers and engineers for a technical overview of the new NVIDIA Jetson Thor T2000 and T3000 modules.",
-    "published": "2026-07-22T18:53:46+00:00",
-    "updated": "2026-07-22T18:53:46+00:00",
-    "authors": [
-      "NVIDIA Developer"
-    ],
-    "extra": {
-      "feed": "NVIDIA Developer (YouTube)",
-      "thumbnail": "https://i2.ytimg.com/vi/930DlHopjws/hqdefault.jpg",
-      "first_seen": "2026-07-17",
-      "full_text": "As robotics and edge AI move into real-world deployment, developers need compact, power-efficient computing that can run foundation models and advanced AI workloads at the edge. Join NVIDIA product managers and engineers for a technical overview of the new NVIDIA Jetson Thor T2000 and T3000 modules. Explore practical strategies for overcoming memory constraints, optimizing robotics and edge AI applications, and using Jetson Agent Skills to run more capable workloads on lower-memory configurations. What you’ll learn: - How the new Jetson Thor T2000 and T3000 support scalable robotics and edge AI deployments - How to address memory constraints across the Jetson software stack - How to use Jetson Agent Skills to optimize memory usage - Practical techniques for reducing the memory footprint of real-world robotics and edge AI pipelines",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Other"
-    ],
-    "score": 12.9,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 1.899994459667659,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:2f1fa9b519b7",
-    "source": "news",
-    "title": "Unlock more highlights from Lumo-2!",
-    "url": "https://www.youtube.com/watch?v=eVA-r_BS5Ls",
-    "summary": "20+ Tasks, Uncut, Mostly at 1x Speed ⌛️Temporal reasoning: dynamic scene reaction, motion prediction, and multi-phase memory tasks 🏠Physical understanding: fluid dynamics, gravity interaction, and causal reasoning tasks 🧠Control complexity: long-horizon multi-step tasks and high-precision dexterous manipulation Research & videos: www.astribot.com/research/Lumo2 #Astribot #Lumo2 #HumanoidRobots",
-    "published": "2026-07-23T12:58:10+00:00",
-    "updated": "2026-07-23T12:58:10+00:00",
-    "authors": [
-      "Astribot"
-    ],
-    "extra": {
-      "feed": "Astribot (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i2.ytimg.com/vi/eVA-r_BS5Ls/hqdefault.jpg",
-      "first_seen": "2026-07-23",
-      "full_text": "20+ Tasks, Uncut, Mostly at 1x Speed ⌛️Temporal reasoning: dynamic scene reaction, motion prediction, and multi-phase memory tasks 🏠Physical understanding: fluid dynamics, gravity interaction, and causal reasoning tasks 🧠Control complexity: long-horizon multi-step tasks and high-precision dexterous manipulation Research & videos: www.astribot.com/research/Lumo2 #Astribot #Lumo2 #HumanoidRobots",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Manipulator",
-      "#Humanoid"
-    ],
-    "score": 12.061,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.0613635096056546,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.21694",
-    "source": "arxiv",
-    "title": "Oxygen-TryOn: Fashion-Native Foundation Model for Any-item Virtual Try-On",
-    "url": "http://arxiv.org/abs/2607.21694v1",
-    "summary": "Oxygen-TryOn treats virtual try-on as multi-reference, understanding-driven generation rather than mask-based inpainting, using a fashion-specific data engine plus continued pre-training, supervised fine-tuning, and RL with a hybrid try-on/general-quality reward. It can take clean product shots or in-the-wild worn-item references, combine a variable number of items across categories, and render them on a target person while preserving both identity and item details. On public benchmarks and Oxygen-TryOn Bench, it reports leading single- and multi-item realism and consistency, including comparisons against Nano Banana Pro, GPT-Image-2, Seedream5 Lite, and FLUX.2.",
-    "published": "2026-07-23T17:45:56+00:00",
-    "updated": "2026-07-23T17:45:56+00:00",
-    "authors": [
-      "Yong Liu",
-      "Xiaolong Fu",
-      "Zihang Xu",
-      "Wen Xue",
-      "Xueheng Li",
-      "Lin Song",
-      "Yuan Zhang",
-      "Chuyang Zhao",
-      "Haoyang Huang",
-      "Nan Duan",
-      "Yipeng Sun",
-      "Yan Li",
-      "Simiu Gu"
-    ],
-    "extra": {
-      "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV",
-      "pdf_url": "https://arxiv.org/pdf/2607.21694v1",
-      "comment": null,
-      "first_seen": "2026-07-27",
-      "full_text": "We present Oxygen-TryOn, a unified foundation model for any-item virtual try-on. Rather than repurposing a general-purpose image editor, Oxygen-TryOn is fashion-native, built for try-on through a dedicated data engine and try-on-specific training. Given one or more reference items (clean product shots or in-the-wild worn-on photos) and a single target subject image, it synthesizes a photorealistic image of the subject wearing the items across virtually any fashion category. Prior systems handle a single garment category in a studio setting, and recent multi-reference methods remain garment-centric; in contrast, Oxygen-TryOn supports diverse items and scenarios, including full- and half-body views, a variable number of references, and free multi-item composition, while faithfully preserving both subject identity and item appearance. Instead of mask-based inpainting, we reformulate try-on as a multi-reference, understanding-driven generation task. We build a data engine that collects, manufactures, annotates, and filters high-quality try-on data at scale, and design a three-stage recipe of continued pre-training (CPT), supervised fine-tuning (SFT), and reinforcement learning (RL). The RL stage uses a hybrid reward combining an in-house try-on reward model with a proprietary, rubric-guided general-purpose model, jointly supervising fine-grained consistency and instruction-level quality. It also follows general editing instructions (e.g., pose changes) in the same pass. Across public benchmarks and our in-house Oxygen-TryOn Bench, it achieves state-of-the-art consistency and realism on single-item try-on and leads on multi-item try-on, matching or surpassing both leading proprietary systems (Nano Banana Pro, GPT-Image-2, Seedream5 Lite) and open-source models (FLUX.2).",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.21694.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Other"
-    ],
-    "score": 11.104,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.104185949471726,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "arxiv:2607.21522",
-    "source": "arxiv",
-    "title": "GS-Agent: Creating 4D Physical Worlds With Generative Simulation",
-    "url": "http://arxiv.org/abs/2607.21522v1",
-    "summary": "Creating dynamic and physically realistic 4D worlds from natural language descriptions is both fascinating and challenging. Traditional computer graphics methods rely on manual creation, requiring extensive human effort to fine-tune materials, motions, and visual fidelity.",
-    "published": "2026-07-23T17:04:36+00:00",
-    "updated": "2026-07-23T17:04:36+00:00",
-    "authors": [
-      "Hongxin Zhang",
-      "Chunru Lin",
-      "Junyan Li",
-      "Zhou Xian",
-      "Tsun-Hsuan Wang",
-      "Chuang Gan"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CL",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.21522v1",
-      "comment": null,
-      "first_seen": "2026-07-24",
-      "full_text": "Creating dynamic and physically realistic 4D worlds from natural language descriptions is both fascinating and challenging. Traditional computer graphics methods rely on manual creation, requiring extensive human effort to fine-tune materials, motions, and visual fidelity. Recent advances in generative foundation models have sparked interest in learning to generate such 4D worlds from large-scale data; however, existing methods still struggle to ensure physical plausibility and controllability. In this work, we take a different path by leveraging foundation models to construct an agentic system that emulates how humans traditionally create 4D worlds, yet automates the entire process. We present GS-Agent, an end-to-end multi-agent framework that integrates physics engines in the loop to generate realistic, dynamic, and controllable 4D physical worlds from natural language. Inspired by how humans build 4D worlds, GS-Agent decomposes the task into entity management, covering 3D asset curation, material tuning, placement, and motion control, and rendering configuration, including camera and lighting manipulation. Multiple agents with distinct expertise interact with the physics engine via code, seek multimodal feedback, and collaborate to iteratively construct 4D worlds that align with the given descriptions. Experimental results show that GS-Agent effectively converts natural language into diverse and physically plausible 4D worlds exhibiting rich interactions among liquids, deformable objects, and rigid bodies, while achieving cinematic camera and lighting control. We envision GS-Agent as a foundation for a new paradigm in 4D world generation, empowering creative content creation and physical AI. Project page at https://umass-embodied-agi.github.io/gs-agent/",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 11.098,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.098035162361111,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:5de9b60070bd",
-    "source": "news",
-    "title": "LimX COSA Voice Interaction Demo | Built to Serve People",
-    "url": "https://www.youtube.com/watch?v=JF0hwhPfn7I",
-    "summary": "A more natural, stable human-robot interaction is here. Wherever you're from, just start the conversation — Oli is ready to listen, understand, and respond. #LimXCOSA #LimXDynamics #EmbodiedAI #HumanoidRobot",
-    "published": "2026-07-23T13:00:22+00:00",
-    "updated": "2026-07-23T13:00:22+00:00",
-    "authors": [
-      "LimX Dynamics"
-    ],
-    "extra": {
-      "feed": "LimX Dynamics (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i3.ytimg.com/vi/JF0hwhPfn7I/hqdefault.jpg",
-      "first_seen": "2026-07-23",
-      "full_text": "A more natural, stable human-robot interaction is here. Wherever you're from, just start the conversation — Oli is ready to listen, understand, and respond. #LimXCOSA #LimXDynamics #EmbodiedAI #HumanoidRobot",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 11.062,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.0616908902703375,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "arxiv:2607.22483",
     "source": "arxiv",
     "title": "Plug, Play, and Comply: A Modular Framework for Online Variable Impedance with Arbitrarily Oriented Compliance Axes",
@@ -3669,42 +2897,6 @@
       "research_interest_abstract": 0.0,
       "recency": 2.3107211793973215,
       "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:4fa12b7a8d84",
-    "source": "news",
-    "title": "Pressure-free growing robots for soft medical robotics",
-    "url": "https://robohub.org/pressure-free-growing-robots-for-soft-medical-robotics/",
-    "summary": "Researchers at the University of Leeds and collaborators from the University of California San Diego won the Best Paper Award at RoboSoft, the leading international conference focused on soft robotics research.",
-    "published": "2026-07-23T07:53:40+00:00",
-    "updated": "2026-07-23T07:53:40+00:00",
-    "authors": [
-      "IEEE Robotics and Automation Society (RAS)"
-    ],
-    "extra": {
-      "feed": "Robohub",
-      "first_seen": "2026-07-23",
-      "full_text": "Researchers at the University of Leeds and collaborators from the University of California San Diego won the Best Paper Award at RoboSoft, the leading international conference focused on soft robotics research. Soft robotics is gaining attention in medical applications because compliant machines can interact more safely with delicate objects and complex anatomy. The award-winning paper […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 10.016,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.0160510233234126,
-      "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
@@ -3776,48 +2968,6 @@
       "research_interest_abstract": 2.0,
       "recency": 2.7688833532688495,
       "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "arxiv:2607.21471",
-    "source": "arxiv",
-    "title": "Future Rendering $\\neq$ Future Surface: A Benchmark and Dataset for Dynamic Surface Reconstruction Beyond the Observed Window",
-    "url": "http://arxiv.org/abs/2607.21471v1",
-    "summary": "Dynamic-scene reconstruction is almost always evaluated inside the observed time window, yet deployment settings such as AR overlays, robot interaction, and anticipatory planning need the future surface: the geometry at times beyond those captured. No standard benchmark measures this.",
-    "published": "2026-07-23T16:14:59+00:00",
-    "updated": "2026-07-23T16:14:59+00:00",
-    "authors": [
-      "Yukun Shi",
-      "Minglun Gong"
-    ],
-    "extra": {
-      "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV",
-      "pdf_url": "https://arxiv.org/pdf/2607.21471v1",
-      "comment": "See https://github.com/Ricky-S/futuresurf",
-      "first_seen": "2026-07-24",
-      "full_text": "Dynamic-scene reconstruction is almost always evaluated inside the observed time window, yet deployment settings such as AR overlays, robot interaction, and anticipatory planning need the future surface: the geometry at times beyond those captured. No standard benchmark measures this. We introduce FutureSurf, a controlled diagnostic benchmark and dataset for future-time surface reconstruction that trades scene diversity for exact future ground truth and falsification controls. A method trains on the observed first 75% of a sequence; we score its extracted per-frame surface on the held-out future by Chamfer distance, reporting absolute future CD as the primary score and the future/observed gap as a diagnostic. The dataset contains eight analytically defined controlled motions, including three falsification controls, with exact per-frame ground-truth meshes. We also provide a ground-truth-side recoverability oracle. The release includes split files, scoring code, a benchmark card, and Croissant metadata. On the controlled motions, the DG-Mesh backbone leaves a 2.7-4.1$\\times$ gap even for futures predictable in principle (four of five recoverable from observed motion by a fixed rule), while the falsification controls behave as designed (the surface-invariant motion shows no gap). Beyond the contributed dataset, the gap persists across six animated DG-Mesh asset scenes and a second backbone, Deformable-3DGS (2.0-6.6$\\times$; both share a deformation-MLP temporal model). The benchmark also shows that future rendering quality and future-surface accuracy are statistically decoupled, so the novel-view-synthesis metrics the field reports do not track future geometry. The future error is structured, concentrating where the surface moves. The dataset, evaluation toolkit, and scoring code are available on Hugging Face and GitHub (https://github.com/Ricky-S/futuresurf).",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 9.091,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.0906517230381945,
-      "has_code": 6.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
@@ -4047,40 +3197,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:c2c7646ca8b4",
-    "source": "news",
-    "title": "Viam Launches Education Programs to Help Developers Build Robots in the Physical World",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/07/23/viam-launches-education-programs-to-help-developers-build-robots-in-the-physical-world/26881",
-    "summary": "New education program, led by Shannon Bradshaw, SVP of Product and Education, begins with Viam 101, offering engineers a direct path to building robotics applications",
-    "published": "2026-07-23T13:02:36+00:00",
-    "updated": "2026-07-23T13:02:36+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-07-23",
-      "full_text": "New education program, led by Shannon Bradshaw, SVP of Product and Education, begins with Viam 101, offering engineers a direct path to building robotics applications",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 7.062,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.062023237829861,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:4ee208ec29af",
     "source": "news",
     "title": "한국로봇산업진흥원, 안산 제조혁신 현장 찾아…“제조 AX, 답은 현장에 있다”",
@@ -4264,40 +3380,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:9347dec15ea2",
-    "source": "news",
-    "title": "Humanoid Raises $152 Million at $1.35 Billion Post-Money Valuation, Becoming Europe's First Pure-Play Humanoid Robotics Unicorn",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/07/23/humanoid-raises-152-million-at-135-billion-post-money-valuation-becoming-europes-first-pure-play-humanoid-robotics-unicorn/26882",
-    "summary": "The investment marks a defining moment for Europe's tech ecosystem, showing that globally competitive Physical AI companies can be built and scaled in Europe.",
-    "published": "2026-07-23T13:06:33+00:00",
-    "updated": "2026-07-23T13:06:33+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-07-23",
-      "full_text": "The investment marks a defining moment for Europe's tech ecosystem, showing that globally competitive Physical AI companies can be built and scaled in Europe.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 6.063,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.0626110355233136,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -12.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:214450364428",
     "source": "news",
     "title": "우버 창업자 칼라닉, 피지컬 AI 승부수…로봇 스타트업 '아톰스' 17억달러 투자 유치",
@@ -4330,44 +3412,6 @@
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -6.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:738c93785998",
-    "source": "news",
-    "title": "How to Customize NVIDIA Nemotron 3 Nano With RLVR in Prime Intellect Lab",
-    "url": "https://www.youtube.com/watch?v=Bc8SMuzWvgc",
-    "summary": "Customize NVIDIA Nemotron 3 Nano with reinforcement learning with verifiable rewards (RLVR) using Prime Intellect Lab. This tutorial walks through a complete customization workflow: baseline Nemotron 3 Nano in the math-python environment, train a LoRA adapter with reinforcement learning with verifiable rewards, deploy it, and compare results.",
-    "published": "2026-07-23T16:18:27+00:00",
-    "updated": "2026-07-23T16:18:27+00:00",
-    "authors": [
-      "NVIDIA Developer"
-    ],
-    "extra": {
-      "feed": "NVIDIA Developer (YouTube)",
-      "thumbnail": "https://i3.ytimg.com/vi/Bc8SMuzWvgc/hqdefault.jpg",
-      "first_seen": "2026-07-23",
-      "full_text": "Customize NVIDIA Nemotron 3 Nano with reinforcement learning with verifiable rewards (RLVR) using Prime Intellect Lab. This tutorial walks through a complete customization workflow: baseline Nemotron 3 Nano in the math-python environment, train a LoRA adapter with reinforcement learning with verifiable rewards, deploy it, and compare results. The goal is to solve tool-assisted math problems within five turns. After 100 training steps—about one hour and 45 minutes—the adapter completes more tasks with fewer tool calls. The experiment costs less than $5 and converts several incorrect baseline results to correct answers without losing previously correct responses. See how reward increases as turn count falls, then use the workflow as a starting point for your own model customization. #Tutorial #ReinforcementLearning #NVIDIANemotron",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 5.091,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.091167574920635,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
     },
     "priority": "save_for_later"
   },
@@ -4509,42 +3553,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.250693873457341,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "low_priority"
-  },
-  {
-    "id": "news:b56b2331f191",
-    "source": "news",
-    "title": "Alexa Plus is getting an AI update to handle more complicated instructions",
-    "url": "https://www.theverge.com/tech/970399/amazon-alexa-plus-ai-update-smart-home-devices",
-    "summary": "Amazon is launching an update to its Alexa Plus assistant that will allow it to connect to smart home devices in new ways. With the update, which is currently in preview, Alexa Plus can link up with tech from Bosch, Delta, Ecovacs, iRobot, Yale Home, Whirlpool, Tapo, Eufy, and others, while automatically routing requests to […]",
-    "published": "2026-07-23T21:15:06+00:00",
-    "updated": "2026-07-23T21:15:06+00:00",
-    "authors": [
-      "Emma Roth"
-    ],
-    "extra": {
-      "feed": "The Verge — AI",
-      "first_seen": "2026-07-23",
-      "full_text": "Amazon is launching an update to its Alexa Plus assistant that will allow it to connect to smart home devices in new ways. With the update, which is currently in preview, Alexa Plus can link up with tech from Bosch, Delta, Ecovacs, iRobot, Yale Home, Whirlpool, Tapo, Eufy, and others, while automatically routing requests to […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 3.135,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.1353119287475195,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
