@@ -3472,50 +3472,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.22145",
-    "source": "arxiv",
-    "title": "Flight-Ready LiDAR-Inertial Odometry for Embedded Drone Platforms",
-    "url": "http://arxiv.org/abs/2607.22145v1",
-    "summary": "Open-source LiDAR-inertial odometry (LIO) systems have achieved remarkable benchmark accuracy, yet current state-of-the-art implementations are primarily optimized for evaluation performance rather than the requirements of real-time closed-loop aerial control. When deployed onboard UAVs, this can introduce limitations that degrade flight performance.",
-    "published": "2026-07-24T09:44:29+00:00",
-    "updated": "2026-07-24T09:44:29+00:00",
-    "authors": [
-      "Alvaro J. Gaona",
-      "David Perez-Saura",
-      "Francisco J. Anguita",
-      "Pascual Campoy"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.22145v1",
-      "comment": "7 pages, 5 figures, Accepted in IMAV 2026",
-      "first_seen": "2026-07-27",
-      "full_text": "Open-source LiDAR-inertial odometry (LIO) systems have achieved remarkable benchmark accuracy, yet current state-of-the-art implementations are primarily optimized for evaluation performance rather than the requirements of real-time closed-loop aerial control. When deployed onboard UAVs, this can introduce limitations that degrade flight performance. In this work, we identify five architectural deficiencies in a representative tightly coupled IESKF-based LIO implementation: odometry publishing tied to the LiDAR rate (10 Hz instead of the IMU's 200 Hz), missing velocity outputs, execution bottlenecks that block IMU processing, mutex contention, and synchronization race conditions. We introduce corresponding modifications including IMU-rate forward propagation, direct body-frame velocity publishing, SLERP-based smoothing, dual-executor isolation, and explicit synchronization protection. The resulting system increases odometry output from ~10 Hz to a stable 200 Hz, provides a complete Twist state at every IMU sample, and preserves continuity during transient LiDAR loss. Experiments on a Livox Mid-360 / Pixhawk 4 Mini autonomous UAV with motion-capture ground truth validate the approach. Since the underlying estimator (IESKF + ikd-Tree) remains unchanged, the proposed improvements can be directly applied to FAST-LIO2-derived implementations.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 14.033,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.0327623532638888,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "arxiv:2607.23702",
     "source": "arxiv",
     "title": "Try Once, Then Optimal: De-Redundified Procedure Memory for Cross-Episode Exploration Amortization",
@@ -4716,45 +4672,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:a2d1923a5a82",
-    "source": "news",
-    "title": "Unitree Super Athlete AS2-W",
-    "url": "https://www.youtube.com/watch?v=Xha2TJ_1C6Q",
-    "summary": "Fluid movement, compact yet exceptional. Supports a continuous 16kg payload, with 30+ km unloaded driving range",
-    "published": "2026-07-24T07:19:09+00:00",
-    "updated": "2026-07-24T07:19:09+00:00",
-    "authors": [
-      "Unitree Robotics"
-    ],
-    "extra": {
-      "feed": "Unitree Robotics (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i1.ytimg.com/vi/Xha2TJ_1C6Q/hqdefault.jpg",
-      "first_seen": "2026-07-24",
-      "full_text": "Fluid movement, compact yet exceptional. Supports a continuous 16kg payload, with 30+ km unloaded driving range",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 7.011,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.0111353519791666,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:39a49ed4fc73",
     "source": "news",
     "title": "싱가포르 로피디아, 로봇 데이터 수집 확대 자금 320억원 유치",
@@ -4939,43 +4856,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:d23792dc7f12",
-    "source": "news",
-    "title": "A mini robot to simplify dental treatment",
-    "url": "https://robohub.org/a-mini-robot-to-simplify-dental-treatment/",
-    "summary": "A miniature robot developed at the University of Basel could help prepare teeth for a crown. Photo: University of Basel, Catherine Weyer. By Angelika Jacobs A routine check-up at the dentist ends with bad news: tooth decay has left a large cavity, and the tooth needs a crown. The treatment requires several follow-up appointments. During […]",
-    "published": "2026-07-24T09:45:56+00:00",
-    "updated": "2026-07-24T09:45:56+00:00",
-    "authors": [
-      "University of Basel"
-    ],
-    "extra": {
-      "feed": "Robohub",
-      "first_seen": "2026-07-24",
-      "full_text": "A miniature robot developed at the University of Basel could help prepare teeth for a crown. Photo: University of Basel, Catherine Weyer. By Angelika Jacobs A routine check-up at the dentist ends with bad news: tooth decay has left a large cavity, and the tooth needs a crown. The treatment requires several follow-up appointments. During […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 6.033,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.032978119422123,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:349da95b8291",
     "source": "news",
     "title": "뉴로메카 박종훈 대표, 유상증자 총 10만2411주 청약 신청",
@@ -5076,42 +4956,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 2.0,
       "recency": 0.061946361969245856,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "low_priority"
-  },
-  {
-    "id": "news:33032e1a1ec7",
-    "source": "news",
-    "title": "Connecting the Factory Floor and Back Office: The Next Step in End-to-End Automation",
-    "url": "https://roboticsandautomationnews.com/2026/07/24/connecting-the-factory-floor-and-back-office-the-next-step-in-end-to-end-automation/103619/",
-    "summary": "Manufacturers have spent decades automating physical production. Robots assemble components, sensors monitor equipment, and control systems coordinate increasingly complex operations. Yet many of the processes surrounding production still depend on manual data entry and communication.",
-    "published": "2026-07-24T10:10:28+00:00",
-    "updated": "2026-07-24T10:10:28+00:00",
-    "authors": [
-      "David Edwards"
-    ],
-    "extra": {
-      "feed": "Robotics and Automation News",
-      "first_seen": "2026-07-24",
-      "full_text": "Manufacturers have spent decades automating physical production. Robots assemble components, sensors monitor equipment, and control systems coordinate increasingly complex operations. Yet many of the processes surrounding production still depend on manual data entry and communication. Information generated on the factory floor may need to reach maintenance, procurement, finance, logistics, or customer service. These handoffs are […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 3.037,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.0366289080059525,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
