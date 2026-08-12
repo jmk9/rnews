@@ -451,60 +451,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.26789",
-    "source": "arxiv",
-    "title": "CheckVLA: Execution-Time Verification with Action-Conditioned World Model for Long-Horizon Mobile Manipulation",
-    "url": "http://arxiv.org/abs/2607.26789v1",
-    "summary": "Vision-language-action (VLA) policies commonly execute long-horizon mobile manipulation through open-loop action chunks, issuing multiple actions without receiving new high-level visual input.",
-    "published": "2026-07-29T11:31:33+00:00",
-    "updated": "2026-07-29T11:31:33+00:00",
-    "authors": [
-      "Yushan Liu",
-      "Peibo Sun",
-      "Xintao Chao",
-      "Zhenyang Yang",
-      "Yifan Xie",
-      "Lingfeng Zhang",
-      "Shoujie Li",
-      "Chenyu Tang",
-      "Fang Chen",
-      "Xiao-Ping Zhang",
-      "Wenbo Ding"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.26789v1",
-      "comment": null,
-      "first_seen": "2026-07-30",
-      "full_text": "Vision-language-action (VLA) policies commonly execute long-horizon mobile manipulation through open-loop action chunks, issuing multiple actions without receiving new high-level visual input. A committed chunk therefore implies how observations should evolve, but accidental deviations can violate this expectation while the remaining actions continue to propagate the error: commit-time policy confidence cannot react to a deviation that occurs after dispatch, and observation-only anomaly scores lack an action-conditioned reference for separating expected effects from unexplained changes. We propose CheckVLA, which verifies execution with a separately trained, frozen action-conditioned world model. A conformally calibrated risk threshold bounds the episode-level probability of an unnecessary first intervention and determines when to intervene, its exceedance controls how strongly the rewritten suffix retains the superseded chunk, latency-aware hard prefixing restricts replacement to actions that remain deployable, and an event-driven keyframe bank preserves evidence of prior progress across repairs. On RoboCasa365, under a common training recipe and a matched invocation budget, CheckVLA attains a 36.1% average success rate against 27.6% for periodic replanning (+8.5 points). At a matched 5% episode-level false-alarm target, action conditioning raises timely recall to 77.9%, against 48.6% for an observation-only control and 37.9% for an action-shuffled control. These simulation results support action-conditioned verification as a way to restore feedback during chunked execution while keeping the repair consistent with inference latency.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Manipulator",
-      "#MobileManipulator"
-    ],
-    "score": 38.477,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 15.0,
-      "research_interest_abstract": 8.0,
-      "recency": 2.477173359310516,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:mujocolab/mjlab",
     "source": "github",
     "title": "mujocolab/mjlab",
@@ -688,48 +634,6 @@
       "has_code": 6.0,
       "github_stars_log": 19.20021665301747,
       "github_forks_log": 5.520844966846424,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:XuPeng23/AeroVLA",
-    "source": "github",
-    "title": "XuPeng23/AeroVLA",
-    "url": "https://github.com/XuPeng23/AeroVLA",
-    "summary": "[Accepted to ECCV 2026] Official repository for AeroVLA (formerly known as AerialVLA): A Vision-Language-Action Model for UAV Navigation via Minimalist End-to-End Control",
-    "published": "2026-03-15T10:13:25Z",
-    "updated": "2026-07-29T02:40:22Z",
-    "authors": [
-      "XuPeng23"
-    ],
-    "extra": {
-      "stars": 122,
-      "forks": 5,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 10,
-      "license": "Apache-2.0",
-      "first_seen": "2026-06-20",
-      "full_text": "[Accepted to ECCV 2026] Official repository for AeroVLA (formerly known as AerialVLA): A Vision-Language-Action Model for UAV Navigation via Minimalist End-to-End Control",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 34.404,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.3981282054265876,
-      "has_code": 6.0,
-      "github_stars_log": 10.44952555719699,
-      "github_forks_log": 1.5563025007672873,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
@@ -1516,51 +1420,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.26460",
-    "source": "arxiv",
-    "title": "RLMM-Flow: A Flow-based Mobile Manipulation Framework with Latent-Space Reinforcement Learning",
-    "url": "http://arxiv.org/abs/2607.26460v1",
-    "summary": "Mobile manipulation requires generating whole-body action chunks that jointly satisfy goal reaching, collision avoidance, base kinematic constraints, manipulator joint limits, and trajectory smoothness.",
-    "published": "2026-07-29T04:22:46+00:00",
-    "updated": "2026-07-29T04:22:46+00:00",
-    "authors": [
-      "Shuhang Wang",
-      "Ziming Li",
-      "Hui Cheng"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.26460v1",
-      "comment": null,
-      "first_seen": "2026-07-30",
-      "full_text": "Mobile manipulation requires generating whole-body action chunks that jointly satisfy goal reaching, collision avoidance, base kinematic constraints, manipulator joint limits, and trajectory smoothness. Flow-based generative policies provide an efficient paradigm for learning multimodal and temporally consistent motion priors from expert demonstrations, but imitation-only training cannot improve policy quality beyond the demonstration distribution. We propose RLMM-Flow, a flow-based mobile manipulation framework that combines expert flow-policy pretraining with latent-space reinforcement learning post-training. The framework first learns a flow policy that captures a multimodal whole-body motion prior from expert demonstrations. The pretrained flow policy is then frozen, while a latent steering network steers its initial noise toward higher-value action chunks. To stabilize high-dimensional latent optimization, we warm up an action-space critic before jointly training the latent critic and latent actor, and introduce coarse-to-fine latent steering that progressively expands control from a horizon-shared latent representation to a full-dimensional residual representation. Experiments on mobile manipulation motion-planning benchmarks show that RLMM-Flow substantially improves task success, collision avoidance, and trajectory quality over imitation-only flow policies and existing reinforcement learning post-training baselines, while preserving fast flow-based inference.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Manipulator",
-      "#MobileManipulator"
-    ],
-    "score": 28.413,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.41336631437748,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:hanruihua/ir-sim",
     "source": "github",
     "title": "hanruihua/ir-sim",
@@ -1699,55 +1558,6 @@
       "research_interest_abstract": 8.0,
       "recency": 2.653229910825893,
       "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.26985",
-    "source": "arxiv",
-    "title": "SymmGrid: Super-Scaling On-Robot Learning with Parallelized Symmetries and Egocentric-Exocentric Visual Perception",
-    "url": "http://arxiv.org/abs/2607.26985v1",
-    "summary": "Deep reinforcement policy learning directly in physical robots (on-robot learning) remains bottlenecked by slow wall-clock training times.",
-    "published": "2026-07-29T14:41:02+00:00",
-    "updated": "2026-07-29T14:41:02+00:00",
-    "authors": [
-      "Gabe Everett",
-      "Brice Gunter",
-      "Ryan Vander Stelt",
-      "Cleiver Ruiz-Martinez",
-      "Blake Hull",
-      "Juan Rojas"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.26985v1",
-      "comment": "9 pages, 7 figures, 1 table",
-      "first_seen": "2026-07-30",
-      "full_text": "Deep reinforcement policy learning directly in physical robots (on-robot learning) remains bottlenecked by slow wall-clock training times. We present SymmGrid, a trajectory level augmentation framework inspired by parallelized symmetries that super-scales group transformations to significantly accelerate on-robot learning in both egocentric and exocentric visual setups. We model a Markov Decision Process (MDP) under a symmetry tree, in which state-action pairs have admissible parallelized invariant transformations that yield a geometric grid structure. The state is modelled with ego- or exocentric images and proprioception information. The latter require special treatment, in the form of homographies, to warp visual scenes in line with their corresponding spatial transformations. These parallelized transformations produce a large set of unique symmetric equivalences that populate the replay buffer with diverse and consistent experiences that speed up learning and improve performance. We present extensive training and evaluations performed directly on real robot manipulation contact tasks including peg-insertions, cable routing, and object relocations. Relative to SOTA, SymmGrid achieved wall-clock training convergence speed-ups of 1.37-2.17x, evaluation success rate improvements of 1.09x-1.27x, fastest training convergence times of 16.6, 10.9, and 79.3 minutes respectively. For trajectory wide assessments, we used normalized area under the curve (nAUC) ratios. SymmGrid achieved improvements of up to 2.59x. These results confirm that simple branch symmetries can have an outsized result due to super-scaling and bring us closer to sub-10 minute on-robot learning training in manipulation tasks suitable for arms and humanoids. The project page is available at symmgrid-robot.github.io",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Manipulator",
-      "#Humanoid"
-    ],
-    "score": 27.505,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.5053702851562503,
-      "has_code": 6.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 3.0,
@@ -1984,7 +1794,8 @@
       "license": "MIT",
       "first_seen": "2026-05-18",
       "full_text": "Evo-1: Lightweight Vision-Language-Action Model with Preserved Semantic Alignment",
-      "summary_kind": "truncation"
+      "summary_kind": "truncation",
+      "thumbnail": "https://raw.githubusercontent.com/MINT-SJTU/Evo-1/HEAD/readme_pics/taolin.jpg"
     },
     "tags": [
       "#VLA",
@@ -2488,53 +2299,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.26807",
-    "source": "arxiv",
-    "title": "Route by Kinematics, Act by Observation: Kinematics-Supervised Expert Routing in MoE-Augmented VLA",
-    "url": "http://arxiv.org/abs/2607.26807v1",
-    "summary": "While MoE augments VLA via expert specialization, router suffers from ineffective expert routing owing to the kinematic heterogeneity of actions across manipulation tasks and, even worse, the unavailability of the kinematic signals at inference time.",
-    "published": "2026-07-29T11:48:45+00:00",
-    "updated": "2026-07-29T11:48:45+00:00",
-    "authors": [
-      "Tianhang Yang",
-      "Yanze Zheng",
-      "Junjie Wang",
-      "Wei-Bin Kou",
-      "Ruotong Li",
-      "Yujiu Yang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.26807v1",
-      "comment": "9 pages",
-      "first_seen": "2026-07-30",
-      "full_text": "While MoE augments VLA via expert specialization, router suffers from ineffective expert routing owing to the kinematic heterogeneity of actions across manipulation tasks and, even worse, the unavailability of the kinematic signals at inference time. In this work, we first observe that most semantically distinct manipulation tasks reduce to multiple kinematic archetypes. Motivated by this finding, we propose Kinematics-supervised explicit routing (KinRT), a new paradigm that shifts from implicit, observation-driven expert routing to explicit, kinematics-guided expert dispatching. Specifically, we perform kinematic clustering on action trajectories into multiple kinematically coherent groups, whose IDs serve as ground truth to supervise the training of the router; at inference time, the router dispatches experts only using visual-language observations, without any reliance on action kinematics. KinRT actually introduces an asymmetric bridging mechanism that distills the task kinematics from the action space in training into the observation space at inference. In addition, to assess KinRT's cross-platform generalization, we build an economical, Do-It-Yourself robot (DIYRobot) platform from scratch using 3D-print technology ($<$ 2,000USD). Extensive experiments demonstrate KinRT's superiority over both dense and MoE-featured VLAs by more than 23.26% on RoboTwin benchmark and 20.27% on our introduced DIYRobot platform. Our code and DIYRobot platform will be open-sourced.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 21.48,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.479732883313492,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:chang-xinhai/Awesome-Dexterous-Manipulation",
     "source": "github",
     "title": "chang-xinhai/Awesome-Dexterous-Manipulation",
@@ -2675,106 +2439,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.26567",
-    "source": "arxiv",
-    "title": "Speech2Grasp: Data-Efficient Transfer of Text-Conditioned Grasp Detection to Speech in Humanoid Robots",
-    "url": "http://arxiv.org/abs/2607.26567v1",
-    "summary": "Humanoid robots increasingly require multi-modal understanding for natural interaction with humans. Despite the prominence of vision-language models, they generally assume textual rather than the more natural speech inputs.",
-    "published": "2026-07-29T07:40:00+00:00",
-    "updated": "2026-07-29T07:40:00+00:00",
-    "authors": [
-      "Hung Nguyen",
-      "Kim Nhat Minh Nguyen",
-      "Van Duc Vu",
-      "Van-Danh Le",
-      "Hoang Huy Le",
-      "Dinh Tuan Nguyen",
-      "Pham Tuyen Le",
-      "Van-Truong Nguyen",
-      "Quan Nguyen"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.26567v1",
-      "comment": null,
-      "first_seen": "2026-07-30",
-      "full_text": "Humanoid robots increasingly require multi-modal understanding for natural interaction with humans. Despite the prominence of vision-language models, they generally assume textual rather than the more natural speech inputs. In this paper, we investigate whether a well-established text-conditioned model can be transferred to speech in a data-efficient manner. Using ALBEF as a case study, we conduct diagnostic analyses showing that a lightweight MLP-based projector effectively adapts it to speech, while preserving semantic discrimination and robustness. Motivated by these findings, we introduce Speech2Grasp, a framework for data-efficient transfer of text-conditioned grasp detection to speech. Real-world humanoid robot experiments show that Speech2Grasp outperforms cascaded ASR-based pipeline, while reducing inference latency. Our findings suggest a practical paradigm for extending established text-conditioned systems to speech.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Manipulator",
-      "#Humanoid"
-    ],
-    "score": 20.443,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.442716513343254,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.26513",
-    "source": "arxiv",
-    "title": "Explicit Kinematic Guidance from Analytic Concepts for Vision-Language-Action Models",
-    "url": "http://arxiv.org/abs/2607.26513v1",
-    "summary": "Current Vision-Language-Action (VLA) models rely mainly on 2D inputs, neglecting the rich object structural information and commonsense knowledge inherent in the 3D physical world. This deficiency restricts their spatial awareness and adaptability for complex, high-precision manipulation.",
-    "published": "2026-07-29T06:24:25+00:00",
-    "updated": "2026-07-29T06:24:25+00:00",
-    "authors": [
-      "Mingyang Sun",
-      "Jiude Wei",
-      "Xiujian Liang",
-      "Qichen He",
-      "Donglin Wang",
-      "Cewu Lu",
-      "Jianhua Sun"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.26513v1",
-      "comment": null,
-      "first_seen": "2026-07-30",
-      "full_text": "Current Vision-Language-Action (VLA) models rely mainly on 2D inputs, neglecting the rich object structural information and commonsense knowledge inherent in the 3D physical world. This deficiency restricts their spatial awareness and adaptability for complex, high-precision manipulation. To bridge this crucial gap, we construct a Concept Expert module for VLA to build executable Analytic Concepts that represent objects as explicit, programmatic blueprints. Our mechanism operates in two synergistic phases: First, prior to VLA inference, the Concept Expert leverages 3D information from Vision Foundation Models (VFMs) to estimate the initial kinematic and structural parameters. Second, throughout the manipulation process, the VLA model utilizes its inherent capability to dynamically track the dynamic concept parameters, continuously aligning them with observational changes to ensure persistent accuracy. Once established, the Analytic Concepts provide explicit, high-quality guidance for VLA fine-tuning through (1) dense, programmatic manipulation rewards and (2) precise spatial guidance.   This formulation allows VLA models to learn physically grounded interaction behaviors while maintaining end-to-end learning flexibility.   Our experimental results show consistent improvements in success rate and learning efficiency across supervised and reinforcement learning settings, demonstrating the effectiveness of structured, concept-based guidance for VLA post-training.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 20.431,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 6.0,
-      "recency": 2.4314689933432536,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -3157,86 +2821,6 @@
     "priority": "must_read"
   },
   {
-    "id": "news:5e04ed77af3b",
-    "source": "news",
-    "title": "Synapticon and Stabilus form partnership to develop a joint product line of integrated actuators for humanoid robots",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/07/29/synapticon-and-stabilus-form-partnership-to-develop-a-joint-product-line-of-integrated-actuators-for-humanoid-robots/26891",
-    "summary": "The partnership combines Synapticon's drive intelligence and functional safety with Stabilus' industrialization and manufacturing expertise - for production-ready actuation joints across all limbs of humanoid robots.",
-    "published": "2026-07-29T12:49:16+00:00",
-    "updated": "2026-07-29T12:49:16+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-07-29",
-      "full_text": "The partnership combines Synapticon's drive intelligence and functional safety with Stabilus' industrialization and manufacturing expertise - for production-ready actuation joints across all limbs of humanoid robots.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 17.489,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.488738317375992,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.26279",
-    "source": "arxiv",
-    "title": "Multi-Objective Compliance-Integrated Coevolution For Simulated And Real-World Deployment Of Multi-Robot Marine Autonomy",
-    "url": "http://arxiv.org/abs/2607.26279v1",
-    "summary": "Collaborative robots are well-suited to maritime missions that benefit from coordination, such as the exploration of unknown reef structures, inspection of subsea infrastructure, or search-and-rescue operations.",
-    "published": "2026-07-28T21:21:45+00:00",
-    "updated": "2026-07-28T21:21:45+00:00",
-    "authors": [
-      "Everardo Gonzalez",
-      "Tyler M. Paine",
-      "Manuel Agraz Vallejo",
-      "Gaurav Dixit",
-      "Michael R. Benjamin",
-      "Kagan Tumer"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.26279v1",
-      "comment": null,
-      "first_seen": "2026-07-30",
-      "full_text": "Collaborative robots are well-suited to maritime missions that benefit from coordination, such as the exploration of unknown reef structures, inspection of subsea infrastructure, or search-and-rescue operations. These missions typically provide sparse feedback signals for measuring progress and require adherence to safety and regulatory norms, turning a mission into a multi-objective optimization problem. Coevolutionary algorithms can process these sparse feedback signals to generate coordinated behaviors, and in some cases extend behaviors to multiple objectives. However, incorporating high-level team objectives with low-level compliance considerations on the fly to balance norm adherence with team performance remains elusive. This paper introduces a multi-objective framework that blends coevolved behaviors with compliance behaviors to achieve a balance between maximizing team progress and minimizing norm violations. The key insight is to decouple learning from compliance since operational norms are prescribed rather than discovered. We demonstrate that our framework achieves high team performance while avoiding collisions on a collaborative swimmer rescue mission with up to 8 vehicles in a hardware deployment, and 12 vehicles in simulation. The key contribution of this paper is Marine Multi-Objective Compliance-Integrated Coevolution (MMOCIC), a framework that blends team-wide optimization with established norms for real-world deployments of learning-based coordination.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 17.351,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.350715023268849,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:5f24e815af7c",
     "source": "news",
     "title": "미래에셋증권 \"HL만도, 휴머노이드 액추에이터 수주 기대\"",
@@ -3554,44 +3138,6 @@
     "priority": "must_read"
   },
   {
-    "id": "news:44588add08d8",
-    "source": "news",
-    "title": "Innovation at Agility: Digit does TikTok",
-    "url": "https://www.youtube.com/watch?v=vZwYTn3fW1w",
-    "summary": "Getting multiple Digits to move in sync is a real test of multi-robot coordination. Each one runs its own balance and whole-body control while staying timed to the others. The same thing that lets a fleet work side by side on a warehouse floor. --------------------------------------- At Agility, we make robots that are made for work.",
-    "published": "2026-07-29T15:00:15+00:00",
-    "updated": "2026-07-29T15:00:15+00:00",
-    "authors": [
-      "Agility"
-    ],
-    "extra": {
-      "feed": "Agility Robotics (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i3.ytimg.com/vi/vZwYTn3fW1w/hqdefault.jpg",
-      "first_seen": "2026-07-29",
-      "full_text": "Getting multiple Digits to move in sync is a real test of multi-robot coordination. Each one runs its own balance and whole-body control while staying timed to the others. The same thing that lets a fleet work side by side on a warehouse floor. --------------------------------------- At Agility, we make robots that are made for work. Our robot Digit works alongside us in spaces designed for people. Digit handles the tedious and repetitive tasks meant for a machine, allowing companies and their people to focus on the work that requires the human element. Subscribe (hit the bell for notifications) https://www.youtube.com/c/AgilityRobotics Join our Team https://www.agilityrobotics.com/careers Follow our Journey https://twitter.com/agilityrobotics https://www.linkedin.com/company/agilityrobotics https://www.instagram.com/agility_robotics https://www.tiktok.com/@agility_robotics",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 12.508,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.50822988062252,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:f7c45a43c5d1",
     "source": "news",
     "title": "구글 딥마인드, 로봇 파운데이션 모델 '제미나이 로보틱스 2' 공개",
@@ -3725,89 +3271,6 @@
       "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "arxiv:2607.26855",
-    "source": "arxiv",
-    "title": "NeoRacer: An Open, Standardized 1:12 Scale Autonomous Race Car for Benchmarking and Education",
-    "url": "http://arxiv.org/abs/2607.26855v1",
-    "summary": "Many scientific fields rely on standard benchmarks and shared platforms to improve review and reproducibility, but autonomous systems research still lacks widely accepted open hardware. Where standardization has emerged, progress has accelerated.",
-    "published": "2026-07-29T12:39:39+00:00",
-    "updated": "2026-07-29T12:39:39+00:00",
-    "authors": [
-      "Koneshka Bandyopadhyay",
-      "Ansh Mehta",
-      "Bassel El Mabsout",
-      "Renato Mancuso"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "eess.SY"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.26855v1",
-      "comment": null,
-      "first_seen": "2026-07-30",
-      "full_text": "Many scientific fields rely on standard benchmarks and shared platforms to improve review and reproducibility, but autonomous systems research still lacks widely accepted open hardware. Where standardization has emerged, progress has accelerated. This is especially evident in autonomous racing, where teams often build custom systems or buy niche, expensive vehicles, making control and robotics research and education hard to compare and reproduce. High costs also limit access outside well-funded labs, while affordable educational robots are often underpowered.   To address this gap, we present NeoRacer, an open-source 1:12 scale autonomous racing platform. It is built around an NVIDIA Jetson Orin Nano (67 TOPS), a 270° LiDAR, a 120 fps global-shutter camera, and a 9-axis IMU. NeoRacer ships pre-assembled for USD 2,699, offering over 3x the compute of comparable platforms at less than half the cost of the nearest pre-assembled alternative. Co-developed by the Neobotics Foundation and Seeed Studio, and manufactured by Seeed Studio, NeoRacer combines open hardware and software design with scalable, repeatable production. The modular, extensible platform provides a standardized benchmarking environment for autonomous racing algorithms across institutions. We describe the hardware/software architecture, design decisions from two pilot deployments (MIT IAP, 15 students; BU CPS Lab, 10 students), and key cost-performance tradeoffs. Hardware is licensed under CERN-OHL-S v2 and software under GPLv3, with all design files, firmware, and ROS2 packages publicly accessible.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 11.487,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.4873072885044643,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:41ffe4173b61",
-    "source": "news",
-    "title": "A New Icon of Fashion | LimX Luna Takes the Next Stage",
-    "url": "https://www.youtube.com/watch?v=DK9PXTkNKcY",
-    "summary": "Recently, at the grand finale of the Korean fashion survival show KILL IT: STYLE CREATOR SHOWDOWN, LimX Luna appeared as a special model in designer Kim Nara’s performance, We Draw Each Other, helping the designer take home the championship.",
-    "published": "2026-07-29T12:00:13+00:00",
-    "updated": "2026-07-29T12:00:13+00:00",
-    "authors": [
-      "LimX Dynamics"
-    ],
-    "extra": {
-      "feed": "LimX Dynamics (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i1.ytimg.com/vi/DK9PXTkNKcY/hqdefault.jpg",
-      "first_seen": "2026-07-29",
-      "full_text": "Recently, at the grand finale of the Korean fashion survival show KILL IT: STYLE CREATOR SHOWDOWN, LimX Luna appeared as a special model in designer Kim Nara’s performance, We Draw Each Other, helping the designer take home the championship. An artistic performance with the body as its canvas — Luna became its most vivid expression. #LimXLuna #KILLITStyleCreatorShowdown #FashionTech #HumanoidRobot",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 11.481,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.4814392043973212,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
       "demote": -0.0
     },
     "priority": "save_for_later"
@@ -4077,86 +3540,6 @@
       "research_interest_abstract": 2.0,
       "recency": 2.6774064688467263,
       "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:8f8bfc237eb1",
-    "source": "news",
-    "title": "Palladyne AI To Participate in 15th Annual Needham Virtual Industrial Tech, Robotics, & Power 1x1 Conference",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/07/29/palladyne-ai-to-participate-in-15th-annual-needham-virtual-industrial-tech-robotics-power-1x1-conference/26894",
-    "summary": "Ben Wolff, CEO, and Trevor Thatcher, CFO will participate in 1:1 meetings with institutional investors at the Needham Virtual Industrial Tech, Robotics, & Power 1x1 Conference on August 17 and 18, 2026.",
-    "published": "2026-07-29T13:16:02+00:00",
-    "updated": "2026-07-29T13:16:02+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-07-29",
-      "full_text": "Ben Wolff, CEO, and Trevor Thatcher, CFO will participate in 1:1 meetings with institutional investors at the Needham Virtual Industrial Tech, Robotics, & Power 1x1 Conference on August 17 and 18, 2026.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 10.493,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.492721452405754,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "arxiv:2607.26770",
-    "source": "arxiv",
-    "title": "Vision-TL-Action: Neuro-Symbolic Trajectory Generation from Visual Observations and Temporal Logic",
-    "url": "http://arxiv.org/abs/2607.26770v1",
-    "summary": "Temporal logic (TL) provides a compositional language for the formulation of long horizon robotic tasks, but existing TL-conditioned trajectory generators can sidestep perception-to-symbol binding by encoding exact object geometry in the task graph.",
-    "published": "2026-07-29T11:12:31+00:00",
-    "updated": "2026-07-29T11:12:31+00:00",
-    "authors": [
-      "Zezhi Liu",
-      "Zhiwei Zheng",
-      "Hanqian Luo",
-      "Deyun Qin",
-      "Shizhen Wu",
-      "Yongchun Fang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.26770v1",
-      "comment": "17 pages, 15 figures",
-      "first_seen": "2026-07-30",
-      "full_text": "Temporal logic (TL) provides a compositional language for the formulation of long horizon robotic tasks, but existing TL-conditioned trajectory generators can sidestep perception-to-symbol binding by encoding exact object geometry in the task graph. We introduce \\emph{Vision-TL-Action}, which generates action trajectories from multi-view images, a coordinate-free TL syntax graph, and the robot initial state. TL-node tokens and spatial visual tokens are fused through bidirectional cross-attention, and the resulting representation conditions a flow-matching trajectory generator. Visual tokens are augmented only with normalized image-plane locations and camera-view identifiers, while a training-only predicate-to-region objective encourages grounding to referenced objects. Consistent with prior work in this domain, we evaluate the model using Success@$K$, the fraction of tasks for which at least one of K sampled trajectories satisfies the TL specification. On Panda task, our model achieves 67.45% Success@1024, compared with 59.11% for the oracle-state baseline. On AntMaze task, it achieves 96.35% Success@256, comparable to the oracle result of 96.88%. Resolution and intervention studies show that spatial detail depends on semantic grounding and predicate identity affects both attention and performance. These results demonstrate a direct mapping from visual observations and structured TL goals to action trajectories without requiring object geometry at inference. Code is available at https://github.com/AricLau07/vision-tl-action.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 10.474,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.4743410178373018,
-      "has_code": 6.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
@@ -4888,44 +4271,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:d885d38a75f6",
-    "source": "news",
-    "title": "How to Train Open Models with RL on Prime Intellect | Nemotron Labs",
-    "url": "https://www.youtube.com/watch?v=zNM_k2HQTaM",
-    "summary": "Customizing open models doesn't have to mean managing your own GPU cluster. In this livestream, we walk through a complete hosted reinforcement learning run on Nemotron 3 Nano — from a cold start to a downloadable LoRA adapter — using Prime Intellect Lab. Local setup takes about five minutes. Prime Intellect handles the rest.",
-    "published": "2026-07-29T06:50:28+00:00",
-    "updated": "2026-07-29T06:50:28+00:00",
-    "authors": [
-      "NVIDIA Developer"
-    ],
-    "extra": {
-      "feed": "NVIDIA Developer (YouTube)",
-      "thumbnail": "https://i3.ytimg.com/vi/zNM_k2HQTaM/hqdefault.jpg",
-      "first_seen": "2026-07-15",
-      "full_text": "Customizing open models doesn't have to mean managing your own GPU cluster. In this livestream, we walk through a complete hosted reinforcement learning run on Nemotron 3 Nano — from a cold start to a downloadable LoRA adapter — using Prime Intellect Lab. Local setup takes about five minutes. Prime Intellect handles the rest. The session follows the same three-step loop: get a baseline, train with RLVR, and reevaluate under identical conditions. You'll see how to configure and launch a LoRA RL job, read reward curves and rollouts to understand what the model actually learned, and deploy the adapter for inference. You can also apply the same workflow to Nemotron 3 Super and Ultra, and extend it to real software engineering tasks. What you'll learn: - How to install the Prime CLI, set up a Lab workspace, and run a baseline evaluation in minutes - How to configure and launch a hosted LoRA RL training job on Nemotron 3 Nano - How to read reward curves and rollout traces to distinguish learning from reward hacking - How to deploy a LoRA adapter and rerun evaluation to measure actual improvement How to apply this workflow to Nemotron 3 Super and Ultra, and scale to harder tasks Ready to start training your own open models? Bring your questions live.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 5.435,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.435345452668651,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:93f62dd0504f",
     "source": "news",
     "title": "Daniela Rus receives Bavarian Minister-President's High-Tech Prize",
@@ -4990,42 +4335,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.5221758099900793,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:27f219b63b97",
-    "source": "news",
-    "title": "Surviving the paper deluge: a one-year study in learning from demonstration",
-    "url": "https://robohub.org/surviving-the-paper-deluge-a-one-year-study-in-learning-from-demonstration/",
-    "summary": "With the explosion of robotics research, staying current in fields like Learning from Demonstration (LfD) is a monumental challenge. Is AI the solution to the “paper deluge,” or is it part of the problem? Read the article preview below to learn more! Download the full paper: Surviving the Paper Deluge. Authors: Aude Billard, Renaud Detry, […]",
-    "published": "2026-07-29T09:16:32+00:00",
-    "updated": "2026-07-29T09:16:32+00:00",
-    "authors": [
-      "IEEE Robotics and Automation Society (RAS)"
-    ],
-    "extra": {
-      "feed": "Robohub",
-      "first_seen": "2026-07-29",
-      "full_text": "With the explosion of robotics research, staying current in fields like Learning from Demonstration (LfD) is a monumental challenge. Is AI the solution to the “paper deluge,” or is it part of the problem? Read the article preview below to learn more! Download the full paper: Surviving the Paper Deluge. Authors: Aude Billard, Renaud Detry, […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 4.457,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.4570815762127975,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
