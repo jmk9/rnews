@@ -230,7 +230,7 @@
     "source": "github",
     "title": "sou350121/VLA-Handbook",
     "url": "https://github.com/sou350121/VLA-Handbook",
-    "summary": "VLA-Handbook is a Chinese, practice-oriented learning and interview guide for algorithm engineers entering Vision-Language-Action robotics. It narrows the focus from generic CV/NLP preparation to robotics-specific issues, making it useful for people who need a structured path into VLA concepts, implementation concerns, and interview-ready knowledge.",
+    "summary": "VLA-Handbook is a Chinese, practice-oriented learning and interview guide for algorithm engineers entering Vision-Language-Action robotics. It narrows the focus from general CV/NLP preparation to robotics-specific issues, making it useful as a structured primer for people trying to understand what VLA systems require in real robot settings.",
     "published": "2025-11-23T06:25:26Z",
     "updated": "2026-08-10T15:30:11Z",
     "authors": [
@@ -902,7 +902,7 @@
     "source": "github",
     "title": "isaac-sim/IsaacLab-Arena",
     "url": "https://github.com/isaac-sim/IsaacLab-Arena",
-    "summary": "Isaac Lab - Arena extends NVIDIA Isaac Lab with a composable simulation layer for building robot-learning environments from interchangeable robots, objects, scenes, and tasks. It is aimed at rapidly prototyping and evaluating policies across diverse embodiments and environment configurations, making it useful for scaling simulation coverage rather than hand-crafting one-off Isaac Lab setups.",
+    "summary": "Isaac Lab - Arena extends NVIDIA Isaac Lab with a composable simulation layer for assembling robot learning environments from different robot embodiments, objects, and scenes. It is aimed at rapid prototyping and scalable policy evaluation, making it useful for testing how learned robotic behaviors transfer across task setups without rebuilding each environment from scratch.",
     "published": "2025-08-15T12:28:23Z",
     "updated": "2026-08-10T21:33:13Z",
     "authors": [
@@ -944,7 +944,7 @@
     "source": "github",
     "title": "iit-DLSLab/basic-locomotion-isaaclab",
     "url": "https://github.com/iit-DLSLab/basic-locomotion-isaaclab",
-    "summary": "An IsaacLab DirectEnv for basic quadrupedal locomotion tasks, with support for multiple quadruped robots, sim-to-sim, and sim-to-real pipelines",
+    "summary": "An IsaacLab DirectEnv implementation for training basic quadruped locomotion policies across multiple robot platforms. It is aimed at practical locomotion experimentation, including sim-to-sim transfer and sim-to-real deployment pipelines, so it should be useful as a starting point for researchers moving learned gaits from IsaacLab into other simulators or hardware.",
     "published": "2025-06-20T08:24:35Z",
     "updated": "2026-08-10T12:51:43Z",
     "authors": [
@@ -966,7 +966,7 @@
       "license": "BSD-3-Clause",
       "first_seen": "2026-05-18",
       "full_text": "An IsaacLab DirectEnv for basic quadrupedal locomotion tasks, with support for multiple quadruped robots, sim-to-sim, and sim-to-real pipelines",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/iit-DLSLab/basic-locomotion-isaaclab/HEAD/./gifs/train.gif"
     },
     "tags": [
@@ -1482,7 +1482,7 @@
     "source": "github",
     "title": "marmotlab/RL2-VLA",
     "url": "https://github.com/marmotlab/RL2-VLA",
-    "summary": "RL²-VLA targets vision-language-action models with a test-time steering method that composes adaptive reinforcement-learning latents rather than retraining the whole policy. The repo appears focused on making VLA behavior more flexible at inference time, using latent compositional control to scale adaptation when the robot faces new task conditions.",
+    "summary": "RL²-VLA targets vision-language-action robot policies by adding adaptive reinforcement-learning latent steering at test time, composing latent behaviors to adjust a pretrained VLA model without retraining the full system. The interesting part is the test-time scaling angle: it treats policy improvement as an inference-time control problem, aiming to make VLA models more adaptable when task conditions shift.",
     "published": "2026-07-28T20:10:38Z",
     "updated": "2026-08-09T16:56:27Z",
     "authors": [
@@ -2109,7 +2109,7 @@
     "source": "github",
     "title": "isaac-sim/isaac-launchable",
     "url": "https://github.com/isaac-sim/isaac-launchable",
-    "summary": "NVIDIA Brev Launchables are used here to spin up a ready-to-use Isaac Sim and Isaac Lab workspace without local setup. It gives learners a hosted VSCode instance, Kit App Streaming client, Isaac Sim, and Isaac Lab in one preconfigured environment, making it useful for hands-on robotics simulation training or tutorials where setup friction would otherwise dominate.",
+    "summary": "isaac-launchable packages a ready-to-use Isaac Sim and Isaac Lab setup through NVIDIA Brev Launchables, so learners can start in a hosted environment instead of assembling the simulation stack themselves. It provides access to VS Code, Kit App Streaming, Isaac Sim, and Isaac Lab in one preconfigured workflow, making it useful for teaching, onboarding, or experiments where setup friction would otherwise dominate.",
     "published": "2025-07-25T22:31:07Z",
     "updated": "2026-08-10T15:43:39Z",
     "authors": [
@@ -2362,7 +2362,7 @@
     "source": "github",
     "title": "iit-DLSLab/fault-locomotion-isaaclab",
     "url": "https://github.com/iit-DLSLab/fault-locomotion-isaaclab",
-    "summary": "An IsaacLab DirectEnv for quadrupedal locomotion under motor failures, with support for multiple quadruped robots, sim-to-sim, and sim-to-real pipelines",
+    "summary": "IsaacLab DirectEnv setup for training and evaluating quadruped locomotion when motors fail, with hooks for multiple robot platforms and workflows that carry policies through sim-to-sim and sim-to-real testing. It is useful as a fault-tolerant locomotion testbed: researchers can study how controllers adapt to actuator failures in simulation, then move the same pipeline toward higher-fidelity simulators or hardware.",
     "published": "2026-06-24T15:25:41Z",
     "updated": "2026-08-03T13:51:46Z",
     "authors": [
@@ -2384,7 +2384,7 @@
       "license": "BSD-3-Clause",
       "first_seen": "2026-08-07",
       "full_text": "An IsaacLab DirectEnv for quadrupedal locomotion under motor failures, with support for multiple quadruped robots, sim-to-sim, and sim-to-real pipelines",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/iit-DLSLab/fault-locomotion-isaaclab/HEAD/./gifs/four_legs.gif"
     },
     "tags": [
@@ -3296,7 +3296,7 @@
     "source": "github",
     "title": "martin-sedlacek/REALM",
     "url": "https://github.com/martin-sedlacek/REALM",
-    "summary": "REALM is a benchmark for testing how well robotic manipulation policies generalize, with validation across real-world setups and simulation rather than relying on sim-only results. The repository appears to support the IEEE RA-L 2026 paper by providing the benchmark infrastructure for comparing manipulation methods under controlled real-to-sim conditions.",
+    "summary": "REALM is an IEEE RA-L 2026 benchmark focused on testing how well robotic manipulation policies generalize, using a real-to-sim validation setup rather than relying on simulation alone. The repository appears to provide the benchmark code and resources for evaluating manipulation methods under conditions meant to reflect transfer between real-world behavior and simulated environments.",
     "published": "2025-12-22T13:16:33Z",
     "updated": "2026-08-10T15:08:10Z",
     "authors": [
