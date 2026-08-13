@@ -888,109 +888,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.27205",
-    "source": "arxiv",
-    "title": "TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM",
-    "url": "http://arxiv.org/abs/2607.27205v1",
-    "summary": "TurboVLA replaces the usual LLM-centered VLA pipeline, where images are projected through a language model before actions are decoded, with a direct V + L to A policy: vision and instruction encoders interact through a lightweight bidirectional module and feed a compact continuous-action decoder. On LIBERO it reaches 97.7% average success with 0.2B parameters, running at 31.2 ms per inference and 0.9 GB VRAM on an RTX 4090, suggesting that efficient task-conditioned perception-action representations can match much larger robot policies without routing every step through an LLM.",
-    "published": "2026-07-29T17:59:58+00:00",
-    "updated": "2026-07-29T17:59:58+00:00",
-    "authors": [
-      "Hengyi Xie",
-      "Chenfei Yao",
-      "Xianjin Wu",
-      "Xuanyang Xi",
-      "Yiping Tang",
-      "Di Xu",
-      "Yingying Zhu",
-      "Dingkang Liang",
-      "Xiang Bai",
-      "Han Ding"
-    ],
-    "extra": {
-      "categories": [
-        "cs.CV",
-        "cs.RO"
-      ],
-      "primary_category": "cs.CV",
-      "pdf_url": "https://arxiv.org/pdf/2607.27205v1",
-      "comment": "Code is available at https://github.com/H-EmbodVis/TurboVLA",
-      "first_seen": "2026-07-30",
-      "full_text": "Vision-language-action (VLA) models commonly adopt an LLM-centric $V \\to L \\to A$ pathway, where visual observations are projected into the representation space of a large language model before being decoded into robot actions. Although effective, this design incurs substantial computation and memory overhead at every policy invocation. In this work, we introduce TurboVLA, a new VLA paradigm that reformulates the conventional $V \\to L \\to A$ pathway as a direct $V + L \\to A$ mapping. Instead of using a large language model as the central interface between perception and action, TurboVLA independently encodes visual observations and language instructions, directly exchanges information between them through lightweight bidirectional vision-language interaction, and predicts continuous action chunks with a compact decoder. This simple design constructs task-conditioned representations directly from visual and linguistic features, significantly reducing the computational and memory costs of VLA inference. On LIBERO, TurboVLA achieves 97.7% average success with only 0.2B parameters, 31.2 ms inference latency, and 0.9 GB inference VRAM on a consumer-grade RTX 4090, matching or outperforming substantially larger VLA policies. These results establish TurboVLA as a simple and effective alternative to the prevailing LLM-centric VLA paradigm, offering a new perspective on how vision, language, and action can be connected for efficient robotic manipulation. Code is available at https://github.com/H-EmbodVis/TurboVLA.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 33.749,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.7492378839186506,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.26991",
-    "source": "arxiv",
-    "title": "RL$^2$-VLA: Adaptive RL Latent Compositional Steering with Test-Time Scaling for Vision-Language-Action Models",
-    "url": "http://arxiv.org/abs/2607.26991v1",
-    "summary": "RL² improves vision-language-action models at inference time by training a lightweight offline RL policy over the model’s own action latents, then composing its flow velocity with the frozen VLA to push beyond the narrow, correlated behaviors produced by standard test-time sampling. A learned failure predictor decides when to activate this steering, since the authors find that added action diversity helps most when the base policy is likely to fail but can disrupt already-correct actions. On SIMPLER and PolaRiS, the method raises out-of-domain success rates by up to 17.3 percentage points, with real-world experiments suggesting the steering transfers beyond simulation.",
-    "published": "2026-07-29T14:49:56+00:00",
-    "updated": "2026-07-29T14:49:56+00:00",
-    "authors": [
-      "Derek Ming Siang Tan",
-      "Shailesh Shailesh",
-      "Srikrishna Iyer",
-      "William Wei Jie Teo",
-      "Yuanliang Ju",
-      "Qiao Gu",
-      "Guillaume Sartoretti"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.26991v1",
-      "comment": "Code and models are available at https://rl2-vla.github.io",
-      "first_seen": "2026-07-30",
-      "full_text": "Despite the impressive visuomotor capabilities enabled by Vision-Language-Action (VLA) models, their performance often degrades on challenging and out-of-domain tasks. Recent test-time steering and scaling methods improve performance without extensive data collection and retraining, but action samples often remain concentrated around similar behaviors and therefore inherit correlated failure modes. Moreover, existing methods apply the same intervention strategy at every timestep, regardless of whether the base policy is already likely to succeed. To address these limitations, we introduce $RL^2$, an adaptive inference-time steering framework that leverages Reinforcement Learning on VLA Latents. First, we train a lightweight offline RL policy conditioned on expressive latents extracted from the VLA action expert and compose its flow velocity with that of the frozen VLA during inference. This compositional steering strategy combines the behavioral priors of large-scale imitation learning with the action diversity induced by offline RL beyond dominant demonstration modes. We further discover that inference-time steering follows fundamentally different scaling laws under success and failure states, revealing that action diversity is most beneficial when the base VLA is likely to fail, but can unnecessarily perturb already-accurate actions when success is likely. Building on this insight, $RL^2$ activates compositional steering only when failure is predicted. Across the SIMPLER and PolaRiS benchmarks, $RL^2$ improves success rates by up to +17.3% in out-of-domain settings, while ablations and scaling studies demonstrate the importance of latent representations and RL training. Finally, real-world experiments demonstrate that these gains transfer beyond simulation, establishing $RL^2$ as a practical and modular steering framework for VLA deployment.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.26991.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#IL",
-      "#VLA",
-      "#Other"
-    ],
-    "score": 33.721,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 8.0,
-      "recency": 2.7209591132936506,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:Farama-Foundation/Metaworld",
     "source": "github",
     "title": "Farama-Foundation/Metaworld",
@@ -1559,45 +1456,6 @@
     "priority": "must_read"
   },
   {
-    "id": "news:9f7253e3bc1e",
-    "source": "news",
-    "title": "TRON 2 VLA Demo — EP. 1: Autonomous Tracking and Candy Handoff 🍬",
-    "url": "https://www.youtube.com/watch?v=9fY8w5vkr64",
-    "summary": "TRON 2 is now open-sourced on GitHub and Hugging Face, with a demo showing the robot autonomously tracking a moving hand and handing over candy through closed-loop visual perception and real-time end-effector following. The release packages the demo with an embodied AI data platform, open datasets, and end-to-end code, aiming to make low-speed dynamic tracking experiments easier to reproduce without spending as much effort on hardware integration and debugging.",
-    "published": "2026-07-30T04:00:24+00:00",
-    "updated": "2026-07-30T04:00:24+00:00",
-    "authors": [
-      "LimX Dynamics"
-    ],
-    "extra": {
-      "feed": "LimX Dynamics (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i2.ytimg.com/vi/9fY8w5vkr64/hqdefault.jpg",
-      "first_seen": "2026-07-30",
-      "full_text": "🚀 Now open-sourced on GitHub & Huggingface. TRON 2 autonomously tracks a moving hand and hands over candy —from dynamic visual perception and real-time end-effector following to a precise handoff, demonstrating a complete closed-loop pipeline for low-speed dynamic tracking. Behind the demo is a fully open-source stack: an embodied AI data platform, open datasets, and end-to-end code. Researchers spend less time on hardware integration and debugging—and more time advancing their algorithms. #EmbodiedAI #Robotics #OpenSource #TRON2 #VLA",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 26.839,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.8385880488616073,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:NeuracoreAI/neuracore",
     "source": "github",
     "title": "NeuracoreAI/neuracore",
@@ -1766,47 +1624,6 @@
       "has_code": 6.0,
       "github_stars_log": 9.722413360750844,
       "github_forks_log": 1.5563025007672873,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:Roboparty/roboparty_train",
-    "source": "github",
-    "title": "Roboparty/roboparty_train",
-    "url": "https://github.com/Roboparty/roboparty_train",
-    "summary": "Roboparty/roboparty_train is an Isaac Lab workspace for training Roboparty RPO locomotion policies with RSL-RL. It brings together the practical pieces around policy learning, Sim2Sim transfer, and motion retargeting, making it useful as a development environment for legged-robot locomotion experiments rather than just a standalone model release.",
-    "published": "2025-07-12T07:08:23Z",
-    "updated": "2026-07-30T05:57:40Z",
-    "authors": [
-      "Roboparty"
-    ],
-    "extra": {
-      "stars": 163,
-      "forks": 40,
-      "language": null,
-      "topics": [],
-      "open_issues": 1,
-      "license": null,
-      "first_seen": "2026-05-29",
-      "full_text": "Isaac Lab training workspace for Roboparty RPO locomotion policies, including RSL-RL, Sim2Sim, and motion retargeting tools.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 25.156,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.8560384585218253,
-      "has_code": 6.0,
-      "github_stars_log": 11.07421924023849,
-      "github_forks_log": 3.225567713439471,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
@@ -1984,52 +1801,6 @@
       "recency": 2.9960558207093255,
       "has_code": 6.0,
       "github_stars_log": 5.206963425791125,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.26434",
-    "source": "arxiv",
-    "title": "Reinforcement Learning on Cost-Constrained Quadrupedal Hardware",
-    "url": "http://arxiv.org/abs/2607.26434v1",
-    "summary": "Low-cost quadrupeds like the Mini Pupper 2 suffer from transport delays over 50 ms and noisy motor feedback, making locomotion partially observable rather than a clean sim-to-real transfer problem. The authors compensate with a forward model of average actuator delay plus a time-aware neural network, producing robust learned locomotion on hardware. The network also self-organizes into a central-pattern-generator-like rhythmic gait that remains stable under added latency perturbations up to 320 ms.",
-    "published": "2026-07-29T03:22:12+00:00",
-    "updated": "2026-07-29T03:22:12+00:00",
-    "authors": [
-      "Javier C. Weddington",
-      "Bence P. Ölveczky",
-      "Stephen A. Baccus"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.26434v1",
-      "comment": "Sim-to-real transfer, locomotion, reinforcement learning, central pattern generator",
-      "first_seen": "2026-07-30",
-      "full_text": "Deploying learned control policies on low-cost robotic platforms introduces transport latencies and noisy motor feedback that systematically widens the sim-to-real gap. The chasm of simulation to deployment in hardware lies in the delay of the actuator reaching the commanded position. On platforms such as the Mini Pupper 2, a measured > $50 ms transport delay transforms the locomotion task from a standard Markov decision process into a partially observable one. In this paper, we take a biologically inspired approach of handling noisy and delayed feedback to close the sim-to-real gap, thereby expanding the capability of reinforcement learning on cost-constrained hardware. Using a low-cost quadrupedal hardware platform, we find that using a forward model of the average actuator delay, paired with a time-aware neural network results in robust locomotion. Additionally, our time-aware neural network learned a central pattern generator (CPG): a self-sustaining rhythmic gait that is robust to +320 ms latency perturbations, mirroring the CPGs found in the spinal cords of vertebrates. We posit that temporal self-organization may be a general strategy for cost-constrained locomotion.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.26434.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 23.619,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 6.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.6186178406547618,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
@@ -2227,48 +1998,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:PoppiesLee/Droid_lab",
-    "source": "github",
-    "title": "PoppiesLee/Droid_lab",
-    "url": "https://github.com/PoppiesLee/Droid_lab",
-    "summary": "Robot reinforcement learning repository based on isaaclab",
-    "published": "2025-12-30T08:06:42Z",
-    "updated": "2026-07-30T08:47:36Z",
-    "authors": [
-      "PoppiesLee"
-    ],
-    "extra": {
-      "stars": 20,
-      "forks": 0,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 0,
-      "license": null,
-      "first_seen": "2026-07-30",
-      "full_text": "Robot reinforcement learning repository based on isaaclab",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 20.492,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.881326158211806,
-      "has_code": 6.0,
-      "github_stars_log": 6.611096473669597,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:31cc64cf217a",
     "source": "news",
     "title": "中 프로축구 개막전서 '자카로보틱스' 휴머노이드 로봇 공연",
@@ -2350,79 +2079,6 @@
       "recency": 2.319900066812996,
       "has_code": 6.0,
       "github_stars_log": 6.15224460689137,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:4a308e8abf69",
-    "source": "news",
-    "title": "US government bans new foreign-made humanoids, robot dogs, and solar inverters, citing risks to national security",
-    "url": "https://techcrunch.com/2026/07/29/us-government-bans-new-foreign-made-humanoids-robot-dogs-and-solar-inverters-citing-risks-to-national-security/",
-    "summary": "The ban largely affects U.S. imports from China, which currently dominates the global market for making humanoid robots and solar inverters.",
-    "published": "2026-07-29T17:41:09+00:00",
-    "updated": "2026-07-29T17:41:09+00:00",
-    "authors": [
-      "Zack Whittaker"
-    ],
-    "extra": {
-      "feed": "TechCrunch — Robotics",
-      "first_seen": "2026-07-29",
-      "full_text": "The ban largely affects U.S. imports from China, which currently dominates the global market for making humanoid robots and solar inverters.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 17.746,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.7464377582762896,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:335e5d4d544e",
-    "source": "news",
-    "title": "Trends and outlook for actuators: The muscles behind humanoid motion",
-    "url": "https://roboticsandautomationnews.com/2026/07/30/trends-and-outlook-for-actuators-the-muscles-behind-humanoid-motion/103750/",
-    "summary": "IDTechEx frames 2026-2027 as the point where humanoid robotics starts shifting from demos and pilots toward production readiness and early commercial rollout. The report centers actuators as a critical bottleneck in that transition, since these “muscles” determine how well humanoids can deliver practical, reliable motion at scale.",
-    "published": "2026-07-30T08:28:08+00:00",
-    "updated": "2026-07-30T08:28:08+00:00",
-    "authors": [
-      "David Edwards"
-    ],
-    "extra": {
-      "feed": "Robotics and Automation News",
-      "first_seen": "2026-07-30",
-      "full_text": "The humanoid robotics industry is transitioning from prototype development and demonstrations toward structured pilot deployments and early commercial adoption. The new IDTechEx report Materials for Humanoid Robots 2026-2036: Technologies, Players, Forecasts expects 2026-2027 to represent key transition years, with more players moving from pilot testing toward production readiness and early-scale rollout. A major component at the […]",
-      "summary_kind": "llm",
-      "thumbnail": "https://roboticsandautomationnews.com/wp-content/uploads/2026/07/idtechex-humanoid-actuators-1.png"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 15.878,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.8784293249975197,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
@@ -2533,80 +2189,6 @@
       "research_interest_title": 5.0,
       "research_interest_abstract": 0.0,
       "recency": 2.9460954926314487,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:d3d82cdd854e",
-    "source": "news",
-    "title": "씨메스로보틱스-NC AI, 피지컬 AI 공동 연구개발 협력",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=47668",
-    "summary": "CMES Robotics and NC AI signed an MOU to jointly develop and share technologies for physical AI in industrial robotics. The partnership pairs CMES Robotics’ experience deploying automation systems in real production environments with NC AI’s core physical-AI capabilities, including world models, aiming to advance robots that can perceive, judge, and execute tasks autonomously on industrial sites.",
-    "published": "2026-07-30T09:57:07+00:00",
-    "updated": "2026-07-30T09:57:07+00:00",
-    "authors": [
-      "최지호 기자"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-07-30",
-      "full_text": "AI 로보틱스 솔루션 전문기업 씨메스로보틱스(대표 이성호)는 산업특화 AI 분야를 선도하는 엔씨에이아이(NC AI, 대표 이연수)와 ‘피지컬 AI 기반의 공동 연구개발 및 상호 기술 공유 협력’을 위한 업무협약(MOU)을 체결했다고 30일 밝혔다.이번 협약은 피지컬 AI 기반 로보틱스 기술로 자동화 솔루션을 실제 산업 현장에 양산해 온 씨메스로보틱스와, 월드모델 등 피지컬 AI 핵심 기술을 보유한 NC AI의 역량을 결합하기 위해 추진됐다.로봇이 산업 현장에서 스스로 환경을 인식하고 판단해 작업을 수행하는 피지컬 AI 기술의 고도화",
-      "summary_kind": "llm",
-      "thumbnail": "https://cdn.irobotnews.com/news/photo/202607/47668_102264_5620.png"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 10.892,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.891670888851687,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:3e4b73dbb3a1",
-    "source": "news",
-    "title": "Dexory deploys SimScale’s Engineering AI to accelerate warehouse robotics development",
-    "url": "https://roboticsandautomationnews.com/2026/07/30/dexory-deploys-simscales-engineering-ai-to-accelerate-warehouse-robotics-development/103753/",
-    "summary": "Dexory is using SimScale’s Engineering AI on top of its cloud simulation workflow to speed up the design and testing of autonomous warehouse robots. The focus is on helping engineers diagnose structural component failures faster, which matters for shortening robotics development cycles and improving reliability before hardware is deployed in warehouses.",
-    "published": "2026-07-30T09:49:51+00:00",
-    "updated": "2026-07-30T09:49:51+00:00",
-    "authors": [
-      "David Edwards"
-    ],
-    "extra": {
-      "feed": "Robotics and Automation News",
-      "first_seen": "2026-07-30",
-      "full_text": "Dexory, the robotics and warehouse data intelligence company, has deployed SimScale’s Engineering AI to accelerate the engineering workflows used to design and test autonomous warehouse robots. Building on its existing use of SimScale’s AI-native cloud simulation platform, Dexory will use Engineering AI to help engineers identify the root cause of structural component failures more quickly, […]",
-      "summary_kind": "llm",
-      "thumbnail": "https://roboticsandautomationnews.com/wp-content/uploads/2026/07/dexory-simscale-1.jpeg"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 10.891,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.8905895433655755,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -2765,43 +2347,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:bd3c1e0df9c7",
-    "source": "news",
-    "title": "Who wins and who loses after US bans foreign robots?",
-    "url": "https://arstechnica.com/ai/2026/07/who-wins-and-who-loses-after-us-bans-foreign-robots/",
-    "summary": "Government ban on foreign-made robots may hinder instead of help US robotics.",
-    "published": "2026-07-29T20:03:42+00:00",
-    "updated": "2026-07-29T20:03:42+00:00",
-    "authors": [
-      "Jeremy Hsu"
-    ],
-    "extra": {
-      "feed": "Ars Technica",
-      "thumbnail": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/Unitree-robots-boxing-500x500.jpg",
-      "first_seen": "2026-07-29",
-      "full_text": "Government ban on foreign-made robots may hinder instead of help US robotics.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 7.768,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.7676505546527777,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:047a0fcf608f",
     "source": "news",
     "title": "Two2Four: Generative Quadruped Puppeteering from Human Motion",
@@ -2830,80 +2375,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.9594982675694443,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:321e61346193",
-    "source": "news",
-    "title": "티로보틱스, 40억원 규모 우리사주조합 주식 취득",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=47669",
-    "summary": "티로보틱스가 우리사주조합을 통해 약 40억원 규모, 총 33만3000주의 회사 주식 취득을 마무리했다. 산업용 휴머노이드와 AMR을 하는 회사가 임직원 지분 참여를 늘려 중장기 성장 기대를 내부적으로 공유하려는 움직임이며, 해당 주식은 법령에 따라 1~3년간 한국증권금융에 의무예탁된다.",
-    "published": "2026-07-30T10:32:41+00:00",
-    "updated": "2026-07-30T10:32:41+00:00",
-    "authors": [
-      "최지호 기자"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-07-30",
-      "full_text": "산업용 휴머노이드 및 자율이동로봇(AMR) 전문기업 티로보틱스는 우리사주조합을 통해 약 40억원 규모의 회사 주식 취득을 마무리했다고 30일 밝혔다.이번 우리사주조합 주식 취득은 중장기 성장 가능성에 대한 신뢰를 바탕으로 추진됐으며 취득 규모는 총 33만3000주에 달한다. 취득한 주식은 관련 법령에 따라 1년에서 3년간 한국증권금융에 의무예탁될 예정이다. 회사는 임직원의 기업가치 제고 참여를 확대하고 회사와 구성원이 성장의 성과를 함께 공유할 수 있는 기반을 마련할 방침이다.티로보틱스는 향후 실적 개선과 재무구조 안정화를 바탕으로",
-      "summary_kind": "llm",
-      "thumbnail": "https://cdn.irobotnews.com/news/photo/202607/47669_102265_3110.png"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 6.897,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.896963547668651,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:6b5fbde26a14",
-    "source": "news",
-    "title": "Wing launches Walmart drone delivery service in Florida",
-    "url": "https://roboticsandautomationnews.com/2026/07/30/wing-launches-walmart-drone-delivery-service-in-florida/103736/",
-    "summary": "Wing and Walmart have started drone deliveries in Greater Orlando, Wing’s first Florida market, letting customers order thousands of Walmart items such as groceries, household goods, electronics, school supplies, and health products from participating stores. The launch extends their US drone-delivery network and shows large retailers continuing to move autonomous last-mile delivery from pilots toward routine local service.",
-    "published": "2026-07-30T07:44:04+00:00",
-    "updated": "2026-07-30T07:44:04+00:00",
-    "authors": [
-      "David Edwards"
-    ],
-    "extra": {
-      "feed": "Robotics and Automation News",
-      "first_seen": "2026-07-30",
-      "full_text": "Delivery drone company Wing and retail giant Walmart have launched a drone delivery service in Greater Orlando, marking Wing’s first operations in Florida and extending the companies’ growing US drone delivery network. The service enables customers to order thousands of everyday items from participating Walmart stores, including groceries, household products, electronics, school supplies and health […]",
-      "summary_kind": "llm",
-      "thumbnail": "https://roboticsandautomationnews.com/wp-content/uploads/2026/07/Wing-Walmart-Nest-4.jpg"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 6.872,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.8718717849950397,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -2987,115 +2458,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:7077afccf12b",
-    "source": "news",
-    "title": "Schindler’s elevators and digital solutions help robots navigate major hospital in Europe",
-    "url": "https://roboticsandautomationnews.com/2026/07/30/schindlers-elevators-and-digital-solutions-help-robots-navigate-major-hospital-in-europe/103756/",
-    "summary": "Schindler is helping Hoch Health Ostschweiz in Switzerland integrate automated guided vehicles into a major hospital campus, tying robot transport into elevators and digital building infrastructure. The system is aimed at routine logistics such as moving laundry, food, medical equipment, and waste, freeing clinical staff from time-consuming transport work while showing how hospital robots depend as much on infrastructure coordination as on the vehicles themselves.",
-    "published": "2026-07-30T09:58:19+00:00",
-    "updated": "2026-07-30T09:58:19+00:00",
-    "authors": [
-      "David Edwards"
-    ],
-    "extra": {
-      "feed": "Robotics and Automation News",
-      "first_seen": "2026-07-30",
-      "full_text": "Hoch Health Ostschweiz, formerly Kantonsspital St. Gallen, in Switzerland, expands its modernization program with automated guided vehicles seamlessly integrated into the campus infrastructure Automated guided vehicles (AGVs) are rapidly transforming hospital logistics, supporting staff by transporting laundry, food, medical equipment, and waste across large facilities. As AGVs become more common in healthcare environments, Schindler is […]",
-      "summary_kind": "llm",
-      "thumbnail": "https://roboticsandautomationnews.com/wp-content/uploads/2026/07/schindler-hoch-1.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 5.892,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.8918494641195434,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:5c142f9b88d1",
-    "source": "news",
-    "title": "The Passport Problem: Why Your Robots Can't Prove Who They Are",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/07/29/the-passport-problem-why-your-robots-cant-prove-who-they-are/26897",
-    "summary": "The missing identity layer in multi-vendor automation",
-    "published": "2026-07-29T22:30:13+00:00",
-    "updated": "2026-07-29T22:30:13+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-07-30",
-      "full_text": "The missing identity layer in multi-vendor automation",
-      "summary_kind": "llm",
-      "thumbnail": "https://www.roboticstomorrow.com/images/facebooknews.jpg"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 5.789,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.7894536298338295,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:1a96f41e65f3",
-    "source": "news",
-    "title": "마음AI, 국립공주대 AI 데이터팩토리 2차 구축 착수",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=47666",
-    "summary": "마음AI가 국립공주대학교와 함께 추진 중인 AI 인프라 구축 사업의 2단계인 'AI 데이터팩토리' 구축에 본격 착수한다.이번 사업은 지난해 구축한 디지털 시뮬레이션 환경을 기반으로, 실제 환경에서 생성되는 데이터를 수집·관리하고 AI 모델의 학습과 고도화까지 연결하는 AI 데이터 생산 인프라를 구축하는 것이 핵심이다.1차 사업이 가상환경에서 피지컬 AI와 로봇을 개발하고 검증할 수 있는 디지털 시뮬레이션 기반을 마련하는 단계였다면, 2차 사업은 현실에서 생성되는 데이터를 AI의 자산으로 전환하는 'AI 데이터팩토리'를 구축하는 단계",
-    "published": "2026-07-29T16:07:50+00:00",
-    "updated": "2026-07-29T16:07:50+00:00",
-    "authors": [
-      "최지호 기자"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-07-29",
-      "full_text": "마음AI가 국립공주대학교와 함께 추진 중인 AI 인프라 구축 사업의 2단계인 'AI 데이터팩토리' 구축에 본격 착수한다.이번 사업은 지난해 구축한 디지털 시뮬레이션 환경을 기반으로, 실제 환경에서 생성되는 데이터를 수집·관리하고 AI 모델의 학습과 고도화까지 연결하는 AI 데이터 생산 인프라를 구축하는 것이 핵심이다.1차 사업이 가상환경에서 피지컬 AI와 로봇을 개발하고 검증할 수 있는 디지털 시뮬레이션 기반을 마련하는 단계였다면, 2차 사업은 현실에서 생성되는 데이터를 AI의 자산으로 전환하는 'AI 데이터팩토리'를 구축하는 단계",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 5.733,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.7325513451140875,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:93f62dd0504f",
     "source": "news",
     "title": "Daniela Rus receives Bavarian Minister-President's High-Tech Prize",
@@ -3123,80 +2485,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.99031424608879,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:24b8800a7131",
-    "source": "news",
-    "title": "Shinkei Systems introduces premium grade Alaska sockeye salmon",
-    "url": "https://roboticsandautomationnews.com/2026/07/30/shinkei-systems-introduces-premium-grade-alaska-sockeye-salmon/103745/",
-    "summary": "Shinkei Systems is expanding its Seremoni Grade premium seafood line into wild Alaska sockeye salmon, applying its seafood robotics and quality-control approach to one of the most commonly eaten fish in the U.S. The move matters less as a new AI benchmark than as commercialization of robotics-enabled fish handling in a high-volume category, where consistency and premium grading could affect both supply chains and consumer expectations.",
-    "published": "2026-07-30T08:14:33+00:00",
-    "updated": "2026-07-30T08:14:33+00:00",
-    "authors": [
-      "David Edwards"
-    ],
-    "extra": {
-      "feed": "Robotics and Automation News",
-      "first_seen": "2026-07-30",
-      "full_text": "Shinkei Systems, the seafood robotics company behind Seremoni Grade premium fish, has announced its expansion into wild Alaska sockeye salmon. The launch of Seremoni Grade salmon brings the company’s highest standard of seafood to one of the most widely enjoyed fish in the United States. Founded in 2021, Shinkei is transforming the seafood industry by […]",
-      "summary_kind": "llm",
-      "thumbnail": "https://roboticsandautomationnews.com/wp-content/uploads/2026/07/Shinkei-fish-3.jpg"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 4.876,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.8764079955257937,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:7d6f7701abe7",
-    "source": "news",
-    "title": "Bring Powerful AI to Real-World Machines With Jetson AGX Orin",
-    "url": "https://www.youtube.com/shorts/_8HmIozmDLI",
-    "summary": "Bigger compute calls for a bigger bag. 👜 Sarah Guo makes room for NVIDIA Jetson AGX Orin and its 275 TOPS of AI performance, built to power advanced robots, autonomous machines, and edge AI workloads wherever the work takes you. #Robotics #EdgeAI #NVIDIAJetson",
-    "published": "2026-07-29T16:33:58+00:00",
-    "updated": "2026-07-29T16:33:58+00:00",
-    "authors": [
-      "NVIDIA Developer"
-    ],
-    "extra": {
-      "feed": "NVIDIA Developer (YouTube)",
-      "thumbnail": "https://i4.ytimg.com/vi/_8HmIozmDLI/hqdefault.jpg",
-      "first_seen": "2026-07-29",
-      "full_text": "Bigger compute calls for a bigger bag. 👜 Sarah Guo makes room for NVIDIA Jetson AGX Orin and its 275 TOPS of AI performance, built to power advanced robots, autonomous machines, and edge AI workloads wherever the work takes you. #Robotics #EdgeAI #NVIDIAJetson",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 4.736,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.7364402295362105,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -3235,43 +2523,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.9644461844246033,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "low_priority"
-  },
-  {
-    "id": "news:c6c6cffef925",
-    "source": "news",
-    "title": "Flytrex and Nash partner to build an autonomous-first, multi-modal delivery platform",
-    "url": "https://roboticsandautomationnews.com/2026/07/30/flytrex-and-nash-partner-to-build-an-autonomous-first-multi-modal-delivery-platform/103742/",
-    "summary": "Flytrex and Nash have launched an integration across Flytrex’s Dallas-Fort Worth drone delivery sites that combines Flytrex’s autonomous food-delivery fleet with Nash’s logistics orchestration layer. The platform routes each customer order to the most appropriate delivery mode, making drone delivery part of a broader multi-modal network rather than a standalone channel.",
-    "published": "2026-07-30T08:00:39+00:00",
-    "updated": "2026-07-30T08:00:39+00:00",
-    "authors": [
-      "David Edwards"
-    ],
-    "extra": {
-      "feed": "Robotics and Automation News",
-      "first_seen": "2026-07-30",
-      "full_text": "Flytrex, an autonomous drone food delivery service, and Nash, the autonomic logistics platform, have announced a partnership to power an autonomous-first, multi-modal delivery platform across Flytrex’s operations. Now live across all of Flytrex’s Dallas-Fort Worth sites, the integration brings Flytrex’s autonomous fleet together with Nash’s orchestration layer, so every customer order is routed to the […]",
-      "summary_kind": "llm",
-      "thumbnail": "https://roboticsandautomationnews.com/wp-content/uploads/2026/07/flytrex-nash-1.jpg"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 3.874,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.8743395430381944,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,

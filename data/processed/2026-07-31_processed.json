@@ -888,108 +888,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.26991",
-    "source": "arxiv",
-    "title": "RL$^2$-VLA: Adaptive RL Latent Compositional Steering with Test-Time Scaling for Vision-Language-Action Models",
-    "url": "http://arxiv.org/abs/2607.26991v2",
-    "summary": "Despite the impressive visuomotor capabilities enabled by Vision-Language-Action (VLA) models, their performance often degrades on challenging and out-of-domain tasks.",
-    "published": "2026-07-29T14:49:56+00:00",
-    "updated": "2026-07-30T04:10:42+00:00",
-    "authors": [
-      "Derek Ming Siang Tan",
-      "Shailesh Shailesh",
-      "Srikrishna Iyer",
-      "William Wei Jie Teo",
-      "Yuanliang Ju",
-      "Qiao Gu",
-      "Guillaume Sartoretti"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.26991v2",
-      "comment": "Code and models are available at https://rl2-vla.github.io",
-      "first_seen": "2026-07-30",
-      "full_text": "Despite the impressive visuomotor capabilities enabled by Vision-Language-Action (VLA) models, their performance often degrades on challenging and out-of-domain tasks. Recent test-time steering and scaling methods improve performance without extensive data collection and retraining, but action samples often remain concentrated around similar behaviors and therefore inherit correlated failure modes. Moreover, existing methods apply the same intervention strategy at every timestep, regardless of whether the base policy is already likely to succeed. To address these limitations, we introduce $RL^2$, an adaptive inference-time steering framework that leverages Reinforcement Learning on VLA Latents. First, we train a lightweight offline RL policy conditioned on expressive latents extracted from the VLA action expert and compose its flow velocity with that of the frozen VLA during inference. This compositional steering strategy combines the behavioral priors of large-scale imitation learning with the action diversity induced by offline RL beyond dominant demonstration modes. We further discover that inference-time steering follows fundamentally different scaling laws under success and failure states, revealing that action diversity is most beneficial when the base VLA is likely to fail, but can unnecessarily perturb already-accurate actions when success is likely. Building on this insight, $RL^2$ activates compositional steering only when failure is predicted. Across the SIMPLER and PolaRiS benchmarks, $RL^2$ improves success rates by up to +17.3% in out-of-domain settings, while ablations and scaling studies demonstrate the importance of latent representations and RL training. Finally, real-world experiments demonstrate that these gains transfer beyond simulation, establishing $RL^2$ as a practical and modular steering framework for VLA deployment.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#IL",
-      "#VLA",
-      "#Other"
-    ],
-    "score": 33.626,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 8.0,
-      "recency": 2.625856396488095,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.27205",
-    "source": "arxiv",
-    "title": "TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM",
-    "url": "http://arxiv.org/abs/2607.27205v1",
-    "summary": "Vision-language-action (VLA) models commonly adopt an LLM-centric $V \\to L \\to A$ pathway, where visual observations are projected into the representation space of a large language model before being decoded into robot actions. Although effective, this design incurs substantial computation and memory overhead at every policy invocation.",
-    "published": "2026-07-29T17:59:58+00:00",
-    "updated": "2026-07-29T17:59:58+00:00",
-    "authors": [
-      "Hengyi Xie",
-      "Chenfei Yao",
-      "Xianjin Wu",
-      "Xuanyang Xi",
-      "Yiping Tang",
-      "Di Xu",
-      "Yingying Zhu",
-      "Dingkang Liang",
-      "Xiang Bai",
-      "Han Ding"
-    ],
-    "extra": {
-      "categories": [
-        "cs.CV",
-        "cs.RO"
-      ],
-      "primary_category": "cs.CV",
-      "pdf_url": "https://arxiv.org/pdf/2607.27205v1",
-      "comment": "Code is available at https://github.com/H-EmbodVis/TurboVLA",
-      "first_seen": "2026-07-30",
-      "full_text": "Vision-language-action (VLA) models commonly adopt an LLM-centric $V \\to L \\to A$ pathway, where visual observations are projected into the representation space of a large language model before being decoded into robot actions. Although effective, this design incurs substantial computation and memory overhead at every policy invocation. In this work, we introduce TurboVLA, a new VLA paradigm that reformulates the conventional $V \\to L \\to A$ pathway as a direct $V + L \\to A$ mapping. Instead of using a large language model as the central interface between perception and action, TurboVLA independently encodes visual observations and language instructions, directly exchanges information between them through lightweight bidirectional vision-language interaction, and predicts continuous action chunks with a compact decoder. This simple design constructs task-conditioned representations directly from visual and linguistic features, significantly reducing the computational and memory costs of VLA inference. On LIBERO, TurboVLA achieves 97.7% average success with only 0.2B parameters, 31.2 ms inference latency, and 0.9 GB inference VRAM on a consumer-grade RTX 4090, matching or outperforming substantially larger VLA policies. These results establish TurboVLA as a simple and effective alternative to the prevailing LLM-centric VLA paradigm, offering a new perspective on how vision, language, and action can be connected for efficient robotic manipulation. Code is available at https://github.com/H-EmbodVis/TurboVLA.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 33.535,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.534973460677083,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:Farama-Foundation/Metaworld",
     "source": "github",
     "title": "Farama-Foundation/Metaworld",
@@ -1514,59 +1412,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.27782",
-    "source": "arxiv",
-    "title": "RedFlow: Redirect Failure into Action-Level Corrections for Flow-matching VLA Policy",
-    "url": "http://arxiv.org/abs/2607.27782v1",
-    "summary": "RedFlow improves flow-matching vision-language-action policies by turning failed rollouts into action-level correction signals rather than discarding them or treating failure only at the trajectory level. It identifies actions that likely caused failures, retrieves successful alternatives from similar contexts, and trains the policy to reinforce good actions, suppress bad ones, and redirect recoverable mistakes. On LIBERO and three real-world manipulation tasks, it raises real-world success from 56.7% to 74.7% and reaches performance comparable to PPO, GRPO, and DDPO with about 10x fewer training samples.",
-    "published": "2026-07-30T07:14:39+00:00",
-    "updated": "2026-07-30T07:14:39+00:00",
-    "authors": [
-      "Zhengyang Yan",
-      "Junhao Li",
-      "Fangqi Zhu",
-      "Zijun Wang",
-      "Quanxin Shou",
-      "Yikun Miao",
-      "Xiaoyi Pang",
-      "Zicong Hong",
-      "Song Guo"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.27782v1",
-      "comment": null,
-      "first_seen": "2026-07-31",
-      "full_text": "Flow-matching Vision-Language-Action (VLA) policies have shown strong potential for robotic manipulation but often suffer from compounding errors caused by distribution shifts during deployment. While offline reinforcement learning (RL) provides a practical way to improve deployed policies using rollout data, existing methods either ignore failure data or exploit it only at the trajectory level, resulting in low learning efficiency and persistent errors. We propose **RedFlow**, a fine-grained offline RL framework that redirects failure experiences into action-level corrective supervision for flow-matching VLA policies. RedFlow consists of two key components: (1) a **Context-Aware Corrective Matching** mechanism that identifies failure-inducing actions and retrieves successful alternatives from similar contexts as corrective targets, and (2) an **Adaptive Redirection Objective** that jointly reinforces successful actions, suppresses undesirable ones, and redirects recoverable failures toward corrective targets. By converting both successful and failed experiences into dense supervision, RedFlow enables robust recovery learning from mixed-quality data. Experiments on the LIBERO benchmark and three real-world manipulation tasks show that RedFlow consistently outperforms state-of-the-art offline RL baselines, improving the real-world success rate from 56.7% to 74.7%. It also matches strong on-policy methods (PPO, GRPO, and DDPO) while requiring roughly an order of magnitude fewer training samples.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.27782.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 27.653,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 6.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 8.0,
-      "recency": 2.653229910825893,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:D-Robotics/hobot_stereonet",
     "source": "github",
     "title": "D-Robotics/hobot_stereonet",
@@ -1688,45 +1533,6 @@
       "github_forks_log": 2.6020599913279625,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:9f7253e3bc1e",
-    "source": "news",
-    "title": "TRON 2 VLA Demo — EP. 1: Autonomous Tracking and Candy Handoff 🍬",
-    "url": "https://www.youtube.com/watch?v=9fY8w5vkr64",
-    "summary": "🚀 Now open-sourced on GitHub & Huggingface. TRON 2 autonomously tracks a moving hand and hands over candy —from dynamic visual perception and real-time end-effector following to a precise handoff, demonstrating a complete closed-loop pipeline for low-speed dynamic tracking.",
-    "published": "2026-07-30T04:00:24+00:00",
-    "updated": "2026-07-30T04:00:24+00:00",
-    "authors": [
-      "LimX Dynamics"
-    ],
-    "extra": {
-      "feed": "LimX Dynamics (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i2.ytimg.com/vi/9fY8w5vkr64/hqdefault.jpg",
-      "first_seen": "2026-07-30",
-      "full_text": "🚀 Now open-sourced on GitHub & Huggingface. TRON 2 autonomously tracks a moving hand and hands over candy —from dynamic visual perception and real-time end-effector following to a precise handoff, demonstrating a complete closed-loop pipeline for low-speed dynamic tracking. Behind the demo is a fully open-source stack: an embodied AI data platform, open datasets, and end-to-end code. Researchers spend less time on hardware integration and debugging—and more time advancing their algorithms. #EmbodiedAI #Robotics #OpenSource #TRON2 #VLA",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 26.624,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.6243236291145835,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
       "demote": -0.0
     },
     "priority": "must_read"
@@ -1951,47 +1757,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:Roboparty/roboparty_train",
-    "source": "github",
-    "title": "Roboparty/roboparty_train",
-    "url": "https://github.com/Roboparty/roboparty_train",
-    "summary": "Isaac Lab training workspace for Roboparty RPO locomotion policies, including RSL-RL, Sim2Sim, and motion retargeting tools.",
-    "published": "2025-07-12T07:08:23Z",
-    "updated": "2026-07-30T05:57:40Z",
-    "authors": [
-      "Roboparty"
-    ],
-    "extra": {
-      "stars": 163,
-      "forks": 40,
-      "language": null,
-      "topics": [],
-      "open_issues": 1,
-      "license": null,
-      "first_seen": "2026-05-29",
-      "full_text": "Isaac Lab training workspace for Roboparty RPO locomotion policies, including RSL-RL, Sim2Sim, and motion retargeting tools.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 24.942,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.641774036817956,
-      "has_code": 6.0,
-      "github_stars_log": 11.07421924023849,
-      "github_forks_log": 3.225567713439471,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:kyegomez/RT-X",
     "source": "github",
     "title": "kyegomez/RT-X",
@@ -2155,51 +1920,6 @@
       "recency": 2.9955314783953373,
       "has_code": 6.0,
       "github_stars_log": 5.206963425791125,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.26434",
-    "source": "arxiv",
-    "title": "Reinforcement Learning on Cost-Constrained Quadrupedal Hardware",
-    "url": "http://arxiv.org/abs/2607.26434v2",
-    "summary": "Deploying learned control policies on low-cost robotic platforms introduces transport latencies and noisy motor feedback that systematically widens the sim-to-real gap. The chasm of simulation to deployment in hardware lies in the delay of the actuator reaching the commanded position.",
-    "published": "2026-07-29T03:22:12+00:00",
-    "updated": "2026-07-30T01:30:33+00:00",
-    "authors": [
-      "Javier C. Weddington",
-      "Bence P. Ölveczky",
-      "Stephen A. Baccus"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.26434v2",
-      "comment": "Sim-to-real transfer, locomotion, reinforcement learning, central pattern generator",
-      "first_seen": "2026-07-30",
-      "full_text": "Deploying learned control policies on low-cost robotic platforms introduces transport latencies and noisy motor feedback that systematically widens the sim-to-real gap. The chasm of simulation to deployment in hardware lies in the delay of the actuator reaching the commanded position. On platforms such as the Mini Pupper 2, a measured >50 ms transport delay transforms the locomotion task from a standard Markov decision process into a partially observable one. In this paper, we take a biologically inspired approach of handling noisy and delayed feedback to close the sim-to-real gap, thereby expanding the capability of reinforcement learning on cost-constrained hardware. Using a low-cost quadrupedal hardware platform, we find that using a forward model of the average actuator delay, paired with a time-aware neural network results in robust locomotion. Additionally, our time-aware neural network learned a central pattern generator (CPG): a self-sustaining rhythmic gait that is robust to +320 ms latency perturbations, mirroring the CPGs found in the spinal cords of vertebrates. We posit that temporal self-organization may be a general strategy for cost-constrained locomotion.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 23.602,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 6.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.6020245483382936,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
@@ -2397,145 +2117,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.27881",
-    "source": "arxiv",
-    "title": "RoboBRIDGE: A Modular Framework for Bridging Policies to Robust Real-World Robotic Agents",
-    "url": "http://arxiv.org/abs/2607.27881v1",
-    "summary": "RoboBRIDGE wraps pretrained vision-language-action policies in a five-part agent stack: a Monitor for fast failure detection and hierarchical recovery, a Perceptor for asynchronous scene updates, a Planner for replanning when conditions change, plus Controller and Robot Interface layers for execution. Its controller can fine-tune primitive skills with LoRA adapters, making manipulation less brittle under shifts in task, observations, or robot embodiment. Across LIBERO, RoboCasa, and real-world tests on multiple robot platforms and VLA backbones, the system outperforms standalone policies and earlier augmented VLA deployments, arguing that robust robot agents need orchestration around action predictors rather than scale alone.",
-    "published": "2026-07-30T08:55:45+00:00",
-    "updated": "2026-07-30T08:55:45+00:00",
-    "authors": [
-      "Sihyung Yoon",
-      "Minjong Yoo",
-      "Sanghyun Ahn",
-      "Seojeong Choi",
-      "Honguk Woo"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.27881v1",
-      "comment": "Accepted to IROS 2026. 8 pages, 6 figures",
-      "first_seen": "2026-07-31",
-      "full_text": "Vision-Language-Action (VLA) models have attracted growing interest as a scalable approach to robotic manipulation. While these models are effective action predictors, deploying them as robotic agents exposes critical gaps: no mechanism for failure recovery, inconsistent execution over long horizons, and limited robustness to shifts in observations, tasks, or embodiments. Existing solutions address these limitations individually through model retraining or environment-specific modules, yet what is needed is a general framework that systematically transforms a pretrained VLA into a robotic agent. We present RoboBRIDGE, a modular framework that provides an orchestration layer over five coordinated modules, namely Monitor, Perceptor, Planner, Controller, and Robot Interface, to compose robust robotic agents from off-the-shelf components, including pretrained VLAs. The Monitor pairs rapid failure detection with hierarchical recovery to correct errors before they cascade. When the environment diverges from the current plan, the Planner triggers replanning while the Perceptor updates scene understanding asynchronously, avoiding execution stalls. Within the Controller, primitive skill fine-tuning factors manipulation into domain-invariant primitives with dedicated LoRA adapters, reducing sensitivity to domain shifts when a VLA is used. Across LIBERO, RoboCasa, and real-world case studies spanning multiple robot platforms and VLA backbones, RoboBRIDGE consistently outperforms both standalone policies and prior augmented VLA deployments. These results suggest that reliable robotic agency does not arise from scaling action predictors alone, but from structured orchestration around them.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.27881.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 20.668,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.6682745540203374,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:PoppiesLee/Droid_lab",
-    "source": "github",
-    "title": "PoppiesLee/Droid_lab",
-    "url": "https://github.com/PoppiesLee/Droid_lab",
-    "summary": "Robot reinforcement learning repository based on isaaclab",
-    "published": "2025-12-30T08:06:42Z",
-    "updated": "2026-07-30T08:47:36Z",
-    "authors": [
-      "PoppiesLee"
-    ],
-    "extra": {
-      "stars": 20,
-      "forks": 0,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 0,
-      "license": null,
-      "first_seen": "2026-07-30",
-      "full_text": "Robot reinforcement learning repository based on isaaclab",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 20.278,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.667061736465774,
-      "has_code": 6.0,
-      "github_stars_log": 6.611096473669597,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.27511",
-    "source": "arxiv",
-    "title": "Failure Detection for Surgical Robot Imitation Policies via Flow-Matching World Modeling",
-    "url": "http://arxiv.org/abs/2607.27511v1",
-    "summary": "FoMo-FD detects failures in surgical robot imitation policies by learning nominal short-horizon visual dynamics with an action-conditioned flow-matching world model, then flagging visual-action inconsistencies through inverse-transport nonconformity scores. Because its conformal thresholds are calibrated only on successful executions, it can raise task-specific alarms without needing examples of failures in advance. Across four surgical manipulation tasks with 20 failure modes in simulation and on the da Vinci Research Kit, the wrist-camera version reached 96.6% failure detection at a 1.3% false alarm rate, outperforming observation-level anomaly baselines and a prediction-error variant of the same model.",
-    "published": "2026-07-29T22:55:54+00:00",
-    "updated": "2026-07-29T22:55:54+00:00",
-    "authors": [
-      "Zhefeng Huang",
-      "Yilin Cai",
-      "Ankit Patel",
-      "Mohammad Hajiha",
-      "Brendan Browne",
-      "Yue Chen"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.27511v1",
-      "comment": "9 pages, 6 figures. Submitted to IEEE Robotics and Automation Letters (RA-L)",
-      "first_seen": "2026-07-31",
-      "full_text": "Imitation learning has shown increasing promise for autonomous robotic surgery, yet safe deployment remains challenging due to the safety-critical nature of surgical tasks and the complexity and variability of surgical environments. Failure detection is therefore an essential safeguard, but its development remains difficult due to the challenges of scarce failure data, highly variable manipulation dynamics, and the need to balance missed detections against disruptive false alarms. To address these challenges, we introduce FoMo-FD (Flow-Matching World Model for Failure Detection), a failure detection method that learns nominal short-horizon visual dynamics with an action-conditioned flow-matching world model. FoMo-FD scores the inverse-transport nonconformity of observed endpoint latents, enabling window-level detection of visual-action inconsistencies without requiring failure demonstrations. Detection thresholds are obtained by conformal calibration on successful executions, yielding task-specific alarms without assuming future failure types. We evaluate FoMo-FD on four surgically relevant manipulation tasks with twenty failure modes across simulation and real-world experiments using the da Vinci Research Kit (dVRK). Results show that FoMo-FD outperforms observation-level anomaly baselines and a prediction-error variant of the same world model, with the wrist-camera view achieving the strongest performance, including a 96.6% failure detection rate (FDR) at a 1.3% false alarm rate (FAR).",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.27511.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#IL",
-      "#Manipulator"
-    ],
-    "score": 19.579,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.5790111595858134,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:NuclearVenom/BulletLab",
     "source": "github",
     "title": "NuclearVenom/BulletLab",
@@ -2637,51 +2218,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.27494",
-    "source": "arxiv",
-    "title": "Simulation of Surgical Suturing Using Position-Based Dynamics and the Material Point Method for Robot Reinforcement Learning",
-    "url": "http://arxiv.org/abs/2607.27494v1",
-    "summary": "Surgical suturing is simulated by coupling position-based dynamics for the suture with a material point method model of soft tissue, including two-way contact with friction and drag so the thread can interact plausibly with deformable tissue during insertion. The GPU implementation runs parallel CUDA-stream scenes and is exposed as an ML-Agents reinforcement learning environment for needle insertion, driving, and extraction. Agents trained in the simulator learned stably, reaching 80% success on insertion and 68% on extraction under the strictest distance threshold.",
-    "published": "2026-07-29T22:20:34+00:00",
-    "updated": "2026-07-29T22:20:34+00:00",
-    "authors": [
-      "Tleukhan Mussin",
-      "Yafei Ou",
-      "Mahdi Tavakoli"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.27494v1",
-      "comment": "7 pages, 9 figures, accepted for the IEEE RAS/EMBS 11th International Conference on Biomedical Robotics and Biomechatronics (BioRob 2026)",
-      "first_seen": "2026-07-31",
-      "full_text": "Recent advances in robotics research have created a strong demand for high-performance simulators. Surgical robotics simulation faces unique challenges due to the need to model diverse objects, such as rigid instruments, soft tissue, and fluids. While many studies simulate sutures or soft tissue independently, only a few have considered the complete soft-tissue suturing scenario, including the contact between sutures and deformable tissue during suture insertion. Building on previous work, this paper presents a novel suturing simulation environment using sutures modelled by position-based dynamics (PBD) and soft bodies modelled by the material point method (MPM) while considering two-way contact with frictional and drag forces. We introduce a contact coupling method between the PBD suture and the MPM soft tissue, enabling visually plausible suture-tissue interactions. The simulator is optimized for GPU execution with parallel scenes using multiple CUDA streams, and we present a Reinforcement Learning (RL) environment for autonomous suturing sub-tasks, including needle insertion, driving, and extraction. Using ML-Agents, RL agents trained in the simulator show stable learning and achieve 80% and 68% success rates in needle insertion and extraction, respectively, under the strictest distance threshold.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.27494.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 18.574,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.5737532227604163,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "arxiv:2607.28560",
     "source": "arxiv",
     "title": "X-NavDP: Generalizing Navigation Diffusion Policy to Novel Behavior and Embodiments with Group Q-score Reweighted Matching",
@@ -2727,94 +2263,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.27549",
-    "source": "arxiv",
-    "title": "Cross-Embodiment Transfer via Behavior-Aligned Representations",
-    "url": "http://arxiv.org/abs/2607.27549v1",
-    "summary": "Behavior-aligned representations such as object boxes, language-described motions, and especially end-effector traces are used to make VLA policies less tied to a particular robot body while still predicting useful actions. The authors test this with a simulation benchmark for transferring across diverse embodiments to new ones, finding that end-effector traces help most, become more useful with larger pretraining datasets, and can extract value from action-free data. In sim-to-real transfer, adding these representations improves real-robot task completion progress by 28% after pretraining on simulation data.",
-    "published": "2026-07-30T00:49:53+00:00",
-    "updated": "2026-07-30T00:49:53+00:00",
-    "authors": [
-      "Ajay Sridhar",
-      "Jensen Gao",
-      "Jonathan Yang",
-      "Jean Mercat",
-      "Suneel Belkhale",
-      "Dorsa Sadigh"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.27549v1",
-      "comment": "Project page: https://ajaysridhar.com/barx/",
-      "first_seen": "2026-07-31",
-      "full_text": "Recent progress in large-scale imitation learning for robot manipulation has been driven by leveraging datasets across a wide range of robot embodiments. However, achieving significant cross-embodiment transfer is often still challenging. In this work, we study the role of using behavior-aligned representations (e.g., object bounding boxes, language motions, end-effector traces of robot motion) in vision-language-action (VLA) models to promote cross-embodiment transfer. We hypothesize that by possessing invariances across embodiments while being predictive of robot actions, these representations can help unify large-scale cross-embodiment data to enhance transfer. To assess our hypothesis, we develop a simulation-based benchmark designed to assess transfer with diverse cross-embodiment data to new embodiments. Using this benchmark, we compare different representations and ways of incorporating them. We identify that end-effector traces can be particularly beneficial for transfer, representations are generally more useful with larger prior datasets, and can be used to benefit from action-free data. We also demonstrate that they can enhance sim-to-real cross-embodiment transfer, improving task completion progress of real robot policies pre-trained on simulation data by 28%. We provide videos of our evaluations at our website: https://ajaysridhar.com/barx/.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.27549.jpg"
-    },
-    "tags": [
-      "#IL",
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 17.596,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 6.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 6.0,
-      "recency": 2.5959729653472223,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:4a308e8abf69",
-    "source": "news",
-    "title": "US government bans new foreign-made humanoids, robot dogs, and solar inverters, citing risks to national security",
-    "url": "https://techcrunch.com/2026/07/29/us-government-bans-new-foreign-made-humanoids-robot-dogs-and-solar-inverters-citing-risks-to-national-security/",
-    "summary": "The ban largely affects U.S. imports from China, which currently dominates the global market for making humanoid robots and solar inverters.",
-    "published": "2026-07-29T17:41:09+00:00",
-    "updated": "2026-07-29T17:41:09+00:00",
-    "authors": [
-      "Zack Whittaker"
-    ],
-    "extra": {
-      "feed": "TechCrunch — Robotics",
-      "first_seen": "2026-07-29",
-      "full_text": "The ban largely affects U.S. imports from China, which currently dominates the global market for making humanoid robots and solar inverters.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 17.532,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.5321733384399803,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -3089,55 +2537,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.27898",
-    "source": "arxiv",
-    "title": "CoRE-UIR: Prior-guided common and residual experts for efficient all-in-one remote sensing image restoration",
-    "url": "http://arxiv.org/abs/2607.27898v1",
-    "summary": "CoRE-UIR tackles all-in-one remote sensing image restoration by separating shared restoration behavior from degradation-specific corrections: a dense common expert handles degradation-invariant cleanup, while low-rank residual experts add targeted compensation guided by CLIP-derived degradation priors. On the new MDVD-108K UAV dataset and other benchmarks, it reports a 1.05 dB average PSNR gain over BaryIR while running 11.83x faster and using 85.3% less peak memory, with tests suggesting the design transfers to downstream tasks and unseen degradations.",
-    "published": "2026-07-30T09:14:08+00:00",
-    "updated": "2026-07-30T09:14:08+00:00",
-    "authors": [
-      "Zaiyan Zhang",
-      "Qiangqiang Yuan",
-      "Jie Li",
-      "Ziyang Lihe",
-      "Yu Wan",
-      "Yuzeng Chen",
-      "Xin Su",
-      "Liangpei Zhang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV",
-      "pdf_url": "https://arxiv.org/pdf/2607.27898v1",
-      "comment": "Accepted by ISPRS Journal of Photogrammetry and Remote Sensing",
-      "first_seen": "2026-07-31",
-      "full_text": "Remote sensing images acquired by unmanned aerial vehicles (UAVs) and satellites are often degraded by adverse weather, illumination variation, and imaging artifacts, which may co-occur and jointly induce global distribution shifts and local structural corruption. Although All-in-One image restoration offers an appealing unified alternative to task-specific pipelines, existing methods still suffer from weak or implicit degradation cues and parameter redundancy caused by full-rank multi-expert designs with overlapping restoration behaviors. We propose CoRE-UIR (Common and Residual Experts for Universal Image Restoration), a prior-guided global-local framework centered on the Common-and-Residual Expert Block (CoRE). CoRE explicitly decomposes restoration capacity into a common dense expert for degradation-invariant restoration and low-rank residual experts for degradation-specific compensation, enabling adaptive specialization without redundant expert replication. Built on this design, Degradation Prior Embedding (DPE) adapts frozen CLIP features into an explicit restoration-oriented prior, while Global Feature Modulation (GFM) aligns global feature statistics before local residual compensation. We also construct MDVD-108K (Multi-Degradation VisDrone), a large-scale UAV restoration dataset covering both single and compound degradations, together with a real-world test set. Extensive experiments on multiple datasets show that CoRE-UIR improves the overall average PSNR by 1.05 dB while running 11.83$\\times$ faster and reducing peak memory by 85.3% relative to the strongest baseline, BaryIR, thereby maintaining a favorable quality-efficiency trade-off. Evaluations on downstream tasks and unseen degradation also validate the generalizability of CoRE-UIR. The code and dataset will be released at https://github.com/zzaiyan/CoRE-UIR.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.27898.jpg"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 12.671,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.671010152934028,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:f7c45a43c5d1",
     "source": "news",
     "title": "구글 딥마인드, 로봇 파운데이션 모델 '제미나이 로보틱스 2' 공개",
@@ -3217,55 +2616,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 2.0,
       "recency": 2.693882179799107,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "arxiv:2607.27902",
-    "source": "arxiv",
-    "title": "One Patch Is Enough: Reinforcement-Optimized Visual Token Grounding for MLLM-Based Scene Text Spotting",
-    "url": "http://arxiv.org/abs/2607.27902v1",
-    "summary": "SPaTS reframes scene text spotting for MLLMs by assigning each text instance to a single anchor visual token, then recovering precise geometry through full-image refinement rather than relying on noisy multi-patch grounding. Its SPaSO reinforcement objective learns the discrete patch selection without oracle anchors, while DEA stabilizes visual representations and PED combines the chosen anchor with language cues and full-image cross-attention for boundary regression. The method is reported to consistently outperform both closed-source frontier MLLMs and OCR-focused MLLMs on scene text spotting benchmarks.",
-    "published": "2026-07-30T09:17:48+00:00",
-    "updated": "2026-07-30T09:17:48+00:00",
-    "authors": [
-      "Rui Tang",
-      "Wentao Yang",
-      "Peirong Zhang",
-      "Yongxin Shi",
-      "Shun Zhang",
-      "Huiguo He",
-      "Lianwen Jin"
-    ],
-    "extra": {
-      "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV",
-      "pdf_url": "https://arxiv.org/pdf/2607.27902v1",
-      "comment": "15 pages, 11 figures. Accepted to ACM Multimedia 2026",
-      "first_seen": "2026-07-31",
-      "full_text": "Scene text spotting requires high-precision alignment between textual recognition and spatial localization. While visual-token grounding has emerged as a promising formulation for Multimodal Large Language Models (MLLMs), the previous multi-patch paradigm often introduces redundant noise and localization ambiguity, particularly for dense or small text instances. To address this, we propose Single-Patch Text Spotting (SPaTS), a vision-centric framework that routes each text instance through a single anchor visual token and then recovers geometry via full-image refinement. To accurately identify this anchor without oracle labels, we introduce Single-Patch Selective Optimization (SPaSO), a reinforcement learning framework that optimizes discrete visual-token selection using patch-level rewards. To further improve representation robustness and localization precision, we introduce Directional Embedding Alignment (DEA) to suppress unstable norm bias by decoupling feature magnitude and direction, and Patch-Enhanced Decoding (PED) to fuse the routed anchor with language semantics and cross-attend over the full-image feature map for geometry-aware boundary regression beyond coordinate-space surrogates. Extensive experiments demonstrate that SPaTS consistently and significantly outperforms both frontier closed-source MLLMs and OCR MLLMs. Code will be released soon.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.27902.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 11.672,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.6715557880605156,
       "has_code": 6.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -3458,87 +2808,6 @@
       "research_interest_title": 5.0,
       "research_interest_abstract": 0.0,
       "recency": 2.731831072524802,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "arxiv:2607.28045",
-    "source": "arxiv",
-    "title": "RaDiVe: Robust 4D Radar Odometry with Distance-Bounded NDT and Velocity-Discrepancy Point Uncertainty",
-    "url": "http://arxiv.org/abs/2607.28045v1",
-    "summary": "RaDiVe improves 4D radar odometry by making point-cloud registration less brittle under radar sparsity and noise, using distance-bounded NDT to limit voxel correspondences and stabilize optimization. It also weights radar points by Doppler velocity discrepancy against the estimated ego-motion, then builds a cleaner local submap with SDF-based surface extraction from implicit neural mapping. Across multiple public datasets, it reports 44.4% lower translational ATE and 21.3% lower rotational ATE than prior 4D radar odometry baselines while still running in real time.",
-    "published": "2026-07-30T11:26:41+00:00",
-    "updated": "2026-07-30T11:26:41+00:00",
-    "authors": [
-      "Sangwoo Jung",
-      "Dongjae Lee",
-      "Chiyun Noh",
-      "Ayoung Kim"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.28045v1",
-      "comment": "8 pages, 8 figures, 8 tables",
-      "first_seen": "2026-07-31",
-      "full_text": "Recent advances in 4D radar enable robust perception in adverse weather; however, the inherent sparsity, noise, and limited positional precision of radar point clouds pose significant challenges for registration-based odometry. In this letter, we propose RaDiVe, a 4D radar odometry framework designed to improve the accuracy and robustness of radar point-cloud registration. We introduce a distance-bounded Normal Distributions Transform (NDT), which improves optimization stability and computational efficiency by restricting the correspondence search to near-distance voxel pairs. To mitigate measurement ambiguity, we propose a velocity-discrepancy point uncertainty model that weights each input 4D radar point according to the discrepancy between its measured Doppler radial velocity and the radial velocity predicted from the estimated ego-velocity. Furthermore, we incorporate Signed Distance Function (SDF)-based surface point extraction via implicit neural mapping to construct a geometrically consistent and noise-filtered local submap. Evaluations across multiple public datasets demonstrate that RaDiVe outperforms existing 4D radar odometry baselines by 44.4% in translational Absolute Trajectory Error (ATE) and 21.3% in rotational ATE on average, while maintaining real-time performance. The source code will be made publicly available to the robotics community: https://github.com/to-be-open-sourced.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.28045.jpg"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 10.691,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.6907348719717263,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:d3d82cdd854e",
-    "source": "news",
-    "title": "씨메스로보틱스-NC AI, 피지컬 AI 공동 연구개발 협력",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=47668",
-    "summary": "AI 로보틱스 솔루션 전문기업 씨메스로보틱스(대표 이성호)는 산업특화 AI 분야를 선도하는 엔씨에이아이(NC AI, 대표 이연수)와 ‘피지컬 AI 기반의 공동 연구개발 및 상호 기술 공유 협력’을 위한 업무협약(MOU)을 체결했다고 30일 밝혔다.이번 협약은 피지컬 AI 기반 로보틱스 기술로 자동화 솔루션을 실제 산업 현장에 양산해 온 씨메스로보틱스와, 월드모델 등 피지컬 AI 핵심 기술을 보유한 NC AI의 역량을 결합하기 위해 추진됐다.로봇이 산업 현장에서 스스로 환경을 인식하고 판단해 작업을 수행하는 피지컬 AI 기술의 고도화",
-    "published": "2026-07-30T09:57:07+00:00",
-    "updated": "2026-07-30T09:57:07+00:00",
-    "authors": [
-      "최지호 기자"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-07-30",
-      "full_text": "AI 로보틱스 솔루션 전문기업 씨메스로보틱스(대표 이성호)는 산업특화 AI 분야를 선도하는 엔씨에이아이(NC AI, 대표 이연수)와 ‘피지컬 AI 기반의 공동 연구개발 및 상호 기술 공유 협력’을 위한 업무협약(MOU)을 체결했다고 30일 밝혔다.이번 협약은 피지컬 AI 기반 로보틱스 기술로 자동화 솔루션을 실제 산업 현장에 양산해 온 씨메스로보틱스와, 월드모델 등 피지컬 AI 핵심 기술을 보유한 NC AI의 역량을 결합하기 위해 추진됐다.로봇이 산업 현장에서 스스로 환경을 인식하고 판단해 작업을 수행하는 피지컬 AI 기술의 고도화",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 10.677,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.6774064688467263,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -4094,42 +3363,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:321e61346193",
-    "source": "news",
-    "title": "티로보틱스, 40억원 규모 우리사주조합 주식 취득",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=47669",
-    "summary": "산업용 휴머노이드 및 자율이동로봇(AMR) 전문기업 티로보틱스는 우리사주조합을 통해 약 40억원 규모의 회사 주식 취득을 마무리했다고 30일 밝혔다.이번 우리사주조합 주식 취득은 중장기 성장 가능성에 대한 신뢰를 바탕으로 추진됐으며 취득 규모는 총 33만3000주에 달한다. 취득한 주식은 관련 법령에 따라 1년에서 3년간 한국증권금융에 의무예탁될 예정이다. 회사는 임직원의 기업가치 제고 참여를 확대하고 회사와 구성원이 성장의 성과를 함께 공유할 수 있는 기반을 마련할 방침이다.티로보틱스는 향후 실적 개선과 재무구조 안정화를 바탕으로",
-    "published": "2026-07-30T10:32:41+00:00",
-    "updated": "2026-07-30T10:32:41+00:00",
-    "authors": [
-      "최지호 기자"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-07-30",
-      "full_text": "산업용 휴머노이드 및 자율이동로봇(AMR) 전문기업 티로보틱스는 우리사주조합을 통해 약 40억원 규모의 회사 주식 취득을 마무리했다고 30일 밝혔다.이번 우리사주조합 주식 취득은 중장기 성장 가능성에 대한 신뢰를 바탕으로 추진됐으며 취득 규모는 총 33만3000주에 달한다. 취득한 주식은 관련 법령에 따라 1년에서 3년간 한국증권금융에 의무예탁될 예정이다. 회사는 임직원의 기업가치 제고 참여를 확대하고 회사와 구성원이 성장의 성과를 함께 공유할 수 있는 기반을 마련할 방침이다.티로보틱스는 향후 실적 개선과 재무구조 안정화를 바탕으로",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 6.683,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.6826991276612104,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:2e96da815adf",
     "source": "news",
     "title": "주간 로봇 기업 주가 동향(07/27 ~ 07/31)",
@@ -4201,76 +3434,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:5c142f9b88d1",
-    "source": "news",
-    "title": "The Passport Problem: Why Your Robots Can't Prove Who They Are",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/07/29/the-passport-problem-why-your-robots-cant-prove-who-they-are/26897",
-    "summary": "The missing identity layer in multi-vendor automation",
-    "published": "2026-07-29T22:30:13+00:00",
-    "updated": "2026-07-29T22:30:13+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-07-30",
-      "full_text": "The missing identity layer in multi-vendor automation",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 5.575,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.575189210406746,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:1a96f41e65f3",
-    "source": "news",
-    "title": "마음AI, 국립공주대 AI 데이터팩토리 2차 구축 착수",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=47666",
-    "summary": "마음AI가 국립공주대학교와 함께 추진 중인 AI 인프라 구축 사업의 2단계인 'AI 데이터팩토리' 구축에 본격 착수한다.이번 사업은 지난해 구축한 디지털 시뮬레이션 환경을 기반으로, 실제 환경에서 생성되는 데이터를 수집·관리하고 AI 모델의 학습과 고도화까지 연결하는 AI 데이터 생산 인프라를 구축하는 것이 핵심이다.1차 사업이 가상환경에서 피지컬 AI와 로봇을 개발하고 검증할 수 있는 디지털 시뮬레이션 기반을 마련하는 단계였다면, 2차 사업은 현실에서 생성되는 데이터를 AI의 자산으로 전환하는 'AI 데이터팩토리'를 구축하는 단계",
-    "published": "2026-07-29T16:07:50+00:00",
-    "updated": "2026-07-29T16:07:50+00:00",
-    "authors": [
-      "최지호 기자"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-07-29",
-      "full_text": "마음AI가 국립공주대학교와 함께 추진 중인 AI 인프라 구축 사업의 2단계인 'AI 데이터팩토리' 구축에 본격 착수한다.이번 사업은 지난해 구축한 디지털 시뮬레이션 환경을 기반으로, 실제 환경에서 생성되는 데이터를 수집·관리하고 AI 모델의 학습과 고도화까지 연결하는 AI 데이터 생산 인프라를 구축하는 것이 핵심이다.1차 사업이 가상환경에서 피지컬 AI와 로봇을 개발하고 검증할 수 있는 디지털 시뮬레이션 기반을 마련하는 단계였다면, 2차 사업은 현실에서 생성되는 데이터를 AI의 자산으로 전환하는 'AI 데이터팩토리'를 구축하는 단계",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 5.518,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.518286925109127,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:93f62dd0504f",
     "source": "news",
     "title": "Daniela Rus receives Bavarian Minister-President's High-Tech Prize",
@@ -4298,43 +3461,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.77604982625,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:7d6f7701abe7",
-    "source": "news",
-    "title": "Bring Powerful AI to Real-World Machines With Jetson AGX Orin",
-    "url": "https://www.youtube.com/shorts/_8HmIozmDLI",
-    "summary": "Bigger compute calls for a bigger bag. 👜 Sarah Guo makes room for NVIDIA Jetson AGX Orin and its 275 TOPS of AI performance, built to power advanced robots, autonomous machines, and edge AI workloads wherever the work takes you. #Robotics #EdgeAI #NVIDIAJetson",
-    "published": "2026-07-29T16:33:58+00:00",
-    "updated": "2026-07-29T16:33:58+00:00",
-    "authors": [
-      "NVIDIA Developer"
-    ],
-    "extra": {
-      "feed": "NVIDIA Developer (YouTube)",
-      "thumbnail": "https://i4.ytimg.com/vi/_8HmIozmDLI/hqdefault.jpg",
-      "first_seen": "2026-07-29",
-      "full_text": "Bigger compute calls for a bigger bag. 👜 Sarah Guo makes room for NVIDIA Jetson AGX Orin and its 275 TOPS of AI performance, built to power advanced robots, autonomous machines, and edge AI workloads wherever the work takes you. #Robotics #EdgeAI #NVIDIAJetson",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 4.522,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.5221758099900793,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
