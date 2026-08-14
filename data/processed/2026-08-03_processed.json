@@ -504,48 +504,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:InternRobotics/NavDP",
-    "source": "github",
-    "title": "InternRobotics/NavDP",
-    "url": "https://github.com/InternRobotics/NavDP",
-    "summary": "[ICRA 2026] NavDP: Learning Sim-to-Real Navigation Diffusion Policy with Privileged Information Guidance",
-    "published": "2025-05-16T11:28:40Z",
-    "updated": "2026-07-31T05:43:54Z",
-    "authors": [
-      "InternRobotics"
-    ],
-    "extra": {
-      "stars": 735,
-      "forks": 64,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 8,
-      "license": null,
-      "first_seen": "2026-06-08",
-      "full_text": "[ICRA 2026] NavDP: Learning Sim-to-Real Navigation Diffusion Policy with Privileged Information Guidance",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#IL",
-      "#Other"
-    ],
-    "score": 38.171,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.210640143683036,
-      "has_code": 6.0,
-      "github_stars_log": 14.334389071687495,
-      "github_forks_log": 3.625826713285711,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:H-EmbodVis/TurboVLA",
     "source": "github",
     "title": "H-EmbodVis/TurboVLA",
@@ -1083,47 +1041,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:DeepRoboticsLab/Lite3_rl_deploy",
-    "source": "github",
-    "title": "DeepRoboticsLab/Lite3_rl_deploy",
-    "url": "https://github.com/DeepRoboticsLab/Lite3_rl_deploy",
-    "summary": "Sim-to-sim and sim-to-real deployment for Lite3 Robot",
-    "published": "2024-09-12T08:33:09Z",
-    "updated": "2026-07-31T00:53:44Z",
-    "authors": [
-      "DeepRoboticsLab"
-    ],
-    "extra": {
-      "stars": 132,
-      "forks": 24,
-      "language": "C++",
-      "topics": [],
-      "open_issues": 0,
-      "license": "BSD-3-Clause",
-      "first_seen": "2026-05-18",
-      "full_text": "Sim-to-sim and sim-to-real deployment for Lite3 Robot",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 31.583,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.1674605783234124,
-      "has_code": 6.0,
-      "github_stars_log": 10.619258204835429,
-      "github_forks_log": 2.7958800173440754,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:dartsim/dart",
     "source": "github",
     "title": "dartsim/dart",
@@ -1590,61 +1507,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.29172",
-    "source": "arxiv",
-    "title": "CLIFT: Turning Gemini Robotics On-Device into Humanoid Specialists via Non-Invasive Closed-Loop Iterative Fine-Tuning",
-    "url": "http://arxiv.org/abs/2607.29172v1",
-    "summary": "CLIFT adapts Gemini Robotics On-Device to a real humanoid under the constraints of a managed fine-tuning API, where users can submit supervised data but cannot access weights, gradients, losses, or likelihoods. The method converts deployment-time reward feedback from agile, contact-rich manipulation into API-compatible supervised examples, creating closed-loop improvement through iterative fine-tuning rather than pure imitation. In experiments on humanoid tasks, direct API SFT already beat a leading open-weight VLA trained on the same demonstrations, and two CLIFT cycles pushed the tuned GROD policy to near-perfect success without opening the model.",
-    "published": "2026-07-31T08:50:25+00:00",
-    "updated": "2026-07-31T08:50:25+00:00",
-    "authors": [
-      "Yuxin Chen",
-      "Hari Srikanth",
-      "Nathan Jew",
-      "Menglin Wu",
-      "Pengcheng Wang",
-      "Junli Ren",
-      "Masayoshi Tomizuka",
-      "Peng Xu",
-      "Jinyu Xie",
-      "Thomas Tian"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.29172v1",
-      "comment": null,
-      "first_seen": "2026-08-03",
-      "full_text": "While robot foundation models are growing increasingly capable, the strongest models are typically trained on proprietary data and remain closed-source, limiting downstream users' ability to adapt them to new tasks, embodiments, and deployment settings. Following the LLM community, an emerging access paradigm for closed-weight robot foundation models is the managed supervised fine-tuning (SFT) API, where users submit training data and receive a tuned policy without access to model weights, gradients, or training internals. While such APIs let downstream users leverage powerful proprietary foundation models, they restrict policy improvement to pure imitation, ruling out reinforcement learning and other closed-loop methods that rely on internal training signals. This limitation is particularly acute for agile, contact-rich humanoid manipulation, where the gap between policy outputs and deployed behavior is large due to novel states, action tracking dynamics, latency, and controller-specific failure modes. We study how effective this managed-API regime is for humanoid adaptation, and how closed-loop improvement can be realized within it to push policies toward task mastery. We conduct one of the first empirical studies of managed-API adaptation on a real humanoid, instantiated on Gemini Robotics On-Device (GROD). We find that direct SFT through the API substantially outperforms a leading open-weight VLA trained on the same demonstrations, yet still falls short of deployment-level mastery on agile, contact-rich tasks. To close this gap, we introduce CLIFT: Closed-Loop Iterative Fine-Tuning, which turns deployment-time reward feedback into API-compatible supervised data and enables closed-loop policy improvement without accessing weights, gradients, likelihoods, or losses-pushing GROD to near-perfect success after two flywheel cycles, all without \"opening the model box.\"",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.29172.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Manipulator",
-      "#Humanoid"
-    ],
-    "score": 28.238,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 6.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 6.0,
-      "recency": 2.238395613018353,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -2184,40 +2046,6 @@
     "priority": "must_read"
   },
   {
-    "id": "news:7dc8dd43874e",
-    "source": "news",
-    "title": "Gemini Robotics ER 2: powering robotics with video understanding, task orchestration, and multi-robot collaboration",
-    "url": "https://deepmind.google/blog/gemini-robotics-er-2-powering-robotics-with-video-understanding-task-orchestration-and-multi-robot-collaboration/",
-    "summary": "Gemini Robotics ER 2 helps robots reason, collaborate, and solve real-world tasks. It represents a step change in video understanding, tool orchestration, and multi-robot collaboration for robotic applications.",
-    "published": "2026-07-30T15:00:59+00:00",
-    "updated": "2026-07-30T15:00:59+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "DeepMind Blog",
-      "first_seen": "2026-07-30",
-      "full_text": "Gemini Robotics ER 2 helps robots reason, collaborate, and solve real-world tasks. It represents a step change in video understanding, tool orchestration, and multi-robot collaboration for robotic applications.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 24.079,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.079253723730159,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:kuds/mesozoic-labs",
     "source": "github",
     "title": "kuds/mesozoic-labs",
@@ -2687,55 +2515,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.29169",
-    "source": "arxiv",
-    "title": "ActFovea: Runtime Safeguarding for VLA Policies via Spatiotemporal Visual-Action Consistency",
-    "url": "http://arxiv.org/abs/2607.29169v1",
-    "summary": "ActFovea is a plug-in runtime guard for vision-language-action manipulation policies that checks whether visual motion, observation freshness, proprioception, robot kinematics, and recent actions stay mutually consistent. It builds action-conditioned foveated views around contact-relevant regions and predicted motion corridors, attempts verified observation-level recovery for recoverable disturbances, and falls back to bounded safe failure when observations are stale or replayed. On π₀ across LIBERO suites, it raises success under localized visual overlays from 49.3% to 90.3%, improves action-drift and visual-delay cases by 7.0 and 9.8 points, and catches all frozen-observation replays without unprotected failures.",
-    "published": "2026-07-31T08:47:57+00:00",
-    "updated": "2026-07-31T08:47:57+00:00",
-    "authors": [
-      "Wenda Yu",
-      "Tianshi Wang",
-      "Fengling Li",
-      "Xin Li",
-      "Jingjing Li",
-      "Lei Zhu"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.29169v1",
-      "comment": "8 pages, 4 figures, 4 tables. Code: https://github.com/SunnyYWD/ActFovea.git",
-      "first_seen": "2026-08-03",
-      "full_text": "Vision-language-action (VLA) policies achieve strong performance in robotic manipulation but remain vulnerable to runtime disturbances that break the temporal alignment among visual observations, robot states, and executed actions. We introduce ActFovea, a plug-and-play safeguarding framework that detects and mitigates such failures without retraining or modifying the underlying VLA policy. ActFovea uses robot kinematics, proprioceptive states, and recent actions to construct action-conditioned foveated regions that retain contact-relevant areas and predicted motion corridors while suppressing task-irrelevant visual content. It detects runtime risks by evaluating whether visual motion and observation freshness remain consistent with geometric, proprioceptive, and action transitions. For recoverable disturbances, ActFovea constructs disturbance-specific candidate observations and accepts a recovery only after verifying the resulting action chunk. When stale or replayed observations make reliable recovery impossible, it invokes a bounded safe-failure procedure. In closed-loop evaluations of $π_0$ across multiple LIBERO suites, ActFovea increases success under localized visual overlays from 49.3\\% to 90.3\\%, closing 93.7\\% of the gap to clean performance. It further improves success under action drift and visual delay by 7.0 and 9.8 percentage points, respectively, while preserving clean-task performance. Under frozen-observation replay, ActFovea triggers timely safe failure in all trials, with no unprotected failures. These results demonstrate that spatiotemporal visual-action consistency provides an effective basis for runtime safeguarding of VLA policies.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.29169.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 19.238,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.2380285492609127,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:trustmlyoungscientist/EDPA_attack_defense",
     "source": "github",
     "title": "trustmlyoungscientist/EDPA_attack_defense",
@@ -2851,54 +2630,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.28596",
-    "source": "arxiv",
-    "title": "FA-RDP: A Frequency-Adaptive Reactive Diffusion Policy for Contact-Rich Manipulation",
-    "url": "http://arxiv.org/abs/2607.28596v1",
-    "summary": "In contact-rich manipulation, action multimodality and reactivity dominate different stages of a single episode. Before contact, multiple trajectories might be equally valid, making it important to preserve diverse action modes.",
-    "published": "2026-07-30T17:47:49+00:00",
-    "updated": "2026-07-30T17:47:49+00:00",
-    "authors": [
-      "Lifeng Zhuo",
-      "Wendi Chen",
-      "Han Xue",
-      "Shirun Tang",
-      "Jun Lv",
-      "Cewu Lu",
-      "Chuan Wen"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.28596v1",
-      "comment": "Project page: https://fa-rdp.github.io",
-      "first_seen": "2026-07-31",
-      "full_text": "In contact-rich manipulation, action multimodality and reactivity dominate different stages of a single episode. Before contact, multiple trajectories might be equally valid, making it important to preserve diverse action modes. After contact, geometric constraints and force limits narrow the solution space, while successful execution demands rapid responses to force feedback. However, standard diffusion policies use a fixed inference frequency and sampling steps throughout the episode, forcing a fundamental compromise: low-frequency, multi-step sampling better preserves pre-contact multimodality but responds slowly to force feedback, whereas high-frequency sampling improves reactivity but tends to collapse distinct pre-contact modes. To resolve this tradeoff, we present FA-RDP, a frequency-adaptive reactive diffusion policy. A shared multi-frequency visual-force Transformer predicts action chunks at both low and high frequencies, while a learned multimodality indicator dynamically selects multi-step low-frequency sampling before contact and one-step high-frequency sampling as action ambiguity decreases. We further introduce Manifold Consistency Distillation (MCD), which reparameterizes the diffusion network to predict actions on the robot action manifold while retaining DDPM-based residual supervision. Experiments on three contact-rich manipulation tasks show that FA-RDP achieves the highest success rate while preserving diverse pre-contact trajectory modes. Code and videos are available at https://fa-rdp.github.io.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#IL",
-      "#Manipulator"
-    ],
-    "score": 18.104,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.1040801352728176,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:7dcb5bc4eead",
     "source": "news",
     "title": "로보티즈 “휴머노이드 로봇 ‘AI 사피엔스’ SW 완전 개방”",
@@ -2973,104 +2704,6 @@
       "research_interest_title": 5.0,
       "research_interest_abstract": 0.0,
       "recency": 2.2431054346304564,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.29009",
-    "source": "arxiv",
-    "title": "D-VLC: Decentralized Vision-Language Collaboration for Heterogeneous Embodied Multi-Robot Systems in Unknown Environments",
-    "url": "http://arxiv.org/abs/2607.29009v1",
-    "summary": "D-VLC lets heterogeneous robot teams handle semantic instructions in unknown environments through decentralized, asynchronous VLM-based reasoning rather than a shared map or centralized planner. Robots exchange lightweight information, reason over their own capabilities, and use a unified action interface to turn general-purpose VLM outputs into robot-specific actions executed by training-free experts. Across diverse scenarios and multiple VLMs, it achieves over 70% success and cuts completion time by up to 55.8% versus a geometric greedy baseline.",
-    "published": "2026-07-31T04:20:32+00:00",
-    "updated": "2026-07-31T04:20:32+00:00",
-    "authors": [
-      "Yuan Zhou",
-      "Ruitong Lin",
-      "Shen Wang",
-      "Weiqi Gai",
-      "Mo zhu",
-      "Xin Zhou",
-      "Yuze Wu",
-      "Fei Gao"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.29009v1",
-      "comment": null,
-      "first_seen": "2026-08-03",
-      "full_text": "Multi-robot systems, particularly heterogeneous robot swarms, can improve the efficiency of complex task execution through parallel collaboration and complementary capabilities. However, conventional rule-based methods rely on predefined task models and specialized decision making programs, making it difficult to understand complex semantic instructions and coordinate heterogeneous robots. LLMs introduce strong language understanding and task reasoning capabilities, allowing multi-robot systems to interpret instructions, decompose tasks, and assign roles according to task semantics. VLMs further incorporate visual perception, enabling robots to reason about objects, regions, and spatial relationships in physical environments. Nevertheless, existing LLM/VLM based methods often depend on known maps, centralized and synchronized decision making, limiting their generalization to heterogeneous robots and unseen tasks. We therefore propose a framework that combines decentralized asynchronous reasoning, lightweight information sharing, capability aware collaboration, and a unified action interface, enabling general purpose VLMs to generate robot specific actions executed by learning free experts without task or robot specific training. Experiments across diverse scenarios and multiple VLMs show success rates above 70\\%, with completion time reduced by up to 55.8\\% relative to the geometric greedy baseline.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 17.198,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.1982344022271825,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2607.28560",
-    "source": "arxiv",
-    "title": "X-NavDP: Generalizing Navigation Diffusion Policy to Novel Behavior and Embodiments with Group Q-score Reweighted Matching",
-    "url": "http://arxiv.org/abs/2607.28560v1",
-    "summary": "Pretraining navigation diffusion policies rely on large-scale expert demonstrations. These data are typically generated by a fully-informed oracle planner suited to a single nominal robot.",
-    "published": "2026-07-30T17:26:12+00:00",
-    "updated": "2026-07-30T17:26:12+00:00",
-    "authors": [
-      "Tianyu Yang",
-      "Yiming Zeng",
-      "Wenzhe Cai",
-      "Yuqiang Yang",
-      "Jiaqi Peng",
-      "Hui Cheng",
-      "Jiangmiao Pang",
-      "Tai Wang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.28560v1",
-      "comment": "20 pages, 4 figures",
-      "first_seen": "2026-07-31",
-      "full_text": "Pretraining navigation diffusion policies rely on large-scale expert demonstrations. These data are typically generated by a fully-informed oracle planner suited to a single nominal robot. This limits the policy's generalization to diverse embodiments and challenging scenarios (e.g., escaping dead ends or detouring long obstacles) that demand diverse local reactive behaviors with only onboard local observations. Post-training the policy with reinforcement learning (RL) offers a principled remedy. However, previous RL for diffusion approaches lead to only marginal improvements. This is because the intractable likelihood of diffusion policies renders policy gradients unstable in addition to inefficient policy exploration. To address these challenges, we propose a data-efficient diffusion RL post-training framework - GQRM (Group Q-score Reweighted Matching). Our framework introduces two complementary designs: (i) a self-bootstrapped exploration strategy with behavior perturbation that preserves the pretrained policy prior, and (ii) a group Q-score normalization mechanism that computes per-trajectory values on each state for efficient reweighted score matching. By conducting distributed online RL training across heterogeneous embodiments, the resulting fine-tuned policy, X-NavDP, achieves state-of-the-art cross-embodiment visual navigation performance, improving the overall success rate from 61.20% to 84.28% in simulation and 10% to 65% in real-world hard cases. The code and model are publicly available at https://yty-sky.github.io/x-navdp-project-page.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#IL",
-      "#Other"
-    ],
-    "score": 17.101,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.100863369201389,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -3278,53 +2911,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.27690",
-    "source": "arxiv",
-    "title": "LabEvolver: Training-Free Experience Evolution for Safe and Grounded Wet-Lab Agents",
-    "url": "http://arxiv.org/abs/2607.27690v2",
-    "summary": "We introduce LabEvolver, a training-free framework that equips safe and grounded wet-lab agents with episodic memory from execution experience.",
-    "published": "2026-07-30T05:19:33+00:00",
-    "updated": "2026-07-31T02:51:45+00:00",
-    "authors": [
-      "Jingya Wang",
-      "Yuyang Gao",
-      "Liuzhenghao Lv",
-      "Yonghong Tian",
-      "Yuyang Liu"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.27690v2",
-      "comment": null,
-      "first_seen": "2026-07-31",
-      "full_text": "We introduce LabEvolver, a training-free framework that equips safe and grounded wet-lab agents with episodic memory from execution experience. LabEvolver couples a state-grounded inner trial loop for adaptive perception, online planning, and safety validation with an outer evolution loop that distills completed trajectories into reusable skill, strategy, and safety experience. On robotic solution-preparation tasks, LabEvolver demonstrates real-world feasibility, reducing pH-regulation completion time and safety-gate intercepts by 48.2% and 60.0%, respectively. On ALFWorld, it further improves cumulative success rate within 20 steps from 76.2% with ReAct to 91.4% over 500 continual tasks, showing generality beyond wet-lab settings. These results support learn-by-doing experience evolution as a feasible path toward closed-loop automated scientific discovery. The project page is available at https://andygao6186.github.io/LabEvolver/.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 13.185,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.185022592224702,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "arxiv:2607.29637",
     "source": "arxiv",
     "title": "CodeShrink: Adaptive Visual Compression for Efficient Multimodal Code Understanding",
@@ -3442,50 +3028,6 @@
       "research_interest_abstract": 0.0,
       "recency": 2.903204624781746,
       "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "arxiv:2607.28474",
-    "source": "arxiv",
-    "title": "TEA-AgriVLN: Traversability Estimation Alarm for Agricultural Vision-and-Language Navigation",
-    "url": "http://arxiv.org/abs/2607.28474v1",
-    "summary": "Vision-and-Language Navigation in Continuous Environments (VLN-CE) requires an agent to follow a natural language instruction, predicting a sequence of low-level actions to navigate a robot from a starting point to a target location.",
-    "published": "2026-07-30T16:27:12+00:00",
-    "updated": "2026-07-30T16:27:12+00:00",
-    "authors": [
-      "Xiaobei Zhao",
-      "Xingqi Lyu",
-      "Xin Chen",
-      "Xiang Li"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.28474v1",
-      "comment": null,
-      "first_seen": "2026-07-31",
-      "full_text": "Vision-and-Language Navigation in Continuous Environments (VLN-CE) requires an agent to follow a natural language instruction, predicting a sequence of low-level actions to navigate a robot from a starting point to a target location. The A2A benchmark and the AgriVLN method pioneeringly extended VLN-CE from indoor scenes to agricultural scenes, while we observed a challenging distinction: In indoor scenes, whether a zone is traversable tends to be clear to classify, such as wood floors are traversable but concrete walls are not. In agricultural scenes, however, this issue tends to be ambiguous, such as an unripe cornfield might be traversable for a robotic dog but might be non-traversable for a human. To address this issue, we propose the TEA module, which estimates the traversability of the camera image, then alarm the decision-maker for rethinking when the predicted action does not align with the traversability map. We integrate it into the AgriVLN backbone to build our TEA-AgriVLN method. When evaluated on A2A, it improves Success Rate (SR) from 0.47 to 0.54 and Navigation Error (NE) from 2.91 m to 2.70 m, showing the state-of-the-art performance in the agricultural VLN-CE domain. We further implement the ablation studies and the case study, discussing the effectiveness and limitations of TEA on different ground categories and scene classes. Code: https://github.com/AlexTraveling/TEA-AgriVLN.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 10.092,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.0920836071106153,
-      "has_code": 6.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
@@ -3911,79 +3453,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:b2fef1586dc7",
-    "source": "news",
-    "title": "Researchers develop modular nanorobot",
-    "url": "https://robohub.org/researchers-develop-modular-nanorobot/",
-    "summary": "Illustration of the versatile nanorobot. It is 150 times smaller than the diameter of a human hair. (Illustration: Marina Bräm) By Angelika Jacobs Nanorobots sound like science fiction: tiny machines for medicine, the environment, or industry. In fact, nanorobotics has become a rapidly growing field of research.",
-    "published": "2026-07-31T09:21:31+00:00",
-    "updated": "2026-07-31T09:21:31+00:00",
-    "authors": [
-      "University of Basel"
-    ],
-    "extra": {
-      "feed": "Robohub",
-      "first_seen": "2026-07-31",
-      "full_text": "Illustration of the versatile nanorobot. It is 150 times smaller than the diameter of a human hair. (Illustration: Marina Bräm) By Angelika Jacobs Nanorobots sound like science fiction: tiny machines for medicine, the environment, or industry. In fact, nanorobotics has become a rapidly growing field of research. It is considered a promising approach, for example, […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 7.243,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.2430235730877977,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:bc68dc4e0ea4",
-    "source": "news",
-    "title": "Build Bigger Than ‘Back to School’ With Jetson AGX Thor",
-    "url": "https://www.youtube.com/shorts/AAm5E3ZhXnE",
-    "summary": "What’s in Sarah Guo’s bag? The ultimate robotics brain. 🧠 NVIDIA Jetson AGX Thor, packing up to 2,070 FP4 TFLOPS of AI compute and 128 GB of memory. Power next generation humanoids and autonomous systems with real-time reasoning and server class performance, built for the lab, factory, and field. #Robotics #EdgeAI #NVIDIAJetson",
-    "published": "2026-07-30T16:59:52+00:00",
-    "updated": "2026-07-30T16:59:52+00:00",
-    "authors": [
-      "NVIDIA Developer"
-    ],
-    "extra": {
-      "feed": "NVIDIA Developer (YouTube)",
-      "thumbnail": "https://i2.ytimg.com/vi/AAm5E3ZhXnE/hqdefault.jpg",
-      "first_seen": "2026-07-30",
-      "full_text": "What’s in Sarah Guo’s bag? The ultimate robotics brain. 🧠 NVIDIA Jetson AGX Thor, packing up to 2,070 FP4 TFLOPS of AI compute and 128 GB of memory. Power next generation humanoids and autonomous systems with real-time reasoning and server class performance, built for the lab, factory, and field. #Robotics #EdgeAI #NVIDIAJetson",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 7.097,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.0969446902728173,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:a26bdc2566db",
     "source": "news",
     "title": "경북도, 자동차 부품 제조 AI 로봇 확산 거점 구축",
@@ -4240,44 +3709,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:047a0fcf608f",
-    "source": "news",
-    "title": "Two2Four: Generative Quadruped Puppeteering from Human Motion",
-    "url": "https://www.youtube.com/watch?v=N20CVjHmZh8",
-    "summary": "Realistic animal motion for virtual production is typically obtained either through motion capture of highly trained performers who accurately mimic animal behavior, or by retargeting ordinary human motion using complex control setups.",
-    "published": "2026-07-30T17:32:55+00:00",
-    "updated": "2026-07-30T17:32:55+00:00",
-    "authors": [
-      "DisneyResearchHub"
-    ],
-    "extra": {
-      "feed": "Disney Research (YouTube)",
-      "thumbnail": "https://i3.ytimg.com/vi/N20CVjHmZh8/hqdefault.jpg",
-      "first_seen": "2026-07-30",
-      "full_text": "Realistic animal motion for virtual production is typically obtained either through motion capture of highly trained performers who accurately mimic animal behavior, or by retargeting ordinary human motion using complex control setups. Both approaches are challenging and often fail to fully reproduce the nuances of natural animal motion, motivating data-driven alternatives. We present an automatic human-to-quadruped puppeteering framework that produces plausible and controllable quadruped motions from ordinary human motion data. Our approach employs a two-stage generative diffusion model trained purely on quadruped motion data. By introducing a structured conditioning and inpainting strategy, our method supports a wide range of actions, including walking, running, jumping, sitting, and lying. Furthermore, we enable fine-grained intuitive control of the quadruped motion such as head movement control and individual limb puppeteering. Experimental results demonstrate improved motion realism and controllability compared to existing retargeting approaches, highlighting the effectiveness of our framework as a tool for animation and virtual production applications. Publication Link: https://studios.disneyresearch.com/2026/07/30/two2four-generative-quadruped-puppeteering-from-human-motion/",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 6.102,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.1018628469171627,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:e3e85f3b7066",
     "source": "news",
     "title": "KAIST, AI가 택배 배송·인력 배치까지 스스로 짠다",
@@ -4378,40 +3809,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.768678325342262,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:4f056f45105e",
-    "source": "news",
-    "title": "Procore to Acquire DroneDeploy, Creating Next-Generation Platform That Sees, Understands, and Acts on the Jobsite",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/07/30/procore-to-acquire-dronedeploy-creating-next-generation-platform-that-sees-understands-and-acts-on-the-jobsite/26898",
-    "summary": "",
-    "published": "2026-07-30T12:31:51+00:00",
-    "updated": "2026-07-30T12:31:51+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-07-30",
-      "full_text": "",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 5.057,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.0570612653769844,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -4568,43 +3965,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:93f62dd0504f",
-    "source": "news",
-    "title": "Daniela Rus receives Bavarian Minister-President's High-Tech Prize",
-    "url": "https://news.mit.edu/2026/daniela-rus-receives-bavarian-minister-presidents-high-tech-prize-0730",
-    "summary": "Director of CSAIL and MIT professor honored for her contributions to robotics, artificial intelligence, and autonomous systems.",
-    "published": "2026-07-30T21:00:00+00:00",
-    "updated": "2026-07-30T21:00:00+00:00",
-    "authors": [
-      "Rachel Gordon | Alex Shipps | MIT CSAIL"
-    ],
-    "extra": {
-      "feed": "MIT News — Robotics",
-      "thumbnail": "https://news.mit.edu/sites/default/files/styles/news_article__cover_image__original/public/images/202607/mit-csail-daniela-rus-bavarian-award-00.png?itok=9XnNV8-Q",
-      "first_seen": "2026-07-30",
-      "full_text": "Director of CSAIL and MIT professor honored for her contributions to robotics, artificial intelligence, and autonomous systems.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 4.133,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.132678825833333,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:f449a639a3e8",
     "source": "news",
     "title": "뉴로메카, 781.5억원 규모 유상증자 청약 절차 완료…4일 납입",
@@ -4705,44 +4065,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.769003226341766,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "low_priority"
-  },
-  {
-    "id": "news:b69484e0005b",
-    "source": "news",
-    "title": "Interactive Generative Motion Editing via Scheduled Inpainting",
-    "url": "https://www.youtube.com/watch?v=P2jsLNvb1GM",
-    "summary": "Motion editing is central to VFX and game development, where it is used extensively to modify and augment existing movements to conform to new environments or changes in artistic direction.",
-    "published": "2026-07-30T18:06:10+00:00",
-    "updated": "2026-07-30T18:06:10+00:00",
-    "authors": [
-      "DisneyResearchHub"
-    ],
-    "extra": {
-      "feed": "Disney Research (YouTube)",
-      "thumbnail": "https://i1.ytimg.com/vi/P2jsLNvb1GM/hqdefault.jpg",
-      "first_seen": "2026-07-30",
-      "full_text": "Motion editing is central to VFX and game development, where it is used extensively to modify and augment existing movements to conform to new environments or changes in artistic direction. While traditional motion editing can do small modifications, it cannot accommodate larger structural edits, resulting in visual warping artifacts that require authoring new motion. Conversely, recent advances in large-scale generative modeling have unlocked newfound capabilities for authoring entire movements by directly manipulating sparse spatial constraints. While impressive at creating new movements, these methods lack the capability to preserve and edit existing motion interactively. In this work, we introduce scheduled inpainting, a method that enables interactive generative motion editing, a novel paradigm unifying motion synthesis and editing by leveraging generative models. Scheduled inpainting is a simple yet powerful inference-based technique that enables fine-grained spatiotemporal control over the balance between preserving the original motion and generating new content. By building atop generative models that support direct manipulation, our system allows artists to interactively refine existing animations while ensuring results remain natural and consistent with the learned motion distribution. Scheduled inpainting is versatile and supports many editing applications, such as extending, stitching, and compositing different clips. Finally, we extensively validate our approach by comparing with four baselines, conducting ablations of our design, and reporting user feedback. Publication Link: https://studios.disneyresearch.com/2026/07/30/interactive-generative-motion-editing-via-scheduled-inpainting/",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Manipulator"
-    ],
-    "score": 3.107,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.1068107637748015,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
