@@ -2629,49 +2629,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2607.29482",
-    "source": "arxiv",
-    "title": "Temporal Policy: History-Initialized Action Generation for Robotic Learning from Demonstration",
-    "url": "http://arxiv.org/abs/2607.29482v1",
-    "summary": "Temporal Policy makes robot imitation policies cheaper to sample by starting the generative flow from the robot’s recent state/action history instead of an uninformative Gaussian prior, turning action generation into a temporally coupled transport problem with straighter vector fields. Across visuomotor simulation benchmarks and a physical Barrett WAM 2x 7DoF teleoperation setup, it cuts transport cost by nearly an order of magnitude while matching strong baseline success rates, reaching 19.1 ms inference latency on a single RTX 4080 for high-frequency closed-loop control.",
-    "published": "2026-07-31T14:47:02+00:00",
-    "updated": "2026-07-31T14:47:02+00:00",
-    "authors": [
-      "Dylan Miller",
-      "Martin Jagersand"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2607.29482v1",
-      "comment": "Accepted to the 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)",
-      "first_seen": "2026-08-03",
-      "full_text": "By relying on independent couplings from uninformative Gaussian priors, standard diffusion and flow matching models are forced to learn complex, high-cost vector fields to reach the physical action space. Generative models excel at capturing multimodal behaviors for robotic Learning from Demonstration (LfD), but often suffer from high inference cost. This paper introduces Temporal Policy, a generative framework based on stochastic interpolants that formulates action generation as a temporally coupled transport problem. By initializing the generative flow at the robot's recent history, we explicitly couple past states to future action sequences. This data-dependent coupling reduces transport cost and produces straight vector fields. We validate Temporal Policy across visuomotor simulation benchmarks and on a physical Barrett WAM 2x 7DoF teleoperation platform. Our approach reduces transport costs by nearly an order of magnitude compared to noise-initialized baselines, achieving a 19.1 ms inference latency on a single NVIDIA RTX 4080. Crucially, these geometric and computational efficiencies are achieved while matching the success rates of state-of-the-art baselines. This simplified transport geometry bypasses the computational bottleneck of independent Gaussian priors, helping enable high-frequency, closed-loop control. The code is publicly available at https://github.com/dmiller12/TemporalPolicy.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.29482.jpg"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 16.291,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.2914635713219247,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "arxiv:2607.29637",
     "source": "arxiv",
     "title": "CodeShrink: Adaptive Visual Compression for Efficient Multimodal Code Understanding",
@@ -2908,56 +2865,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "arxiv:2607.29468",
-    "source": "arxiv",
-    "title": "Self-Play Meets Skill Evolution: Self-Evolving Search Agents that Pose, Solve, and Remember",
-    "url": "http://arxiv.org/abs/2607.29468v1",
-    "summary": "SESA turns self-play for tool-augmented search agents into a feedback loop where a challenger generates problems, a solver attempts them using retrieved procedural skills, and useful failures are distilled back into an evolving skill memory. Because that memory changes both the solver’s future behavior and the challenger’s reward signal, the curriculum and the agent’s reusable procedures co-evolve rather than treating memory as a static inference add-on. Across seven open-domain and multi-hop QA benchmarks, SESA improves over SSP by 1.2–3.2 accuracy points across backbones, beats SkillRL by 0.9 points under a unified protocol, and retains much of the gain even without retrieval at deployment.",
-    "published": "2026-07-31T14:32:52+00:00",
-    "updated": "2026-07-31T14:32:52+00:00",
-    "authors": [
-      "Zenghuang Fu",
-      "Zhaoyang Li",
-      "Qiuyuan Ai",
-      "Haoyu Wu",
-      "Minghui Wu",
-      "Chenxu Zhao",
-      "Ante Wang",
-      "Guannan He",
-      "Changwei Wang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI",
-      "pdf_url": "https://arxiv.org/pdf/2607.29468v1",
-      "comment": null,
-      "first_seen": "2026-08-03",
-      "full_text": "Self-play agents can generate training problems without questions from target benchmarks, but their curricula lack persistent state: failures affect gradients yet do not explicitly shape future practice. External skill memories preserve procedural experience but are typically learned from fixed task distributions. We introduce \\textbf{SESA} (Self-Evolving Skill-Augmented Agent), which makes procedural memory an evolving state of tool-augmented search self-play. A challenger poses problems, while a separately parameterized solver alone retrieves skills. Informative failures are distilled into reusable skills and written back to memory. The updated memory changes solver behavior and success, which changes the challenger's reward and the distribution of future problems; the resulting frontier produces new failures that rewrite memory. This bidirectional loop makes task generation and skill memory co-evolve. Because retrieved skills shape on-policy training trajectories, their benefits can enter the model parameters as well as remain in the external bank, enabling memory-free deployment and optional inference-time retrieval. Across seven open-domain and multi-hop question-answering benchmarks, SESA improves average accuracy over SSP by 1.2--3.2 points across multiple backbones and surpasses the skill-augmented SkillRL baseline by 0.9 points under a unified evaluation protocol. On Qwen3 models, SESA-Off retains 1.8--2.2 points of improvement over SSP, while the final skill bank adds a further 0.5--1.0 points. These results show that evolving skill memory is not merely an inference-time plug-in: it changes policy learning and the future training distribution while retaining value as optional external memory. Our code is available at https://github.com/Zenghuang-Fu/SESA-Self-Evolving-Search-Agents.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2607.29468.jpg"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 9.289,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.289355427611607,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:9b1e5c9039fb",
     "source": "news",
     "title": "“주문한 음료 1분48초 뒤 나옵니다”…엑스와이지 바리스타 로봇의 진화",
@@ -3135,44 +3042,6 @@
       "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:333699f2e54e",
-    "source": "news",
-    "title": "I turned my freddy plushie into a withered freddy plushie #witheredfreddy #fnafplushies",
-    "url": "https://www.youtube.com/shorts/2ZrqORP46MY",
-    "summary": "",
-    "published": "2026-07-31T14:45:36+00:00",
-    "updated": "2026-07-31T14:45:36+00:00",
-    "authors": [
-      "Figure_official"
-    ],
-    "extra": {
-      "feed": "Figure AI (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i3.ytimg.com/vi/2ZrqORP46MY/hqdefault.jpg",
-      "first_seen": "2026-07-31",
-      "full_text": "",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 7.291,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.2912502491666666,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
       "demote": -0.0
     },
     "priority": "save_for_later"
