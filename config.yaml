@@ -548,6 +548,9 @@ site:
   items_on_index: 1500  # cap for non-news items (papers + repos)
   news_min_slots: 90   # ensure at least this many news items always visible
   top_tags: 16         # how many tag-filter chips to expose
+  # Cloudflare Web Analytics beacon token (Cloudflare dashboard > Web Analytics >
+  # add site > copy the value of data-cf-beacon "token"). Empty = no tracking.
+  cf_analytics_token: "42dabdc680e046f29b564fe4376c0d9c"
 
 # Daily news email digest (HTML, sent via SMTP).
 # Recipients live here — add/remove freely. SMTP credentials NEVER go in this

@@ -325,6 +325,7 @@ def build_site(cfg: dict[str, Any]) -> Path:
         "title": site_cfg.get("title", "RNEWS — Robot NEWS"),
         "description": site_cfg.get("description", ""),
         "url": site_cfg.get("url", ""),
+        "cf_analytics_token": site_cfg.get("cf_analytics_token", ""),
     }
     generated = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     # Cache-bust query string for static assets (styles.css, filters.js). Each
