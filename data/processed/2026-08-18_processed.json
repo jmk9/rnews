@@ -273,7 +273,7 @@
     "source": "github",
     "title": "sou350121/VLA-Handbook",
     "url": "https://github.com/sou350121/VLA-Handbook",
-    "summary": "本项目旨在为致力于进入VLA(Vision-Language-Action)领域的算法工程师提供一份全中文、实战导向的学习/面试手册。  不同于通用的 CV/NLP 面试指南，本项目聚焦于 Robotics 特有的挑战",
+    "summary": "VLA-Handbook is a Chinese, practice-oriented study and interview guide for algorithm engineers entering Vision-Language-Action work in robotics. It narrows the usual CV/NLP interview scope to robotics-specific issues, making it more useful for people preparing to work on embodied AI systems rather than generic perception or language roles.",
     "published": "2025-11-23T06:25:26Z",
     "updated": "2026-08-18T15:30:05Z",
     "authors": [
@@ -297,7 +297,7 @@
       "license": "CC-BY-4.0",
       "first_seen": "2026-05-18",
       "full_text": "本项目旨在为致力于进入VLA(Vision-Language-Action)领域的算法工程师提供一份全中文、实战导向的学习/面试手册。  不同于通用的 CV/NLP 面试指南，本项目聚焦于 Robotics 特有的挑战",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -407,7 +407,7 @@
     "source": "arxiv",
     "title": "HAF: Adapting Generalist VLAs to Humanoid Whole-Body Loco-manipulation via Hierarchical Action Flow and Spectral Latent RL",
     "url": "http://arxiv.org/abs/2608.16837v1",
-    "summary": "Humanoid robots hold great promise as general-purpose agents in human-centered environments, yet generalist vision-language-action (VLA) foundation models are not readily applicable to humanoid whole-body loco-manipulation.",
+    "summary": "HAF adapts frozen generalist vision-language-action models to humanoid whole-body loco-manipulation by decomposing action generation into staged flows for locomotion, waist posture, and dual-arm control, with embeddings and cross-stage KV caches preserving kinematic dependencies. Its HAF-Steer component then refines behavior through offline-to-online RL in a compact DCT-reduced latent noise space, avoiding expensive and risky updates to the large VLA backbone. On seven real-world humanoid loco-manipulation tasks, it outperforms single-stage VLA baselines and produces better coordinated full-body behavior.",
     "published": "2026-08-17T17:22:33+00:00",
     "updated": "2026-08-17T17:22:33+00:00",
     "authors": [
@@ -439,7 +439,7 @@
       "comment": "Project page: https://grange007.github.io/HAF",
       "first_seen": "2026-08-18",
       "full_text": "Humanoid robots hold great promise as general-purpose agents in human-centered environments, yet generalist vision-language-action (VLA) foundation models are not readily applicable to humanoid whole-body loco-manipulation. The high dimensionality and interdependence of humanoid motions make it challenging for conventional single-stage VLA architectures to coordinate locomotion, waist posture, and dual-arm manipulation effectively. Moreover, policies trained through offline behavior cloning can remain suboptimal during real-world deployment. Although online reinforcement learning can refine policies through real-world interaction, directly tuning large VLA backbones demands excessive computation and may introduce safety risks during real-robot exploration. To address these bottlenecks, we introduce HAF (Humanoid Adaptation Framework), a two-part framework consisting of HAF-VLA and HAF-Steer that transfers off-the-shelf generalist VLA foundation models to humanoid whole-body loco-manipulation. HAF-VLA is a hierarchical action-flow generator built on a pretrained flow-matching VLA. It splits full-body action denoising into three sequential stages with stage embeddings and cross-stage KV caches that retain kinematic dependencies, avoiding incoherent whole-body actions from one-shot generation. On top of the frozen HAF-VLA, HAF-Steer is a latent offline-to-online RL pipeline that leverages flow-matching invertibility and DCT-based dimensionality reduction to restrict RL optimization to a compact noise subspace and train a regularized SAC policy. This avoids updating the large VLA backbone and enables efficient real-world policy refinement. Evaluated on seven real-world humanoid loco-manipulation tasks, HAF surpasses vanilla single-stage VLA baselines and improves whole-body coordination and task performance. Project website: https://grange007.github.io/HAF .",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.16837.jpg"
     },
     "tags": [
@@ -471,7 +471,7 @@
     "source": "github",
     "title": "google-deepmind/mujoco_playground",
     "url": "https://github.com/google-deepmind/mujoco_playground",
-    "summary": "An open-source library for GPU-accelerated robot learning and sim-to-real transfer.",
+    "summary": "google-deepmind/mujoco_playground provides a GPU-accelerated environment for training robot learning policies in MuJoCo, with an emphasis on workflows that can transfer from simulation to real hardware. It is useful as a practical playground for running large-scale robot learning experiments quickly while keeping sim-to-real considerations close to the training loop.",
     "published": "2024-12-03T22:39:09Z",
     "updated": "2026-08-18T16:38:13Z",
     "authors": [
@@ -486,7 +486,7 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18",
       "full_text": "An open-source library for GPU-accelerated robot learning and sim-to-real transfer.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://github.com/google-deepmind/mujoco_playground/raw/main/assets/banner.png?raw=true"
     },
     "tags": [
@@ -556,7 +556,7 @@
     "source": "arxiv",
     "title": "NebulaVLA: A Dual-Frequency Vision-Language-Action Model With Guide Action for Robotic Manipulation",
     "url": "http://arxiv.org/abs/2608.16503v1",
-    "summary": "Real-world deployment of Vision-Language-Action (VLA) models is often bottlenecked by efficiency-performance trade-offs, cross-embodiment generalization, and execution smoothness.",
+    "summary": "NebulaVLA speeds up robotic manipulation by splitting VLA control into asynchronous high-level semantic reasoning and lower-level action generation, rather than forcing every control step through the same synchronous pipeline. It adds GESTURE-7 as a language-grounded action representation for transferring across different robot embodiments, and a Guide Action smoothing method that uses mask-based constraints to keep motions kinematically continuous. On LIBERO-Plus it reaches an 85.5% average success rate while generating actions about 2.7x faster than synchronous baselines.",
     "published": "2026-08-17T12:40:23+00:00",
     "updated": "2026-08-17T12:40:23+00:00",
     "authors": [
@@ -585,7 +585,7 @@
       "comment": "14 pages, 5 figures",
       "first_seen": "2026-08-18",
       "full_text": "Real-world deployment of Vision-Language-Action (VLA) models is often bottlenecked by efficiency-performance trade-offs, cross-embodiment generalization, and execution smoothness. We present NebulaVLA, an asynchronous dual-frequency architecture that decouples high-level semantic reasoning from low-level action control, optimizing computational resources and modularity. To bridge semantic gaps across heterogeneous robots, we introduce GESTURE-7, a unified language-grounded action representation. Furthermore, our Guide Action algorithm enforces kinematic continuity via mask-based smoothness constraints. Comprehensive evaluations demonstrate that NebulaVLA significantly outperforms synchronous baselines, achieving an 85.5\\% average success rate on LIBERO-Plus and accelerating action generation by \\textasciitilde 2.7$\\times$. This asynchronous design enables highly efficient and responsive control for practical robotics.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.16503.jpg"
     },
     "tags": [
@@ -707,7 +707,7 @@
     "source": "arxiv",
     "title": "US-VLA: An Ultrasound Vision-Language-Action Model for Embodied Abdomina",
     "url": "http://arxiv.org/abs/2608.16074v1",
-    "summary": "Artificial intelligence-assisted ultrasound scanning enhances diagnostic reliability and efficiency by providing real-time guidance for standardized image acquisition and reducing operator dependence.",
+    "summary": "US-VLA is a vision-language-action model for automated abdominal ultrasound scanning that turns clinical semantic goals and live ultrasound feedback into sequential probe manipulation actions. It uses an ultrasound-aware expert fusion module to combine image observations with auxiliary context, and is trained/evaluated on US-VLA-Data: 320 real expert liver and kidney scanning trajectories, about 80,000 synchronized timesteps, and five clinically defined standard planes. Experiments show competitive probe-control performance in this setting, suggesting a path toward more generalizable ultrasound guidance without hand-crafted RL rewards or heavy interaction data.",
     "published": "2026-08-17T04:12:21+00:00",
     "updated": "2026-08-17T04:12:21+00:00",
     "authors": [
@@ -729,7 +729,7 @@
       "comment": null,
       "first_seen": "2026-08-18",
       "full_text": "Artificial intelligence-assisted ultrasound scanning enhances diagnostic reliability and efficiency by providing real-time guidance for standardized image acquisition and reducing operator dependence. However, existing reinforcement learning and learning-assisted ultrasound scanning methods typically rely on carefully designed reward functions or extensive interaction data, which limits their generalization ability and stability across different devices, patient populations, and complex clinical scenarios. To address these challenges, we propose an ultrasound vision-language-action model (US-VLA) for automated ultrasound scanning that explicitly encodes clinical semantic goals and generates sequential probe manipulation actions under real-time ultrasound feedback. In particular, we first design an ultrasound-aware expert fusion module to jointly integrate ultrasound observations with auxiliary contextual information, enabling semantic ultrasound feedback to effectively guide the scanning process. Then, we construct US-VLA-Data, a real-world dataset covering liver and kidney examinations, which includes five clinically defined standard planes and comprises 320 expert scanning trajectories with approximately 80,000 synchronized timesteps. Extensive experiments demonstrate that US-VLA achieves competitive performance in ultrasound probe manipulation tasks, indicating its effectiveness and promising generalization within the evaluated abdominal ultrasound setting. The source code is available at https://github.com/VMVLab/US-VLA.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.16074.jpg"
     },
     "tags": [
@@ -842,7 +842,7 @@
     "source": "github",
     "title": "NVIDIA/warp",
     "url": "https://github.com/NVIDIA/warp",
-    "summary": "A Python framework for GPU-accelerated simulation, robotics, and machine learning.",
+    "summary": "NVIDIA Warp is a Python framework for writing GPU-accelerated simulation code aimed at robotics, graphics, physics, and machine learning workloads. It lets users author differentiable kernels in Python that compile to fast CUDA code, making it useful for building custom simulators, physics environments, and learning systems that need tight GPU performance without dropping fully into C++/CUDA.",
     "published": "2022-03-18T21:56:23Z",
     "updated": "2026-08-18T20:54:50Z",
     "authors": [
@@ -865,7 +865,7 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18",
       "full_text": "A Python framework for GPU-accelerated simulation, robotics, and machine learning.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://github.com/NVIDIA/warp/raw/main/docs/img/header.jpg"
     },
     "tags": [
@@ -892,7 +892,7 @@
     "source": "github",
     "title": "RobotControlStack/robot-control-stack",
     "url": "https://github.com/RobotControlStack/robot-control-stack",
-    "summary": "A lean, ROS-free sim-to-real framework for training and deploying Vision-Language-Action (VLA) models and RL agents. Native MuJoCo Gymnasium wrappers with synchronous execution for Franka, UR5e, xArm, SO101 and YAM.",
+    "summary": "RobotControlStack is a lightweight sim-to-real stack for training and deploying Vision-Language-Action models and reinforcement learning agents without depending on ROS. It provides native MuJoCo Gymnasium wrappers with synchronous execution across several robot platforms, including Franka, UR5e, xArm, SO101, and YAM, making it useful for researchers who want a leaner path from simulation experiments to real robot control.",
     "published": "2024-02-29T12:40:59Z",
     "updated": "2026-08-18T19:01:58Z",
     "authors": [
@@ -917,7 +917,7 @@
       "license": "AGPL-3.0",
       "first_seen": "2026-05-18",
       "full_text": "A lean, ROS-free sim-to-real framework for training and deploying Vision-Language-Action (VLA) models and RL agents. Native MuJoCo Gymnasium wrappers with synchronous execution for Franka, UR5e, xArm, SO101 and YAM.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/RobotControlStack/robotcontrolstack.github.io/refs/heads/master/static/videos/grid.webp"
     },
     "tags": [
@@ -1027,7 +1027,7 @@
     "source": "github",
     "title": "isaac-sim/IsaacLab-Arena",
     "url": "https://github.com/isaac-sim/IsaacLab-Arena",
-    "summary": "Isaac Lab - Arena is a robotics simulation framework that enhances NVIDIA Isaac Lab by providing a composable, scalable system for creating diverse simulation environments and evaluating robot learning policies. The framework enables developers to rapidly prototype and test robotic tasks with various robot embodiments, objects, and environments.",
+    "summary": "Isaac Lab - Arena extends NVIDIA Isaac Lab with a composable simulation layer for assembling robot learning tasks across different embodiments, objects, and environments. It is aimed at rapid prototyping and policy evaluation, making it useful when researchers need to generate diverse simulation setups without rebuilding task infrastructure each time.",
     "published": "2025-08-15T12:28:23Z",
     "updated": "2026-08-18T20:00:21Z",
     "authors": [
@@ -1042,7 +1042,7 @@
       "license": "NOASSERTION",
       "first_seen": "2026-05-18",
       "full_text": "Isaac Lab - Arena is a robotics simulation framework that enhances NVIDIA Isaac Lab by providing a composable, scalable system for creating diverse simulation environments and evaluating robot learning policies. The framework enables developers to rapidly prototype and test robotic tasks with various robot embodiments, objects, and environments.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/isaac-sim/IsaacLab-Arena/HEAD/docs/images/g1_galileo_arena_box_pnp_locomanip.gif"
     },
     "tags": [
@@ -1069,7 +1069,7 @@
     "source": "github",
     "title": "ROBOTIS-GIT/cyclo_lab",
     "url": "https://github.com/ROBOTIS-GIT/cyclo_lab",
-    "summary": "This repository provides tutorials for reinforcement learning and imitation learning using ROBOTIS robots, and supports Sim2Real functionality for deploying the learned policies on real robots.",
+    "summary": "ROBOTIS-GIT/cyclo_lab collects reinforcement learning and imitation learning tutorials built around ROBOTIS robots, with an emphasis on taking policies from simulation onto physical hardware. It looks most useful as a hands-on Sim2Real learning and deployment resource for researchers or engineers working with ROBOTIS platforms, rather than as a standalone algorithmic contribution.",
     "published": "2025-07-14T12:30:59Z",
     "updated": "2026-08-18T07:57:07Z",
     "authors": [
@@ -1093,7 +1093,7 @@
       "license": "Apache-2.0",
       "first_seen": "2026-06-26",
       "full_text": "This repository provides tutorials for reinforcement learning and imitation learning using ROBOTIS robots, and supports Sim2Real functionality for deploying the learned policies on real robots.",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -1259,7 +1259,7 @@
     "source": "arxiv",
     "title": "ForceU-VLA: A Force-Aware Vision-Language-Action Model for Embodied Ultrasound Scanning",
     "url": "http://arxiv.org/abs/2608.15009v1",
-    "summary": "Embodied intelligent ultrasound scanning enables the automation and standardization of the ultrasound examination process by integrating perception, decision-making, and execution capabilities.",
+    "summary": "ForceU-VLA is a force-aware vision-language-action model for autonomous ultrasound scanning that couples ultrasound images with probe force signals, using a Force-Ultrasound Synergistic Fusion Module to guide motion and a stage-adaptive modulation mechanism to adjust behavior across different phases of scanning. The authors also introduce ForceU-VLA-Data, a real-world dataset with 450 expert trajectories and about 100,000 synchronized visual, force, and action frames across two organs and five clinical views. In experiments, the system improves contact stability and pressure regulation, aiming to make robotic ultrasound acquisition more reliable and standardized.",
     "published": "2026-08-15T03:39:40+00:00",
     "updated": "2026-08-15T03:39:40+00:00",
     "authors": [
@@ -1280,7 +1280,7 @@
       "comment": null,
       "first_seen": "2026-08-18",
       "full_text": "Embodied intelligent ultrasound scanning enables the automation and standardization of the ultrasound examination process by integrating perception, decision-making, and execution capabilities. However, existing methods suffer from loosely coupled modeling between force and ultrasound modalities and lack awareness of scanning stages, which limits their ability to capture dynamic probe-tissue interactions. To address these issues, we propose ForceU-VLA, a force-aware Vision-Language-Action model for autonomous embodied ultrasound scanning, which leverages force signals and ultrasound image feedback throughout the scanning process to enable accurate and high-quality ultrasound acquisition. Firstly, we propose a Force-Ultrasound Synergistic Fusion Module (FUSFM) that synergistically fuses ultrasound visual and force-feedback information to provide stable, reliable guidance for probe motion. Secondly, a Stage-Adaptive Modulation Mechanism (SAMM) is proposed to accommodate the task requirements across different scanning stages by adaptively modulating multimodal features to enhance their representation quality. Additionally, we introduce ForceU-VLA-Data, a real-world, force-aware embodied ultrasound dataset that integrates visual, force, and action signals, including data from two organs across five representative clinical scanning views, and comprising 450 expert-collected trajectories with approximately 100,000 synchronized multimodal frames. Extensive experimental results demonstrate that ForceU-VLA significantly improves contact stability and probe pressure regulation in embodied ultrasound scanning, thereby effectively enhancing task execution quality and overall system reliability. The source code is available at https://github.com/VMVLab/ForceU-VLA.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.15009.jpg"
     },
     "tags": [
@@ -1583,7 +1583,7 @@
     "source": "arxiv",
     "title": "StructRL: Structured Action-Space Exploration for Flow-Based VLAs",
     "url": "http://arxiv.org/abs/2608.15139v1",
-    "summary": "Flow-based Vision-Language-Action (VLA) models are now widely used for continuous robotic manipulation, and online reinforcement learning (RL) is emerging as a key technique for adapting them to new tasks. Existing RL methods typically inject stochasticity inside the denoising chain, often through isotropic or temporally independent noise.",
+    "summary": "StructRL adapts flow-based vision-language-action robot policies with RL by moving exploration noise out of the denoising chain and directly into the executed action space. Its deterministic ODE decoder, structured action-space noise, and last-step replay are designed to avoid Structured Noise Dilution, where intermediate noise gets washed out before execution. Across three flow-based VLA models, simulated manipulation benchmarks, and two real-world tasks, it improves exploration efficiency and out-of-distribution performance over in-chain noise baselines.",
     "published": "2026-08-15T09:31:29+00:00",
     "updated": "2026-08-15T09:31:29+00:00",
     "authors": [
@@ -1604,7 +1604,7 @@
       "comment": null,
       "first_seen": "2026-08-18",
       "full_text": "Flow-based Vision-Language-Action (VLA) models are now widely used for continuous robotic manipulation, and online reinforcement learning (RL) is emerging as a key technique for adapting them to new tasks. Existing RL methods typically inject stochasticity inside the denoising chain, often through isotropic or temporally independent noise. However, effective robot exploration calls for structured noise: temporally smooth and scaled differently across action groups. We show that simply switching the in-chain noise to a structured form does not suffice: noise added at an intermediate flow time can be weakened by the remaining denoising steps before execution, a phenomenon we call \\emph{Structured Noise Dilution}. We propose \\textbf{StructRL}, which avoids dilution by relocating policy stochasticity to the action space via three coupled choices: (i) a deterministic ODE decoder, (ii) structured noise injected directly in the action space, and (iii) last-step replay, where policy-gradient updates avoid assigning likelihoods to intermediate denoising states. This keeps structured exploration tied to the executed action while providing a tractable training signal for the flow decoder. Across three flow-based VLA models on multiple simulated manipulation benchmarks and two real-world tasks, StructRL improves exploration efficiency and OOD performance over prior in-chain baselines, demonstrating the effectiveness of structured action-space exploration for adapting flow-based VLA with RL. \\textbf{Project page:} https://flyfaerss.github.io/structrl/",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.15139.jpg"
     },
     "tags": [
@@ -1914,7 +1914,7 @@
     "source": "github",
     "title": "DeepRoboticsLab/sdk_deploy",
     "url": "https://github.com/DeepRoboticsLab/sdk_deploy",
-    "summary": "Sim-to-sim and sim-to-real deployment for Deep Robotics Robots, currently supporting M20 and Lite3",
+    "summary": "DeepRoboticsLab/sdk_deploy provides sim-to-sim and sim-to-real deployment support for Deep Robotics quadrupeds, currently the M20 and Lite3. It is useful for moving robot control policies or simulation-tested behaviors toward hardware through the vendor SDK path, with a focus on deployment rather than training or benchmarking.",
     "published": "2025-11-08T13:09:36Z",
     "updated": "2026-08-18T03:44:41Z",
     "authors": [
@@ -1929,7 +1929,7 @@
       "license": "BSD-3-Clause",
       "first_seen": "2026-05-18",
       "full_text": "Sim-to-sim and sim-to-real deployment for Deep Robotics Robots, currently supporting M20 and Lite3",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -2258,7 +2258,7 @@
     "source": "arxiv",
     "title": "Tac4Loco: Learning Spatiotemporal Plantar Pressure Representations for Humanoid Locomotion",
     "url": "http://arxiv.org/abs/2608.15766v1",
-    "summary": "Humanoid robots are expected to traverse complex terrains, where the plantar support may vary dramatically due to foot placement errors, ground properties, and transient dynamics. To achieve robust locomotion, the robots are required to adapt to uneven terrain and uncertain foot--ground interactions.",
+    "summary": "Tac4Loco gives humanoid locomotion policies direct feedback from multi-array plantar pressure sensors, using a topology-preserving ordinal representation to align simulated and physical pressure readings and a dual-branch encoder to learn spatial and temporal contact features. Those tactile features are fused with augmented proprioception and terrain cues in an asymmetric actor-critic policy, improving tracking and support adaptation on inclined, partial, asymmetric, and changing supports. The system also transfers zero-shot to unseen compliant and unstructured terrain, including foam and gravel, suggesting plantar pressure topology can close a real feedback gap left by proprioception and pre-touchdown terrain perception.",
     "published": "2026-08-16T14:37:05+00:00",
     "updated": "2026-08-16T14:37:05+00:00",
     "authors": [
@@ -2281,7 +2281,7 @@
       "comment": "9 pages,6 figures",
       "first_seen": "2026-08-18",
       "full_text": "Humanoid robots are expected to traverse complex terrains, where the plantar support may vary dramatically due to foot placement errors, ground properties, and transient dynamics.   To achieve robust locomotion, the robots are required to adapt to uneven terrain and uncertain foot--ground interactions.   Existing locomotion policies rely primarily on proprioception or exteroceptive terrain perception, where the former provides only indirect evidence of plantar support, while the latter predicts contact conditions before touchdown but cannot observe the actual support in real-time.   Although some studies incorporate plantar contacts as an auxiliary perception, they rely mainly on summary statistics, overlooking the spatial topology of plantar pressure, which provides a more direct characterization of the realized contact state.   To bridge this gap, we present Tac4Loco, a tactile-perceptive framework that incorporates multi-array plantar pressure as direct feedback for humanoid locomotion.   We formulate a topology-preserving ordinal representation to map simulated and physical sensor signals into a shared observation space,   with a dual-branch encoder for extracting their spatial and temporal representations. Subsequently, the learned spatiotemporal features are integrated with augmented proprioception including terrain estimation cues, and provided to an asymmetric actor-critic architecture for policy learning.   Extensive simulation and real-world experiments demonstrate improved tracking performance and support adaptation on terrains with inclined, partial, asymmetric, and changing support. We further demonstrate its zero-shot deployment on unseen compliant and unstructured terrains, including a foam platform and a gravel road. All code and experimental configurations will be released as open-source to facilitate reproducibility.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.15766.jpg"
     },
     "tags": [
@@ -2407,7 +2407,7 @@
     "source": "github",
     "title": "D-Robotics/hobot_stereonet",
     "url": "https://github.com/D-Robotics/hobot_stereonet",
-    "summary": "Hobot StereoNet is a high-performance, deep learning-based stereo depth estimation algorithm developed by D-Robotics. It processes stereo image pairs to generate accurate depth maps in real-time, enabling 3D perception for robotics and computer vision applications.",
+    "summary": "Hobot StereoNet is a D-Robotics deep learning model for stereo depth estimation, taking paired left-right images and producing depth maps fast enough for real-time use. It is aimed at robotics and computer vision systems that need dense 3D perception from stereo cameras, where the practical value is accurate depth recovery without relying on heavier sensing hardware.",
     "published": "2024-07-20T16:24:50Z",
     "updated": "2026-08-18T12:56:09Z",
     "authors": [
@@ -2422,7 +2422,7 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18",
       "full_text": "Hobot StereoNet is a high-performance, deep learning-based stereo depth estimation algorithm developed by D-Robotics. It processes stereo image pairs to generate accurate depth maps in real-time, enabling 3D perception for robotics and computer vision applications.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/D-Robotics/hobot_stereonet/HEAD/standalone/docs/visual_1765459980707.jpg"
     },
     "tags": [
@@ -2677,7 +2677,7 @@
     "source": "arxiv",
     "title": "Robo-Dopamine 2.0: History-Conditioned and OOD-Aware Process Reward Modeling for Robotic Manipulation",
     "url": "http://arxiv.org/abs/2608.15680v1",
-    "summary": "Vision-language-action (VLA) models improve robotic manipulation but remain vulnerable to compounding errors, scene changes, and off-trajectory states. Reinforcement learning can refine pretrained VLA policies, yet sparse success signals hinder exploration, while engineered dense rewards are costly and task-specific.",
+    "summary": "Robo-Dopamine 2.0 trains a process reward model for robotic manipulation that judges pairwise progress using rollout history or source-aligned reference panels, so it can distinguish genuine task progress, robustness-preserving variation, failure, and recovery even when a VLA policy drifts off-trajectory. Its Signed-Hop Curriculum first learns coarse execution order and then calibrates fine-grained progress, improving OOD-robust visual order consistency from 0.906 to 0.958 with reference panels and reaching 86.8% mean RoboTwin success plus 71/80 successful real-world insertions in downstream RL.",
     "published": "2026-08-16T11:15:55+00:00",
     "updated": "2026-08-16T11:15:55+00:00",
     "authors": [
@@ -2703,7 +2703,7 @@
       "comment": null,
       "first_seen": "2026-08-18",
       "full_text": "Vision-language-action (VLA) models improve robotic manipulation but remain vulnerable to compounding errors, scene changes, and off-trajectory states. Reinforcement learning can refine pretrained VLA policies, yet sparse success signals hinder exploration, while engineered dense rewards are costly and task-specific. Existing learned visual reward models often rely on static before-after observations, causing temporal ambiguity and weak discrimination between robustness-preserving variations and task-invalid failures under out-of-distribution (OOD) execution. We introduce Robo-Dopamine 2.0, a history- and OOD-aware process reward model with a pairwise prediction interface. It combines (1) history-conditioned pairwise rewards that use source-aligned reference panels for synthetic OOD queries and observed rollout history for online queries, while preserving the queried endpoints, and (2) an OOD-aware signed progress space that represents valid progress, robustness, failure, and recovery. A Signed-Hop Curriculum with transition-aware replay learns coarse execution ordering before fine-grained progress calibration. We also construct an OOD trajectory dataset and a five-family benchmark. Reference panels improve mean visual order consistency (VOC) from 0.967 to 0.986 and OOD-robust VOC from 0.906 to 0.958. With the same 400K pairwise-reward budget, Signed-Hop training with 25% replay reaches 0.9872 mean VOC, compared with 0.9858 for a matched-pool shuffled control. In downstream reinforcement learning, the full model achieves 86.8% mean RoboTwin success and 71/80 successful real-world insertions.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.15680.jpg"
     },
     "tags": [
@@ -2732,7 +2732,7 @@
     "source": "arxiv",
     "title": "EcoVLA: Energy-Efficient Device-Edge Co-Inference for Vision-Language-Action Models under Real-Time Constraints",
     "url": "http://arxiv.org/abs/2608.15502v1",
-    "summary": "Vision-Language-Action (VLA) models have emerged as a promising foundation for Embodied AI, but their high inference cost poses significant challenges for deployment in robotic systems.",
+    "summary": "EcoVLA targets the deployment problem for vision-language-action robot policies by splitting inference between the robot and an edge server at the stage level, using latency and energy predictors to choose the lowest-energy partition that still meets real-time control deadlines. It is designed to work across different VLA architectures and adapts online to changing network and edge-server load, with lightweight tensor transmission to reduce cross-device communication cost. Across tested VLA models, it reports up to 236% better system energy efficiency than existing co-inference approaches while maintaining a 20 Hz action-output constraint under dynamic conditions.",
     "published": "2026-08-16T03:08:40+00:00",
     "updated": "2026-08-16T03:08:40+00:00",
     "authors": [
@@ -2755,7 +2755,7 @@
       "comment": "Accepted by APPT 2026",
       "first_seen": "2026-08-18",
       "full_text": "Vision-Language-Action (VLA) models have emerged as a promising foundation for Embodied AI, but their high inference cost poses significant challenges for deployment in robotic systems. In practice, on-device inference is constrained by limited compute capacity and energy budgets, struggling to simultaneously satisfy real-time control and energy efficiency requirements. Alternatively, offloading the inference workload to an edge server is susceptible to fluctuations in system conditions, introducing unpredictable latency risks. Device-edge co-inference offers a promising solution, but systematic research tailored to VLA models remains scarce, particularly a unified co-inference framework that jointly addresses real-time constraints and system-level energy efficiency. Thus, we propose EcoVLA, an adaptive device-edge co-inference framework for VLA models that maximizes system energy efficiency under real-time constraints. EcoVLA first introduces a unified stage-level abstraction over different VLA paradigms, establishing an architecture-agnostic co-inference design space. It then formulates a joint device-edge-network latency and energy prediction model to enable rapid runtime evaluation of candidate co-inference schemes. Building on this, EcoVLA continuously selects the energy-optimal scheme satisfying real-time constraints with millisecond-level overhead, adapting to runtime variations in network and system states. Furthermore, EcoVLA incorporates a lightweight transmission mechanism for inter-stage intermediate tensors to reduce the communication overhead incurred by cross-device collaboration. Experimental results across VLA models show that EcoVLA improves system energy efficiency by up to 236% over existing co-inference approaches under a 20 Hz action output frequency constraint, while consistently maintaining SLO satisfaction under dynamic network and edge workload conditions.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.15502.jpg"
     },
     "tags": [
@@ -3040,7 +3040,7 @@
     "source": "arxiv",
     "title": "$τ_0$-VLA: a Hierarchical Robot Foundation Model with World-Model-Guided Test-Time Computation",
     "url": "http://arxiv.org/abs/2608.16885v1",
-    "summary": "Long-horizon robot manipulation requires a robot to both execute individual skills reliably and sequence them coherently over extended tasks. Most hierarchical vision-language-action (VLA) models make each such decision with a single forward pass, leaving no mechanism to allocate additional computation to difficult or consequential choices.",
+    "summary": "τ₀-VLA is a hierarchical vision-language-action robot model that lets the high-level planner spend extra test-time computation on hard subtask choices, using execution memory and a world-model-guided search over candidate next subtasks before committing. A low-level policy then carries out the selected subtask across different robot embodiments, with the whole system trained on 40,115 hours of heterogeneous real-world robot data. The added inference-time search improves next-subtask prediction under both in-domain and distribution-shifted conditions, and those prediction gains translate into better closed-loop success on long-horizon manipulation tasks.",
     "published": "2026-08-17T17:59:11+00:00",
     "updated": "2026-08-17T17:59:11+00:00",
     "authors": [
@@ -3093,7 +3093,7 @@
       "comment": "18 pages, 5 figures. Project page: https://tau0-vla.github.io/",
       "first_seen": "2026-08-18",
       "full_text": "Long-horizon robot manipulation requires a robot to both execute individual skills reliably and sequence them coherently over extended tasks. Most hierarchical vision-language-action (VLA) models make each such decision with a single forward pass, leaving no mechanism to allocate additional computation to difficult or consequential choices. We introduce $τ_0$-VLA, a hierarchical robot foundation model that formulates high-level subtask generation as a compute-scalable inference problem through world-model-guided test-time computation. At each inference step, the high-level policy uses execution memory to generate a subtask and, when needed, searches over alternatives before committing to its output. A low-level policy then executes the generated subtask across multiple robot embodiments. The policy is trained on 40,115 hours of heterogeneous real-world data with multimodal co-training. Across in-domain and distribution-shifted settings, allocating additional test-time computation substantially improves next-subtask prediction accuracy, and these gains translate into higher closed-loop success on long-horizon robot manipulation tasks.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.16885.jpg"
     },
     "tags": [
@@ -3121,7 +3121,7 @@
     "source": "arxiv",
     "title": "ViTaR: Visuo-Tactile Residual Adaptation for Foundation VLA Manipulation",
     "url": "http://arxiv.org/abs/2608.15816v1",
-    "summary": "As Vision-Language-Action (VLA) models scale toward real-world deployment, contact-rich manipulation exposes a critical blind spot: these policies encode broad visual-semantic priors yet remain unaware of local contact events, producing identical actions whether contact is established, lost, or destabilized.",
+    "summary": "ViTaR keeps a foundation vision-language-action policy frozen and uses tactile feedback only as a bounded residual modulator, deciding when contact evidence justifies a local correction and how strongly to apply it. On the seven-task UniVTAC contact-rich manipulation benchmark, this visuotactile residual adaptation reaches 61.3% average success, improving the frozen VLA by 30.6 points and outperforming purpose-built tactile baselines, with physical-robot tests showing the bounded corrections survive real sensor noise and dynamics.",
     "published": "2026-08-16T15:46:11+00:00",
     "updated": "2026-08-16T15:46:11+00:00",
     "authors": [
@@ -3139,7 +3139,7 @@
       "comment": null,
       "first_seen": "2026-08-18",
       "full_text": "As Vision-Language-Action (VLA) models scale toward real-world deployment, contact-rich manipulation exposes a critical blind spot: these policies encode broad visual-semantic priors yet remain unaware of local contact events, producing identical actions whether contact is established, lost, or destabilized. Existing remedies either modify VLA internals, risking catastrophic forgetting, or demand online reinforcement under near-failure contact conditions. Both grant tactile unbounded influence over action generation, conflicting with the priors that make VLAs generalizable. We introduce ViTaR, which reframes tactile feedback from an action-generating perceptual input to an execution modulator that selects and scales bounded residual corrections atop a frozen VLA, preserving pretrained capabilities by construction. ViTaR decomposes adaptation into two stages: Effect-Guided Modeling determines whether and which correction is locally justified via outcome-grounded preference evidence, and Residual Action Modulation converts this evidence into a residual choice with continuously scaled gain from real-time visuotactile observations. On the UniVTAC benchmark spanning seven contact-rich tasks, ViTaR achieves 61.3% average success, a 30.6 percentage-point improvement over its frozen VLA base that also surpasses purpose-built tactile baselines. Physical-robot experiments confirm that bounded tactile modulation transfers to real sensor noise and dynamics.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.15816.jpg"
     },
     "tags": [
@@ -3719,7 +3719,7 @@
     "source": "github",
     "title": "Holiday-Robot/rsl_rl_flashsac",
     "url": "https://github.com/Holiday-Robot/rsl_rl_flashsac",
-    "summary": "RSL-RL Implementation of \"FlashSAC: Fast and Stable Off-Policy Reinforcement Learning for High-Dimensional Robot Control\"",
+    "summary": "Holiday-Robot/rsl_rl_flashsac implements FlashSAC inside the RSL-RL reinforcement learning stack, targeting fast, stable off-policy training for high-dimensional robot control. It is useful for researchers already working with RSL-RL who want to experiment with SAC-style sample-efficient learning in robot domains without building the algorithm integration from scratch.",
     "published": "2026-08-18T03:49:49Z",
     "updated": "2026-08-18T14:14:37Z",
     "authors": [
@@ -3737,7 +3737,7 @@
       "license": "NOASSERTION",
       "first_seen": "2026-08-18",
       "full_text": "RSL-RL Implementation of \"FlashSAC: Fast and Stable Off-Policy Reinforcement Learning for High-Dimensional Robot Control\"",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/Holiday-Robot/rsl_rl_flashsac/HEAD/docs/videos/velocity_rough_g1.gif"
     },
     "tags": [
@@ -3765,7 +3765,7 @@
     "source": "arxiv",
     "title": "Imagining Recovery: Inference-Time Counterfactual Realignment for Vision-Language-Action Models",
     "url": "http://arxiv.org/abs/2608.14822v1",
-    "summary": "Vision-language-action (VLA) models have improved the flexibility and generality of robotic manipulation, yet they remain fragile to online disruptions, such as changes in task goal, scene configuration, or robot state.",
+    "summary": "CoRe lets a frozen vision-language-action manipulation policy recover from mid-task disruptions at inference time by “imagining” how it would have continued from a recent viable state, then minimally moving the robot and scene back onto that counterfactual trajectory. Because the recovery is planned through synthesized observations rather than physical trial-and-error, it can handle goal changes, scene perturbations, and robot-state deviations without failure data, fine-tuning, or a separate corrective policy. Across simulators, VLA backbones, and real-world tests, it raises success rates by up to 85.0 percentage points to near-nominal levels while cutting physical restorations by 42.2%.",
     "published": "2026-08-14T18:49:46+00:00",
     "updated": "2026-08-14T18:49:46+00:00",
     "authors": [
@@ -3789,7 +3789,7 @@
       "comment": null,
       "first_seen": "2026-08-18",
       "full_text": "Vision-language-action (VLA) models have improved the flexibility and generality of robotic manipulation, yet they remain fragile to online disruptions, such as changes in task goal, scene configuration, or robot state. Existing recovery methods often require failure data, policy retraining, or external corrective agents, introducing additional data requirements and execution risks. We propose Counterfactual Realignment (CoRe), a training-free framework that recovers a frozen VLA at inference time without failure data. Upon detecting a deviation, CoRe imagines how the policy would continue toward the current goal from a recent viable state, using synthesized observations in place of physical execution, and then minimally realigns the robot and scene to rejoin this imagined continuation before returning control to the policy. Recovery is therefore planned without physical trial-and-error, preserves completed task progress, and handles both mid-episode instruction changes and physical perturbations in a unified manner. Extensive experiments across multiple simulators, VLA backbones, and real-world settings show that CoRe improves success rates by up to 85.0 percentage points to near-nominal levels while reducing physical restorations by 42.2%, without policy fine-tuning or failure-specific recovery training.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.14822.jpg"
     },
     "tags": [
@@ -3948,7 +3948,7 @@
     "source": "arxiv",
     "title": "Max-Q Selective Imitation for Human-in-the-Loop Online Robot Learning",
     "url": "http://arxiv.org/abs/2608.15088v1",
-    "summary": "Human-in-the-loop (HIL) online reinforcement learning for real robots must absorb human interventions quickly while continuing to improve beyond the human prior. We present a training method for this setting based on two components.",
+    "summary": "Max-Q Selective Imitation trains real robots under human intervention by using an MC Q-chunk critic to credit full intervention trajectories from replay, then updating the actor toward whichever action has higher estimated value: the current policy’s action or a sampled buffer action. This winner-take-all imitation rule lets the robot lean on human corrections when they are better, but naturally shifts back toward self-improvement when the learned policy surpasses the demonstrations, reducing execution-time distribution shift. On a real USB pick-and-insertion task with 20 demos, ACT QChunk-MCBC reaches 99% success in 30 minutes of HIL training, compared with roughly 5 hours for HIL-SERL, with similar gains on simulated Peg Insertion and Square tasks.",
     "published": "2026-08-15T07:13:59+00:00",
     "updated": "2026-08-15T07:13:59+00:00",
     "authors": [
@@ -3965,7 +3965,7 @@
       "comment": null,
       "first_seen": "2026-08-18",
       "full_text": "Human-in-the-loop (HIL) online reinforcement learning for real robots must absorb human interventions quickly while continuing to improve beyond the human prior. We present a training method for this setting based on two components. First, an \\emph{MC Q-chunk} critic regresses chunk-level action values onto Monte Carlo returns from the replay buffer, performing sample-average (behavior) policy evaluation so that intervention trajectories are credited directly rather than diluted by current-policy TD backups. Second, \\emph{max-Q selective imitation} updates the actor by imitating, at each state, the higher-$Q$ action between the current policy action and a buffer sample under a hard winner-take-all rule. This rule automatically switches between learning from interventions and on-policy self-improvement: when the autonomous policy is stronger, targets align with the policy distribution, reducing the policy--target-sample gap that otherwise induces execution-time distribution shift. In practice we score candidates with a standard critic ensemble mean to reduce comparison noise, without softening targets or introducing score-gap thresholds. On a real USB pick-and-insertion task with 20 demonstrations, ACT QChunk-MCBC attains 99\\% success within 30 minutes of HIL training, whereas HIL-SERL requires about 5 hours to converge. In simulation on Peg Insertion and Square, ACT/Flow Q-chunk variants similarly reach $\\ge$96\\% success within roughly half an hour of effective training, outperforming HIL-SERL, EXPO, and E2HiL on the success--time frontier.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.15088.jpg"
     },
     "tags": [
@@ -4071,7 +4071,7 @@
     "source": "github",
     "title": "gjcliff/FrankaTeleop",
     "url": "https://github.com/gjcliff/FrankaTeleop",
-    "summary": "Using Computer Vision and Machine Learning to Move the Franka Panda Robot Arm with Teleoperation",
+    "summary": "FrankaTeleop uses computer vision and machine learning to teleoperate a Franka Panda robot arm, translating visual input into robot motion commands. It appears aimed at practical remote or vision-guided control experiments with the Panda arm rather than a general robotics benchmark, making it useful as a starting point for teleoperation pipelines that combine perception with manipulation.",
     "published": "2024-01-07T23:29:48Z",
     "updated": "2026-08-16T05:54:57Z",
     "authors": [
@@ -4086,7 +4086,7 @@
       "license": null,
       "first_seen": "2026-08-18",
       "full_text": "Using Computer Vision and Machine Learning to Move the Franka Panda Robot Arm with Teleoperation",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#Manipulator"
@@ -4164,7 +4164,7 @@
     "source": "arxiv",
     "title": "RoboStriker: Latent-Space Strategic Games for Autonomous Humanoid Boxing",
     "url": "http://arxiv.org/abs/2608.16195v1",
-    "summary": "Achieving human-level competitive intelligence and physical agility in humanoid robots remains a profound challenge, particularly in contact-rich and highly dynamic tasks such as boxing.",
+    "summary": "RoboStriker trains humanoid boxing policies by moving the strategic game out of raw joint commands and into a bounded latent space learned from predefined boxing motions, so self-play explores tactics through motions a decoder can actually execute. The resulting latent-space zero-sum Markov game is optimized with Latent-Space Neural Fictitious Self-Play and is framed as approximating Nash behavior over the decoder-reachable action manifold. In experiments and real-robot deployment, this constraint sharply reduces balance collapses from direct action-space exploration while improving win rates and striking efficiency.",
     "published": "2026-08-17T07:19:09+00:00",
     "updated": "2026-08-17T07:19:09+00:00",
     "authors": [
@@ -4190,7 +4190,7 @@
       "comment": null,
       "first_seen": "2026-08-18",
       "full_text": "Achieving human-level competitive intelligence and physical agility in humanoid robots remains a profound challenge, particularly in contact-rich and highly dynamic tasks such as boxing. While Multi-Agent Reinforcement Learning offers a principled framework for strategic interaction, its direct application to unstructured raw motor spaces inevitably leads to joint-level physical collapse, preventing the emergence of any viable combat tactics. To resolve this fundamental conflict between strategic exploration and physical feasibility, we formulate the humanoid combat task as a novel two-player latent-space zero-sum Markov game. Under standard regularity and approximate best-response assumptions, we show that the latent formulation induces an equivalent game over the decoder-reachable action manifold, providing an approximate-Nash interpretation of the resulting self-play dynamics. To instantiate this theoretical formulation, we propose RoboStriker, a hierarchical framework that decouples high-level reasoning from low-level execution. It first distills the tracking expertise of predefined boxing motions into a topologically bounded latent manifold. This structured latent foundation subsequently drives multi-agent co-evolution via Latent-Space Neural Fictitious Self-Play. Extensive experimental results demonstrate that gaming within this structured latent space substantially outperforms direct exploration. By constraining strategic exploration through a pretrained motion decoder, RoboStriker substantially reduces the catastrophic balance failures observed in raw action-space methods and achieves superior tactical performance in both competitive win rates and striking efficiency. Finally, we successfully deploy and validate our learned combat policies on real-world humanoid robots. Our code and video and supplementary materials are available at RoboStriker.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.16195.jpg"
     },
     "tags": [
@@ -4218,7 +4218,7 @@
     "source": "arxiv",
     "title": "SparkVLA: Stop-Aware Hierarchical VLA with Adaptive Action Chunking for Long-Horizon Manipulation",
     "url": "http://arxiv.org/abs/2608.16172v1",
-    "summary": "At every re-observation point in a hierarchical Vision-Language-Action (VLA) system, two interface decisions must be made: when to terminate the current subtask and how far to execute the proposed action chunk.",
+    "summary": "SparkVLA makes hierarchical VLA control stop-aware by ranking Stop against every possible action-prefix length at each re-observation point, so subtask termination and chunk execution length are chosen jointly instead of by separate modules and thresholds. It uses an anchor-conditioned context encoding to retain onset-state and goal information while pruning visual tokens, then scores candidate prefixes efficiently at chunk boundaries. On RoboCerebra it reaches 47.12% success, improving over the official hierarchical baseline by 30.57%, with additional multi-step real-robot results showing the same mechanism transfers to hardware.",
     "published": "2026-08-17T06:43:11+00:00",
     "updated": "2026-08-17T06:43:11+00:00",
     "authors": [
@@ -4236,7 +4236,7 @@
       "comment": null,
       "first_seen": "2026-08-18",
       "full_text": "At every re-observation point in a hierarchical Vision-Language-Action (VLA) system, two interface decisions must be made: when to terminate the current subtask and how far to execute the proposed action chunk. These decisions are mutually dependent---the optimal stopping point depends on what the executor plans to do, while the optimal execution length depends on where the subtask boundary lies---yet existing architectures evaluate them in isolation, an asymmetry neither module can overcome alone. We present SparkVLA, a stop-aware hierarchical VLA that resolves this mutual dependency by formulating both decisions as a single ranking: Stop competes against every action-prefix length in a unified candidate set, and the system selects the highest-scoring option, eliminating threshold tuning and requiring only offline ordinal preferences. An Anchor-Conditioned Context Encoding module caches a history-aware subtask anchor encoding onset-state memory and goal semantics, guiding visual-token pruning toward task-relevant regions; a Stop-Aware Action-Prefix Selection head scores all candidates via full self bnattention at chunk boundaries for efficiency. On RoboCerebra, SparkVLA achieves 47.12% success rate, surpassing the official hierarchical baseline by 30.57% and the strongest reproducible method by 26.83% Real-robot experiments on multi-step tasks further validate these gains on physical hardware.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.16172.jpg"
     },
     "tags": [
@@ -4409,7 +4409,7 @@
     "source": "github",
     "title": "LinShan-Bin/OpenCLAP",
     "url": "https://github.com/LinShan-Bin/OpenCLAP",
-    "summary": "Source code for 👏🏻\"CLAP: Contrastive Latent Action Pretraining for Learning Vision-Language-Action Models from Human Videos\"",
+    "summary": "OpenCLAP provides code for CLAP, Contrastive Latent Action Pretraining, which trains vision-language-action models from human videos by learning action representations through contrastive pretraining rather than relying only on robot demonstrations. The repo is mainly useful for researchers trying to reproduce or build on CLAP’s mechanism for transferring structure from human video into robot-action modeling.",
     "published": "2026-06-11T12:47:16Z",
     "updated": "2026-08-18T03:19:50Z",
     "authors": [
@@ -4426,7 +4426,7 @@
       "license": "NOASSERTION",
       "first_seen": "2026-06-15",
       "full_text": "Source code for 👏🏻\"CLAP: Contrastive Latent Action Pretraining for Learning Vision-Language-Action Models from Human Videos\"",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/LinShan-Bin/OpenCLAP/HEAD/assets/teaser.jpg"
     },
     "tags": [
@@ -4454,7 +4454,7 @@
     "source": "arxiv",
     "title": "Algorithm-Architecture Co-Design for Efficient VLA Inference via Speculative Inference and Verification",
     "url": "http://arxiv.org/abs/2608.15636v1",
-    "summary": "Vision-Language-Action (VLA) models have demonstrated remarkable capabilities in the field of embodied AI, but their high computational cost and limited predicted action length hinder real-time deployment.",
+    "summary": "SpecVLA speeds up Vision-Language-Action inference by exploiting the rhythm of robot interaction: it speculatively predicts longer action chunks during inactive states, then selectively verifies them during active states where precision matters. It pairs this scheduling scheme with a smaller hardware-friendly verifier, sVLA, built from differential residuals and block-wise mixed-precision quantization, running on a heterogeneous GPU plus robot-specific accelerator. Evaluations on OpenVLA and RDT across LIBERO and ManiSkill show substantially lower end-to-end latency while maintaining task success, making real-time manipulation more practical.",
     "published": "2026-08-16T08:59:22+00:00",
     "updated": "2026-08-16T08:59:22+00:00",
     "authors": [
@@ -4478,7 +4478,7 @@
       "comment": null,
       "first_seen": "2026-08-18",
       "full_text": "Vision-Language-Action (VLA) models have demonstrated remarkable capabilities in the field of embodied AI, but their high computational cost and limited predicted action length hinder real-time deployment. Although Dadu-Corki, a dedicated accelerator for efficient embodied AI, has been introduced, it does not exploit the inherent interaction patterns between the robot and its environment, which results in a relatively short predicted action length. We observe that robotic environments naturally alternate between active states-where precise actions are crucial-and inactive states-where actions have limited impact on task success. This insight enables a new scheduling opportunity: long-action-length speculative prediction in inactive states, paired with selective verification in active states.   We propose SpecVLA, an algorithm-system co-design framework that adaptively balances action length, inference latency, and task reliability. On the algorithm side, SpecVLA introduces a state-aware VLA inference execution paradigm and a hardware-friendly construction of a smaller verification model (sVLA) using differential residuals and block-wise mixed-precision quantization. On the system side, we develop a heterogeneous architecture consisting of a GPU and a robotic-specific hardware module, along with a speculative dataflow that decouples VLA and sVLA through parallel execution. Comprehensive evaluations on OpenVLA and RDT across LIBERO and ManiSkill benchmarks show that SpecVLA reduces end-to-end latency significantly while preserving task success rate. By enabling long-action-length speculative prediction with timely verification, SpecVLA achieves real-time robotic manipulation with both high efficiency and reliability.",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -4598,7 +4598,7 @@
     "source": "github",
     "title": "maniparena/maniparena-sim",
     "url": "https://github.com/maniparena/maniparena-sim",
-    "summary": "ManipArena-Sim is the simulation environment for ManipArena, a real-robot benchmark for bimanual manipulation. It provides data collection, replay, and policy evaluation for the bimanual robot, built on Isaac Lab and IsaacLab-Arena.",
+    "summary": "ManipArena-Sim provides the Isaac Lab-based simulation side of ManipArena, a real-robot benchmark for bimanual manipulation. It supports collecting data, replaying trajectories, and evaluating policies for a bimanual robot, making it useful for developing and testing manipulation methods before or alongside real-robot experiments.",
     "published": "2026-03-15T15:40:36Z",
     "updated": "2026-08-18T04:20:15Z",
     "authors": [
@@ -4613,7 +4613,7 @@
       "license": null,
       "first_seen": "2026-05-18",
       "full_text": "ManipArena-Sim is the simulation environment for ManipArena, a real-robot benchmark for bimanual manipulation. It provides data collection, replay, and policy evaluation for the bimanual robot, built on Isaac Lab and IsaacLab-Arena.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/maniparena/maniparena-sim/HEAD/docs/bimanual_robot_overview.gif"
     },
     "tags": [
@@ -4693,7 +4693,7 @@
     "source": "arxiv",
     "title": "Throwing a Tight Spiral American Football by a Humanoid Robot",
     "url": "http://arxiv.org/abs/2608.16642v1",
-    "summary": "Accurate throwing of the American football requires precise regulation of release conditions, where coupled linear and angular momentum determine flight stability and targeting accuracy.",
+    "summary": "A Unitree G1 humanoid with a Dex3-1 three-fingered gripper learns to throw an American football as a spin-stabilized tight spiral by explicitly controlling both release momentum and the brief finger-contact dynamics during detachment. The system combines whole-body stabilization, trajectory-optimized upper-body acceleration, and a follow-through MPC controller for the wrist and remaining fingers, reaching up to 93.6% spin efficiency with 0.286 rad nose-angle error at 5.35 m/s linear velocity and 14.5 rad/s angular velocity.",
     "published": "2026-08-17T14:40:54+00:00",
     "updated": "2026-08-17T14:40:54+00:00",
     "authors": [
@@ -4709,7 +4709,7 @@
       "comment": null,
       "first_seen": "2026-08-18",
       "full_text": "Accurate throwing of the American football requires precise regulation of release conditions, where coupled linear and angular momentum determine flight stability and targeting accuracy. While prior work on robotic object throwing has largely focused on generating dynamically feasible release velocities using open-gripper paradigms, explicit control of spin injection at detachment remains underexplored, particularly for aerodynamically anisotropic objects like the American football. In this paper, we present the spin-stabilized controlled tight spiral throw of an American football by a humanoid robot. Achieving this requires (i) accurately reaching the desired coupled momentum, which often involves high degrees-of-freedom (DoF) movements completed within approximately half a second, and (ii) managing the complex transient contact dynamics that arise during the sub-100-millisecond release phase, when the football is effectively underactuated as it moves partially across the fingers. To this end, we develop a coupled whole-body control strategy where the lower body is performing informed stabilization while the upper body is further divided into two phases with (i) a throw phase accelerating the football to a target state through trajectory optimization and tracking, and (ii) a follow-through phase utilizing model predictive control to actively control the wrist and remaining in-contact fingers. The proposed framework is empirically validated on a 29-DoF Unitree G1 humanoid equipped with a 7-DoF Dex3-1 three-fingered gripper. The thrown American football reaches up to 93.6% spin efficiency and a 0.286 radians linear-velocity-to-nose-alignment (nose-angle) error (where an ``ideal'' tight spiral corresponds to 100 % spin efficiency and 0 radians nose-angle error) at up to a 5.35 m/s linear velocity and an angular velocity of 14.5 rad/s.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.16642.jpg"
     },
     "tags": [
@@ -4770,7 +4770,7 @@
     "source": "arxiv",
     "title": "GAINS: Leveraging Inconsistent Human Intervention Signals in Reinforcement Learning",
     "url": "http://arxiv.org/abs/2608.15707v1",
-    "summary": "Correcting robot manipulation policies through human intervention holds great promise for real-world deployment, yet human operators are inherently imperfect in both the actions they provide and the timing of their intervention signals. While the former has been extensively discussed in reinforcement learning (RL), the latter remains underexplored.",
+    "summary": "GAINS tackles a practical failure mode in intervention-based robot RL: at high control rates, human corrections can arrive late and vary inconsistently across states and time. It uses distributional RL with quantile Q-networks to represent the return variability caused by sparse rewards and noisy intervention timing, then drives learning with a pessimistic exploration strategy aimed at safer recovery. Across four simulated manipulation tasks and two real-world scenarios, it outperforms RLIF by 22% in task success and improves recovery success by up to 43% in failure cases.",
     "published": "2026-08-16T12:19:04+00:00",
     "updated": "2026-08-16T12:19:04+00:00",
     "authors": [
@@ -4794,7 +4794,7 @@
       "comment": null,
       "first_seen": "2026-08-18",
       "full_text": "Correcting robot manipulation policies through human intervention holds great promise for real-world deployment, yet human operators are inherently imperfect in both the actions they provide and the timing of their intervention signals. While the former has been extensively discussed in reinforcement learning (RL), the latter remains underexplored. At high control frequencies, human intervention signals are often delayed and inconsistent across time and state space. In this work, we present GAINS, a framework for leveraging inconsistent human intervention signals in RL. At the core of GAINS, we employ distributional RL with quantile Q-networks to model the return variability induced by sparse task rewards and inconsistent human interventions. Building on this distributional representation, we introduce a pessimistic exploration strategy that promotes safe and sample-efficient learning under human corrections. We evaluate GAINS on four diverse simulated manipulation tasks and two challenging real-world scenarios against state-of-the-art intervention-based methods. GAINS achieves a 22% higher task success rate than RLIF and improves recovery success by up to 43% in failure scenarios. These results highlight the importance of modeling return variability induced by human imperfection for real-world deployment of intervention-based learning.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.15707.jpg"
     },
     "tags": [
@@ -4864,7 +4864,7 @@
     "source": "arxiv",
     "title": "PhaseLoRA: Control-Regime-Conditioned Low-Rank Adaptation for Continuous-Action Vision-Language-Action Policies",
     "url": "http://arxiv.org/abs/2608.15285v1",
-    "summary": "Parameter-efficient fine-tuning (PEFT) is a natural way to adapt pretrained vision-language-action (VLA) policies, but most adapter designs apply temporally static updates throughout a control rollout, overlooking the phase-dependent nature of continuous-action manipulation.",
+    "summary": "PhaseLoRA adapts continuous-action vision-language-action policies by making LoRA updates change across the phases of a manipulation rollout, using weak descriptors for fine-control tendency and event or boundary intensity at each action-chunk prediction step. Instead of applying one static adapter behavior through approach, contact, grasp, transport, and placement, it modulates the LoRA left factor in the action expert so the low-rank update direction varies over time while most of the backbone stays frozen. On LIBERO, it raises average success by 12.2 points over a matched-parameter high-rank LoRA baseline, with ablations suggesting the gains come from structured phase-conditioned update directions rather than generic temporal gating.",
     "published": "2026-08-15T15:32:08+00:00",
     "updated": "2026-08-15T15:32:08+00:00",
     "authors": [
@@ -4884,7 +4884,7 @@
       "comment": null,
       "first_seen": "2026-08-18",
       "full_text": "Parameter-efficient fine-tuning (PEFT) is a natural way to adapt pretrained vision-language-action (VLA) policies, but most adapter designs apply temporally static updates throughout a control rollout, overlooking the phase-dependent nature of continuous-action manipulation. Such policies traverse distinct regimes, including approach, contact transition, grasping, transport, and placement, each requiring different adaptation behaviors. We propose \\textbf{PhaseLoRA}, a lightweight LoRA parameterization that conditions adaptation at each action-chunk prediction step using two weakly supervised descriptors: fine-control tendency and event/boundary intensity. PhaseLoRA modulates the LoRA left factor in the action expert, allowing the effective low-rank update direction to vary over time while keeping the backbone largely frozen. On LIBERO, PhaseLoRA improves average success rate by 12.2 points over a matched-parameter high-rank LoRA baseline and outperforms stronger LoRA variants. Ablations show that random temporal modulation and scalar gating do not reproduce the performance of the full model, while update-direction analyses reveal structured temporal variation associated with the predicted control descriptors. These results establish within-trajectory conditioning as an effective lightweight PEFT axis for continuous-action VLA policies.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.15285.jpg"
     },
     "tags": [
@@ -4991,7 +4991,7 @@
     "source": "news",
     "title": "FORT Robotics to Go Public via Business Combination with Newbury Street II Acquisition Corp to Advance the Safety of Physical AI",
     "url": "http://www.RoboticsTomorrow.com/news/2026/08/18/fort-robotics-to-go-public-via-business-combination-with-newbury-street-ii-acquisition-corp-to-advance-the-safety-of-physical-ai/26962",
-    "summary": "Creates the first publicly traded company dedicated principally to safe and scalable deployment of physical AI, as a universal safety layer across the robotics industry",
+    "summary": "FORT Robotics plans to go public through a business combination with Newbury Street II Acquisition Corp, positioning itself as a public company focused on safety infrastructure for physical AI. The company frames its technology as a universal safety layer for robotics deployments, aimed at making autonomous machines safer and easier to scale across industrial and commercial settings.",
     "published": "2026-08-18T12:28:42+00:00",
     "updated": "2026-08-18T12:28:42+00:00",
     "authors": [],
@@ -4999,7 +4999,7 @@
       "feed": "Robotics Tomorrow",
       "first_seen": "2026-08-18",
       "full_text": "Creates the first publicly traded company dedicated principally to safe and scalable deployment of physical AI, as a universal safety layer across the robotics industry",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://www.roboticstomorrow.com/images/facebooknews.jpg"
     },
     "tags": [
@@ -5065,7 +5065,7 @@
     "source": "arxiv",
     "title": "SurgVIL: Scaling Surgical Robot Imitation Learning with Open-source Surgical Videos",
     "url": "http://arxiv.org/abs/2608.16058v1",
-    "summary": "Learning-based surgical robot autonomy requires large-scale demonstrations with synchronized videos and robot actions, but such data are exceedingly rare in clinical or realistic tissue settings because robot kinematics are typically inaccessible outside controlled research systems.",
+    "summary": "SurgVIL trains surgical robot policies by mixing accurately labeled phantom demonstrations with open-source surgical videos, using estimated robot kinematics from the unlabeled videos as weak supervision. On da Vinci needle pick-up and cholecystectomy cutting, adding these real surgical videos improved generalization across ACT, π₀, and GR00T-H policies, especially in real-tissue and out-of-distribution settings.",
     "published": "2026-08-17T03:33:03+00:00",
     "updated": "2026-08-17T03:33:03+00:00",
     "authors": [
@@ -5086,7 +5086,7 @@
       "comment": null,
       "first_seen": "2026-08-18",
       "full_text": "Learning-based surgical robot autonomy requires large-scale demonstrations with synchronized videos and robot actions, but such data are exceedingly rare in clinical or realistic tissue settings because robot kinematics are typically inaccessible outside controlled research systems. In contrast, phantom data collected on research platforms provide accurate action labels but lack the visual diversity of real tissue. We propose SurgVIL, a framework for scaling surgical robot imitation learning using open-source surgical videos. SurgVIL combines kinematically labeled phantom robot demonstrations with surgical videos from open-source datasets and online sources for policy learning. Since these videos lack robot motion labels, we estimate approximate kinematics as weak supervision. We evaluate SurgVIL on two da Vinci robot tasks: needle pick-up and cholecystectomy cutting. Across ACT, $π_0$, and GR00T-H backbones, adding surgical videos substantially improves generalization to real-tissue and out-of-distribution settings, suggesting a scalable path from phantom training toward generalizable surgical robot policies.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.16058.jpg"
     },
     "tags": [
@@ -5114,7 +5114,7 @@
     "source": "arxiv",
     "title": "Grouping Auction-Consensus Algorithm for Decentralized Task Allocation in Multi-Robot Systems",
     "url": "http://arxiv.org/abs/2608.15884v1",
-    "summary": "Decentralized multi-robot task allocation (MRTA) is essential for scalable and resilient autonomous systems. The Consensus-Based Bundle Algorithm (CBBA) is a widely adopted decentralized baseline.",
+    "summary": "GACA reworks CBBA-style decentralized multi-robot task allocation by bidding over spatially coherent task groups rather than individual tasks, using nearest-neighbor grouping and group-level actions such as claiming, partially acquiring, or contesting task clusters. Against MILP optimal allocations, it reaches about 97% median optimality across 4,000 test worlds versus 81-84% for CBBA, while converging in the same or fewer iterations. The gains also hold across larger sweeps from 5 to 20 robots and 10 to 50 tasks, suggesting the grouping mechanism better matches the min-sum travel-distance objective in distributed settings.",
     "published": "2026-08-16T18:17:49+00:00",
     "updated": "2026-08-16T18:17:49+00:00",
     "authors": [
@@ -5132,7 +5132,7 @@
       "comment": null,
       "first_seen": "2026-08-18",
       "full_text": "Decentralized multi-robot task allocation (MRTA) is essential for scalable and resilient autonomous systems. The Consensus-Based Bundle Algorithm (CBBA) is a widely adopted decentralized baseline. However, its individual task-level bidding is poorly aligned with the min-sum objective of minimizing total team travel distance, leading to suboptimal allocations in spatially distributed environments. This paper introduces the Grouping Auction-Consensus Algorithm (GACA). This decentralized MRTA framework adopts the two-phase auction-consensus architecture of CBBA while fundamentally redesigning its bidding mechanism to reason over groups of spatially proximate tasks. A nearest-neighbor preprocessing step partitions tasks into spatially coherent groups before allocation. Agents then iteratively propose structured group-level actions: claiming unassigned groups, acquiring partial groups, or contesting groups held by other agents. Competing actions are resolved through a consensus phase. Operating in the MT-SR-IA problem class, GACA is evaluated against CBBA using a Mixed-Integer Linear Program as the ground-truth optimality reference. Across four swarm sizes and 4,000 test worlds, GACA achieves a median percent optimality of approximately 97% compared to 81--84% for CBBA, while converging in equal or fewer iterations. A scalability evaluation over 3,280 additional problem instances spanning swarm sizes of 5 to 20 agents and task counts of 10 to 50 confirms that these gains generalize robustly across a wide range of problem configurations.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.15884.jpg"
     },
     "tags": [
@@ -5210,7 +5210,7 @@
     "source": "arxiv",
     "title": "PACE: Phase-Progress-Aware Credit for Long-Horizon Embodied Manipulation",
     "url": "http://arxiv.org/abs/2608.15026v1",
-    "summary": "Post-training of vision-language-action (VLA) models typically relies on expert demonstrations and policy interaction trajectories. However, in long-horizon manipulation, a single episode often spans hundreds of control steps and multiple phases, while success or failure is only revealed at episode termination.",
+    "summary": "PACE post-trains vision-language-action robot policies for long-horizon manipulation by turning sparse episode-level success or failure into step-level credit. Its GLC-Critic reads local visual and motion-change windows to estimate task phase and intra-phase progress, then PPD uses those credits to distill a policy that preserves high-credit behaviors, learns positive/negative quality boundaries, and amplifies good actions at inference. In both simulation and real robotic-arm experiments, it improves consistently over the strongest baseline.",
     "published": "2026-08-15T04:25:16+00:00",
     "updated": "2026-08-15T04:25:16+00:00",
     "authors": [
@@ -5232,7 +5232,7 @@
       "comment": "9 pages, 6 figures",
       "first_seen": "2026-08-18",
       "full_text": "Post-training of vision-language-action (VLA) models typically relies on expert demonstrations and policy interaction trajectories. However, in long-horizon manipulation, a single episode often spans hundreds of control steps and multiple phases, while success or failure is only revealed at episode termination. Policy improvement therefore requires step-level credit signals to distinguish behaviors that advance the task from those that stall or regress. We present PACE, a credit-assignment framework for post-training on long-horizon manipulation, centered on a phase-progress-aware critic. PACE consists of two key modules: (1) the Global-Local Cooperative Value-Correction Critic (GLC-Critic) aggregates visual and motion-difference features within local temporal windows to infer the phase and intra-phase progress of each step, and applies residual correction to a discretized remaining-cost distribution accordingly, enabling step-level credit assignment; (2) Progressive Policy Distillation (PPD) converts credit into positive and negative conditions via task-wise thresholds and trains a credit-conditioned action generation policy: it first protects the pretrained policy with high-credit positive samples, then incorporates all positive and negative credits to learn the quality boundary, and at inference amplifies high-credit behaviors through the difference between conditional outputs. Extensive simulation experiments and diverse real-world robotic-arm experiments demonstrate that PACE consistently achieves significant improvements over the strongest baseline.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.15026.jpg"
     },
     "tags": [
@@ -5260,7 +5260,7 @@
     "source": "arxiv",
     "title": "GaussMemory: Task-Driven 3D Gaussian Scene Memory for Long-Horizon Robotic Manipulation",
     "url": "http://arxiv.org/abs/2608.14986v1",
-    "summary": "Long-horizon robotic manipulation fundamentally relies on persistent spatial memory. However, existing 3D memory systems function merely as passive recorders: they store observations using fixed, hand-crafted rules, treating every scene element--whether a critical grasp target or an irrelevant background wall--with equal importance.",
+    "summary": "GaussMemory gives a manipulation robot an active 3D scene memory built on Gaussian Splatting, where memory updates are learned from task demands rather than fixed rules that preserve every observed element equally. It learns what to track accurately, how strongly to update objects, and what to discard, tying memory write and readout into a single end-to-end process for long-horizon manipulation. On LIBERO it improves over MemoryVLA on Goal and Long-10, and on VLABench it beats π0-FAST by 5.2% on Track 1 and 6.0% on Track 6.",
     "published": "2026-08-15T02:28:59+00:00",
     "updated": "2026-08-15T02:28:59+00:00",
     "authors": [
@@ -5278,7 +5278,7 @@
       "comment": "8 pages, 10 figures. Accepted to the 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2026)",
       "first_seen": "2026-08-18",
       "full_text": "Long-horizon robotic manipulation fundamentally relies on persistent spatial memory. However, existing 3D memory systems function merely as passive recorders: they store observations using fixed, hand-crafted rules, treating every scene element--whether a critical grasp target or an irrelevant background wall--with equal importance. In this paper, we propose a paradigm shift from passive storage to active, task-driven spatial memory. We argue that a robot's memory should not simply record what it sees, but actively learn how to remember--discovering which objects to track precisely, how aggressively to update them, and what to discard, all learned end-to-end without hand-designed rules. Crucially, this active paradigm is realized by unifying memory update and readout as two sides of the same cognitive process, enabling bidirectional flow where task needs shape update strategies and vice versa. To instantiate this vision, we introduce GaussMemory, which leverages 3D Gaussian Splatting as a persistent geometric substrate. On LIBERO, GaussMemory outperforms MemoryVLA on Goal and Long-10; on VLABench, it surpasses $π_0$-FAST by +5.2% (Track 1) and +6.0% (Track 6).",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.14986.jpg"
     },
     "tags": [
@@ -5347,7 +5347,7 @@
     "source": "news",
     "title": "Trossen Robotics and Stereolabs, an Ouster Subsidiary, Partner to Put High-Fidelity Stereo Vision at the Heart of Physical AI Data Collection",
     "url": "http://www.RoboticsTomorrow.com/news/2026/08/18/trossen-robotics-and-stereolabs-an-ouster-subsidiary-partner-to-put-high-fidelity-stereo-vision-at-the-heart-of-physical-ai-data-collection/26964",
-    "summary": "Trossen's new lineup of Physical AI platforms comes equipped with a Stereolabs ZED X Mini scene camera and dual ZED X Nano wrist cameras, giving robot-learning teams synchronized, training-grade visual data out of the box",
+    "summary": "Trossen Robotics is partnering with Stereolabs to ship its new Physical AI robot platforms with synchronized stereo vision built in: a ZED X Mini scene camera plus dual ZED X Nano wrist cameras. The goal is to give robot-learning teams high-fidelity, training-ready visual data out of the box, reducing the integration work normally needed to collect usable multimodal data for manipulation and embodied AI.",
     "published": "2026-08-18T12:58:01+00:00",
     "updated": "2026-08-18T12:58:01+00:00",
     "authors": [],
@@ -5355,7 +5355,7 @@
       "feed": "Robotics Tomorrow",
       "first_seen": "2026-08-18",
       "full_text": "Trossen's new lineup of Physical AI platforms comes equipped with a Stereolabs ZED X Mini scene camera and dual ZED X Nano wrist cameras, giving robot-learning teams synchronized, training-grade visual data out of the box",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://www.roboticstomorrow.com/images/facebooknews.jpg"
     },
     "tags": [
@@ -5420,7 +5420,7 @@
     "source": "arxiv",
     "title": "Don't Drop the BATON: Long-Horizon Robot Manipulation via Agentic Subtask Exploration and Transition-aware Memory",
     "url": "http://arxiv.org/abs/2608.16889v1",
-    "summary": "Long-horizon robot manipulation chains many contact-rich skills into one multi-stage task. Vision-language-action (VLA) models increasingly master the individual skills, yet the chain still fails: errors compound beyond the policy's ability to correct, and one subtask silently constrains the next.",
+    "summary": "BATON tackles long-horizon robot manipulation by freezing the VLA policy and shifting exploration from whole tasks to individual subtasks, storing each short-horizon solution in language memory so multi-stage behavior can be composed rather than rediscovered end to end. Its transition-aware memory adds verifier-gated VLA calls, handoff repairs between subtasks, and lookahead strategy selection so one stage leaves the scene in a form the next can actually use. On RoboMemArena, this improves task success by 11.6% and cumulative success by 14.9% over the prior best system.",
     "published": "2026-08-17T17:59:57+00:00",
     "updated": "2026-08-17T17:59:57+00:00",
     "authors": [
@@ -5439,7 +5439,7 @@
       "comment": null,
       "first_seen": "2026-08-18",
       "full_text": "Long-horizon robot manipulation chains many contact-rich skills into one multi-stage task. Vision-language-action (VLA) models increasingly master the individual skills, yet the chain still fails: errors compound beyond the policy's ability to correct, and one subtask silently constrains the next. A promising recipe freezes the VLA and puts an LLM agent in charge: it plans in language, moves in free space with analytic primitives, invokes the VLA only for contact-rich segments, and writes adaptation into language memory. Applied to long horizons, it breaks twice. (1) Competence comes from whole-task exploration at test time, whose cost is multiplicative in stages: if one stage needs T episodes, a K-stage task needs about T^K, and a failure does not reveal which stage caused it. (2) It has no representation of transitions: the VLA primitive carries an exit but no entry condition, so a subtask can succeed in a form its successor cannot use. We present BATON. Against (1), BATON makes the subtask the unit of exploration: each is explored in the cheap short-horizon regime and its solution stored in memory; a long-horizon trajectory is then composed from these solutions rather than discovered whole. Cost becomes additive (T*K) and every failure is attributed to a single stage. Against (2), BATON equips exploration with a transition-aware memory. Within a subtask, a verifier agent governs the invocation transition: the VLA is called only after the wrist view confirms the scene is ready. Across subtasks, a handoff transition restores an entry state disturbed by the predecessor's residue, and a lookahead transition selects the strategy whose outcome the successor can inherit. No parameters are updated. On the long-horizon benchmark RoboMemArena, BATON improves task success by 11.6% and cumulative success by 14.9% over the SoTA.",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#VLA",
@@ -5466,7 +5466,7 @@
     "source": "arxiv",
     "title": "FabriMAE I Trust Myself? Self-Evaluating VLA Action Generation with Markov Attention Entropy",
     "url": "http://arxiv.org/abs/2608.16697v1",
-    "summary": "Vision-Language-Action models (VLAs) integrate visual perception, language instruction, and action generation into end-to-end policies across heterogeneous architectures. However, enabling VLAs to self-evaluate their action generation reliability without external supervision remains a major challenge.",
+    "summary": "FabriMAE lets vision-language-action policies judge the reliability of their own generated actions by reading internal attention entropy, rather than using expert labels or only output-level uncertainty. It models action generation as a conditional generative Markov chain and turns visual-modality attention signals into Markov Attention Entropy scores that transfer across heterogeneous VLA architectures. On the new 4,000-episode LIBERO-Reflect benchmark, MAE improves AUPR, AUROC, and FPR@95 over prior uncertainty baselines, and MAE-guided test-time sampling boosts PI-family robustness on LIBERO-Plus with only small runtime overhead.",
     "published": "2026-08-17T15:14:53+00:00",
     "updated": "2026-08-17T15:14:53+00:00",
     "authors": [
@@ -5493,7 +5493,7 @@
       "comment": null,
       "first_seen": "2026-08-18",
       "full_text": "Vision-Language-Action models (VLAs) integrate visual perception, language instruction, and action generation into end-to-end policies across heterogeneous architectures. However, enabling VLAs to self-evaluate their action generation reliability without external supervision remains a major challenge. Existing methods either rely on expert annotations or estimate uncertainty only from output statistics, largely ignoring internal signals. In this work, we observe that internal visual modality entropy exhibits consistent distinctions between successful and failed tasks across heterogeneous VLAs. Although VLAs' architectures differ in their action generation, we show that they share a common latent action generation abstraction evolving under visual perception, language instruction, and state input, which we formulate as a Conditional Generative Markov Chain. Based on this formulation, we propose MAE (Markov Attention Entropy), a self-evaluation framework that directly converts internal attention signals into architecture-aware reliability scores, and introduce LIBERO-Reflect, a 4,000-episode benchmark combining 2,000 standard episodes and 2,000 challenging episodes across four subsets. Extensive experiments across heterogeneous VLA architectures and diverse scenarios show that MAE consistently outperforms state-of-the-art baselines on AUPR, AUROC, and FPR@95. We further instantiate FabriMAE for verifier-free test-time action selection, showing that MAE-guided multiple sampling improves PI-family robustness on LIBERO-Plus with small observed runtime overhead.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.16697.jpg"
     },
     "tags": [
@@ -5521,7 +5521,7 @@
     "source": "arxiv",
     "title": "Orbit-Planner: Towards Latent World Models for On-Orbit Obstacle Avoidance of Satellite Agents",
     "url": "http://arxiv.org/abs/2608.16651v1",
-    "summary": "Satellite agents for on-orbit navigation tasks need to predict collision risks using limited onboard observations. However, conventional planners often rely on predefined maps and fixed environmental assumptions, limiting their adaptability in dynamic on-orbit scenarios.",
+    "summary": "Orbit-Planner is a two-stage latent world model that lets satellite agents plan obstacle avoidance from limited onboard observations rather than relying on fixed maps or static assumptions. It learns action-conditioned spacecraft dynamics for long-horizon rollouts in latent space, then uses a Physics Probe to recover physical state changes from those imagined trajectories. In Isaac Sim closed-loop navigation experiments, it achieved a 91.7% obstacle-avoidance success rate.",
     "published": "2026-08-17T14:49:07+00:00",
     "updated": "2026-08-17T14:49:07+00:00",
     "authors": [
@@ -5540,7 +5540,7 @@
       "comment": "4 pages, 6 figures. Accepted to AP-GARSS 2026. Project page: https://zhijianli2003.github.io/Orbit_Planner/",
       "first_seen": "2026-08-18",
       "full_text": "Satellite agents for on-orbit navigation tasks need to predict collision risks using limited onboard observations. However, conventional planners often rely on predefined maps and fixed environmental assumptions, limiting their adaptability in dynamic on-orbit scenarios. In this paper, we propose Orbit-Planner, a two-stage latent world model for on-orbit obstacle avoidance. Orbit-Planner learns action-conditioned spacecraft dynamics to perform future-state rollouts in latent space, and introduces a Physics Probe to decode physical state changes from imagined latent trajectories. Experiments demonstrate that Orbit-Planner can perform long-horizon latent rollouts and recover physical states from imagined trajectories. In closed-loop obstacle-avoidance navigation in Isaac Sim, it attains a success rate of 91.7%. Code is available at https://github.com/ZhijianLi2003/Orbit_Planner.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.16651.jpg"
     },
     "tags": [
@@ -5568,7 +5568,7 @@
     "source": "arxiv",
     "title": "GaussianDWM++: Language-Grounded 3D Gaussian Driving World Model for Unified Scene Understanding, Editing, and Multi-Modal Generation",
     "url": "http://arxiv.org/abs/2608.16234v1",
-    "summary": "Driving World Models (DWMs) have recently advanced rapidly with generative models, yet most existing methods mainly focus on conditional scene generation and lack explicit 3D scene understanding, language-grounded reasoning, and controllable 4D editing capabilities.",
+    "summary": "GaussianDWM++ represents driving scenes as language-grounded 3D Gaussian primitives by distilling Qwen/SigLIP visual-language features into a compact open-vocabulary semantic field. A geometry-aware Gaussian adapter then compresses dense primitives into text-conditioned world tokens, with KL-based alignment to foundation image tokens, enabling unified scene understanding, visual grounding, planning-oriented reasoning, instruction-controlled weather changes, dynamic vehicle edits, and controllable 4D generation.",
     "published": "2026-08-17T08:12:56+00:00",
     "updated": "2026-08-17T08:12:56+00:00",
     "authors": [
@@ -5590,7 +5590,7 @@
       "comment": null,
       "first_seen": "2026-08-18",
       "full_text": "Driving World Models (DWMs) have recently advanced rapidly with generative models, yet most existing methods mainly focus on conditional scene generation and lack explicit 3D scene understanding, language-grounded reasoning, and controllable 4D editing capabilities. Moreover, commonly used point cloud, occupancy, or BEV representations make it difficult to achieve fine-grained alignment between textual information and the underlying 3D scene structure. To address these limitations, we propose a foundation-feature Gaussian driving world model that unifies scene understanding, language-grounded reasoning, controllable 4D editing, and multi-modal generation within a single framework. Specifically, we introduce a foundation-feature Gaussian tokenizer that directly distills Qwen/SigLIP visual-language features into 3D Gaussian primitives, building a compact open-vocabulary Gaussian semantic field. We further design a geometry-aware Gaussian adapter that combines importance-aware hierarchical selection with text-conditioned Perceiver-style cross-attention to aggregate dense Gaussian primitives into compact world tokens. To improve representation compatibility, we introduce a KL-based Gaussian--image distribution alignment objective that aligns Gaussian world tokens with foundation image tokens. Based on the aligned Gaussian representation, our framework further supports instruction-controllable scene editing, including weather-conditioned generation and dynamic vehicle manipulation. Extensive experiments on broader driving benchmarks demonstrate that our method achieves state-of-the-art performance across scene understanding, visual grounding, planning-oriented reasoning, and controllable 4D generation tasks. We will release the code and datasets publicly on Github.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.16234.jpg"
     },
     "tags": [
@@ -5618,7 +5618,7 @@
     "source": "arxiv",
     "title": "Vision-Based Tactile Intelligence for Robotics: Sensing, Learning, and Embodied Manipulation",
     "url": "http://arxiv.org/abs/2608.15490v1",
-    "summary": "Tactile sensing is essential for robots in contact-rich tasks, yet many tactile sensors still provide sparse, low-dimensional signals that do not capture sufficient information for complex robotic perception and interaction.",
+    "summary": "Vision-based tactile sensors turn deformation of a soft contact surface into high-resolution images, giving robots richer touch information than sparse force or pressure readings for contact-heavy manipulation. This review maps the full VBTS stack, from elastomer and optical hardware designs to learning hierarchies that span signal interpretation, task policies, and foundation models. It also treats simulation platforms and tactile datasets as part of the scaling problem, emphasizing sim-to-real transfer and cross-sensor adaptation as practical bottlenecks for deployment.",
     "published": "2026-08-16T02:39:12+00:00",
     "updated": "2026-08-16T02:39:12+00:00",
     "authors": [
@@ -5647,7 +5647,7 @@
       "comment": null,
       "first_seen": "2026-08-18",
       "full_text": "Tactile sensing is essential for robots in contact-rich tasks, yet many tactile sensors still provide sparse, low-dimensional signals that do not capture sufficient information for complex robotic perception and interaction. Vision-based tactile sensors (VBTSs) offer a powerful alternative by con-verting contact-induced deformation of a soft interface into im-ages. The image-based formulation gives VBTSs high-resolution, information-rich tactile observations that enable complex robotic tasks. This review surveys the full VBTS pipeline and treats sensing hardware, learning methods, simulation, and datasets as an integrated sensing-and-learning system. We 1) organize representative VBTSs into a hardware taxonomy structured by deformable elastomer design, sensor size and shape, and optical system design to guide future sensor development; 2) present a hierarchical view of learning-based tactile intelligence from low-level signal understanding to task-level policies and foundation models; and 3) examine simulation platforms and tactile datasets as a scaling layer, together with sim-to-real transfer and cross-sensor adaptation for training, benchmarking, and deployment. Finally, we identify open challenges and future directions for VBTSs in robotics. By providing a holistic view of how hardware, AI architectures, simulation, and datasets interact, this review aims to advance tactile intelligence for contact-rich robotic tasks.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.15490.jpg"
     },
     "tags": [
@@ -5898,7 +5898,7 @@
     "source": "news",
     "title": "소프트뱅크, '건설 로봇' 그라비스에 2800억 투자...피지컬 AI 박차",
     "url": "https://www.aitimes.com/news/articleView.html?idxno=214073",
-    "summary": "소프트뱅크가 건설 현장에서 중장비를 자율적으로 운용할 수 있는 로봇 기술을 확보하기 위해 스위스 건설 로봇 스타트업 그라비스 로보틱스(Gravis Robotics)에 2억달러(약 2824억원)를 투자했다. 손정의 회장이 AI와 로봇을 차세대 성장 동력으로 낙점한 가운데 건설·산업 현장까지 로봇 사업 영역을 확대하는 움직임으로 풀이된다.그라비스 로보틱스는 17일(현지시간) 2억달러 규모의 시리즈A 투자를 유치했다고 밝혔다. 투자에 참여한 소프트뱅크는 그라비스의 기업 가치는 공개하지 않았다.앞서 블룸버그는 지난 7월 소프트뱅크가 그라비",
+    "summary": "SoftBank invested $200 million, about 282.4 billion won, in Swiss startup Gravis Robotics to secure robot technology for autonomously operating heavy equipment on construction sites. The deal extends Masayoshi Son’s push into physical AI from software and data centers into construction and industrial work, where autonomy could turn large machines into a new robotics platform.",
     "published": "2026-08-18T17:41:54+00:00",
     "updated": "2026-08-18T17:41:54+00:00",
     "authors": [
@@ -5908,7 +5908,7 @@
       "feed": "AI타임스",
       "first_seen": "2026-08-18",
       "full_text": "소프트뱅크가 건설 현장에서 중장비를 자율적으로 운용할 수 있는 로봇 기술을 확보하기 위해 스위스 건설 로봇 스타트업 그라비스 로보틱스(Gravis Robotics)에 2억달러(약 2824억원)를 투자했다. 손정의 회장이 AI와 로봇을 차세대 성장 동력으로 낙점한 가운데 건설·산업 현장까지 로봇 사업 영역을 확대하는 움직임으로 풀이된다.그라비스 로보틱스는 17일(현지시간) 2억달러 규모의 시리즈A 투자를 유치했다고 밝혔다. 투자에 참여한 소프트뱅크는 그라비스의 기업 가치는 공개하지 않았다.앞서 블룸버그는 지난 7월 소프트뱅크가 그라비",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.aitimes.com/news/photo/202608/214073_217706_4015.jpg"
     },
     "tags": [
@@ -5935,7 +5935,7 @@
     "source": "arxiv",
     "title": "Robot-Body-Aware Traversal Risk Graph Planning for Wheeled-Legged Robots in Complex Terrain",
     "url": "http://arxiv.org/abs/2608.16433v1",
-    "summary": "Traversal Risk Graphs (TRGs) provide a compact, terrain-aware representation for global navigation, but native TRG costs are computed over circular node neighborhoods and edge-aligned terrain regions rather than the robot's oriented body footprint.",
+    "summary": "RB-TRG adapts Traversal Risk Graph planning for wheeled-legged robots by evaluating risk over the robot’s oriented rectangular body footprint, including yaw sweeps during turns, rather than relying on circular node neighborhoods and edge-aligned terrain patches. It scores transitions using support variation, lateral inclination, body-terrain interference, and uncertain-map exposure, then runs A* over ordered node-pair states while keeping the sparse TRG interface. On four scanned terrains and MuJoCo closed-loop trials, it improved success from 51.5% to 68.5% with only a 2.3% mean path-length increase, and was demonstrated on a Go2-W with a full LiDAR navigation stack.",
     "published": "2026-08-17T11:33:06+00:00",
     "updated": "2026-08-17T11:33:06+00:00",
     "authors": [
@@ -5952,7 +5952,7 @@
       "comment": null,
       "first_seen": "2026-08-18",
       "full_text": "Traversal Risk Graphs (TRGs) provide a compact, terrain-aware representation for global navigation, but native TRG costs are computed over circular node neighborhoods and edge-aligned terrain regions rather than the robot's oriented body footprint. For wheeled-legged robots, this abstraction can miss partial support loss and body-terrain interference, especially during turns. We present Robot-Body-Aware TRG planning (RB-TRG), which builds on the sparse TRG representation and lifts edge-wise terrain-risk search to heading- and turn-aware body-risk transitions. An oriented rectangular footprint is sampled along graph edges and yaw sweeps to measure longitudinal support variation, lateral inclination, terrain interference, and exposure to untrusted map regions. Mean-and-upper-tail features are incorporated into transition costs, whose accumulated value is minimized by A* over ordered node-pair states, preserving TRG construction and its planning interface. We evaluate RB-TRG in a same-graph study on four scanned terrain environments and in paired closed-loop MuJoCo trials. RB-TRG reduces the three core geometric body-placement metrics and increases end-to-end success from 51.5% to 68.5%, while increasing mean path length by 2.3%. A Go2-W deployment further demonstrates RB-TRG with a full LiDAR navigation stack, which received the Best Autonomy and Best Mobility awards at the IEEE ICRA 2026 Legged Robot Challenges. The code for RB-TRG is released at https://github.com/ZhiqiaoGuo/RB-TRG.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.16433.jpg"
     },
     "tags": [
@@ -6018,7 +6018,7 @@
     "source": "news",
     "title": "FORT Robotics to go public via business combination with Newbury Street II Acquisition Corp",
     "url": "https://roboticsandautomationnews.com/2026/08/18/fort-robotics-to-go-public-via-business-combination-with-newbury-street-ii-acquisition-corp/104238/",
-    "summary": "FORT Robotics, a safety platform developing a “trust layer” for physical AI, and Newbury Street II Acquisition Corp, a special purpose acquisition company, have entered into a definitive business combination agreement that will result in the combined company becoming a publicly traded company.",
+    "summary": "FORT Robotics plans to go public through a business combination with Newbury Street II Acquisition Corp., with the combined company expected to trade under the FORT Robotics name after the deal closes. The company is positioning its safety platform as a trust layer for physical AI, aimed at helping robots and autonomous machines operate with stronger safeguards as deployment moves into real-world industrial and commercial settings.",
     "published": "2026-08-18T14:29:03+00:00",
     "updated": "2026-08-18T14:29:03+00:00",
     "authors": [
@@ -6028,7 +6028,7 @@
       "feed": "Robotics and Automation News",
       "first_seen": "2026-08-18",
       "full_text": "FORT Robotics, a safety platform developing a “trust layer” for physical AI, and Newbury Street II Acquisition Corp, a special purpose acquisition company, have entered into a definitive business combination agreement that will result in the combined company becoming a publicly traded company. Upon closing of the business combination, the combined company will be named […]",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://roboticsandautomationnews.com/wp-content/uploads/2026/08/FORT-Robotics-Trust-Layer-for-Physical-AI.jpeg"
     },
     "tags": [
@@ -6055,7 +6055,7 @@
     "source": "news",
     "title": "Drones With Claws Perch on Arctic Icebergs",
     "url": "https://spectrum.ieee.org/arctic-iceberg-drones",
-    "summary": "This article is part of our exclusive IEEE Journal Watch series in partnership with IEEE Xplore. Microspines are one of many ways to enable robots to latch onto surfaces like walls and ceilings . Now roboticists in Canada are using the mini spikes to get drones to land on a more challenging, remote surface: icebergs.",
+    "summary": "Researchers in Canada built Ice Dart, a 2.65 kg quadrotor with impact-absorbing X-shaped landing gear and retractable microspines that bite into ice only as the suspension compresses. In field tests on icebergs and a glacier in southeast Iceland, it perched successfully at up to 3 m/s on slopes as steep as 58 degrees, including 30 km/h winds. Landing instead of hovering could let small drones monitor icebergs quietly for long periods, adding a cheaper, more flexible layer to Arctic tracking and glacier-observation systems.",
     "published": "2026-08-18T13:00:01+00:00",
     "updated": "2026-08-18T13:00:01+00:00",
     "authors": [
@@ -6066,7 +6066,7 @@
       "thumbnail": "https://spectrum.ieee.org/media-library/a-drone-firmly-planted-on-the-steep-slope-of-an-iceberg-after-a-successful-landing.jpg?id=67573301&width=980",
       "first_seen": "2026-08-18",
       "full_text": "This article is part of our exclusive IEEE Journal Watch series in partnership with IEEE Xplore. Microspines are one of many ways to enable robots to latch onto surfaces like walls and ceilings . Now roboticists in Canada are using the mini spikes to get drones to land on a more challenging, remote surface: icebergs. Like a spider, the Ice Dart can land on and latch onto steep, slippery surfaces such as icebergs and glaciers—an increasingly useful capability as activity in the Arctic increases. The drone can grip onto icy slopes of nearly 60 degrees, which is way beyond what most humans could manage without special equipment. In a recent study, researchers explained how they developed the Ice Dart drone with a special landing gear that absorbs the impact of a hard landing while holding the drone in place with tiny spines that penetrate and grip the ice. Published in IEEE Transactions on Field Robotics , the study describes how the Ice Dart was able to land on icebergs and a glacier in southeast Iceland. Tests took place amid persistent winds and temperatures of 0 to 10 °C along the ruggedly breathtaking Fjallsjökull (pronounced “FYATLS-yuh-kuutl”) glacier, which empties into a lagoon filled with icebergs. The drone was able to successfully perch at speeds of up to three meters per second and slopes of up to 58 degrees, with a success rate of 100 percent even in wind speeds of 30 km/h . The researchers were motivated by a desire to allow drones to land almost anywhere in the world, since the availability of safe landing sites is one of the primary limitations on where and how drones can operate. The researchers already have a history of developing drones that can land on fast-moving trucks as well as trailers, boats, and steep roofs . Ice Perching “The ability to land rather than hover can fundamentally change how drones are used in the field,” says Alexis Lussier Desbiens , a professor of engineering at Université de Sherbrooke , in Sherbrooke, Quebec, Canada, who coauthored the study. “Once a drone has landed, energy consumption drops dramatically, allowing much longer observation periods with a small aircraft. The drone also becomes completely silent and can even reduce or eliminate its thermal and RF signature by shutting down major onboard systems.” Landing on icebergs specifically allows drones to monitor them for days or months, producing more detailed observation than a quick aerial surveillance mission. This could simplify iceberg tracking compared to methods such as helicopter deployment, dropped instruments, or dart-like tracking devices, and provide another data layer to satellite and ship-based iceberg detection, according to the researchers. It could also provide a means of monitoring icebergs that are otherwise untrackable. With its carbon-fiber construction, the Ice Dart drone weighs just 2.65 kg and has four legs arranged in an X shape, attached to its body with a pivot joint. Used in the group’s previous drone research , this landing gear disperses energy to reduce impact and overcomes multiple engineering challenges. The friction shock absorbers consist of 38 disks that generate friction torque as the legs move up and down upon impact. This lowers the UAV’s center of mass and helps spread out the kinetic energy of landing, but the real trick comes in the form of two retractable spines on each foot—one for uphill and one for downhill grip. The larger spine engages on the more heavily loaded downhill feet, and the smaller, thinner spine engages more easily on the uphill feet, even under very low loads on steep slopes. The spines only penetrate the ice as the suspension compresses, generating grip and protecting them from high-impact forces. “The inspiration for the retractable spines in the feet came from looking at a cat’s claws and their ability to deploy only when needed,” says Isaac Tunney , a Université de Sherbrooke postdoc in mechanical and robotics engineering who was lead author of the paper. “I wanted to create feet that would naturally and passively engage their spines in the ice at the right moment, regardless of the drone’s orientation, the surface geometry, or the ice conditions.” Arctic Surveillance William D. Harcourt is a researcher at the University of Aberdeen, in Aberdeen, Scotland, focused on Arctic glaciers, snow, and sea ice, as well as the use of remote sensing and machine learning techniques. Harcourt was not involved in the study, but he sees several potentially interesting applications of the technology. “Near the front of tidewater glaciers, these systems could enable measurement of stress-strain and help us understand calving processes ,” says Harcourt. “Drones can be used as a mobile GPS, literally acting as a receiver on the ice, but the system would need to solve tilting issues as 3D change measurements usually required the antenna to be horizontal. However, if these problems can be solved, it could be used to track iceberg movements.” The researchers want to continue developing the Ice Dart technology for real-world applications, including autonomous landing site selection and an emergency takeoff capability to be used if an iceberg rolls over or breaks apart. This August, the drone will be deployed during a Canadian Arctic mission to land on icebergs, collect data, and help validate ship-based iceberg-detection systems.",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -6092,7 +6092,7 @@
     "source": "news",
     "title": "Meet LimX Dynamics at WRC 2026",
     "url": "https://www.youtube.com/watch?v=OmACLwMOkTk",
-    "summary": "Explore real-world applications and industry innovation, and discover new possibilities in intelligent manufacturing and embodied AI. Meet us at Booth C316 during WRC 2026. 📅 August 19–23 📍 Hall C, Beiren Etrong International Exhibition & Convention Center, Beijing #LimXDynamics #WRC2026 #EmbodiedAI #Robotics #IntelligentManufacturing #PhysicalAI",
+    "summary": "LimX Dynamics is exhibiting at WRC 2026 in Beijing from August 19–23, positioning its robotics work around intelligent manufacturing, embodied AI, and physical AI. The announcement is mainly an event notice rather than a technical reveal, but it signals the company’s push to connect its robot systems with real-world industrial deployment and broader embodied-AI applications.",
     "published": "2026-08-18T12:52:49+00:00",
     "updated": "2026-08-18T12:52:49+00:00",
     "authors": [
@@ -6104,7 +6104,7 @@
       "thumbnail": "https://i4.ytimg.com/vi/OmACLwMOkTk/hqdefault.jpg",
       "first_seen": "2026-08-18",
       "full_text": "Explore real-world applications and industry innovation, and discover new possibilities in intelligent manufacturing and embodied AI. Meet us at Booth C316 during WRC 2026. 📅 August 19–23 📍 Hall C, Beiren Etrong International Exhibition & Convention Center, Beijing #LimXDynamics #WRC2026 #EmbodiedAI #Robotics #IntelligentManufacturing #PhysicalAI",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -6130,7 +6130,7 @@
     "source": "news",
     "title": "다이나믹솔루션, 中 ‘WRC 2026’서 BCI 로봇손 글러브 공개",
     "url": "https://www.irobotnews.com/news/articleView.html?idxno=47965",
-    "summary": "다이나믹솔루션은 중국 베이징에서 19일 개막하는 ‘2026 세계로봇대회(WRC)’에 참가해 ‘뇌-컴퓨터 인터페이스(BCI) 기반 차세대 로봇손 글러브’를 공개한다고 18일 밝혔다.BCI 로봇손 글러브는 사용자가 ‘손을 움직이겠다’고 생각할 때 발생하는 뇌파(EEG) 신호를 실시간으로 분석해 로봇손의 움직임으로 구현하는 피지컬 AI다. 제품은 성인 남성 손 크기로, 각 손가락은 독립 구동장치를 적용해 다양한 형태의 파지 동작을 수행할 수 있도록 설계됐으며, 손이 닿는 부위에는 미끄럼 방지 소재를 적용해 파지 안정성을 높였다.이번에 선",
+    "summary": "Dynamic Solution is unveiling a BCI-based robotic hand glove at WRC 2026 in Beijing that translates real-time EEG signals associated with the intention to move the hand into robotic hand motions. The adult-male-sized glove uses independently actuated fingers for different grasp patterns and anti-slip contact materials to improve grip stability, positioning it as a physical AI interface for thought-driven hand assistance.",
     "published": "2026-08-18T10:19:38+00:00",
     "updated": "2026-08-18T10:19:38+00:00",
     "authors": [
@@ -6140,7 +6140,7 @@
       "feed": "로봇신문 (irobotnews)",
       "first_seen": "2026-08-18",
       "full_text": "다이나믹솔루션은 중국 베이징에서 19일 개막하는 ‘2026 세계로봇대회(WRC)’에 참가해 ‘뇌-컴퓨터 인터페이스(BCI) 기반 차세대 로봇손 글러브’를 공개한다고 18일 밝혔다.BCI 로봇손 글러브는 사용자가 ‘손을 움직이겠다’고 생각할 때 발생하는 뇌파(EEG) 신호를 실시간으로 분석해 로봇손의 움직임으로 구현하는 피지컬 AI다. 제품은 성인 남성 손 크기로, 각 손가락은 독립 구동장치를 적용해 다양한 형태의 파지 동작을 수행할 수 있도록 설계됐으며, 손이 닿는 부위에는 미끄럼 방지 소재를 적용해 파지 안정성을 높였다.이번에 선",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.irobotnews.com/news/photo/202608/47965_102772_1514.jpg"
     },
     "tags": [
@@ -6202,7 +6202,7 @@
     "source": "arxiv",
     "title": "MistyPilot: Enabling Social-Robot Control through Multi-Agent LLM Skill Orchestration",
     "url": "http://arxiv.org/abs/2608.15549v1",
-    "summary": "Programming small social robots from natural-language instructions requires more than invoking isolated APIs.",
+    "summary": "MistyPilot turns high-level natural-language commands into executable behavior on the Misty social robot by routing each request to specialized LLM agents for physical interaction or social dialogue management. The system handles sensor-to-skill bindings, direct skill invocation, task-state parsing, context-aware multimodal responses, and reuse of prior generated outputs when appropriate. Across five component evaluations on a physical Misty robot and a 12-person user study, it achieved high accuracy across routing, binding, reuse, and scaling to 100 skills, with lower variance than a comparable single-agent baseline.",
     "published": "2026-08-16T05:45:16+00:00",
     "updated": "2026-08-16T05:45:16+00:00",
     "authors": [
@@ -6222,7 +6222,7 @@
       "comment": "Accepted at the ECCV 2026 ACVR Workshop",
       "first_seen": "2026-08-18",
       "full_text": "Programming small social robots from natural-language instructions requires more than invoking isolated APIs. Interactive tasks combine reactive physical behaviors with stateful social behaviors, while existing interfaces often require developers to manually compose APIs into skills, configure their parameters, bind sensor events to skills, and manage task states at runtime. We present MistyPilot, a multi-agent LLM framework that interprets high-level natural-language instructions and orchestrates the corresponding skills on the Misty social robot. A Task Router dispatches each instruction to one of two specialized agents: a Physically Interactive Agent for sensor-triggered robot control and direct skill invocation, and a Social Interaction Agent for dialogue-oriented task-state management and context-dependent multimodal response generation. To improve efficiency, the Social Interaction Agent reuses previously generated results when applicable and invokes full generation otherwise. We evaluate MistyPilot on five component-level suites, with sensor bindings and skill invocations executed on the physical Misty robot, and a preliminary user study with 12 participants. MistyPilot attains high accuracy on routing, sensor-skill binding, task-state parsing, result reuse, and skill extension up to 100 skills, and lower variance than an otherwise identical single-agent baseline, while participants report positive perceptions of usability and interaction quality. The code will be made publicly available via the project page.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.15549.jpg"
     },
     "tags": [
@@ -6357,7 +6357,7 @@
     "source": "arxiv",
     "title": "StreamOPD: A Post-Training Recipe with Spatio-Temporal Cue Gating for Streaming Video Understanding",
     "url": "http://arxiv.org/abs/2608.16320v1",
-    "summary": "Streaming video understanding demands direct responses from the causally observed prefix of an unfolding video. Existing systems add inference-time memory, retrieval, and compression, yet a training-free sliding-window baseline already matches them. We therefore fix a memory-free recent-window protocol and ask how far post-training alone can go.",
+    "summary": "StreamOPD targets streaming video QA under a simple memory-free recent-window setup, using thinking-mode on-policy distillation during post-training but deploying the model in instruct mode to avoid slow think-then-answer behavior. On StreamingBench it lifts accuracy from 77.9% to 83.9%, nearly matching the 9B teacher, and its ST-CueGate variant reweights distillation using teacher likelihood ratios for spatio-temporal cues, staying above the base model across all four benchmarks. Self-distillation from a frozen initial student keeps much of the gain and improves hallucination detection, suggesting the recipe is not inherently trading off abstention for accuracy.",
     "published": "2026-08-17T09:25:36+00:00",
     "updated": "2026-08-17T09:25:36+00:00",
     "authors": [
@@ -6381,7 +6381,7 @@
       "comment": "Project page: https://unix-ai-lab.github.io/StreamOPD",
       "first_seen": "2026-08-18",
       "full_text": "Streaming video understanding demands direct responses from the causally observed prefix of an unfolding video. Existing systems add inference-time memory, retrieval, and compression, yet a training-free sliding-window baseline already matches them. We therefore fix a memory-free recent-window protocol and ask how far post-training alone can go. Reinforcement learning with verifiable rewards fits this regime poorly, encouraging long ``think-then-answer'' generations, while on-policy distillation (OPD) supplies dense token-level teacher supervision on student trajectories but is stable only when both models train in thinking mode. These observations lead to \\textsc{StreamOPD}, a recipe combining verifiable streaming-video data, thinking-mode OPD, and instruct-mode deployment. It raises StreamingBench from $77.9\\%$ to $83.9\\%$---within $0.3$ points of the 9B teacher---and improves OVO-Bench excluding its hallucination-detection subtask (HLD) by $9.1$ points under unchanged inference. As a teacher-privilege extension, \\emph{Spatio-Temporal CueGate (ST-CueGate)} aggregates cue-versus-no-cue teacher likelihood ratios into a group-relative response score that reweights OPD. It reaches $71.9\\%$ on OVO-Bench (excluding HLD) and $64.9\\%$ on Video-MME, and is the only variant that stays above the base model on all four benchmarks. Replacing the teacher with a frozen copy of the student's initial policy---on-policy self-distillation---retains most of these gains and lifts HLD to $57.0\\%$, above both the untrained student and the 9B teacher, so abstention loss is not intrinsic to the recipe. We provide a transparent and reproducible reference for open-source streaming-video research.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.16320.jpg"
     },
     "tags": [
@@ -6409,7 +6409,7 @@
     "source": "arxiv",
     "title": "TransAnyText: Translating Arbitrary Text in E-commerce Images via Structured Visual Generation",
     "url": "http://arxiv.org/abs/2608.16284v1",
-    "summary": "Cross-border e-commerce image translation is essential for global retail, where product images, banners, and detail pages need to be produced in different languages. Existing methods struggle to achieve accurate translation, faithful visual identity preservation, and easy-to-edit outputs, simultaneously.",
+    "summary": "TransAnyText turns e-commerce image translation into a structured generation problem: a VLM reads the source image, translates the text, and emits renderable HTML patches, while diffusion inpainting and deterministic rendering preserve the background, layout, and editable text structure. Its training pipeline combines SFT, privilege-gap weighted self-distillation for style and layout tokens, and RL with verifiable rewards, and the authors introduce TransAnyDataset and TransAnyBench to evaluate multilingual product-image translation against cascaded, open-source, and closed-source editing systems.",
     "published": "2026-08-17T08:54:14+00:00",
     "updated": "2026-08-17T08:54:14+00:00",
     "authors": [
@@ -6439,7 +6439,7 @@
       "comment": null,
       "first_seen": "2026-08-18",
       "full_text": "Cross-border e-commerce image translation is essential for global retail, where product images, banners, and detail pages need to be produced in different languages. Existing methods struggle to achieve accurate translation, faithful visual identity preservation, and easy-to-edit outputs, simultaneously. To address these challenges, we introduce TransAnyText, a structured visual code framework that reformulates image text translation as generating renderable HTML patches from source images and target languages. Our framework decouples semantic generation from pixel rendering: a vision-language model (VLM) handles visual understanding, cross-lingual translation, and structured visual generation, while a diffusion model performs background inpainting and pixel-level refinement, followed by deterministic rendering to synthesize the final image. Based on this formulation, we develop a three-stage post-training framework, where supervised fine-tuning (SFT) establishes the image-to-code mapping, privilege-gap weighted self-distillation (PWSD) improves the learning of style and layout tokens, and reinforcement learning with verifiable rewards (RLVR) further optimizes task-level performance. We further introduce TransAnyDataset and TransAnyBench, a multilingual dataset and benchmark for e-commerce image translation. Extensive experiments demonstrate competitive performance against cascaded pipelines, open-source end-to-end models, and closed-source image editing systems, providing an effective, controllable, and editable solution for cross-border e-commerce image translation.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.16284.jpg"
     },
     "tags": [
@@ -6467,7 +6467,7 @@
     "source": "news",
     "title": "A3 and Mahoning County Career & Technical Center Expand Access to No-Cost Robotics Training in Ohio",
     "url": "http://www.RoboticsTomorrow.com/news/2026/08/18/a3-and-mahoning-county-career-technical-center-expand-access-to-no-cost-robotics-training-in-ohio/26968",
-    "summary": "A3 and Mahoning County Career & Technical Center Expand Access to No-Cost Robotics Training in Ohio",
+    "summary": "A3 and Mahoning County Career & Technical Center are expanding no-cost robotics training in Ohio, aimed at broadening access to industrial automation skills. The move matters as a workforce-development effort: it helps local students and workers build practical robotics capabilities without tuition barriers, feeding talent into manufacturing and automation roles.",
     "published": "2026-08-18T20:07:55+00:00",
     "updated": "2026-08-18T20:07:55+00:00",
     "authors": [],
@@ -6475,7 +6475,7 @@
       "feed": "Robotics Tomorrow",
       "first_seen": "2026-08-18",
       "full_text": "A3 and Mahoning County Career & Technical Center Expand Access to No-Cost Robotics Training in Ohio",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://www.roboticstomorrow.com/images/facebooknews.jpg"
     },
     "tags": [
@@ -6502,7 +6502,7 @@
     "source": "news",
     "title": "Electromate Makes the Case for Hands-On Robotics Education with Dobot",
     "url": "http://www.RoboticsTomorrow.com/news/2026/08/18/electromate-makes-the-case-for-hands-on-robotics-education-with-dobot/26966",
-    "summary": "Compact educational robots help schools put robotics directly into students' hands while supporting programming, automation and advanced robotics coursework",
+    "summary": "Electromate is promoting Dobot’s compact educational robot arms as a way for schools to make robotics instruction more hands-on, giving students direct experience with programming, automation, and advanced robotics concepts. The point is less a new technical result than an education push: affordable, classroom-friendly robots can turn robotics from an abstract software or theory topic into something students can physically program, test, and iterate on.",
     "published": "2026-08-18T18:28:40+00:00",
     "updated": "2026-08-18T18:28:40+00:00",
     "authors": [],
@@ -6510,7 +6510,7 @@
       "feed": "Robotics Tomorrow",
       "first_seen": "2026-08-18",
       "full_text": "Compact educational robots help schools put robotics directly into students' hands while supporting programming, automation and advanced robotics coursework",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://www.roboticstomorrow.com/images/facebooknews.jpg"
     },
     "tags": [
@@ -6538,7 +6538,7 @@
     "source": "news",
     "title": "LG ELECTRONICS ACCELERATES ROBOTICS COLLABORATION WITH NVIDIA",
     "url": "http://www.RoboticsTomorrow.com/news/2026/08/18/lg-electronics-accelerates-robotics-collaboration-with-nvidia/26963",
-    "summary": "LG Electronics' Decades of Manufacturing Know-How Meets NVIDIA's Robotics Stack At LG's New Data Factory in Seoul",
+    "summary": "LG Electronics is expanding its robotics collaboration with NVIDIA by pairing LG’s manufacturing experience with NVIDIA’s robotics stack at a new Data Factory in Seoul. The effort matters because it positions LG to use simulation, AI infrastructure, and robot-learning tools more tightly inside industrial robotics development, turning factory know-how into data-driven robot training and deployment workflows.",
     "published": "2026-08-18T12:53:52+00:00",
     "updated": "2026-08-18T12:53:52+00:00",
     "authors": [],
@@ -6546,7 +6546,7 @@
       "feed": "Robotics Tomorrow",
       "first_seen": "2026-08-18",
       "full_text": "LG Electronics' Decades of Manufacturing Know-How Meets NVIDIA's Robotics Stack At LG's New Data Factory in Seoul",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://www.roboticstomorrow.com/images/facebooknews.jpg"
     },
     "tags": [
@@ -6719,7 +6719,7 @@
     "source": "arxiv",
     "title": "Making two action heads agree: coordination mechanisms and a runtime collapse certificate for flow-matching policies",
     "url": "http://arxiv.org/abs/2608.15748v1",
-    "summary": "A dual-representation flow-matching policy decodes each predicted motion into joint and end-effector spaces, and the residual between the two kinematically equivalent decodings provides a physically interpretable runtime signal. On multimodal tasks, however, independently sampled branches may choose different valid modes, causing false alarms.",
+    "summary": "A dual-representation flow-matching policy predicts motion through both joint-space and end-effector decoders, using their kinematic residual as an interpretable runtime failure signal, but multimodal tasks can make the two validly choose different modes and trigger false alarms. The study shows that naive shared latents are erased at optimum, shared noise can help or hurt depending on decoder basin alignment, consistency regularization trades coordination for fewer valid pairs, and training-supported discrete partitions give near-ceiling coordination. It also adds a Gini-Simpson-based, label-free certificate to distinguish real coordination from collapse; on LIBERO-Plus, benign multimodality added only 1.57 percentage points of false alarms while the residual remained the strongest evaluated failure signal.",
     "published": "2026-08-16T13:57:36+00:00",
     "updated": "2026-08-16T13:57:36+00:00",
     "authors": [
@@ -6738,7 +6738,7 @@
       "comment": null,
       "first_seen": "2026-08-18",
       "full_text": "A dual-representation flow-matching policy decodes each predicted motion into joint and end-effector spaces, and the residual between the two kinematically equivalent decodings provides a physically interpretable runtime signal. On multimodal tasks, however, independently sampled branches may choose different valid modes, causing false alarms. We study how to coordinate the two branches and at what cost. Across two robot environments and a non-robotic testbed, the tested mechanisms fall into four classes. An auxiliary latent shared by both branches but absent from the flow-matching construction is erased at the population optimum, a provable dead end confirmed within a prespecified 2% equivalence band. Sharing source noise can coordinate or anti-coordinate: its effect changes sign with the representation map and tracks the alignment of decoder mode basins. Consistency regularization gives intermediate coordination but reduces the valid-pair rate, while training-supported discrete partitions achieve near-ceiling coordination robustly. We further derive a chance-corrected coordination bound based only on each branch's Gini-Simpson diversity, yielding an attainable region and a label-free certificate that separates coordination from collapse when zero mismatch is ambiguous. On LIBERO-Plus, benign multimodality adds 1.57 percentage points of false alarms to the residual, which remains the strongest evaluated failure signal; the preregistered token intervention does not meet its false-alarm criterion or produce a seed-robust detection change. Code, models, and per-run configurations are available at https://github.com/kimo423/dual-head-coordination.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail_path": "thumbnails/arxiv/2608.15748.jpg"
     },
     "tags": [
@@ -6840,7 +6840,7 @@
     "source": "news",
     "title": "Warehouse robotics company Brightpick expands partnership with Dr. Max Group",
     "url": "https://roboticsandautomationnews.com/2026/08/18/warehouse-robotics-company-brightpick-expands-partnership-with-dr-max-group/104241/",
-    "summary": "Brightpick, a provider of AI-powered warehouse automation, is significantly expanding its partnership with Dr. Max Group, Europe’s largest pharmacy chain. Following successful operations and progressive scaling at Dr.",
+    "summary": "Brightpick is expanding its deployment with Dr. Max Group after scaling its AI-powered Autopicker robots at the pharmacy chain’s Prague distribution center. The company will add 44 autonomous mobile robots across facilities in the Czech Republic and Slovakia, suggesting the system has moved beyond a pilot into broader warehouse operations for one of Europe’s largest pharmacy logistics networks.",
     "published": "2026-08-18T14:44:14+00:00",
     "updated": "2026-08-18T14:44:14+00:00",
     "authors": [
@@ -6850,7 +6850,7 @@
       "feed": "Robotics and Automation News",
       "first_seen": "2026-08-18",
       "full_text": "Brightpick, a provider of AI-powered warehouse automation, is significantly expanding its partnership with Dr. Max Group, Europe’s largest pharmacy chain. Following successful operations and progressive scaling at Dr. Max’s Prague distribution center, Brightpick will deploy an additional 44 Autopicker autonomous mobile robots across other facilities in the Czech Republic and Slovakia. The total number of […]",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://roboticsandautomationnews.com/wp-content/uploads/2026/08/Brightpick-dr.-max-group-1.jpg.jpeg"
     },
     "tags": [
@@ -7053,7 +7053,7 @@
     "source": "news",
     "title": "美 딜리전트 로보틱스, 병원용 모바일 로봇 ‘목시 2.0’ 론칭",
     "url": "https://www.irobotnews.com/news/articleView.html?idxno=47975",
-    "summary": "병원용 모바일 로봇 ‘목시(Moxi)’ 공급기업인 딜리전트 로보틱스(Diligent Robotics)​가 차세대 플랫폼인 ‘목시 2.0’을 론칭했다.딜리전트 로보틱스는 나스닥 상장사 서브 로보틱스(Serve Robotics)의 자회사로, 의약품과 의료용품 등을 운반하는 로봇인 목시를 개발해 공급하고 있다.목시 2.0은 25개 이상의 병원에서 5년간 축적한 실제 운영 경험을 바탕으로 개발됐다. 실제 현장에서 얻은 데이터를 AI 성능 향상으로 연결하는 ‘러닝 플라이휠(learning flywheel)’을 구현한 제품이다.딜리전트 로보틱",
+    "summary": "Diligent Robotics has launched Moxi 2.0, a next-generation hospital mobile robot for transporting medications and medical supplies. The platform is built from five years of deployment experience across more than 25 hospitals, using real operational data to improve its AI through a learning flywheel, which suggests the robot is being refined around the messy logistics of actual clinical environments rather than lab demos.",
     "published": "2026-08-18T12:11:57+00:00",
     "updated": "2026-08-18T12:11:57+00:00",
     "authors": [
@@ -7063,7 +7063,7 @@
       "feed": "로봇신문 (irobotnews)",
       "first_seen": "2026-08-18",
       "full_text": "병원용 모바일 로봇 ‘목시(Moxi)’ 공급기업인 딜리전트 로보틱스(Diligent Robotics)​가 차세대 플랫폼인 ‘목시 2.0’을 론칭했다.딜리전트 로보틱스는 나스닥 상장사 서브 로보틱스(Serve Robotics)의 자회사로, 의약품과 의료용품 등을 운반하는 로봇인 목시를 개발해 공급하고 있다.목시 2.0은 25개 이상의 병원에서 5년간 축적한 실제 운영 경험을 바탕으로 개발됐다. 실제 현장에서 얻은 데이터를 AI 성능 향상으로 연결하는 ‘러닝 플라이휠(learning flywheel)’을 구현한 제품이다.딜리전트 로보틱",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.irobotnews.com/news/photo/202608/47975_102783_5432.jpg"
     },
     "tags": [
@@ -7340,7 +7340,7 @@
     "source": "news",
     "title": "세계 최대 로봇산업 축제 ‘WRC 2026’ 19일 베이징서 막 오른다",
     "url": "https://www.irobotnews.com/news/articleView.html?idxno=47985",
-    "summary": "세계 최대 규모의 로봇 산업 축제이자 글로벌 로봇 기술의 최전선을 한눈에 조망할 수 있는 국제적 플랫폼인 ‘2026 세계로봇대회(WRC, World Robot Conference)’가 19일부터 23일까지 5일간의 일정으로 중국 베이징 경제기술개발구 내 이좡국제회전중심에서 개최된다.이번 대회는 단순한 전시회를 넘어, 로봇 공학과 인공지능이 융합된 미래 기술의 방향성을 제시하는 글로벌 비즈니스 허브로서의 위상을 굳건히 할 것으로 기대를 모은다.최근 생성형 인공지능(AI) 기술의 비약적 발전을 기점으로 촉발된 미·중 양국의 기술 패권",
+    "summary": "The 2026 World Robot Conference opens August 19 in Beijing’s Yizhuang International Convention and Exhibition Center, bringing five days of robotics and AI industry showcases to one of the field’s largest global venues. The event is framed less as a trade show than as a business and technology platform for where robotics is heading as generative AI accelerates competition, especially between the U.S. and China.",
     "published": "2026-08-18T18:02:39+00:00",
     "updated": "2026-08-18T18:02:39+00:00",
     "authors": [
@@ -7350,7 +7350,7 @@
       "feed": "로봇신문 (irobotnews)",
       "first_seen": "2026-08-18",
       "full_text": "세계 최대 규모의 로봇 산업 축제이자 글로벌 로봇 기술의 최전선을 한눈에 조망할 수 있는 국제적 플랫폼인 ‘2026 세계로봇대회(WRC, World Robot Conference)’가 19일부터 23일까지 5일간의 일정으로 중국 베이징 경제기술개발구 내 이좡국제회전중심에서 개최된다.이번 대회는 단순한 전시회를 넘어, 로봇 공학과 인공지능이 융합된 미래 기술의 방향성을 제시하는 글로벌 비즈니스 허브로서의 위상을 굳건히 할 것으로 기대를 모은다.최근 생성형 인공지능(AI) 기술의 비약적 발전을 기점으로 촉발된 미·중 양국의 기술 패권",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.irobotnews.com/news/photo/202608/47985_102804_553.jpg"
     },
     "tags": [
@@ -7377,7 +7377,7 @@
     "source": "news",
     "title": "Raddy show remake intro (deleted by accident) @Meatmanveryveryveryveryverysad",
     "url": "https://www.youtube.com/watch?v=5xWEv1BdI80",
-    "summary": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.",
+    "summary": "A YouTube upload titled Raddy show remake intro appears to have been deleted accidentally by the creator, @Meatmanveryveryveryveryverysad. The available text is only YouTube’s generic platform description, so there are no concrete details about robot-AI content, mechanisms, results, or broader significance to summarize.",
     "published": "2026-08-18T10:47:57+00:00",
     "updated": "2026-08-18T10:47:57+00:00",
     "authors": [
@@ -7389,7 +7389,7 @@
       "thumbnail": "https://i2.ytimg.com/vi/5xWEv1BdI80/hqdefault.jpg",
       "first_seen": "2026-08-18",
       "full_text": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -7485,7 +7485,7 @@
     "source": "news",
     "title": "로봇강국 '대한민국의 꿈'을 펼칠 '서울대 로보틱스 국가연구소' 개소",
     "url": "https://www.irobotnews.com/news/articleView.html?idxno=47987",
-    "summary": "사람을 위한 로봇의 꿈, 진정한 융합 연구의 꿈, 창의적인 공학 인재의 꿈, 로봇강국 대한민국의 꿈을 펼칠 서울대학교 로보틱스 국가연구소 개소식이 18일 오전 서울대 해동첨단공학관 2층에서 열렸다.이날 개소식에는 서울대 유홍림 총장과 서울대학교 로보틱스 국가연구소 조규진 소장을 비롯해 국회 최형두·정진욱·박민규 의원과 과기정통부 김성수 연구개발정책실장, 교육부 채홍준 학술연구정책과장, 한국연구재단 박종애 기초연구본부장 직무대행 등 내빈과 관계 기관, 기업 관계자, 학생 등 약 300여명이 참석한 가운데 성대하게 개최되었다.개소식은",
+    "summary": "Seoul National University opened its Robotics National Research Institute on the 18th at the Haedong Advanced Engineering Building, positioning it as a hub for human-centered robotics, interdisciplinary research, and engineering talent development. The launch drew about 300 attendees from SNU, the National Assembly, science and education ministries, the National Research Foundation, industry, and students, signaling a coordinated push to strengthen South Korea’s robotics ambitions.",
     "published": "2026-08-18T23:56:32+00:00",
     "updated": "2026-08-18T23:56:32+00:00",
     "authors": [
@@ -7495,7 +7495,7 @@
       "feed": "로봇신문 (irobotnews)",
       "first_seen": "2026-08-18",
       "full_text": "사람을 위한 로봇의 꿈, 진정한 융합 연구의 꿈, 창의적인 공학 인재의 꿈, 로봇강국 대한민국의 꿈을 펼칠 서울대학교 로보틱스 국가연구소 개소식이 18일 오전 서울대 해동첨단공학관 2층에서 열렸다.이날 개소식에는 서울대 유홍림 총장과 서울대학교 로보틱스 국가연구소 조규진 소장을 비롯해 국회 최형두·정진욱·박민규 의원과 과기정통부 김성수 연구개발정책실장, 교육부 채홍준 학술연구정책과장, 한국연구재단 박종애 기초연구본부장 직무대행 등 내빈과 관계 기관, 기업 관계자, 학생 등 약 300여명이 참석한 가운데 성대하게 개최되었다.개소식은",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.irobotnews.com/news/photo/202608/47987_102816_4226.png"
     },
     "tags": [
@@ -7522,7 +7522,7 @@
     "source": "news",
     "title": "Robotiq Hits 1,000 Palletizing Cell Installations Worldwide",
     "url": "http://www.RoboticsTomorrow.com/news/2026/08/18/robotiq-hits-1000-palletizing-cell-installations-worldwide/26969",
-    "summary": "Robotiq's palletizing cell is designed to be deployed quickly and repeated at scale, allowing manufacturers to roll out automation across several lines in a single facility rather than treating each installation as a standalone project.",
+    "summary": "Robotiq says its palletizing cell has reached 1,000 installations worldwide, pointing to strong uptake of a standardized automation product for end-of-line manufacturing. The cell is built for quick deployment and repeatable rollout, so manufacturers can automate multiple lines within a facility without re-engineering each palletizing setup from scratch.",
     "published": "2026-08-18T20:47:03+00:00",
     "updated": "2026-08-18T20:47:03+00:00",
     "authors": [],
@@ -7530,7 +7530,7 @@
       "feed": "Robotics Tomorrow",
       "first_seen": "2026-08-18",
       "full_text": "Robotiq's palletizing cell is designed to be deployed quickly and repeated at scale, allowing manufacturers to roll out automation across several lines in a single facility rather than treating each installation as a standalone project.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://www.roboticstomorrow.com/images/facebooknews.jpg"
     },
     "tags": [
@@ -7557,7 +7557,7 @@
     "source": "news",
     "title": "中 유니트리, 19일 상하이 증시 정식 상장",
     "url": "https://www.irobotnews.com/news/articleView.html?idxno=47982",
-    "summary": "중국 휴머노이드 로봇 및 4족 로봇 기업 유니트리(UNITREE, 宇树科技)가 정식 상장을 하루 앞뒀다.18일 중국 경제 언론 메이르징지신원에 따르면 유니트리가 19일 상하이 증권거래소 스타마켓(STAR MARKET)에 정식으로 상장한다. 주식 코드는 68836이며, 공모가는 주당 150.8위안이다. 상장시 시가 총액은 약 609억9300만위안(약 12조7328억원)이며, 총 조달 자금은 60억9900만위안(약 1조2736억원) 규모로 예상된다.유니트리는 이로써 A주 시장에 상장된 최초의 휴머노이드 로봇 회사가 된다. 이번 공모의",
+    "summary": "Unitree, the Chinese maker of humanoid and quadruped robots, is set to list on Shanghai’s STAR Market on August 19 with shares priced at 150.8 yuan under code 68836. The IPO would value the company at about 60.99 billion yuan and raise roughly 6.10 billion yuan, making Unitree the first humanoid robotics company listed on China’s A-share market.",
     "published": "2026-08-18T14:24:53+00:00",
     "updated": "2026-08-18T14:24:53+00:00",
     "authors": [
@@ -7567,7 +7567,7 @@
       "feed": "로봇신문 (irobotnews)",
       "first_seen": "2026-08-18",
       "full_text": "중국 휴머노이드 로봇 및 4족 로봇 기업 유니트리(UNITREE, 宇树科技)가 정식 상장을 하루 앞뒀다.18일 중국 경제 언론 메이르징지신원에 따르면 유니트리가 19일 상하이 증권거래소 스타마켓(STAR MARKET)에 정식으로 상장한다. 주식 코드는 68836이며, 공모가는 주당 150.8위안이다. 상장시 시가 총액은 약 609억9300만위안(약 12조7328억원)이며, 총 조달 자금은 60억9900만위안(약 1조2736억원) 규모로 예상된다.유니트리는 이로써 A주 시장에 상장된 최초의 휴머노이드 로봇 회사가 된다. 이번 공모의",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.irobotnews.com/news/photo/202608/47982_102794_2256.jpg"
     },
     "tags": [
@@ -7594,7 +7594,7 @@
     "source": "news",
     "title": "VUB leads European project teaching soft robots to sense, repair and adapt",
     "url": "https://roboticsandautomationnews.com/2026/08/18/vub-leads-european-project-teaching-soft-robots-to-sense-repair-and-adapt/104233/",
-    "summary": "Soft robots that provide patients with tailored support during rehabilitation, gain a sense of touch to safely handle delicate objects, and switch between soft and rigid states depending on the task: these are among the ambitions of RESSORT, a new European research project led by Vrije Universiteit Brussel (VUB). Funded by the European Union’s Horizon […]",
+    "summary": "VUB is leading RESSORT, an EU Horizon project aimed at giving soft robots richer physical intelligence: tailored rehabilitation support, tactile sensing for handling fragile objects, self-repair, adaptation, and the ability to switch between soft and rigid states. The project matters because it pushes soft robotics beyond compliant hardware toward systems that can safely interact with people and delicate environments while adjusting their bodies to the task.",
     "published": "2026-08-18T14:17:38+00:00",
     "updated": "2026-08-18T14:17:38+00:00",
     "authors": [
@@ -7604,7 +7604,7 @@
       "feed": "Robotics and Automation News",
       "first_seen": "2026-08-18",
       "full_text": "Soft robots that provide patients with tailored support during rehabilitation, gain a sense of touch to safely handle delicate objects, and switch between soft and rigid states depending on the task: these are among the ambitions of RESSORT, a new European research project led by Vrije Universiteit Brussel (VUB). Funded by the European Union’s Horizon […]",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://roboticsandautomationnews.com/wp-content/uploads/2026/08/vub-SPG_RED.png.jpeg"
     },
     "tags": [
@@ -7632,7 +7632,7 @@
     "source": "news",
     "title": "TI, 업계 최초 상용 CAN XL 트랜시버 출시...차세대 산업용 시스템 혁신 가속",
     "url": "https://www.aitimes.kr/news/articleView.html?idxno=41484",
-    "summary": "텍사스 인스트루먼트(TI)가 업계 최초의 상용 CAN XL 트랜시버(Transceiver)를 18일 공개했다. 이를 통해 인공지능(AI) 휴머노이드 로봇, 산업용 로봇 및 HMI(인간-기계 인터페이스) 시스템에서 우선순위가 높은 메시지를 적시에 전송할 수 있도록 지원한다.신형 TCAN6062 CAN(컨트롤러 영역 네트워크) XL(확장 데이터 필드 길이) 트랜시버는 늘어나는 최신 산업용 네트워크의 데이터 요구에 대응하도록 설계됐으며, 프레임당 최대 2,048바이트의 페이로드와 최대 20Mbps의 데이터 전송률을 지원한다.TCAN606",
+    "summary": "Texas Instruments introduced the TCAN6062, described as the first commercial CAN XL transceiver, aimed at AI humanoids, industrial robots, and HMI systems that need prioritized messages to arrive on time. It targets rising industrial network bandwidth demands by supporting CAN XL frames with up to 2,048-byte payloads and data rates up to 20 Mbps, giving robotics and automation systems more room for high-volume, time-sensitive control and interface data.",
     "published": "2026-08-18T11:17:22+00:00",
     "updated": "2026-08-18T11:17:22+00:00",
     "authors": [
@@ -7642,7 +7642,7 @@
       "feed": "인공지능신문",
       "first_seen": "2026-08-18",
       "full_text": "텍사스 인스트루먼트(TI)가 업계 최초의 상용 CAN XL 트랜시버(Transceiver)를 18일 공개했다. 이를 통해 인공지능(AI) 휴머노이드 로봇, 산업용 로봇 및 HMI(인간-기계 인터페이스) 시스템에서 우선순위가 높은 메시지를 적시에 전송할 수 있도록 지원한다.신형 TCAN6062 CAN(컨트롤러 영역 네트워크) XL(확장 데이터 필드 길이) 트랜시버는 늘어나는 최신 산업용 네트워크의 데이터 요구에 대응하도록 설계됐으며, 프레임당 최대 2,048바이트의 페이로드와 최대 20Mbps의 데이터 전송률을 지원한다.TCAN606",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.aitimes.kr/news/thumbnail/202608/41484_62445_1643_v150.jpg"
     },
     "tags": [
@@ -7921,7 +7921,7 @@
     "source": "news",
     "title": "Whisker’s AI-powered litter robot thinks my cats swapped bodies",
     "url": "https://www.theverge.com/tech/978323/whisker-litter-robot-5-pro-review",
-    "summary": "The greatest invention in pet tech in recent years is the litter robot. A machine that scoops your kitties' poop so you don't have to - what else could a cat owner possibly want? How about insights into your kitty's litter box usage that could flag health issues? Sign me up. But I have two […]",
+    "summary": "Whisker’s AI-powered litter robot tries to identify which cat used the box and track litter-box behavior that could hint at health issues, but in this report it appears to have confused two cats badly enough to suggest they had swapped identities. The piece highlights both the appeal and fragility of pet-health AI: automated monitoring could catch meaningful changes in bathroom habits, but its usefulness depends on reliably distinguishing animals in ordinary multi-cat homes.",
     "published": "2026-08-17T11:00:00+00:00",
     "updated": "2026-08-17T11:00:00+00:00",
     "authors": [
@@ -7931,7 +7931,7 @@
       "feed": "The Verge — AI",
       "first_seen": "2026-08-18",
       "full_text": "The greatest invention in pet tech in recent years is the litter robot. A machine that scoops your kitties' poop so you don't have to - what else could a cat owner possibly want? How about insights into your kitty's litter box usage that could flag health issues? Sign me up. But I have two […]",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/08/268628_Pet_week_CVirginia_LITTER_ROBOT.jpg?quality=90&amp;strip=all&amp;crop=0%2C10.732984293194%2C100%2C78.534031413613&amp;w=1200"
     },
     "tags": [
@@ -8455,7 +8455,7 @@
     "source": "news",
     "title": "'제23차 국제자동제어연맹(IFAC) 세계대회' 18년만에 부산서 23일 개막",
     "url": "https://www.irobotnews.com/news/articleView.html?idxno=47980",
-    "summary": "부산시(시장 전재수)는 오는 8월 23일부터 28일까지 6일간 벡스코에서 '제23차 국제자동제어연맹(IFAC) 세계대회(IFAC World Congress 2026)'가 개최된다고 밝혔다.국제자동제어연맹(IFAC)이 주최하고 (사)제어로봇시스템학회가 주관하는 이번 대회는 1957년 창설 이후 3년마다 개최되는 세계 최대 규모의 자동제어 분야 국제학술대회다. 국내에서는 2008년 서울에서 열린 제17차 대회 이후 18년 만에 두 번째로 개최된다.이번 대회는 75개국 이상에서 4400여 명이 참가 등록해 역대 최대 규모로 열리며, 해외",
+    "summary": "Busan will host IFAC World Congress 2026 at BEXCO from August 23 to 28, bringing the major triennial automatic control conference back to Korea for the first time since the 2008 Seoul meeting. Organized by IFAC and the Institute of Control, Robotics and Systems, the event is expected to be the largest in its history, with more than 4,400 registered participants from over 75 countries.",
     "published": "2026-08-18T14:38:19+00:00",
     "updated": "2026-08-18T14:38:19+00:00",
     "authors": [
@@ -8465,7 +8465,7 @@
       "feed": "로봇신문 (irobotnews)",
       "first_seen": "2026-08-18",
       "full_text": "부산시(시장 전재수)는 오는 8월 23일부터 28일까지 6일간 벡스코에서 '제23차 국제자동제어연맹(IFAC) 세계대회(IFAC World Congress 2026)'가 개최된다고 밝혔다.국제자동제어연맹(IFAC)이 주최하고 (사)제어로봇시스템학회가 주관하는 이번 대회는 1957년 창설 이후 3년마다 개최되는 세계 최대 규모의 자동제어 분야 국제학술대회다. 국내에서는 2008년 서울에서 열린 제17차 대회 이후 18년 만에 두 번째로 개최된다.이번 대회는 75개국 이상에서 4400여 명이 참가 등록해 역대 최대 규모로 열리며, 해외",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.irobotnews.com/news/photo/202608/47980_102790_62.jpg"
     },
     "tags": [
@@ -8849,7 +8849,7 @@
     "source": "news",
     "title": "그래비스 로보틱스, 소프트뱅크로부터 2억달러 투자 유치",
     "url": "https://www.irobotnews.com/news/articleView.html?idxno=47971",
-    "summary": "건설 로봇 전문기업인 그래비스 로보틱스(Gravis Robotics)가 소프트뱅크로부터 2억달러(약 2826억원) 규모 시리즈 A 투자를 유치했다고 17일(현지시간) 밝혔다. 회사는 이번 투자가 건설 로봇 분야 역사상 최대 규모의 시리즈 A 펀딩이라고 소개했다.그래비스 로보틱스는 이번에 투자받은 자금을 피지컬 AI 기술을 고도화하고, 자율 중장비를 전 세계 건설 현장에 대규모로 확산하는 데 활용할 예정이다.그래비스 로보틱스는 지난 2022년 스위스 연방공과대(ETH Zurich) 연구팀 중심으로 설립됐다. 수십 년 동안 기계적 하드",
+    "summary": "Gravis Robotics raised a $200 million Series A from SoftBank, which it says is the largest Series A funding round yet in construction robotics. The ETH Zurich spinout plans to use the money to advance its physical AI stack and scale autonomous heavy machinery across construction sites worldwide, pushing robot autonomy into one of the most equipment-heavy and labor-constrained industries.",
     "published": "2026-08-18T11:39:48+00:00",
     "updated": "2026-08-18T11:39:48+00:00",
     "authors": [
@@ -8859,7 +8859,7 @@
       "feed": "로봇신문 (irobotnews)",
       "first_seen": "2026-08-18",
       "full_text": "건설 로봇 전문기업인 그래비스 로보틱스(Gravis Robotics)가 소프트뱅크로부터 2억달러(약 2826억원) 규모 시리즈 A 투자를 유치했다고 17일(현지시간) 밝혔다. 회사는 이번 투자가 건설 로봇 분야 역사상 최대 규모의 시리즈 A 펀딩이라고 소개했다.그래비스 로보틱스는 이번에 투자받은 자금을 피지컬 AI 기술을 고도화하고, 자율 중장비를 전 세계 건설 현장에 대규모로 확산하는 데 활용할 예정이다.그래비스 로보틱스는 지난 2022년 스위스 연방공과대(ETH Zurich) 연구팀 중심으로 설립됐다. 수십 년 동안 기계적 하드",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://cdn.irobotnews.com/news/photo/202608/47971_102778_1946.png"
     },
     "tags": [
