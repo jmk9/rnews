@@ -1506,59 +1506,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2608.06729",
-    "source": "arxiv",
-    "title": "AtlasVLA: Persistent World-Ego State Modeling for Vision-Language-Action Models",
-    "url": "http://arxiv.org/abs/2608.06729v1",
-    "summary": "AtlasVLA gives a wrist-camera VLA model persistent memory, lifting fleeting 2D observations into a voxel-hashed 4D world state while separately tracking ego history and task progress. Conditioning a diffusion transformer on this joint world-ego state helps the policy handle occlusion, objects leaving view, and long-horizon manipulation steps that reactive models tend to forget. On LIBERO, RLBench, and real robot tasks, it outperforms wrist-only and even multi-view baselines, including +9.4% success on LIBERO-Long and +17.5% on real-world long-horizon tasks.",
-    "published": "2026-08-07T02:49:39+00:00",
-    "updated": "2026-08-07T02:49:39+00:00",
-    "authors": [
-      "Guiyu Zhao",
-      "Longteng Guo",
-      "Yanghong Mei",
-      "Zilin Zhu",
-      "Yu Zhang",
-      "Bin Cao",
-      "Mingming Yu",
-      "Xingjian He",
-      "Jie Jiang",
-      "Jing Liu"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.06729v1",
-      "comment": null,
-      "first_seen": "2026-08-10",
-      "full_text": "While Vision-Language-Action (VLA) models have advanced embodied AI, their fundamentally reactive paradigm severely limits performance in partially observable and long-horizon tasks. When restricted to a single wrist-mounted camera, they inevitably suffer from perception forgetting as objects exit the field of view, and temporal task-progress forgetting} during multi-step execution. To overcome these bottlenecks, we propose AtlasVLA, a novel framework that transitions from direct reactive manipulation to proactive reasoning through a persistent world-ego state. AtlasVLA features a dual-memory architecture: a 4D Persistent World State Memory that lifts transient 2D observations into a globally updated, voxel-hashed spatial state to resolve visual blind spots, and an Ego-Working State Memory that tracks historical ego state and task progress. By conditioning a diffusion transformer (DiT) on this joint World-Ego state, AtlasVLA enables robust spatial reasoning. Extensive evaluations across LIBERO, RLBench, and real-world benchmarks demonstrate that AtlasVLA achieves state-of-the-art performance using solely a wrist camera. Remarkably, it decisively outperforms multi-view baselines, yielding absolute success rate improvements of 9.4% on LIBERO-Long and 17.5% in real-world long-horizon tasks.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2608.06729.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 28.189,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.188909559330357,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:TX-Leo/HumanEgo",
     "source": "github",
     "title": "TX-Leo/HumanEgo",
@@ -1965,113 +1912,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2608.06375",
-    "source": "arxiv",
-    "title": "$ω$-0: A Latent Predictive World Action Model for Concurrent Humanoid Loco-Manipulation",
-    "url": "http://arxiv.org/abs/2608.06375v1",
-    "summary": "Humanoid household tasks often require concurrent loco-manipulation, where the robot must move, adjust posture, maintain balance, and manipulate objects as a single coordinated behavior. Yet existing humanoid policies typically decompose locomotion and manipulation, while recent world-action models remain either arm-centric or video-centered.",
-    "published": "2026-08-06T17:59:31+00:00",
-    "updated": "2026-08-06T17:59:31+00:00",
-    "authors": [
-      "Zhe Li",
-      "Zhenzhe Zhang",
-      "Yangyang Wei",
-      "Wenjie Zhang",
-      "Xichen Yuan",
-      "Peiyuan Zhi",
-      "Gen Li",
-      "Xinying Guo",
-      "Fengjie Gao",
-      "Jianfei Yang",
-      "Shanghang Zhang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.06375v1",
-      "comment": null,
-      "first_seen": "2026-08-07",
-      "full_text": "Humanoid household tasks often require concurrent loco-manipulation, where the robot must move, adjust posture, maintain balance, and manipulate objects as a single coordinated behavior. Yet existing humanoid policies typically decompose locomotion and manipulation, while recent world-action models remain either arm-centric or video-centered. We present $ω$-0, a latent predictive whole-body world-action model for real-world humanoid concurrent loco-manipulation. Given a language instruction, current visual observation, and robot proprioceptive state, $ω$-0 directly predicts controller-compatible whole-body action latents for real-robot execution. Rather than reconstructing future videos, $ω$-0 learns compact future observation embeddings as a lightweight predictive objective, coupling latent visual foresight with diffusion-based whole-body action generation. The model supports egocentric RGB, exocentric RGB, and exocentric depth inputs, and leverages controller-based simulation replay to ground human/public visual-motion priors into robot-executable action latents. We further collect $ω$-HOME, a 40+ hour real-world household humanoid dataset with synchronized multi-view observations, whole-body SMPL motions, robot states, and action latents. Real-world experiments on 11 household tasks demonstrate that a single $ω$-0 model can produce smooth manipulate-while-moving behaviors and consistently outperform representative imitation learning, VLA, humanoid, and WAM baselines.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#IL",
-      "#VLA",
-      "#Manipulator",
-      "#Humanoid"
-    ],
-    "score": 26.11,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 6.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.1100206690873016,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2608.06332",
-    "source": "arxiv",
-    "title": "GeniWorld: A Generalizable Interactive World Model for Robotic Manipulation via Visual Actions",
-    "url": "http://arxiv.org/abs/2608.06332v1",
-    "summary": "Generalist robot policies exhibit strong capabilities, but their robustness in complex and unseen environments remains limited. Scaling robot learning and evaluation in diverse real-world environments remains costly and challenging.",
-    "published": "2026-08-06T17:40:32+00:00",
-    "updated": "2026-08-06T17:40:32+00:00",
-    "authors": [
-      "Chenghao Gu",
-      "Hanyang Yu",
-      "Jingbo Zhang",
-      "Haitao Lin",
-      "Wenyao Zhang",
-      "Jinghe Wang",
-      "Hanglei Jin",
-      "Shuzhao Xie",
-      "Jingyan Jiang",
-      "Zhi Wang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.06332v1",
-      "comment": null,
-      "first_seen": "2026-08-07",
-      "full_text": "Generalist robot policies exhibit strong capabilities, but their robustness in complex and unseen environments remains limited. Scaling robot learning and evaluation in diverse real-world environments remains costly and challenging. Action-conditioned world models offer a promising alternative, but they often suffer from limited action controllability and poor generalization to out-of-distribution (OOD) scenarios. To this end, we present GeniWorld, an interactive world model for robots that generalizes robustly across unseen scenarios. Building on pretrained video generative models, we use URDF-based rendering to transform numerical actions into visual action representations, enabling spatially grounded action control. By explicitly decoupling embodiment kinematics from environmental dynamics, our model mitigates scene overfitting and facilitates modeling of robot-environment interactions. To achieve closed-loop control, we construct an autoregressive video prediction model integrated with high-frequency robot kinematic control, enabling interaction with both robot policies and human teleoperators. In our experiments, even when trained solely on limited fixed-scene data, our model achieves superior in-domain performance and robust zero-shot generalization to highly randomized, unseen environments. For downstream applications, GeniWorld serves as a scalable policy evaluator that remains reliable under environmental perturbations. Furthermore, even with limited real-world demonstrations, GeniWorld generates diverse manipulation trajectories within the world model, improving downstream policy performance and robustness in complex environments.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 25.107,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.107195767715774,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:kuds/mesozoic-labs",
     "source": "github",
     "title": "kuds/mesozoic-labs",
@@ -2115,62 +1955,6 @@
       "github_stars_log": 5.206963425791125,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2608.06374",
-    "source": "arxiv",
-    "title": "DyPES-VLA: Learning Shared Dynamics Priors and Embodiment-Specific Control for Cross-Embodiment Manipulation",
-    "url": "http://arxiv.org/abs/2608.06374v1",
-    "summary": "Vision-Language-Action (VLA) models have become a powerful paradigm for robot manipulation, but training a single generalist policy for heterogeneous robot embodiments remains an open problem. Existing methods have two main limitations.",
-    "published": "2026-08-06T17:59:20+00:00",
-    "updated": "2026-08-06T17:59:20+00:00",
-    "authors": [
-      "Junfeng Li",
-      "Junjie He",
-      "Zhide Zhong",
-      "Yangyang Zheng",
-      "Pingyue Sheng",
-      "Jiayu Dong",
-      "Ruixin Li",
-      "Haodong Yan",
-      "Jiaguan Zhu",
-      "Tianran Zhang",
-      "Runze Yu",
-      "Wen Chen",
-      "Liuqing Yang",
-      "Yuxiang Gao",
-      "Haoang Li"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.06374v1",
-      "comment": null,
-      "first_seen": "2026-08-07",
-      "full_text": "Vision-Language-Action (VLA) models have become a powerful paradigm for robot manipulation, but training a single generalist policy for heterogeneous robot embodiments remains an open problem. Existing methods have two main limitations. First, they underuse dynamics priors shared across diverse visual and interaction data, limiting cross-embodiment transfer. Second, they require extensive manual preprocessing to convert embodiment-specific actions into a common format. To overcome these limitations, we propose DyPES-VLA, a cross-embodiment VLA that learns shared Dynamics Priors and Embodiment-Specific control. First, we learn shared dynamics priors by training the vision-language model (VLM) with a future-prediction objective on cross-embodiment data, driving the shared query representation to capture object motion, contact, and interaction-induced scene changes. Second, an embodiment-specific Mixture-of-Experts (MoE) action head translates these shared dynamics priors into executable controls directly in each embodiment's native action space, without manually pre-aligning heterogeneous actions into a common format. This head shares attention layers to capture common temporal action structures, while its embodiment-specific feed-forward experts resolve the unique kinematic constraints and control semantics of distinct embodiments. As a generalist policy, our \\ourmethod achieves state-of-the-art performance across simulation and real-world evaluations, reaching 98.0% success on LIBERO, 59.25% on RoboCasa-GR1, and 89.02% on RoboTwin~2.0.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 24.11,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.109993387142857,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -2552,53 +2336,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2608.06965",
-    "source": "arxiv",
-    "title": "Cross-View Action Consistency for Camera-Robust Vision-Language-Action Policies",
-    "url": "http://arxiv.org/abs/2608.06965v1",
-    "summary": "Cross-View Action Consistency trains camera-robust VLA policies by pairing action-equivalent LIBERO demonstrations rendered from nominal and perturbed scene-camera views, then regularizing the flow-policy velocity field so both views predict the same action flow at matched sampled coordinates. With only scene RGB, language, and proprioception at inference, it improves LIBERO-Plus camera-perturbation success to 87.2% versus 79.8% for flow matching on the same paired data and 74.7% for mixed-camera SFT, while preserving nominal-camera performance. The same idea transfers to a real tabletop robot, raising held-out-camera success from 53.3% to 74.4% across three tasks.",
-    "published": "2026-08-07T08:41:31+00:00",
-    "updated": "2026-08-07T08:41:31+00:00",
-    "authors": [
-      "Bingqi Huang",
-      "Bingchuan Wei",
-      "Xuan Wang",
-      "Yingkai Cai",
-      "Zhaokui Wang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.06965v1",
-      "comment": null,
-      "first_seen": "2026-08-10",
-      "full_text": "Vision-language-action (VLA) policies fine-tuned from a fixed scene camera can fail when the camera is moved, even when the task, objects, language, and robot state are unchanged. We study scene-camera viewpoint robustness using only a scene RGB image, language, and proprioception, without camera labels, extrinsics, depth, or point-cloud inputs. The wrist stream is masked throughout to prevent an unperturbed visual shortcut from confounding attribution to scene-camera variation. For flow-based VLAs, we propose to regularize the action-flow velocity field, the quantity directly integrated to generate continuous action chunks. We construct action-equivalent view pairs by resetting original LIBERO demonstrations to the same MuJoCo state and rendering nominal and perturbed scene-camera views. Both views are supervised by flow matching, while a cross-view loss encourages their predicted action-flow velocities to agree at the same sampled flow coordinates. On the LIBERO-Plus camera-perturbation track, our method reaches 87.2$\\pm$0.4% (4,797 rollouts per seed across 3 training seeds), +7.4pp over flow-matching-only training on the same paired data (79.8$\\pm$0.8%, also 3 seeds) and +12.5pp over naive mixed-camera SFT, while maintaining nominal-camera ID performance (95.0$\\pm$0.8%; same-data FM-only: 95.0$\\pm$4.3%). A shuffled-pair control collapses to 25.8%, showing that the gain depends on action-equivalent pairing. On a real robot, we evaluate three tabletop tasks with 10 rollouts per task and camera placement; held-out-camera success improves from 53.3% to 74.4% under the same single-scene-RGB inference interface.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2608.06965.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 21.241,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.241270672437996,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:chang-xinhai/Awesome-Dexterous-Manipulation",
     "source": "github",
     "title": "chang-xinhai/Awesome-Dexterous-Manipulation",
@@ -2755,102 +2492,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2608.06907",
-    "source": "arxiv",
-    "title": "Spatiotemporal Agility: Time-Constrained Reinforcement Learning for Vision-Guided Dynamic Quadrupedal Interception",
-    "url": "http://arxiv.org/abs/2608.06907v1",
-    "summary": "Spatiotemporal Agility studies quadruped interception through a ball-catching benchmark, replacing velocity-tracking commands with an RL locomotion policy conditioned directly on the predicted landing position and arrival time. The full system couples multi-camera perception, online trajectory prediction, low-latency target communication, and sim-to-real control, helping compensate for perception delays during fast catches. In experiments, the robot catches balls more reliably than a velocity-tracking baseline for landing spots within 2 meters and flight times of 0.8-1.2 seconds, with a smaller deployment gap from simulation.",
-    "published": "2026-08-07T07:42:19+00:00",
-    "updated": "2026-08-07T07:42:19+00:00",
-    "authors": [
-      "Yidong Zhu",
-      "Zibo Dai",
-      "Tongning Zhang",
-      "Leixin Chang",
-      "Hua Chen"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.06907v1",
-      "comment": null,
-      "first_seen": "2026-08-10",
-      "full_text": "Legged robots require robust agility to perceive and interact with complex and dynamic environments within a constrained time. However, most existing quadruped locomotion works rely on velocity-tracking policy, which struggle to reach precise targets within strict temporal constraints. Moreover, integrating real-time perception with agile locomotion for highly dynamic targets remains challenging due to sensor latency and processing delays. To concretely study and benchmark such agility in dynamic settings, we introduce a challenging ball-catching task for legged robots. This paper proposes an integrated framework that combines a vision module for landing point and time prediction with a direct position and time conditioned RL locomotion policy, instead of intermediate velocity commands. Beyond the method design, this work presents a system-level contribution that completes real-time robotic interception system that integrates multi-camera perception, online trajectory prediction, low-latency target communication, and sim-to-real locomotion control into a closed-loop deployment pipeline. By explicitly predicting the future spatial-temporal target, our approach mitigates perception latency during dynamic interception. We conducted extensive ball-catching experiments for the legged robot. Through comparative experiments against a velocity-tracking baseline, our direct target-conditioned approach achieves a higher success rate in catching balls with predicted landing spots within 2 meters and flight times between 0.8 and 1.2 seconds. This shows that the robot has successfully completed the dynamic ball-catching task under our tested setup. Furthermore, our policy exhibits a smaller performance gap after deployment, suggesting improved sim-to-real behavior in these trials.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2608.06907.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 20.232,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.2324611482217263,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2608.06688",
-    "source": "arxiv",
-    "title": "CrossTracer: Cross-Embodiment Navigation via VLA Model Reasoning and Trace Residuals Adapting",
-    "url": "http://arxiv.org/abs/2608.06688v1",
-    "summary": "CrossTracer uses a pretrained VLA model to propose egocentric pixel-space navigation traces, then adapts them to different robot bodies by predicting residual corrections from traversability cues, robot identity, and the initial path. Its CE-RRT* training pipeline turns panoptic segmentation into embodiment-conditioned cost maps, avoiding manual trace annotation while grounding paths in what wheeled or legged robots can actually traverse. On NaviTrace, it scores 45.68, beating Gemini-2.5-Pro by 10.01 points, and real-robot tests show better navigation success and execution efficiency.",
-    "published": "2026-08-07T01:24:53+00:00",
-    "updated": "2026-08-07T01:24:53+00:00",
-    "authors": [
-      "Yao Wang",
-      "Siyuan Wang",
-      "Zhirui Sun",
-      "Wenzheng Chi",
-      "Liang Lin",
-      "Jiankun Wang",
-      "Wenjun Xu"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.06688v1",
-      "comment": null,
-      "first_seen": "2026-08-10",
-      "full_text": "Vision-language-action (VLA) models provide strong semantic priors for robot navigation, but they often ignore embodiment-specific mobility constraints. A path that is semantically plausible for one robot may be physically infeasible for another. We propose CrossTracer, a hierarchical framework for cross-embodiment navigation through adaptive trace residuals. CrossTracer represents navigation plans as normalized image-plane waypoints, forming a unified pixel-space interface between semantic reasoning and physical grounding. First, Vision-Language Trace Proposer (VL-Tracer) adapts a pretrained VLA model to predict an initial navigation trace from egocentric observations and flexible goal specifications. Second, CE-Adapter refines this trace by predicting embodiment-conditioned residual corrections from visual traversability cues, robot identity, and the initial trace. To train the refinement module without costly manual annotation, Cross-Embodiment RRT* (CE-RRT*) converts panoptic segmentation into robot-conditioned traversability cost maps and generates cost-minimizing pixel-space traces. We evaluate CrossTracer on the NaviTrace benchmark, which tests whether a model can generate embodiment-consistent navigation traces from egocentric observations, language instructions, and robot embodiment types. CrossTracer achieves a total score of 45.68, outperforming the strongest evaluated general-purpose baseline, Gemini-2.5-Pro, by 10.01 points, corresponding to a 28.1% relative improvement. Real-world deployment on wheeled and legged robots further shows improved navigation success and execution efficiency.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2608.06688.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 20.176,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.1762954716121032,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:jingyu198/HUGE-Bench",
     "source": "github",
     "title": "jingyu198/HUGE-Bench",
@@ -2984,53 +2625,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2608.06481",
-    "source": "arxiv",
-    "title": "LyEvO: Lyapunov-Guided Evolutionary Optimization for Safe and Robust Sim-to-Real Policy Learning",
-    "url": "http://arxiv.org/abs/2608.06481v1",
-    "summary": "LyEvO trains sim-to-real control policies by seeding optimization with a Lyapunov-derived stability region, then repeatedly sampling scenarios from that region to co-optimize the policy and statistically verify its safety. As verification succeeds, the method expands the certified operating region, turning stability analysis and SMC into a deployment-readiness test rather than just a training aid. The authors show the loop on Cartpole and a 3D quadrotor, including targeted real-world experiments demonstrating safer, more robust transfer.",
-    "published": "2026-08-06T18:19:33+00:00",
-    "updated": "2026-08-06T18:19:33+00:00",
-    "authors": [
-      "Riccardo Curcio",
-      "Hongpeng Cao",
-      "Marco Caccamo"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.LG",
-        "cs.NE"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.06481v1",
-      "comment": null,
-      "first_seen": "2026-08-10",
-      "full_text": "Training controllers that are safe and robust in simulation, and systematically assessing their readiness for real-world deployment, remain key challenges in sim-to-real transfer. To address this, we propose LyEvO, a physics-grounded framework that combines constrained Evolutionary Optimization and Statistical Model Checking (SMC)-based verification with Lyapunov-based stability analysis. Leveraging prior knowledge of the system dynamics, LyEvO uses Lyapunov analysis to compute an initial candidate stability region. An iterative loop then uses operational scenarios drawn from this region to jointly optimize and statistically verify a policy, and subsequently expands the region's boundaries based on the verification outcome. This integrated procedure provides a practical criterion for assessing deployment readiness. We evaluate LyEvO on Cartpole and 3D Quadrotor benchmarks through extensive simulations and targeted real-world experiments, demonstrating safe and robust sim-to-real transfer.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2608.06481.jpg"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 19.113,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.113001820109127,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:b5f22f49ff3b",
     "source": "news",
     "title": "몰렉스, 휴머노이드 로봇의 양산 확대 위한 ‘MiniMix’ 하이브리드 전원 및 신호 커넥터 출시",
@@ -3152,52 +2746,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2608.06803",
-    "source": "arxiv",
-    "title": "Ising Acceleration for Multi-Robot Multi-Target Planning",
-    "url": "http://arxiv.org/abs/2608.06803v1",
-    "summary": "CMOS Ising chips are evaluated as low-power accelerators for multi-robot multi-target planning, with separate treatments of target sharing, tour construction, and pathfinding on real 45-spin all-to-all hardware. The approach adapts planning subproblems to tight spin and coefficient limits using spin merging, coefficient quantization, and spin-budget branching, and its recursive target-sharing method achieves up to 8,000x lower energy than a classical baseline. End to end, the Ising pipeline finds routes within 9% of a strong classical planner while using 130x less energy, suggesting these chips are most useful in selected planning layers rather than as a full-stack replacement.",
-    "published": "2026-08-07T04:57:27+00:00",
-    "updated": "2026-08-07T04:57:27+00:00",
-    "authors": [
-      "Ahmet Efe",
-      "Recep B. Uludag",
-      "Chris H. Kim",
-      "Ulya R. Karpuzcu"
-    ],
-    "extra": {
-      "categories": [
-        "cs.ET",
-        "cs.RO"
-      ],
-      "primary_category": "cs.ET",
-      "pdf_url": "https://arxiv.org/pdf/2608.06803v1",
-      "comment": "11 pages, 14 figures",
-      "first_seen": "2026-08-10",
-      "full_text": "Ising machines are emerging as promising hardware for combinatorial optimization. With recent advances in CMOS Ising technology, they are becoming attractive as low-power accelerator systems for robotics, where energy is limited and combinatorial optimization arises in multiple forms. However, a hardware-aware analysis of where such chips fit within a robotics planning stack is still missing. This paper studies the capabilities and limitations of CMOS Ising machines for low-power acceleration in multi-robot multi-target planning.   We analyze three planning layers---target sharing, tour construction, and pathfinding---using real 45-spin all-to-all connected CMOS Ising chips as representative devices. We propose new Ising-based planning methods and a multi-mapping pipeline that uses spin merging, coefficient quantization, and spin-budget branching to adapt subproblems to spin- and coefficient-limited hardware. Our results show that the proposed recursive target-sharing method naturally matches the Ising hardware, achieving up to 8,000x lower energy than a classical baseline. End to end, the Ising pipeline produces routes within 9% of a strong classical baseline at 130x lower energy, showing that compact CMOS Ising machines can be effective in selected parts of the planning stack.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2608.06803.jpg"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 18.208,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.207927416812996,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:cd0a6059082e",
     "source": "news",
     "title": "상반기 中 휴머노이드 로봇 관련 신규 설립기업 11만6000곳 달해",
@@ -3263,54 +2811,6 @@
       "research_interest_title": 5.0,
       "research_interest_abstract": 2.0,
       "recency": 2.9367145940600197,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2608.06830",
-    "source": "arxiv",
-    "title": "When Coordination Becomes a Threat: Communication Attacks in LLM-Controlled Multi-Robot Systems",
-    "url": "http://arxiv.org/abs/2608.06830v1",
-    "summary": "LLM-controlled multi-robot teams can turn malicious or unsafe messages into physical unsafe actions across several communication setups, not just decentralized systems. The study tests External Entry Point and Privileged In-System attacks on DMAS, HMAS-1, and HMAS-2 with three LLMs and five embodied tasks, finding very high propagation rates, including 100% post-endorsement activation in DMAS and 97.8% unsafe action success in HMAS-1. Its CPV Gate mitigation checks claim provenance before reuse, cutting violations from 70.0% to 36.6%.",
-    "published": "2026-08-07T05:39:27+00:00",
-    "updated": "2026-08-07T05:39:27+00:00",
-    "authors": [
-      "Zhen Huang",
-      "Zhihuang Liu",
-      "Weijia Shi",
-      "Yifan Yang",
-      "Weishang Wu",
-      "Zhiping Cai"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.CR"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.06830v1",
-      "comment": "17 pages, 8 figures, 4 tables",
-      "first_seen": "2026-08-10",
-      "full_text": "Large Language Models (LLMs) are increasingly used as high-level planners in embodied multi-robot systems, enabling robots to interpret natural language instructions and coordinate executable actions. Yet, this growing reliance on LLM planners also raises security concerns. Prior work has focused mainly on individual robots, while communication risks in multi-robot collaboration remain insufficiently understood. Existing multi-robot studies are further limited to preliminary analysis under the Decentralized Multi-agent System (DMAS) architecture, so it remains unclear whether these risks persist across other common communication architectures and how attacker access settings shape their propagation. To fill this gap, we formulate two communication attacks corresponding to distinct attacker access settings: the External Entry Point Attack and the Privileged In-System Attack. We evaluate both attacks across DMAS, HMAS-1, and HMAS-2 using three LLMs and five embodied multi-robot tasks. Results show that unsafe information can turn into unsafe actions across all three architectures: DMAS reaches a 96.7\\% entry endorsement rate and a 100\\% post endorsement activation rate, HMAS-1 reaches a 97.8\\% unsafe action success rate, and HMAS-2 triggers 88.3\\% of task defined unsafe action slots. To mitigate risks from trusted information flow, we introduce the Claim Provenance and Verification (CPV) Gate, which verifies communicated claims before downstream reuse and reduces the violation rate from 70.0\\% to 36.6\\%.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2608.06830.jpg"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 17.214,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.214177417197421,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -3475,61 +2975,6 @@
       "research_interest_abstract": 4.0,
       "recency": 2.3069031161210316,
       "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2608.07045",
-    "source": "arxiv",
-    "title": "C2Dex: Contact-Consistent Reconstruction and Retargeting for Dexterous Manipulation from Monocular Video",
-    "url": "http://arxiv.org/abs/2608.07045v1",
-    "summary": "C2Dex turns monocular human hand-object videos into dexterous robot manipulation trajectories by first consolidating noisy per-frame observations into stable object-side contact points in canonical object space. Those contacts then constrain human HOI reconstruction for temporal and physical consistency, and become retargeting targets for the robot via Laplacian interaction optimization plus residual RL refinement in simulation. On DexYCB and TACO, it reaches 57.78% and 26.67% end-to-end trajectory success, well above the strongest baselines at 17.78% and 10.00%, with real-robot replays showing the resulting contact-rich motions are physically feasible.",
-    "published": "2026-08-07T09:54:00+00:00",
-    "updated": "2026-08-07T09:54:00+00:00",
-    "authors": [
-      "Jie Ren",
-      "Zhehao Jiang",
-      "Yinhong Yang",
-      "Haorui Jia",
-      "Han Jiang",
-      "Ben Li",
-      "Yao Yao",
-      "Cheng Lin",
-      "Qiu Shen",
-      "Zhenshan Bing",
-      "Xiao-Xiao Long",
-      "Xun Cao"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.07045v1",
-      "comment": "9 pages, 5 figures. Submitted to IEEE Robotics and Automation Letters (RA-L). Project page: https://k-jie.github.io/C2Dex/",
-      "first_seen": "2026-08-10",
-      "full_text": "High-quality demonstrations for dexterous robot manipulation are costly and difficult to collect, whereas monocular human videos provide a scalable source of diverse manipulation behaviors. However, transferring such demonstrations to dexterous robots remains challenging: monocular hand-object interaction (HOI) reconstruction often produces temporally unstable contacts and physically implausible interactions, while conventional retargeting methods struggle to preserve task-relevant contacts and local interaction geometry across different hand embodiments. We present C2Dex, a video-to-dexterous-manipulation framework built around a shared interaction representation: stable object-side contacts recovered by aggregating noisy frame-wise observations in the canonical object space. These stable contacts serve a dual role: as trajectory-level constraints that guide reconstruction toward temporally coherent and physically plausible human HOI trajectories, and as explicit transfer targets for the dexterous hand, where Laplacian interaction optimization preserves the local hand-object geometry across embodiments and residual reinforcement learning refines the trajectory in simulation. Experiments on DexYCB and TACO show that C2Dex achieves end-to-end trajectory success rates of 57.78% and 26.67%, respectively, substantially outperforming the strongest baselines (17.78% and 10.00%) under identical evaluation criteria. Real-robot replay experiments further demonstrate physical feasibility across diverse contact-rich manipulation tasks. Project page: https://k-jie.github.io/C2Dex/",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2608.07045.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Manipulator"
-    ],
-    "score": 16.252,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.2520568839732142,
-      "has_code": 6.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
@@ -4127,129 +3572,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:5deadbde30e2",
-    "source": "news",
-    "title": "Multiway Robotics automates Malaysian manufacturer’s 5,000-location warehouse",
-    "url": "https://roboticsandautomationnews.com/2026/08/07/multiway-robotics-automates-malaysian-manufacturers-5000-location-warehouse/103997/",
-    "summary": "Multiway Robotics has completed the deployment of an intelligent warehouse automation system for a manufacturing company in Malaysia, combining autonomous forklifts with warehouse management software to improve storage capacity and material handling.",
-    "published": "2026-08-07T10:12:50+00:00",
-    "updated": "2026-08-07T10:12:50+00:00",
-    "authors": [
-      "David Edwards"
-    ],
-    "extra": {
-      "feed": "Robotics and Automation News",
-      "first_seen": "2026-08-07",
-      "full_text": "Multiway Robotics has completed the deployment of an intelligent warehouse automation system for a manufacturing company in Malaysia, combining autonomous forklifts with warehouse management software to improve storage capacity and material handling. The project supports more than 5,000 storage locations across raw material warehouses, finished goods storage, material preparation areas and quarantine zones. According to […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 10.255,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.254859438353175,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "arxiv:2608.07004",
-    "source": "arxiv",
-    "title": "Benchmarking and Reasoning Distillation of Large Language Models for Feedback Controller Design in Complex Dynamical Systems",
-    "url": "http://arxiv.org/abs/2608.07004v1",
-    "summary": "CoDyControlBench tests LLMs on feedback controller design across 132 complex dynamical-system configurations, varying DoF, system type, coupling, damping, and controller type, rather than staying with simple linear single-DoF cases. GPT reached a 94.8% design success rate while Qwen reached 50.0%, with the gap traced mainly to control-design knowledge such as gain selection and transient-limiting mechanisms. A 1.5B reasoning-distilled model held stable performance from 1-6 DoFs and successfully tracked targets in three physical trials on a pneumatic-artificial-muscle robotic arm, suggesting controller-design LLMs can be made practical for edge deployment.",
-    "published": "2026-08-07T09:19:31+00:00",
-    "updated": "2026-08-07T09:19:31+00:00",
-    "authors": [
-      "Zhongchao Zhou",
-      "Yixuan Xie",
-      "Wenwei Yu",
-      "Yuxi Lu",
-      "Yaonan Zhu",
-      "Qian Niu",
-      "Yutaka Matsuo",
-      "Yusuke Iwasawa"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "eess.SY"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.07004v1",
-      "comment": null,
-      "first_seen": "2026-08-10",
-      "full_text": "Although remarkable capabilities have been demonstrated by Large Language Models (LLMs) across scientific domains, feedback controller design remains underexplored. Existing benchmarks focus mainly on linear single-Degree-of-Freedom (DoF) systems and large API-hosted models, leaving performance on complex controller-design tasks and feasibility for edge deployment unclear. To address these limitations, we introduce the Complex Dynamics-to-Control Benchmark for Large Language Models (CoDyControlBench), comprising 132 system configurations across five evaluation dimensions: number of DoF, system type, coupling level, damping regime, and controller type. Six state-of-the-art LLMs were evaluated over three independent runs, including three commercial models (GPT, Gemini, and Claude) and three open-source models (GLM, DeepSeek, and Qwen). GPT achieved the highest design success rate at 94.8\\%, whereas Qwen showed the lowest rate at 50.0\\%. Across the benchmark dimensions, DoF and controller type exhibited the largest model-averaged variations in design success, with success-rate ranges of 36.3\\% and 17.6\\%, respectively, exceeding those associated with system type, coupling level, and damping regime. Comparison of GPT and Qwen showed that their performance gap arose mainly from the control-design knowledge, particularly gain selection and the use of transient-limiting mechanisms. For edge deployment, a specialized 1.5B-parameter model was developed through reasoning distillation. The reasoning-distilled model outperformed the answer-distilled and base model on CoDyControlBench, maintained stable performance across 1-6 DoFs, and achieved successful traget tracking in all three physical trials on a pneumatic-artificial-muscle-driven robotic arm. These results establish a benchmark baseline and highlight the potential of lightweight, edge-deployable controller-design models.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2608.07004.jpg"
-    },
-    "tags": [
-      "#Manipulator"
-    ],
-    "score": 10.247,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.2469254351388885,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:b4e4bfd250c6",
-    "source": "news",
-    "title": "Interview with Icarus Robotics co-founder Jamie Palmer: Building a ‘robotic labor force for space’",
-    "url": "https://roboticsandautomationnews.com/2026/08/06/interview-with-icarus-robotics-co-founder-jamie-palmer-building-a-robotic-labor-force-for-space/103978/",
-    "summary": "As governments and private companies accelerate plans for commercial space stations, orbital manufacturing and eventually lunar infrastructure, one question is becoming increasingly important: who – or what – will do the work in space? Brooklyn-based startup Icarus Robotics believes much of that work will be carried out by intelligent robotic workers.",
-    "published": "2026-08-06T20:44:41+00:00",
-    "updated": "2026-08-06T20:44:41+00:00",
-    "authors": [
-      "David Edwards"
-    ],
-    "extra": {
-      "feed": "Robotics and Automation News",
-      "first_seen": "2026-08-07",
-      "full_text": "As governments and private companies accelerate plans for commercial space stations, orbital manufacturing and eventually lunar infrastructure, one question is becoming increasingly important: who – or what – will do the work in space? Brooklyn-based startup Icarus Robotics believes much of that work will be carried out by intelligent robotic workers. Founded in 2024, the […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 10.135,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.134599021453373,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:5bbf02796995",
     "source": "news",
     "title": "“생각하는 로봇, 명상하는 인간”…국립중앙과학관, 광복절 연휴 특별전 운영",
@@ -4688,42 +4010,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:826fe757cfd4",
-    "source": "news",
-    "title": "AI agents create virtual playgrounds to help robots get crucial training data",
-    "url": "https://robohub.org/ai-agents-create-virtual-playgrounds-to-help-robots-get-crucial-training-data/",
-    "summary": "A new system developed at MIT uses three agents to piece together the objects, walls, and overall look of a 3D scene. Its realistic recreations of indoor spaces help robots practice skills and try out different ways of doing tasks before they’re powered on. Image: Tim Malieckal/MIT CSAIL using assets from the researchers. By Alex […]",
-    "published": "2026-08-07T07:17:33+00:00",
-    "updated": "2026-08-07T07:17:33+00:00",
-    "authors": [
-      "MIT News"
-    ],
-    "extra": {
-      "feed": "Robohub",
-      "first_seen": "2026-08-07",
-      "full_text": "A new system developed at MIT uses three agents to piece together the objects, walls, and overall look of a 3D scene. Its realistic recreations of indoor spaces help robots practice skills and try out different ways of doing tasks before they’re powered on. Image: Tim Malieckal/MIT CSAIL using assets from the researchers. By Alex […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 6.229,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.228775614920635,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:50416d0f03d8",
     "source": "news",
     "title": "美 허비로보틱스, NASA와 액추에이터 소형화 1단계 계약",
@@ -5003,42 +4289,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.2815707473933533,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "low_priority"
-  },
-  {
-    "id": "news:7d7dceedccc9",
-    "source": "news",
-    "title": "Data center infrastructure company Tate boosts welding productivity 12-fold with fleet of 58 Hirebotics cobots",
-    "url": "https://roboticsandautomationnews.com/2026/08/07/data-center-infrastructure-company-tate-boosts-welding-productivity-12-fold-with-fleet-of-58-hirebotics-cobots/103993/",
-    "summary": "Hirebotics, a provider of collaborative robot solutions for the metal fabrication industry, has announced that data center infrastructure company Tate, has deployed a fleet of 58 Hirebotics Cobot Welder systems across manufacturing facilities in Arkansas, Virginia and Kentucky.",
-    "published": "2026-08-07T10:02:40+00:00",
-    "updated": "2026-08-07T10:02:40+00:00",
-    "authors": [
-      "David Edwards"
-    ],
-    "extra": {
-      "feed": "Robotics and Automation News",
-      "first_seen": "2026-08-07",
-      "full_text": "Hirebotics, a provider of collaborative robot solutions for the metal fabrication industry, has announced that data center infrastructure company Tate, has deployed a fleet of 58 Hirebotics Cobot Welder systems across manufacturing facilities in Arkansas, Virginia and Kentucky. According to a new Hirebotics case study, Tate has achieved a 12x increase in per-welder throughput on […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 3.253,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.25334654141121,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
