@@ -1,48 +1,5 @@
 [
   {
-    "id": "github:InternRobotics/VLAC",
-    "source": "github",
-    "title": "InternRobotics/VLAC",
-    "url": "https://github.com/InternRobotics/VLAC",
-    "summary": "VLAC: A Vision-Language-Action-Critic Model for Robotic Real-World Reinforcement Learning",
-    "published": "2025-09-15T13:53:14Z",
-    "updated": "2026-08-13T04:02:56Z",
-    "authors": [
-      "InternRobotics"
-    ],
-    "extra": {
-      "stars": 325,
-      "forks": 10,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 5,
-      "license": "MIT",
-      "first_seen": "2026-07-13",
-      "full_text": "VLAC: A Vision-Language-Action-Critic Model for Robotic Real-World Reinforcement Learning",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Other"
-    ],
-    "score": 50.637,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 6.0,
-      "recency": 1.9878820749603177,
-      "has_code": 6.0,
-      "github_stars_log": 12.566088000339695,
-      "github_forks_log": 2.08278537031645,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:huggingface/lerobot",
     "source": "github",
     "title": "huggingface/lerobot",
@@ -1023,7 +980,8 @@
       "license": "MIT",
       "first_seen": "2026-07-13",
       "full_text": "[Arxiv] Vision-Language-Action Safety: Threats, Challenges, Evaluations, and Mechanisms",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/LiQiiiii/Awesome-VLA-Safety/HEAD/assets/vla_safety_tree.jpg"
     },
     "tags": [
       "#VLA",
@@ -1598,7 +1556,8 @@
       "license": "BSD-3-Clause",
       "first_seen": "2026-08-07",
       "full_text": "An IsaacLab DirectEnv for quadrupedal locomotion under motor failures, with support for multiple quadruped robots, sim-to-sim, and sim-to-real pipelines",
-      "summary_kind": "truncation"
+      "summary_kind": "truncation",
+      "thumbnail": "https://raw.githubusercontent.com/iit-DLSLab/fault-locomotion-isaaclab/HEAD/./gifs/four_legs.gif"
     },
     "tags": [
       "#RL",
@@ -1614,53 +1573,6 @@
       "has_code": 6.0,
       "github_stars_log": 5.206963425791125,
       "github_forks_log": 0.9542425094393249,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2608.13026",
-    "source": "arxiv",
-    "title": "Temporal GRPO: Beyond Trajectory-Level Credit in Vision-Language-Action Reinforcement Learning",
-    "url": "http://arxiv.org/abs/2608.13026v1",
-    "summary": "Temporal GRPO fixes a credit-assignment failure in GRPO-style post-training for vision-language-action policies, where a whole failed rollout can wrongly penalize earlier actions that successfully completed prerequisite stages. It detects task stages, aligns rollouts to the action intervals for those stages, and computes advantages only among rollouts that reached the same stage, then applies those stage-level advantages in one policy update. On RoboTwin 2.0 it improves success rates and sample efficiency across task horizons, and LIBERO-Long experiments show it preserves shared early-stage behaviors while focusing learning where rollouts first diverge.",
-    "published": "2026-08-13T09:54:14+00:00",
-    "updated": "2026-08-13T09:54:14+00:00",
-    "authors": [
-      "Yao Zhou",
-      "Hang Gao",
-      "Fengge Wu",
-      "Changwen Zheng",
-      "Wenwen Qiang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.13026v1",
-      "comment": null,
-      "first_seen": "2026-08-15",
-      "full_text": "Outcome-driven reinforcement learning offers a scalable way to post-train vision-language-action (VLA) policies from sparse task-success feedback. In common GRPO-based VLA post-training, one rollout-level advantage is applied to every action in the trajectory. A rollout that completes several valid stages but fails later can therefore penalize the actions that produced its earlier progress. We call this trajectory-level credit aliasing. Temporal GRPO addresses this problem by constructing detectable task stages, aligning each rollout with stage-specific action intervals, and comparing only rollouts that have entered the same stage. The resulting stage advantages are applied to their corresponding intervals in a single policy update. On RoboTwin 2.0, Temporal GRPO improves task success and sample efficiency, with consistent gains across task horizons. Controlled updates on LIBERO-Long preserve shared prerequisite stages and concentrate improvement at the first stage where rollout outcomes diverge.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Other"
-    ],
-    "score": 28.04,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 6.0,
-      "recency": 2.0401588661334324,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
@@ -1803,47 +1715,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:isaac-sim/isaac-launchable",
-    "source": "github",
-    "title": "isaac-sim/isaac-launchable",
-    "url": "https://github.com/isaac-sim/isaac-launchable",
-    "summary": "This repo is used to create a pre-configured Isaac Sim and Isaac Lab environment using the NVIDIA Brev's Launchable feature. Learners get access to a VSCode instance, a Kit App Streaming client, Isaac Sim, and Isaac Lab.",
-    "published": "2025-07-25T22:31:07Z",
-    "updated": "2026-08-12T17:14:44Z",
-    "authors": [
-      "isaac-sim"
-    ],
-    "extra": {
-      "stars": 181,
-      "forks": 44,
-      "language": "Dockerfile",
-      "topics": [],
-      "open_issues": 2,
-      "license": "NOASSERTION",
-      "first_seen": "2026-07-16",
-      "full_text": "This repo is used to create a pre-configured Isaac Sim and Isaac Lab environment using the NVIDIA Brev's Launchable feature. Learners get access to a VSCode instance, a Kit App Streaming client, Isaac Sim, and Isaac Lab.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 26.498,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 1.891423737574405,
-      "has_code": 6.0,
-      "github_stars_log": 11.300356939925374,
-      "github_forks_log": 3.3064250275506875,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:castacks/AirStack",
     "source": "github",
     "title": "castacks/AirStack",
@@ -1924,57 +1795,6 @@
       "has_code": 6.0,
       "github_stars_log": 10.651668842475031,
       "github_forks_log": 1.5563025007672873,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:iit-DLSLab/locomanipulation-teleop-isaaclab",
-    "source": "github",
-    "title": "iit-DLSLab/locomanipulation-teleop-isaaclab",
-    "url": "https://github.com/iit-DLSLab/locomanipulation-teleop-isaaclab",
-    "summary": "An IsaacLab DirectEnv for performing teleoperation with Unitree Go2 + AgileX Piper, with support for sim-to-sim and sim-to-real pipelines",
-    "published": "2026-05-09T08:21:15Z",
-    "updated": "2026-08-11T20:47:48Z",
-    "authors": [
-      "iit-DLSLab"
-    ],
-    "extra": {
-      "stars": 22,
-      "forks": 2,
-      "language": "Python",
-      "topics": [
-        "agilex",
-        "isaaclab",
-        "locomotion",
-        "manipulation",
-        "reinforcement-learning",
-        "sim-to-real",
-        "teleoperation",
-        "unitree"
-      ],
-      "open_issues": 1,
-      "license": "BSD-3-Clause",
-      "first_seen": "2026-07-03",
-      "full_text": "An IsaacLab DirectEnv for performing teleoperation with Unitree Go2 + AgileX Piper, with support for sim-to-sim and sim-to-real pipelines",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Manipulator"
-    ],
-    "score": 25.472,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 1.708844373062996,
-      "has_code": 6.0,
-      "github_stars_log": 6.808639180087964,
-      "github_forks_log": 0.9542425094393249,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
@@ -2480,45 +2300,6 @@
     "priority": "must_read"
   },
   {
-    "id": "news:a6adf3a76121",
-    "source": "news",
-    "title": "Help build the future of Physical AI #Hiring #Robotics #PhysicalAI #VancouverBC",
-    "url": "https://www.youtube.com/shorts/ZKHuBEdPl78",
-    "summary": "We're looking for curious, collaborative engineers, researchers, and builders to join our team as we develop intelligent robotic systems for real-world industrial applications. View our current opportunities: https://sanctuary.ai/careers/ #Hiring #Robotics #PhysicalAI #VancouverBC #TechCareers #CanadianTech",
-    "published": "2026-08-11T20:48:29+00:00",
-    "updated": "2026-08-11T20:48:29+00:00",
-    "authors": [
-      "Sanctuary AI"
-    ],
-    "extra": {
-      "feed": "Sanctuary AI (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i3.ytimg.com/vi/ZKHuBEdPl78/hqdefault.jpg",
-      "first_seen": "2026-08-11",
-      "full_text": "We're looking for curious, collaborative engineers, researchers, and builders to join our team as we develop intelligent robotic systems for real-world industrial applications. View our current opportunities: https://sanctuary.ai/careers/ #Hiring #Robotics #PhysicalAI #VancouverBC #TechCareers #CanadianTech",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 22.709,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 0.0,
-      "recency": 1.7089460465401785,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 5.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:martin-sedlacek/REALM",
     "source": "github",
     "title": "martin-sedlacek/REALM",
@@ -2756,58 +2537,6 @@
       "research_interest_title": 5.0,
       "research_interest_abstract": 2.0,
       "recency": 2.1062178960937503,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2608.12860",
-    "source": "arxiv",
-    "title": "HumanoidVLN: A Physics-Grounded Simulator and Benchmark for Vision-Language Navigation Across Diverse Humanoid Embodiments",
-    "url": "http://arxiv.org/abs/2608.12860v1",
-    "summary": "HumanoidVLN is a physics-grounded Isaac Sim benchmark for vision-language navigation with bipedal humanoids, covering four embodiments from Unitree G1/H1 to two internal robots and pairing RL locomotion with PD or MPC path tracking. It provides 933 collision-aware episodes in large artist-designed and 3D Gaussian Splatting environments, with fine- and coarse-grained verified instructions, and shows how VLN performance shifts with the model, controller, and robot body. Across four VLN models, JanusVLN performs best at 43.55% success and 48.38 nDTW, while a Unitree G1 sim-to-real pilot finds strong error correlation between simulation and reality.",
-    "published": "2026-08-13T06:16:05+00:00",
-    "updated": "2026-08-13T06:16:05+00:00",
-    "authors": [
-      "Quan-Dung Pham",
-      "Anh Dao",
-      "The-Anh Nguyen",
-      "Minh Nguyen-Dinh",
-      "Phuong Nam Dang",
-      "Tri Pham",
-      "Hung Tran",
-      "Bach Dao",
-      "Tuyen P. Le",
-      "Truong Nguyen",
-      "Quan Nguyen"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.12860v1",
-      "comment": null,
-      "first_seen": "2026-08-15",
-      "full_text": "Vision-Language Navigation (VLN) for humanoid robots poses challenges existing benchmarks fail to address: bipedal locomotion imposes physical constraints absent from wheeled agents, humanoid morphologies vary across platforms, and egocentric observations are distorted by locomotion-induced camera dynamics. We present HumanoidVLN, a physics-grounded simulator and benchmark for VLN across diverse humanoid embodiments. Built on NVIDIA Isaac Sim, our platform supports an extensible set of humanoid configurations, demonstrated on four robots (Unitree G1, Unitree H1, Internal-A, Internal-B) spanning 10-12 lower-body DoF and heights from 1.17m to 1.80m, via a hierarchical control stack combining a reinforcement learning locomotion policy with interchangeable PD or MPC path trackers. New robots and VLN models integrate with minimal effort; we demonstrate compatibility with NaVILA, DualVLN, StreamVLN, and JanusVLN. Environments are drawn from artist-designed scenes and 3D Gaussian Splatting reconstructions, filtered for navigable areas exceeding 100 square meters. Instructions are generated by a dual generator-reviewer plus paraphraser multi-agent pipeline with human-in-the-loop verification, yielding 933 collision-aware reference episodes, each paired with one fine-grained instruction and three coarse-grained stylistic variants (formal, natural, casual). Across four models and four embodiments, JanusVLN achieves the highest mean success rate of 43.55% and nDTW of 48.38. In a 20-episode sim-to-real pilot with DualVLN and the Unitree G1, navigation errors correlate strongly (r=0.935), with a mean absolute difference of 0.68m and mean trajectory similarity of 0.782 (+/-0.188) nDTW. These results highlight the interaction between VLN models, controllers, and humanoid embodiments under physical execution. Code, benchmark, and data will be released upon acceptance at https://humanoid-vln.github.io/.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#Humanoid"
-    ],
-    "score": 22.008,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 6.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 6.0,
-      "recency": 2.0076960677876983,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -3063,58 +2792,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:telekinesis-ai/telekinesis-rlbotics",
-    "source": "github",
-    "title": "telekinesis-ai/telekinesis-rlbotics",
-    "url": "https://github.com/telekinesis-ai/telekinesis-rlbotics",
-    "summary": "telekinesis-rlbotics is a lightweight reinforcement learning toolkit built to run GPU-accelerated training across Isaac Lab, mjlab, and Gymnasium environments. It is aimed at robotics RL workflows where researchers want a compact implementation that can plug into common simulators without carrying the overhead of a larger framework.",
-    "published": "2026-08-10T21:28:51Z",
-    "updated": "2026-08-12T19:32:44Z",
-    "authors": [
-      "telekinesis-ai"
-    ],
-    "extra": {
-      "stars": 26,
-      "forks": 6,
-      "language": "Python",
-      "topics": [
-        "gymnasium",
-        "isaaclab",
-        "mjlab",
-        "ppo",
-        "ppo-algorithm",
-        "ppo-pytorch",
-        "reinforcement-learning",
-        "reinforcement-learning-algorithms",
-        "reinforcement-learning-environments"
-      ],
-      "open_issues": 4,
-      "license": "Apache-2.0",
-      "first_seen": "2026-08-13",
-      "full_text": "Lightweight, GPU-accelerated reinforcement learning for Isaac Lab, mjlab, and Gymnasium.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 20.759,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 1.911959451733631,
-      "has_code": 6.0,
-      "github_stars_log": 7.156818820794937,
-      "github_forks_log": 1.6901960800285136,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:thanhndv212/figaroh-plus",
     "source": "github",
     "title": "thanhndv212/figaroh-plus",
@@ -3347,52 +3024,6 @@
       "research_interest_abstract": 2.0,
       "recency": 2.2505904112723214,
       "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2608.13103",
-    "source": "arxiv",
-    "title": "S2-HWM: Sparse Event-Structured Hierarchical World Model for Long-Horizon Surgical Robot Manipulation",
-    "url": "http://arxiv.org/abs/2608.13103v1",
-    "summary": "S2-HWM tackles long-horizon surgical robot manipulation by learning sparse event evidence from primitive latent trajectories, using it to decide when a high-level manager should update goals while a low-level worker executes primitive actions between updates. Its event transition model rolls forward variable-duration segments by predicting the next boundary state, segment length, and accumulated reward, giving the manager a longer-horizon imagination path without abandoning primitive-step control. On SurRoL PegTransfer, it reaches 98.7% success, 22.7 points above a flat GAS DreamerV3 baseline.",
-    "published": "2026-08-13T11:29:20+00:00",
-    "updated": "2026-08-13T11:29:20+00:00",
-    "authors": [
-      "Shuzhe Zhang",
-      "Xin Zhu",
-      "Yinling Qian",
-      "Qiong Wang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "eess.SY"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.13103v1",
-      "comment": null,
-      "first_seen": "2026-08-15",
-      "full_text": "Long-horizon surgical robot manipulation is challenging because task rewards are sparse, while meaningful interaction changes occur at irregular intervals. Existing world-model agents typically imagine at primitive-step resolution, leaving variable-duration task progress implicit. Manually specified stages can provide intermediate structure, but their task specific boundaries are difficult to align with state-dependent interaction transitions. We propose S2-HWM, a Sparse Event-Structured Hierarchical World Model that learns sparse event evidence from primitive latent trajectories to coordinate an event-level manager and a primitive-step worker. The event evidence schedules manager goal updates, and each selected latent goal conditions the worker's primitive actions until the next update. The learned event evidence also forms variable-duration segments for an Event Transition Model (ETM), which predicts the next?boundary stochastic state, segment duration, and accumulated segment reward. Chaining these event-level predictions provides a variable-duration continuation beyond the primitive imagination horizon for manager learning, while the worker retains primitive-step actor-critic learning. On a SurRoL-based PegTransfer task, S2-HWM achieves a success rate of 98.7%, outperforming the flat GAS DreamerV3 baseline by 22.7 percentage points.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#Manipulator"
-    ],
-    "score": 19.054,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.0543106520089287,
-      "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
@@ -3742,94 +3373,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2608.12917",
-    "source": "arxiv",
-    "title": "Towards Socially Compliant Navigation in Deep Reinforcement Learning via Proxemics-Based Reward Modeling",
-    "url": "http://arxiv.org/abs/2608.12917v1",
-    "summary": "The authors add a proxemics-based reward to deep RL navigation, modeling each person’s personal space as a radial Gaussian-mixture field from Hall’s proxemics theory and turning the robot’s local field of view into a dense social cost. Integrated into existing DRL navigation methods, the reward improves social-compliance metrics across simulated crowd scenarios, baselines, and densities while keeping navigation performance competitive.",
-    "published": "2026-08-13T07:59:23+00:00",
-    "updated": "2026-08-13T07:59:23+00:00",
-    "authors": [
-      "Takieddine Soualhi",
-      "Jacques Saraydaryan",
-      "Laetitia Matignon"
-    ],
-    "extra": {
-      "categories": [
-        "cs.LG",
-        "cs.RO"
-      ],
-      "primary_category": "cs.LG",
-      "pdf_url": "https://arxiv.org/pdf/2608.12917v1",
-      "comment": null,
-      "first_seen": "2026-08-14",
-      "full_text": "Developing effective robot navigation methods in crowded environments is essential for real-world applications. Although recent deep reinforcement learning (DRL) methods have improved navigation performance in crowded environments, they often focus primarily on task-centric objectives and underrepresent social compliance objectives. In this paper, we introduce a novel proxemics-based reward formulation for DRL social navigation that provides a dense, interpretable social learning signal while maintaining navigation efficiency. Our approach models each human's personal space as a radial Gaussian-mixture field derived from Hall's proxemics theory and computes a robot-centric local cost over the robot's field of view. We integrate the proposed reward into established DRL navigation methods and evaluate it in simulation across multiple crowd scenarios, reward baselines, and crowd densities using both navigation metrics and social metrics. Results show that the proposed reward consistently improves social metrics in simulation while maintaining competitive navigation performance relative to the compared reward models.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 17.023,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.023068091984127,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2608.12755",
-    "source": "arxiv",
-    "title": "Genetic Fuzzy System-Based Multi-Robot Coordination for Planetary Missions",
-    "url": "http://arxiv.org/abs/2608.12755v1",
-    "summary": "A decentralized multi-robot controller uses genetic algorithms to tune fuzzy inference systems that drive a team transporting an object toward a target while minimizing total path length and avoiding obstacles. The method first converts planetary elevation maps into 2D traversability maps by analyzing slope and marking non-traversable terrain as obstacles, then trains across difficult cases such as local minima, targets near obstacles, and cluttered environments. The learned fuzzy controllers are tested on converted traversability maps across multiple scenarios, showing how the coordination strategy can transfer from synthetic training cases to more realistic planetary terrain layouts.",
-    "published": "2026-08-13T03:07:57+00:00",
-    "updated": "2026-08-13T03:07:57+00:00",
-    "authors": [
-      "Daegyun Choi",
-      "Donghoon Kim"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "eess.SY"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.12755v1",
-      "comment": "14 pages, 14 figures, 2021 31st AAS/AIAA Space Flight Mechanics Meeting",
-      "first_seen": "2026-08-15",
-      "full_text": "This paper proposes a decentralized approach for a multi-robot system (MRS) using a genetic fuzzy system to perform a collaborative object transportation task that minimizes the total path length of the MRS in unstructured environment while avoiding obstacles. For an environment given by an elevation map, terrain traversability analysis with respect to the slope is performed to reduce the dimension and identify non-traversable areas that can be considered as obstacles, and the given map is converted into a traversability map in two dimensional space. In the training process, proposed fuzzy inference systems (FISs) to generate the MRS's velocity for transporting an object to a target position are optimized by a genetic algorithm with several scenarios, such as a local minima, a target that is close to an obstacle, and a cluttered environment. The trained FIS models are applied to the testing environment, which is the converted traversability map, and validated using multiple scenarios.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 16.98,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 1.9797000356845238,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:3b6b393c003f",
     "source": "news",
     "title": "LG to Unveil Its Next-Gen Humanoid Robot, Built on NVIDIA Isaac GR00T",
@@ -4022,78 +3565,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 3.0,
-      "trusted_feed": 5.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:e583fc408196",
-    "source": "news",
-    "title": "CASBOT Hands Launches Three Dexterous Robotic Hands, Expanding Its Embodied Manipulation Platform",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/08/12/casbot-hands-launches-three-dexterous-robotic-hands-expanding-its-embodied-manipulation-platform/26937",
-    "summary": "As embodied robots continue to advance in motion control, environmental perception, and intelligent interaction, the industry is increasingly focused on a more practical question: Can robots reliably perform real-world tasks in manufacturing, research, education, and service environments?",
-    "published": "2026-08-12T12:19:54+00:00",
-    "updated": "2026-08-12T12:19:54+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-08-12",
-      "full_text": "As embodied robots continue to advance in motion control, environmental perception, and intelligent interaction, the industry is increasingly focused on a more practical question: Can robots reliably perform real-world tasks in manufacturing, research, education, and service environments?",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Manipulator"
-    ],
-    "score": 14.848,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 1.8475497209647818,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:f22adb2edab7",
-    "source": "news",
-    "title": "Behind the scenes of our ultra-bionic robot Una’s first fashion shoot.",
-    "url": "https://www.youtube.com/shorts/VRuxAA1_d6U",
-    "summary": "She’s not just a robot, she’s a muse. 📸✨ Which shot should we drop next? 👇 #UBTECH #UWORLD #UltraBionic #BTS #ConsumerRobot #AI Subscribe https://www.youtube.com/@UCdYzpvcdKkvlfTc-Abe6cJQ Learn more https://www.ubtrobot.com/en/humanoid/products/WalkerS2 Follow us https://www.facebook.com/ubtechroboticscorp/ https://twitter.com/UBTECHRobotics https://www.linkedin.com/company/ubtech-robotics/",
-    "published": "2026-08-12T12:00:05+00:00",
-    "updated": "2026-08-12T12:00:05+00:00",
-    "authors": [
-      "UBTECH Robotics"
-    ],
-    "extra": {
-      "feed": "UBTECH (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i3.ytimg.com/vi/VRuxAA1_d6U/hqdefault.jpg",
-      "first_seen": "2026-08-12",
-      "full_text": "She’s not just a robot, she’s a muse. 📸✨ Which shot should we drop next? 👇 #UBTECH #UWORLD #UltraBionic #BTS #ConsumerRobot #AI Subscribe https://www.youtube.com/@UCdYzpvcdKkvlfTc-Abe6cJQ Learn more https://www.ubtrobot.com/en/humanoid/products/WalkerS2 Follow us https://www.facebook.com/ubtechroboticscorp/ https://twitter.com/UBTECHRobotics https://www.linkedin.com/company/ubtech-robotics/",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 14.845,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 1.8446008069320436,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
       "trusted_feed": 5.0,
       "demote": -0.0
     },
@@ -4705,76 +4176,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:fe3b81a32a22",
-    "source": "news",
-    "title": "Pudu Robotics Launches PUDU ET1, an AI-Native Compact Scrubber-Dryer Robot for Small Commercial Spaces",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/08/12/pudu-robotics-launches-pudu-et1-an-ai-native-compact-scrubber-dryer-robot-for-small-commercial-spaces/26940",
-    "summary": "With a compact body, commercial-grade cleaning performance and full-process automation, ET1 brings advanced robotic cleaning to high-frequency, space-constrained environments, marking a new step in AI-native cleaning for small commercial spaces.",
-    "published": "2026-08-12T12:52:02+00:00",
-    "updated": "2026-08-12T12:52:02+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-08-12",
-      "full_text": "With a compact body, commercial-grade cleaning performance and full-process automation, ET1 brings advanced robotic cleaning to high-frequency, space-constrained environments, marking a new step in AI-native cleaning for small commercial spaces.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 9.852,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 1.8523314672247024,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:ae5c55582bbc",
-    "source": "news",
-    "title": "Robotics roadmaps from around the world",
-    "url": "https://robohub.org/robotics-roadmaps-from-around-the-world/",
-    "summary": "What’s a robotics roadmap, and why should we care? Machines with pre-defined capabilities will soon be old-school. Future machines are expected to learn and adapt to unpredictability and to interact with the physical world with the ableness of our own bodies. Welcome to Industry 4.0 (1). The reliance of modern societies on robots, from manufacturing […]",
-    "published": "2026-08-12T08:27:10+00:00",
-    "updated": "2026-08-12T08:27:10+00:00",
-    "authors": [
-      "IEEE Robotics and Automation Society (RAS)"
-    ],
-    "extra": {
-      "feed": "Robohub",
-      "first_seen": "2026-08-12",
-      "full_text": "What’s a robotics roadmap, and why should we care? Machines with pre-defined capabilities will soon be old-school. Future machines are expected to learn and adapt to unpredictability and to interact with the physical world with the ableness of our own bodies. Welcome to Industry 4.0 (1). The reliance of modern societies on robots, from manufacturing […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 9.813,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 1.8129167925694445,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "arxiv:2608.14144",
     "source": "arxiv",
     "title": "Self-Supervised Visual On-Policy Distillation",
@@ -4890,41 +4291,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.9250125268973215,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:b428d6f2beeb",
-    "source": "news",
-    "title": "Robot.com Unveils R-dog: A Four-Legged Robotic Platform Designed to Deliver, Advertise, and Engage",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/08/12/robotcom-unveils-r-dog-a-four-legged-robotic-platform-designed-to-deliver-advertise-and-engage/26939",
-    "summary": "Designed to run on REMI, Robot.com's fleet management and physical API layer, the concept robot will evolve into a production version through an expanded collaboration with FieldAI, whose general-purpose Field Foundation Models will serve as the robot's autonomy brain.",
-    "published": "2026-08-12T12:50:59+00:00",
-    "updated": "2026-08-12T12:50:59+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-08-12",
-      "full_text": "Designed to run on REMI, Robot.com's fleet management and physical API layer, the concept robot will evolve into a production version through an expanded collaboration with FieldAI, whose general-purpose Field Foundation Models will serve as the robot's autonomy brain.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 8.852,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 1.8521752171478174,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -5226,44 +4592,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:34d172ea8f3e",
-    "source": "news",
-    "title": "Sweden world cup history (1930-2026) #worldcup #sweden",
-    "url": "https://www.youtube.com/shorts/PXDfR9OQPOM",
-    "summary": "",
-    "published": "2026-08-13T01:31:54+00:00",
-    "updated": "2026-08-13T01:31:54+00:00",
-    "authors": [
-      "Figure_official"
-    ],
-    "extra": {
-      "feed": "Figure AI (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i1.ytimg.com/vi/PXDfR9OQPOM/hqdefault.jpg",
-      "first_seen": "2026-08-13",
-      "full_text": "",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 6.965,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 1.9654068605109127,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:50a7eac217fc",
     "source": "news",
     "title": "Uber and Zipline Partner to Bring Drone Delivery to Millions of Americans Share",
@@ -5289,42 +4617,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.9262947612549604,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:096e0b1cfd75",
-    "source": "news",
-    "title": "Northrop’s robot space mechanic is a new way to keep satellites at work longer",
-    "url": "https://techcrunch.com/2026/08/12/northrops-robot-space-mechanic-is-a-new-way-to-keep-satellites-at-work-longer/",
-    "summary": "The Mission Robotic Vehicle is making the first attempt to attach a new thruster to an aging satellite.",
-    "published": "2026-08-12T20:53:41+00:00",
-    "updated": "2026-08-12T20:53:41+00:00",
-    "authors": [
-      "Tim Fernholz"
-    ],
-    "extra": {
-      "feed": "TechCrunch — Robotics",
-      "first_seen": "2026-08-12",
-      "full_text": "The Mission Robotic Vehicle is making the first attempt to attach a new thruster to an aging satellite.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 6.924,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 1.9240055761284722,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -5510,112 +4802,6 @@
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -6.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:d7a16171c848",
-    "source": "news",
-    "title": "Apellix's AirShift and AirTrace Autonomy Stack Takes Commercial Drone Cleaning to Scale Without a Pilot at the Stick",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/08/12/apellixs-airshift-and-airtrace-autonomy-stack-takes-commercial-drone-cleaning-to-scale-without-a-pilot-at-the-stick/26941",
-    "summary": "",
-    "published": "2026-08-12T13:07:58+00:00",
-    "updated": "2026-08-12T13:07:58+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-08-12",
-      "full_text": "",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 4.855,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 1.8547024990401784,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:527f885868c6",
-    "source": "news",
-    "title": "Women and Drones to Host Multi-Author Book Signing at Commercial UAV Expo 2026",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/08/12/women-and-drones-to-host-multi-author-book-signing-at-commercial-uav-expo-2026/26938",
-    "summary": "Five authors advancing conversations in uncrewed aviation, workforce development, safety, and STEM education will meet attendees and sign books at Booth #340",
-    "published": "2026-08-12T12:20:58+00:00",
-    "updated": "2026-08-12T12:20:58+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-08-12",
-      "full_text": "Five authors advancing conversations in uncrewed aviation, workforce development, safety, and STEM education will meet attendees and sign books at Booth #340",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 4.848,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 1.847708451200397,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:6b030bdb5c76",
-    "source": "news",
-    "title": "Hugging Face Journal Club: Direct On-Policy Distillation",
-    "url": "https://www.youtube.com/watch?v=S5wE1sjyiQY",
-    "summary": "The Hugging Face research team discusses the paper \"Weak-to-Strong Generalization via Direct On-Policy Distillation\" which proposes a cheap way to transfer the benefits of reinforcement learning from small models to much larger ones.",
-    "published": "2026-08-11T18:05:57+00:00",
-    "updated": "2026-08-11T18:05:57+00:00",
-    "authors": [
-      "Hugging Face"
-    ],
-    "extra": {
-      "feed": "Hugging Face (YouTube)",
-      "thumbnail": "https://i4.ytimg.com/vi/S5wE1sjyiQY/hqdefault.jpg",
-      "first_seen": "2026-08-11",
-      "full_text": "The Hugging Face research team discusses the paper \"Weak-to-Strong Generalization via Direct On-Policy Distillation\" which proposes a cheap way to transfer the benefits of reinforcement learning from small models to much larger ones. Instead of imitating the smaller model directly, it measures how RL changed the small model’s policy and uses that change as a dense reward signal to train the larger model. The result is a form of weak-to-strong generalization that can match or outperform direct RL on the larger model at a fraction of the compute cost. Paper link: https://huggingface.co/papers/2607.05394",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 4.685,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 1.6847595368377974,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
     },
     "priority": "save_for_later"
   },
@@ -5829,43 +5015,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.9601018058010915,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "low_priority"
-  },
-  {
-    "id": "news:bb7eccc546a3",
-    "source": "news",
-    "title": "NVIDIA JetPack 7.2.1 Adds Agentic Video Skills and T3000 Emulation",
-    "url": "https://developer.nvidia.com/blog/nvidia-jetpack-7-2-1-adds-agentic-video-skills-and-t3000-emulation/",
-    "summary": "Video is a core data path across NVIDIA Jetson applications, from robotics and intelligent video analytics to industrial automation, healthcare, media...",
-    "published": "2026-08-11T19:00:00+00:00",
-    "updated": "2026-08-11T19:00:00+00:00",
-    "authors": [
-      "Elizabeth Goodman"
-    ],
-    "extra": {
-      "feed": "NVIDIA Developer Blog",
-      "thumbnail": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/08/image4-1-768x432.png",
-      "first_seen": "2026-08-11",
-      "full_text": "Video is a core data path across NVIDIA Jetson applications, from robotics and intelligent video analytics to industrial automation, healthcare, media...",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 3.693,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 1.692802696029266,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
