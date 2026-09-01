@@ -354,69 +354,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2608.16837",
-    "source": "arxiv",
-    "title": "HAF: Adapting Generalist VLAs to Humanoid Whole-Body Loco-manipulation via Hierarchical Action Flow and Spectral Latent RL",
-    "url": "http://arxiv.org/abs/2608.16837v1",
-    "summary": "Humanoid robots hold great promise as general-purpose agents in human-centered environments, yet generalist vision-language-action (VLA) foundation models are not readily applicable to humanoid whole-body loco-manipulation.",
-    "published": "2026-08-17T17:22:33+00:00",
-    "updated": "2026-08-17T17:22:33+00:00",
-    "authors": [
-      "Langzhe Gu",
-      "Chengkai Hou",
-      "Meng Li",
-      "Xinhua Wang",
-      "Jiaming Liu",
-      "Xinyuan Lv",
-      "Bowei Zhang",
-      "Shuanghao Bai",
-      "Guangrun Li",
-      "Jingyang He",
-      "Gaole Dai",
-      "Ziluo Ding",
-      "Zhiyuan Xu",
-      "Kuan Cheng",
-      "Jian Tang",
-      "Zhengping Che",
-      "Shanghang Zhang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.16837v1",
-      "comment": "Project page: https://grange007.github.io/HAF",
-      "first_seen": "2026-08-18",
-      "full_text": "Humanoid robots hold great promise as general-purpose agents in human-centered environments, yet generalist vision-language-action (VLA) foundation models are not readily applicable to humanoid whole-body loco-manipulation. The high dimensionality and interdependence of humanoid motions make it challenging for conventional single-stage VLA architectures to coordinate locomotion, waist posture, and dual-arm manipulation effectively. Moreover, policies trained through offline behavior cloning can remain suboptimal during real-world deployment. Although online reinforcement learning can refine policies through real-world interaction, directly tuning large VLA backbones demands excessive computation and may introduce safety risks during real-robot exploration. To address these bottlenecks, we introduce HAF (Humanoid Adaptation Framework), a two-part framework consisting of HAF-VLA and HAF-Steer that transfers off-the-shelf generalist VLA foundation models to humanoid whole-body loco-manipulation. HAF-VLA is a hierarchical action-flow generator built on a pretrained flow-matching VLA. It splits full-body action denoising into three sequential stages with stage embeddings and cross-stage KV caches that retain kinematic dependencies, avoiding incoherent whole-body actions from one-shot generation. On top of the frozen HAF-VLA, HAF-Steer is a latent offline-to-online RL pipeline that leverages flow-matching invertibility and DCT-based dimensionality reduction to restrict RL optimization to a compact noise subspace and train a regularized SAC policy. This avoids updating the large VLA backbone and enables efficient real-world policy refinement. Evaluated on seven real-world humanoid loco-manipulation tasks, HAF surpasses vanilla single-stage VLA baselines and improves whole-body coordination and task performance. Project website: https://grange007.github.io/HAF .",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#IL",
-      "#VLA",
-      "#Manipulator",
-      "#Bimanual",
-      "#Humanoid"
-    ],
-    "score": 39.536,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 7.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 8.0,
-      "recency": 2.5355024067410716,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:google-deepmind/mujoco_playground",
     "source": "github",
     "title": "google-deepmind/mujoco_playground",
@@ -545,112 +482,6 @@
       "github_stars_log": 17.24507658173893,
       "github_forks_log": 5.38569383855446,
       "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2608.16503",
-    "source": "arxiv",
-    "title": "NebulaVLA: A Dual-Frequency Vision-Language-Action Model With Guide Action for Robotic Manipulation",
-    "url": "http://arxiv.org/abs/2608.16503v1",
-    "summary": "Real-world deployment of Vision-Language-Action (VLA) models is often bottlenecked by efficiency-performance trade-offs, cross-embodiment generalization, and execution smoothness.",
-    "published": "2026-08-17T12:40:23+00:00",
-    "updated": "2026-08-17T12:40:23+00:00",
-    "authors": [
-      "Cong Zhao",
-      "Shuai Tian",
-      "Xu Zhang",
-      "Baocheng Ni",
-      "Xinguo Song",
-      "Xueying Sun",
-      "Shu Jiang",
-      "Shouchang Yang",
-      "Bo Tang",
-      "Jin Deng",
-      "Ge Zhu",
-      "YongCheng Wang",
-      "Jin Xu",
-      "Ri Yang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.16503v1",
-      "comment": "14 pages, 5 figures",
-      "first_seen": "2026-08-18",
-      "full_text": "Real-world deployment of Vision-Language-Action (VLA) models is often bottlenecked by efficiency-performance trade-offs, cross-embodiment generalization, and execution smoothness. We present NebulaVLA, an asynchronous dual-frequency architecture that decouples high-level semantic reasoning from low-level action control, optimizing computational resources and modularity. To bridge semantic gaps across heterogeneous robots, we introduce GESTURE-7, a unified language-grounded action representation. Furthermore, our Guide Action algorithm enforces kinematic continuity via mask-based smoothness constraints. Comprehensive evaluations demonstrate that NebulaVLA significantly outperforms synchronous baselines, achieving an 85.5\\% average success rate on LIBERO-Plus and accelerating action generation by \\textasciitilde 2.7$\\times$. This asynchronous design enables highly efficient and responsive control for practical robotics.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 38.494,
-    "score_breakdown": {
-      "title_keyword": 15.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.4935133170758927,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2608.16074",
-    "source": "arxiv",
-    "title": "US-VLA: An Ultrasound Vision-Language-Action Model for Embodied Abdomina",
-    "url": "http://arxiv.org/abs/2608.16074v1",
-    "summary": "Artificial intelligence-assisted ultrasound scanning enhances diagnostic reliability and efficiency by providing real-time guidance for standardized image acquisition and reducing operator dependence.",
-    "published": "2026-08-17T04:12:21+00:00",
-    "updated": "2026-08-17T04:12:21+00:00",
-    "authors": [
-      "Cheng Zhang",
-      "Xingzheng Wu",
-      "Guihao Yan",
-      "Xifeng Hu",
-      "Zhi Liu",
-      "Mei Wu",
-      "Qing Cai"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.16074v1",
-      "comment": null,
-      "first_seen": "2026-08-18",
-      "full_text": "Artificial intelligence-assisted ultrasound scanning enhances diagnostic reliability and efficiency by providing real-time guidance for standardized image acquisition and reducing operator dependence. However, existing reinforcement learning and learning-assisted ultrasound scanning methods typically rely on carefully designed reward functions or extensive interaction data, which limits their generalization ability and stability across different devices, patient populations, and complex clinical scenarios. To address these challenges, we propose an ultrasound vision-language-action model (US-VLA) for automated ultrasound scanning that explicitly encodes clinical semantic goals and generates sequential probe manipulation actions under real-time ultrasound feedback. In particular, we first design an ultrasound-aware expert fusion module to jointly integrate ultrasound observations with auxiliary contextual information, enabling semantic ultrasound feedback to effectively guide the scanning process. Then, we construct US-VLA-Data, a real-world dataset covering liver and kidney examinations, which includes five clinically defined standard planes and comprises 320 expert scanning trajectories with approximately 80,000 synchronized timesteps. Extensive experiments demonstrate that US-VLA achieves competitive performance in ultrasound probe manipulation tasks, indicating its effectiveness and promising generalization within the evaluated abdominal ultrasound setting. The source code is available at https://github.com/VMVLab/US-VLA.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 37.418,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 6.0,
-      "recency": 2.4179131159598213,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -1090,47 +921,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:DeepRoboticsLab/Lite3_rl_deploy",
-    "source": "github",
-    "title": "DeepRoboticsLab/Lite3_rl_deploy",
-    "url": "https://github.com/DeepRoboticsLab/Lite3_rl_deploy",
-    "summary": "Sim-to-sim and sim-to-real deployment for Lite3 Robot",
-    "published": "2024-09-12T08:33:09Z",
-    "updated": "2026-08-17T01:27:10Z",
-    "authors": [
-      "DeepRoboticsLab"
-    ],
-    "extra": {
-      "stars": 134,
-      "forks": 25,
-      "language": "C++",
-      "topics": [],
-      "open_issues": 0,
-      "license": "BSD-3-Clause",
-      "first_seen": "2026-05-18",
-      "full_text": "Sim-to-sim and sim-to-real deployment for Lite3 Robot",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 31.875,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.3933322517237103,
-      "has_code": 6.0,
-      "github_stars_log": 10.651668842475031,
-      "github_forks_log": 2.829946695941636,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:flexivrobotics/isaac_sim_ws",
     "source": "github",
     "title": "flexivrobotics/isaac_sim_ws",
@@ -1210,7 +1000,8 @@
       "license": "BSD-2-Clause",
       "first_seen": "2026-05-22",
       "full_text": "Research-focused C++23 physics engine for robotics, animation, and machine learning, with Python bindings",
-      "summary_kind": "truncation"
+      "summary_kind": "truncation",
+      "thumbnail": "https://raw.githubusercontent.com/dartsim/dart/main/docs/dart_logo_377x107.jpg"
     },
     "tags": [
       "#Other"
@@ -1545,56 +1336,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2608.15766",
-    "source": "arxiv",
-    "title": "Tac4Loco: Learning Spatiotemporal Plantar Pressure Representations for Humanoid Locomotion",
-    "url": "http://arxiv.org/abs/2608.15766v1",
-    "summary": "Humanoid robots are expected to traverse complex terrains, where the plantar support may vary dramatically due to foot placement errors, ground properties, and transient dynamics. To achieve robust locomotion, the robots are required to adapt to uneven terrain and uncertain foot--ground interactions.",
-    "published": "2026-08-16T14:37:05+00:00",
-    "updated": "2026-08-16T14:37:05+00:00",
-    "authors": [
-      "Ziyun Liu",
-      "Sikai Guo",
-      "Zheng Li",
-      "Jiahang Cao",
-      "Haichao Liu",
-      "Pei Qu",
-      "Yinghong Zhang",
-      "Jinni Zhou",
-      "Jun Ma"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.15766v1",
-      "comment": "9 pages,6 figures",
-      "first_seen": "2026-08-18",
-      "full_text": "Humanoid robots are expected to traverse complex terrains, where the plantar support may vary dramatically due to foot placement errors, ground properties, and transient dynamics.   To achieve robust locomotion, the robots are required to adapt to uneven terrain and uncertain foot--ground interactions.   Existing locomotion policies rely primarily on proprioception or exteroceptive terrain perception, where the former provides only indirect evidence of plantar support, while the latter predicts contact conditions before touchdown but cannot observe the actual support in real-time.   Although some studies incorporate plantar contacts as an auxiliary perception, they rely mainly on summary statistics, overlooking the spatial topology of plantar pressure, which provides a more direct characterization of the realized contact state.   To bridge this gap, we present Tac4Loco, a tactile-perceptive framework that incorporates multi-array plantar pressure as direct feedback for humanoid locomotion.   We formulate a topology-preserving ordinal representation to map simulated and physical sensor signals into a shared observation space,   with a dual-branch encoder for extracting their spatial and temporal representations. Subsequently, the learned spatiotemporal features are integrated with augmented proprioception including terrain estimation cues, and provided to an asymmetric actor-critic architecture for policy learning.   Extensive simulation and real-world experiments demonstrate improved tracking performance and support adaptation on terrains with inclined, partial, asymmetric, and changing support. We further demonstrate its zero-shot deployment on unseen compliant and unstructured terrains, including a foam platform and a gravel road. All code and experimental configurations will be released as open-source to facilitate reproducibility.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Humanoid"
-    ],
-    "score": 28.297,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.296593668940972,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:D-Robotics/hobot_stereonet",
     "source": "github",
     "title": "D-Robotics/hobot_stereonet",
@@ -1680,55 +1421,6 @@
       "has_code": 6.0,
       "github_stars_log": 11.25210001154447,
       "github_forks_log": 1.9084850188786497,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:rparak/PyBullet_Industrial_Robotics_Gym",
-    "source": "github",
-    "title": "rparak/PyBullet_Industrial_Robotics_Gym",
-    "url": "https://github.com/rparak/PyBullet_Industrial_Robotics_Gym",
-    "summary": "The project focuses on motion planning for a wide range of robotic structures using deep reinforcement learning (DRL) algorithms to solve the problem of reaching a static or random target within a pre-defined configuration space.",
-    "published": "2023-10-29T08:15:07Z",
-    "updated": "2026-08-17T07:21:13Z",
-    "authors": [
-      "rparak"
-    ],
-    "extra": {
-      "stars": 25,
-      "forks": 4,
-      "language": "Python",
-      "topics": [
-        "deep-reinforcement-learning",
-        "motion-planning",
-        "openai-gym",
-        "pybullet",
-        "reinforcement-learning",
-        "robotics"
-      ],
-      "open_issues": 1,
-      "license": null,
-      "first_seen": "2026-08-17",
-      "full_text": "The project focuses on motion planning for a wide range of robotic structures using deep reinforcement learning (DRL) algorithms to solve the problem of reaching a static or random target within a pre-defined configuration space.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 27.919,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.4460182640600197,
-      "has_code": 6.0,
-      "github_stars_log": 7.07486673985409,
-      "github_forks_log": 1.3979400086720377,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
@@ -2419,51 +2111,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2608.15816",
-    "source": "arxiv",
-    "title": "ViTaR: Visuo-Tactile Residual Adaptation for Foundation VLA Manipulation",
-    "url": "http://arxiv.org/abs/2608.15816v1",
-    "summary": "As Vision-Language-Action (VLA) models scale toward real-world deployment, contact-rich manipulation exposes a critical blind spot: these policies encode broad visual-semantic priors yet remain unaware of local contact events, producing identical actions whether contact is established, lost, or destabilized.",
-    "published": "2026-08-16T15:46:11+00:00",
-    "updated": "2026-08-16T15:46:11+00:00",
-    "authors": [
-      "Yi Wang",
-      "Renjun Wu",
-      "Jinyan Liu",
-      "Xuesong Li"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.15816v1",
-      "comment": null,
-      "first_seen": "2026-08-18",
-      "full_text": "As Vision-Language-Action (VLA) models scale toward real-world deployment, contact-rich manipulation exposes a critical blind spot: these policies encode broad visual-semantic priors yet remain unaware of local contact events, producing identical actions whether contact is established, lost, or destabilized. Existing remedies either modify VLA internals, risking catastrophic forgetting, or demand online reinforcement under near-failure contact conditions. Both grant tactile unbounded influence over action generation, conflicting with the priors that make VLAs generalizable. We introduce ViTaR, which reframes tactile feedback from an action-generating perceptual input to an execution modulator that selects and scales bounded residual corrections atop a frozen VLA, preserving pretrained capabilities by construction. ViTaR decomposes adaptation into two stages: Effect-Guided Modeling determines whether and which correction is locally justified via outcome-grounded preference evidence, and Residual Action Modulation converts this evidence into a residual choice with continuously scaled gain from real-time visuotactile observations. On the UniVTAC benchmark spanning seven contact-rich tasks, ViTaR achieves 61.3% average success, a 30.6 percentage-point improvement over its frozen VLA base that also surpasses purpose-built tactile baselines. Physical-robot experiments confirm that bounded tactile modulation transfers to real sensor noise and dynamics.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 24.307,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.306876407413194,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:wuji-technology/wuji-mjlab",
     "source": "github",
     "title": "wuji-technology/wuji-mjlab",
@@ -2533,7 +2180,8 @@
       "license": "BSD-3-Clause",
       "first_seen": "2026-08-12",
       "full_text": "An IsaacLab DirectEnv for the quadruped get-up task, with support for multiple quadruped robots, sim-to-sim, and sim-to-real pipelines",
-      "summary_kind": "truncation"
+      "summary_kind": "truncation",
+      "thumbnail": "https://raw.githubusercontent.com/iit-DLSLab/get-up-isaaclab/HEAD/./gifs/train.gif"
     },
     "tags": [
       "#RL",
@@ -2894,44 +2542,6 @@
     "priority": "must_read"
   },
   {
-    "id": "news:e6f2ed50c8b8",
-    "source": "news",
-    "title": "Is Shipyard Welding the Right First Job for Humanoid Robots?",
-    "url": "https://spectrum.ieee.org/persona-ai-humanoid-robot-welding",
-    "summary": "Humanoids desperately need to stop making YouTube videos and get a job already, and Persona AI is one of the few humanoid companies which seems to be entirely focused on making that happen.",
-    "published": "2026-08-17T15:33:42+00:00",
-    "updated": "2026-08-17T15:33:42+00:00",
-    "authors": [
-      "Evan Ackerman"
-    ],
-    "extra": {
-      "feed": "IEEE Spectrum — Robotics",
-      "thumbnail": "https://spectrum.ieee.org/media-library/two-men-supervise-a-humanoid-robot-as-it-completes-a-welding-task-in-an-industrial-warehouse.jpg?id=67626093&width=980",
-      "first_seen": "2026-08-17",
-      "full_text": "Humanoids desperately need to stop making YouTube videos and get a job already, and Persona AI is one of the few humanoid companies which seems to be entirely focused on making that happen. Persona’s approach has been to carefully select a job that is economically viable for robots right now, and they’ve found one that was also the job of one of the very first industrial robots ever sold : welding. IEEE Spectrum first spoke with Persona two years ago , shortly after it was founded by Nic Radford and Jerry Pratt . Radford led NASA JSC’s Valkyrie program back in the day and was also the founder of Nauticus Robotics , while Pratt led IHMC’s DARPA Robotics Challenge team before spending a couple of years as CTO of Figure . The Challenge of Humanoids As of our first conversation in 2024 , Persona had committed to building an economically viable humanoid, but they hadn’t yet figured out where their focus was going to be. “We were all over the place,” Radford says. “Warehousing, automotive, we probably even mentioned the home.” These are the same environments with the same sorts of potential applications that basically every other humanoid robotics company is attempting to make economically viable, and despite an ever more exhaustive number of demonstrations, so far none have succeeded at any sort of useful scale. The challenge for Persona, and really for every robotics company, is that it’s not enough that you have a robot that is simply capable of doing a task. It’s also not enough that your robot can do that task in a way that is efficient and reliable and safe . What’s required is that your robot can make money for both you and your customer. Most humanoid companies seek to achieve this by targeting baseline “unskilled” human labor. Persona did not see economic viability in the unskilled labor approach, Radford says. “We started forming this thesis around skilled trades and tool usage.” Persona is targeting much more expensive skilled labor with its robots, and the reason why this is feasible is because their entry point focuses on the kind of skills that robots are especially good at. “I like to call it ‘last-mover advantage.’ We’ve seen everything that everybody’s doing, and we’ve decided that there’s a different way.” Persona AI/YouTube A Humanoid for Shipyard Welding The first task that Persona’s humanoid is focusing on is welding—using a handheld tool to connect one piece of metal to another. “Tool use is pretty difficult,” Pratt says. “And we want to use the same tools that humans do, which makes it more difficult.” That difficulty is offset somewhat by the fact that Persona’s humanoid will first focus on making long, linear welds that are relatively uncomplicated. “This is not the hardest style of weld,” Radford says, “but in shipbuilding you need a lot of them—hundreds of kilometers of linear welds per ship.” Currently, Persona has two public partnerships: one with HD Hyundai , which is the world’s largest shipbuilder, and the other with POSCO , the third-largest steel producer in the world, both in Korea. Persona declined to get into detail, but Radford says that broadly speaking, the company is interested in customers who can support ‘hundreds’ of robots per location. Shipyard welding is an enticing application for Persona because there is a deficit of skilled (and highly paid) workers, it’s taxing physical labor, and it’s a comparatively easy skill for a humanoid to learn. The welding process is skilled in a very robot-friendly way. Because you can only weld as fast as metal melts, the top speed for the task is an easily manageable centimeter per second. And making a high quality weld involves millimeter-scale repeated motions, which robots excel at, especially over long periods of time—whereas humans tend to get tired or bored. Pratt expects that for these uncomplicated welds, performing on-par with humans—if not eventually better—will be achievable soon. Shipyards make a compelling case for a humanoid with legs, as opposed to a more stable wheeled base . “These open-air shipyards are a couple hundred meters long, with horizontal and vertical spars you have to step over all the time,” says Radford. “You’ve got to work on the ground, overhead, and through portholes.” Persona considered other form factors, like four legs (or even more), but determined a two-legged robot would be the least disruptive to existing shipyard rhythms. The Economic Viability of Humanoids Deploying their robots in shipyards specifically brings additional advantages for Persona. The safety concerns that come with bipedal robots—such as potentially falling over on a human worker—are lessened because a shipyard environment is staffed with workers who are trained to work around potentially dangerous industrial equipment. The company is also less sensitive to competitive pricing because no other company is pursuing the use case. “We’re now in an industry where the value added by our robot can be high enough that we don’t have to cut corners on quality and features in order to reduce the price,” says Pratt. “With a robot for the home, for example, there would be a lot of competition and a ton of price pressure.” The added value for shipbuilders, explains Radford, doesn’t come from replacing humans with robots. “Our current partnerships are running at a significant backlog, and they’re labor-constrained. So we want to help our customers’ top line, not necessarily their bottom line.” In other words, rather than trying to argue that their robots will lower shipbuilding costs, Persona is instead arguing that their robots will allow more ships to be built. “Even if our robot was more expensive than a human, that would still be valuable to these companies, because it could unlock additional revenue,” Radford says. And when the additional skilled labor does not exist, Persona’s robots could be the next-best option for shipbuilders who need to scale. Shipyards are environments where legs are necessary for a robot to be useful. CFOTO/Future Publishing/Getty Images Persona’s Multipurpose Future In the current commercial humanoid climate where the emphasis seems to be on developing a “general purpose” (whatever that means) robot that will somehow justify itself through some undefined scale in some equally undefined and perpetually receding future, Persona stands out with their focus on a seemingly viable, near-term, and very specific business case. It hasn’t been easy, though. “It hurts us a little bit,” Radford says. “We’ve been told that we’re not thinking big enough.” But a tool-using heavy industrial humanoid has plenty of future applications, many of which can be expanded from the welding skill even within shipyards. “Shipbuilding is a great beachhead,” says Pratt. “There are tons of adjacent markets, like grinding, painting, and other kinds of fabrication.” Persona’s ambition, adds Radford, is to be “the largest repository of industrial skills.” It’s going to take time to get there. That time will be needed to collect tens of thousands of hours of expert demonstration data, create high-fidelity simulations, and conduct real-world testing. And however promising Persona’s approach may seem, the company still has to prove that its idea for an economically viable robotics company can be realized. It’s the same challenge that every humanoid robot company is facing. “A lot of the technical problems are the same no matter whether you’re in a house or a shipyard,” Pratt says. “Everybody’s got a great team and smart people, and we’re all knocking these problems out together.”",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Humanoid"
-    ],
-    "score": 21.519,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.519304470106647,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:64ea798bcf75",
     "source": "news",
     "title": "Curious what separates a great robotics demo from a production-ready system?",
@@ -3103,104 +2713,6 @@
       "research_interest_title": 5.0,
       "research_interest_abstract": 8.0,
       "recency": 2.5594731288963293,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2608.16195",
-    "source": "arxiv",
-    "title": "RoboStriker: Latent-Space Strategic Games for Autonomous Humanoid Boxing",
-    "url": "http://arxiv.org/abs/2608.16195v1",
-    "summary": "Achieving human-level competitive intelligence and physical agility in humanoid robots remains a profound challenge, particularly in contact-rich and highly dynamic tasks such as boxing.",
-    "published": "2026-08-17T07:19:09+00:00",
-    "updated": "2026-08-17T07:19:09+00:00",
-    "authors": [
-      "Kangning Yin",
-      "Kaige Liu",
-      "Zhe Cao",
-      "Wentao Dong",
-      "Weishuai Zeng",
-      "Tianyi Zhang",
-      "Qiang Zhang",
-      "Jingbo Wang",
-      "Jiangmiao Pang",
-      "Yang Li",
-      "Ming Zhou",
-      "Weinan Zhang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.16195v1",
-      "comment": null,
-      "first_seen": "2026-08-18",
-      "full_text": "Achieving human-level competitive intelligence and physical agility in humanoid robots remains a profound challenge, particularly in contact-rich and highly dynamic tasks such as boxing. While Multi-Agent Reinforcement Learning offers a principled framework for strategic interaction, its direct application to unstructured raw motor spaces inevitably leads to joint-level physical collapse, preventing the emergence of any viable combat tactics. To resolve this fundamental conflict between strategic exploration and physical feasibility, we formulate the humanoid combat task as a novel two-player latent-space zero-sum Markov game. Under standard regularity and approximate best-response assumptions, we show that the latent formulation induces an equivalent game over the decoder-reachable action manifold, providing an approximate-Nash interpretation of the resulting self-play dynamics. To instantiate this theoretical formulation, we propose RoboStriker, a hierarchical framework that decouples high-level reasoning from low-level execution. It first distills the tracking expertise of predefined boxing motions into a topologically bounded latent manifold. This structured latent foundation subsequently drives multi-agent co-evolution via Latent-Space Neural Fictitious Self-Play. Extensive experimental results demonstrate that gaming within this structured latent space substantially outperforms direct exploration. By constraining strategic exploration through a pretrained motion decoder, RoboStriker substantially reduces the catastrophic balance failures observed in raw action-space methods and achieves superior tactical performance in both competitive win rates and striking efficiency. Finally, we successfully deploy and validate our learned combat policies on real-world humanoid robots. Our code and video and supplementary materials are available at RoboStriker.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Humanoid"
-    ],
-    "score": 20.446,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.4457107357589285,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2608.16172",
-    "source": "arxiv",
-    "title": "SparkVLA: Stop-Aware Hierarchical VLA with Adaptive Action Chunking for Long-Horizon Manipulation",
-    "url": "http://arxiv.org/abs/2608.16172v1",
-    "summary": "At every re-observation point in a hierarchical Vision-Language-Action (VLA) system, two interface decisions must be made: when to terminate the current subtask and how far to execute the proposed action chunk.",
-    "published": "2026-08-17T06:43:11+00:00",
-    "updated": "2026-08-17T06:43:11+00:00",
-    "authors": [
-      "Xunyao Lei",
-      "Renjun Wu",
-      "Tianlin Huo",
-      "Xuesong Li"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.16172v1",
-      "comment": null,
-      "first_seen": "2026-08-18",
-      "full_text": "At every re-observation point in a hierarchical Vision-Language-Action (VLA) system, two interface decisions must be made: when to terminate the current subtask and how far to execute the proposed action chunk. These decisions are mutually dependent---the optimal stopping point depends on what the executor plans to do, while the optimal execution length depends on where the subtask boundary lies---yet existing architectures evaluate them in isolation, an asymmetry neither module can overcome alone. We present SparkVLA, a stop-aware hierarchical VLA that resolves this mutual dependency by formulating both decisions as a single ranking: Stop competes against every action-prefix length in a unified candidate set, and the system selects the highest-scoring option, eliminating threshold tuning and requiring only offline ordinal preferences. An Anchor-Conditioned Context Encoding module caches a history-aware subtask anchor encoding onset-state memory and goal semantics, guiding visual-token pruning toward task-relevant regions; a Stop-Aware Action-Prefix Selection head scores all candidates via full self bnattention at chunk boundaries for efficiency. On RoboCerebra, SparkVLA achieves 47.12% success rate, surpassing the official hierarchical baseline by 30.57% and the strongest reproducible method by 26.83% Real-robot experiments on multi-step tasks further validate these gains on physical hardware.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 20.44,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.4403585530357144,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -3557,82 +3069,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2608.16642",
-    "source": "arxiv",
-    "title": "Throwing a Tight Spiral American Football by a Humanoid Robot",
-    "url": "http://arxiv.org/abs/2608.16642v1",
-    "summary": "Accurate throwing of the American football requires precise regulation of release conditions, where coupled linear and angular momentum determine flight stability and targeting accuracy.",
-    "published": "2026-08-17T14:40:54+00:00",
-    "updated": "2026-08-17T14:40:54+00:00",
-    "authors": [
-      "Zaid Mahboob",
-      "Bowen Weng"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.16642v1",
-      "comment": null,
-      "first_seen": "2026-08-18",
-      "full_text": "Accurate throwing of the American football requires precise regulation of release conditions, where coupled linear and angular momentum determine flight stability and targeting accuracy. While prior work on robotic object throwing has largely focused on generating dynamically feasible release velocities using open-gripper paradigms, explicit control of spin injection at detachment remains underexplored, particularly for aerodynamically anisotropic objects like the American football. In this paper, we present the spin-stabilized controlled tight spiral throw of an American football by a humanoid robot. Achieving this requires (i) accurately reaching the desired coupled momentum, which often involves high degrees-of-freedom (DoF) movements completed within approximately half a second, and (ii) managing the complex transient contact dynamics that arise during the sub-100-millisecond release phase, when the football is effectively underactuated as it moves partially across the fingers. To this end, we develop a coupled whole-body control strategy where the lower body is performing informed stabilization while the upper body is further divided into two phases with (i) a throw phase accelerating the football to a target state through trajectory optimization and tracking, and (ii) a follow-through phase utilizing model predictive control to actively control the wrist and remaining in-contact fingers. The proposed framework is empirically validated on a 29-DoF Unitree G1 humanoid equipped with a 7-DoF Dex3-1 three-fingered gripper. The thrown American football reaches up to 93.6% spin efficiency and a 0.286 radians linear-velocity-to-nose-alignment (nose-angle) error (where an ``ideal'' tight spiral corresponds to 100 % spin efficiency and 0 radians nose-angle error) at up to a 5.35 m/s linear velocity and an angular velocity of 14.5 rad/s.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 18.511,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.511447345605159,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:d261439293e0",
-    "source": "news",
-    "title": "Seeing Machines launches Physical AI Platform to power the next generation of humanoid robots",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/08/17/seeing-machines-launches-physical-ai-platform-to-power-the-next-generation-of-humanoid-robots/26956",
-    "summary": "New platform builds on proven automotive leadership to enable safe, intuitive human-machine interaction",
-    "published": "2026-08-17T13:02:46+00:00",
-    "updated": "2026-08-17T13:02:46+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-08-17",
-      "full_text": "New platform builds on proven automotive leadership to enable safe, intuitive human-machine interaction",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 18.497,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.4968441468923612,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:chrisyrniu/IsaacLab-Decoupled-WBC",
     "source": "github",
     "title": "chrisyrniu/IsaacLab-Decoupled-WBC",
@@ -3911,98 +3347,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2608.16058",
-    "source": "arxiv",
-    "title": "SurgVIL: Scaling Surgical Robot Imitation Learning with Open-source Surgical Videos",
-    "url": "http://arxiv.org/abs/2608.16058v1",
-    "summary": "Learning-based surgical robot autonomy requires large-scale demonstrations with synchronized videos and robot actions, but such data are exceedingly rare in clinical or realistic tissue settings because robot kinematics are typically inaccessible outside controlled research systems.",
-    "published": "2026-08-17T03:33:03+00:00",
-    "updated": "2026-08-17T03:33:03+00:00",
-    "authors": [
-      "Xinhao Chen",
-      "JuoTung Chen",
-      "Nigel Nelson",
-      "Antony Goldenberg",
-      "Jesse Haworth",
-      "Sean D. Huver",
-      "Axel Krieger"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.16058v1",
-      "comment": null,
-      "first_seen": "2026-08-18",
-      "full_text": "Learning-based surgical robot autonomy requires large-scale demonstrations with synchronized videos and robot actions, but such data are exceedingly rare in clinical or realistic tissue settings because robot kinematics are typically inaccessible outside controlled research systems. In contrast, phantom data collected on research platforms provide accurate action labels but lack the visual diversity of real tissue. We propose SurgVIL, a framework for scaling surgical robot imitation learning using open-source surgical videos. SurgVIL combines kinematically labeled phantom robot demonstrations with surgical videos from open-source datasets and online sources for policy learning. Since these videos lack robot motion labels, we estimate approximate kinematics as weak supervision. We evaluate SurgVIL on two da Vinci robot tasks: needle pick-up and cholecystectomy cutting. Across ACT, $π_0$, and GR00T-H backbones, adding surgical videos substantially improves generalization to real-tissue and out-of-distribution settings, suggesting a scalable path from phantom training toward generalizable surgical robot policies.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#IL",
-      "#Other"
-    ],
-    "score": 17.412,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.4120649014880953,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2608.15884",
-    "source": "arxiv",
-    "title": "Grouping Auction-Consensus Algorithm for Decentralized Task Allocation in Multi-Robot Systems",
-    "url": "http://arxiv.org/abs/2608.15884v1",
-    "summary": "Decentralized multi-robot task allocation (MRTA) is essential for scalable and resilient autonomous systems. The Consensus-Based Bundle Algorithm (CBBA) is a widely adopted decentralized baseline.",
-    "published": "2026-08-16T18:17:49+00:00",
-    "updated": "2026-08-16T18:17:49+00:00",
-    "authors": [
-      "Jose Rodriguez",
-      "Sven Koenig",
-      "Wenjie Dong",
-      "Qi Lu"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.15884v1",
-      "comment": null,
-      "first_seen": "2026-08-18",
-      "full_text": "Decentralized multi-robot task allocation (MRTA) is essential for scalable and resilient autonomous systems. The Consensus-Based Bundle Algorithm (CBBA) is a widely adopted decentralized baseline. However, its individual task-level bidding is poorly aligned with the min-sum objective of minimizing total team travel distance, leading to suboptimal allocations in spatially distributed environments. This paper introduces the Grouping Auction-Consensus Algorithm (GACA). This decentralized MRTA framework adopts the two-phase auction-consensus architecture of CBBA while fundamentally redesigning its bidding mechanism to reason over groups of spatially proximate tasks. A nearest-neighbor preprocessing step partitions tasks into spatially coherent groups before allocation. Agents then iteratively propose structured group-level actions: claiming unassigned groups, acquiring partial groups, or contesting groups held by other agents. Competing actions are resolved through a consensus phase. Operating in the MT-SR-IA problem class, GACA is evaluated against CBBA using a Mixed-Integer Linear Program as the ground-truth optimality reference. Across four swarm sizes and 4,000 test worlds, GACA achieves a median percent optimality of approximately 97% compared to 81--84% for CBBA, while converging in equal or fewer iterations. A scalability evaluation over 3,280 additional problem instances spanning swarm sizes of 5 to 20 agents and task counts of 10 to 50 confirms that these gains generalize robustly across a wide range of problem configurations.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 17.329,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.3294408921329364,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:83dbeca81c0f",
     "source": "news",
     "title": "Trossen Robotics and Stereolabs, an Ouster Subsidiary, Partner to Put High-Fidelity Stereo Vision at the Heart of Physical AI Data Collection",
@@ -4074,52 +3418,6 @@
       "research_interest_abstract": 4.0,
       "recency": 2.5410678839558534,
       "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2608.16651",
-    "source": "arxiv",
-    "title": "Orbit-Planner: Towards Latent World Models for On-Orbit Obstacle Avoidance of Satellite Agents",
-    "url": "http://arxiv.org/abs/2608.16651v1",
-    "summary": "Satellite agents for on-orbit navigation tasks need to predict collision risks using limited onboard observations. However, conventional planners often rely on predefined maps and fixed environmental assumptions, limiting their adaptability in dynamic on-orbit scenarios.",
-    "published": "2026-08-17T14:49:07+00:00",
-    "updated": "2026-08-17T14:49:07+00:00",
-    "authors": [
-      "Zhijian Li",
-      "Chao Ren",
-      "Peijin Wang",
-      "Xian Sun"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.16651v1",
-      "comment": "4 pages, 6 figures. Accepted to AP-GARSS 2026. Project page: https://zhijianli2003.github.io/Orbit_Planner/",
-      "first_seen": "2026-08-18",
-      "full_text": "Satellite agents for on-orbit navigation tasks need to predict collision risks using limited onboard observations. However, conventional planners often rely on predefined maps and fixed environmental assumptions, limiting their adaptability in dynamic on-orbit scenarios. In this paper, we propose Orbit-Planner, a two-stage latent world model for on-orbit obstacle avoidance. Orbit-Planner learns action-conditioned spacecraft dynamics to perform future-state rollouts in latent space, and introduces a Physics Probe to decode physical state changes from imagined latent trajectories. Experiments demonstrate that Orbit-Planner can perform long-horizon latent rollouts and recover physical states from imagined trajectories. In closed-loop obstacle-avoidance navigation in Isaac Sim, it attains a success rate of 91.7%. Code is available at https://github.com/ZhijianLi2003/Orbit_Planner.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 16.513,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.5126700640401785,
-      "has_code": 6.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
@@ -4325,90 +3623,6 @@
     "priority": "must_read"
   },
   {
-    "id": "news:7e9bae721dff",
-    "source": "news",
-    "title": "TRON 2 in Action: Autonomous Utility Tunnel Inspection",
-    "url": "https://www.youtube.com/watch?v=qfRnieKeQzM",
-    "summary": "TRON 2 demonstrates a closed-loop autonomous inspection workflow in a real-world municipal utility tunnel—from mapping and navigation to multi-level inspection, anomaly detection and response, and autonomous docking and charging.",
-    "published": "2026-08-17T13:44:14+00:00",
-    "updated": "2026-08-17T13:44:14+00:00",
-    "authors": [
-      "LimX Dynamics"
-    ],
-    "extra": {
-      "feed": "LimX Dynamics (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i2.ytimg.com/vi/qfRnieKeQzM/hqdefault.jpg",
-      "first_seen": "2026-08-17",
-      "full_text": "TRON 2 demonstrates a closed-loop autonomous inspection workflow in a real-world municipal utility tunnel—from mapping and navigation to multi-level inspection, anomaly detection and response, and autonomous docking and charging. Equipped with the Autonomous Mobile Manipulation Kit, TRON 2 navigates complex spatial structures, adjusts its posture to inspect points at varying heights, and performs light-duty manipulation to assist with alarm response. When battery levels run low, it autonomously returns to its charging dock, supporting extended, unattended inspection operations. This real-world deployment highlights the potential of embodied AI in municipal infrastructure, industrial inspection, and other complex operational environments. #TRON2 #LimXDynamics #AutonomousInspection #MobileManipulation #EmbodiedAI #UtilityTunnel #IndustrialInspection #PhysicalAI",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Manipulator",
-      "#MobileManipulator"
-    ],
-    "score": 14.503,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.5030147776016864,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 5.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2608.16433",
-    "source": "arxiv",
-    "title": "Robot-Body-Aware Traversal Risk Graph Planning for Wheeled-Legged Robots in Complex Terrain",
-    "url": "http://arxiv.org/abs/2608.16433v1",
-    "summary": "Traversal Risk Graphs (TRGs) provide a compact, terrain-aware representation for global navigation, but native TRG costs are computed over circular node neighborhoods and edge-aligned terrain regions rather than the robot's oriented body footprint.",
-    "published": "2026-08-17T11:33:06+00:00",
-    "updated": "2026-08-17T11:33:06+00:00",
-    "authors": [
-      "Zhiqiao Guo",
-      "Bichi Zhang",
-      "Sören Schwertfeger"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.16433v1",
-      "comment": null,
-      "first_seen": "2026-08-18",
-      "full_text": "Traversal Risk Graphs (TRGs) provide a compact, terrain-aware representation for global navigation, but native TRG costs are computed over circular node neighborhoods and edge-aligned terrain regions rather than the robot's oriented body footprint. For wheeled-legged robots, this abstraction can miss partial support loss and body-terrain interference, especially during turns. We present Robot-Body-Aware TRG planning (RB-TRG), which builds on the sparse TRG representation and lifts edge-wise terrain-risk search to heading- and turn-aware body-risk transitions. An oriented rectangular footprint is sampled along graph edges and yaw sweeps to measure longitudinal support variation, lateral inclination, terrain interference, and exposure to untrusted map regions. Mean-and-upper-tail features are incorporated into transition costs, whose accumulated value is minimized by A* over ordered node-pair states, preserving TRG construction and its planning interface. We evaluate RB-TRG in a same-graph study on four scanned terrain environments and in paired closed-loop MuJoCo trials. RB-TRG reduces the three core geometric body-placement metrics and increases end-to-end success from 51.5% to 68.5%, while increasing mean path length by 2.3%. A Go2-W deployment further demonstrates RB-TRG with a full LiDAR navigation stack, which received the Best Autonomy and Best Mobility awards at the IEEE ICRA 2026 Legged Robot Challenges. The code for RB-TRG is released at https://github.com/ZhiqiaoGuo/RB-TRG.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 13.484,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.483500915528274,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:8d9f0fa55cd4",
     "source": "news",
     "title": "Day 1 at the LimX Dynamics booth at WRC 2026!",
@@ -4585,41 +3799,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 2.0,
       "recency": 2.6868540653025796,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:a74700f1c32a",
-    "source": "news",
-    "title": "Diligent Robotics, a Serve Robotics Company, Begins Rolling Out Moxi 2.0",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/08/17/diligent-robotics-a-serve-robotics-company-begins-rolling-out-moxi-20/26959",
-    "summary": "The next-generation hardware and AI delivers faster, more reliable hospital logistics and marks the introduction of a new robotic World Model",
-    "published": "2026-08-17T13:13:08+00:00",
-    "updated": "2026-08-17T13:13:08+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-08-17",
-      "full_text": "The next-generation hardware and AI delivers faster, more reliable hospital logistics and marks the introduction of a new robotic World Model",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 12.498,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.498386805855655,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -4956,126 +4135,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:4a6878c3a776",
-    "source": "news",
-    "title": "美 리걸 렉스노드-화낙, CRX 협동로봇용 통합 선형 축 출시",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=47940",
-    "summary": "미국 리걸 렉스노드(Regal Rexnord)가 화낙 CRX 협동로봇(코봇) 통합형 선형 축을 출시했다.리걸 렉스노드는 로보틱스 및 자동화 전문기업인 일본 화낙과 전략적 협력 관계를 구축하고 자사 여러 브랜드의 전문성을 결합해 CRX 코봇에 완벽하게 통합되는 솔루션을 제공한다고 로보틱스247이 최근 보도했다.이 솔루션은 톰슨(Thomson)의 리니어 모션 기술을 비롯해 보스턴 기어(Boston Gear)의 기어헤드, 휴코(Huco)의 커플링, 콜모건(Kollmorgen)의 모터 및 소프트웨어(SW)를 활용한다.이를 통해 화낙 CRX",
-    "published": "2026-08-17T17:54:13+00:00",
-    "updated": "2026-08-17T17:54:13+00:00",
-    "authors": [
-      "이재구 기자"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-08-17",
-      "full_text": "미국 리걸 렉스노드(Regal Rexnord)가 화낙 CRX 협동로봇(코봇) 통합형 선형 축을 출시했다.리걸 렉스노드는 로보틱스 및 자동화 전문기업인 일본 화낙과 전략적 협력 관계를 구축하고 자사 여러 브랜드의 전문성을 결합해 CRX 코봇에 완벽하게 통합되는 솔루션을 제공한다고 로보틱스247이 최근 보도했다.이 솔루션은 톰슨(Thomson)의 리니어 모션 기술을 비롯해 보스턴 기어(Boston Gear)의 기어헤드, 휴코(Huco)의 커플링, 콜모건(Kollmorgen)의 모터 및 소프트웨어(SW)를 활용한다.이를 통해 화낙 CRX",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 10.54,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.5402146801165677,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:46a7d23f3b2a",
-    "source": "news",
-    "title": "Unitree New Robot Preview: “Superman” Breaking the Limits of Humanity",
-    "url": "https://www.youtube.com/watch?v=O7OkiZfIlS4",
-    "summary": "Standing high jump 2 m, top speed 12.66 m/s (0.85 m leg length) Surpassing the standing high jump and running speed records of all humans around the world This new machine has only been in development for a little over three months, with significant room for further improvement in the coming months.",
-    "published": "2026-08-17T07:23:26+00:00",
-    "updated": "2026-08-17T07:23:26+00:00",
-    "authors": [
-      "Unitree Robotics"
-    ],
-    "extra": {
-      "feed": "Unitree Robotics (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i4.ytimg.com/vi/O7OkiZfIlS4/hqdefault.jpg",
-      "first_seen": "2026-08-17",
-      "full_text": "Standing high jump 2 m, top speed 12.66 m/s (0.85 m leg length) Surpassing the standing high jump and running speed records of all humans around the world This new machine has only been in development for a little over three months, with significant room for further improvement in the coming months.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 10.446,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.446348111746032,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "arxiv:2608.15748",
-    "source": "arxiv",
-    "title": "Making two action heads agree: coordination mechanisms and a runtime collapse certificate for flow-matching policies",
-    "url": "http://arxiv.org/abs/2608.15748v1",
-    "summary": "A dual-representation flow-matching policy decodes each predicted motion into joint and end-effector spaces, and the residual between the two kinematically equivalent decodings provides a physically interpretable runtime signal. On multimodal tasks, however, independently sampled branches may choose different valid modes, causing false alarms.",
-    "published": "2026-08-16T13:57:36+00:00",
-    "updated": "2026-08-16T13:57:36+00:00",
-    "authors": [
-      "Jinhui Sun",
-      "Wei Zhou",
-      "Bowen Yang",
-      "Xinliang Xiao",
-      "Li Yang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2608.15748v1",
-      "comment": null,
-      "first_seen": "2026-08-18",
-      "full_text": "A dual-representation flow-matching policy decodes each predicted motion into joint and end-effector spaces, and the residual between the two kinematically equivalent decodings provides a physically interpretable runtime signal. On multimodal tasks, however, independently sampled branches may choose different valid modes, causing false alarms. We study how to coordinate the two branches and at what cost. Across two robot environments and a non-robotic testbed, the tested mechanisms fall into four classes. An auxiliary latent shared by both branches but absent from the flow-matching construction is erased at the population optimum, a provable dead end confirmed within a prespecified 2% equivalence band. Sharing source noise can coordinate or anti-coordinate: its effect changes sign with the representation map and tracks the alignment of decoder mode basins. Consistency regularization gives intermediate coordination but reduces the valid-pair rate, while training-supported discrete partitions achieve near-ceiling coordination robustly. We further derive a chance-corrected coordination bound based only on each branch's Gini-Simpson diversity, yielding an attainable region and a label-free certificate that separates coordination from collapse when zero mismatch is ambiguous. On LIBERO-Plus, benign multimodality adds 1.57 percentage points of false alarms to the residual, which remains the strongest evaluated failure signal; the preregistered token intervention does not meet its false-alarm criterion or produce a seed-robust detection change. Code, models, and per-run configurations are available at https://github.com/kimo423/dual-head-coordination.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Manipulator"
-    ],
-    "score": 10.291,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.290718172705853,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:c54f94429828",
     "source": "news",
     "title": "AiBrief - The Black Box Problem",
@@ -5140,41 +4199,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.7262290686607145,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:8534de849bb2",
-    "source": "news",
-    "title": "Serve Launches Robot Delivery with Wonder, Adding Grubhub to Its Growing Delivery Network",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/08/17/serve-launches-robot-delivery-with-wonder-adding-grubhub-to-its-growing-delivery-network/26958",
-    "summary": "- Expansion to San Jose and Washington, DC, an innovative micro-depot in Miami, a new hardware product for merchants, and a new advertising service, all driving fleet utilization - A new hospital robot, Moxi 2.0, with 15x faster processing power, marking the introduction of a new robotic World Model",
-    "published": "2026-08-17T13:12:20+00:00",
-    "updated": "2026-08-17T13:12:20+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-08-17",
-      "full_text": "- Expansion to San Jose and Washington, DC, an innovative micro-depot in Miami, a new hardware product for merchants, and a new advertising service, all driving fleet utilization - A new hospital robot, Moxi 2.0, with 15x faster processing power, marking the introduction of a new robotic World Model",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 9.498,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.4982677581622026,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -5287,42 +4311,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.70356785515873,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:74963c67f4b9",
-    "source": "news",
-    "title": "Intermittent swimming promotes the energy efficiency of fish-like robot movements",
-    "url": "https://robohub.org/intermittent-swimming-promotes-the-energy-efficiency-of-fish-like-robot-movements/",
-    "summary": "Image credits: Xiangxiao Liu, Francois A. Longchamp, and Louis GeverBiorobotics Laboratory, EPFL Improving energy performance can effectively extend the time a robot can operate and reduce battery load, enabling lighter, more flexible, and more durable robotic systems.",
-    "published": "2026-08-17T13:00:27+00:00",
-    "updated": "2026-08-17T13:00:27+00:00",
-    "authors": [
-      "Xiangxiao Liu"
-    ],
-    "extra": {
-      "feed": "Robohub",
-      "first_seen": "2026-08-17",
-      "full_text": "Image credits: Xiangxiao Liu, Francois A. Longchamp, and Louis GeverBiorobotics Laboratory, EPFL Improving energy performance can effectively extend the time a robot can operate and reduce battery load, enabling lighter, more flexible, and more durable robotic systems. Nature has evolved optimal energy-saving locomotion strategies through billions of years of natural selection, providing unparalleled blueprints for […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 8.496,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.4964994126810516,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -5770,40 +4758,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:50a7eac217fc",
-    "source": "news",
-    "title": "Uber and Zipline Partner to Bring Drone Delivery to Millions of Americans Share",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/08/17/uber-and-zipline-partner-to-bring-drone-delivery-to-millions-of-americans-share/26957",
-    "summary": "-Strategic partnership targeting one million drone deliveries daily by the end of 2029, with first deliveries later this year. -Drone delivery on Uber Eats will launch across existing Zipline markets and target expansion into dozens of US cities. -Uber to make a strategic investment in Zipline, reinforcing a long-term partnership to accelerate the scale of drone delivery.",
-    "published": "2026-08-17T13:09:04+00:00",
-    "updated": "2026-08-17T13:09:04+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-08-17",
-      "full_text": "-Strategic partnership targeting one million drone deliveries daily by the end of 2029, with first deliveries later this year. -Drone delivery on Uber Eats will launch across existing Zipline markets and target expansion into dozens of US cities. -Uber to make a strategic investment in Zipline, reinforcing a long-term partnership to accelerate the scale of drone delivery.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 6.498,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.4977816469667657,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:076b06092e92",
     "source": "news",
     "title": "LG유플러스-연세대, AI-RAN 환경서 네트워크 전환 기술 검증",
@@ -5947,40 +4901,6 @@
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
-    },
-    "priority": "low_priority"
-  },
-  {
-    "id": "news:d21262f806a8",
-    "source": "news",
-    "title": "Reshaping the Physical World: Gravis Robotics Raises $200M for Construction Autonomy",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/08/17/reshaping-the-physical-world-gravis-robotics-raises-200m-for-construction-autonomy/26960",
-    "summary": "Global infrastructure is in the middle of a massive expansion. Scaling the energy networks and data centers required for the AI economy is driving unprecedented demand, and the need for housing, transit and climate-resilient infrastructure is equally urgent",
-    "published": "2026-08-17T14:04:31+00:00",
-    "updated": "2026-08-17T14:04:31+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-08-17",
-      "full_text": "Global infrastructure is in the middle of a massive expansion. Scaling the energy networks and data centers required for the AI economy is driving unprecedented demand, and the need for housing, transit and climate-resilient infrastructure is equally urgent",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 2.506,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.506033135292659,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -6.0
     },
     "priority": "low_priority"
   },
