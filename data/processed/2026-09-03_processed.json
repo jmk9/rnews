@@ -138,7 +138,7 @@
     "source": "github",
     "title": "sou350121/VLA-Handbook",
     "url": "https://github.com/sou350121/VLA-Handbook",
-    "summary": "VLA-Handbook is a Chinese, practice-oriented learning and interview guide for algorithm engineers moving into Vision-Language-Action robotics. It narrows the usual CV/NLP interview scope to robotics-specific issues, making it useful as a focused entry point for understanding what changes when perception-language models have to drive actions in embodied systems.",
+    "summary": "VLA-Handbook is a Chinese, practice-oriented learning and interview guide for algorithm engineers entering Vision-Language-Action robotics. It focuses on robotics-specific issues that generic CV/NLP interview materials usually miss, aiming to help readers build field-relevant understanding rather than just review standard vision or language topics.",
     "published": "2025-11-23T06:25:26Z",
     "updated": "2026-09-03T14:30:17Z",
     "authors": [
@@ -494,7 +494,7 @@
     "source": "github",
     "title": "leggedrobotics/pace-sim2real",
     "url": "https://github.com/leggedrobotics/pace-sim2real",
-    "summary": "PACE: A systematic approach for sim-to-real transfer of legged robots, identifying actuator and joint dynamics with standard joint encoders.",
+    "summary": "PACE targets sim-to-real transfer for legged robots by identifying actuator and joint dynamics using only standard joint encoders, rather than relying on extra sensing or detailed proprietary actuator models. The repo appears useful for making legged-robot simulations better match hardware behavior, especially where unmodeled drivetrain and joint effects are a major source of transfer failure.",
     "published": "2025-09-05T14:41:15Z",
     "updated": "2026-08-31T04:30:40Z",
     "authors": [
@@ -509,7 +509,7 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18",
       "full_text": "PACE: A systematic approach for sim-to-real transfer of legged robots, identifying actuator and joint dynamics with standard joint encoders.",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
@@ -631,7 +631,7 @@
     "source": "github",
     "title": "NVIDIA/warp",
     "url": "https://github.com/NVIDIA/warp",
-    "summary": "A Python framework for GPU-accelerated simulation, robotics, and machine learning.",
+    "summary": "NVIDIA Warp is a Python framework for writing GPU-accelerated simulation and computation code, with a clear emphasis on robotics, physics-style workloads, and machine learning pipelines. It is useful when researchers want Python ergonomics while still getting custom high-performance kernels for differentiable simulation, particle systems, geometry processing, or other workloads that need to run efficiently on NVIDIA GPUs.",
     "published": "2022-03-18T21:56:23Z",
     "updated": "2026-09-03T22:21:20Z",
     "authors": [
@@ -654,7 +654,7 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18",
       "full_text": "A Python framework for GPU-accelerated simulation, robotics, and machine learning.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://github.com/NVIDIA/warp/raw/main/docs/img/header.jpg"
     },
     "tags": [
@@ -724,7 +724,7 @@
     "source": "github",
     "title": "RobotControlStack/robot-control-stack",
     "url": "https://github.com/RobotControlStack/robot-control-stack",
-    "summary": "A lean, ROS-free sim-to-real framework for training and deploying Vision-Language-Action (VLA) models and RL agents. Native MuJoCo Gymnasium wrappers with synchronous execution for Franka, UR5e, xArm, SO101 and YAM.",
+    "summary": "RobotControlStack is a lean sim-to-real stack for training and deploying Vision-Language-Action models and reinforcement learning agents without ROS. It provides native MuJoCo Gymnasium wrappers with synchronous execution across common robot arms including Franka, UR5e, xArm, SO101, and YAM, making it useful for researchers who want a lighter-weight path from simulation experiments to hardware deployment.",
     "published": "2024-02-29T12:40:59Z",
     "updated": "2026-09-03T20:43:59Z",
     "authors": [
@@ -749,7 +749,7 @@
       "license": "AGPL-3.0",
       "first_seen": "2026-05-18",
       "full_text": "A lean, ROS-free sim-to-real framework for training and deploying Vision-Language-Action (VLA) models and RL agents. Native MuJoCo Gymnasium wrappers with synchronous execution for Franka, UR5e, xArm, SO101 and YAM.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/RobotControlStack/robotcontrolstack.github.io/refs/heads/master/static/videos/grid.webp"
     },
     "tags": [
@@ -961,7 +961,7 @@
     "source": "github",
     "title": "ROBOTIS-GIT/cyclo_lab",
     "url": "https://github.com/ROBOTIS-GIT/cyclo_lab",
-    "summary": "This repository provides tutorials for reinforcement learning and imitation learning using ROBOTIS robots, and supports Sim2Real functionality for deploying the learned policies on real robots.",
+    "summary": "ROBOTIS-GIT/cyclo_lab packages tutorials for training ROBOTIS robots with reinforcement learning and imitation learning, with a path from simulated training to deployment on physical hardware. Its useful focus is Sim2Real: researchers can prototype learned policies in simulation and then move them onto real ROBOTIS platforms rather than treating the repo as simulation-only teaching material.",
     "published": "2025-07-14T12:30:59Z",
     "updated": "2026-08-31T10:02:01Z",
     "authors": [
@@ -985,7 +985,7 @@
       "license": "Apache-2.0",
       "first_seen": "2026-06-26",
       "full_text": "This repository provides tutorials for reinforcement learning and imitation learning using ROBOTIS robots, and supports Sim2Real functionality for deploying the learned policies on real robots.",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -1062,7 +1062,7 @@
     "source": "github",
     "title": "RoboVerseOrg/RoboVerse",
     "url": "https://github.com/RoboVerseOrg/RoboVerse",
-    "summary": "RoboVerse aims to unify the pieces needed for scalable robot learning: a platform, dataset, and benchmark centered on generalizable robotic behavior. It is positioned as infrastructure for training and evaluating robot policies across settings, with the value coming from putting data, environments, and standardized comparison under one roof.",
+    "summary": "RoboVerse aims to unify the robot-learning pipeline around a shared platform, dataset, and benchmark for training and evaluating scalable, generalizable robot policies. It is positioned as infrastructure for researchers who need a common environment to compare methods across robot tasks and datasets rather than stitching together separate simulators, data formats, and evaluation setups.",
     "published": "2025-04-04T03:00:06Z",
     "updated": "2026-09-03T22:35:43Z",
     "authors": [
@@ -1214,7 +1214,7 @@
     "source": "github",
     "title": "wadeKeith/Awesome-Embodied-AI",
     "url": "https://github.com/wadeKeith/Awesome-Embodied-AI",
-    "summary": "Curated embodied AI list: surveys, VLA models, datasets, simulators, humanoids, robot learning, and safety resources.",
+    "summary": "wadeKeith/Awesome-Embodied-AI is a curated reading and resource map for embodied AI, spanning surveys, vision-language-action models, datasets, simulators, humanoid robotics, robot learning, and safety. It looks most useful as a fast orientation tool for researchers tracking the field, since it groups the major papers, benchmarks, platforms, and subareas in one place rather than introducing a single new model or method.",
     "published": "2025-03-17T12:59:00Z",
     "updated": "2026-09-02T13:09:43Z",
     "authors": [
@@ -1242,7 +1242,7 @@
       "license": "MIT",
       "first_seen": "2026-06-12",
       "full_text": "Curated embodied AI list: surveys, VLA models, datasets, simulators, humanoids, robot learning, and safety resources.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/wadeKeith/Awesome-Embodied-AI/HEAD/Assets/cover.png"
     },
     "tags": [
@@ -1320,7 +1320,7 @@
     "source": "github",
     "title": "dartsim/dart",
     "url": "https://github.com/dartsim/dart",
-    "summary": "DART is a research-oriented C++23 physics engine for simulating articulated robots, characters, and other dynamic systems, with Python bindings for use in robotics and machine learning workflows. It is useful when experiments need controllable rigid-body dynamics, contact simulation, and integration with robot models rather than a general-purpose game engine.",
+    "summary": "DART is a research-oriented C++23 physics engine aimed at robotics, animation, and machine learning, with Python bindings for easier experimentation. It is useful when researchers need simulation infrastructure for articulated bodies and robot dynamics while still working close to performant C++ code.",
     "published": "2011-09-19T21:53:51Z",
     "updated": "2026-09-03T22:14:46Z",
     "authors": [
@@ -1441,7 +1441,7 @@
     "source": "github",
     "title": "facebookresearch/project_superdex",
     "url": "https://github.com/facebookresearch/project_superdex",
-    "summary": "SuperDex brings together a purpose-built physics engine, robotics authoring tools, and a scalable reinforcement learning interface in a unified simulation platform, with VR-based teleoperation and additional capabilities planned for future releases.",
+    "summary": "SuperDex is a unified simulation platform for dexterous robotics that combines a purpose-built physics engine, authoring tools, and a scalable reinforcement learning interface. It is geared toward building and training robot manipulation systems in simulation, with VR teleoperation already included and more capabilities planned in later releases.",
     "published": "2026-08-20T02:04:05Z",
     "updated": "2026-09-03T03:25:37Z",
     "authors": [
@@ -1456,7 +1456,7 @@
       "license": "Apache-2.0",
       "first_seen": "2026-08-24",
       "full_text": "SuperDex brings together a purpose-built physics engine, robotics authoring tools, and a scalable reinforcement learning interface in a unified simulation platform, with VR-based teleoperation and additional capabilities planned for future releases.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://private-user-images.githubusercontent.com/65318034/638617740-ddac8a5f-2f72-4ca0-b555-a090513f224a.webp?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODg1NjI2MjcsIm5iZiI6MTc4ODU2MjMyNywicGF0aCI6Ii82NTMxODAzNC82Mzg2MTc3NDAtZGRhYzhhNWYtMmY3Mi00Y2EwLWI1NTUtYTA5MDUxM2YyMjRhLndlYnA_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwOTA0JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDkwNFQyMjUyMDdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02NWQ3NjY4MmQ5ZjQ4OTI2YWI0YjlhZTFmNzE0Yjg3YTIxNTZlYTNlMDgzZjg0OWZlM2UyMzFkYTE1MzhhNDM3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZ3ZWJwIn0.Lbs1tz1FlGZEd2v-RCquGGPeIxIj9v2Kut5A4pt9Agg"
     },
     "tags": [
@@ -1568,7 +1568,7 @@
     "source": "github",
     "title": "starVLA/VLAct",
     "url": "https://github.com/starVLA/VLAct",
-    "summary": "Beyond Data Scaling: Representation-Centric Continued Pre-training for Vision-Language-Action Models",
+    "summary": "VLAct explores continued pre-training for vision-language-action models with a focus on improving representations rather than simply scaling robot data. The repo appears to accompany starVLA’s method for representation-centric adaptation, aiming to make VLA models more capable for robot control by strengthening the visual-language features that downstream action prediction relies on.",
     "published": "2026-08-25T15:45:33Z",
     "updated": "2026-08-31T10:09:55Z",
     "authors": [
@@ -1587,7 +1587,7 @@
       "license": "NOASSERTION",
       "first_seen": "2026-09-01",
       "full_text": "Beyond Data Scaling: Representation-Centric Continued Pre-training for Vision-Language-Action Models",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/starVLA/VLAct/HEAD/assets/VLAct-update.png"
     },
     "tags": [
@@ -1615,7 +1615,7 @@
     "source": "github",
     "title": "abmoRobotics/RLRoverLab",
     "url": "https://github.com/abmoRobotics/RLRoverLab",
-    "summary": "Rover and space-related reinforcement learning environments implemented for Isaac Sim and Isaac Lab.",
+    "summary": "RLRoverLab provides reinforcement learning environments for rover and space-robotics experiments built on NVIDIA Isaac Sim and Isaac Lab. It is aimed at training and evaluating rover behaviors in simulated extraterrestrial-style settings, giving researchers a reusable testbed for embodied AI work where physics-based simulation and RL infrastructure are already wired together.",
     "published": "2024-09-17T07:37:28Z",
     "updated": "2026-08-26T14:53:19Z",
     "authors": [
@@ -1630,7 +1630,7 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18",
       "full_text": "Rover and space-related reinforcement learning environments implemented for Isaac Sim and Isaac Lab.",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -1752,7 +1752,7 @@
     "source": "github",
     "title": "iit-DLSLab/fault-locomotion-isaaclab",
     "url": "https://github.com/iit-DLSLab/fault-locomotion-isaaclab",
-    "summary": "An IsaacLab DirectEnv setup for training and testing quadruped locomotion policies when motors fail, aimed at making fault-tolerant walking experiments easier to reproduce across different robot platforms. It is useful as an experimentation pipeline rather than just a single model: it supports multiple quadrupeds and includes paths for sim-to-sim validation and eventual sim-to-real transfer.",
+    "summary": "An IsaacLab DirectEnv setup for studying quadruped locomotion when motors fail, aimed at training and evaluating controllers across multiple robot platforms. It is useful for fault-tolerant legged-robot research because it includes paths for sim-to-sim transfer and sim-to-real deployment rather than stopping at a single simulated robot.",
     "published": "2026-06-24T15:25:41Z",
     "updated": "2026-09-03T18:19:59Z",
     "authors": [
@@ -2164,7 +2164,7 @@
     "source": "github",
     "title": "castacks/AirStack",
     "url": "https://github.com/castacks/AirStack",
-    "summary": "Agent-native framework for rapid sim-to-real deployment of embodied AI for field robotics. Closed-loop, one-to-one workflow with hardware, self validating. Checkout develop branch for latest features.",
+    "summary": "AirStack is an agent-native robotics stack aimed at moving embodied AI from simulation to real field robots quickly, using a closed-loop workflow that mirrors the target hardware one-to-one. Its emphasis is practical deployment rather than just simulation: the system is designed to self-validate against the hardware path, making it useful for teams trying to shorten sim-to-real iteration cycles for field robotics.",
     "published": "2024-06-07T21:22:29Z",
     "updated": "2026-09-03T20:49:42Z",
     "authors": [
@@ -2183,7 +2183,7 @@
       "license": "BSD-3-Clause-Clear",
       "first_seen": "2026-08-04",
       "full_text": "Agent-native framework for rapid sim-to-real deployment of embodied AI for field robotics. Closed-loop, one-to-one workflow with hardware, self validating. Checkout develop branch for latest features.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/castacks/AirStack/HEAD/docs/assets/logo_horizontal_color.png"
     },
     "tags": [
@@ -3853,7 +3853,7 @@
     "source": "github",
     "title": "JaimeParker/rl-garden",
     "url": "https://github.com/JaimeParker/rl-garden",
-    "summary": "rl-garden is a PyTorch-native, GPU-first robot-learning stack that brings reinforcement learning, imitation learning, and diffusion/flow policy training into one framework. It looks useful as an experimentation and deployment base rather than a single algorithm release, with 55+ algorithms and sim-to-real backends aimed at moving policies from accelerated training to real robot setups.",
+    "summary": "rl-garden is a PyTorch-native, GPU-first robot learning stack that brings reinforcement learning, imitation learning, and diffusion/flow-policy methods into one framework. It appears aimed at fast experimentation across a broad algorithm set, with 55+ implemented methods and sim-to-real backends for taking policies beyond simulation.",
     "published": "2026-04-24T05:21:16Z",
     "updated": "2026-09-03T07:54:24Z",
     "authors": [
@@ -4545,7 +4545,7 @@
     "source": "github",
     "title": "EspiroFares/Autonomous-UAV",
     "url": "https://github.com/EspiroFares/Autonomous-UAV",
-    "summary": "EspiroFares/Autonomous-UAV is a ROS 2 autonomy stack for an indoor person-following drone, built around a simulation-first workflow with Gazebo and ArduPilot SITL as a digital twin before deployment on real hardware. It is useful as a practical template for developing and testing UAV follow behavior in simulation, then carrying the same stack onto a physical drone.",
+    "summary": "Sim-first ROS 2 autonomy stack for an indoor person-following UAV, built around a Gazebo and ArduPilot SITL digital twin before deployment on real drone hardware. It is useful as an end-to-end template for developing and testing perception, control, and follow-me behavior in simulation while keeping the path to physical hardware explicit.",
     "published": "2025-12-05T00:13:37Z",
     "updated": "2026-08-31T23:12:38Z",
     "authors": [
