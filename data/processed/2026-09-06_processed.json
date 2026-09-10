@@ -187,7 +187,7 @@
     "source": "github",
     "title": "sou350121/VLA-Handbook",
     "url": "https://github.com/sou350121/VLA-Handbook",
-    "summary": "VLA-Handbook is a Chinese, practice-oriented learning and interview guide for algorithm engineers trying to enter Vision-Language-Action robotics. It narrows the usual CV/NLP preparation material down to robotics-specific issues, making it useful as a focused roadmap for understanding what VLA systems need in embodied settings.",
+    "summary": "VLA-Handbook is a Chinese, practice-oriented learning and interview guide for algorithm engineers entering Vision-Language-Action robotics. It narrows the usual CV/NLP interview scope to robotics-specific issues, making it useful as a focused onboarding and preparation resource for people moving into embodied AI.",
     "published": "2025-11-23T06:25:26Z",
     "updated": "2026-09-06T15:30:04Z",
     "authors": [
@@ -829,7 +829,7 @@
     "source": "github",
     "title": "NVIDIA/warp",
     "url": "https://github.com/NVIDIA/warp",
-    "summary": "NVIDIA Warp is a Python framework for writing GPU-accelerated simulation and computation code, aimed at robotics, physics simulation, and machine learning workloads. It is useful when researchers need custom differentiable or high-performance kernels while staying in a Python workflow, especially for simulation-heavy robotics pipelines.",
+    "summary": "NVIDIA Warp is a Python toolkit for writing GPU-accelerated simulation code, with an emphasis on robotics, physics-style environments, and machine learning workflows. It is useful when researchers need custom high-performance kernels and differentiable simulation components without dropping fully into low-level CUDA.",
     "published": "2022-03-18T21:56:23Z",
     "updated": "2026-09-06T22:29:38Z",
     "authors": [
@@ -1019,7 +1019,7 @@
     "source": "github",
     "title": "isaac-sim/IsaacLab-Arena",
     "url": "https://github.com/isaac-sim/IsaacLab-Arena",
-    "summary": "Isaac Lab - Arena extends NVIDIA Isaac Lab with a composable simulation layer for building and evaluating robot learning setups across different robot embodiments, objects, and environments. It is aimed at rapid prototyping: researchers can assemble diverse task configurations and test policies at scale without rebuilding environment infrastructure each time.",
+    "summary": "IsaacLab-Arena extends NVIDIA Isaac Lab with a composable simulation layer for assembling robot learning environments from interchangeable robot embodiments, objects, and scene setups. It is aimed at quickly prototyping robotic tasks and evaluating learned policies at scale, making it useful when researchers need to compare behaviors across many simulated conditions without rebuilding each environment from scratch.",
     "published": "2025-08-15T12:28:23Z",
     "updated": "2026-09-06T17:02:52Z",
     "authors": [
@@ -1158,7 +1158,7 @@
     "source": "github",
     "title": "scy-v/VLA-Precision",
     "url": "https://github.com/scy-v/VLA-Precision",
-    "summary": "VLA-Precision introduces an asymmetric co-bootstrapping approach for making vision-language-action models learn more efficiently from real-world online reinforcement learning. It focuses on improving precision in physical robot behavior by using paired learning signals or policies to bootstrap each other during deployment, aiming to make online adaptation practical outside simulation.",
+    "summary": "VLA-Precision explores Asymmetric Co-Bootstrapping, a method for making online reinforcement learning more efficient for vision-language-action models deployed in real-world robot settings. It focuses on improving precision during physical interaction by using asymmetric learning signals to bootstrap policy improvement, aiming to reduce the data and trial cost that usually make real-world VLA fine-tuning difficult.",
     "published": "2026-09-02T08:40:01Z",
     "updated": "2026-09-05T17:18:08Z",
     "authors": [
@@ -1727,7 +1727,7 @@
     "source": "github",
     "title": "facebookresearch/project_superdex",
     "url": "https://github.com/facebookresearch/project_superdex",
-    "summary": "SuperDex is a unified simulation platform for robotics that combines a purpose-built physics engine, authoring tools, and a scalable reinforcement-learning interface. It is aimed at building and training robot behaviors in simulation, with VR teleoperation already part of the workflow and more capabilities planned for later releases.",
+    "summary": "SuperDex is a unified robotics simulation platform from Facebook Research that combines a purpose-built physics engine, authoring tools, and a scalable reinforcement-learning interface. It is aimed at building and training dexterous robot behaviors in simulation, with VR teleoperation already part of the workflow and more capabilities planned for later releases.",
     "published": "2026-08-20T02:04:05Z",
     "updated": "2026-09-06T13:14:09Z",
     "authors": [
@@ -2100,7 +2100,7 @@
     "source": "github",
     "title": "dk2472780158-ctrl/piper-dual-arm-smolvla-towel-folding",
     "url": "https://github.com/dk2472780158-ctrl/piper-dual-arm-smolvla-towel-folding",
-    "summary": "SmolVLA, using SmolVLM2-500M, is deployed on real dual AgileX Piper arms to fold a physical towel through a full 750-step skill from a single command. The setup blends continuous VLA control with an ACT safety base, making it interesting as a practical real-robot demonstration of language-conditioned dual-arm manipulation rather than just a simulated policy.",
+    "summary": "SmolVLA uses the 500M-parameter SmolVLM2 vision-language-action model to control real dual AgileX Piper robot arms for towel folding. It runs a full 750-step folding skill from a single command, blending continuous model authority with a proven ACT safety base so the robot can execute the task on physical hardware rather than only in simulation.",
     "published": "2026-09-02T06:28:46Z",
     "updated": "2026-09-02T09:02:52Z",
     "authors": [
@@ -2508,7 +2508,7 @@
     "source": "github",
     "title": "castacks/AirStack",
     "url": "https://github.com/castacks/AirStack",
-    "summary": "AirStack is an agent-native field robotics stack aimed at moving embodied AI from simulation to hardware with a closed-loop, one-to-one workflow. It emphasizes rapid sim-to-real deployment, hardware-aligned validation, and self-checking behavior, making it useful for teams trying to iterate on robot autonomy without treating simulation and real-world testing as separate pipelines.",
+    "summary": "AirStack is an agent-native robotics stack aimed at moving embodied AI from simulation to field hardware quickly, using a closed-loop one-to-one workflow that mirrors the real robot and validates itself against hardware behavior. It is positioned for field robotics teams that need rapid sim-to-real iteration rather than a disconnected simulator-only pipeline, with the develop branch carrying the newest features.",
     "published": "2024-06-07T21:22:29Z",
     "updated": "2026-09-06T20:28:58Z",
     "authors": [
@@ -3369,7 +3369,7 @@
     "source": "github",
     "title": "EGalahad/mimic-lite",
     "url": "https://github.com/EGalahad/mimic-lite",
-    "summary": "Efficient humanoid whole-body motion tracking for scalable training and sim-to-real deployment.",
+    "summary": "mimic-lite is a lightweight system for training humanoid whole-body motion tracking policies efficiently, with an emphasis on scaling training and carrying the resulting controllers into real robots. It appears aimed at making sim-to-real humanoid motion imitation more practical by focusing on a streamlined implementation rather than a broad robotics stack.",
     "published": "2026-06-02T15:45:23Z",
     "updated": "2026-09-01T03:54:29Z",
     "authors": [
@@ -3384,7 +3384,7 @@
       "license": null,
       "first_seen": "2026-06-09",
       "full_text": "Efficient humanoid whole-body motion tracking for scalable training and sim-to-real deployment.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/EGalahad/mimic-lite/HEAD/assets/mimic_lite_cross_codebase_tracking_eval.png"
     },
     "tags": [
@@ -3644,7 +3644,7 @@
     "source": "github",
     "title": "microai-lab/microduck-studio",
     "url": "https://github.com/microai-lab/microduck-studio",
-    "summary": "microduck-studio is a local web studio for building and inspecting Microduck robot workflows, with support for reinforcement learning development, debugging, visualization, and orchestration. It appears aimed at making robot-AI experiments easier to run safely and understand locally, especially when coordinating training loops, robot behavior, and diagnostic views in one place.",
+    "summary": "microduck-studio is a local web interface for building and inspecting Microduck robot workflows, including reinforcement learning runs. It is aimed at making robot-AI development more observable and controlled by supporting debugging, visualization, and safer orchestration of experiments from one studio-style environment.",
     "published": "2026-09-04T05:08:22Z",
     "updated": "2026-09-06T16:38:30Z",
     "authors": [
@@ -4419,7 +4419,7 @@
     "source": "github",
     "title": "limxdynamics/limxsdk-lowlevel",
     "url": "https://github.com/limxdynamics/limxsdk-lowlevel",
-    "summary": "Dependency-free C++11 & Python SDK for low-level motion control of LimX robots — cross-platform (Linux x86_64/aarch64, Windows), integrates with ROS/Gazebo and RL-based sim-to-real deployment.",
+    "summary": "limxsdk-lowlevel provides dependency-free C++11 and Python bindings for sending low-level motion-control commands to LimX robots across Linux x86_64/aarch64 and Windows. It is aimed at robotics developers who need a lightweight control interface that can plug into ROS/Gazebo workflows and support reinforcement-learning sim-to-real deployment without pulling in a large runtime stack.",
     "published": "2024-05-15T04:29:57Z",
     "updated": "2026-08-26T14:42:08Z",
     "authors": [
@@ -4443,7 +4443,7 @@
       "license": "Apache-2.0",
       "first_seen": "2026-08-07",
       "full_text": "Dependency-free C++11 & Python SDK for low-level motion control of LimX robots — cross-platform (Linux x86_64/aarch64, Windows), integrates with ROS/Gazebo and RL-based sim-to-real deployment.",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#Other"
