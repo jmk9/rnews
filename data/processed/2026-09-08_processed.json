@@ -187,7 +187,7 @@
     "source": "github",
     "title": "sou350121/VLA-Handbook",
     "url": "https://github.com/sou350121/VLA-Handbook",
-    "summary": "VLA-Handbook is a Chinese, practice-oriented learning and interview guide for algorithm engineers entering Vision-Language-Action robotics. It narrows the usual CV/NLP interview scope to robotics-specific issues, making it useful as a focused onboarding and preparation resource for people moving into embodied AI.",
+    "summary": "VLA-Handbook is a Chinese, practice-oriented learning and interview guide for algorithm engineers trying to enter Vision-Language-Action robotics. It narrows the usual CV/NLP interview scope to robotics-specific problems, making it useful as a field primer and preparation resource rather than a general machine learning handbook.",
     "published": "2025-11-23T06:25:26Z",
     "updated": "2026-09-08T15:30:04Z",
     "authors": [
@@ -963,7 +963,7 @@
     "source": "github",
     "title": "RobotControlStack/robot-control-stack",
     "url": "https://github.com/RobotControlStack/robot-control-stack",
-    "summary": "A lean, ROS-free sim-to-real framework for training and deploying Vision-Language-Action (VLA) models and RL agents. Native MuJoCo Gymnasium wrappers with synchronous execution for Franka, UR5e, xArm, SO101 and YAM.",
+    "summary": "RobotControlStack provides a compact sim-to-real stack for training and deploying VLA models and reinforcement-learning agents without relying on ROS. It wraps MuJoCo environments in Gymnasium with synchronous execution, targeting common robot platforms including Franka, UR5e, xArm, SO101, and YAM, which makes it useful for researchers who want a lighter path from simulation experiments to hardware deployment.",
     "published": "2024-02-29T12:40:59Z",
     "updated": "2026-09-08T17:09:57Z",
     "authors": [
@@ -988,7 +988,7 @@
       "license": "AGPL-3.0",
       "first_seen": "2026-05-18",
       "full_text": "A lean, ROS-free sim-to-real framework for training and deploying Vision-Language-Action (VLA) models and RL agents. Native MuJoCo Gymnasium wrappers with synchronous execution for Franka, UR5e, xArm, SO101 and YAM.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/RobotControlStack/robotcontrolstack.github.io/refs/heads/master/static/videos/grid.webp"
     },
     "tags": [
@@ -1017,7 +1017,7 @@
     "source": "github",
     "title": "scy-v/VLA-Precision",
     "url": "https://github.com/scy-v/VLA-Precision",
-    "summary": "VLA-Precision explores Asymmetric Co-Bootstrapping, a method for making online reinforcement learning more efficient for vision-language-action models deployed in real-world robot settings. It focuses on improving precision during physical interaction by using asymmetric learning signals to bootstrap policy improvement, aiming to reduce the data and trial cost that usually make real-world VLA fine-tuning difficult.",
+    "summary": "VLA-Precision implements Asymmetric Co-Bootstrapping, an online RL approach for improving vision-language-action models directly on real robot tasks while keeping data collection efficient. It targets the hard practical setting where a pretrained VLA policy must adapt through real-world interaction, using asymmetric learning signals to bootstrap better behavior without requiring large amounts of new robot experience.",
     "published": "2026-09-02T08:40:01Z",
     "updated": "2026-09-08T01:49:04Z",
     "authors": [
@@ -1104,7 +1104,7 @@
     "source": "github",
     "title": "isaac-sim/IsaacLab-Arena",
     "url": "https://github.com/isaac-sim/IsaacLab-Arena",
-    "summary": "IsaacLab-Arena extends NVIDIA Isaac Lab with a composable simulation layer for assembling robot learning environments from interchangeable robot embodiments, objects, and scene setups. It is aimed at quickly prototyping robotic tasks and evaluating learned policies at scale, making it useful when researchers need to compare behaviors across many simulated conditions without rebuilding each environment from scratch.",
+    "summary": "Isaac Lab - Arena extends NVIDIA Isaac Lab with a composable simulation stack for building robot learning environments from interchangeable robots, objects, tasks, and scenes. It is aimed at rapid prototyping and policy evaluation across diverse embodiments and environment configurations, making it useful for stress-testing how learned robotic behaviors transfer across simulated setups.",
     "published": "2025-08-15T12:28:23Z",
     "updated": "2026-09-08T23:04:15Z",
     "authors": [
@@ -1635,7 +1635,7 @@
     "source": "github",
     "title": "facebookresearch/project_superdex",
     "url": "https://github.com/facebookresearch/project_superdex",
-    "summary": "SuperDex is a unified robotics simulation platform from Facebook Research that combines a purpose-built physics engine, authoring tools, and a scalable reinforcement-learning interface. It is aimed at building and training dexterous robot behaviors in simulation, with VR teleoperation already part of the workflow and more capabilities planned for later releases.",
+    "summary": "SuperDex is a unified robotics simulation platform that combines a purpose-built physics engine, authoring tools for building robot environments, and a scalable reinforcement-learning interface. It is aimed at dexterous robot learning workflows where researchers need both controllable simulation infrastructure and practical tools like VR teleoperation for demonstration or task setup, with more capabilities planned beyond the current release.",
     "published": "2026-08-20T02:04:05Z",
     "updated": "2026-09-08T20:15:29Z",
     "authors": [
@@ -2033,7 +2033,7 @@
     "source": "github",
     "title": "dk2472780158-ctrl/piper-dual-arm-smolvla-towel-folding",
     "url": "https://github.com/dk2472780158-ctrl/piper-dual-arm-smolvla-towel-folding",
-    "summary": "SmolVLA uses the 500M-parameter SmolVLM2 vision-language-action model to control real dual AgileX Piper robot arms for towel folding. It runs a full 750-step folding skill from a single command, blending continuous model authority with a proven ACT safety base so the robot can execute the task on physical hardware rather than only in simulation.",
+    "summary": "SmolVLA runs a 750-step towel-folding skill on real dual AgileX Piper robot arms, using SmolVLM2-500M as the vision-language-action model. The interesting part is the control setup: the learned policy is blended continuously with a proven ACT safety base, so the system can attempt real manipulation while retaining a safety-oriented fallback structure.",
     "published": "2026-09-02T06:28:46Z",
     "updated": "2026-09-02T09:02:52Z",
     "authors": [
@@ -2236,7 +2236,7 @@
     "source": "github",
     "title": "Rhoban/microban",
     "url": "https://github.com/Rhoban/microban",
-    "summary": "Microban is an affordable, fully 3D-printable, and 100% open-source humanoid robot. Powered by a Raspberry Pi Zero 2W and 19 Dynamixel servomotors, it serves as an accessible DIY platform for learning, experimentation, and research in robotics.",
+    "summary": "Microban is a low-cost humanoid robot that can be fully 3D-printed and assembled as an open-source DIY platform. It runs on a Raspberry Pi Zero 2W and uses 19 Dynamixel servomotors, making it useful for hands-on robotics education, experimentation, and small-scale humanoid research without requiring specialized hardware.",
     "published": "2026-05-06T11:13:44Z",
     "updated": "2026-09-07T01:09:53Z",
     "authors": [
@@ -2257,7 +2257,7 @@
       "license": "NOASSERTION",
       "first_seen": "2026-07-25",
       "full_text": "Microban is an affordable, fully 3D-printable, and 100% open-source humanoid robot. Powered by a Raspberry Pi Zero 2W and 19 Dynamixel servomotors, it serves as an accessible DIY platform for learning, experimentation, and research in robotics.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://private-user-images.githubusercontent.com/55233639/607830959-e7bc975c-ab70-4ce5-a882-225468f9ffff.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3ODkwODE2MTMsIm5iZiI6MTc4OTA4MTMxMywicGF0aCI6Ii81NTIzMzYzOS82MDc4MzA5NTktZTdiYzk3NWMtYWI3MC00Y2U1LWE4ODItMjI1NDY4ZjlmZmZmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjA5MTAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwOTEwVDIzMDE1M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWExODZkZjhlN2IyZmY4MmUwMTUxNWFlOWQxOWQ4YzcyNTJlM2U1MTZlZGIzZGM1OWVlOTZiNjJjYWQ3YzZhZGImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.6iBey-4x-ew0Bra-Z5QYiafoY-TufLkdI9xfaCIQ6h8"
     },
     "tags": [
@@ -3501,7 +3501,7 @@
     "source": "github",
     "title": "microai-lab/microduck-studio",
     "url": "https://github.com/microai-lab/microduck-studio",
-    "summary": "microduck-studio is a local web interface for building and inspecting Microduck robot workflows, including reinforcement learning runs. It is aimed at making robot-AI development more observable and controlled by supporting debugging, visualization, and safer orchestration of experiments from one studio-style environment.",
+    "summary": "Microduck Studio is a local web environment for building and inspecting Microduck robot workflows, especially reinforcement learning loops where debugging and visualization matter. It focuses on safe orchestration: giving developers a place to develop, monitor, and troubleshoot robot-AI experiments before or while running them in more consequential settings.",
     "published": "2026-09-04T05:08:22Z",
     "updated": "2026-09-08T15:06:08Z",
     "authors": [
