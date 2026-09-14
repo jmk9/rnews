@@ -188,7 +188,7 @@
     "source": "github",
     "title": "sou350121/VLA-Handbook",
     "url": "https://github.com/sou350121/VLA-Handbook",
-    "summary": "VLA-Handbook is a Chinese, practice-oriented learning and interview guide for algorithm engineers trying to enter Vision-Language-Action robotics. It narrows the usual CV/NLP interview scope to robotics-specific problems, making it useful as a field primer and preparation resource rather than a general machine learning handbook.",
+    "summary": "VLA-Handbook is a Chinese, practice-oriented learning and interview guide for engineers moving into Vision-Language-Action robotics. It narrows in on robotics-specific issues rather than generic CV/NLP preparation, making it useful as a structured entry point for people who already know AI basics but need the concepts, terminology, and interview framing around embodied action.",
     "published": "2025-11-23T06:25:26Z",
     "updated": "2026-09-05T15:30:04Z",
     "authors": [
@@ -825,7 +825,7 @@
     "source": "github",
     "title": "RobotControlStack/robot-control-stack",
     "url": "https://github.com/RobotControlStack/robot-control-stack",
-    "summary": "RobotControlStack provides a compact sim-to-real stack for training and deploying VLA models and reinforcement-learning agents without relying on ROS. It wraps MuJoCo environments in Gymnasium with synchronous execution, targeting common robot platforms including Franka, UR5e, xArm, SO101, and YAM, which makes it useful for researchers who want a lighter path from simulation experiments to hardware deployment.",
+    "summary": "RobotControlStack provides a compact sim-to-real stack for training and deploying VLA models and reinforcement-learning agents without depending on ROS. It wraps MuJoCo environments in Gymnasium with synchronous execution and supports common robot platforms including Franka, UR5e, xArm, SO101, and YAM, making it useful for teams that want a lighter-weight path from simulation experiments to real robot control.",
     "published": "2024-02-29T12:40:59Z",
     "updated": "2026-09-05T06:49:52Z",
     "authors": [
@@ -922,7 +922,7 @@
     "source": "github",
     "title": "isaac-sim/IsaacLab-Arena",
     "url": "https://github.com/isaac-sim/IsaacLab-Arena",
-    "summary": "Isaac Lab - Arena extends NVIDIA Isaac Lab with a composable simulation stack for building robot learning environments from interchangeable robots, objects, tasks, and scenes. It is aimed at rapid prototyping and policy evaluation across diverse embodiments and environment configurations, making it useful for stress-testing how learned robotic behaviors transfer across simulated setups.",
+    "summary": "Isaac Lab - Arena extends NVIDIA Isaac Lab with a composable simulation layer for building and evaluating robot-learning environments across different robot embodiments, objects, and scenes. It is aimed at quickly prototyping robotic tasks and running policy evaluations at scale, making it useful when researchers want to compare behaviors across diverse simulated setups without rebuilding each environment from scratch.",
     "published": "2025-08-15T12:28:23Z",
     "updated": "2026-09-05T16:57:09Z",
     "authors": [
@@ -1061,7 +1061,7 @@
     "source": "github",
     "title": "scy-v/VLA-Precision",
     "url": "https://github.com/scy-v/VLA-Precision",
-    "summary": "VLA-Precision implements Asymmetric Co-Bootstrapping, an online RL approach for improving vision-language-action models directly on real robot tasks while keeping data collection efficient. It targets the hard practical setting where a pretrained VLA policy must adapt through real-world interaction, using asymmetric learning signals to bootstrap better behavior without requiring large amounts of new robot experience.",
+    "summary": "VLA-Precision targets the practical bottleneck of improving vision-language-action models directly on real robots, using asymmetric co-bootstrapping to make online reinforcement learning more sample-efficient. The method is aimed at real-world robot control settings where collecting interaction data is expensive, so the interesting piece is how it couples bootstrapping signals to adapt a VLA policy without requiring large new datasets.",
     "published": "2026-09-02T08:40:01Z",
     "updated": "2026-09-05T17:18:08Z",
     "authors": [
@@ -1630,7 +1630,7 @@
     "source": "github",
     "title": "facebookresearch/project_superdex",
     "url": "https://github.com/facebookresearch/project_superdex",
-    "summary": "SuperDex is a unified robotics simulation platform that combines a purpose-built physics engine, authoring tools for building robot environments, and a scalable reinforcement-learning interface. It is aimed at dexterous robot learning workflows where researchers need both controllable simulation infrastructure and practical tools like VR teleoperation for demonstration or task setup, with more capabilities planned beyond the current release.",
+    "summary": "SuperDex is a unified robotics simulation platform from Meta that combines a purpose-built physics engine, authoring tools, and a scalable reinforcement learning interface. It is aimed at dexterous robot development, with VR teleoperation already part of the workflow and additional capabilities planned for later releases.",
     "published": "2026-08-20T02:04:05Z",
     "updated": "2026-09-05T04:38:42Z",
     "authors": [
@@ -1825,7 +1825,7 @@
     "source": "github",
     "title": "dk2472780158-ctrl/piper-dual-arm-smolvla-towel-folding",
     "url": "https://github.com/dk2472780158-ctrl/piper-dual-arm-smolvla-towel-folding",
-    "summary": "SmolVLA runs a 750-step towel-folding skill on real dual AgileX Piper robot arms, using SmolVLM2-500M as the vision-language-action model. The interesting part is the control setup: the learned policy is blended continuously with a proven ACT safety base, so the system can attempt real manipulation while retaining a safety-oriented fallback structure.",
+    "summary": "SmolVLA, based on SmolVLM2-500M, is run on real dual AgileX Piper arms to fold a physical towel using vision-language-action control. The setup blends continuous model authority with a proven ACT safety base, and the repo reports a full 750-step towel-folding skill completing successfully from a single command with status=0.",
     "published": "2026-09-02T06:28:46Z",
     "updated": "2026-09-02T09:02:52Z",
     "authors": [
@@ -2715,7 +2715,7 @@
     "source": "github",
     "title": "kuds/mesozoic-labs",
     "url": "https://github.com/kuds/mesozoic-labs",
-    "summary": "Open-source research platform for dinosaur biomechanics and robotic locomotion using reinforcement learning. MuJoCo-based Gymnasium environments with curriculum learning, W&B experiment tracking, and sim-to-real transfer goals.",
+    "summary": "Mesozoic Labs provides MuJoCo-based Gymnasium environments for studying dinosaur biomechanics through robotic locomotion, with reinforcement learning agents trained under curriculum learning. The platform is set up for reproducible experimentation with W&B tracking and is oriented toward sim-to-real transfer, making it useful for researchers exploring how extinct animal morphology can inform embodied control and robot design.",
     "published": "2025-02-22T19:16:40Z",
     "updated": "2026-09-05T18:26:54Z",
     "authors": [
@@ -2736,7 +2736,7 @@
       "license": null,
       "first_seen": "2026-07-09",
       "full_text": "Open-source research platform for dinosaur biomechanics and robotic locomotion using reinforcement learning. MuJoCo-based Gymnasium environments with curriculum learning, W&B experiment tracking, and sim-to-real transfer goals.",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/kuds/mesozoic-labs/HEAD/results/velociraptor/ppo/stage1_balance.gif"
     },
     "tags": [
