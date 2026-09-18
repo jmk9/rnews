@@ -138,7 +138,7 @@
     "source": "github",
     "title": "sou350121/VLA-Handbook",
     "url": "https://github.com/sou350121/VLA-Handbook",
-    "summary": "VLA-Handbook is a Chinese, practice-oriented learning and interview guide for algorithm engineers trying to enter Vision-Language-Action robotics. It narrows in on robotics-specific challenges rather than generic CV or NLP interview prep, making it most useful as a structured entry point for understanding what VLA systems need in embodied settings.",
+    "summary": "VLA-Handbook is a Chinese, practice-oriented study and interview guide for algorithm engineers moving into Vision-Language-Action robotics. It narrows the usual CV/NLP preparation lens to robotics-specific issues, making it most useful as an onboarding and interview-prep resource for people who already know the broader ML stack but need the VLA framing.",
     "published": "2025-11-23T06:25:26Z",
     "updated": "2026-09-14T15:30:04Z",
     "authors": [
@@ -684,7 +684,7 @@
     "source": "github",
     "title": "scy-v/VLA-Precision",
     "url": "https://github.com/scy-v/VLA-Precision",
-    "summary": "VLA-Precision explores efficient real-world online reinforcement learning for vision-language-action models using asymmetric co-bootstrapping, a setup aimed at making policy improvement practical on physical robots rather than only in simulation. The interesting piece is the training mechanism: it appears designed to let different components or policies bootstrap each other unevenly, improving precision and sample efficiency during online adaptation.",
+    "summary": "VLA-Precision targets real-world online reinforcement learning for vision-language-action models, using asymmetric co-bootstrapping to make robot policy improvement more sample-efficient outside simulation. The repository appears centered on training or evaluating VLA agents that can refine their behavior from real robot interaction, with the interesting angle being efficient online RL rather than relying only on offline demonstrations or large-scale pretraining.",
     "published": "2026-09-02T08:40:01Z",
     "updated": "2026-09-13T14:36:25Z",
     "authors": [
@@ -920,7 +920,7 @@
     "source": "github",
     "title": "isaac-sim/IsaacLab-Arena",
     "url": "https://github.com/isaac-sim/IsaacLab-Arena",
-    "summary": "Isaac Lab - Arena extends NVIDIA Isaac Lab with a composable simulation layer for building robot learning environments from interchangeable robots, objects, and scene setups. It is aimed at quickly prototyping tasks and evaluating learned policies across different embodiments and environment configurations, making it useful for stress-testing generalization in simulated robotics workflows.",
+    "summary": "IsaacLab-Arena extends NVIDIA Isaac Lab with a composable setup for building robotics simulation environments from interchangeable robot embodiments, objects, and scene components. It is aimed at rapid prototyping and evaluation of robot learning policies, especially when researchers need to compare behaviors across many task and environment configurations without rebuilding each simulation from scratch.",
     "published": "2025-08-15T12:28:23Z",
     "updated": "2026-09-14T22:21:25Z",
     "authors": [
@@ -961,7 +961,7 @@
     "source": "github",
     "title": "iit-DLSLab/basic-locomotion-isaaclab",
     "url": "https://github.com/iit-DLSLab/basic-locomotion-isaaclab",
-    "summary": "An IsaacLab DirectEnv implementation for training basic quadruped locomotion policies across multiple robot platforms. It is useful as a starting point for legged-locomotion experiments that need IsaacLab integration plus pathways for sim-to-sim transfer and eventual sim-to-real deployment.",
+    "summary": "An IsaacLab DirectEnv implementation for training and testing basic quadruped locomotion, with support for multiple robot models rather than a single fixed platform. It is set up to bridge simulation workflows into sim-to-sim and sim-to-real pipelines, making it useful as a practical starting point for legged-locomotion experiments that need to move beyond one simulator or robot.",
     "published": "2025-06-20T08:24:35Z",
     "updated": "2026-09-14T20:28:12Z",
     "authors": [
@@ -1097,7 +1097,7 @@
     "source": "github",
     "title": "Toni-SM/skrl",
     "url": "https://github.com/Toni-SM/skrl",
-    "summary": "Modular Reinforcement Learning (RL) library (implemented in PyTorch, JAX, and NVIDIA Warp) with support for Gymnasium/Gym, NVIDIA Isaac Lab, MuJoCo Playground and other environments",
+    "summary": "skrl is a modular reinforcement learning library that lets researchers build and run RL agents across PyTorch, JAX, and NVIDIA Warp backends. It is aimed at practical experimentation across common simulation stacks, including Gymnasium/Gym, NVIDIA Isaac Lab, and MuJoCo Playground, making it useful when comparing algorithms or moving policies between robotics environments.",
     "published": "2021-10-18T07:53:11Z",
     "updated": "2026-09-14T11:21:27Z",
     "authors": [
@@ -1128,7 +1128,7 @@
       "license": "MIT",
       "first_seen": "2026-05-18",
       "full_text": "Modular Reinforcement Learning (RL) library (implemented in PyTorch, JAX, and NVIDIA Warp) with support for Gymnasium/Gym, NVIDIA Isaac Lab, MuJoCo Playground and other environments",
-      "summary_kind": "truncation",
+      "summary_kind": "llm",
       "thumbnail": "https://raw.githubusercontent.com/Toni-SM/skrl/main/docs/source/_static/data/logo-light-mode.png"
     },
     "tags": [
@@ -1156,7 +1156,7 @@
     "source": "github",
     "title": "ROBOTIS-GIT/cyclo_lab",
     "url": "https://github.com/ROBOTIS-GIT/cyclo_lab",
-    "summary": "This repository provides tutorials for reinforcement learning and imitation learning using ROBOTIS robots, and supports Sim2Real functionality for deploying the learned policies on real robots.",
+    "summary": "ROBOTIS-GIT/cyclo_lab collects tutorials for training ROBOTIS robots with reinforcement learning and imitation learning, with an emphasis on moving policies from simulation onto physical hardware. It is mainly useful as a hands-on Sim2Real learning and deployment resource for researchers working with ROBOTIS platforms rather than as a standalone algorithmic contribution.",
     "published": "2025-07-14T12:30:59Z",
     "updated": "2026-09-07T07:56:24Z",
     "authors": [
@@ -1180,7 +1180,7 @@
       "license": "Apache-2.0",
       "first_seen": "2026-06-26",
       "full_text": "This repository provides tutorials for reinforcement learning and imitation learning using ROBOTIS robots, and supports Sim2Real functionality for deploying the learned policies on real robots.",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -1254,7 +1254,7 @@
     "source": "github",
     "title": "iit-DLSLab/sim2real-robot-identification",
     "url": "https://github.com/iit-DLSLab/sim2real-robot-identification",
-    "summary": "Provides joint calibration routines for quadrupeds and manipulators intended to reduce the mismatch between simulated and real robot kinematics. It is aimed at sim-to-real workflows using Isaac Lab and MuJoCo, giving researchers a practical way to identify or tune robot joint parameters before transferring controllers or policies onto hardware.",
+    "summary": "Provides a joint calibration routine for quadrupeds and manipulators aimed at reducing the mismatch between simulated and physical robots. It is meant to support sim-to-real transfer from Isaac Lab and MuJoCo by identifying robot joint parameters more accurately before deploying policies or controllers on hardware.",
     "published": "2025-07-05T22:23:07Z",
     "updated": "2026-09-02T08:44:37Z",
     "authors": [
@@ -1442,7 +1442,7 @@
     "source": "github",
     "title": "dartsim/dart",
     "url": "https://github.com/dartsim/dart",
-    "summary": "DART is a research-oriented C++23 physics engine for simulating articulated robots and characters, with Python bindings for easier use in robotics, animation, and machine learning workflows. It is most useful when you need a programmable dynamics backend for experiments involving robot motion, control, or learning-based simulation rather than a black-box game-style physics engine.",
+    "summary": "DART is a C++23 physics engine aimed at robotics, animation, and machine learning research, with Python bindings for experiment workflows. It is useful when researchers need simulation infrastructure for dynamics-heavy systems rather than a black-box application: the emphasis is on physically grounded modeling that can plug into robotics and learning pipelines.",
     "published": "2011-09-19T21:53:51Z",
     "updated": "2026-09-14T21:56:36Z",
     "authors": [
@@ -1757,7 +1757,7 @@
     "source": "github",
     "title": "OpenBMB/SimpleMemVLA",
     "url": "https://github.com/OpenBMB/SimpleMemVLA",
-    "summary": "SimpleMemVLA adds native-video memory to vision-language-action robot models by keeping timestamped visual history and using exact streaming inference, so policies can reason over long-horizon manipulation without collapsing the past into a static context. It is aimed at giving VLA systems a more faithful memory of what has happened in the scene, which is especially useful for tasks where earlier object states, contacts, or partial progress matter later.",
+    "summary": "SimpleMemVLA adds native-video memory to vision-language-action robot policies by keeping a timestamped visual history and running exact streaming inference over long horizons. It is aimed at manipulation settings where the robot needs to use earlier visual context rather than only the current frame, making memory a first-class part of the VLA model instead of an external add-on.",
     "published": "2026-08-29T16:37:48Z",
     "updated": "2026-09-09T17:25:47Z",
     "authors": [
@@ -1858,7 +1858,7 @@
     "source": "github",
     "title": "abmoRobotics/RLRoverLab",
     "url": "https://github.com/abmoRobotics/RLRoverLab",
-    "summary": "Rover and space-related reinforcement learning environments implemented for Isaac Sim and Isaac Lab.",
+    "summary": "RLRoverLab provides rover and space-focused reinforcement learning environments built on Isaac Sim and Isaac Lab. It looks useful as a simulation testbed for training and evaluating embodied policies in planetary-rover-style settings, especially for researchers already working in NVIDIA’s Isaac ecosystem.",
     "published": "2024-09-17T07:37:28Z",
     "updated": "2026-09-08T12:42:27Z",
     "authors": [
@@ -1873,7 +1873,7 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18",
       "full_text": "Rover and space-related reinforcement learning environments implemented for Isaac Sim and Isaac Lab.",
-      "summary_kind": "truncation"
+      "summary_kind": "llm"
     },
     "tags": [
       "#RL",
@@ -3115,7 +3115,7 @@
     "source": "github",
     "title": "iit-DLSLab/get-up-isaaclab",
     "url": "https://github.com/iit-DLSLab/get-up-isaaclab",
-    "summary": "IsaacLab DirectEnv implementation for training quadruped robots to recover from the ground into a standing posture. It supports multiple quadruped platforms and is set up not just for simulation training, but for sim-to-sim validation and sim-to-real deployment pipelines, making it useful for researchers working on robust legged-robot recovery behaviors.",
+    "summary": "An IsaacLab DirectEnv implementation for training quadruped robots to recover from the ground into a standing posture. It is set up to work across multiple quadruped platforms and includes paths for sim-to-sim validation and sim-to-real transfer, making it useful for researchers testing get-up policies before deployment.",
     "published": "2026-04-06T06:33:20Z",
     "updated": "2026-09-03T15:37:30Z",
     "authors": [
