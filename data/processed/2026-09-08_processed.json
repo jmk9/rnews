@@ -188,7 +188,7 @@
     "source": "github",
     "title": "sou350121/VLA-Handbook",
     "url": "https://github.com/sou350121/VLA-Handbook",
-    "summary": "VLA-Handbook is a Chinese, practice-oriented study and interview guide for algorithm engineers moving into Vision-Language-Action robotics. It narrows the usual CV/NLP preparation lens to robotics-specific issues, making it most useful as an onboarding and interview-prep resource for people who already know the broader ML stack but need the VLA framing.",
+    "summary": "VLA-Handbook is a Chinese, practice-oriented study and interview guide for engineers moving into Vision-Language-Action robotics. It narrows the usual CV/NLP interview-prep lens to robotics-specific issues, making it useful as a field-entry map for people who need both conceptual grounding and preparation for applied VLA roles.",
     "published": "2025-11-23T06:25:26Z",
     "updated": "2026-09-08T15:30:04Z",
     "authors": [
@@ -833,7 +833,7 @@
     "source": "github",
     "title": "scy-v/VLA-Precision",
     "url": "https://github.com/scy-v/VLA-Precision",
-    "summary": "VLA-Precision targets real-world online reinforcement learning for vision-language-action models, using asymmetric co-bootstrapping to make robot policy improvement more sample-efficient outside simulation. The repository appears centered on training or evaluating VLA agents that can refine their behavior from real robot interaction, with the interesting angle being efficient online RL rather than relying only on offline demonstrations or large-scale pretraining.",
+    "summary": "VLA-Precision implements Asymmetric Co-Bootstrapping for making vision-language-action models more efficient at real-world online reinforcement learning. The idea appears to center on improving policy learning directly from robot interaction while reducing the practical cost of online RL, making it relevant for researchers trying to adapt VLA models beyond offline imitation into precise real-world manipulation.",
     "published": "2026-09-02T08:40:01Z",
     "updated": "2026-09-08T01:49:04Z",
     "authors": [
@@ -962,7 +962,7 @@
     "source": "github",
     "title": "ROBOTIS-GIT/cyclo_lab",
     "url": "https://github.com/ROBOTIS-GIT/cyclo_lab",
-    "summary": "ROBOTIS-GIT/cyclo_lab collects tutorials for training ROBOTIS robots with reinforcement learning and imitation learning, with an emphasis on moving policies from simulation onto physical hardware. It is mainly useful as a hands-on Sim2Real learning and deployment resource for researchers working with ROBOTIS platforms rather than as a standalone algorithmic contribution.",
+    "summary": "ROBOTIS-GIT/cyclo_lab collects tutorials for training robot policies with reinforcement learning and imitation learning on ROBOTIS platforms. Its practical focus is Sim2Real: helping users move learned policies from simulation onto physical ROBOTIS robots, making it useful as a hands-on starting point for researchers or engineers testing learning-based control on real hardware.",
     "published": "2025-07-14T12:30:59Z",
     "updated": "2026-09-07T07:56:24Z",
     "authors": [
@@ -1014,7 +1014,7 @@
     "source": "github",
     "title": "iit-DLSLab/sim2real-robot-identification",
     "url": "https://github.com/iit-DLSLab/sim2real-robot-identification",
-    "summary": "Provides a joint calibration routine for quadrupeds and manipulators aimed at reducing the mismatch between simulated and physical robots. It is meant to support sim-to-real transfer from Isaac Lab and MuJoCo by identifying robot joint parameters more accurately before deploying policies or controllers on hardware.",
+    "summary": "Provides a joint calibration routine for quadrupeds and manipulators aimed at reducing the mismatch between simulated and physical robots. It is meant to support sim-to-real transfer for policies or models developed in IsaacLab and MuJoCo, giving researchers a practical way to align joint behavior before deploying on real hardware.",
     "published": "2025-07-05T22:23:07Z",
     "updated": "2026-09-02T08:44:37Z",
     "authors": [
@@ -1063,7 +1063,7 @@
     "source": "github",
     "title": "iit-DLSLab/basic-locomotion-isaaclab",
     "url": "https://github.com/iit-DLSLab/basic-locomotion-isaaclab",
-    "summary": "An IsaacLab DirectEnv implementation for training and testing basic quadruped locomotion, with support for multiple robot models rather than a single fixed platform. It is set up to bridge simulation workflows into sim-to-sim and sim-to-real pipelines, making it useful as a practical starting point for legged-locomotion experiments that need to move beyond one simulator or robot.",
+    "summary": "IsaacLab DirectEnv implementation for training basic quadrupedal locomotion policies across multiple robot platforms. It is aimed at practical transfer workflows, with support for sim-to-sim evaluation and sim-to-real deployment pipelines rather than just a single simulated robot setup.",
     "published": "2025-06-20T08:24:35Z",
     "updated": "2026-09-03T14:09:30Z",
     "authors": [
@@ -1309,7 +1309,7 @@
     "source": "github",
     "title": "facebookresearch/project_superdex",
     "url": "https://github.com/facebookresearch/project_superdex",
-    "summary": "SuperDex is a unified robotics simulation platform that combines a purpose-built physics engine, authoring tools, and a scalable reinforcement learning interface for training and evaluating robot behaviors. It is aimed at dexterous manipulation workflows where researchers need both controllable simulation infrastructure and practical data-generation tools, with VR teleoperation already included and more capabilities planned.",
+    "summary": "SuperDex is a unified simulation platform for dexterous robotics that combines a custom physics engine, robotics authoring tools, and a reinforcement learning interface. It is aimed at scalable robot learning workflows, with VR teleoperation already part of the stack and more capabilities planned for later releases.",
     "published": "2026-08-20T02:04:05Z",
     "updated": "2026-09-08T20:15:29Z",
     "authors": [
@@ -1352,7 +1352,7 @@
     "source": "github",
     "title": "abmoRobotics/RLRoverLab",
     "url": "https://github.com/abmoRobotics/RLRoverLab",
-    "summary": "RLRoverLab provides rover and space-focused reinforcement learning environments built on Isaac Sim and Isaac Lab. It looks useful as a simulation testbed for training and evaluating embodied policies in planetary-rover-style settings, especially for researchers already working in NVIDIA’s Isaac ecosystem.",
+    "summary": "RLRoverLab provides rover and space-focused reinforcement learning environments built on Isaac Sim and Isaac Lab. It is useful as a simulation testbed for training and evaluating embodied RL policies in planetary-rover-style settings, especially where researchers want physics-based environments aligned with NVIDIA’s robotics tooling.",
     "published": "2024-09-17T07:37:28Z",
     "updated": "2026-09-08T12:42:27Z",
     "authors": [
@@ -1663,7 +1663,7 @@
     "source": "github",
     "title": "jiteshsaini/robotics-level-4",
     "url": "https://github.com/jiteshsaini/robotics-level-4",
-    "summary": "Raspberry Pi robot code for the Earth Rover “Level 4” build, updated for Raspberry Pi OS Trixie, that runs onboard ML for detection, tracking, human following, image classification, and Teachable Machine gesture control. It is useful as a practical edge-robotics reference because the perception and interaction stack runs directly on the Pi, with optional Coral acceleration for faster inference.",
+    "summary": "Raspberry Pi robot software for the Earth Rover Level 4 platform, updated for Raspberry Pi OS Trixie, runs on-board vision and ML for detection, tracking, human following, image classification, and Teachable Machine gesture recognition. It is aimed at building a self-contained rover that can perceive and react locally on the Pi, with optional Coral acceleration for faster inference.",
     "published": "2020-10-03T16:01:13Z",
     "updated": "2026-09-08T17:25:43Z",
     "authors": [
@@ -2084,7 +2084,7 @@
     "source": "github",
     "title": "castacks/AirStack",
     "url": "https://github.com/castacks/AirStack",
-    "summary": "AirStack is an agent-native robotics stack aimed at moving embodied AI from simulation to field hardware quickly, using a closed-loop one-to-one workflow that mirrors the real robot and validates itself against hardware behavior. It is positioned for field robotics teams that need rapid sim-to-real iteration rather than a disconnected simulator-only pipeline, with the develop branch carrying the newest features.",
+    "summary": "AirStack is an agent-native robotics framework aimed at moving embodied AI from simulation to field hardware quickly, using a closed-loop workflow that mirrors the real robot one-to-one. It emphasizes self-validation and rapid sim-to-real iteration, making it useful for teams deploying field robotics systems where autonomy code needs to be tested against hardware-facing constraints rather than only offline simulation.",
     "published": "2024-06-07T21:22:29Z",
     "updated": "2026-09-08T23:10:51Z",
     "authors": [
@@ -2130,7 +2130,7 @@
     "source": "github",
     "title": "SaberOnGo/open-microduck",
     "url": "https://github.com/SaberOnGo/open-microduck",
-    "summary": "SaberOnGo/open-microduck is an open-source effort around reverse engineering and studying the Microduck robot platform, with pieces spanning hardware investigation, simulation, reinforcement learning, and sim-to-real transfer. It looks useful as a practical robotics research sandbox: not just code for control, but a broader attempt to understand the hardware well enough to simulate it, train policies, and carry them back onto the physical robot.",
+    "summary": "Open Microduck is an independent open-source effort to reverse engineer and study the Microduck robot across hardware, simulation, reinforcement learning, and sim-to-real transfer. It appears useful as a hands-on research base for understanding the platform’s internals and developing learned robot behaviors that can move from simulated training into physical hardware.",
     "published": "2026-08-31T05:34:19Z",
     "updated": "2026-09-04T10:11:11Z",
     "authors": [
@@ -2212,7 +2212,7 @@
     "source": "github",
     "title": "kuds/mesozoic-labs",
     "url": "https://github.com/kuds/mesozoic-labs",
-    "summary": "kuds/mesozoic-labs is an open-source platform for studying dinosaur biomechanics through robot locomotion simulations. It provides MuJoCo-based Gymnasium environments for reinforcement learning, with curriculum learning and Weights & Biases tracking built in, and is aimed at experiments that can eventually transfer learned gaits or control policies from simulation to real robotic systems.",
+    "summary": "mesozoic-labs is an open-source platform for studying dinosaur biomechanics through MuJoCo/Gymnasium locomotion environments trained with reinforcement learning. It packages curriculum learning and W&B experiment tracking around simulated dinosaur-inspired robots, with an explicit aim of using the learned controllers and morphologies for sim-to-real transfer in physical robotic locomotion.",
     "published": "2025-02-22T19:16:40Z",
     "updated": "2026-09-08T22:42:20Z",
     "authors": [
@@ -2501,7 +2501,7 @@
     "source": "github",
     "title": "EGalahad/mimic-lite",
     "url": "https://github.com/EGalahad/mimic-lite",
-    "summary": "mimic-lite implements efficient whole-body motion tracking for humanoid robots, aimed at making large-scale policy training practical while preserving a path to sim-to-real deployment. It appears focused on lightweight imitation-style control for full-body humanoid motion, useful when researchers need scalable training loops rather than a heavy bespoke stack.",
+    "summary": "mimic-lite targets efficient whole-body motion tracking for humanoid robots, with an emphasis on scaling up training and making the learned behavior usable in sim-to-real deployment. The repository appears focused on a lightweight pipeline for training humanoids to reproduce reference motions across the full body, useful when researchers need motion-tracking policies that are fast enough to iterate on and practical enough to transfer beyond simulation.",
     "published": "2026-06-02T15:45:23Z",
     "updated": "2026-09-01T03:54:29Z",
     "authors": [
