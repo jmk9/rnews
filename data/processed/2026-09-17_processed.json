@@ -431,7 +431,8 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18",
       "full_text": "An open-source library for GPU-accelerated robot learning and sim-to-real transfer.",
-      "summary_kind": "truncation"
+      "summary_kind": "truncation",
+      "thumbnail": "https://github.com/google-deepmind/mujoco_playground/raw/main/assets/banner.png?raw=true"
     },
     "tags": [
       "#Other"
@@ -573,7 +574,8 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18",
       "full_text": "A Python framework for GPU-accelerated simulation, robotics, and machine learning.",
-      "summary_kind": "truncation"
+      "summary_kind": "truncation",
+      "thumbnail": "https://github.com/NVIDIA/warp/raw/main/docs/img/header.jpg"
     },
     "tags": [
       "#Other"
@@ -588,48 +590,6 @@
       "has_code": 6.0,
       "github_stars_log": 19.264229090074984,
       "github_forks_log": 5.5875807693816375,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:XuPeng23/AeroVLA",
-    "source": "github",
-    "title": "XuPeng23/AeroVLA",
-    "url": "https://github.com/XuPeng23/AeroVLA",
-    "summary": "[Accepted to ECCV 2026] Official repository for AeroVLA (formerly known as AerialVLA): A Vision-Language-Action Model for UAV Navigation via Minimalist End-to-End Control",
-    "published": "2026-03-15T10:13:25Z",
-    "updated": "2026-09-16T08:45:33Z",
-    "authors": [
-      "XuPeng23"
-    ],
-    "extra": {
-      "stars": 157,
-      "forks": 9,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 12,
-      "license": "Apache-2.0",
-      "first_seen": "2026-06-20",
-      "full_text": "[Accepted to ECCV 2026] Official repository for AeroVLA (formerly known as AerialVLA): A Vision-Language-Action Model for UAV Navigation via Minimalist End-to-End Control",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 35.648,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.6547993659449407,
-      "has_code": 6.0,
-      "github_stars_log": 10.993285434772114,
-      "github_forks_log": 2.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
@@ -833,55 +793,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2609.18207",
-    "source": "arxiv",
-    "title": "Reinforcement Learning for Real-Time Vision-Language-Action Policies",
-    "url": "http://arxiv.org/abs/2609.18207v1",
-    "summary": "Real-Time EXPO-FT fine-tunes large vision-language-action robot policies with reinforcement learning while handling their inference latency by splitting control into slow action-chunk proposals from the pretrained VLA and fast reactive edits from a lightweight policy conditioned on the latest observation. On Kinetix it beats delayed and non-delayed baselines across all 10 environments, and on four dynamic real-world manipulation tasks it raises average success from 42% to 97% using at most 10 minutes of online robot data and no human intervention.",
-    "published": "2026-09-16T06:38:36+00:00",
-    "updated": "2026-09-16T06:38:36+00:00",
-    "authors": [
-      "Perry Dong",
-      "Kuo-Han Hung",
-      "Dorsa Sadigh",
-      "Chelsea Finn"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2609.18207v1",
-      "comment": null,
-      "first_seen": "2026-09-17",
-      "full_text": "Reinforcement learning fine-tuning on top of large, pretrained Vision-Language-Action (VLA) models offers promise for highly reliable robot deployment. However, because of their scale, modern VLA models suffer from high inference latency, so the observation used to select an action is often stale by execution time, creating a distribution shift that can substantially degrade reliability and performance. Prior work has explored asynchronous policy execution to reduce the effect of latency, but these methods are mostly built on imitation learning and offer no mechanism for moving beyond the training distribution toward higher reliability. We close this gap by enabling RL fine-tuning that meets the real-time control requirements of dynamic real-world manipulation. Our approach builds on EXPO-FT, a framework for sample-efficient, reliable VLA fine-tuning with reinforcement learning, and decouples slow, expressive action generation from fast, reactive action edits: a large pretrained VLA proposes action chunks using its strong behavior prior, while a lightweight edit policy performs fast, reactive decision-making by editing actions in response to changes in state, conditioned on the latest observation. We instantiate this as Real-Time EXPO-FT, an RL framework for finetuning real-time VLA policies. On the Kinetix benchmark, Real-Time EXPO-FT enables a delayed policy to achieve the best performance among delayed and non-delayed methods in 10 out of 10 environments. On four dynamic real-world tasks, robot object passing, ball balancing, table soccer kicking, and dynamic object picking, with online robot data capped at 10 minutes, Real-Time EXPO-FT improves average policy performance from 42% to 97%, all without human intervention, demonstrating rapid, sample-efficient adaptation to challenging real-world dynamics. Website: https://pd-perry.github.io/real-time-expo-ft",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.18207.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#IL",
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 33.636,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 6.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 6.0,
-      "recency": 2.6359080099330354,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:Toni-SM/skrl",
     "source": "github",
     "title": "Toni-SM/skrl",
@@ -1062,7 +973,7 @@
       "first_seen": "2026-08-24",
       "full_text": "SuperDex brings together a purpose-built physics engine, robotics authoring tools, and a scalable reinforcement learning interface in a unified simulation platform, with VR-based teleoperation and additional capabilities planned for future releases.",
       "summary_kind": "llm",
-      "thumbnail": "https://private-user-images.githubusercontent.com/65318034/638617740-ddac8a5f-2f72-4ca0-b555-a090513f224a.webp?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTAyOTQwNzQsIm5iZiI6MTc5MDI5Mzc3NCwicGF0aCI6Ii82NTMxODAzNC82Mzg2MTc3NDAtZGRhYzhhNWYtMmY3Mi00Y2EwLWI1NTUtYTA5MDUxM2YyMjRhLndlYnA_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwOTI0JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDkyNFQyMzQ5MzRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04ODhiNzcwZGE3YzQ0Mzg3MWMwODkzN2VmM2EwNjllMTRjMzJkMzAzNTc4ODg0ZTRkMmZiZjBiZWRkNGI0Nzc4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZ3ZWJwIn0.73ZC-Sm8tgkJvQq4P0haKA4faBhKxiW4tDFg7bpK8vc"
+      "thumbnail": "https://private-user-images.githubusercontent.com/65318034/638617740-ddac8a5f-2f72-4ca0-b555-a090513f224a.webp?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTA2NDM0ODQsIm5iZiI6MTc5MDY0MzE4NCwicGF0aCI6Ii82NTMxODAzNC82Mzg2MTc3NDAtZGRhYzhhNWYtMmY3Mi00Y2EwLWI1NTUtYTA5MDUxM2YyMjRhLndlYnA_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYwOTI5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MDkyOVQwMDUzMDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lNGViMGNiZDY2MmE4ZWUxZDc3ODUwYTM2ZTI2MDRjOTE3MzZiN2IxY2EzZjJkZDI1Nzg4ZGFkNGUzNTMyZDMzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZ3ZWJwIn0.OW1qwayO6pf1X6JNe08eJCvtJcUb_Wxxumh7gqPTXqE"
     },
     "tags": [
       "#RL",
@@ -1562,48 +1473,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:JJayzee/E-VLA",
-    "source": "github",
-    "title": "JJayzee/E-VLA",
-    "url": "https://github.com/JJayzee/E-VLA",
-    "summary": "Official repository of \"E-VLA: Event-augmented Vision-Language-Action Model for Dark and Blurred Scenes\".",
-    "published": "2026-04-03T18:07:11Z",
-    "updated": "2026-09-15T16:41:04Z",
-    "authors": [
-      "JJayzee"
-    ],
-    "extra": {
-      "stars": 18,
-      "forks": 0,
-      "language": null,
-      "topics": [],
-      "open_issues": 1,
-      "license": "Apache-2.0",
-      "first_seen": "2026-09-15",
-      "full_text": "Official repository of \"E-VLA: Event-augmented Vision-Language-Action Model for Dark and Blurred Scenes\".",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 28.905,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.5112750597395834,
-      "has_code": 6.0,
-      "github_stars_log": 6.393768004764144,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:f287be0df682",
     "source": "news",
     "title": "브릴스, 산업용 로봇 넘어 ‘피지컬 AI’로…RFM·VLA 기반 차세대 로봇 플랫폼 본격화",
@@ -1981,60 +1850,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2609.18259",
-    "source": "arxiv",
-    "title": "${M}^2$Tok: Multi-head Multi-codebook Discrete Action Tokenization for Vision-Language-Action Models",
-    "url": "http://arxiv.org/abs/2609.18259v1",
-    "summary": "M²Tok is a discrete action tokenizer for VLA models that reduces the loss from compressing continuous robot actions into autoregressive tokens. It splits latent action features across multiple heads and gives each head its own codebook, expanding the combinatorial action representation so fine-grained control dynamics are preserved better than prior tokenizers. In evaluations on RoboTwin, Simpler-Env, and three zero-shot real-world tasks, the resulting VLA models achieve both lower reconstruction error and higher task success rates.",
-    "published": "2026-09-16T07:38:41+00:00",
-    "updated": "2026-09-16T07:38:41+00:00",
-    "authors": [
-      "Chunpu Xu",
-      "Zhixuan Liang",
-      "Yuhao Zhang",
-      "Chi-Min Chan",
-      "Jessie Wang",
-      "Yang Xiao",
-      "Mengkang Hu",
-      "Xiaokang Yang",
-      "Yao Mu"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CL",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2609.18259v1",
-      "comment": "ECCV 2026",
-      "first_seen": "2026-09-17",
-      "full_text": "Recent advancements have successfully adapted autoregressive language models to process multimodal signals, such as images and actions. Since raw action signals are continuous, effective tokenization is essential to map high-dimensional inputs into compact discrete tokens for autoregressive processing. However, existing discrete action tokenizers often suffer from high reconstruction loss, failing to preserve the fine-grained dynamics required for precise control. This ``discretization bottleneck'' significantly limits the performance ceiling of downstream Vision-Language-Action (VLA) models. To address this, we propose $\\mathcal{M}^2$Tok, a Multi-head Multi-codebook Action Tokenizer designed to minimize reconstruction error and enhance policy performance. Our approach introduces two key structural innovations: (1) we decompose the latent action features into multiple heads, enabling the model to implicitly align specific heads with distinct action dimensions; (2) we assign independent codebooks to each head for quantization. By leveraging the combinatorial nature of multiple codebooks, we significantly expand the representational expressivity of the tokenizer, leading to substantially lower reconstruction loss compared to previous methods. We evaluate the $\\mathcal{M}^2$Tok-based VLA on the RoboTwin, Simpler-Env, and 3 zero-shot real-world tasks. Experimental results demonstrate our method not only achieves superior reconstruction fidelity but also significantly boosts the success rate of VLA models. Comprehensive ablation studies further confirm the effectiveness of the multi-head and multi-codebook mechanisms. Code is available at \\href{https://github.com/cpaaax/M2Tok}{https://github.com/cpaaax/M2Tok}.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.18259.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 26.645,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.6448489833234126,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:ce082be9f815",
     "source": "news",
     "title": "Rethinking Robot Safety in the Age of AI",
@@ -2347,111 +2162,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2609.18293",
-    "source": "arxiv",
-    "title": "Function-Preserving Data Generation for Zero-Shot Real-to-Sim-to-Real Manipulation",
-    "url": "http://arxiv.org/abs/2609.18293v1",
-    "summary": "Function-Preserving Data Generation builds synthetic robot demonstrations from reconstructed real objects by deforming meshes under constraints that preserve task-critical contact interfaces, rather than using generic shape augmentation that can break fits or create collisions. It transfers task poses and collision proxies consistently through these deformations, then uses visual domain randomization in simulation so policies can deploy zero-shot back to the real world. Experiments in simulation and on real robots show improved generalization to unseen object geometries and visual conditions, especially for contact-rich, long-horizon manipulation tasks.",
-    "published": "2026-09-16T08:13:40+00:00",
-    "updated": "2026-09-16T08:13:40+00:00",
-    "authors": [
-      "Tianyi Xiang",
-      "Xupeng Xie",
-      "Jiahang Cao",
-      "Andrew F. Luo",
-      "Haoang Li",
-      "Jun Ma"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2609.18293v1",
-      "comment": "Project page: https://fpsa-r2s2r.github.io/",
-      "first_seen": "2026-09-17",
-      "full_text": "Robotic data generation is a promising paradigm for scaling robot learning without collecting large-scale real-world data. However, generating geometrically diverse yet physically valid data for contact-rich tasks remains challenging, especially when success depends on precise geometric interfaces. Standard shape augmentation methods often distort task-critical interfaces, resulting in invalid contact relationships, e.g., fit mismatches or interpenetration, rendering downstream interactions infeasible. To address these limitations, we propose a function-preserving Real-to-Sim-to-Real framework that generates synthetic demonstrations from reconstructed assets without teleoperated source trajectories. Our method augments task-relevant object geometries through constraint-guided mesh deformation, together with physically consistent transfer of task poses and collision proxies. Visual domain randomization is further applied during simulation rollouts, enabling robust zero-shot policy deployment without real-world fine-tuning. Extensive experiments in both real-world and simulation settings demonstrate that our method enables robust generalization across unseen object geometries and diverse visual conditions in contact-rich and long-horizon tasks. Our method provides a practical path toward scalable robot learning for contact-rich tasks via shape deformation.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.18293.jpg"
-    },
-    "tags": [
-      "#Manipulator"
-    ],
-    "score": 23.65,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.6500548368625996,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2609.18243",
-    "source": "arxiv",
-    "title": "Acting in Meters: Learning Metric Interactions for Precise Robotic Manipulation",
-    "url": "http://arxiv.org/abs/2609.18243v1",
-    "summary": "Acting in Meters adds explicit Cartesian geometry to language-conditioned manipulation by representing end-effector trajectories relative to objects with Interaction-Centric Tokens and using MAIF to attend over metric point-cloud scene features for action correction. With only a small adaptation overhead, it improves VLA and World-Action Model baselines on LIBERO and RoboTwin 2.0, and the gains are larger in real robots: +6.80 percentage points on in-distribution tasks and +7.45 on out-of-distribution variants.",
-    "published": "2026-09-16T07:20:18+00:00",
-    "updated": "2026-09-16T07:20:18+00:00",
-    "authors": [
-      "Lijie Wang",
-      "Zheng Lu",
-      "Yiming Wang",
-      "Heyang Yu",
-      "Kenghou Hoi",
-      "Bowen Hu",
-      "Di Cui",
-      "Tianyu Xin",
-      "Haoran Liao",
-      "Wanqi Zhong",
-      "Xingjie Fan",
-      "Yizhao Xu",
-      "Ziliang Wang",
-      "Fei Gao",
-      "Yiming Li"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2609.18243v1",
-      "comment": null,
-      "first_seen": "2026-09-17",
-      "full_text": "Vision-Language-Action models and World-Action Models have advanced language-conditioned robotic manipulation, yet often leave metric relations among actions, objects, and scene geometry implicit. Human manipulation combines semantic understanding of task-relevant objects with spatial feedback that guides hand motion relative to objects and their surroundings. Inspired by this, we introduce a metric interaction framework that models object-level and scene-level interactions in physical Cartesian space at a shared metric scale. At the object level, Interaction-Centric Tokens (ICTs) explicitly represent end-effector pose trajectories relative to manipulated objects and are jointly denoised with actions, providing physically grounded interaction supervision. At the scene level, the Metric Action Interaction Field (MAIF) uses action and ICT queries to attend to metric scene point-cloud features and learns geometry-conditioned action corrections. Through two-stage adaptation, our framework improves diverse VLA and WAM baselines with a small number of additional parameters and training steps. Experiments demonstrate average success-rate gains of 0.80 and 3.59 percentage points on LIBERO and RoboTwin~2.0, respectively, alongside gains of 6.80 percentage points on real-world tasks and 7.45 percentage points on their out-of-distribution variants.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.18243.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 23.642,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.6421133678348214,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:SaberOnGo/open-microduck",
     "source": "github",
     "title": "SaberOnGo/open-microduck",
@@ -2625,48 +2335,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:microai-lab/microduck-studio",
-    "source": "github",
-    "title": "microai-lab/microduck-studio",
-    "url": "https://github.com/microai-lab/microduck-studio",
-    "summary": "Local web studio for developing, debugging, visualizing, and safely orchestrating Microduck robot and reinforcement learning workflows.",
-    "published": "2026-09-04T05:08:22Z",
-    "updated": "2026-09-15T12:47:35Z",
-    "authors": [
-      "microai-lab"
-    ],
-    "extra": {
-      "stars": 47,
-      "forks": 6,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 0,
-      "license": "MIT",
-      "first_seen": "2026-09-05",
-      "full_text": "Local web studio for developing, debugging, visualizing, and safely orchestrating Microduck robot and reinforcement learning workflows.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 22.573,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.476530515548115,
-      "has_code": 6.0,
-      "github_stars_log": 8.406206186877936,
-      "github_forks_log": 1.6901960800285136,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "arxiv:2609.18869",
     "source": "arxiv",
     "title": "KINO: A Keyframe Interface for VLM Planning and Whole-Body Control in Humanoid Loco-Manipulation",
@@ -2706,109 +2374,6 @@
       "research_interest_title": 5.0,
       "research_interest_abstract": 4.0,
       "recency": 2.720573196862599,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2609.18242",
-    "source": "arxiv",
-    "title": "ForceDelta-VLA: Distilling Force-Conditioned ActionCorrections for Contact-Rich Manipulation",
-    "url": "http://arxiv.org/abs/2609.18242v1",
-    "summary": "ForceDelta-VLA separates a VLA policy’s task-level motion from contact-dependent adjustments by distilling explicit force-correction targets from a frozen teacher run in force-conditioned and force-agnostic modes, with an added delay correction for reference-action mismatch. The resulting lightweight policy uses recent force history and robot state to adjust cached reference actions between updates, rather than regenerating full action chunks whenever contact changes. Across nine single-arm and bimanual contact-rich tasks, it raises mean success from 54.4% for ForceVLA to 82.2% and cuts mean peak contact force on successful trials by about 26%.",
-    "published": "2026-09-16T07:20:10+00:00",
-    "updated": "2026-09-16T07:20:10+00:00",
-    "authors": [
-      "Ju Dong",
-      "Yu Fu",
-      "Jian Chen",
-      "Yimeng Liu",
-      "Haocheng Zhao",
-      "Lei Zhang",
-      "Kaixin Bai",
-      "Liding Zhang",
-      "Diwen Zheng",
-      "Alois Christian Knoll",
-      "Angela P. Schoellig",
-      "Jianwei Zhang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2609.18242v1",
-      "comment": "8 pages, 8 figures",
-      "first_seen": "2026-09-17",
-      "full_text": "Force-aware Vision-Language-Action (VLA) policies improve contact-rich manipulation, but typically combine task-level motion and contact-dependent adjustment in a single action prediction. Demonstrations provide no explicit labels for decomposing that prediction into a reusable reference action and a correction. We present ForceDelta-VLA, a correction-distillation framework that constructs an explicit force-correction target using paired predictions from a frozen teacher's force-conditioned and learned force-agnostic modes. A separate delay-correction target accounts for reference-action mismatch and the change in reference state. Training uses asynchronous schedule replay with the cached task context available during execution. The resulting lightweight policy adjusts the reference actions using recent force history and robot state, responding to contact changes between reference-action updates without regenerating complete action chunks. Across nine single-arm and bimanual contact-rich tasks, ForceDelta-VLA achieves an 82.2% mean success rate, compared with 54.4% for the original ForceVLA baseline. Direct execution of our Stage-1 Temporal Teacher achieves 70.6%. Relative to ForceVLA, the complete system reduces mean peak contact force over successful trials by approximately 26% on both platforms.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.18242.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator",
-      "#Bimanual"
-    ],
-    "score": 21.642,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.6420935263913687,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2609.17824",
-    "source": "arxiv",
-    "title": "Learning Multi-Humanoid Pickup and Transport via Decentralized Object-Centric Control",
-    "url": "http://arxiv.org/abs/2609.17824v1",
-    "summary": "Decentralized object-centric control lets multiple humanoids coordinate pickup and transport by assigning each robot a local attachment region on a shared object, then learning gripperless bimanual pinching around that interface. The same attachment abstraction covers single-robot pickup, multi-robot transport, and robot-to-robot handoff without task-specific redesign; policies trained only on single-robot pickup already transfer to cooperative cases, while explicit multi-robot training improves performance by learning the coupling dynamics. The approach is validated in simulation across team sizes and object geometries and transferred to real humanoid hardware for cooperative manipulation.",
-    "published": "2026-09-15T20:40:43+00:00",
-    "updated": "2026-09-15T20:40:43+00:00",
-    "authors": [
-      "Bikram Pandit",
-      "Mohitvishnu S. Gadde",
-      "Aayam Kumar Shrestha",
-      "Alan Fern"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2609.17824v1",
-      "comment": "Project website: decmht.github.io",
-      "first_seen": "2026-09-17",
-      "full_text": "We study cooperative multi-humanoid pickup and transport of objects with varying size, weight, and geometry, requiring robot teams of different sizes. Our approach uses decentralized object-centric control, where each humanoid is assigned a local attachment region on the shared object and learns to realize pickup and transport through gripperless bimanual pinching. This attachment-based interface provides a common control abstraction spanning single-robot pickup, cooperative multi-robot transport, and robot-to-robot handover, without per-task redesign. We find that policies trained only on single-robot pickup already transfer nontrivially to cooperative settings, suggesting that this abstraction captures much of the structure needed for coordination. At the same time, explicit multi-robot training further improves performance, showing that shared-object coupling introduces coordination dynamics that are beneficial to learn directly. We validate the approach in simulation across varying team sizes and object geometries, and demonstrate sim-to-real transfer on hardware, where the learned controllers enable real humanoids to perform cooperative manipulation tasks.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.17824.jpg"
-    },
-    "tags": [
-      "#Manipulator",
-      "#Bimanual",
-      "#Humanoid"
-    ],
-    "score": 21.547,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 6.0,
-      "recency": 2.546937270858135,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -2941,50 +2506,6 @@
       "research_interest_title": 5.0,
       "research_interest_abstract": 2.0,
       "recency": 2.6731029218080358,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2609.18392",
-    "source": "arxiv",
-    "title": "DistAL: Distance-based Advantage Learning for VLA Fine-Tuning",
-    "url": "http://arxiv.org/abs/2609.18392v1",
-    "summary": "DistAL fine-tunes vision-language-action models by replacing sparse success/failure rewards in advantage conditioning with a reward based on distance in an embedding space. That gives the learned value function a richer notion of state quality during deployment-data training, rather than only roughly tracking task progress. The method improves downstream success rates in simulation benchmarks and in real-world dexterous bimanual manipulation experiments.",
-    "published": "2026-09-16T09:48:58+00:00",
-    "updated": "2026-09-16T09:48:58+00:00",
-    "authors": [
-      "Reece O'Mahoney",
-      "Ioannis Havoutis"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2609.18392v1",
-      "comment": null,
-      "first_seen": "2026-09-17",
-      "full_text": "Vision-language-action models (VLAs) have trans- formed the field of robotic manipulation in recent years by combining the semantic understanding of LLMs with the precise control of flow-matching policies. Advantage conditioning is a recent technique that iteratively improves VLAs by training a value function on deployment data and using this to train an advantage-conditioned policy. Previous works have only applied simple, low-information success/failure rewards, which leave the value function unable to distinguish states of differing quality beyond how far along the task they appear. Motivated by an exploration of out-of-distribution (OOD) detection methods, we introduce Distance-based Advantage Learning (DistAL), which, by using an embedding space distance as a reward, produces a more informative value function and subsequently a higher downstream task success rate. We validate our method on a series of simulation benchmarks and dexterous bi-manual manipulation tasks on real hardware.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.18392.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 19.664,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.664236385652282,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -3184,48 +2705,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:AureleoPKU/DeCAL",
-    "source": "github",
-    "title": "AureleoPKU/DeCAL",
-    "url": "https://github.com/AureleoPKU/DeCAL",
-    "summary": "Official Implementation for “DeCAL: Towards Physically-Grounded Dexterous Vision-Language-Action Models via Contact-Aware Latent Co-Imagination” (CoRL 2026)",
-    "published": "2026-08-03T07:58:35Z",
-    "updated": "2026-09-15T14:10:56Z",
-    "authors": [
-      "AureleoPKU"
-    ],
-    "extra": {
-      "stars": 23,
-      "forks": 1,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 1,
-      "license": "Apache-2.0",
-      "first_seen": "2026-09-09",
-      "full_text": "Official Implementation for “DeCAL: Towards Physically-Grounded Dexterous Vision-Language-Action Models via Contact-Aware Latent Co-Imagination” (CoRL 2026)",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 18.992,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.488933789965278,
-      "has_code": 6.0,
-      "github_stars_log": 6.90105620855803,
-      "github_forks_log": 0.6020599913279624,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:e68dff612708",
     "source": "news",
     "title": "QBit Semiconductor Targets Physical AI and Drone Markets with QB88XX Series Integrating Robot \"Cerebellum\" Control",
@@ -3351,159 +2830,6 @@
       "research_interest_abstract": 4.0,
       "recency": 2.6799779546180558,
       "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2609.18232",
-    "source": "arxiv",
-    "title": "UMI-Bridge: Action-Anchored Latent Alignment across Human and Robot Manipulation Data",
-    "url": "http://arxiv.org/abs/2609.18232v1",
-    "summary": "UMI-Bridge uses handheld UMI demonstrations as a bridge between egocentric human videos and robot manipulation data, anchoring a shared latent space to end-effector motion and gripper behavior rather than visual similarity. It trains a dual-view latent action model on human manipulation data, then uses a frozen wrist-view teacher and dynamics model to regularize VLA post-training while keeping the policy’s normal inference setup. In real-robot experiments it reaches 91.7% mean success versus 73.3% for matched naive co-training, beats a full-data robot-only baseline with only 25% of robot demos plus UMI data, and transfers two tasks from UMI demonstrations without task-specific robot demos.",
-    "published": "2026-09-16T07:03:09+00:00",
-    "updated": "2026-09-16T07:03:09+00:00",
-    "authors": [
-      "Haiyi Liu",
-      "Jingming Ma",
-      "Ke Rui",
-      "Yuteng Wei",
-      "Yuan Ma",
-      "Yushen Zuo",
-      "Honglong Tian",
-      "Haoran Jia",
-      "Weitao Zhou",
-      "Jiawei Wang",
-      "Minglei Li",
-      "Shiyi Chen",
-      "Haiyan Mao",
-      "Jiaqi Zhang",
-      "Chun Zhang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2609.18232v1",
-      "comment": "8 pages, 5 figures, 2 tables",
-      "first_seen": "2026-09-17",
-      "full_text": "Real-robot demonstrations are limited, motivating the use of human manipulation data collected without robots, including egocentric videos and handheld Universal Manipulation Interface (UMI) demonstrations. However, differences in viewpoint, embodiment, and available action supervision make it difficult to align representations across these sources according to manipulation motion rather than visual appearance. We introduce UMI-Bridge, which uses UMI as an intermediate domain to align representations according to action equivalence rather than pixel similarity. UMI action supervision anchors the latent representation to end-effector motion and gripper behavior, while synchronized head-wrist observations and paired ego-UMI clips support alignment across views and domains. We train a dual-view latent action model (LAM) on human manipulation data without robot demonstrations, then freeze its wrist teacher and dynamics model to regularize vision-language-action (VLA) post-training on UMI and robot data. The shared wrist interface enables this training-time supervision across both domains while preserving the policy's standard inference architecture. Across three real-robot tasks, UMI-Bridge achieves 91.7% mean success versus 73.3% for Naive Co-training with matched UMI and robot data. On two data-efficiency tasks, it surpasses a full-data Robot-only baseline using 25% of the robot demonstrations together with UMI data. It also achieves 85% and 90% success on two additional tasks learned from UMI demonstrations without task-specific robot demonstrations. These results support action-anchored latent alignment for data-efficient robot learning and UMI-to-robot task transfer.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.18232.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 18.64,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 6.0,
-      "recency": 2.639561284126984,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2609.18167",
-    "source": "arxiv",
-    "title": "Characterizing Replay Retention Under Dynamics Shift in Model-Based Reinforcement Learning",
-    "url": "http://arxiv.org/abs/2609.18167v1",
-    "summary": "Replay buffers in continual model-based RL can become either a liability or an asset after robot dynamics change, depending on how large the shift is and whether old dynamics might recur. The study characterizes this with change magnitude and an age-staleness AUC that measures how well transition age distinguishes stale from fresh data, showing across two locomotion morphologies, two model-based RL algorithms, and Real-World RL perturbations that forgetting helps after large permanent shifts but can hurt when earlier dynamics return. It also tests whether these replay-strategy signals can be estimated from interaction data when ground-truth staleness labels are unavailable on deployed robots.",
-    "published": "2026-09-16T05:47:10+00:00",
-    "updated": "2026-09-16T05:47:10+00:00",
-    "authors": [
-      "Everest Yang",
-      "Skye Thompson",
-      "George D. Konidaris"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2609.18167v1",
-      "comment": null,
-      "first_seen": "2026-09-17",
-      "full_text": "Adapting to changes in robot dynamics requires learning from new data without discarding experience that may still be useful. In continual model-based reinforcement learning (RL), replay collected before a dynamics change can slow adaptation, while removing it unnecessarily reduces available training data and can be especially costly if earlier dynamics return. We study when recent transitions are preferable to the full replay history. Two quantities characterize this trade-off: change magnitude and age-staleness area under the curve (AUC), measuring how well transition age separates stale from fresh data. Forgetting stale data helps after large permanent shifts but hurts when dynamics recur and older data becomes useful again. Choosing a replay strategy therefore depends on predicting when older data will help or hurt. We test these effects across two locomotion morphologies, two model-based RL algorithms, and Real-World RL benchmark perturbations. Because ground-truth staleness labels are unavailable on deployed robots, we evaluate whether an estimator built from interaction data can still provide the quantities needed to choose a replay strategy after permanent changes. Our results show that replay retention depends on change magnitude and on how the dynamics evolve.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.18167.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 18.628,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.628254239327877,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2609.18119",
-    "source": "arxiv",
-    "title": "Fetch My Beer: Synthetic-to-real Hierarchical Policy for Smooth Pick-and-place",
-    "url": "http://arxiv.org/abs/2609.18119v1",
-    "summary": "Fetch My Beer tackles liquid-filled pick-and-place, where the hard part is not just grasping and reaching a goal but keeping the container’s motion smooth enough to avoid sloshing or spilling. It combines a synthetic-to-real data pipeline that generates grasps, filters unstable poses with a vision-language model, and validates transport trajectories in fluid simulation with a hierarchical controller: language and vision set SE(3) targets, while a latent diffusion policy produces high-frequency action chunks for stable transport. Experiments report better smoothness and dynamic stability than existing manipulation policies.",
-    "published": "2026-09-16T04:55:12+00:00",
-    "updated": "2026-09-16T04:55:12+00:00",
-    "authors": [
-      "Yingyue Li",
-      "Chenyangguang Zhang",
-      "Ruida Zhang",
-      "Bowen Fu",
-      "Guangyao Zhai",
-      "Xiangyang Ji"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2609.18119v1",
-      "comment": "8 pages, 4 figures. Accepted by IEEE Robotics and Automation Letters (RA-L)",
-      "first_seen": "2026-09-17",
-      "full_text": "Many real-world robotic applications require dynamically sensitive manipulation, where success depends not only on reaching a target state but on maintaining stable object dynamics throughout execution. We study the stable transport of liquid-filled containers, where a robot must move objects to target locations while suppressing sloshing and preventing spillage. Unlike conventional pick-and-place, this task imposes stringent requirements on motion smoothness and trajectory-level stability, exposing clear limitations in existing systems. Specifically, fluid simulation remains too costly for online reinforcement learning; human teleoperation introduces unintended accelerations that induce sloshing during imitation learning; and current policy pipelines optimize for task completion rather than dynamic stability. We propose a synthetic-to-real framework coupling physically validated data generation with a hierarchical, diffusion-based controller. The scalable data pipeline synthesizes grasps, filters unstable poses via a vision-language model, and validates transport trajectories through fluid simulation. The policy is organized with a high-level module that translates language and visual observations into SE(3) control targets, and a latent diffusion controller that first plans efficiently in a compact latent space and then decodes dense action chunks, enabling the high control frequency needed for smooth and stable motion. Extensive experiments show our system outperforms state-of-the-art manipulation policies in transport smoothness and dynamic stability. Our project page: https://fetch-my-beer.github.io/",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.18119.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#IL",
-      "#Manipulator"
-    ],
-    "score": 18.621,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.620521103531746,
-      "has_code": 6.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 3.0,
@@ -3792,50 +3118,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2609.18324",
-    "source": "arxiv",
-    "title": "RAFAIL: Relationship-Aware Failure Detection for Robotic Manipulation",
-    "url": "http://arxiv.org/abs/2609.18324v1",
-    "summary": "RAFAIL detects robotic manipulation failures by watching for anomalies in task-relevant relationships, such as gripper-object or object-target relations, instead of treating the whole scene as equally important. It uses a VLM offline to label successful demonstrations with task progress and relationship importance, then learns point-cloud relationship representations that can be checked at runtime by relationship-specific OOD detectors without VLM inference or failure data. Across three real-world manipulation tasks, it reaches 73.4% balanced accuracy and beats the evaluated OOD- and uncertainty-based baselines.",
-    "published": "2026-09-16T08:46:02+00:00",
-    "updated": "2026-09-16T08:46:02+00:00",
-    "authors": [
-      "Loris Schneider",
-      "Edgar Welte",
-      "Rania Rayyes"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2609.18324v1",
-      "comment": null,
-      "first_seen": "2026-09-17",
-      "full_text": "Detecting failures during execution is essential for reliable robotic manipulation. Vision-language models (VLMs) can assess task outcomes semantically but add runtime computation, whereas out-of-distribution (OOD) detectors may respond to harmless scene variations rather than failure-relevant deviations. We introduce RAFAIL, a framework for detecting execution failures during robotic manipulation. RAFAIL identifies failures by detecting anomalies in task-relevant relationships between entities, such as a gripper and an object or an object and its target. By focusing OOD detection on relevant parts of the observation, RAFAIL reduces sensitivity to task-irrelevant scene variation. Offline, a VLM annotates successful demonstrations with task progress and relationship importance, which are used to learn point-cloud-based relationship representations without relying on policy-internal features. At runtime, relationship-specific OOD detectors evaluate these representations while relationship importance and task progress are predicted without VLM inference. RAFAIL requires no failure data and achieves 73.4% balanced accuracy across three real-world robotic manipulation tasks, outperforming the strongest evaluated OOD- and uncertainty-based baselines.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.18324.jpg"
-    },
-    "tags": [
-      "#Manipulator"
-    ],
-    "score": 17.655,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.654871305295139,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:DeepCybo-PhysAI/ActionPiece",
     "source": "github",
     "title": "DeepCybo-PhysAI/ActionPiece",
@@ -3871,40 +3153,6 @@
       "recency": 2.8437130554885917,
       "has_code": 6.0,
       "github_stars_log": 5.73064017839119,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:5692dff0a53a",
-    "source": "news",
-    "title": "Agility Robotics Unveils Digit 5 Humanoid Robot Built for Cooperatively Safe Work at Scale",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/09/15/agility-robotics-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale/27092",
-    "summary": "Built on Over 65,000 Hours of Operation and Commercial Deployments, the Next-Generation Upgrades Let a Single Robot Take On Full Facility Workflows at Scale and Work in Close Proximity to People",
-    "published": "2026-09-15T12:43:13+00:00",
-    "updated": "2026-09-15T12:43:13+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-09-15",
-      "full_text": "Built on Over 65,000 Hours of Operation and Commercial Deployments, the Next-Generation Upgrades Let a Single Robot Take On Full Facility Workflows at Scale and Work in Close Proximity to People",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 17.476,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.475880701728671,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
@@ -4022,178 +3270,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2609.18358",
-    "source": "arxiv",
-    "title": "GraphPoint: Semantic Entity Graphs and Point Trajectories for Compositional Robot Manipulation",
-    "url": "http://arxiv.org/abs/2609.18358v1",
-    "summary": "GraphPoint targets compositional robot manipulation by tying semantic entity graphs to geometric control: it represents grippers and objects by roles, conditions their interactions on action types and modifiers, predicts future gripper point trajectories, and converts those trajectories into robot actions. The authors also introduce CoMani, a benchmark with controlled scene and language splits designed to expose visual shortcut learning and test both within-subtask recombination and reuse of learned subtasks in unseen long-horizon instructions. Experiments and ablations on CoMani show that GraphPoint improves instruction-dependent generalization across both levels.",
-    "published": "2026-09-16T09:17:32+00:00",
-    "updated": "2026-09-16T09:17:32+00:00",
-    "authors": [
-      "Kang Luo",
-      "Hesheng Wang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2609.18358v1",
-      "comment": null,
-      "first_seen": "2026-09-17",
-      "full_text": "Robot manipulation policies often struggle to generalize beyond their demonstrations, even when new instructions involve familiar objects and behaviors. When language and scenes are strongly correlated during training, a policy can learn a fixed visual-action mapping rather than respond to the requested behavior. We investigate compositional reuse at two levels: within a subtask, combining familiar entities, action types, and action modifiers; and across subtasks, reusing learned subtasks in unseen long-horizon tasks. We introduce CoMani, a benchmark with controlled splits for evaluating both capabilities. Matched initial scenes and controlled changes to a single semantic factor encourage reliance on language rather than visual shortcuts. We further propose GraphPoint, which connects semantic entity graphs to geometric control by predicting future gripper point trajectories and converting them into actions using robot geometry. The framework organizes the gripper and objects by semantic roles and conditions their interactions on action types and modifiers, while predicted progress guides transitions during execution. Experiments and ablations on CoMani validate the effectiveness of our method for instruction-dependent generalization at both levels. Code will be released at GraphPoint.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.18358.jpg"
-    },
-    "tags": [
-      "#Manipulator"
-    ],
-    "score": 16.66,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.659558805726687,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2609.18164",
-    "source": "arxiv",
-    "title": "Energy-Regularized Imitation Learning for Force- and Work-Aware Robotic Manipulation",
-    "url": "http://arxiv.org/abs/2609.18164v1",
-    "summary": "Energy-Regularized Imitation Learning turns simulator-measured joint-space mechanical work, computed from torque and angular displacement, into a differentiable penalty by training an energy predictor on robot states and actions. Fine-tuning an RVT-2 manipulation policy with this regularizer on 12 RLBench contact, articulation, placement, pushing, and sweeping tasks slightly reduced average work from 208.8J to 204.4J while nudging success from 86.2% to 86.9%, suggesting force- and work-aware optimization can trim inefficient motion without a differentiable dynamics model.",
-    "published": "2026-09-16T05:43:28+00:00",
-    "updated": "2026-09-16T05:43:28+00:00",
-    "authors": [
-      "Toshiki Otani",
-      "Hiromu Taketsugu",
-      "Norimichi Ukita"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2609.18164v1",
-      "comment": "ECCV 2026 Workshop on Force-Grounded, Cross-View Articulated Manipulation",
-      "first_seen": "2026-09-17",
-      "full_text": "This paper studies energy-aware manipulation as a physically grounded learning problem. We define a joint-space mechanical-work proxy from joint torque and angular displacement, and train a differentiable energy predictor that estimates this work from robot states and actions. The predictor converts a non-differentiable simulator-side physical quantity into a differentiable regularizer for fine-tuning a pretrained manipulation policy. We instantiate the framework with RVT-2 on RLBench and evaluate 12 manipulation tasks involving object contact, articulated motion, placement, pushing, and sweeping. The proposed fine-tuning reduces the average mechanical work from 208.8J to 204.4J (i.e., 2.1% reduction), while the mean task success rate also increases slightly from 86.2% to 86.9%. These results show that work-aware policy optimization can suppress physically inefficient motion without requiring an explicit differentiable dynamics model.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.18164.jpg"
-    },
-    "tags": [
-      "#IL",
-      "#Manipulator"
-    ],
-    "score": 16.628,
-    "score_breakdown": {
-      "title_keyword": 12.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.627703643732639,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2609.18084",
-    "source": "arxiv",
-    "title": "Not All Layers Need Tuning: Diagnosing and Directing Adaptation in Vision-Language-Action Models",
-    "url": "http://arxiv.org/abs/2609.18084v1",
-    "summary": "Fine-tuning vision-language-action models is treated here as a targeted diagnosis problem rather than something every layer should share equally: appearance shifts mostly stress the vision encoder, instruction shifts the language backbone, and novel objects the vision encoder plus action head across five VLAs from 93M to 7B parameters. The proposed observe-diagnose-allocate-adapt pipeline uses only ten unlabeled target observations to estimate per-region adaptation cost, then assigns variable-rank LoRA adapters while freezing well-calibrated regions. Its region rankings reach median Spearman 0.91, match or beat uniform LoRA on LIBERO and CALVIN, and on a physical xArm-7 match full fine-tuning for an instruction shift using just 0.04% of the trainable parameters.",
-    "published": "2026-09-16T03:44:51+00:00",
-    "updated": "2026-09-16T03:44:51+00:00",
-    "authors": [
-      "Shahram Najam Syed",
-      "Arthur Jakobsson",
-      "Prayuj Sachdev",
-      "Jeffrey Ichnowski"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.CV",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2609.18084v1",
-      "comment": "9 pages, 7 figures, 7 tables",
-      "first_seen": "2026-09-17",
-      "full_text": "Fine-tuning a Vision-Language-Action (VLA) model for a new deployment environment is expensive, yet most methods apply uniform-capacity adapters to every network region as if every region requires equal adjustment. This paper tests that assumption on five architecturally diverse VLAs (OpenVLA-OFT, $π_0$, SmolVLA, DTP, Octo; 93M-7B parameters). Measuring per-region adaptation cost as normalized parameter displacement under region-isolated fine-tuning reveals an adaptation spectrum in which appearance shifts concentrate cost in the vision encoder, instruction shifts in the language backbone, and novel-object shifts in the vision encoder together with the action head, across all five architectures. To exploit this structure, we introduce a pipeline that observes, diagnoses, allocates, and adapts. From ten unlabeled target observations and without fine-tuning, the diagnostic estimates per-region cost by combining reference-free gradient and Monte Carlo Dropout signals with a Centered Kernel Alignment score against a cached source reference; the allocator converts the estimates into variable-rank LoRA adapters under a parameter budget and freezes well-calibrated regions; and standard LoRA fine-tuning trains the resulting adapters. The diagnostic ranks regions within each deployment at a median Spearman of 0.91, and the allocation matches or exceeds uniform LoRA at every budget we tested on LIBERO and CALVIN. On a physical xArm-7, the pipeline matches full fine-tuning under an instruction-wording shift with 0.04% of its trainable parameters, and on five held-out scenes evaluated without retraining it leads every baseline, with 11-23 successes of 30 rollouts against 8-18 for the strongest parameter-efficient baseline at equal or larger budgets and 2-11 for full fine-tuning. These results suggest that adaptation cost in VLAs is structured enough to measure before fine-tuning begins.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.18084.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 16.61,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.610052352512401,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:52fe60c6365d",
-    "source": "news",
-    "title": "InOrbit.AI Releases OpenRobOps, Solving the Robotics Build Trap and Delivering Industry's First ISO 21423 Reference Implementation",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/09/15/inorbitai-releases-openrobops-solving-the-robotics-build-trap-and-delivering-industrys-first-iso-21423-reference-implementation/27096",
-    "summary": "OpenRobOps is an open-source robot operations software that gives robotics developers a production-grade foundation to deliver a complete fleet manager with support for the upcoming ISO interoperability standard for mobile robots.",
-    "published": "2026-09-15T13:21:05+00:00",
-    "updated": "2026-09-15T13:21:05+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-09-15",
-      "full_text": "OpenRobOps is an open-source robot operations software that gives robotics developers a production-grade foundation to deliver a complete fleet manager with support for the upcoming ISO interoperability standard for mobile robots.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 16.482,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.4815156225,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:Lain-Ego0/LainLab",
     "source": "github",
     "title": "Lain-Ego0/LainLab",
@@ -4278,97 +3354,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2609.18193",
-    "source": "arxiv",
-    "title": "WAVE-Go: World-Model Navigation with Adaptive Execution for Wheel-Legged Robots",
-    "url": "http://arxiv.org/abs/2609.18193v1",
-    "summary": "WAVE-Go tackles image-goal navigation for wheel-legged robots by decoupling world-model action prediction from an executor that can run only a risk-bounded prefix of the plan and cancel the rest when new observations make it unsafe or stale. The system explicitly checks clearance, stability, locomotion-mode transitions, and task evidence during execution, which lets it handle dynamic obstacles and posture changes without replanning after every command. In evaluation it reached 74.1% in-distribution success and 63.3% dynamic out-of-distribution success, beating the strongest baseline by 4.7 and 7.7 points while reducing collisions from 4.4 to 2.9 per 100 m.",
-    "published": "2026-09-16T06:30:50+00:00",
-    "updated": "2026-09-16T06:30:50+00:00",
-    "authors": [
-      "Mingyi Li",
-      "Ji Li",
-      "Zhihao Ouyang",
-      "Yage He",
-      "Börje F. Karlsson"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2609.18193v1",
-      "comment": null,
-      "first_seen": "2026-09-17",
-      "full_text": "World models can anticipate the consequences of navigation actions, but predicted action sequences may become invalid during execution, especially when wheel-legged robots encounter dynamic obstacles or change locomotion modes. We propose WAVE-Go, an image-goal navigation framework that separates world-action prediction from interruptible command execution. Its executor adaptively selects an action prefix and cancels pending commands when updated observations invalidate execution. A conditional-risk formulation specifies prefix selection under an estimated cumulative failure budget, while posture and locomotion-mode transitions require clearance, stability, and task-evidence checks. In the reported navigation evaluation, WAVE-Go achieves 74.1% in-distribution success and 63.3% dynamic out-of-distribution success, exceeding the strongest baseline by 4.7 and 7.7 percentage points, respectively, while reducing collisions from 4.4 to 2.9 per 100 m. Compared with interruptible fixed four-command execution, WAVE-Go raises success by 4.0 percentage points while reducing replanning frequency by 51.2% and collision rate by 6.5%. Execution ablations also show that runtime interruption improves success, collision rate, and reaction latency at the cost of additional replanning. These results support adaptive, interruptible execution as a means of balancing navigation performance and planning overhead. Code is available at https://github.com/vigorlee/wave-go.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.18193.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 15.635,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.634752255572917,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2609.18070",
-    "source": "arxiv",
-    "title": "An Efficient Algorithm for Minimum-Pressure Growth Planning of Vine Robots",
-    "url": "http://arxiv.org/abs/2609.18070v1",
-    "summary": "VinePlanner computes low-pressure growth paths for tip-extending vine robots navigating around polytopic obstacles, targeting a failure mode that ordinary geometric planners ignore: paths that require enough internal pressure to risk bursting the robot. The method derives a pressure model for arbitrary vine shapes, shows that optimal 2D paths can be restricted to piecewise-linear bends at specific obstacle points, and turns planning into a time-weighted shortest-path problem solved with a modified Dijkstra algorithm. Simulations demonstrate speed and scalability, and hardware experiments validate the planner alongside an open-source Python implementation.",
-    "published": "2026-09-16T03:15:49+00:00",
-    "updated": "2026-09-16T03:15:49+00:00",
-    "authors": [
-      "Andres C. Torres",
-      "Tobia Marcucci",
-      "Elliot W. Hawkes"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2609.18070v1",
-      "comment": null,
-      "first_seen": "2026-09-17",
-      "full_text": "Vine robots navigate cluttered environments by extending from their tip. Although their ability to operate in such environments has been extensively demonstrated, little work has addressed growth planning, i.e., finding optimal growth paths. Moreover, existing planners do not account for the growth pressure necessary to follow a given path, which can cause the robot to burst when it is too high. In this paper, we address the problem of finding minimum-pressure paths for vine robots growing around polytopic obstacles. We propose an efficient algorithm that is guaranteed to find globally optimal solutions in 2D and approximate solutions in 3D, with an error that vanishes as a discretization parameter approaches zero. First, we derive a growth pressure equation for vine robots of arbitrary shape, which we use to show that there always exists a minimum-pressure path that is piecewise-linear and can bend only at specific points on the obstacles. We then leverage this observation to reduce the growth-planning problem to a shortest-path problem with time-dependent weights, which we efficiently solve using a modified Dijkstra's algorithm. We demonstrate the speed and scalability of our approach through numerical simulations. We also validate our algorithm with hardware experiments and provide an open-source and high-performance implementation in the Python package, VinePlanner: https://github.com/Ahsoka/VinePlanner.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.18070.jpg"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 15.606,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.605731915597718,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -4525,106 +3510,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2609.18359",
-    "source": "arxiv",
-    "title": "RecMorph: Topology-Guided Spatial Recurrence for Generalized Morphology Control",
-    "url": "http://arxiv.org/abs/2609.18359v1",
-    "summary": "RecMorph controls robots with different body shapes by turning each kinematic tree into a depth-first limb sequence, then running shared bidirectional recurrent transitions over that sequence so limb information is both communicated and transformed before actions are decoded. On five UNIMAL tasks it achieved the best mean final training performance among tested generalized morphology controllers, scaled to unseen bodies with up to 30 limbs, and had the highest measured inference throughput on FT. Transferred to four quadruped platforms, it outperformed generalized baselines under nominal and high friction, cut nominal velocity RMSE by 43.5% versus specialist MLPs, and ran 40 physical Go1/Go2 trials without falls.",
-    "published": "2026-09-16T09:17:43+00:00",
-    "updated": "2026-09-16T09:17:43+00:00",
-    "authors": [
-      "Quanrui Rao",
-      "Yong Liu",
-      "Xueming Xiao",
-      "Yingbo Luo",
-      "Kun Wu",
-      "Zhenyu Xu",
-      "Meibao Yao"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2609.18359v1",
-      "comment": "26 pages. Code and experimental resources are available at https://github.com/quanruirao/RecMorph",
-      "first_seen": "2026-09-17",
-      "full_text": "Generalized morphology control requires a single policy to transform information across limbs with different physical roles, coordinate whole-body motion, and remain efficient as body size grows. Existing communication mechanisms address these requirements only partially. We introduce RecMorph, a topology-guided spatial recurrent architecture that uses recurrent sequence computation to jointly perform cross-limb communication and representation transformation. A depth-first traversal converts the kinematic tree into a morphology-derived sequence, along which shared bidirectional transitions progressively transform limb information before action decoding. Residual preservation, RMS normalization, and input-dependent channel modulation stabilize this repeated spatial transformation, yielding linear token complexity at fixed model width and depth. Across five UNIMAL tasks, RecMorph achieves the strongest mean final training performance among the evaluated generalized morphology controllers and the highest measured inference throughput on FT, while generalizing to unseen variations and bodies with up to 30 limbs. We further migrate representative generalized controllers from UNIMAL benchmarks to a four-platform quadruped setting. RecMorph achieves the best macro-averaged performance under nominal and high friction, reduces nominal velocity RMSE by 43.5% relative to specialist MLPs, and one shared policy completes 40 physical Go1/Go2 trials without falls. These results show that topology-guided recurrent transformation provides an effective and efficient communication mechanism for Generalized Morphology Control and remains effective when transferred from procedural bodies to physical robot platforms. Code and experimental resources are publicly available at https://github.com/quanruirao/RecMorph.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.18359.jpg"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 13.66,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.6595860876488095,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2609.17781",
-    "source": "arxiv",
-    "title": "SPROUT: The Open-Source Soft Growing Robot for Search and Rescue",
-    "url": "http://arxiv.org/abs/2609.17781v1",
-    "summary": "SPROUT is an open-source soft growing robot designed for search-and-rescue inspection in collapsed or otherwise hard-to-reach environments, with hardware and ROS 2 software shaped through years of feedback from professional urban rescue teams. The release includes code, CAD, parts manifests, and build instructions, and demonstrates the robot traversing and inspecting collapsed-structure training sites while operating in dusty, wet, and isolated conditions. Its modular payload and control architecture also make it a reusable platform for adjacent field inspection domains such as infrastructure assessment and archaeology.",
-    "published": "2026-09-15T19:43:33+00:00",
-    "updated": "2026-09-15T19:43:33+00:00",
-    "authors": [
-      "Antonio Alvarez Valdivia",
-      "Ciera McFarland",
-      "Robert Reeve",
-      "Ankush Dhawan",
-      "Chad Council",
-      "Megan Richardson",
-      "Margaret McGuinness",
-      "Nathaniel Hanson"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "eess.SY"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2609.17781v1",
-      "comment": null,
-      "first_seen": "2026-09-17",
-      "full_text": "Soft robotic systems have long been theorized as ideal candidates for use in search and rescue operations; however, there have been significant barriers to entry in graduating soft robotic systems from the laboratory to the field. To address this gap in replicable, reliable soft robot systems, we present the designs for SPROUT, the Soft Pathfinding Robotic Observation Unit. The system has matured over years of interaction with professional urban search and rescue communities, with the goal of operating in dusty, wet, and isolated conditions. This manuscript contains supplementary material, including code, parts manifests, CAD assemblies, and build instructions to allow the broader robotics research community to build their own SPROUT systems. The modular hardware and ROS 2-based software stack support task-specific payloads and control functions, allowing SPROUT to be adapted for applications beyond search and rescue, including infrastructure inspection and archaeology. Here, we demonstrate SPROUT performing a variety of challenging inspection and traversal tasks in collapsed structure training sites used by first responders. The main project page is available online at https://sprout-mitll.github.io/sprout/.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.17781.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 13.538,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.53843032624504,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -4855,88 +3740,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "arxiv:2609.17800",
-    "source": "arxiv",
-    "title": "AgenTeeth: A Model-Agnostic Framework for Suppressing Hallucination in Frozen Vision-Language Models on Dental X-Rays via Tool Evidence Injection",
-    "url": "http://arxiv.org/abs/2609.17800v1",
-    "summary": "AgenTeeth keeps the VLM frozen and instead grounds its dental X-ray answers with seven specialist vision tools, selected by a question-aware orchestrator and converted into FDI tooth numbers, anatomical regions, structured findings, and annotated overlays before a second synthesis call responds. On MMOral-OPG-Bench, this evidence-injection setup boosts four backbone VLMs by 12.9–23.0 points, with the best version reaching 65.66% open-ended VQA and a frozen Qwen2.5-VL-7B-Instruct variant outperforming an OralGPT-Plus model trained on the same backbone.",
-    "published": "2026-09-15T20:10:43+00:00",
-    "updated": "2026-09-15T20:10:43+00:00",
-    "authors": [
-      "Ahmed Rafid",
-      "Fariya Ahmed",
-      "Rumman Adib",
-      "Mehedi Ahamed",
-      "Ajwad Abrar",
-      "Tareque Mohmud Chowdhury"
-    ],
-    "extra": {
-      "categories": [
-        "cs.CV"
-      ],
-      "primary_category": "cs.CV",
-      "pdf_url": "https://arxiv.org/pdf/2609.17800v1",
-      "comment": "10 pages, 2 figures, 5 tables",
-      "first_seen": "2026-09-17",
-      "full_text": "Vision-language models (VLMs) remain largely unreliable on panoramic dental radiographs and can rely on learned anatomical priors rather than evidence in the image. This is particularly problematic for tooth localization and spatial reasoning, and fine-tuned dental VLMs can retain the same spatial biases. We present AgenTeeth, a model-agnostic, tool-augmented framework that grounds frozen VLMs using seven specialized dental vision experts. A question-aware orchestrator selects the relevant tools, whose detections are mapped to FDI tooth numbers or anatomical regions and returned as structured findings together with annotated image overlays. A fresh synthesis call then answers the question using this evidence, without fine-tuning the underlying VLM. On MMOral-OPG-Bench, AgenTeeth improves four backbone VLMs by 12.9-23.0 percentage points over their baselines. Our strongest configuration reaches 65.66% on open-ended VQA, compared with 45.35% for OralGPT-Plus. The advantage also holds at matched scale: a frozen Qwen2.5-VL-7B-Instruct with AgenTeeth reaches 48.11%, exceeding OralGPT-Plus built on the same backbone after supervised fine-tuning and reinforcement learning for tool use. We release the framework, all seven expert models, and a dentist-annotated dataset for alveolar bone-loss detection in panoramic radiographs.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.17800.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 11.542,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.5424729800570436,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:a62444ab30f3",
-    "source": "news",
-    "title": "Universal Robots Unveils Gen 7, a New Platform for Industrial Automation and Physical AI Deployment",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/09/15/universal-robots-unveils-gen-7-a-new-platform-for-industrial-automation-and-physical-ai-deployment/27099",
-    "summary": "Redesigned from controller to tool flange, the new Gen 7 robot platform is out-of-the-box AI-ready, giving companies the modern software tools and next-level connectivity that they need to confidently take AI from the lab into industrial operations.",
-    "published": "2026-09-15T13:30:57+00:00",
-    "updated": "2026-09-15T13:30:57+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-09-15",
-      "full_text": "Redesigned from controller to tool flange, the new Gen 7 robot platform is out-of-the-box AI-ready, giving companies the modern software tools and next-level connectivity that they need to confidently take AI from the lab into industrial operations.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 11.483,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.4829838765525793,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:cb49f0815576",
     "source": "news",
     "title": "에임인텔리전스, 피지컬 AI 안전 컨소시엄 출범...\"구글·MS·오라클도 모였다\"",
@@ -5054,126 +3857,6 @@
       "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "arxiv:2609.18073",
-    "source": "arxiv",
-    "title": "Characterizing Refraction-Induced Ranging Bias in Underwater Collaborative Localization",
-    "url": "http://arxiv.org/abs/2609.18073v1",
-    "summary": "Refraction from spatially varying sound speed can make acoustic ranges systematically longer than the straight-line distances assumed by standard underwater localization pipelines. Using HYCOM ocean reanalysis data, ray-traced ranges, and a centralized multi-agent factor-graph estimator, the study simulates kilometer-scale collaborative localization and shows that these biases can substantially degrade trajectory estimates, especially where sound-speed gradients are sharp.",
-    "published": "2026-09-16T03:19:51+00:00",
-    "updated": "2026-09-16T03:19:51+00:00",
-    "authors": [
-      "Timothy Kogucki",
-      "Alan Papalia"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2609.18073v1",
-      "comment": "6 pages, 8 figures, to be published in OCEANS",
-      "first_seen": "2026-09-17",
-      "full_text": "This work studies how refraction-induced bias on acoustic ranging affects multi-agent collaborative localization in a range of oceanographic conditions and spatial scales. While multi-agent range-aided navigation, which uses range measurements to either fixed infrastructure or other agents, is a promising solution to the challenges of large-scale underwater localization, its accuracy depends strongly on the quality of range measurements. Sound speed variability induces refraction (bending) of acoustic rays, yet, for algorithmic tractability, standard sensor fusion pipelines assume straight-line propagation. This refraction systematically biases range measurements to be longer than the straight-line assumption predicts. However, the effects of this bias on multi-agent collaborative localization on kilometer scales remains unexplored. We present a series of simulated experiments with several agents operating over kilometer scales. The simulation uses HYCOM reanalysis data to recreate realistic oceanographic conditions, ray tracing to generate refraction-informed ranges, and a centralized multi-agent factor graph estimator to quantify the resulting measurement bias on estimated trajectories. Preliminary results indicate that refraction-induced bias can induce significant degradation of estimated trajectories, particularly in regions with sharp sound-speed gradients. We also share the simulation environment to support further studies https://github.com/UMich-RobotExploration/manta-ray.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.18073.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 9.606,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.606332114188988,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:df1e4da86993",
-    "source": "news",
-    "title": "What’s it like to work at Sanctuary AI?",
-    "url": "https://www.youtube.com/shorts/zp86rn3HUQ0",
-    "summary": "What’s it like to work at Sanctuary AI? Hear from our team about the people, culture, and challenges that make working here unique. Interested in joining us? View our current opportunities: https://sanctuary.ai/careers/ #Hiring #Robotics #PhysicalAI #VancouverBC #TechCareers #CanadianTech",
-    "published": "2026-09-15T18:01:49+00:00",
-    "updated": "2026-09-15T18:01:49+00:00",
-    "authors": [
-      "Sanctuary AI"
-    ],
-    "extra": {
-      "feed": "Sanctuary AI (YouTube)",
-      "trusted": true,
-      "thumbnail": "https://i3.ytimg.com/vi/zp86rn3HUQ0/hqdefault.jpg",
-      "first_seen": "2026-09-15",
-      "full_text": "What’s it like to work at Sanctuary AI? Hear from our team about the people, culture, and challenges that make working here unique. Interested in joining us? View our current opportunities: https://sanctuary.ai/careers/ #Hiring #Robotics #PhysicalAI #VancouverBC #TechCareers #CanadianTech",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 9.523,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.523291412125496,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:972a25335aa0",
-    "source": "news",
-    "title": "Devlog: First Steps with Stretch at Home",
-    "url": "https://hello-robot.com/devlog-first-steps-with-stretch-at-home/",
-    "summary": "Hello, Elaine! I’m Elaine Short, newly-minted Associate Professor of Computer Science and I’m spending my sabbatical here at Hello Robot working on making the vision of in-home robotics a reality, especially for people like me who have mobility disabilities that make it hard or impossible to do things around the house.",
-    "published": "2026-09-15T15:42:48+00:00",
-    "updated": "2026-09-15T15:42:48+00:00",
-    "authors": [
-      "Elaine Short"
-    ],
-    "extra": {
-      "feed": "Hello Robot Blog",
-      "trusted": true,
-      "first_seen": "2026-09-15",
-      "full_text": "Hello, Elaine! I’m Elaine Short, newly-minted Associate Professor of Computer Science and I’m spending my sabbatical here at Hello Robot working on making the vision of in-home robotics a reality, especially for people like me who have mobility disabilities that make it hard or impossible to do things around the house. I’ve been working in […] The post Devlog: First Steps with Stretch at Home appeared first on Hello Robot .",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 9.503,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.5026044091071427,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 5.0,
       "demote": -0.0
     },
     "priority": "save_for_later"
@@ -5312,40 +3995,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.7053102657539685,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:9cf44640a62b",
-    "source": "news",
-    "title": "BD Advances Intelligent Robotics to Transform the Future of Pharmacy Care at Fairview",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/09/15/bd-advances-intelligent-robotics-to-transform-the-future-of-pharmacy-care-at-fairview/27091",
-    "summary": "First-of-its-kind U.S. deployment of BD Vmax 160 expands pharmacy automation beyond traditional dispensing, helping health systems manage growing demand for specialty therapies, refrigerated medications, and increasingly complex fulfilment needs",
-    "published": "2026-09-15T12:41:30+00:00",
-    "updated": "2026-09-15T12:41:30+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-09-15",
-      "full_text": "First-of-its-kind U.S. deployment of BD Vmax 160 expands pharmacy automation beyond traditional dispensing, helping health systems manage growing demand for specialty therapies, refrigerated medications, and increasingly complex fulfilment needs",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 8.476,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.4756252452976186,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -5792,42 +4441,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:fda778aa2777",
-    "source": "news",
-    "title": "“피크타임 알바 3~4명 대신 로봇 1대”… 라운지엑스, 시간당 130잔 제조",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=48524",
-    "summary": "국내 프랜차이즈 카페 라운지엑스(LoungeX)가 바리스타 로봇 ‘바리스브루(Barisbrew)’의 제조 속도를 개선해 시간당 최대 130잔까지 제조할 수 있도록 했다. 주문이 집중되는 피크타임에 추가 제조 인력을 배치해야 하는 부담을 줄이고, 짧은 시간에 몰리는 주문을 보다 빠르게 처리하기 위한 개선이다.카페는 점심시간처럼 짧은 시간에 주문이 집중되면 평소보다 많은 제조 인력이 필요한 경우가 있다. 특히 저가 커피 매장은 피크타임에 여러 명의 인력을 배치해 주문을 처리하는 경우가 많다. 특정 시간대 수요에 맞춰 추가 인력을 확보하",
-    "published": "2026-09-16T09:39:59+00:00",
-    "updated": "2026-09-16T09:39:59+00:00",
-    "authors": [
-      "최지호 기자"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-09-16",
-      "full_text": "국내 프랜차이즈 카페 라운지엑스(LoungeX)가 바리스타 로봇 ‘바리스브루(Barisbrew)’의 제조 속도를 개선해 시간당 최대 130잔까지 제조할 수 있도록 했다. 주문이 집중되는 피크타임에 추가 제조 인력을 배치해야 하는 부담을 줄이고, 짧은 시간에 몰리는 주문을 보다 빠르게 처리하기 위한 개선이다.카페는 점심시간처럼 짧은 시간에 주문이 집중되면 평소보다 많은 제조 인력이 필요한 경우가 있다. 특히 저가 커피 매장은 피크타임에 여러 명의 인력을 배치해 주문을 처리하는 경우가 많다. 특정 시간대 수요에 맞춰 추가 인력을 확보하",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 6.663,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.662899548531746,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:f63f5bf5bede",
     "source": "news",
     "title": "AMD, 연내 국내에 '아시아 첫' AI 우수 연구센터 설립…과기부와 공동연구 본격화",
@@ -5865,78 +4478,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:e31f57dafa74",
-    "source": "news",
-    "title": "Ask the Experts: Inside Nemotron Post-Training | Nemotron Labs",
-    "url": "https://www.youtube.com/watch?v=V60wEnedg4g",
-    "summary": "In this Ask the Experts session, NVIDIA AI researchers explain how they built the final Nemotron model checkpoints through post-training to enhance model intelligence and enable agentic capabilities. They’ll walk through the tools they used, how they structured the data pipeline, and the open resources available for the community to build on.",
-    "published": "2026-09-16T05:55:58+00:00",
-    "updated": "2026-09-16T05:55:58+00:00",
-    "authors": [
-      "NVIDIA Developer"
-    ],
-    "extra": {
-      "feed": "NVIDIA Developer (YouTube)",
-      "thumbnail": "https://i3.ytimg.com/vi/V60wEnedg4g/hqdefault.jpg",
-      "first_seen": "2026-09-13",
-      "full_text": "In this Ask the Experts session, NVIDIA AI researchers explain how they built the final Nemotron model checkpoints through post-training to enhance model intelligence and enable agentic capabilities. They’ll walk through the tools they used, how they structured the data pipeline, and the open resources available for the community to build on. Learn how NeMo Data Designer was used to create task-specific synthetic datasets, NeMo Gym to build and manage training environments, and NeMo RL for reinforcement learning training. Learn about the post-training datasets published on HuggingFace and the recipes and weights on the Nemotron GitHub that are available under open licenses. What you'll learn: Different stages of post-training pipeline that goes into building SOTA models How NVIDIA NeMo libraries was used to implement and run post-training workflows Which datasets, recipes, and model weights are openly available, and where to find them How to start using NeMo Data Designer, NeMo Gym, and NeMo RL in your own post-training workflows Bring your questions about the Nemotron model training pipeline, NVIDIA’s open post-training tools, or how to get started. The researchers behind Nemotron 3 will answer them live.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 5.63,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.6295637317881946,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:8b3176e02d68",
-    "source": "news",
-    "title": "Boston Dynamics Gave Up on Hydraulics. A 4-Meter Robot From China May Change the Conversation.",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/09/15/boston-dynamics-gave-up-on-hydraulics-a-4-meter-robot-from-china-may-change-the-conversation/27094",
-    "summary": "",
-    "published": "2026-09-15T13:11:00+00:00",
-    "updated": "2026-09-15T13:11:00+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-09-15",
-      "full_text": "",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 5.48,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.4800151263988095,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:ae8bf3f4517e",
     "source": "news",
     "title": "Leopard Imaging to Showcase Advanced Embedded Vision Solutions with Future Electronics at World of Technology & Science 2026",
@@ -5962,42 +4503,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.9062403254439486,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:d5e8dc27ae2e",
-    "source": "news",
-    "title": "Watch the ICRA keynote and plenary talks",
-    "url": "https://robohub.org/watch-the-icra-keynote-and-plenary-talks/",
-    "summary": "The 2026 IEEE International Conference on Robotics & Automation (ICRA) was held in Vienna from the 1 – 5 June. The event brought together researchers and industry professionals with expertise spanning many different aspects of robotics. IEEE have made the keynote and plenary talk recordings available to watch. You can also catch the panel discussions […]",
-    "published": "2026-09-16T08:47:13+00:00",
-    "updated": "2026-09-16T08:47:13+00:00",
-    "authors": [
-      "Lucy Smith"
-    ],
-    "extra": {
-      "feed": "Robohub",
-      "first_seen": "2026-09-16",
-      "full_text": "The 2026 IEEE International Conference on Robotics & Automation (ICRA) was held in Vienna from the 1 – 5 June. The event brought together researchers and industry professionals with expertise spanning many different aspects of robotics. IEEE have made the keynote and plenary talk recordings available to watch. You can also catch the panel discussions […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 4.655,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.655047378030754,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -6071,40 +4576,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.7429987554935518,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "low_priority"
-  },
-  {
-    "id": "news:e2eac9fdd552",
-    "source": "news",
-    "title": "Hirebotics Expands Cobot Reach and Flexibility with New Line Tracking and Linear Rail Capabilities at IMTS",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/09/15/hirebotics-expands-cobot-reach-and-flexibility-with-new-line-tracking-and-linear-rail-capabilities-at-imts/27100",
-    "summary": "Extending capabilities of the collaborative robots to automate the painting of moving parts and handle large, cumbersome materials lets manufacturers accomplish difficult tasks without changing experience or workflows",
-    "published": "2026-09-15T13:32:30+00:00",
-    "updated": "2026-09-15T13:32:30+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-09-15",
-      "full_text": "Extending capabilities of the collaborative robots to automate the painting of moving parts and handle large, cumbersome materials lets manufacturers accomplish difficult tasks without changing experience or workflows",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 3.483,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.483214531393849,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
