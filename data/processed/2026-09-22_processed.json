@@ -2566,63 +2566,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2609.24840",
-    "source": "arxiv",
-    "title": "PredActor: Predictive Action Diffusion for Steerable Onboard Humanoid Control",
-    "url": "http://arxiv.org/abs/2609.24840v1",
-    "summary": "PredActor is a proprioception-only humanoid control policy that uses diffusion to generate both executable actions and an internal prediction of future body states, so it can be steered by text, joystick-like objectives, or test-time state guidance without a separate motion-reference tracker. In simulation it reached all 15 destination targets and improved text-conditioned behavior retrieval to 0.580 versus 0.373 for conditional action diffusion, while keeping disturbance survival similar. Runtime optimizations bring onboard inference below a 20 ms control period on a Jetson Orin NX, and the authors deploy it on a Unitree G1 for text-conditioned motion, disturbance recovery, joystick control, and semantic interpolation.",
-    "published": "2026-09-21T16:20:25+00:00",
-    "updated": "2026-09-21T16:20:25+00:00",
-    "authors": [
-      "Lei Ye",
-      "Haibo Gao",
-      "Yitang Li",
-      "Peng Xu",
-      "Zetong Jing",
-      "Junhan Sun",
-      "Fanrong Dong",
-      "Ziqi Han",
-      "Xue Wang",
-      "Jianhua Sun",
-      "Cewu Lu",
-      "Hao Zhao",
-      "Liang Ding"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2609.24840v1",
-      "comment": "Project page: https://masteryip.github.io/predactor.github.io/",
-      "first_seen": "2026-09-22",
-      "full_text": "Diffusion models offer flexible motion generation, but translating this flexibility into feedback-responsive humanoid control remains challenging. Hierarchical systems steer motion through references that may exceed a separate tracker's capabilities, leaving recovery and physical execution largely to the tracker. Action-only diffusion generates actions directly but lacks an explicit future-state trajectory for test-time motion objectives. Joint state-action diffusion provides this representation, yet representative controllers often depend on privileged full-body states, and support for learned behavior selection and test-time motion steering remains fragmented. We present PredActor, a predictive action diffusion policy that brings these complementary steering capabilities into one directly executed policy using proprioceptive observations. Conditioned on proprioceptive history and optional task context, PredActor jointly generates executable actions and an internal future-state trajectory. Classifier-free guidance strengthens text-conditioned behavior, while classifier guidance steers predicted states toward test-time objectives. Only actions are executed, without a separate motion-reference tracker or externally estimated full-body states as policy inputs. In simulation, PredActor reaches all 15 destination targets and achieves a text retrieval score of 0.580, compared with 0.373 for conditional action diffusion, with similar observed disturbance survival. To make this guided policy practical onboard, rolling denoising and computation-preserving runtime optimizations reduce the complete callback to 16.790 ms median and 19.383 ms p95 on a Jetson Orin NX, both below the 20 ms control period. We deploy PredActor on a Unitree G1; evaluations across simulation and physical hardware demonstrate text-conditioned motion, disturbance response, joystick control, and semantic interpolation.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.24840.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#IL",
-      "#Humanoid"
-    ],
-    "score": 16.722,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.7217177648164683,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:Lain-Ego0/LainLab",
     "source": "github",
     "title": "Lain-Ego0/LainLab",
@@ -2771,56 +2714,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2609.24815",
-    "source": "arxiv",
-    "title": "Uranus: Building the Next-Generation Simulation Infrastructure for Embodied AI",
-    "url": "http://arxiv.org/abs/2609.24815v1",
-    "summary": "Uranus is a data-driven robot simulator that uses a joint-trajectory-conditioned autoregressive diffusion model to turn incoming future joint positions into synchronized multi-view RGB rollouts. It can stream open-ended simulations one latent frame at a time, with each latent corresponding to four RGB frames, and reaches 24 FPS after inference optimization. The system is designed to cover different robot embodiments and camera setups through a unified control interface, with evaluations covering both in-distribution and out-of-distribution settings and code plus weights released for reuse.",
-    "published": "2026-09-21T16:06:16+00:00",
-    "updated": "2026-09-21T16:06:16+00:00",
-    "authors": [
-      "Wenkang Qin",
-      "Yukun Zhou",
-      "Noah Shen",
-      "Jisong Cai",
-      "Dongxiao Mao",
-      "Baicheng Li",
-      "Yue Zhang",
-      "Wei Sui"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2609.24815v1",
-      "comment": "Project Page: https://d-robotics-ai-lab.github.io/large-model-team/blog/uranus/ Inference Code: https://github.com/D-Robotics-AI-Lab/Uranus-OSS Inference Data: https://huggingface.co/datasets/D-Robotics/Uranus-Demo-Data SDK Code: https://github.com/D-Robotics-AI-Lab/Uranus-SDK Model Weights: https://huggingface.co/collections/D-Robotics/uranus",
-      "first_seen": "2026-09-22",
-      "full_text": "Scalable simulation is essential for robot data generation, policy training, evaluation, and safe iteration, yet real-world interaction is costly and conventional simulators require labor-intensive construction. We present Uranus, a data-driven robot simulator built around a joint-trajectory-conditioned autoregressive diffusion model. Uranus offers three key capabilities: (1) streaming, open-ended rollout, which receives future joint-position trajectories online and autoregressively generates one latent frame per step, corresponding to four RGB frames, without a fixed horizon; (2) low-latency generation, achieving 24 FPS after inference optimization; and (3) scalable, extensible robot control, providing a unified interface for synchronized multi-view generation across diverse robot embodiments and camera configurations. We conduct comprehensive quantitative and qualitative evaluations on both in-distribution and out-of-distribution data, providing an objective assessment of Uranus and clearly identifying its current limitations. We release the code and model weights to empower the community with practical tools and insights.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.24815.jpg"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 12.72,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.7196121096304564,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -2999,40 +2892,6 @@
       "research_interest_title": 5.0,
       "research_interest_abstract": 2.0,
       "recency": 2.730586774236111,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:0d30231e8d48",
-    "source": "news",
-    "title": "ABB Robotics E-Device simplifies robot interaction on customers' own devices",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/09/21/abb-robotics-e-device-simplifies-robot-interaction-on-customers-own-devices/27130",
-    "summary": "-E-Device brings operation, programming and monitoring to customers' own tablets and PCs -Reduces training requirements and speeds up deployment through a consistent user experience across all OmniCore-powered robots and cobots -Enables safe and flexible robot interaction with integrated safety controls and compliance with ISO 10218:2025",
-    "published": "2026-09-21T17:01:55+00:00",
-    "updated": "2026-09-21T17:01:55+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-09-21",
-      "full_text": "-E-Device brings operation, programming and monitoring to customers' own tablets and PCs -Reduces training requirements and speeds up deployment through a consistent user experience across all OmniCore-powered robots and cobots -Enables safe and flexible robot interaction with integrated safety controls and compliance with ISO 10218:2025",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 9.728,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.7278933246478174,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
