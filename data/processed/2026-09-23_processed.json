@@ -1110,7 +1110,7 @@
       "first_seen": "2026-08-24",
       "full_text": "SuperDex brings together a purpose-built physics engine, robotics authoring tools, and a scalable reinforcement learning interface in a unified simulation platform, with VR-based teleoperation and additional capabilities planned for future releases.",
       "summary_kind": "llm",
-      "thumbnail": "https://private-user-images.githubusercontent.com/65318034/638617740-ddac8a5f-2f72-4ca0-b555-a090513f224a.webp?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTA5MDE4MTUsIm5iZiI6MTc5MDkwMTUxNSwicGF0aCI6Ii82NTMxODAzNC82Mzg2MTc3NDAtZGRhYzhhNWYtMmY3Mi00Y2EwLWI1NTUtYTA5MDUxM2YyMjRhLndlYnA_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYxMDAyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MTAwMlQwMDM4MzVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00ZWY5YmExZTkwZDhmN2FhNWJmZTE4NGUzYmY2ZmM1NDcwMjE2N2QxNzdmOTFlNjE3ZDMyZDgxMjIxZTA2NzM3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZ3ZWJwIn0.58yzUy7spDRYzCRJC9pxKy-hPjQ1oPksXHb0hQbpztM"
+      "thumbnail": "https://private-user-images.githubusercontent.com/65318034/638617740-ddac8a5f-2f72-4ca0-b555-a090513f224a.webp?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTExNTgxOTQsIm5iZiI6MTc5MTE1Nzg5NCwicGF0aCI6Ii82NTMxODAzNC82Mzg2MTc3NDAtZGRhYzhhNWYtMmY3Mi00Y2EwLWI1NTUtYTA5MDUxM2YyMjRhLndlYnA_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYxMDA0JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MTAwNFQyMzUxMzRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xMGNlYWQ3OGU0YTIyY2QxNWI0MDU3NTRkOTE5NWVkZWZmY2I2NjNlZjlmNjVmMmQzNThlOTViZWY4MDkyZDc1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZ3ZWJwIn0.JaxgJeETgH1XQuMWttgFMLdXo-XI2MiyoKG6Qwl_Pvs"
     },
     "tags": [
       "#RL",
@@ -1842,56 +1842,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2609.25376",
-    "source": "arxiv",
-    "title": "VLAQuantBench: Closed-Loop Evaluation of Post-Training Quantization for Vision-Language-Action Models",
-    "url": "http://arxiv.org/abs/2609.25376v1",
-    "summary": "VLAQuantBench tests post-training quantization choices for vision-language-action models in closed-loop simulation, covering 409 runs and 94,574 episodes across four models on LIBERO plus broader X-VLA suites. The results show quantization behavior is highly recipe- and model-dependent: uncalibrated W4A4 can collapse performance unless the right action-head layers are included, two-episode calibration fixes some joint failures but hurts π0, and OpenVLA-OFT nearly recovers baseline by protecting a single 28,672-parameter output projection while aggressively quantizing hundreds of other linear layers.",
-    "published": "2026-09-21T20:15:26+00:00",
-    "updated": "2026-09-21T20:15:26+00:00",
-    "authors": [
-      "Jiuyi Xu",
-      "Qing Jin",
-      "Meida Chen",
-      "Song Wang",
-      "Yang Sui",
-      "Yangming Shi"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2609.25376v1",
-      "comment": "28 pages, 35 tables, 4 figures",
-      "first_seen": "2026-09-23",
-      "full_text": "Post-training quantization reduces the memory requirements of vision-language-action (VLA) models, but precision selection must account for the interaction between layer scope, numerical format, and calibration. We introduce \\textbf{VLAQuantBench}, a controlled evaluation with 409 runs and 94,574 simulation episodes: four models on LIBERO, with X-VLA additionally evaluated on three simulation benchmark families. Under uncalibrated W4A4 round-to-nearest quantization, expanding a $π_{0.5}$ action-head subset from 126 to 167 layers raises success from 7.0\\% to 70.5\\%. Fixed-observation replay confirms a corresponding numerical recovery. Two-episode calibration removes the severe joint failures in the tested subsets, whereas the same smoothing-and-clipping recipe lowers $π_0$ success and does not recover OpenVLA-OFT end-to-end. For OpenVLA-OFT, protecting one 28,672-parameter output projection instead restores near-baseline success: the remaining 441 eligible linear layers retain W3 on LIBERO-Long or eight-bit activations across all four suites. Task-clustered intervals support the large failure and recovery contrasts. These results establish recipe-dependent interactions and identify concrete precision assignments, rather than universal layer-sensitivity rules. Real-kernel and physical-robot measurements complement the accuracy analysis. Code, configurations, and episode records are publicly available at https://github.com/jiuyixu25/VLAQuantBench.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.25376.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Other"
-    ],
-    "score": 25.543,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.5429573658978173,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -6.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:Lin-Murphy/Awesome-Robot-Agents",
     "source": "github",
     "title": "Lin-Murphy/Awesome-Robot-Agents",
@@ -2302,54 +2252,6 @@
       "github_stars_log": 7.720340221751378,
       "github_forks_log": 1.2041199826559248,
       "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2609.25363",
-    "source": "arxiv",
-    "title": "HOTICE: Whole-Body Humanoid Object Transportation in Cluttered Environments",
-    "url": "http://arxiv.org/abs/2609.25363v1",
-    "summary": "HOTICE trains a Unitree G1 humanoid to carry objects through clutter by planning collision-aware motion for both the robot body and the payload, rather than treating the carried object as an afterthought. It combines humanoid-object decoupled potential fields with a dual-agent RL setup that splits upper- and lower-body control while keeping them coordinated through shared observations and rewards. Specialist teacher policies are distilled into one deployable student policy, which transfers from MuJoCo to real hardware and handles unseen cluttered scenes with objects of different shapes.",
-    "published": "2026-09-21T20:01:04+00:00",
-    "updated": "2026-09-21T20:01:04+00:00",
-    "authors": [
-      "Toan Nguyen",
-      "Weiduo Yuan",
-      "Siheng Zhao",
-      "Yue Wang",
-      "Daniel Seita"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2609.25363v1",
-      "comment": null,
-      "first_seen": "2026-09-23",
-      "full_text": "Object transportation is a fundamental capability for humanoid robots operating in real-world, human-centric environments, yet existing methods struggle when clutter constrains free space around both the robot and its carried payload. We present HOTICE, a whole-body humanoid learning framework for transporting objects through such cluttered environments. First, we introduce Humanoid-Object Decoupled Potential Fields, which jointly encode collision-avoidance guidance for the robot and the carried object, enabling coordinated, obstacle-aware motion for both. Second, to address the large action space inherent to whole-body loco-manipulation, we design a dual-agent reinforcement learning architecture that decouples upper- and lower-body control while preserving whole-body coordination via shared state observations and rewards. To train a policy that generalizes across diverse cluttered scenes, we further employ a specialist-to-generalist distillation strategy, in which privileged teacher policies are distilled into a single deployable student policy. We evaluate HOTICE in MuJoCo simulation and on a real Unitree G1 humanoid, demonstrating effective and robust object transportation across cluttered scenarios for objects of varying shapes. Our results show that HOTICE reliably coordinates whole-body motion and object-aware collision avoidance, generalizing effectively to previously unseen cluttered environments while achieving strong performance in sim2real deployment.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.25363.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Manipulator",
-      "#Humanoid"
-    ],
-    "score": 23.541,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 6.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.5408194685218253,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -2836,54 +2738,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2609.25274",
-    "source": "arxiv",
-    "title": "Learning to Plan in Human-Robot Collaboration: Multimodal Reinforcement Learning for Adaptive Interaction",
-    "url": "http://arxiv.org/abs/2609.25274v1",
-    "summary": "An RL-based interaction manager learns multimodal robot policies for home object-search assistance, using language and physical actions to infer a user’s state and intent instead of relying on hand-authored rules. The policy is trained in a simulator grounded in human data, with simple high-level rewards and precondition constraints to make training tractable. A real-world human study found the system usable and effective at completing tasks, suggesting a scalable route to adaptive planning in assistive human-robot collaboration.",
-    "published": "2026-09-21T18:18:40+00:00",
-    "updated": "2026-09-21T18:18:40+00:00",
-    "authors": [
-      "Afagh Mehri Shervedani",
-      "Siyu Li",
-      "Natawut Monaikul",
-      "Bahareh Abbasi",
-      "Barbara Di Eugenio",
-      "Miloš Žefran"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2609.25274v1",
-      "comment": null,
-      "first_seen": "2026-09-23",
-      "full_text": "Robot assistants for older adults and people with disabilities need to perform collaborative tasks with users effectively. The core component of these systems is an interaction manager whose job is to observe and assess the task and infer the state of the human and their intent for the robot to choose the best course of action. Due to the sparseness of the data in this domain, the policy for such multimodal systems is often crafted by hand; as the complexity of interactions grows, this process is not scalable. This paper proposes a reinforcement learning (RL) approach to automatically generate the multimodal policy of the robot. Our system focuses on a realistic scenario where a robot assists a user in locating objects within a home environment, managing multimodal signals, including language and physical actions, to select the best action. In contrast to traditional dialog systems, our agent is trained with a simulator that uses human data and can deal with multiple modalities. We use a simple high-level reward function that needs no fine-tuning and enforce some preconditions to speed up the training process. A human study evaluating the system in a real-world setting demonstrates promising results, indicating high usability and effective task completion. This RL-based approach offers a scalable and interpretable alternative for designing interaction managers in multimodal human-robot collaborations.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.25274.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 20.526,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.525581372703373,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -4700,42 +4554,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:052b68f409d7",
-    "source": "news",
-    "title": "ETRI, 피지컬 AI 국제표준화 주도한다",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=48627",
-    "summary": "로봇과 자동차, 공장 등 현실 세계에서 스스로 보고, 판단하고, 행동하는 '피지컬 AI' 시대가 빠르게 다가오고 있다. 국내 연구진이 피지컬 AI의 세계 공통 규칙을 만드는 국제표준화 무대에서 핵심 역할을 맡으며 글로벌 기술 주도권 확보에 나섰다.한국전자통신연구원(ETRI)은 공적 국제표준화기구 가운데 처음으로 피지컬 AI 분야를 전담해 논의하는 국제전기통신연합 전기통신표준화부문(ITU-T) '체화 AI 포커스그룹(FG-EAI)' 신설을 주도하고, 부의장과 핵심 작업반 의장 등 주요 의장단에 진출했다고 21일 밝혔다.특히 ETRI는",
-    "published": "2026-09-21T17:20:01+00:00",
-    "updated": "2026-09-21T17:20:01+00:00",
-    "authors": [
-      "최지호 기자"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-09-21",
-      "full_text": "로봇과 자동차, 공장 등 현실 세계에서 스스로 보고, 판단하고, 행동하는 '피지컬 AI' 시대가 빠르게 다가오고 있다. 국내 연구진이 피지컬 AI의 세계 공통 규칙을 만드는 국제표준화 무대에서 핵심 역할을 맡으며 글로벌 기술 주도권 확보에 나섰다.한국전자통신연구원(ETRI)은 공적 국제표준화기구 가운데 처음으로 피지컬 AI 분야를 전담해 논의하는 국제전기통신연합 전기통신표준화부문(ITU-T) '체화 AI 포커스그룹(FG-EAI)' 신설을 주도하고, 부의장과 핵심 작업반 의장 등 주요 의장단에 진출했다고 21일 밝혔다.특히 ETRI는",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 10.517,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.51685367155506,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:0fa91b27643d",
     "source": "news",
     "title": "Physical Self-Play",
@@ -5649,42 +5467,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.7179350212648807,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "low_priority"
-  },
-  {
-    "id": "news:8970db00a97f",
-    "source": "news",
-    "title": "제14대 한국생산기술연구원장에 손웅희 수석 고문 선임",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=48628",
-    "summary": "한국생산기술연구원(KITECH) 제14대 신임 원장에 손웅희 한국생산기술연구원 수석 고문이 선임됐다. 임기는 3년이다.국가과학기술연구회(이사장 김영식)는 21일 개최한 제248회 임시이사회에서 손웅희 한국생산기술연구원 수석고문을 한국생산기술연구원 원장으로 선임했다고 밝혔다.손웅희 신임 원장은 22일 김영식 국가과학기술연구회 이사장에게 임명장을 수여받아 3년간(2026.9.22~2029.9.21)의 임기를 시작한다.손 신임 원장은 21일 로봇신문과의 전화 인터뷰에서 “대한민국 제조혁신을 선도하는 한국생산기술연구원 제14대 원장으로서",
-    "published": "2026-09-21T19:24:32+00:00",
-    "updated": "2026-09-21T19:24:32+00:00",
-    "authors": [
-      "조규남 전문기자"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-09-21",
-      "full_text": "한국생산기술연구원(KITECH) 제14대 신임 원장에 손웅희 한국생산기술연구원 수석 고문이 선임됐다. 임기는 3년이다.국가과학기술연구회(이사장 김영식)는 21일 개최한 제248회 임시이사회에서 손웅희 한국생산기술연구원 수석고문을 한국생산기술연구원 원장으로 선임했다고 밝혔다.손웅희 신임 원장은 22일 김영식 국가과학기술연구회 이사장에게 임명장을 수여받아 3년간(2026.9.22~2029.9.21)의 임기를 시작한다.손 신임 원장은 21일 로봇신문과의 전화 인터뷰에서 “대한민국 제조혁신을 선도하는 한국생산기술연구원 제14대 원장으로서",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 3.535,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.5353829375099206,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
