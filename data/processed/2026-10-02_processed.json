@@ -841,7 +841,7 @@
       "first_seen": "2026-08-24",
       "full_text": "SuperDex brings together a purpose-built physics engine, robotics authoring tools, and a scalable reinforcement learning interface in a unified simulation platform, with VR-based teleoperation and additional capabilities planned for future releases.",
       "summary_kind": "llm",
-      "thumbnail": "https://private-user-images.githubusercontent.com/65318034/638617740-ddac8a5f-2f72-4ca0-b555-a090513f224a.webp?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE1OTI3NDIsIm5iZiI6MTc5MTU5MjQ0MiwicGF0aCI6Ii82NTMxODAzNC82Mzg2MTc3NDAtZGRhYzhhNWYtMmY3Mi00Y2EwLWI1NTUtYTA5MDUxM2YyMjRhLndlYnA_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYxMDEwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MTAxMFQwMDM0MDJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mYjkzMzJmMDM1ZTc2MWQxODg5ZDMyMjJjZGFmNWQ2YzU0NzIxZmY4NGQyZjViMDcwOTQ1MmZjOTU0NzczNGM5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZ3ZWJwIn0.vj4dHUSOb6q9U7GMW3BBTeRB1AiBxbqwTKbKQDh6Vyg"
+      "thumbnail": "https://private-user-images.githubusercontent.com/65318034/638617740-ddac8a5f-2f72-4ca0-b555-a090513f224a.webp?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTE3NjQ1NzksIm5iZiI6MTc5MTc2NDI3OSwicGF0aCI6Ii82NTMxODAzNC82Mzg2MTc3NDAtZGRhYzhhNWYtMmY3Mi00Y2EwLWI1NTUtYTA5MDUxM2YyMjRhLndlYnA_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYxMDEyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MTAxMlQwMDE3NTlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02NzAzMTYzZjZlMTU4NDI2ODgzMDBmNTkwYTRlMjgyNmY1NDA1YTc0NDY0NTVlMWUxNWRhMjJiMTEzNGI5MjljJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZ3ZWJwIn0.1pMLzQC6lB0FwXx2UVgb-iYga2uNGaTRC9e4-puUGpE"
     },
     "tags": [
       "#RL",
@@ -2400,92 +2400,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2609.40306",
-    "source": "arxiv",
-    "title": "DynaHarness: A Dynamic Physical Harness for Self-Evolving Robot Agents",
-    "url": "http://arxiv.org/abs/2609.40306v1",
-    "summary": "DynaHarness splits long-horizon robot manipulation into a slow semantic planner that proposes capabilities and arguments, and a fast execution layer that grounds commands, monitors them, refuses unresolved actions, swaps in alternatives, and triggers replanning through a shared physical execution contract. Its self-evolution loop attributes failures to specific execution records, revises reusable capabilities or mechanisms, and admits changes only after paired regression checks. On LIBERO-Pro, it raises success from 17.5% for the frozen VLA policy to 75.2% across 800 newly sampled initial states, with dynamic execution outperforming nominal one-step replanning at 74.0% versus 63.9%.",
-    "published": "2026-09-30T17:52:09+00:00",
-    "updated": "2026-09-30T17:52:09+00:00",
-    "authors": [
-      "Haoyuan Deng",
-      "Jiebin Liu",
-      "Tengxiao Zhang",
-      "Langning Yan",
-      "Hongye Cao",
-      "Ziwei Wang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2609.40306v1",
-      "comment": "37 pages, 19 figures. Project page: https://denghaoyuan123.github.io/Dynaharness_page/",
-      "first_seen": "2026-10-02",
-      "full_text": "Pretrained robot policies provide useful action priors, but long-horizon manipulation still requires coordination between semantic reasoning and physical execution. Semantic reasoning operates at a coarser timescale than physical interaction, while episode-level failures provide limited guidance on which system component should be revised. We propose DynaHarness, a dynamic physical harness that couples semantic reasoning with physical governance through a shared execution contract and turns failure evidence into validated capability revisions. To be more specific, the slow brain proposes capabilities and symbolic arguments, while the fast brain grounds and monitors commands, refuses unresolved actions, substitutes capabilities, and requests replans when needed. The physical execution contract bounds each accepted command and records execution evidence across analytic skills, recovery skills, and the frozen VLA. Failure attribution localizes faults in these records and directs targeted revisions of reusable capabilities or execution mechanisms. Paired regression checks govern admission or rejection, closing the self-evolution loop. On LIBERO-Pro, DynaHarness achieves 75.2% on 800 newly sampled initial states, compared with 17.5% for the frozen policy. With the same capability library, full dynamic execution reaches 74.0% versus 63.9% under nominal one-step replanning. This demonstrates the value of DynaHarness as a dynamic physical harness that governs how existing capabilities are grounded, monitored, and coordinated during execution. Our project page is at https://denghaoyuan123.github.io/Dynaharness_page/.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.40306.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 16.725,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.725469858420139,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:d8146a248c91",
-    "source": "news",
-    "title": "'서울AI로봇쇼' 내달 6일 개막…국내 대표 휴머노이드 6종 한자리에",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=48772",
-    "summary": "서울시는 10월 6일부터 8일까지 서울 삼성동 코엑스에서 '우리 삶과 동행하는 일상 속의 로봇'이라는 주제로 '2026 서울AI로봇쇼'를 개최한다고 30일 밝혔다.올해로 2회째를 맞는 서울AI로봇쇼에는 현대차·기아 로보틱스랩, LG CNS, 두산로보틱스 등 대기업·중견기업을 포함한 피지컬 AI(인공지능) 혁신기업 등 총 51개사가 참여한다. 행사 프로그램은 전시와 체험, 공연, 스포츠, 산업 포럼, 투자 밋업 등으로 구성돼 시민과 산업계의 폭넓은 참여가 기대되고 있다. 주요 전시장인 코엑스 B홀에는 혁신기업존, 로봇IN서울존, 로봇",
-    "published": "2026-09-30T17:43:53+00:00",
-    "updated": "2026-09-30T17:43:53+00:00",
-    "authors": [
-      "최지호 기자"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-10-01",
-      "full_text": "서울시는 10월 6일부터 8일까지 서울 삼성동 코엑스에서 '우리 삶과 동행하는 일상 속의 로봇'이라는 주제로 '2026 서울AI로봇쇼'를 개최한다고 30일 밝혔다.올해로 2회째를 맞는 서울AI로봇쇼에는 현대차·기아 로보틱스랩, LG CNS, 두산로보틱스 등 대기업·중견기업을 포함한 피지컬 AI(인공지능) 혁신기업 등 총 51개사가 참여한다. 행사 프로그램은 전시와 체험, 공연, 스포츠, 산업 포럼, 투자 밋업 등으로 구성돼 시민과 산업계의 폭넓은 참여가 기대되고 있다. 주요 전시장인 코엑스 B홀에는 혁신기업존, 로봇IN서울존, 로봇",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 16.724,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.7242396822098214,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:7fa487ef0ff6",
     "source": "news",
     "title": "Atlas Robot’s New Hand May Outperform Humanlike Designs",
@@ -2638,58 +2552,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "arxiv:2609.40360",
-    "source": "arxiv",
-    "title": "Semifactual Credit-Augmented Policy Optimization",
-    "url": "http://arxiv.org/abs/2609.40360v1",
-    "summary": "Semifactual Credit-Augmented Policy Optimization targets a failure mode in RLVR where GRPO gives every response token the same outcome-based advantage, even when some tokens are highly sensitive to irrelevant prompt changes. SCAPO estimates token probability drift under answer-preserving semifactual prompt interventions and downweights credit for unstable tokens early in training, improving Qwen3-4B-Base and Qwen3-1.7B-Base AIME 2024–2026 accuracy over GRPO by 5.63 and 4.17 points while also strengthening out-of-distribution math performance.",
-    "published": "2026-09-30T17:59:56+00:00",
-    "updated": "2026-09-30T17:59:56+00:00",
-    "authors": [
-      "Junshu Pan",
-      "Zhizhang Fu",
-      "Shulin Huang",
-      "Yiran Ding",
-      "Zifan Cheng",
-      "Wenqi Shao",
-      "Qiaosheng Zhang",
-      "Yue Zhang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "primary_category": "cs.LG",
-      "pdf_url": "https://arxiv.org/pdf/2609.40360v1",
-      "comment": null,
-      "first_seen": "2026-10-02",
-      "full_text": "Reinforcement learning with verifiable rewards (RLVR) has improved the reasoning capabilities of large language models (LLMs), yet their predictions remain sensitive to task-irrelevant prompt features. We investigate this sensitivity through semifactual prompt interventions that preserve the underlying problem and its answer. Our analysis reveals substantial variation in token-level sensitivity and shows that suppressing high-drift token candidates during decoding improves reasoning accuracy without updating model weights. These findings highlight a limitation of Group Relative Policy Optimization (GRPO), which assigns the same outcome-derived advantage to every response token and may reinforce potential spurious dependence alongside useful reasoning. Motivated by this observation, we introduce Semifactual Credit-Augmented Policy Optimization (SCAPO), a causally inspired variant of GRPO that incorporates semifactual stability into token-level credit assignment. SCAPO measures token probability drift for fixed responses under semifactual interventions and uses normalized stability scores to reduce advantages for relatively unstable tokens during early training, while granting no additional credit for stability alone. On Qwen3-4B-Base and Qwen3-1.7B-Base, SCAPO improves AIME 2024-2026 accuracy over GRPO by 5.63 and 4.17 percentage points, respectively. At both model scales, SCAPO achieves the best results on most evaluated mathematics benchmarks and all evaluated out-of-distribution benchmarks among the compared methods. These results suggest that semifactual stability provides an effective training signal for improving reasoning and generalization through finer-grained credit assignment in RLVR. The code is available at https://github.com/DtYXs/SCAPO.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2609.40360.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 11.727,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.72662809281746,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:de69a13bae0d",
     "source": "news",
     "title": "Anscer Robotics secures FCC approval for its new autonomous mobile robots",
@@ -2788,76 +2650,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.897796232113095,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:468d62bebe1a",
-    "source": "news",
-    "title": "Igus Launches New DeviceNet Cable Designed for Dynamic Robotic Applications",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/09/30/igus-launches-new-devicenet-cable-designed-for-dynamic-robotic-applications/27187",
-    "summary": "",
-    "published": "2026-09-30T19:37:22+00:00",
-    "updated": "2026-09-30T19:37:22+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-10-01",
-      "full_text": "",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 8.741,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.7411270850421627,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:7cfc38687ce0",
-    "source": "news",
-    "title": "작년 전 세계 전문 서비스 로봇 판매 24% 급증",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=48770",
-    "summary": "2025년 전 세계 전문 서비스 로봇 출하량이 전년 대비 24% 증가한 약 25만 대를 기록하며 상업적 자동화로의 성공적인 전환을 보여주고 있다. 이 같은 내용은 국제로봇연맹(IFR)이 30일 발표한 '월드 로보틱스(World Robotics) 2026 – 서비스 로봇(Service Robots)' 보고서에 담겼다.제인 헤프너(Jane Heffner) 국제로봇연맹 회장은 “서비스 로봇이 일상적인 운영 현장으로 빠르게 확산되고 있다”며 “3개 부문 모두 두 자릿수 성장률을 기록했다. 전문 서비스 로봇은 24%, 의료용 로봇은 19%,",
-    "published": "2026-09-30T17:31:26+00:00",
-    "updated": "2026-09-30T17:31:26+00:00",
-    "authors": [
-      "조규남 전문기자"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-10-01",
-      "full_text": "2025년 전 세계 전문 서비스 로봇 출하량이 전년 대비 24% 증가한 약 25만 대를 기록하며 상업적 자동화로의 성공적인 전환을 보여주고 있다. 이 같은 내용은 국제로봇연맹(IFR)이 30일 발표한 '월드 로보틱스(World Robotics) 2026 – 서비스 로봇(Service Robots)' 보고서에 담겼다.제인 헤프너(Jane Heffner) 국제로봇연맹 회장은 “서비스 로봇이 일상적인 운영 현장으로 빠르게 확산되고 있다”며 “3개 부문 모두 두 자릿수 성장률을 기록했다. 전문 서비스 로봇은 24%, 의료용 로봇은 19%,",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 8.722,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.722387003568948,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -3418,42 +3210,6 @@
     "priority": "low_priority"
   },
   {
-    "id": "news:9e550b84ae72",
-    "source": "news",
-    "title": "영국, 우크라이나 전장 데이터로 AI 드론 군집 개발…최대 12개 기업 참여",
-    "url": "https://www.aitimes.kr/news/articleView.html?idxno=42133",
-    "summary": "영국이 우크라이나의 실제 전장에서 수집한 대규모 데이터를 자국 기업에 개방하고 인공지능(AI) 기반 드론 군집(Drone Swarms) 개발에 나선다. 전장에서 축적된 영상과 센서 데이터를 활용해 통신이 제한되거나 위성항법 시스템을 사용할 수 없는 환경에서도 여러 무인 시스템이 서로 협력할 수 있는 인공지능 모델을 개발한다는 계획이다.영국 국방부(MOD)는 지난 25일(현지시간) 우크라이나의 ‘어벤저스 AI 랩스(Avengers AI Labs)’ 데이터베이스에 영국 기업이 접근할 수 있도록 하는 첫 공모를 시작한다고 발표했다. 이번",
-    "published": "2026-09-30T20:29:36+00:00",
-    "updated": "2026-09-30T20:29:36+00:00",
-    "authors": [
-      "정한영 기자"
-    ],
-    "extra": {
-      "feed": "인공지능신문",
-      "first_seen": "2026-10-01",
-      "full_text": "영국이 우크라이나의 실제 전장에서 수집한 대규모 데이터를 자국 기업에 개방하고 인공지능(AI) 기반 드론 군집(Drone Swarms) 개발에 나선다. 전장에서 축적된 영상과 센서 데이터를 활용해 통신이 제한되거나 위성항법 시스템을 사용할 수 없는 환경에서도 여러 무인 시스템이 서로 협력할 수 있는 인공지능 모델을 개발한다는 계획이다.영국 국방부(MOD)는 지난 25일(현지시간) 우크라이나의 ‘어벤저스 AI 랩스(Avengers AI Labs)’ 데이터베이스에 영국 기업이 접근할 수 있도록 하는 첫 공모를 시작한다고 발표했다. 이번",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 3.749,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.7488998993377978,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "low_priority"
-  },
-  {
     "id": "news:113c21334d81",
     "source": "news",
     "title": "“AI가 로봇 직접 관리”…DGIST 창업기업 에스이노베이션스, 30억 투자 유치",
@@ -3481,43 +3237,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.9134509919518847,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -6.0
-    },
-    "priority": "low_priority"
-  },
-  {
-    "id": "news:14f0ef39ca19",
-    "source": "news",
-    "title": "Inbolt raises $12.5 million to bring sight and intelligence to industrial robots",
-    "url": "https://roboticsandautomationnews.com/2026/09/30/inbolt-raises-12-5-million-to-bring-sight-and-intelligence-to-industrial-robots/105360/",
-    "summary": "Inbolt raised $12.5 million to expand its vision-and-intelligence system for industrial robots, with Shift4Good leading the round alongside Bridges Climate Transition Partners. The company’s pitch is real-time robotic adaptation: giving factory robots enough perception and decision-making to handle variation on the line instead of relying on rigid, preprogrammed motion.",
-    "published": "2026-09-30T21:50:54+00:00",
-    "updated": "2026-09-30T21:50:54+00:00",
-    "authors": [
-      "Sam Francis"
-    ],
-    "extra": {
-      "feed": "Robotics and Automation News",
-      "first_seen": "2026-10-02",
-      "full_text": "Inbolt, which gives industrial robots the ability to see, think, and adapt in real time, has announced $12.5 million in funding. The round was led by new investor Shift4Good, a venture capital firm focused on decarbonizing transportation and energy, and joined by Bridges Climate Transition Partners, a specialist private markets investor focused on the transition […]",
-      "summary_kind": "llm",
-      "thumbnail": "https://roboticsandautomationnews.com/wp-content/uploads/2026/09/inbolt-team-1.png"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 0.761,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.7609981171875,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
