@@ -1054,113 +1054,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2610.02784",
-    "source": "arxiv",
-    "title": "SimpleTouch: Can Vision-Language-Action Models Master Contact-Rich Manipulation Without Tactile Policy Pretraining?",
-    "url": "http://arxiv.org/abs/2610.02784v1",
-    "summary": "SimpleTouch adds a tactile expert to the pretrained π₀.₅ vision-language-action model and trains it in a single stage from task demonstrations, using frozen tactile-encoder tokens plus multi-horizon prediction of future tactile latents rather than separate tactile policy pretraining or visuotactile alignment. With only 50 demonstrations per task, it reaches 77.5% average success across six UniVTAC contact-rich manipulation tasks, well above FTP-π₀.₅ at 45.2% and FTP-1 at 66.7%, and also improves real-world performance to 71.3%.",
-    "published": "2026-10-02T04:19:13+00:00",
-    "updated": "2026-10-02T04:19:13+00:00",
-    "authors": [
-      "Chen Yang",
-      "Linzhe Shi",
-      "Changjie Wu",
-      "Hang Zhang",
-      "Ronghan Chen",
-      "Lingjun Zhang",
-      "Xu Hu",
-      "Mu Xu",
-      "Jiansheng Fan",
-      "Chen Wang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2610.02784v1",
-      "comment": "27 pages, 11 figures",
-      "first_seen": "2026-10-06",
-      "full_text": "Tactile sensing provides essential contact information for robotic manipulation, yet incorporating it into pretrained vision-language-action (VLA) models remains challenging. A common concern is that simply introducing touch during task-specific fine-tuning may fail to bridge the cross-modal gap, yielding limited gains or even reduced success. Consequently, existing methods often rely on large-scale tactile policy pretraining or separate visuotactile alignment, adding data requirements and training stages. We introduce SimpleTouch, a simple VLA extension that augments $π_{0.5}$ with a tactile expert, to test whether these additional stages are necessary. Leveraging all tokens from a frozen pretrained tactile encoder, the expert learns from action supervision and multi-horizon prediction of future tactile latents. This single-stage training uses only task demonstrations, without additional tactile policy pretraining or separate alignment. With 50 demonstrations per task, SimpleTouch achieves the highest success rate among evaluated methods on all six UniVTAC tasks. Its average success rate reaches 77.5%, compared with 45.2% for FTP-$π_{0.5}$ and 66.7% for FTP-1, corresponding to gains of 32.3 and 10.8 percentage points, respectively. Across four real-world tasks, it averages 71.3%, exceeding FTP-1 by 8.8 percentage points. These results demonstrate that, given pretrained VLA and tactile representations, additional tactile policy pretraining is not a prerequisite for strong performance on these tasks, offering a simpler route to contact-rich manipulation. Project page: https://simpletouch-robot.github.io/",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2610.02784.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 31.166,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.1664091958630953,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:j3soon/ros2-essentials",
-    "source": "github",
-    "title": "j3soon/ros2-essentials",
-    "url": "https://github.com/j3soon/ros2-essentials",
-    "summary": "A reusable sim-to-real ROS 2 robotics stack for developing and deploying robot policies across simulation and physical robots, built around Isaac Sim, Isaac Lab, and Isaac ROS.",
-    "published": "2023-08-04T08:21:23Z",
-    "updated": "2026-10-01T20:27:18Z",
-    "authors": [
-      "j3soon"
-    ],
-    "extra": {
-      "stars": 47,
-      "forks": 10,
-      "language": "C++",
-      "topics": [
-        "docker",
-        "docker-compose",
-        "isaac",
-        "isaac-sim",
-        "isaacsim",
-        "nav2",
-        "nvidia-docker",
-        "omniverse",
-        "robotics",
-        "ros",
-        "ros2",
-        "ros2-humble",
-        "slam"
-      ],
-      "open_issues": 14,
-      "license": "Apache-2.0",
-      "first_seen": "2026-09-17",
-      "full_text": "A reusable sim-to-real ROS 2 robotics stack for developing and deploying robot policies across simulation and physical robots, built around Isaac Sim, Isaac Lab, and Isaac ROS.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 30.585,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.0961834919717264,
-      "has_code": 6.0,
-      "github_stars_log": 8.406206186877936,
-      "github_forks_log": 2.08278537031645,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "arxiv:2610.04255",
     "source": "arxiv",
     "title": "Grounded in Time: A Multi-Source Dataset and Benchmark for Temporal Grounding in Robotic Manipulation",
@@ -1209,58 +1102,6 @@
       "research_interest_abstract": 4.0,
       "recency": 2.372686488829365,
       "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2610.02898",
-    "source": "arxiv",
-    "title": "MixVLA: Adaptive Mixing of Non-Invariant Information for Generalizable Vision-Language-Action Models",
-    "url": "http://arxiv.org/abs/2610.02898v1",
-    "summary": "MixVLA targets a common failure mode in vision-language-action policies: they can latch onto environment-specific appearance cues instead of the task structure that should transfer. Its AMI training scheme stochastically mixes non-invariant representations and then recombines them with invariant features for action prediction, improving zero-shot robustness without new OOD data or architecture changes. The method is evaluated on LIBERO, LIBERO-Plus, RoboTwin perturbations, and real-world manipulation tasks, where it improves OOD performance while preserving strong in-domain behavior.",
-    "published": "2026-10-02T06:44:43+00:00",
-    "updated": "2026-10-02T06:44:43+00:00",
-    "authors": [
-      "Pingrui Zhang",
-      "Yu Zhang",
-      "Pengyuan Wu",
-      "Bin Wang",
-      "Haoming Song",
-      "Xianqiang Gao",
-      " ZhaxiZhuoma",
-      "Zhigang Wang",
-      "Dong Wang",
-      "Bin Zhao",
-      "Xuelong Li"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2610.02898v1",
-      "comment": null,
-      "first_seen": "2026-10-06",
-      "full_text": "Vision-Language-Action (VLA) models have achieved remarkable advances in robotic manipulation, yet their zero-shot generalization under out-of-distribution (OOD) conditions remains limited. These models often entangle task-relevant invariant structure with environment-specific non-invariant factors, causing policies to rely on spurious appearance cues during action prediction. In this work, we propose \\textbf{MixVLA}, a model-agnostic training framework that improves the generalization of VLA models without requiring additional OOD data or architectural modifications. The key component of MixVLA is \\textbf{Adaptive Mixing of Non-Invariant Information (AMI)}. AMI stochastically mixes non-invariant representations to regularize distribution-specific variability while preserving complementary predictive cues. The mixed non-invariant features are then fused with invariant representations for final action prediction, resulting in improved robustness without sacrificing policy expressiveness. Extensive experiments across challenging manipulation settings, including LIBERO, LIBERO-Plus, the RoboTwin perturbation suite, and real-world tasks, demonstrate that MixVLA improves overall zero-shot robustness while retaining strong in-domain performance.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 30.188,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.188060984072421,
-      "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 3.0,
@@ -1764,7 +1605,8 @@
       "license": "MIT",
       "first_seen": "2026-05-18",
       "full_text": "Biped robot locomotion with deep RL: Isaac Lab + MuJoCo, custom PPO/SAC/DDPG/D4PG/MPO, MLP/LSTM/Transformer, motion imitation, sim-to-real",
-      "summary_kind": "truncation"
+      "summary_kind": "truncation",
+      "thumbnail": "https://raw.githubusercontent.com/AsterisCrack/BipedRobot/HEAD/media/robot.jpg"
     },
     "tags": [
       "#RL",
@@ -2461,56 +2303,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2610.02788",
-    "source": "arxiv",
-    "title": "Skill2Real: Agentic Skill Learning for Zero-Shot Sim-to-Real Robot Manipulation",
-    "url": "http://arxiv.org/abs/2610.02788v1",
-    "summary": "Skill2Real learns robot manipulation skills in simulation as executable API-grounded routines, using a Proposer-Verifier-Governor loop with privileged sim evidence to diagnose failures and approve updates while keeping the learned skills tied to public observations. It trains local manipulation skills first and then freezes them while learning task-level composition, allowing both memories to transfer to a real robot without task-policy fine-tuning. On LIBERO-90, frozen checkpoints raise zero-shot LIBERO-Pro Long success from 2.0% to 56.3%, and the same Sol-trained skills reach 78.75% mean completion across four real-world manipulation tasks.",
-    "published": "2026-10-02T04:25:12+00:00",
-    "updated": "2026-10-02T04:25:12+00:00",
-    "authors": [
-      "Xincheng He",
-      "Siyu Ma",
-      "Chang Yu",
-      "Yunuo Chen",
-      "Yanjia Huang",
-      "Ying Nian Wu",
-      "Yin Yang",
-      "Chenfanfu Jiang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2610.02788v1",
-      "comment": "42 pages",
-      "first_seen": "2026-10-06",
-      "full_text": "Transferring robotic skills from simulation to reality requires task knowledge that remains usable across differences in perception, dynamics, and embodiment. We introduce Skill2Real, an agentic policy framework that learns executable skills through a shared application programming interface (API). A Proposer-Verifier-Governor (PVG) loop uses privileged simulation evidence to diagnose outcomes and validate updates, while keeping learned skills grounded in public observations and API semantics. The Cerebellum first acquires local manipulation skills; the Brain then learns task-level composition with the Cerebellum frozen. Both memories transfer to the real robot without task-policy fine-tuning or skill-memory updates. As GPT-5.6 Sol learns skills on LIBERO-90, evaluating each frozen checkpoint with GPT-6 Astra raises LIBERO-Pro Long success from 2.0% to 56.3%, without training on Pro Long. Independent Robosuite training reaches 85.1% and 89.4% mean success with Sol and Opus 5 across seven tasks, respectively. Frozen Sol-trained LIBERO-90 skills achieve 78.75% mean completion across four real-world manipulation tasks with Astra. Removing the Verifier or Governor during LIBERO-90 training lowers final Pro Long success by 17.3 and 13.3 percentage points, respectively. These results support learning and transferring a hierarchy of executable skills through a common robot interface.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2610.02788.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Manipulator"
-    ],
-    "score": 22.167,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.1672995731001983,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:RLE-Bench/RLE-Bench",
     "source": "github",
     "title": "RLE-Bench/RLE-Bench",
@@ -2751,61 +2543,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2610.02832",
-    "source": "arxiv",
-    "title": "FastOPD: On-Policy Distillation for Lightweight VLA Deployment",
-    "url": "http://arxiv.org/abs/2610.02832v1",
-    "summary": "FastOPD distills large vision-language-action policies into compact students by adapting a flow map for single-state teacher supervision and adding a self-consistency loss so the student can learn the teacher’s action dynamics with very few inference steps. On LIBERO, a two-step FastOPD student keeps 84% of π0.5’s performance while cutting latency by 78.1%, and with LingBot-VLA it raises single-step success on RoboTwin 2.0 by 15.9 points over the base student. The same recipe is also shown on a World Action Model and in a real-robot deployment distilled from MolmoAct2, suggesting it is meant as a practical path from heavyweight VLA foundations to deployable robot policies.",
-    "published": "2026-10-02T05:24:20+00:00",
-    "updated": "2026-10-02T05:24:20+00:00",
-    "authors": [
-      "Yoojin Oh",
-      "Jeongsol Kim",
-      "Yeonwoo Seo",
-      "Jangho Park",
-      "Seonghyun Jin",
-      "Sunwoo Park",
-      "Youngmin Kim",
-      "Youngjun Jun",
-      "Kyumin Choi",
-      "Jong Chul Ye"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2610.02832v1",
-      "comment": "Project page: https://fastopd.github.io/",
-      "first_seen": "2026-10-06",
-      "full_text": "Vision-Language-Action (VLA) foundation models have scaled rapidly to enhance manipulation performance and generalizability, but this scaling incurs high computational costs that render real-world deployment increasingly challenging. Existing approaches typically mitigate this issue by designing smaller architectures or reducing the iterative denoising steps in flow-based policies. In this work, we propose FastOPD, a foundation-to-lightweight VLA framework that enables the practical deployment of large-scale VLAs through efficient on-policy distillation. Specifically, FastOPD adapts a flow map for single-state teacher supervision and combines it with a self-consistency objective to construct a compact student that learns the teacher dynamics. Furthermore, we theoretically demonstrate that minimizing this objective allows the distilled student to recover a distribution on par with that induced by an ideal few-step teacher model. We evaluate FastOPD across diverse foundation policies in simulation and real-world experiments. On LIBERO, FastOPD retains 84% of the performance of $π_{0.5}$ with only two inference steps, reducing inference latency by 78.1% while outperforming existing few-step distillation baselines in average success rate. With LingBot-VLA as the teacher, FastOPD improves the single-step success rate over the base student by 15.9 percentage points on RoboTwin 2.0. We further demonstrate its applicability to a World Action Model (WAM) and deploy a compact student distilled from MolmoAct2 on a real robot.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2610.02832.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 21.176,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.176099177906746,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:thanhndv212/figaroh-plus",
     "source": "github",
     "title": "thanhndv212/figaroh-plus",
@@ -2835,7 +2572,8 @@
       "license": "Apache-2.0",
       "first_seen": "2026-05-18",
       "full_text": "A system identification framework for robots",
-      "summary_kind": "llm"
+      "summary_kind": "llm",
+      "thumbnail": "https://raw.githubusercontent.com/thanhndv212/figaroh-plus/main/docs/source/assets/landing-desktop.png"
     },
     "tags": [
       "#Manipulator",
@@ -2996,100 +2734,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2610.02802",
-    "source": "arxiv",
-    "title": "ManiPhysicsBench: Physics-Based Assessment of Object Preservation in VLA Manipulation",
-    "url": "http://arxiv.org/abs/2610.02802v1",
-    "summary": "ManiPhysicsBench tests whether VLA manipulation policies complete tasks without damaging objects, using ManiPhysicsZoo assets with literature-backed material properties and meshes plus a solver that estimates grasp-specific deformation and fracture thresholds from geometry, materials, grasp conditions, and contact forces. On LIBERO and SimplerEnv, public VLA checkpoints often succeed at the task while failing this “safe success” criterion, largely because their gripper behavior clusters near binary open/closed commands across objects. Retraining with object-specific continuous gripper labels makes grasping more object-dependent and improves safe success, but it reduces task success and generalizes preservation behavior only weakly.",
-    "published": "2026-10-02T04:49:46+00:00",
-    "updated": "2026-10-02T04:49:46+00:00",
-    "authors": [
-      "Sangwu Park",
-      "Yeonjun In",
-      "Wonjoong Kim",
-      "Sungwon Kim",
-      "Sein Kim",
-      "Chanyoung Park"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2610.02802v1",
-      "comment": "Preprint",
-      "first_seen": "2026-10-06",
-      "full_text": "Vision-language-action (VLA) models aim to perform diverse manipulation tasks, but task success in existing rigid-body benchmarks does not indicate whether they preserve objects. We introduce ManiPhysicsZoo, which consolidates literature-supported material properties, 3D meshes, and supporting references into reusable object assets. Using these assets, a solver-based assessment computes grasp-specific damage thresholds from object geometry, material properties, and recorded grasp conditions and compares them with recorded contact forces to assess potential deformation and fracture. Building on these components, ManiPhysicsBench evaluates object preservation in LIBERO and SimplerEnv across three physics axes and three difficulty levels. Public VLA checkpoints show a substantial gap between task success and safe success, defined as task completion while preserving the object. Their gripper commands concentrate near full opening and closure, with largely similar aggregate distributions across objects, consistent with binary gripper supervision. We examine how object-specific continuous gripper labels change model behavior by retraining a VLA model. The retrained model shows more object-dependent gripping and higher safe success, but lower task success and limited generalization of object-preserving behavior.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2610.02802.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 20.171,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.1709553277256943,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:CWRU-AISM/action-atlas",
-    "source": "github",
-    "title": "CWRU-AISM/action-atlas",
-    "url": "https://github.com/CWRU-AISM/action-atlas",
-    "summary": "NeurIPS 2026: Mechanistic Interpretability toolkit for Vision-Language-Action models",
-    "published": "2026-04-01T06:11:45Z",
-    "updated": "2026-10-01T20:53:35Z",
-    "authors": [
-      "CWRU-AISM"
-    ],
-    "extra": {
-      "stars": 26,
-      "forks": 6,
-      "language": "Python",
-      "topics": [
-        "iclr2026",
-        "neurips-2026"
-      ],
-      "open_issues": 1,
-      "license": "NOASSERTION",
-      "first_seen": "2026-06-23",
-      "full_text": "NeurIPS 2026: Mechanistic Interpretability toolkit for Vision-Language-Action models",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 19.947,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.1000947036929563,
-      "has_code": 6.0,
-      "github_stars_log": 7.156818820794937,
-      "github_forks_log": 1.6901960800285136,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "arxiv:2610.04609",
     "source": "arxiv",
     "title": "Exploiting Hierarchical Controller Structure in Contextual Parameter Learning for Humanoid Loco-Manipulation",
@@ -3219,57 +2863,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2610.02840",
-    "source": "arxiv",
-    "title": "PointWAM: 3D World Action Modeling for Dexterous Robotic Manipulation",
-    "url": "http://arxiv.org/abs/2610.02840v1",
-    "summary": "PointWAM models dexterous manipulation directly in 3D by forecasting how both the scene and the hands move as point trajectories in a shared space-time frame, then retargeting the predicted hand motion into robot actions from a colored point cloud and language instruction. Because the representation separates environment dynamics from actor motion, it can pretrain on large human demonstration videos without hand-picked objects or keypoints, and that pretraining raises DexJoCo success by 56.9 percentage points. Adding scene-trajectory supervision gives another 10.9-point gain over hand-only forecasting, letting PointWAM beat the previous best across ten DexJoCo tasks by 11.7 points and outperform strong vision-language-action baselines on a real robot.",
-    "published": "2026-10-02T05:31:01+00:00",
-    "updated": "2026-10-02T05:31:01+00:00",
-    "authors": [
-      "Chunghyun Park",
-      "Beomjun Kim",
-      "Seungcheol Park",
-      "Heeseung Kwon",
-      "Yashu Shukla",
-      "Seunghoon Sim",
-      "Jinwoo Shin",
-      "Minsu Cho"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2610.02840v1",
-      "comment": "Preprint. Project page: https://chrockey.github.io/PointWAM",
-      "first_seen": "2026-10-06",
-      "full_text": "World action models jointly learn to forecast world dynamics and predict robot actions, such that the learned internal world dynamics guide accurate actions. Existing approaches typically represent the world as RGB frames or latent counterparts while predicting actions as end-effector poses or joint angles, but they often struggle to capture the 3D spatial structure and contact geometry central to dexterous manipulation. We introduce Point World Action Model (PointWAM), a 3D world action model that decomposes the world into a scene (i.e., environment) and hands (i.e., actor), and jointly forecasts both as 3D point trajectories within a shared space-time coordinate frame. This explicit, disentangled representation enables effective pre-training on large-scale human demonstration videos without requiring any task-specific object or keypoint selection. Given a colored point cloud and a language instruction, PointWAM predicts how the scene and hands co-evolve in 3D space over time, then retargets the forecast hand motion to robot actions. Pre-training on human videos improves average DexJoCo success by 56.9 percentage points, and scene-trajectory supervision adds 10.9 points over forecasting the hands alone. With both, PointWAM surpasses the prior state of the art on ten DexJoCo tasks by 11.7 points and outperforms strong VLAs on a real robot.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2610.02840.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 19.177,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.177093721800595,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -4683,58 +4276,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "arxiv:2610.02799",
-    "source": "arxiv",
-    "title": "FUSEye: Training-Light Fisheye Detection with Overlapping Views and Zero-Initialized Adapters",
-    "url": "http://arxiv.org/abs/2610.02799v1",
-    "summary": "FUSEye adapts COCO-pretrained YOLO fisheye object detection with only about 227k added parameters, using overlapping grid views to expand compressed boundary regions, zero-initialized residual adapters to correct distortion-related feature shifts, and agreement-based fusion to promote detections supported across projections. On WoodScape, it lifts YOLO26-x mAP50 from 0.148 to 0.266 while retaining 84.3% of full fine-tuning performance, and with only 25% of labels it keeps 97.6% of its full-label accuracy.",
-    "published": "2026-10-02T04:42:50+00:00",
-    "updated": "2026-10-02T04:42:50+00:00",
-    "authors": [
-      "Wenya Su",
-      "Kai Luo",
-      "Di Wen",
-      "Ruiping Liu",
-      "Yufan Chen",
-      "Junwei Zheng",
-      "Kunyu Peng",
-      "Kailun Yang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.CV",
-        "cs.RO",
-        "eess.IV"
-      ],
-      "primary_category": "cs.CV",
-      "pdf_url": "https://arxiv.org/pdf/2610.02799v1",
-      "comment": "Source code will be available at https://github.com/Su-wenya/FUSEye",
-      "first_seen": "2026-10-06",
-      "full_text": "Fisheye cameras give mobile robots a single-sensor, low-cost view of their surroundings, yet the COCO-pretrained detectors that practitioners routinely reuse fail on them: strong radial distortion warps local image structure, while boundary compression shrinks objects to near-invisible sizes. Full fine-tuning closes much of the gap but requires abundant fisheye labels and compute. We present FUSEye, a training-light framework that turns a frozen-backbone COCO-pretrained extra-large YOLO26 detector (YOLO26-x) into a fisheye detector. FUSEye adds roughly 227k new parameters while updating the inserted modules and the pretrained detection head. It addresses the transfer gap at three causally linked levels. At the input level, overlapping grid view generation and box remapping (GridViews) enlarge compressed boundary regions. At the feature level, zero-initialized residual adapters (Z-Adapters) correct distortion-induced feature misalignment. At the decision level, learned cross-projection agreement fusion (AgreeFusion) promotes low-confidence detections only when they are supported by consistent evidence across multiple views. On the WoodScape surround-view fisheye benchmark, FUSEye raises YOLO26-x from 0.148 to 0.266 mAP50 and retains 84.3% fully fine-tuned accuracy. Moreover, randomly using only 25% of the labeled training images, FUSEye achieves 0.2597 mAP50, retaining 97.6% of its full-label performance. FUSEye also consistently improves YOLOv8-11 detectors, showing that the recipe is architecture-agnostic. Source code will be available at https://github.com/Su-wenya/FUSEye.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2610.02799.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 9.17,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.169923581222718,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:2d4705eb5fd8",
     "source": "news",
     "title": "XTEND AI Robotics, Inc. Secures U.S. Patent for Smart Payloads Capable of Actively Directing Missions",
@@ -5421,42 +4962,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 2.0,
       "recency": 2.206319886312004,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:dd32bfa10ab8",
-    "source": "news",
-    "title": "[AI 리뷰] BMW, 소프트웨어 정의 차량 넘어 'AI 정의 차량’ 시대 선언",
-    "url": "https://www.aitimes.kr/news/articleView.html?idxno=42157",
-    "summary": "BMW그룹(BMW Group)이 인공지능(AI)을 개별 업무에 적용하는 수준을 넘어 자동차 개발부터 구매, 생산, 판매, 애프터서비스까지 전 가치사슬을 AI로 연결하는 전사적 전환에 나선다.특히 차량 개발 과정에는 에이전틱 AI를 본격 도입해 초기 기술 요구사항 분석부터 시험과 출시까지 지원하도록 하고, 생산 현장에서는 AI 에이전트와 자율화 로봇을 결합한 피지컬 인공지능(Physical AI)으로 생산 시스템을 고도화한다.BMW그룹은 9월 30일 진행된 2026 자본시장 설명회(Capital Market Day 2026)를 통해",
-    "published": "2026-10-01T19:55:49+00:00",
-    "updated": "2026-10-01T19:55:49+00:00",
-    "authors": [
-      "정한영 기자"
-    ],
-    "extra": {
-      "feed": "인공지능신문",
-      "first_seen": "2026-10-02",
-      "full_text": "BMW그룹(BMW Group)이 인공지능(AI)을 개별 업무에 적용하는 수준을 넘어 자동차 개발부터 구매, 생산, 판매, 애프터서비스까지 전 가치사슬을 AI로 연결하는 전사적 전환에 나선다.특히 차량 개발 과정에는 에이전틱 AI를 본격 도입해 초기 기술 요구사항 분석부터 시험과 출시까지 지원하도록 하고, 생산 현장에서는 AI 에이전트와 자율화 로봇을 결합한 피지컬 인공지능(Physical AI)으로 생산 시스템을 고도화한다.BMW그룹은 9월 30일 진행된 2026 자본시장 설명회(Capital Market Day 2026)를 통해",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 5.091,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.09149845765377,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
