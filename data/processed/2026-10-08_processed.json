@@ -452,57 +452,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2610.08526",
-    "source": "arxiv",
-    "title": "WareFly-VLA: A Vision-Language-Action Framework for UAV Navigation and Human Tracking in Smart Warehouses",
-    "url": "http://arxiv.org/abs/2610.08526v1",
-    "summary": "WareFly-VLA targets language-conditioned UAV flight in smart warehouses, pairing photorealistic Isaac Sim warehouse scenes with 507 teleoperated flight episodes, 8,504 RGB transitions, worker appearance descriptions, and synchronized 4-DoF control commands for target approach and person following. Its benchmark across SmolVLA, GR00T N1.7, pi_0, and OpenVLA shows that aerial VLA control generalizes poorly under episode-level splits, with continuous action modeling beating discrete tokenization and most models learning forward motion much more reliably than full flight control.",
-    "published": "2026-10-06T15:21:14+00:00",
-    "updated": "2026-10-06T15:21:14+00:00",
-    "authors": [
-      "Thinh D. Le",
-      "Son T. Nguyen",
-      "Duong Q. Nguyen",
-      "Dung D. Le",
-      "Ngo Anh Vien",
-      "H. Nguyen-Xuan"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2610.08526v1",
-      "comment": "41 pages, 35 figures, 11 tables",
-      "first_seen": "2026-10-08",
-      "full_text": "Vision-Language-Action (VLA) models have achieved impressive results in robotic manipulation and ground-mobile navigation, yet language-conditioned control of unmanned aerial vehicles (UAVs) in smart warehouses remains largely unexplored, hindered by the lack of benchmarks that jointly provide continuous low-level flight actions, fine-grained natural-language target descriptions, and realistic industrial environments. This paper introduces WareFly-VLA, a photorealistic UAV VLA framework and dataset for language-guided human search, localization, and tracking in warehouse environments. It contains 507 human-teleoperated flight episodes and 8,504 high-resolution RGB transitions collected in NVIDIA Isaac Sim, each paired with a human-written appearance description of the target worker and a synchronized four-degree-of-freedom control command. Two aerial tasks are covered: target approach and person following, under occlusion, long-range search, altitude variation, and clutter. A unified benchmark of four open-source VLA architectures (SmolVLA, GR00T N1.7, pi_0 and OpenVLA) is established under a leakage-free episode-level protocol at two control rates. The results show that language-conditioned aerial control in warehouses is far from solved: performance drops substantially under strict generalization settings, continuous action modeling consistently outperforms discrete action tokenization, only the forward channel is reliably learnable from a single frame, and current foundation-model interfaces transfer poorly from ground and humanoid embodiments to aerial platforms. The synchronized video, language, action, pose, and difficulty annotations further support world-model research. The dataset, baselines, and evaluation protocol are released to support language-grounded aerial autonomy in smart warehouses.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2610.08526.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Manipulator",
-      "#Humanoid"
-    ],
-    "score": 37.702,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 7.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 6.0,
-      "recency": 2.702040758625992,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:iit-DLSLab/sim2real-robot-identification",
     "source": "github",
     "title": "iit-DLSLab/sim2real-robot-identification",
@@ -1303,57 +1252,6 @@
       "has_code": 6.0,
       "github_stars_log": 13.437644806073173,
       "github_forks_log": 3.7501225267834,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:iit-DLSLab/locomanipulation-teleop-isaaclab",
-    "source": "github",
-    "title": "iit-DLSLab/locomanipulation-teleop-isaaclab",
-    "url": "https://github.com/iit-DLSLab/locomanipulation-teleop-isaaclab",
-    "summary": "An IsaacLab DirectEnv for performing teleoperation with Unitree Go2 + AgileX Piper, with support for sim-to-sim and sim-to-real pipelines",
-    "published": "2026-05-09T08:21:15Z",
-    "updated": "2026-10-06T16:33:09Z",
-    "authors": [
-      "iit-DLSLab"
-    ],
-    "extra": {
-      "stars": 32,
-      "forks": 3,
-      "language": "Python",
-      "topics": [
-        "agilex",
-        "isaaclab",
-        "locomotion",
-        "manipulation",
-        "reinforcement-learning",
-        "sim-to-real",
-        "teleoperation",
-        "unitree"
-      ],
-      "open_issues": 1,
-      "license": "BSD-3-Clause",
-      "first_seen": "2026-07-03",
-      "full_text": "An IsaacLab DirectEnv for performing teleoperation with Unitree Go2 + AgileX Piper, with support for sim-to-sim and sim-to-real pipelines",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Manipulator"
-    ],
-    "score": 27.509,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.7127426241542656,
-      "has_code": 6.0,
-      "github_stars_log": 7.592569699389438,
-      "github_forks_log": 1.2041199826559248,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
@@ -2264,53 +2162,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2610.08555",
-    "source": "arxiv",
-    "title": "Towards Efficient Robotic Manipulation Models with Self-Recursive Pruning",
-    "url": "http://arxiv.org/abs/2610.08555v1",
-    "summary": "LCAM is a training-free pruning method for robotic manipulation policies that scores individual connections using normalized weight contribution, activation statistics from calibration demonstrations, and sensitivity of action-output directions to prediction loss. It prunes in a self-recursive coarse-to-fine loop, recalibrating importance after coarse stages and using held-out offline action distortion to allocate fine-grained sparsity without recovery training or simulator rollouts. On LIBERO and OpenVLA, it preserves strong closed-loop behavior under heavy unstructured pruning, including 84.0% success on LIBERO-Object at 50% sparsity, and also shows encouraging transfer to real-world robotic ping pong.",
-    "published": "2026-10-06T15:40:35+00:00",
-    "updated": "2026-10-06T15:40:35+00:00",
-    "authors": [
-      "Zijia Chen",
-      "Yuenan Hou",
-      "Yu Li",
-      "Weijie Li",
-      "Li Liu"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2610.08555v1",
-      "comment": null,
-      "first_seen": "2026-10-08",
-      "full_text": "Network pruning can reduce parameter redundancy in robotic policies. However, generic pruning criteria are tailored for image recognition tasks and commonly designed to preserve weight magnitude, local reconstruction, or language-model likelihood rather than closed-loop action behavior. Directly applying these pruning algorithms to robotic tasks yields unsatisfactory performance. In this paper, we propose Loss-Conditioned Activation-Moment (LCAM) pruning, a training-free method for unstructured pruning of pre-trained robotic manipulation policies. Specifically, we first rank connections using row-normalized weight contribution, activation moments measured on calibration demonstrations, and the sensitivity of output directions to the action-prediction loss. We further design a self-recursive coarse-to-fine procedure: importance is recalibrated after each nested coarse pruning stage, while held-out offline action distortion guides fine-grained budget allocation after a sparsity knee. Our algorithm is free from costly recovery training and simulator rollouts after pruning. Experiments on three LIBERO suites with competitive robotic policies, together with evaluations on OpenVLA, show that LCAM attains competitive performance across a broad range of pruning ratios. Notably, on LIBERO-Object with OpenVLA, our LCAM achieves 84.0% success at 50% unstructured pruning, retaining over 90% of the dense policy's success rate. Promising results on real-world robotic ping pong further demonstrate the effectiveness of our pruning algorithm.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2610.08555.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 20.705,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.704920223457341,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:jixinyan/OpenSO-101",
     "source": "github",
     "title": "jixinyan/OpenSO-101",
@@ -2481,51 +2332,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2610.08603",
-    "source": "arxiv",
-    "title": "A Swarm-Coordinated Multi-Robot System for Early Stress Detection in Agricultural Rows Using Multimodal Leaf Sensing",
-    "url": "http://arxiv.org/abs/2610.08603v1",
-    "summary": "CropSentry is a low-cost, ground-based swarm system in which two autonomous robots move row by row through crops, measuring leaf color and environmental signals, then spatially mapping the readings into a real-time web dashboard with color-coded crop-health segments. In experiments with 63 observations, it classified healthy, nutrient-deficient, and diseased plants with 84.12% overall accuracy and maintained 100% wireless communication across 10 slave-bot observations, suggesting close-range multimodal leaf sensing can make early stress detection more accessible for smaller farms.",
-    "published": "2026-10-06T16:07:15+00:00",
-    "updated": "2026-10-06T16:07:15+00:00",
-    "authors": [
-      "Rishi Gupta",
-      "Astha Goyal",
-      "Vinay Vishwakarma"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2610.08603v1",
-      "comment": null,
-      "first_seen": "2026-10-08",
-      "full_text": "Early stress detection in crops is a necessity today to improve efficiency and reduce waste of time, money, and effort. However, most modern techniques, such as hyperspectral imaging and AI-based systems, are too costly and complex for medium and small-scale farmers to implement. This paper showcases CropSentry, a low-cost, ground-based multi-robot system that uses multimodal leaf sensing to continuously monitor crop health by tracking stress levels. The system comprises two autonomous bots that continuously detect leaf color and environmental data row by row. The observations are spatially mapped and sent over to the master bot, which uses color-coded row segments to generate a real-time web-based dashboard displaying crop health. After 63 observations were collected during the experiments, the results showed an overall crop health classification accuracy of 84.12%, with 82.60% for healthy plants, 88% for nutrient-deficient plants, and 80% for diseased plants. Also, 100% wireless communication success rate across 10 slave observations was achieved. Close-range leaf inspection across multiple bots can detect early stress in crops while remaining affordable, accessible, and scalable. It provides farmers with timely information to improve resource utilization and crop management.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2610.08603.jpg"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 17.709,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.7088884778447424,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:89d11dc97fee",
     "source": "news",
     "title": "Interview with CEO of Minerva Humanoids: ‘Roger is engineered to be the best possible avatar’",
@@ -2628,91 +2434,6 @@
       "research_interest_abstract": 2.0,
       "recency": 2.8600243619915675,
       "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:89de0a13b10e",
-    "source": "news",
-    "title": "두산로보틱스, 국산 AI 반도체로 ‘한국형 피지컬 AI’ 구현한다",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=48858",
-    "summary": "두산로보틱스가 피지컬 AI(Physical AI) 관련 국책과제 2건을 잇달아 수주하며 협동로봇 지능화와 제조 현장 혁신에 본격적으로 나선다.두산로보틱스는 산업통상부와 한국산업기술기획평가원이 공동으로 주관한 ‘K-온디바이스 AI 반도체 기술개발사업’과 ‘로봇산업 기술개발사업’에 각각 제안한 차세대 협동로봇 과제와 지능형 용접 솔루션 과제가 모두 국책과제로 선정됐다고 6일 밝혔다. 두 과제의 총 연구개발비는 약 989억원이며, 이 중 정부 지원금은 약 681억원이다.두 과제는 역할이 뚜렷하게 구분된다. 첫 번째 과제가 로봇의 ‘두뇌’",
-    "published": "2026-10-06T16:43:51+00:00",
-    "updated": "2026-10-06T16:43:51+00:00",
-    "authors": [
-      "최지호 기자"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-10-07",
-      "full_text": "두산로보틱스가 피지컬 AI(Physical AI) 관련 국책과제 2건을 잇달아 수주하며 협동로봇 지능화와 제조 현장 혁신에 본격적으로 나선다.두산로보틱스는 산업통상부와 한국산업기술기획평가원이 공동으로 주관한 ‘K-온디바이스 AI 반도체 기술개발사업’과 ‘로봇산업 기술개발사업’에 각각 제안한 차세대 협동로봇 과제와 지능형 용접 솔루션 과제가 모두 국책과제로 선정됐다고 6일 밝혔다. 두 과제의 총 연구개발비는 약 989억원이며, 이 중 정부 지원금은 약 681억원이다.두 과제는 역할이 뚜렷하게 구분된다. 첫 번째 과제가 로봇의 ‘두뇌’",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 13.714,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.7143348741468256,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2610.08642",
-    "source": "arxiv",
-    "title": "HygieneRoboBench: Benchmarking Hygiene-Aware Planning for Household Robots",
-    "url": "http://arxiv.org/abs/2610.08642v1",
-    "summary": "HygieneRoboBench tests whether household-robot planners can keep track of contamination through grippers, tools, and shared objects, then revise plans safely after new contact events under treatment costs and user priorities. It contains 624 instances across 134 task families and shows that safe task completion alone can still be inefficient, especially when user-specific costs matter. The proposed Hygiene-NSP combines LLM grounding, contact-history reconstruction, and CP-SAT optimization, reaching 94.4% safe resolution and 90.4% optimal safe resolution on the full dataset.",
-    "published": "2026-10-06T16:33:44+00:00",
-    "updated": "2026-10-06T16:33:44+00:00",
-    "authors": [
-      "Yurun Chen",
-      "Josh Qixuan Sun",
-      "Jason Qin",
-      "Chengtai Li",
-      "Tianyi Wang",
-      "Mark Crowley",
-      "Wentao Zhu"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2610.08642v1",
-      "comment": null,
-      "first_seen": "2026-10-08",
-      "full_text": "Contact with contaminated objects can spread hazards through a household robot's grippers, tools, and shared surfaces, while new contacts can make an existing plan unsafe. Existing benchmarks do not jointly assess how planners identify hygiene risks from contact history and plan safe continuations after new contact events. Planners must do so within time and resource limits while respecting user priorities. We introduce HygieneRoboBench, with 624 instances across 134 task families, to evaluate safe resolution of household tasks from a given execution history. Tasks capture contamination through two grippers and shared objects, treatment costs, and user priorities. We combine controlled history, profile, and event comparisons with independent plan evaluation. These assess safe resolution, cost efficiency under user priorities, and responses to contact events. Evaluation of LLM-based and symbolic planners shows that safely completing a task does not guarantee the lowest execution costs under the user's priorities. To address this problem, we introduce Hygiene-NSP. It combines LLM-based grounding, contact-history reconstruction, and CP-SAT to jointly plan hygiene treatment and task execution under user priorities. Hygiene-NSP achieves safe resolution and optimal safe resolution rates of 94.4% and 90.4%, respectively. Both rates are higher than those of the evaluated baseline planners on the full dataset. Project page: https://euron-zc.github.io/HygieneRoboBench/.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2610.08642.jpg"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 12.713,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.7128294507589286,
-      "has_code": 6.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
@@ -3623,42 +3344,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.716229715500992,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:36c45a5cfd84",
-    "source": "news",
-    "title": "MH머트리얼즈, 로봇 액추에이터 모터용 자석 개발 나선다",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=48857",
-    "summary": "MH머트리얼즈가 기존 특수 소재 중심의 사업에서 영구자석을 핵심으로 하는 첨단소재 사업으로 전환을 추진한다고 6일 밝혔다.회사는 영구자석 시장의 성장과 소재산업의 중요성, 국가차원의 공급망 강화 흐름에 대응해 차세대 영구자석 개발을 새로운 사업 방향으로 설정했다.영구자석은 로봇, 전기차, 방산 등 다양한 산업의 모터와 구동장치에 쓰이는 핵심 소재다. 특히 소형화와 높은 성능이 요구되는 로봇 액추에이터 분야에서 초소형·고보자력 영구자석의 중요성이 커지고 있다.MH머트리얼즈는 수요가 있는 제품부터 개발해 국내 생산 기반을 마련하고, 사",
-    "published": "2026-10-06T15:56:00+00:00",
-    "updated": "2026-10-06T15:56:00+00:00",
-    "authors": [
-      "최지호 기자"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-10-07",
-      "full_text": "MH머트리얼즈가 기존 특수 소재 중심의 사업에서 영구자석을 핵심으로 하는 첨단소재 사업으로 전환을 추진한다고 6일 밝혔다.회사는 영구자석 시장의 성장과 소재산업의 중요성, 국가차원의 공급망 강화 흐름에 대응해 차세대 영구자석 개발을 새로운 사업 방향으로 설정했다.영구자석은 로봇, 전기차, 방산 등 다양한 산업의 모터와 구동장치에 쓰이는 핵심 소재다. 특히 소형화와 높은 성능이 요구되는 로봇 액추에이터 분야에서 초소형·고보자력 영구자석의 중요성이 커지고 있다.MH머트리얼즈는 수요가 있는 제품부터 개발해 국내 생산 기반을 마련하고, 사",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 6.707,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.707214338345734,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
