@@ -1668,58 +1668,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2610.09369",
-    "source": "arxiv",
-    "title": "Immiscible Diffusion Policy: Preserving Multimodal Robot Actions through Label-Free Noise Assignment",
-    "url": "http://arxiv.org/abs/2610.09369v1",
-    "summary": "Immiscible Diffusion Policy targets a failure mode where diffusion robot policies collapse multimodal demonstrations into a single action mode, even under balanced data and symmetric batches, because independent action-noise pairing lets diffusion paths mix and cross. It fixes this during training by assigning noise to actions so distinct noise-to-action routes are preserved, without changing the policy architecture or inference. Across five simulated and two real-world humanoid manipulation tasks with state, RGB, and point-cloud inputs, it raised non-dominant modality usage by 6.0x-14.6x in two-mode tasks and recovered missing demonstrated modes in four-mode rollouts.",
-    "published": "2026-10-07T03:22:26+00:00",
-    "updated": "2026-10-07T03:22:26+00:00",
-    "authors": [
-      "Xiao Zhang",
-      "Yuxin Chen",
-      "Zhixuan Liang",
-      "Guojian Zhan",
-      "Chenran Li",
-      "Chenfeng Xu",
-      "Masayoshi Tomizuka",
-      "Yiheng Li"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2610.09369v1",
-      "comment": null,
-      "first_seen": "2026-10-09",
-      "full_text": "When diffusion policies were first introduced, they were expected to recover multi-modal action distributions. However, we find this expectation does not always hold, as diffusion policies often collapse to a single modality even when we guarantee the balance of dataset modalities and exact within-batch symmetry. Our analysis indicates that independent action-noise pairing contributes to this failure by increasing mixing and crossing among diffusion paths, which can produce averaged denoising responses and suppress modality-specific behavior. This issue is especially severe in robot planning, where action spaces are dense and low-dimensional, significantly increasing such mixing and crossing. To alleviate this problem, we propose Immiscible Diffusion Policy, a label-free training-time add-on to diffusion policy that uses action-noise assignment to preserve relatively distinct noise-to-action routes without modifying the policy architecture or inference procedure. Across five simulated and two real-world humanoid manipulation tasks spanning state, RGB, and point-cloud observations, our method significantly improves the policy's preservation of action modalities while maintaining strong task performance. It increases the proportion of the non-dominant modality by 6.0x-14.6x across three two-modality tasks and recovers demonstrated modalities that are entirely absent from vanilla policy rollouts on both four-modality tasks. These results demonstrate that Immiscible Diffusion Policy provides a simple yet robust approach to preserving action multi-modality in general robot learning tasks.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2610.09369.jpg"
-    },
-    "tags": [
-      "#IL",
-      "#Manipulator",
-      "#Humanoid"
-    ],
-    "score": 26.593,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 6.0,
-      "recency": 2.592708682827381,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:cair-vinuni/FoldQuantVLA",
     "source": "github",
     "title": "cair-vinuni/FoldQuantVLA",
@@ -2491,55 +2439,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2610.09462",
-    "source": "arxiv",
-    "title": "TMT: Runtime Backdoor Detection for Vision-Language-Action Policies on Unseen Tasks",
-    "url": "http://arxiv.org/abs/2610.09462v1",
-    "summary": "TMT detects runtime backdoor activation in vision-language-action policies by checking both the structure of input-token representations and prediction errors in adjacent-layer latent transitions, using only benign rollouts for training. On unseen tasks and across three VLA backdoor attacks, it outperforms ten adapted baselines, and the authors also explore a self-distillation purification setup where a backdoored policy supervises a student on paired benign and triggered observations without needing a clean reference policy.",
-    "published": "2026-10-07T05:20:16+00:00",
-    "updated": "2026-10-07T05:20:16+00:00",
-    "authors": [
-      "Zirun Zhou",
-      "Jingfeng Zhang",
-      "HaoChuan Xu",
-      "Xizhe Zhang",
-      "Elliott Wen",
-      "Jing Sun",
-      "Hong Jia"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2610.09462v1",
-      "comment": null,
-      "first_seen": "2026-10-09",
-      "full_text": "Backdoored vision-language-action (VLA) policies can preserve benign task performance while producing malicious actions when a trigger appears. Detecting such activation is difficult because malicious behavior can comprise individually plausible actions, while unfamiliar tasks introduce legitimate changes in observations and behavior. We introduce TMT, a runtime backdoor detector based on Token Manifold and latent Transition modeling. Trained on benign rollouts, its two branches assess input-token structure and prediction errors in adjacent-layer latent dynamics. A suspicious rollout identified by the token manifold branch, once confirmed through latent deviations, guides transition selection for subsequent monitoring. We further explore policy purification through self-distillation: a frozen copy of the backdoored policy provides benign-input actions to supervise a student on paired benign and triggered observations, without requiring a separate clean reference policy. For evaluation, we adapt traditional backdoor detectors and repurpose anomaly and failure detection methods as VLA backdoor detectors. In a post-hoc comparison with ten baselines, TMT achieves state-of-the-art backdoor detection performance on unseen tasks across three VLA backdoor attacks. Our project page is available at https://zzr42.github.io/tmt/.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2610.09462.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 22.61,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.610243405580357,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:stephane-caron/reinforcement-learning-legged-robots",
     "source": "github",
     "title": "stephane-caron/reinforcement-learning-legged-robots",
@@ -2576,102 +2475,6 @@
       "github_stars_log": 6.020599913279624,
       "github_forks_log": 0.6020599913279624,
       "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2610.09479",
-    "source": "arxiv",
-    "title": "Precise SE(3) End-Effector Tracking in Whole-Body Humanoid Control",
-    "url": "http://arxiv.org/abs/2610.09479v1",
-    "summary": "ResGAC couples a left-invariant SE(3) geometric admittance controller with residual reinforcement learning so a humanoid can track precise end-effector poses while walking or balancing through floating-base disturbances. The geometric controller supplies structured task-space feedback and nominal arm targets, while the learned residual handles unmodeled dynamics and whole-body coordination; a ground-attached heading frame strips pelvis roll, pitch, and heave out of the manipulation reference to reduce locomotion-induced hand motion. On a real Unitree G1, it beats baselines including SONIC on standing tracking benchmarks, reaches 90% success on peg-in-hole versus SONIC’s 50%, and maintains accurate world-frame SE(3) tracking during lower-body motion.",
-    "published": "2026-10-07T05:34:26+00:00",
-    "updated": "2026-10-07T05:34:26+00:00",
-    "authors": [
-      "Joohwan Seo",
-      "Xiaofeng Guo",
-      "Jinkun Cao",
-      "Roberto Horowitz",
-      "Rocky Duan",
-      "Guanya Shi",
-      "Koushil Sreenath"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "eess.SY"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2610.09479v1",
-      "comment": null,
-      "first_seen": "2026-10-09",
-      "full_text": "Precise end-effector tracking during humanoid whole-body motion is challenging due to floating-base oscillations, gravity, dynamic coupling, and locomotion-induced disturbances. We propose ResGAC, a whole-body humanoid controller for precise end-effector pose tracking that combines geometric admittance control (GAC) with residual reinforcement learning. GAC provides structured $\\SE$ task-space feedback and generates nominal arm joint-position targets, while residual RL compensates for unmodeled dynamics and coordinates locomotion and balance in the shared joint-position action space. The left-invariant geometric formulation allows the same GAC law to be used across manipulation reference frames. This enables the use of a ground-attached heading frame that preserves planar locomotion while removing pelvis roll, pitch, and heave from the manipulation reference, thereby reducing reference-induced end-effector motion during locomotion. ResGAC is validated on a real Unitree G1 humanoid. Across four standing end-effector tracking benchmarks, ResGAC consistently outperforms representative baselines, including SONIC, achieving lower translational and rotational errors. Real-world experiments further demonstrate reduced propagation of pelvis motion to the desired end-effector pose using the proposed ground-attached heading frame. ResGAC achieves $90\\%$ success in a standing peg-in-hole task compared with $50\\%$ for SONIC, and accurate world-frame $\\SE$ end-effector pose tracking during lower-body motion. Experimental videos are included in the supplementary material and are also available on the project website: https://resgac.github.io/ResGAC-website/.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#Manipulator",
-      "#Humanoid"
-    ],
-    "score": 21.612,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.6123515406324405,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2610.09451",
-    "source": "arxiv",
-    "title": "TempoBridge: Language-Guided Tempo Control for Vision-Language-Action Policies",
-    "url": "http://arxiv.org/abs/2610.09451v1",
-    "summary": "TempoBridge adds language-conditioned speed control to VLA robot policies without collecting tempo-labeled demonstrations or fine-tuning the base policy. It reads tempo cues from frozen VLM representations, routes them by task phase with a causal phase router, and modulates the robot’s nominal motion commands during execution. On LIBERO, it raises Tempo Success Rate from 52.6% to 89.7% under canonical tempo instructions while largely preserving task success, handling unseen tempo phrasing, and transferring to a physical manipulation setup.",
-    "published": "2026-10-07T05:07:31+00:00",
-    "updated": "2026-10-07T05:07:31+00:00",
-    "authors": [
-      "Yeonseo Lee",
-      "Hyosup Shin",
-      "Guebin Hwang",
-      "Sungho Jo"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2610.09451v1",
-      "comment": "8 pages, 5 figures. Project page: https://lysees.github.io/tempobridge-page/",
-      "first_seen": "2026-10-09",
-      "full_text": "Vision-Language-Action (VLA) models are effective at understanding what task to perform, but provide limited control over how it should be executed, such as moving quickly or slowly. We introduce TempoBridge, a lightweight framework that uses frozen VLA representations to modulate actions according to tempo cues in the instruction at each task phase, without additional tempo-conditioned robot demonstrations or tempo-specific base-policy fine-tuning. TempoBridge extracts tempo cues from contextual VLM representations, aligns them with task progress through a causal phase router, and modulates nominal motion commands during execution. Across LIBERO tasks, TempoBridge improves Tempo Success Rate from 52.6% to 89.7% under canonical tempo instructions while retaining high task success. It also preserves near-baseline performance when no tempo cue is present and generalizes to unseen tempo expressions without additional training. Experiments on a physical robot further demonstrate language-conditioned tempo modulation in real-world manipulation.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2610.09451.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 21.608,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.6083460838888888,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -3358,101 +3161,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2610.09315",
-    "source": "arxiv",
-    "title": "ClimbLab: MATLAB Simulation Platform for Legged Climbing Robotics",
-    "url": "http://arxiv.org/abs/2610.09315v1",
-    "summary": "ClimbLab is an open-source MATLAB simulator for designing and analyzing legged climbing robots as articulated floating-base multibody systems. It can simulate walking or climbing over arbitrary point-cloud terrains while varying inclination, gravity, and ground stiffness, using a rigid-body dynamics engine. The examples show quadrupeds gripping vertical walls and climbing steep slopes, making it useful for testing climbing behaviors before hardware experiments.",
-    "published": "2026-10-07T02:15:00+00:00",
-    "updated": "2026-10-07T02:15:00+00:00",
-    "authors": [
-      "Kentaro Uno",
-      "Warley F. R. Ribeiro",
-      "Yusuke Koizumi",
-      "Keigo Haji",
-      "Koki Kurihara",
-      "William Jones",
-      "Kazuya Yoshida"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2610.09315v1",
-      "comment": "Author's version of a manuscript in the proceedings of CLAWAR 2021. The final published version is available at: https://doi.org/10.1007/978-3-030-86294-7_20",
-      "first_seen": "2026-10-09",
-      "full_text": "This paper presents an open-sourced MATLAB simulation and analysis platform dedicated to legged climbing robots. This simulator enables the design of any limbed robotic system as an articulated multi-body with a floating base and simulates it walking and climbing in an arbitrary environment. The main variable environmental parameters are inclination, gravity, and ground stiffness, and any point cloud can be installed as the terrain map. Furthermore, the simulator employs a rigid body dynamics engine. This paper first describes the simulator structure, and the computational flow and next presents the representative simulation examples where quadrupedal robots assumed gripping on the wall or climbing on the steep slope.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2610.09315.jpg"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 17.583,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.5826739602356152,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2610.09309",
-    "source": "arxiv",
-    "title": "Predicted Futures Are Not Enough: Learning Executable Goals for Robot Manipulation",
-    "url": "http://arxiv.org/abs/2610.09309v1",
-    "summary": "Entity-Level Goal Readout turns the rich but control-awkward futures from a 3D trace world model into an explicit executable SE(3) goal, using object-centric pose prediction and depth-grounded translation. A shared Pose-Native Executor then tracks that fixed goal with online object-pose feedback, reaching 79.69% mean success across five manipulation tasks without rerunning the world model. On a real Franka arm, it transfers zero-shot with 73.33% success on StackCube, 66.67% with distractors, and 75.00% on PickPlate with an unseen target, suggesting the prediction-to-execution interface is worth learning directly rather than treating as post-processing.",
-    "published": "2026-10-07T02:07:21+00:00",
-    "updated": "2026-10-07T02:07:21+00:00",
-    "authors": [
-      "Tzu-Yu Chuang",
-      "Ching-Hsiang Chang",
-      "Yi-Hsiu Lee",
-      "Yi-Ting Chen",
-      "Min Sun",
-      "YuanFu Yang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2610.09309v1",
-      "comment": "9 pages, 8 figures, 4 tables. Project page: https://claire0730.github.io/executable-goals/ Code and models: https://github.com/Claire0730/executable-goals",
-      "first_seen": "2026-10-09",
-      "full_text": "Generative world models provide rich predictions of how manipulation scenes may evolve toward task objectives, yet those futures do not directly expose the compact task variables required by control. When training supervises future prediction alone, terminal goal accuracy is not an explicit learning objective, even when geometric recovery is available. We present Entity-Level Goal Readout, a learned prediction-to-execution interface that makes the executable terminal goal an explicit output of a 3D trace world model. It combines object-centric pose prediction with translation grounded in observed depth to produce a compact goal in SE(3). A shared Pose-Native Executor consumes this fixed goal with online object-pose feedback for closed-loop control without rerunning the world model. Across five manipulation tasks, the pipeline achieves a mean success rate of 79.69%. Goal diagnostics directly measure terminal goal accuracy, while controlled translation perturbations characterize how execution degrades under goal error. Zero-shot deployment on a Franka arm achieves 73.33% success on nominal StackCube, 66.67% with distractors, and 75.00% on PickPlate with a target unseen during policy training. These results support treating the prediction-to-execution interface as an explicit learned component of world-model planning rather than incidental post-processing in the control pipeline itself. Project page: https://claire0730.github.io/executable-goals/",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#RL",
-      "#Manipulator"
-    ],
-    "score": 17.582,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.581535567264385,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:ae2d8b5be871",
     "source": "news",
     "title": "This Disembodied Hand Is All the Robot You Need",
@@ -3724,54 +3432,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2610.09455",
-    "source": "arxiv",
-    "title": "RLHND: Video Foundation Models as Physically Grounded Hand Trackers for Robot Learning",
-    "url": "http://arxiv.org/abs/2610.09455v1",
-    "summary": "RLHND uses a pre-trained Cosmos 3 video diffusion backbone as a deterministic clip-level feature extractor, bringing learned priors about hand motion and hand-object interaction into monocular egocentric hand tracking. It estimates anatomically plausible hand pose with optional shape conditioning for actor-consistent hands, and adds a frozen-pose tactile stream that predicts dense contact and force over the hand surface using LBS-based feature spreading for efficient vertex-wise features. The system reports leading results on pose, contact, and force benchmarks, and shows the estimates can transfer into robot learning through retargeting and real-world robot experiments.",
-    "published": "2026-10-07T05:11:50+00:00",
-    "updated": "2026-10-07T05:11:50+00:00",
-    "authors": [
-      "Seungjun Moon",
-      "Subin Jeon",
-      "Sangwoo Kim",
-      "Hanbyul Joo",
-      "Jinwoo Shin"
-    ],
-    "extra": {
-      "categories": [
-        "cs.CV",
-        "cs.RO"
-      ],
-      "primary_category": "cs.CV",
-      "pdf_url": "https://arxiv.org/pdf/2610.09455v1",
-      "comment": "34 pages, 15 figures",
-      "first_seen": "2026-10-09",
-      "full_text": "Recently, approaches that leverage human video datasets for robot policy training have become increasingly prevalent. However, most existing hand trackers regress pose from cropped frames with limited priors on hand motion and object interaction, resulting in inaccurate and physically inconsistent estimates. Moreover, the lack of physical cues, e.g., contact and force, limits the use of human videos for robot policy training. To this end, we propose RLHND, a video foundation model-based hand tracking model that jointly estimates hand pose and realistic tactile information from monocular egocentric videos. RLHND turns the pre-trained Cosmos 3 video diffusion backbone into a deterministic clip-level feature extractor via clean-latent conditioning, carrying its learned priors on hand motion and hand-object interaction into tracking. For pose estimation, RLHND (i) predicts hand poses with anatomically plausible joint angles and (ii) enables optional conditioning on the shape parameter to maintain consistent hand shape within the same video and even across videos recorded by the same actor. For tactile estimation, a separate tactile expert stream, trained with the pose stream frozen, predicts dense contact and force over the hand surface. We further adopt LBS-based feature spreading to enable vertex-wise feature extraction without costly per-vertex attention. RLHND achieves state-of-the-art performance across various benchmark datasets for pose estimation, while also achieving state-of-the-art performance in contact and force estimation. Moreover, we demonstrate the utility of RLHND for robot learning through retargeting results and real-world robot experiments. The code will be publicly available at https://seungjun-moon.github.io/rlhnd/.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2610.09455.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 16.609,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.6089884451190475,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -4621,53 +4281,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "arxiv:2610.09165",
-    "source": "arxiv",
-    "title": "geodex: A Library for Motion Planning on Riemannian Manifolds",
-    "url": "http://arxiv.org/abs/2610.09165v1",
-    "summary": "geodex is a C++20 motion-planning library, with Python bindings, that treats a robot’s configuration space as a Riemannian manifold rather than flattening it into an ambient Euclidean metric. It lets users swap in manifolds, metrics, retractions, and samplers while running the same sampling-based planner across spaces such as R^n, tori, spheres, SO/SE groups, product spaces, and articulated-robot configurations with custom configuration-dependent costs. The result is a tool aimed at generating obstacle-aware trajectories that follow intrinsic geometry, producing paths that can be shorter, lower-energy, and more natural than flat-metric planning.",
-    "published": "2026-10-06T22:08:57+00:00",
-    "updated": "2026-10-06T22:08:57+00:00",
-    "authors": [
-      "Phone Thiha Kyaw",
-      "Ben Wei",
-      "Sepehr Samavi",
-      "Miguel Angel Rogel Garcia",
-      "Jonathan Kelly"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2610.09165v1",
-      "comment": "8 pages, 7 figures, 4 tables. Code, documentation, and tutorials at https://geodex.readthedocs.io",
-      "first_seen": "2026-10-09",
-      "full_text": "Planning motions that respect the intrinsic geometry of a robot's configuration space, including its curvature and a configuration-dependent notion of cost, yields shorter, lower-energy, and more natural trajectories than planning under the ambient flat metric. Existing libraries for optimization on manifolds provide rich geometric primitives but do not plan around obstacles. While general-purpose motion planning libraries support many state spaces and custom distance functions, they do not yet treat a configuration-dependent Riemannian metric as the geometry that drives distance, interpolation, and geodesics. We present geodex, an open-source C++20 library with Python bindings. The library exposes the manifold, its Riemannian metric, the retraction, and the sampler as independent, interchangeable components through a single sampling-based motion planning interface. The same planner runs unchanged on canonical spaces $\\mathbb{R}^n$, $\\mathbb{T}^n$, $\\mathbb{S}^n$, matrix Lie groups such as $SO(2)$, $SE(2)$, $SO(3)$, and $SE(3)$, products of these spaces, and articulated-robot configuration spaces, each equipped with a user-defined Riemannian metric. We make geodex publicly available with documentation, tests, and a reproducible benchmark suite.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2610.09165.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 9.546,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.546059375014881,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:f564ea6eb2be",
     "source": "news",
     "title": "CMES Robotics Brings AI-Powered Mixed Case Palletizer to the U.S. for the First Time at PACK EXPO International 2026",
@@ -4763,40 +4376,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.708120373484623,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:7a6956cfbed6",
-    "source": "news",
-    "title": "Epson Brings Color Labeling and Robotic Automation Innovation to PACK EXPO",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/10/06/epson-brings-color-labeling-and-robotic-automation-innovation-to-pack-expo/27215",
-    "summary": "Epson to Demonstrate Solutions that Help Manufacturers and Fulfillment Operations Improve Flexibility, Productivity and Efficiency Across Labeling, Packaging and End-of-Line Processes",
-    "published": "2026-10-06T17:03:40+00:00",
-    "updated": "2026-10-06T17:03:40+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-10-07",
-      "full_text": "Epson to Demonstrate Solutions that Help Manufacturers and Fulfillment Operations Improve Flexibility, Productivity and Efficiency Across Labeling, Packaging and End-of-Line Processes",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 8.501,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.5006302940773812,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -5395,43 +4974,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:35b91d7308d0",
-    "source": "news",
-    "title": "Planning system ensures a robot’s flight path will remain collision-free",
-    "url": "https://news.mit.edu/2026/planning-system-ensures-robots-flight-path-will-remain-collision-free-1007",
-    "summary": "This new method, called “SANDO,” could help disaster-response robots navigate dangerous, unknown environments.",
-    "published": "2026-10-07T04:00:00+00:00",
-    "updated": "2026-10-07T04:00:00+00:00",
-    "authors": [
-      "Adam Zewe | MIT News"
-    ],
-    "extra": {
-      "feed": "MIT News — Robotics",
-      "thumbnail": "https://news.mit.edu/sites/default/files/styles/news_article__cover_image__original/public/images/202610/MIT-Safe-Planner-01-press.jpg?itok=MHGngXu6",
-      "first_seen": "2026-10-08",
-      "full_text": "This new method, called “SANDO,” could help disaster-response robots navigate dangerous, unknown environments.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 6.598,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.5982989460664685,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:1a32e66d36b5",
     "source": "news",
     "title": "주간 로봇 기업 주가 동향(10/06 ~ 10/08)",
@@ -5750,42 +5292,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.717912038048115,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "low_priority"
-  },
-  {
-    "id": "news:4889a9dcb9cc",
-    "source": "news",
-    "title": "HD현대로보틱스, ‘FABTECH 2026’서 용접·조선 자동화 솔루션 공개",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=48861",
-    "summary": "HD현대로보틱스가 오는 10월 21일부터 미국 라스베이거스 컨벤션 센터(LVCC)에서 개최되는 북미 최대 규모의 용접·절단·금속가공 전문 전시회 'FABTECH 2026'에 참가해 인공지능(AI) 기반 용접 자동화 및 조선 특화 로봇 솔루션을 공개한다.이번 FABTECH 참가는 HD현대로보틱스의 북미 시장 공략을 본격화하는 계기가 될 전망이다.HD현대로보틱스는 올해 미국 조선소를 대상으로 로봇 용접 솔루션을 공급하며 현지 시장 진출의 첫 성과를 거뒀으며, 이를 바탕으로 미국 조선업과 제조업이 직면한 인력난 및 생산성 문제 해결에 기",
-    "published": "2026-10-06T17:20:32+00:00",
-    "updated": "2026-10-06T17:20:32+00:00",
-    "authors": [
-      "최지호 기자"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-10-07",
-      "full_text": "HD현대로보틱스가 오는 10월 21일부터 미국 라스베이거스 컨벤션 센터(LVCC)에서 개최되는 북미 최대 규모의 용접·절단·금속가공 전문 전시회 'FABTECH 2026'에 참가해 인공지능(AI) 기반 용접 자동화 및 조선 특화 로봇 솔루션을 공개한다.이번 FABTECH 참가는 HD현대로보틱스의 북미 시장 공략을 본격화하는 계기가 될 전망이다.HD현대로보틱스는 올해 미국 조선소를 대상으로 로봇 용접 솔루션을 공급하며 현지 시장 진출의 첫 성과를 거뒀으며, 이를 바탕으로 미국 조선업과 제조업이 직면한 인력난 및 생산성 문제 해결에 기",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 3.503,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.50314021218998,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,

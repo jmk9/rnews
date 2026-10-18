@@ -1595,52 +1595,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2610.08737",
-    "source": "arxiv",
-    "title": "PhoneBot: A Low-Cost Open Humanoid Robot Platform Reusing Smartphones",
-    "url": "http://arxiv.org/abs/2610.08737v1",
-    "summary": "PhoneBot is an open-source humanoid robot platform that cuts cost and complexity by using a commodity smartphone as the robot’s main sensor and compute module, relying on its IMU, camera, wireless connectivity, and onboard processor instead of dedicated robotics hardware. The platform pairs a modular 13-actuator lower body with a torso-mounted phone, supporting stable walking plus demos such as vision-based human following, conversation, filming, and mobile telepresence.",
-    "published": "2026-10-06T17:38:19+00:00",
-    "updated": "2026-10-06T17:38:19+00:00",
-    "authors": [
-      "Ruochen Hou",
-      "Quanyou Wang",
-      "Daniel Koh",
-      "Dennis W. Hong"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2610.08737v1",
-      "comment": null,
-      "first_seen": "2026-10-08",
-      "full_text": "The adoption of humanoid robots in education and research remains limited by high hardware costs, complex sensing systems, and substantial computational requirements. This paper presents PhoneBot, a low-cost, open-source humanoid robot platform that repurposes commodity smartphones as its primary sensing and computing unit. By using a smartphone's integrated inertial measurement unit (IMU), camera, wireless connectivity, and onboard processing capabilities, PhoneBot reduces hardware costs and simplifies the system architecture. The robot combines a modular lower-body structure driven by 13 low-cost actuators with a torso-mounted smartphone that supports perception, control computation, and user interaction. We describe the mechanical design, software architecture, and real-time communication framework that support stable locomotion and capabilities including vision-based human following, conversational interaction, filming, and mobile telepresence. Experimental evaluations demonstrate reliable walking, perception-driven interaction, and straightforward deployment using off-the-shelf consumer smartphones. With fully open-source hardware and software designs, PhoneBot provides an affordable, reproducible platform for education, research, and rapid prototyping. More details are available at https://phonebot.dev.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2610.08737.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Humanoid"
-    ],
-    "score": 24.722,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.7224400667410715,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:Motphys/MotrixLab",
     "source": "github",
     "title": "Motphys/MotrixLab",
@@ -1965,53 +1919,6 @@
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2610.08780",
-    "source": "arxiv",
-    "title": "DepthWorld: 3D World Model for Robot Manipulation",
-    "url": "http://arxiv.org/abs/2610.08780v1",
-    "summary": "DepthWorld turns RGB-only video world models for robot manipulation into 3D-consistent predictors by adding metric depth supervision without disrupting Stable Video Diffusion’s pretrained VAE. It first builds DROID-3D through a calibration pipeline that combines learned stereo depth with a joint factor graph to recover shared robot kinematics and per-scene camera extrinsics, reaching under 0.7 px reprojection error on 90% of external-camera episodes. Trained to jointly predict multi-view RGB and depth with spatial latent tiling, DepthWorld improves RGB prediction by 1.48 dB PSNR over an equal-budget RGB-only baseline while producing depth usable for geometric reasoning.",
-    "published": "2026-10-06T17:59:00+00:00",
-    "updated": "2026-10-06T17:59:00+00:00",
-    "authors": [
-      "Jai Bardhan",
-      "Josef Sivic",
-      "Vladimir Petrik"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2610.08780v1",
-      "comment": "Accepted at the Conference on Robot Learning (CoRL) 2026. Project page: https://www.jaibardhan.com/depthworld. 32 pages including supplementary material, 15 figures, 7 tables",
-      "first_seen": "2026-10-08",
-      "full_text": "World models offer a data-driven alternative to traditional simulators for robotics, with applications spanning policy evaluation, improvement, and planning. All of these uses depend on faithful 3D geometry, yet current video-based world models are trained on RGB alone and produce rollouts that look correct frame-by-frame but do not compose into a consistent 3D world. Closing this gap requires progress on two fronts: large-scale 3D supervision for manipulation, and an architecture that can absorb it without disturbing strong pretrained video priors. We introduce a calibration pipeline that combines learned stereo depth with a joint factor graph, pooling all episodes collected from the same physical robot to recover its shared kinematic parameters alongside per-scene extrinsics. Applied to the DROID dataset, this yields DROID-3D, a calibrated 3D dataset providing dense metric depth and recalibrated multi-view extrinsics (achieving <0.7 px reprojection error on 90% of episodes for external cameras). We then train DepthWorld, a Stable Video Diffusion-based world model that jointly predicts multi-view RGB and depth via spatial latent tiling, leaving the pretrained Variational Autoencoder (VAE) unchanged. Depth supervision improves RGB prediction itself by +1.48 dB PSNR over an identical RGB-only baseline at equal training budget, while simultaneously yielding accurate metric depth for downstream geometric reasoning.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2610.08780.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Manipulator"
-    ],
-    "score": 21.726,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.7255179441170636,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -2518,110 +2425,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "arxiv:2610.08760",
-    "source": "arxiv",
-    "title": "WorldSonus: Bringing Sound to Worlds",
-    "url": "http://arxiv.org/abs/2610.08760v1",
-    "summary": "WorldSonus adds real-time, spatially aligned sound generation to visual world models, using a streaming causal autoregressive diffusion architecture that produces audio chunks fast enough for interactive video with an RTF of 0.41. It supports mid-stream sound edits through chunk-indexed prompt scheduling driven by an audio-captioning pipeline, and uses stereo and ambisonic supervision so generated sound follows scene geometry and camera motion. Although aimed at world models, it also performs competitively on open-domain video-to-audio benchmarks, matching or beating bidirectional models in acoustic quality and spatial alignment.",
-    "published": "2026-10-06T17:50:18+00:00",
-    "updated": "2026-10-06T17:50:18+00:00",
-    "authors": [
-      "Pengjun Fang",
-      "Jingyi Fa",
-      "Kam Man Wu",
-      "Jiaming Wang",
-      "Haoyuan Huang",
-      "Yaguang Wu",
-      "Xiangjun Huang",
-      "Ziyang Ma",
-      "Weijia Chen",
-      "Hongyu Liu",
-      "Zeyue Tian",
-      "Qifeng Chen"
-    ],
-    "extra": {
-      "categories": [
-        "cs.SD",
-        "cs.AI",
-        "cs.CV",
-        "eess.AS"
-      ],
-      "primary_category": "cs.SD",
-      "pdf_url": "https://arxiv.org/pdf/2610.08760v1",
-      "comment": "25 pages, 4 figures, 16 tables. Project page: https://noizai.github.io/WorldSonus/",
-      "first_seen": "2026-10-08",
-      "full_text": "Recent advances in world models have enabled increasingly realistic visual synthesis. However, these generated environments remain largely silent. Bringing sound to world models poses three core challenges: real-time generation to keep pace with interactive video streams, interactive control to respond to mid-stream sound instructions, and spatially aligned stereo to reflect scene geometry and camera motion. To address these demands, we introduce WorldSonus, an interactive video-to-audio framework designed for real-time spatial sound synthesis in world models. For real-time generation, WorldSonus employs a streaming causal autoregressive diffusion architecture that synthesizes audio chunks at a low real-time factor (RTF) of 0.41. For interactive control, we incorporate an audio-centric captioning pipeline with chunk-indexed prompt scheduling, enabling dynamic manipulation of sound events during generation. For spatial alignment, we leverage high-quality stereo supervision curated from diverse stereo and ambisonic data. Extensive experiments demonstrate that while tailored for world models, WorldSonus generalizes effectively to open-domain video-to-audio benchmarks, matching or outperforming state-of-the-art bidirectional models in both acoustic quality and spatial alignment. Project page: https://noizai.github.io/WorldSonus/",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2610.08760.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Manipulator"
-    ],
-    "score": 11.724,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.7242232861731153,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "arxiv:2610.08659",
-    "source": "arxiv",
-    "title": "Selective Transfer of RL Updates for Visual Reasoning",
-    "url": "http://arxiv.org/abs/2610.08659v1",
-    "summary": "Selective-RL transfers visual reasoning ability by extracting only the parameter update induced during RL post-training, then keeping the dominant matrix-wise directions of that update before applying them to a VLM’s language modules. Across three model families and five visual-reasoning benchmarks, it beats full-update interpolation in 12 of 15 comparisons, including an 8.55-point MathVision gain for the Qwen recipient, with controls suggesting the effect is not just from update size or arbitrary low-rank compression.",
-    "published": "2026-10-06T16:43:55+00:00",
-    "updated": "2026-10-06T16:43:55+00:00",
-    "authors": [
-      "Suxin Ji",
-      "Hungtao Wan",
-      "Mingjun Liu",
-      "An Zhang"
-    ],
-    "extra": {
-      "categories": [
-        "cs.CV",
-        "cs.AI"
-      ],
-      "primary_category": "cs.CV",
-      "pdf_url": "https://arxiv.org/pdf/2610.08659v1",
-      "comment": null,
-      "first_seen": "2026-10-08",
-      "full_text": "Model merging provides a training-free way to transfer reasoning capabilities from language models to vision-language models (VLMs), but endpoint-based transfer can conflate pre-existing model differences with changes acquired during reasoning post-training. We instead formulate capability transfer around the training-stage update, isolating the parameter changes induced by reinforcement learning (RL). Yet transferring this update in full remains suboptimal: we find that its components differ substantially in cross-model transferability, with dominant directions transferring more effectively than the complete update. Based on this finding, we introduce Selective-RL, which isolates the RL-stage update, retains its dominant matrix-wise directions with magnitude preservation, and transfers them to the language modules of a VLM. Across three model families and five visual-reasoning benchmarks, Selective-RL improves full-update interpolation in 12 of 15 comparisons, including an 8.55 percentage-point MathVision gain on the Qwen recipient. Matched controls show that update magnitude or arbitrary low rank alone does not reproduce these gains. These results highlight a distinction between what is acquired during post-training and what remains transferable across models, providing a training-stage perspective on cross-model capability transfer. Code is available at https://anonymous.4open.science/r/selective-rl.",
-      "summary_kind": "llm",
-      "thumbnail_path": "thumbnails/arxiv/2610.08659.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 11.714,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.7143448136011905,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:96d3485ac89c",
     "source": "news",
     "title": "DataraAI develops robotic system to automate server cabling",
@@ -2770,42 +2573,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:3d40b849dddb",
-    "source": "news",
-    "title": "How Robotic-Assisted Surgery is Changing Post-Surgical Recovery Times",
-    "url": "https://roboticsandautomationnews.com/2026/10/06/how-robotic-assisted-surgery-is-changing-post-surgical-recovery-times/105591/",
-    "summary": "Your surgeon says you’ll be “back on your feet in no time”. But what does that actually mean? Recovery timelines vary wildly depending on the type of procedure you’re having, and the gap between traditional open surgery and robotic-assisted techniques has never been wider. If you’re researching a procedure right now, the difference could mean […]",
-    "published": "2026-10-06T21:55:27+00:00",
-    "updated": "2026-10-06T21:55:27+00:00",
-    "authors": [
-      "Sam Francis"
-    ],
-    "extra": {
-      "feed": "Robotics and Automation News",
-      "first_seen": "2026-10-07",
-      "full_text": "Your surgeon says you’ll be “back on your feet in no time”. But what does that actually mean? Recovery timelines vary wildly depending on the type of procedure you’re having, and the gap between traditional open surgery and robotic-assisted techniques has never been wider. If you’re researching a procedure right now, the difference could mean […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 10.761,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.7607039252728174,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:325dca5e0047",
     "source": "news",
     "title": "Robot data startup Mecka AI nabs $60M from Sequoia",
@@ -2870,42 +2637,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 2.0,
       "recency": 2.872509477671131,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:78f6108fe48d",
-    "source": "news",
-    "title": "[게시판] 두산로보틱스, 989억 규모 피지컬 AI 국책과제 2건 선정 등 단신",
-    "url": "https://www.aitimes.com/news/articleView.html?idxno=216013",
-    "summary": "■ 두산로보틱스(대표 권영민)는 산업통상부와 한국산업기술기획평가원이 공동 주관한 'K-온디바이스 AI 반도체 기술개발사업'과 '로봇산업 기술개발사업'이 국책과제로 선정됐다고 밝혔다. 총 연구개발비는 989억원이며, 이 중 정부 지원금은 681억원이다. 에이딘로보틱스, 모빌린트 등과 온디바이스 AI 반도체 기반 차세대 협동로봇을, 딥엑스 등과 원전 특화 용접 AI 솔루션을 개발할 예정이다.■ 메가존클라우드(대표 염동훈)는 엔터프라이즈 AI 운영체제(OS) '에어 스튜디오 v3'를 업데이트했다고 밝혔다. 에어 스튜디오는 기업의 AI 구",
-    "published": "2026-10-06T17:26:19+00:00",
-    "updated": "2026-10-06T17:26:19+00:00",
-    "authors": [
-      "김해원 기자"
-    ],
-    "extra": {
-      "feed": "AI타임스",
-      "first_seen": "2026-10-07",
-      "full_text": "■ 두산로보틱스(대표 권영민)는 산업통상부와 한국산업기술기획평가원이 공동 주관한 'K-온디바이스 AI 반도체 기술개발사업'과 '로봇산업 기술개발사업'이 국책과제로 선정됐다고 밝혔다. 총 연구개발비는 989억원이며, 이 중 정부 지원금은 681억원이다. 에이딘로보틱스, 모빌린트 등과 온디바이스 AI 반도체 기반 차세대 협동로봇을, 딥엑스 등과 원전 특화 용접 AI 솔루션을 개발할 예정이다.■ 메가존클라우드(대표 염동훈)는 엔터프라이즈 AI 운영체제(OS) '에어 스튜디오 v3'를 업데이트했다고 밝혔다. 에어 스튜디오는 기업의 AI 구",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 9.721,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.720654317599206,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -3015,40 +2746,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 2.0,
       "recency": 2.9086007463442463,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:7a6956cfbed6",
-    "source": "news",
-    "title": "Epson Brings Color Labeling and Robotic Automation Innovation to PACK EXPO",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/10/06/epson-brings-color-labeling-and-robotic-automation-innovation-to-pack-expo/27215",
-    "summary": "Epson to Demonstrate Solutions that Help Manufacturers and Fulfillment Operations Improve Flexibility, Productivity and Efficiency Across Labeling, Packaging and End-of-Line Processes",
-    "published": "2026-10-06T17:03:40+00:00",
-    "updated": "2026-10-06T17:03:40+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-10-07",
-      "full_text": "Epson to Demonstrate Solutions that Help Manufacturers and Fulfillment Operations Improve Flexibility, Productivity and Efficiency Across Labeling, Packaging and End-of-Line Processes",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 8.717,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.7172837861805554,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -3281,79 +2978,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:35b91d7308d0",
-    "source": "news",
-    "title": "Planning system ensures a robot’s flight path will remain collision-free",
-    "url": "https://news.mit.edu/2026/planning-system-ensures-robots-flight-path-will-remain-collision-free-1007",
-    "summary": "MIT researchers introduced SANDO, a planning method meant to keep robots’ flight paths collision-free while moving through dangerous, unknown environments. The system is aimed at disaster-response robots, where reliable navigation through unstable or cluttered spaces could make autonomous aerial search and inspection safer.",
-    "published": "2026-10-07T04:00:00+00:00",
-    "updated": "2026-10-07T04:00:00+00:00",
-    "authors": [
-      "Adam Zewe | MIT News"
-    ],
-    "extra": {
-      "feed": "MIT News — Robotics",
-      "thumbnail": "https://news.mit.edu/sites/default/files/styles/news_article__cover_image__original/public/images/202610/MIT-Safe-Planner-01-press.jpg?itok=MHGngXu6",
-      "first_seen": "2026-10-08",
-      "full_text": "This new method, called “SANDO,” could help disaster-response robots navigate dangerous, unknown environments.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 6.815,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.8149524384375,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:ad36b0eda68e",
-    "source": "news",
-    "title": "기계연, 로봇 관절·손끝 움직임 정밀 감지하는 초소형 3축 자기 센서 개발",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=48859",
-    "summary": "로봇의 관절이나 손끝처럼 작은 공간에서 움직임과 위치를 정밀하게 파악하는 데 활용할 수 있는 초소형 3축 자기 센서가 세계 최초로 개발됐다. 나노입자를 센서 위에 인쇄해 기존 평면형 센서로는 측정하기 어려웠던 수직 방향의 자기장까지 감지하는 기술로, 별도의 초기화 장치 없이도 세 방향의 자기장을 측정할 수 있다. 향후 로봇과 웨어러블 기기, 의료기기 등 정밀한 움직임을 감지해야 하는 분야에 활용될 것으로 기대된다.한국기계연구원(원장 류석현, 이하 기계연) AI로봇연구소 바이오기계연구실 오선종 책임연구원 연구팀은 초상자성 나노입자를",
-    "published": "2026-10-06T16:56:35+00:00",
-    "updated": "2026-10-06T16:56:35+00:00",
-    "authors": [
-      "최지호 기자"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-10-07",
-      "full_text": "로봇의 관절이나 손끝처럼 작은 공간에서 움직임과 위치를 정밀하게 파악하는 데 활용할 수 있는 초소형 3축 자기 센서가 세계 최초로 개발됐다. 나노입자를 센서 위에 인쇄해 기존 평면형 센서로는 측정하기 어려웠던 수직 방향의 자기장까지 감지하는 기술로, 별도의 초기화 장치 없이도 세 방향의 자기장을 측정할 수 있다. 향후 로봇과 웨어러블 기기, 의료기기 등 정밀한 움직임을 감지해야 하는 분야에 활용될 것으로 기대된다.한국기계연구원(원장 류석현, 이하 기계연) AI로봇연구소 바이오기계연구실 오선종 책임연구원 연구팀은 초상자성 나노입자를",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 6.716,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.716229715500992,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:87f1d39fad5c",
     "source": "news",
     "title": "The Machines that Make the Machines",
@@ -3502,79 +3126,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:75144c52e817",
-    "source": "news",
-    "title": "Drones sink ships near NATO countries in “unacceptable” attacks, EU says",
-    "url": "https://arstechnica.com/gadgets/2026/10/drone-strikes-likely-russian-sink-ships-in-nato-countries-economic-zones/",
-    "summary": "Two cargo ships have sunk, one ship was afire, and sailors are dead or missing.",
-    "published": "2026-10-06T21:31:10+00:00",
-    "updated": "2026-10-06T21:31:10+00:00",
-    "authors": [
-      "Jeremy Hsu"
-    ],
-    "extra": {
-      "feed": "Ars Technica",
-      "thumbnail": "https://cdn.arstechnica.net/wp-content/uploads/2026/10/Drone-strikes-on-grain-cargo-ships-near-Odesa-500x500.jpg",
-      "first_seen": "2026-10-07",
-      "full_text": "Two cargo ships have sunk, one ship was afire, and sailors are dead or missing.",
-      "summary_kind": "llm"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 5.757,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.757090333926091,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:3bc776675276",
-    "source": "news",
-    "title": "LG화학, 유럽 플라스틱 전시회서 로봇용 차세대 소재 공개한다",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=48860",
-    "summary": "LG화학이 12일부터 16일까지 독일 프리드리히스하펜에서 열리는 플라스틱 전시회 '파쿠마(Fakuma) 2026'에 참가해 미래 산업을 겨냥한 차세대 소재 솔루션을 선보인다고 6일 밝혔다.파쿠마는 글로벌 소재 기업과 유럽 주요 제조업체들이 참가하는 대표적인 플라스틱 산업 전시회다. LG화학은 이번 전시에서 자동차와 전기·전자 산업을 넘어 AI 데이터센터, 로보틱스, 고기능 통기성 필름(Breathable Film) 등 미래 성장 시장을 겨냥한 고성능 고부가 소재 솔루션을 집중 선보일 계획이다.LG화학은 약 70㎡ 규모의 전시관을 마",
-    "published": "2026-10-06T17:06:18+00:00",
-    "updated": "2026-10-06T17:06:18+00:00",
-    "authors": [
-      "최지호 기자"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-10-07",
-      "full_text": "LG화학이 12일부터 16일까지 독일 프리드리히스하펜에서 열리는 플라스틱 전시회 '파쿠마(Fakuma) 2026'에 참가해 미래 산업을 겨냥한 차세대 소재 솔루션을 선보인다고 6일 밝혔다.파쿠마는 글로벌 소재 기업과 유럽 주요 제조업체들이 참가하는 대표적인 플라스틱 산업 전시회다. LG화학은 이번 전시에서 자동차와 전기·전자 산업을 넘어 AI 데이터센터, 로보틱스, 고기능 통기성 필름(Breathable Film) 등 미래 성장 시장을 겨냥한 고성능 고부가 소재 솔루션을 집중 선보일 계획이다.LG화학은 약 70㎡ 규모의 전시관을 마",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 5.718,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.7176756481249997,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:1c55917c1819",
     "source": "news",
     "title": "UNIST AI대학원 백승렬 교수팀, ECCV 2026 연계 챌린지서 각각 1·2·3위 올라",
@@ -3676,42 +3227,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.934565529955357,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "low_priority"
-  },
-  {
-    "id": "news:4889a9dcb9cc",
-    "source": "news",
-    "title": "HD현대로보틱스, ‘FABTECH 2026’서 용접·조선 자동화 솔루션 공개",
-    "url": "https://www.irobotnews.com/news/articleView.html?idxno=48861",
-    "summary": "HD현대로보틱스가 오는 10월 21일부터 미국 라스베이거스 컨벤션 센터(LVCC)에서 개최되는 북미 최대 규모의 용접·절단·금속가공 전문 전시회 'FABTECH 2026'에 참가해 인공지능(AI) 기반 용접 자동화 및 조선 특화 로봇 솔루션을 공개한다.이번 FABTECH 참가는 HD현대로보틱스의 북미 시장 공략을 본격화하는 계기가 될 전망이다.HD현대로보틱스는 올해 미국 조선소를 대상으로 로봇 용접 솔루션을 공급하며 현지 시장 진출의 첫 성과를 거뒀으며, 이를 바탕으로 미국 조선업과 제조업이 직면한 인력난 및 생산성 문제 해결에 기",
-    "published": "2026-10-06T17:20:32+00:00",
-    "updated": "2026-10-06T17:20:32+00:00",
-    "authors": [
-      "최지호 기자"
-    ],
-    "extra": {
-      "feed": "로봇신문 (irobotnews)",
-      "first_seen": "2026-10-07",
-      "full_text": "HD현대로보틱스가 오는 10월 21일부터 미국 라스베이거스 컨벤션 센터(LVCC)에서 개최되는 북미 최대 규모의 용접·절단·금속가공 전문 전시회 'FABTECH 2026'에 참가해 인공지능(AI) 기반 용접 자동화 및 조선 특화 로봇 솔루션을 공개한다.이번 FABTECH 참가는 HD현대로보틱스의 북미 시장 공략을 본격화하는 계기가 될 전망이다.HD현대로보틱스는 올해 미국 조선소를 대상으로 로봇 용접 솔루션을 공급하며 현지 시장 진출의 첫 성과를 거뒀으며, 이를 바탕으로 미국 조선업과 제조업이 직면한 인력난 및 생산성 문제 해결에 기",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 3.72,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.719793703767361,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
