@@ -548,49 +548,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:scy-v/VLA-Precision",
-    "source": "github",
-    "title": "scy-v/VLA-Precision",
-    "url": "https://github.com/scy-v/VLA-Precision",
-    "summary": "VLA-Precision: Asymmetric Co-Bootstrapping for Efficient Real-World Online RL of Vision-Language-Action Models",
-    "published": "2026-09-02T08:40:01Z",
-    "updated": "2026-11-06T10:11:47Z",
-    "authors": [
-      "scy-v"
-    ],
-    "extra": {
-      "stars": 102,
-      "forks": 10,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 1,
-      "license": "Apache-2.0",
-      "first_seen": "2026-09-04",
-      "full_text": "VLA-Precision: Asymmetric Co-Bootstrapping for Efficient Real-World Online RL of Vision-Language-Action Models",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Other"
-    ],
-    "score": 37.157,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.0105276255233133,
-      "has_code": 6.0,
-      "github_stars_log": 10.064186123525861,
-      "github_forks_log": 2.08278537031645,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:unitreerobotics/unitree_sim_isaaclab",
     "source": "github",
     "title": "unitreerobotics/unitree_sim_isaaclab",
@@ -674,48 +631,6 @@
       "github_stars_log": 10.0,
       "github_forks_log": 1.9084850188786497,
       "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:XuPeng23/AeroVLA",
-    "source": "github",
-    "title": "XuPeng23/AeroVLA",
-    "url": "https://github.com/XuPeng23/AeroVLA",
-    "summary": "[Accepted to ECCV 2026] Official repository for AeroVLA (formerly known as AerialVLA): A Vision-Language-Action Model for UAV Navigation via Minimalist End-to-End Control",
-    "published": "2026-03-15T10:13:25Z",
-    "updated": "2026-11-07T13:03:47Z",
-    "authors": [
-      "XuPeng23"
-    ],
-    "extra": {
-      "stars": 205,
-      "forks": 13,
-      "language": "Python",
-      "topics": [],
-      "open_issues": 13,
-      "license": "Apache-2.0",
-      "first_seen": "2026-06-20",
-      "full_text": "[Accepted to ECCV 2026] Official repository for AeroVLA (formerly known as AerialVLA): A Vision-Language-Action Model for UAV Navigation via Minimalist End-to-End Control",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 36.112,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.2504085783556547,
-      "has_code": 6.0,
-      "github_stars_log": 11.569336101845767,
-      "github_forks_log": 2.292256071356476,
-      "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
     },
@@ -1266,57 +1181,6 @@
       "has_code": 6.0,
       "github_stars_log": 6.808639180087964,
       "github_forks_log": 0.9542425094393249,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2611.11854",
-    "source": "arxiv",
-    "title": "Decoupled Asynchronous System for Humanoids (DASH): Latency-Agnostic Scaling of Vision-Language-Action Models for Humanoid Manipulation",
-    "url": "http://arxiv.org/abs/2611.11854v1",
-    "summary": "Vision-language-action (VLA) models pair a vision-language backbone with an action head, but in closed-loop control the backbone sits on the control-critical path: while it computes, the robot keeps moving, so each executed action is conditioned on an increasingly stale observation.",
-    "published": "2026-11-09T04:23:14+00:00",
-    "updated": "2026-11-09T04:23:14+00:00",
-    "authors": [
-      "Bingzhang Wang",
-      "Nathan Zhao",
-      "Jialeng Ni",
-      "Jiajin Zheng",
-      "Yin Zhang",
-      "Kehua Chen",
-      "Jian Yao"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2611.11854v1",
-      "comment": null,
-      "first_seen": "2026-11-11",
-      "full_text": "Vision-language-action (VLA) models pair a vision-language backbone with an action head, but in closed-loop control the backbone sits on the control-critical path: while it computes, the robot keeps moving, so each executed action is conditioned on an increasingly stale observation. A larger backbone therefore directly blocks reactivity, especially in humanoid dexterous manipulation. We present DASH, a Decoupled Asynchronous System for Humanoids that removes this coupling. DASH splits the policy into a slow vision-language model (System 2) and a fast flow-matching action head (System 1) that run as concurrent processes over the LCM communication protocol, so the control rate is set by the action head alone, independent of backbone size. The action head fuses stale semantics from a frozen backbone with fresh vision from its own ResNet encoder, desynchronized training exposes it to the staleness it meets at deployment, and an adaptive temporal aggregator aligns overlapping action chunks under variable inference latency. On an asynchronous RoboTwin benchmark that charges inference latency in simulated time, DASH holds 20 Hz control rate from 0.8B to 8B backbones while the synchronous rate falls from 9.7 to 4.1 Hz, with higher success at every size. On a real humanoid with dexterous hands, DASH achieves clearly higher pick-and-place success than the synchronous pipeline.",
-      "summary_kind": "truncation",
-      "thumbnail_path": "thumbnails/arxiv/2611.11854.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Manipulator",
-      "#Humanoid"
-    ],
-    "score": 32.602,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 10.0,
-      "research_interest_abstract": 6.0,
-      "recency": 2.6015172217683533,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
@@ -2048,111 +1912,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2611.11554",
-    "source": "arxiv",
-    "title": "Kimodo-Policy: Learning Kinematic Action Models for Humanoid Loco-Manipulation",
-    "url": "http://arxiv.org/abs/2611.11554v1",
-    "summary": "Humanoid loco-manipulation requires continuous coordination of high-dimensional whole-body motion to realize task objectives. While vision-language-action models and world action models transfer semantic and visual-dynamics priors to robot control, these priors do not necessarily capture the structure of robot motion.",
-    "published": "2026-11-08T18:55:10+00:00",
-    "updated": "2026-11-08T18:55:10+00:00",
-    "authors": [
-      "Yunheng Wang",
-      "Jiaxi Zhang",
-      "Wei Lu",
-      "Yuetong Fang",
-      "Taowen Wang",
-      "Yixiao Feng",
-      "Shuning Zhang",
-      "Junzhe Xu",
-      "Yichi Wang",
-      "Zizhao Yuan",
-      "Kailun Huang",
-      "Lusong Li",
-      "Mingqian Zhou",
-      "Zecui Zeng",
-      "Renjing Xu"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.CV"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2611.11554v1",
-      "comment": "23 pages, 14 figures, 4 tables. Project page: https://kimodo-policy.github.io/",
-      "first_seen": "2026-11-11",
-      "full_text": "Humanoid loco-manipulation requires continuous coordination of high-dimensional whole-body motion to realize task objectives. While vision-language-action models and world action models transfer semantic and visual-dynamics priors to robot control, these priors do not necessarily capture the structure of robot motion. We introduce Kinematic Action Models (KAMs), a paradigm that treats whole-body motion as a direct pretraining target and uses a pretrained motion generator as the primary action-generation backbone. KAMs ground learned temporal and cross-body coordination priors through task conditioning, visual observations, and execution feedback. We present Kimodo-Policy as an initial instantiation, combining a frozen Kimodo text-to-motion backbone with lightweight ControlNet-based visual conditioning. A root-body-hand hierarchy coordinates locomotion and manipulation, while motion-history conditioning and repeated action-chunk prediction bridge motion synthesis and closed-loop control. Following large-scale loco-manipulation pretraining, the policy achieves the highest overall success among compared policies on multi-task HumanoidArena (72.14%), competitive performance on SIMPLE, and 60% mean success across eight real-world tasks, with 678M parameters (92M trainable). Ablations support the contribution of the pretrained motion backbone. Together, these results provide initial evidence for motion generation as a complementary foundation for humanoid action learning.",
-      "summary_kind": "truncation",
-      "thumbnail_path": "thumbnails/arxiv/2611.11554.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#VLA",
-      "#Manipulator",
-      "#Humanoid"
-    ],
-    "score": 25.517,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.5169834871130954,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:hku-sail/StreamPI",
-    "source": "github",
-    "title": "hku-sail/StreamPI",
-    "url": "https://github.com/hku-sail/StreamPI",
-    "summary": "[NeurIPS 2026] Official code of \"StreamPI: Streaming Multimodal Temporal Modeling for Vision-Language-Action Models\"",
-    "published": "2026-08-26T16:13:52Z",
-    "updated": "2026-11-06T12:19:55Z",
-    "authors": [
-      "hku-sail"
-    ],
-    "extra": {
-      "stars": 204,
-      "forks": 15,
-      "language": "Python",
-      "topics": [
-        "vla"
-      ],
-      "open_issues": 2,
-      "license": "Apache-2.0",
-      "first_seen": "2026-08-28",
-      "full_text": "[NeurIPS 2026] Official code of \"StreamPI: Streaming Multimodal Temporal Modeling for Vision-Language-Action Models\"",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 24.997,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.029595086227679,
-      "has_code": 6.0,
-      "github_stars_log": 11.558769305278771,
-      "github_forks_log": 2.4082399653118496,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:roboninecom/SO-ARM102",
     "source": "github",
     "title": "roboninecom/SO-ARM102",
@@ -2873,55 +2632,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2611.11718",
-    "source": "arxiv",
-    "title": "Accelerated Reinforcement Learning for Soft Robotics: Hours Instead of Years",
-    "url": "http://arxiv.org/abs/2611.11718v1",
-    "summary": "Reinforcement learning (RL) requires large amounts of interaction data or a reliable simulator, both hard to obtain for nonlinear soft robotic hardware. Recent work shows that a time-scale separation inherent to soft robot dynamics justifies their reduction to low-dimensional invariant manifolds, known as adiabatic spectral submanifolds (aSSMs).",
-    "published": "2026-11-09T00:26:43+00:00",
-    "updated": "2026-11-09T00:26:43+00:00",
-    "authors": [
-      "Roshan S. Kaundinya",
-      "Hehui Zheng",
-      "Robert K. Katzschmann",
-      "George Haller"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.AI",
-        "cs.LG",
-        "math.DS"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2611.11718v1",
-      "comment": "25 pages, 6 figures, 3 extended data figures",
-      "first_seen": "2026-11-11",
-      "full_text": "Reinforcement learning (RL) requires large amounts of interaction data or a reliable simulator, both hard to obtain for nonlinear soft robotic hardware. Recent work shows that a time-scale separation inherent to soft robot dynamics justifies their reduction to low-dimensional invariant manifolds, known as adiabatic spectral submanifolds (aSSMs). We demonstrate that an aSSM-reduced model, a simple polynomial ordinary differential equation learned purely from pre-collected data, can serve as an RL training environment. On a pneumatically actuated soft arm, we train a trajectory-tracking policy in 3 hours on a six-dimensional aSSM-reduced model and deploy it without fine-tuning, whereas reproducing this policy training extrapolates to 3 years of hardware interaction. Our policy tracks dynamic targets with 40% lower error than otherwise identical policies trained on a 4.8-million-parameter recurrent neural network (RNN) or a 1.7-million-parameter transformer, which take 13 and 100 hours to identify, against 5 minutes for our mathematically justified 6,924-parameter model.",
-      "summary_kind": "truncation",
-      "thumbnail_path": "thumbnails/arxiv/2611.11718.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 21.566,
-    "score_breakdown": {
-      "title_keyword": 9.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.566321287447917,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "arxiv:2611.12824",
     "source": "arxiv",
     "title": "DreamLander: A 6-DOF World Model based Reinforcement Learning Planetary Lander",
@@ -3219,53 +2929,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2611.11798",
-    "source": "arxiv",
-    "title": "PAIR: Proprioception-Aligned Image-Ray Representations for Viewpoint-Robust Manipulation",
-    "url": "http://arxiv.org/abs/2611.11798v1",
-    "summary": "While imitation learning has made substantial progress toward generalizable robot manipulation through scaling, viewpoint robustness remains a major bottleneck.",
-    "published": "2026-11-09T02:54:44+00:00",
-    "updated": "2026-11-09T02:54:44+00:00",
-    "authors": [
-      "Sung-Wook Lee",
-      "Xuhui Kang",
-      "Dylan Losey",
-      "Yen-Ling Kuo"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2611.11798v1",
-      "comment": null,
-      "first_seen": "2026-11-11",
-      "full_text": "While imitation learning has made substantial progress toward generalizable robot manipulation through scaling, viewpoint robustness remains a major bottleneck. Visuomotor policies rely heavily on visual inputs, yet images provide an inherently ambiguous signal under viewpoint change: similar scenes may appear markedly different across viewpoints, while distinct states may share certain visual overlaps. A policy must therefore infer not only the task-relevant state, but also how it is visually projected under a particular camera configuration. This entanglement of viewpoint-dependent appearance and task-relevant state can make learning inefficient and limit generalization to unseen viewpoints. Recent work has begun to address this challenge through camera-ray conditioning and representation learning using geometric cues to induce invariance. However, providing camera information as additional context does not by itself ground visual representations in how the task scene is visually projected, while geometric alignment without camera context can introduce spurious correspondences by ignoring viewpoint-dependent projection. We propose PAIR, a contrastive learning framework that aligns joint image-ray representations using robot proprioception. PAIR encourages observations with similar robot states to remain close in representation space across viewpoints, providing a structured grounding signal for learning viewpoint-robust features. PAIR is a highly adaptable framework: it can be used to train Diffusion Policy (DP) or post-train vision-language-action (VLA) models. In simulated and real-world manipulation benchmarks with camera variation, PAIR consistently outperforms the behavior cloning baseline without ray conditioning by 12.7% and 26.7% points, respectively, demonstrating stronger generalization to unseen viewpoints. Project website: PAIRrobot.github.io.",
-      "summary_kind": "truncation",
-      "thumbnail_path": "thumbnails/arxiv/2611.11798.jpg"
-    },
-    "tags": [
-      "#IL",
-      "#VLA",
-      "#Manipulator"
-    ],
-    "score": 20.588,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 6.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 6.0,
-      "recency": 2.5883475781051586,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:6b054182b93f",
     "source": "news",
     "title": "GITEX World RobotiX 2026 brings humanoid debuts and next-gen embodied Artificial Intelligence (AI) to Dubai",
@@ -3500,50 +3163,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2611.11164",
-    "source": "arxiv",
-    "title": "Tutorial: Vision-Based Formation Control with Differential-Drive Robots",
-    "url": "http://arxiv.org/abs/2611.11164v1",
-    "summary": "This tutorial presents a step-by-step introduction to multi-robot formation control using differential- drive robots, an overhead camera, and Python. ArUco markers are used to estimate robot positions and orientations, while desired pairwise displacement vectors define a circular formation.",
-    "published": "2026-11-08T06:11:34+00:00",
-    "updated": "2026-11-08T06:11:34+00:00",
-    "authors": [
-      "Christian Marowski",
-      "Byung-Cheol Min"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2611.11164v1",
-      "comment": null,
-      "first_seen": "2026-11-11",
-      "full_text": "This tutorial presents a step-by-step introduction to multi-robot formation control using differential- drive robots, an overhead camera, and Python. ArUco markers are used to estimate robot positions and orientations, while desired pairwise displacement vectors define a circular formation. By comparing measured and desired relative positions, the controller computes movement vectors that are converted into differential-drive wheel commands, with basic proximity-sensor-based obstacle avoidance. The tutorial guides readers through hardware and software setup, robot pose estimation, formation geometry, feedback control, system integration, and formation-error evaluation. Motivated by the need to bridge the gap between theoretical understanding and practical implementation in robotics education, we emphasize how mathematical concepts are translated into coordinated behaviors on physical robots. Although the implementation uses a specific robotic platform, the underlying perception and formation-control principles can be adapted to other differential-drive robots and simulation environments. The accompanying open-source GitHub repository provides the Python implementation, setup instructions, and demonstrations to support hands-on learning and further exploration of multi-robot systems.",
-      "summary_kind": "truncation",
-      "thumbnail_path": "thumbnails/arxiv/2611.11164.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 19.403,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.4033525334151786,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:JaimeParker/rl-garden",
     "source": "github",
     "title": "JaimeParker/rl-garden",
@@ -3762,56 +3381,6 @@
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "github:openrobokit/graspkit",
-    "source": "github",
-    "title": "openrobokit/graspkit",
-    "url": "https://github.com/openrobokit/graspkit",
-    "summary": "An end-to-end toolkit for manipulation across robot grippers and dexterous hands.",
-    "published": "2026-10-30T14:13:07Z",
-    "updated": "2026-11-08T12:37:58Z",
-    "authors": [
-      "openrobokit"
-    ],
-    "extra": {
-      "stars": 24,
-      "forks": 2,
-      "language": "Python",
-      "topics": [
-        "dexterous-manipulation",
-        "grasp-planning",
-        "openrobokit",
-        "robot-grasping",
-        "robot-learning",
-        "robotics",
-        "sim-to-real"
-      ],
-      "open_issues": 0,
-      "license": "MIT",
-      "first_seen": "2026-11-09",
-      "full_text": "An end-to-end toolkit for manipulation across robot grippers and dexterous hands.",
-      "summary_kind": "truncation",
-      "thumbnail": "https://openrobokit.com/assets/docs/graspkit/assets/graspkit-banner.webp"
-    },
-    "tags": [
-      "#Manipulator"
-    ],
-    "score": 18.405,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.4608525238144843,
-      "has_code": 6.0,
-      "github_stars_log": 6.989700043360188,
-      "github_forks_log": 0.9542425094393249,
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -0.0
@@ -4065,104 +3634,6 @@
       "research_interest_title": 5.0,
       "research_interest_abstract": 2.0,
       "recency": 2.724299933003472,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2611.11688",
-    "source": "arxiv",
-    "title": "Streaming Failure Forecasting: VLA Failure Monitors That Keep Learning After Deployment",
-    "url": "http://arxiv.org/abs/2611.11688v1",
-    "summary": "Failure monitors for vision-language-action (VLA) policies are trained offline and then frozen. After deployment, lighting, objects and cameras drift, and the policy itself is updated or moved to new tasks. On recorded real-robot runs, after a switch of task or policy version, a frozen monitor fit on the old task ranks failures little better than chance.",
-    "published": "2026-11-08T23:17:09+00:00",
-    "updated": "2026-11-08T23:17:09+00:00",
-    "authors": [
-      "Amit Jadhav",
-      "Shaurya Beriwala",
-      "David Q. Liu",
-      "Yanfei Liu"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.LG"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2611.11688v1",
-      "comment": "25 pages, 13 figures, 9 tables. A short version was accepted at the Sim2Real2Field and EEAI workshops at CoRL 2026. Project page: https://sff-research.org",
-      "first_seen": "2026-11-11",
-      "full_text": "Failure monitors for vision-language-action (VLA) policies are trained offline and then frozen. After deployment, lighting, objects and cameras drift, and the policy itself is updated or moved to new tasks. On recorded real-robot runs, after a switch of task or policy version, a frozen monitor fit on the old task ranks failures little better than chance. We present Streaming Failure Forecasting (SFF), a monitor that keeps learning from the one label every episode provides: whether it succeeded. SFF keeps the offline monitor's network fixed and refits only its last linear layer after each episode, at 2.18 ms per policy call on a Jetson CPU core. Its alarm threshold moves only after successes, which in simulation kept false alarms near target except when two drifts came at once. With every setting locked before testing, SFF ranks failures better than the same monitor kept frozen on 4 of 5 simulated test suites under unannounced drift, and above resetting on detected drift on every suite. Carried with its locked learner settings to 434 recorded runs of four VLAs on real SO-101 arms, replayed across unannounced switches of task or policy version, it ranks failures better than the frozen monitor for every VLA and, in an exploratory comparison, above a full reset at the true switch. A deployed failure monitor need not stay frozen: refitting its readout from outcomes is cheap and helps after the changes we tested.",
-      "summary_kind": "truncation",
-      "thumbnail_path": "thumbnails/arxiv/2611.11688.jpg"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 17.556,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.555969104141865,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2611.11648",
-    "source": "arxiv",
-    "title": "PA-SaR: Perception-Aware Learning, Control, and Coordination for Multi-Robot Search and Rescue",
-    "url": "http://arxiv.org/abs/2611.11648v1",
-    "summary": "Autonomous SaR requires robots to explore unknown or partially known environments, avoid hazards, coordinate team activities, and guide discovered victims to safety.",
-    "published": "2026-11-08T22:09:54+00:00",
-    "updated": "2026-11-08T22:09:54+00:00",
-    "authors": [
-      "Jocubas Dimsa",
-      "Maria Grouev",
-      "Filip Keerberg",
-      "Nicolas Laplagne",
-      "Tigo Schutgens",
-      "Sven Schoonebeek",
-      "Anahita Jamshidnejad"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO",
-        "cs.MA",
-        "eess.SY"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2611.11648v1",
-      "comment": null,
-      "first_seen": "2026-11-11",
-      "full_text": "Autonomous SaR requires robots to explore unknown or partially known environments, avoid hazards, coordinate team activities, and guide discovered victims to safety. Improving individual capabilities of robots does not necessarily improve mission outcomes: safer motion can restrict the exploration behavior, faster discovery can increase the rescue demand, and effective guidance depends on victim responses. We introduce PA-SaR, a mathematical and architectural framework for coordinating heterogeneous local control, learning-based exploration, supervisory task allocation, and adaptive approach-lead victim guidance around mission-level objectives. PA- SaR distinguishes environmental ground-truth, robot-specific perceptions, and simulated victim behavior. This provides a common basis for integrating complementary mechanisms and analyzing their interactions across mission stages. We demonstrate the framework through single- and multi-robot simulation studies incorporating model-predictive and learning-based exploration, perception-based safety shielding, event-driven task allocation, and adaptive victim guidance. The results show trade-offs between collision avoidance and search completion, indicate that supervisory allocation improves search completion beyond information sharing alone, and demonstrate that increased exploration does not necessarily yield more rescues. Adaptive guidance increases rescues relative to continuous leading, without a detected improvement in mean or final victim trust or a reduction in mortality. These findings support evaluating local control, team coordination, and evacuation as related but distinct aspects of autonomous SaR within the considered simulation environments.",
-      "summary_kind": "truncation",
-      "thumbnail_path": "thumbnails/arxiv/2611.11648.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 17.546,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.5459616627083337,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -4443,107 +3914,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2611.11665",
-    "source": "arxiv",
-    "title": "HINT-VLM: Humanoid Interactive Navigation over Rough Terrain with Embodiment-Grounded Vision-Language Model",
-    "url": "http://arxiv.org/abs/2611.11665v1",
-    "summary": "Humanoid robots have achieved significant progress in locomotion and manipulation, enabling traversal over rough terrain and richer interaction with the environment, such as moving obstacles. However, most traditional navigation methods assume non-interactive environments and focus only on traversal.",
-    "published": "2026-11-08T22:46:20+00:00",
-    "updated": "2026-11-08T22:46:20+00:00",
-    "authors": [
-      "Ziwon Yoon",
-      "Seok Hwan Kim",
-      "Yiyu Chen",
-      "Quan Nguyen",
-      "Lu Gan",
-      "Ye Zhao"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2611.11665v1",
-      "comment": null,
-      "first_seen": "2026-11-11",
-      "full_text": "Humanoid robots have achieved significant progress in locomotion and manipulation, enabling traversal over rough terrain and richer interaction with the environment, such as moving obstacles. However, most traditional navigation methods assume non-interactive environments and focus only on traversal. While Navigation Among Movable Obstacles (NAMO) approaches relax this assumption, prior efforts have largely focused on flat environments and reactive interaction, rather than predicting object movability and planning ahead. These limitations become critical in outdoor rough-terrain scenarios, where robots must jointly reason about terrain traversability and object movability. In this work, we address NAMO for humanoid robots in cluttered outdoor rough terrain by proposing a hybrid planning framework that combines semantic priors from a Vision-Language Model (VLM) with embodied robot interaction data through a Gaussian process (GP) residual model. The GP corrects the VLM-derived movability prior to produce embodiment-grounded probabilistic movability estimates, which are then incorporated into hierarchical uncertainty-aware planning. The proposed approach allows humanoids to jointly leverage locomotion and manipulation for efficient and safe navigation, representing the first solution to NAMO in rough terrain through predictive movability reasoning and probabilistic VLM integration.",
-      "summary_kind": "truncation",
-      "thumbnail_path": "thumbnails/arxiv/2611.11665.jpg"
-    },
-    "tags": [
-      "#Manipulator",
-      "#Humanoid"
-    ],
-    "score": 16.551,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.5513832902901785,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "arxiv:2611.11605",
-    "source": "arxiv",
-    "title": "ScanDreamer: A Map-Grounded World Model for Quadrotor Navigation",
-    "url": "http://arxiv.org/abs/2611.11605v1",
-    "summary": "Quadrotors inspecting buildings and tunnels must navigate unknown clutter with a forward-facing depth camera whose limited field of view constrains scene understanding and collision-avoiding navigation.",
-    "published": "2026-11-08T20:33:43+00:00",
-    "updated": "2026-11-08T20:33:43+00:00",
-    "authors": [
-      "Yunyi Gao",
-      "Yixing Shi",
-      "Yize Liu",
-      "Hai-Duong Tran",
-      "Nhat-Hoang P. Nguyen",
-      "Shuai Wang",
-      "Yi Deng",
-      "Shengming Liu",
-      "Sim Kuan Goh",
-      "Duc-Thinh Pham",
-      "Sameer Alam"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2611.11605v1",
-      "comment": "8 pages, 6 figures, 3 tables. Submitted to AICAP 2027; decision pending",
-      "first_seen": "2026-11-11",
-      "full_text": "Quadrotors inspecting buildings and tunnels must navigate unknown clutter with a forward-facing depth camera whose limited field of view constrains scene understanding and collision-avoiding navigation. Recent world-model agents learn navigation through imagined experience (e.g., AirDreamer), but remain data-intensive and often lack explicit geometric memory and awareness of what the camera can observe. We propose ScanDreamer, a map-grounded world model that constructs an online 2D scan-memory map from depth images and vehicle pose. Our world model, actor, and critic are conditioned on this map, which also defines a geodesic progress reward. Moreover, a forward-cone penalty discourages horizontal motion outside the camera's viewing direction. During imagination, ScanDreamer propagates the quadrotor pose over a frozen map and derives progress and wall-contact signals from the mapped geometry. We train ScanDreamer for 0.8 million environment steps (5.5 h on one GPU) and evaluate it in NVIDIA Isaac Sim over 1560 episodes spanning unseen layouts and parameter ranges. Across three seeds (mean $\\pm$ SD), ScanDreamer achieves 96.3 $\\pm$ 0.3% success with 3.6 $\\pm$ 0.3% collision, compared with 59.6 $\\pm$ 3.0% success and 28.8 $\\pm$ 2.8% collision for AirDreamer at the same online-interaction budget. Removing the forward-cone penalty increases collisions to 9.9 $\\pm$ 3.1%. These results show that combining explicit map memory, map-grounded imagination, and perception-aware motion substantially improves navigation performance and data efficiency. The source code is available at https://github.com/WANGSHUAIzzzz/ScanDreamer.",
-      "summary_kind": "truncation",
-      "thumbnail_path": "thumbnails/arxiv/2611.11605.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 16.532,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.531648666292163,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:ba49ed41be02",
     "source": "news",
     "title": "AIhub coffee corner: Are humanoids the future of embodied AI?",
@@ -4581,40 +3951,6 @@
     "priority": "must_read"
   },
   {
-    "id": "news:36ffbe313222",
-    "source": "news",
-    "title": "Embodied AI Unveils AIR, a Physically Safe Humanoid Robot That Learns on the Job",
-    "url": "http://www.RoboticsTomorrow.com/news/2026/11/06/embodied-ai-unveils-air-a-physically-safe-humanoid-robot-that-learns-on-the-job/27353",
-    "summary": "Built in just 9 months, the robot works safely alongside factory teams and is already being tested with global manufacturers.",
-    "published": "2026-11-06T12:49:42+00:00",
-    "updated": "2026-11-06T12:49:42+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Robotics Tomorrow",
-      "first_seen": "2026-11-07",
-      "full_text": "Built in just 9 months, the robot works safely alongside factory teams and is already being tested with global manufacturers.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 14.034,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.034027118623512,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:c401f1af6c61",
     "source": "news",
     "title": "중국 앤트그룹, 범용 로봇 촉각 AI 모델 '링봇 터치' 오픈소스 공개",
@@ -4642,81 +3978,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 4.0,
       "recency": 2.990195271656746,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:78bc658aef62",
-    "source": "news",
-    "title": "Accelerating Reinforcement Learning Weight Refit with the Reshard Collective",
-    "url": "https://developer.nvidia.com/blog/accelerating-reinforcement-learning-weight-refit-with-the-reshard-collective/",
-    "summary": "During reinforcement learning (RL) post-training, training trajectories are generated on the fly by running inference with the current policy model. For...",
-    "published": "2026-11-06T18:03:26+00:00",
-    "updated": "2026-11-06T18:03:26+00:00",
-    "authors": [
-      "Youngeun Kwon"
-    ],
-    "extra": {
-      "feed": "NVIDIA Developer Blog",
-      "thumbnail": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/11/green-cube.webp",
-      "first_seen": "2026-11-07",
-      "full_text": "During reinforcement learning (RL) post-training, training trajectories are generated on the fly by running inference with the current policy model. For...",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 13.081,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.08071362515873,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
-    "id": "news:0919449ea43f",
-    "source": "news",
-    "title": "Video Friday: Room-Scale Cable-Driven Home Robot Tidies Up",
-    "url": "https://spectrum.ieee.org/video-friday-home-cable-robot",
-    "summary": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upcoming robotics events for the next few months. Please send us your events for inclusion. CoRL 2026 : 9–12 November 2026, AUSTIN, TEXAS Humanoids 2026 : 6–9 December 2026, SANTA CLARA, CALIF.",
-    "published": "2026-11-06T17:00:03+00:00",
-    "updated": "2026-11-06T17:00:03+00:00",
-    "authors": [
-      "Evan Ackerman"
-    ],
-    "extra": {
-      "feed": "IEEE Spectrum — Robotics",
-      "thumbnail": "https://spectrum.ieee.org/media-library/cable-robot-tidies-messy-playroom-with-scattered-toys-playhouse-and-musical-keyboard.gif?id=68608914&width=980",
-      "first_seen": "2026-11-07",
-      "full_text": "Video Friday is your weekly selection of awesome robotics videos, collected by your friends at IEEE Spectrum robotics. We also post a weekly calendar of upcoming robotics events for the next few months. Please send us your events for inclusion. CoRL 2026 : 9–12 November 2026, AUSTIN, TEXAS Humanoids 2026 : 6–9 December 2026, SANTA CLARA, CALIF. Enjoy today’s videos! This is such a novel and underrated form factor for a household robot. I absolutely love it. Stringman is all yours for US $795. [ Neufangled Robotics ] As of yesterday, Agility Robotics is publicly trading as AGLT. [ Agility Robotics ] Happy Halloween from Flexiv Robotics! Okay WHAT. [ Flexiv ] Nothing hides from SCUTL. Not even the paranormal. [ Ground Control Robotics ] Thanks, Dan! Happy Halloween from HEBI Robotics! We asked ourselves if you can carve a pumpkin using nothing but a T-Series arm and a drill originally designed to run an auger. The answer is yes, so long as you don’t care too much about accuracy. Basic pathing commands running off a laptop, stability provided by a quick connection to Treadward. Happy Halloween, HEBI fans! [ HEBI ] Something strange has been happening at KIMLAB. Our snacks kept disappearing… and we finally caught the culprit. Meet GG, our new lab friend. GG is a character robot inspired by the Ggeomeoksali from Netflix’s “The East Palace.” GG sneaks around for snacks, eats them, sleeps most of the time, begs everyone for more food, and leans on whoever is nearby. Cute, comforting, and a good friend. But GG is still a gwi-mae… so who knows what else it can do. [ Kinetic Intelligent Machine Lab ] Happy Halloween from Dusty Robotics! [ Dusty ] Finally, a robot with a butt. [ JSK Lab ] Thanks, Shunnosuke! Any drone can crash into a tree once. This drone can crash into a tree MORE than once. [ ETH Zurich ] Lume is a robotic floor lamp that moves around your home, helps with everyday chores, and returns to being a beautiful lamp when it’s done. [ Syncere ] If we’re going to use robots at work or at home, they’re going to have to communicate with us. At Toyota Research Institute, a team of robotics user experience designers is working on the sounds, gestures, light patterns, and interfaces that allow robots to let us know that they are on the move, that we need to stay clear, or to tell us that they just really need help. Steffi Paepcke, Director of Robotics User Experience at TRI, accepts the challenge to explain how her team approaches this work in just one minute. I need a sound for when people around me need to give me space. [ Toyota Research Institute ] The entirely student-run, self-taught and highly collaborative MIT Combat Robotics Club (CRC) builds high-energy fighting machines to compete in House Battles and larger competitions. Fans of the hit show BattleBots may remember some of CRC’s past robots, including Uppercut, SawBlaze, the Dentist, and Overhaul. CRC is open to every MIT student regardless of year, major, or prior experience. Students learn a variety of skills, from CAD and FEA to CNC Machining and Welding—and they learn through watching their creations get completely destroyed. [ MIT Combat Robotics Club ] Happy birthday, JPL ! Where do I get a shirt like that last guy has? [ JPL ] Can machines be creative? In this first episode of Moonshot, host Mike Massimino talks with Hod Lipson, a Columbia Engineering roboticist whose work includes robots that learn and adapt. Lipson, the James and Sally Scapa Professor of Innovation in Columbia’s Department of Mechanical Engineering, explains why physical AI is so difficult, how engineers and AI might work together on new designs, and how he defines creativity. He also shares advice on why playing it safe can limit your impact. [ Columbia University ] This closing fireside chat brings together two of the field’s most consequential builders—Jeff Dean, whose work at Google has helped define the modern AI stack, and Fei-Fei Li, whose case for human-centered AI has shaped how the field thinks about who this technology should actually serve. Coming at the end of a day spent grappling with AI’s risks and unresolved questions, the conversation turns to where the two of them agree, where they don’t, and what they think the choices ahead really come down to. [ Stanford Human-Centered AI ]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 13.071,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 4.0,
-      "recency": 2.0712815878497026,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -4888,57 +4149,6 @@
     "priority": "must_read"
   },
   {
-    "id": "arxiv:2611.11166",
-    "source": "arxiv",
-    "title": "DexForesight: Grounding Dexterous Policies with Implicit Spatial Foresight",
-    "url": "http://arxiv.org/abs/2611.11166v1",
-    "summary": "Dexterous manipulation requires rich spatial foresight over both the surrounding scene and the robot hand. Existing world-action models often acquire such predictive knowledge through explicit future prediction.",
-    "published": "2026-11-08T06:14:36+00:00",
-    "updated": "2026-11-08T06:14:36+00:00",
-    "authors": [
-      "Zhongxi Chen",
-      "Yi Yang",
-      "Xinyi Chen",
-      "Mingzhe Ye",
-      "Yaping Li",
-      "Zhihong Liu",
-      "Congsheng Xu",
-      "Haonan Wang",
-      "Zhijie Deng"
-    ],
-    "extra": {
-      "categories": [
-        "cs.RO"
-      ],
-      "primary_category": "cs.RO",
-      "pdf_url": "https://arxiv.org/pdf/2611.11166v1",
-      "comment": "13 pages, 4 figures",
-      "first_seen": "2026-11-11",
-      "full_text": "Dexterous manipulation requires rich spatial foresight over both the surrounding scene and the robot hand. Existing world-action models often acquire such predictive knowledge through explicit future prediction. We introduce DexForesight, a framework that learns spatial foresight implicitly by injecting dynamics-aware world representations into the latent space of a dexterous policy. During training, DexForesight learns an action-conditioned spatial world model from offline scene depth, kinematic hand geometry, and demonstration trajectories. The world model predicts 3D hand-point motion and visual feature changes, capturing both articulated hand dynamics and scene changes under demonstrated actions, including the motion of fingers occluded from the cameras. We then freeze the world model and align policy queries with its predictive world queries, transferring the learned spatial dynamics into policy latents and using them to condition action generation. At deployment, only the policy is retained, operating on RGB observations, language, and robot state without depth input or explicit future prediction. On 11 DexJoCo simulation tasks, DexForesight improves the overall success rate of the base policy from 49.4% to 60.5%. On three real-robot dexterous manipulation tasks, DexForesight achieves 58.3% success, compared with 50.0% for the strongest baseline.Project page https://dexforesight.github.io/",
-      "summary_kind": "truncation",
-      "thumbnail_path": "thumbnails/arxiv/2611.11166.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Manipulator"
-    ],
-    "score": 12.404,
-    "score_breakdown": {
-      "title_keyword": 0.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.403803922480159,
-      "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:4dca7a1deade",
     "source": "news",
     "title": "Path Robotics raises stunning $300 million at $2.45 billion valuation to expand physical AI in manufacturing",
@@ -5075,44 +4285,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.7166883257738093,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:d8a2a38517d7",
-    "source": "news",
-    "title": "Robot Talk Episode 169 – Robot sensing inspired by nature, with Dexter Shepherd",
-    "url": "https://robohub.org/robot-talk-episode-169-robot-sensing-inspired-by-nature-with-dexter-shepherd/",
-    "summary": "Claire chatted to Dexter Shepherd from the University of Sussex about using artificial intelligence to help robots understand and adapt to their environment. Dexter Shepherd is a Postdoctoral Researcher at the University of Sussex, exploring machine learning for bio-inspired tactile sensing and robotic locomotion.",
-    "published": "2026-11-06T13:39:37+00:00",
-    "updated": "2026-11-06T13:39:37+00:00",
-    "authors": [
-      "Robot Talk"
-    ],
-    "extra": {
-      "feed": "Robohub",
-      "first_seen": "2026-11-11",
-      "full_text": "Claire chatted to Dexter Shepherd from the University of Sussex about using artificial intelligence to help robots understand and adapt to their environment. Dexter Shepherd is a Postdoctoral Researcher at the University of Sussex, exploring machine learning for bio-inspired tactile sensing and robotic locomotion. His work combines embedded AI systems, spatial-temporal models, and reinforcement learning […]",
-      "summary_kind": "truncation",
-      "thumbnail": "https://robohub.org/wp-content/uploads/2026/11/169_Dexter-Shepherd-1024x446.jpg"
-    },
-    "tags": [
-      "#RL",
-      "#Other"
-    ],
-    "score": 11.041,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 4.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.04145520124752,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -6204,40 +5376,6 @@
     "priority": "save_for_later"
   },
   {
-    "id": "news:661524e38cbe",
-    "source": "news",
-    "title": "ToyBlocks: A controlled world for robot learning and evaluation",
-    "url": "https://huggingface.co/blog/allenai/toyblocks",
-    "summary": "",
-    "published": "2026-11-06T14:00:48+00:00",
-    "updated": "2026-11-06T14:00:48+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "Hugging Face Blog",
-      "first_seen": "2026-11-07",
-      "full_text": "",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 4.045,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 0.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 0.0,
-      "recency": 2.0446074765649804,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -6.0
-    },
-    "priority": "save_for_later"
-  },
-  {
     "id": "news:2c3a0c19514c",
     "source": "news",
     "title": "The Human Layer of the Automated Factory: Keeping People Informed on the Floor",
@@ -6301,42 +5439,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 2.0,
       "recency": 2.744528107953869,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -6.0
-    },
-    "priority": "low_priority"
-  },
-  {
-    "id": "news:475ae042ad21",
-    "source": "news",
-    "title": "Physicl raises $10M to make the digital world real enough for robots",
-    "url": "https://techcrunch.com/2026/11/06/physicl-raises-10m-to-make-the-digital-world-real-enough-for-robots/",
-    "summary": "Physicl is trying to solve the sim-to-real gap with a pipeline originally built to market goods online.",
-    "published": "2026-11-06T13:00:00+00:00",
-    "updated": "2026-11-06T13:00:00+00:00",
-    "authors": [
-      "Tim Fernholz"
-    ],
-    "extra": {
-      "feed": "TechCrunch — Robotics",
-      "first_seen": "2026-11-07",
-      "full_text": "Physicl is trying to solve the sim-to-real gap with a pipeline originally built to market goods online.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 2.036,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 2.035559859144345,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
