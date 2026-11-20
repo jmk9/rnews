@@ -688,54 +688,6 @@
     "priority": "must_read"
   },
   {
-    "id": "github:iit-DLSLab/sim2real-robot-identification",
-    "source": "github",
-    "title": "iit-DLSLab/sim2real-robot-identification",
-    "url": "https://github.com/iit-DLSLab/sim2real-robot-identification",
-    "summary": "A joints calibration routine for quadrupeds and manipulators to facilitate sim-to-real transfer from isaaclab and mujoco to real robots",
-    "published": "2025-07-05T22:23:07Z",
-    "updated": "2026-11-09T17:32:09Z",
-    "authors": [
-      "iit-DLSLab"
-    ],
-    "extra": {
-      "stars": 102,
-      "forks": 9,
-      "language": "Python",
-      "topics": [
-        "isaaclab",
-        "mujoco",
-        "quadruped",
-        "reinforcement-learning",
-        "sim-to-real",
-        "simulation"
-      ],
-      "open_issues": 1,
-      "license": "BSD-3-Clause",
-      "first_seen": "2026-05-18",
-      "full_text": "A joints calibration routine for quadrupeds and manipulators to facilitate sim-to-real transfer from isaaclab and mujoco to real robots",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Manipulator"
-    ],
-    "score": 35.714,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 1.6496514843799601,
-      "has_code": 6.0,
-      "github_stars_log": 10.064186123525861,
-      "github_forks_log": 2.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "github:iit-DLSLab/basic-locomotion-isaaclab",
     "source": "github",
     "title": "iit-DLSLab/basic-locomotion-isaaclab",
@@ -2213,7 +2165,8 @@
       "license": "BSD-3-Clause-Clear",
       "first_seen": "2026-08-04",
       "full_text": "Agent-native framework for rapid sim-to-real deployment of embodied AI for field robotics. Closed-loop, one-to-one workflow with hardware, self validating. Checkout develop branch for latest features.",
-      "summary_kind": "truncation"
+      "summary_kind": "truncation",
+      "thumbnail": "https://raw.githubusercontent.com/castacks/AirStack/HEAD/docs/assets/logo_horizontal_color.png"
     },
     "tags": [
       "#Other"
@@ -3879,44 +3832,6 @@
     "priority": "must_read"
   },
   {
-    "id": "news:b62795ed1d41",
-    "source": "news",
-    "title": "Can Agentic Robotics Solve Robotics’ Data-Scaling Problem?",
-    "url": "https://spectrum.ieee.org/agentic-robotics",
-    "summary": "Robotics companies are investing heavily in the belief that data will solve the most difficult problems in robotics. Once AI systems have ingested enough data from human demonstrations, the thinking goes, robots will be able to perform the vast majority of the manual tasks that humans now do.",
-    "published": "2026-11-09T14:00:02+00:00",
-    "updated": "2026-11-09T14:00:02+00:00",
-    "authors": [
-      "Evan Ackerman"
-    ],
-    "extra": {
-      "feed": "IEEE Spectrum — Robotics",
-      "thumbnail": "https://spectrum.ieee.org/media-library/3d-rendering-of-a-scara-robotic-arm-carefully-dropping-a-syringe-into-a-sharps-box.jpg?id=68618830&width=980",
-      "first_seen": "2026-11-11",
-      "full_text": "Robotics companies are investing heavily in the belief that data will solve the most difficult problems in robotics. Once AI systems have ingested enough data from human demonstrations, the thinking goes, robots will be able to perform the vast majority of the manual tasks that humans now do. There are even robotics companies that exist solely to collect training data and sell it to other robotics companies in pursuit of this goal. But whether data will finally bring us general-purpose robots is an open question . Nobody knows how much data would be necessary , what kind of data is important , or whether something else might be missing . And there are other problems with a reliance on massive amounts of data: The resulting AI algorithms are essentially black boxes, which despite their high performance are difficult or impossible for humans to understand. This characteristic is becoming increasingly concerning in commercial deployments, where robots must be flexible, reliable, and safe. At the 2026 Conference on Robot Learning this week, University of California, Berkeley and Nvidia are jointly announcing a new approach to using AI to program robots for everyday practical tasks in industrial environments. Called agentic robotics , this technique leverages the latest advances in AI coding tools while in some sense bringing robotics back to its roots—achieving a fundamental understanding of how a robot works, and then writing human-readable code to get it to do useful things, no data (and no humans) required. The Data Problem For decades, robots were programmed with model-based methods, meaning that their behavior was based on a detailed understanding (or model) of the physics and mathematics underlying the robot and its environment. Roboticists would first develop these models, and then write painstakingly detailed code telling their robots how to act. The resulting hand-tuned robotic systems could operate fast and reliably, but this approach has fallen out of favor because it requires both human time and human expertise. It’s much easier to just feed a huge amount of human demonstration data into a machine learning system, and the results that come out are both adaptable and reliable—up to a point. “The imitation-learning paradigm has hit a plateau,” explains Ken Goldberg , a professor of robotics at UC Berkeley whose lab is presenting a paper on agentic robotics at this week’s conference. “It’s promising for things like home robots, where speed and reliability are less of an issue. But for industrial applications, it’s very hard to get the reliability that industry requires.” Goldberg, who is also a cofounder of the industrial robotics company Ambi Robotics , has experienced this problem firsthand, as have other companies that he’s been working with, including Siemens and Bosch. “You get good performance from data initially, but then things go wrong. So you start giving it more data. But then other things go wrong. It’s not clear that adding more data is going to get you there.” The hope, according to Goldberg, is that with enough data, robots will somehow just start to work reliably, since that was the case with ChatGPT. “That’s what people have been counting on, and why investors are pouring money into these companies,” says Goldberg. “But everybody’s getting a little nervous that we haven’t hit that convergence point.” How Agentic Robotics Works The reason why language models like ChatGPT are so successful is that they can train on data at the scale of the internet. There is no dataset for robotics that approaches that scale, and while robotics companies are desperately attempting to generate the data that they think they need, it’s a slow, expensive process. Agentic robotics, a term popularized by Goldberg along with Spencer Huang , director of product for robotics at Nvidia, is an attempt to turn programming robots from a data problem into a coding problem, which can directly leverage the scale of language models. “This is really something that’s accelerated in the past year,” Goldberg says. “The quality of agentic coding has become so good that using them to write code for robots is now viable.” Because agentic robotics is based on large language models, it’s easy to use—you can use natural language to tell the robot what to do. One example used by the UC Berkeley researchers was asking a robotic arm to pack groceries into a bag. First, this relatively complex (for a robot) task is decomposed into simpler subtasks, each of them assigned to a separate coding agent. In LLM-based software, a coding agent is an autonomous AI system that can plan, write, test, and modify software with minimal human intervention. You might have one individual agent tasked with perception to identify the groceries and the bag, a second focused on object manipulation with the arm’s gripper, and a third working on transporting objects with the arm once they’ve been grasped. “We have all these robotics tools we’ve been building for the last couple decades,” explains Huang. “The problem was that a human had to go and write the code themselves. But object classifiers, pose estimation, task and motion planning, trajectory generation—everything is already there.” The coding agents can directly leverage all of that existing data contained within their language models to generate code of their own, tailored to their specific tasks. Solving the Simulation Bottleneck Once the agents have a plausible framework, they run their code in a simulation and see what happens, much like a human would. They can change starting conditions, identify failures, refine the code, and keep iterating until they’ve got a successful program. Of course, code that works in simulation can only ever be as versatile and reliable as the simulation is. “Simulations are nontrivial to build,” Goldberg explains. The more accurate the simulation has the potential to be, the more parameters there are that need to be configured to achieve and maintain that accuracy, typically by a human on a task-by-task basis. Goldberg decided to try giving an AI agent direct access to these simulation parameters, and instructing it to match the simulation to a video of the real world. “It gave us goose bumps. It was matching the whole environment, the lighting, the background, all these things that are super tedious to do. We would never have done that, but the agent did. Side by side, it was very hard to tell the difference between the simulation and the video.” Nevertheless, no matter how good a simulated environment looks, navigating the gap between that environment and the real world is still an unsolved challenge for the robotics community, says Torsten Kroeger , chief science officer at Alphabet’s company Intrinsic . Kroeger, who is not directly involved in this research, continued: “I’m saying this respectfully, but there’s just no physics engine out there that can accurately model physical contact with the world.” But as with a team of human coders, the agents can troubleshoot when things inevitably don’t work quite right. The agents’ ability to work on the simulation itself offers significant advantages, because the agents can be fed video of a failed task with the goal of updating the simulation to match, while the coding agents then iterate to fix the problem. As with anything done by AI, Huang is well aware that agents writing code for robots will have their flaws. “We all know that AI agents can create slop,” Huang says. “In order to counter that, we use adversarial agent setups—where one agent designs something and another agent tries to rip it apart and find flaws.” In UC Berkeley’s testing , agentic robotics approaches were able to reach success rates of up to 99 percent, matching human hand-engineered performance, even in tasks where baseline imitation-learning techniques saw success rates of only 20 percent. But as Goldberg points out, agentic robotics is not just about performance but also efficiency and safety. “You’re using an off-the-shelf coding agent. You don’t need to collect any data. And the agent is generating code that you can actually understand and fix if necessary.” Real-World Agentic Robotics In the immediate future, the sweet spot for practical agentic robotics will be industrial manufacturing and manipulation tasks that require robust precision and accuracy, says Huang. “Right now, some of our partners in the semiconductor space need to place components within 0.3 millimeters. There’s no way you’re going to get something like GR00T [Nvidia’s humanoid-development platform] to do that today with any semblance of repeatability and robustness. What you get with agentic robotics is near-term applications.” But the real value, Huang says, is in adapting to change. “At Wistron in Taiwan [which manufactures baseboards for Nvidia GPUs], every time they add a new product, it takes a minimum of 8 hours to retask one robot. With agentic robotics, retasking takes a minute or two instead.” Moving agentic robotics beyond these fairly well-constrained use cases may be difficult, but Huang sees this technique as a gateway toward more complex tasks. “Agentic robotics can generate tons of good-quality robotic code, which is data that we can use for training the next model.” Such code generation is only an iterative step toward a general-purpose capability, but Huang believes that agentic robotics may help redefine the very meaning of general intelligence in the context of robotics. “My thesis is that general intelligence for robotics will first come in the form of an agent orchestrating a mix of conventional technologies and specialized policies. To a human, it looks like general intelligence because the agent is coordinating everything under the hood.” Intrinsic’s Kroeger is more cautious about placing trust in agents. “In the context of safety and security, how do we know that these agents are really doing the right thing all the time? It’s the alignment problem . A human engineer can review everything, but the challenge will be once we start putting our trust in these agents. I can imagine that this will become a relevant conversation for the industry.” For now, Goldberg is focused on working with real companies to put agentic robotics into practice. A series of benchmarks for agentic robotics developed with Nvidia Isaac Lab-Arena and the Newton physics engine will help researchers evaluate agent performance. “I don’t want to say that we have the solution, but I’m very excited about it,” he says. Adds Huang: “It’s a pivotal change in the way we’re doing things.”",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Manipulator",
-      "#Humanoid"
-    ],
-    "score": 19.618,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 5.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 4.0,
-      "recency": 1.618086499263393,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 3.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:3a17ac9e6afb",
     "source": "news",
     "title": "엑스와이지-KAIST,휴머노이드 기반 인간–로봇 상호작용 공동 연구 협약 체결",
@@ -4518,7 +4433,7 @@
       "first_seen": "2026-11-14",
       "full_text": "An architectural FinOps and payment-clearing guide for Embodied AI & World Model training clusters (Google Genie 4 / NVIDIA Cosmos / Isaac Lab), preventing cloud GPU cluster payment freezes and runaway simulation billing via USDT-funded CoreGold Virtual Cards (VCC) and Apple Pay.",
       "summary_kind": "truncation",
-      "thumbnail": "https://private-user-images.githubusercontent.com/326788711/704768579-be818ca8-eef2-4364-a196-dd2c49f21124.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTUwNTUwNzgsIm5iZiI6MTc5NTA1NDc3OCwicGF0aCI6Ii8zMjY3ODg3MTEvNzA0NzY4NTc5LWJlODE4Y2E4LWVlZjItNDM2NC1hMTk2LWRkMmM0OWYyMTEyNC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYxMTE5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MTExOVQwMjE5MzhaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01Mzg3YmY2ZGE4ODljZmQyZWJjZjg3MDBiNjdkNDUzMDU4MzBiOWIwMjZiMmRiMzVhZGJiMjQ3NGZhZjYxNGM1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.TgBueFSmE9l0EpowIO1mp5SkXHWPe9baneVNLWghaRY"
+      "thumbnail": "https://private-user-images.githubusercontent.com/326788711/704768579-be818ca8-eef2-4364-a196-dd2c49f21124.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTUxNDA1MTEsIm5iZiI6MTc5NTE0MDIxMSwicGF0aCI6Ii8zMjY3ODg3MTEvNzA0NzY4NTc5LWJlODE4Y2E4LWVlZjItNDM2NC1hMTk2LWRkMmM0OWYyMTEyNC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYxMTIwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MTEyMFQwMjAzMzFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00ZWZhZTJjMjc1YmQ1OWJhODBmMjBjZmNkZTBjMmQ5NTFhMTE0NjExMTYwMWY2N2Y5YWNlODY1YjA1NGRkY2VjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.DOmeCM2f0H3mvYdT_JvEb_V_LBrp0Dw5EG_YhEF_QfY"
     },
     "tags": [
       "#RL",
@@ -5201,42 +5116,6 @@
     "priority": "must_read"
   },
   {
-    "id": "news:ba49ed41be02",
-    "source": "news",
-    "title": "AIhub coffee corner: Are humanoids the future of embodied AI?",
-    "url": "https://robohub.org/aihub-coffee-corner-are-humanoids-the-future-of-embodied-ai/",
-    "summary": "The AIhub coffee corner captures the musings of AI experts over a short conversation. This month we ask whether humanoids are the future of robotics. How has the technology evolved recently, and what can we expect in the years to come? Joining the conversation this time are: Joydeep Biswas (University of Texas at Austin), Sanmay […]",
-    "published": "2026-11-09T14:21:13+00:00",
-    "updated": "2026-11-09T14:21:13+00:00",
-    "authors": [
-      "AIhub"
-    ],
-    "extra": {
-      "feed": "Robohub",
-      "first_seen": "2026-11-10",
-      "full_text": "The AIhub coffee corner captures the musings of AI experts over a short conversation. This month we ask whether humanoids are the future of robotics. How has the technology evolved recently, and what can we expect in the years to come? Joining the conversation this time are: Joydeep Biswas (University of Texas at Austin), Sanmay […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Humanoid"
-    ],
-    "score": 14.621,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 5.0,
-      "research_interest_abstract": 2.0,
-      "recency": 1.6212387839583333,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "must_read"
-  },
-  {
     "id": "news:0456db122c0e",
     "source": "news",
     "title": "KISTEP \"한국 휴머노이드 경쟁력, 하드웨어 넘어 AI·데이터 생태계로 확장해야\"",
@@ -5456,42 +5335,6 @@
       "research_interest_abstract": 0.0,
       "recency": 1.8510924466666665,
       "has_code": 6.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:abf5e278eb75",
-    "source": "news",
-    "title": "Gemini Robotics 2.5 accelerates real-world general dexterity",
-    "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/",
-    "summary": "Our most capable vision-language-action model enhances robot dexterity, reliability, and safety",
-    "published": "2026-11-09T19:51:47+00:00",
-    "updated": "2026-11-09T19:51:47+00:00",
-    "authors": [],
-    "extra": {
-      "feed": "DeepMind Blog",
-      "thumbnail": "https://lh3.googleusercontent.com/F1CrVEYRb8lJOyyxGgcyow-Td1de-nkp7K8MZrhjrKPANJUc0EYB754Ninn-Yrppjdb54nolOWo6Rk8iDaRNuixWwLaEKc0K9ImGooxen9fj9IOh=w528-h297-n-nu-rw-lo",
-      "first_seen": "2026-11-11",
-      "full_text": "Our most capable vision-language-action model enhances robot dexterity, reliability, and safety",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#VLA",
-      "#Other"
-    ],
-    "score": 11.67,
-    "score_breakdown": {
-      "title_keyword": 6.0,
-      "abstract_keyword": 2.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 1.6704302425744046,
-      "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
       "real_robot": 0.0,
@@ -6249,43 +6092,6 @@
       "research_interest_title": 0.0,
       "research_interest_abstract": 0.0,
       "recency": 2.9193736924727185,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:2e00425823ce",
-    "source": "news",
-    "title": "Practice Makes Precise: At CoRL, NVIDIA and Partners Reveal How Robots Rehearse Delicate Work in Simulation",
-    "url": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/",
-    "summary": "Simulation, which has long been the proving ground for robots learning to walk, roll and hop, is now helping researchers teach robots tasks that require a finer touch: aligning gears, connecting cables and assembling small components. The shift from locomotion to manipulation is taking center stage at this week’s Conference on Robot Learning (CoRL) in […]",
-    "published": "2026-11-09T14:00:01+00:00",
-    "updated": "2026-11-09T14:00:01+00:00",
-    "authors": [
-      "Sasa Docca"
-    ],
-    "extra": {
-      "feed": "NVIDIA Blog",
-      "thumbnail": "https://blogs.nvidia.com/wp-content/uploads/2026/11/corl-corp-blog-promo-pack-1920x1080-1-842x450.png",
-      "first_seen": "2026-11-10",
-      "full_text": "Simulation, which has long been the proving ground for robots learning to walk, roll and hop, is now helping researchers teach robots tasks that require a finer touch: aligning gears, connecting cables and assembling small components. The shift from locomotion to manipulation is taking center stage at this week’s Conference on Robot Learning (CoRL) in […]",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Manipulator"
-    ],
-    "score": 9.618,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 3.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 2.0,
-      "recency": 1.6180840124900793,
       "has_code": 0.0,
       "github_stars_log": 0.0,
       "github_forks_log": 0.0,
@@ -7107,81 +6913,6 @@
       "real_robot": 0.0,
       "trusted_feed": 0.0,
       "demote": -6.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:e6f077140c97",
-    "source": "news",
-    "title": "Make a Robot Arm Feel Weightless with NVIDIA Holoscan 5",
-    "url": "https://developer.nvidia.com/blog/make-a-robot-arm-feel-weightless-with-nvidia-holoscan-5/",
-    "summary": "Picture guiding a robot arm by hand while its motors supply just enough torque to support its weight and keep the robot upright. This simple interaction, a...",
-    "published": "2026-11-09T19:09:32+00:00",
-    "updated": "2026-11-09T19:09:32+00:00",
-    "authors": [
-      "Jay Carlson"
-    ],
-    "extra": {
-      "feed": "NVIDIA Developer Blog",
-      "thumbnail": "https://developer-blogs.nvidia.com/wp-content/uploads/2026/11/featured-image-768x432.jpg",
-      "first_seen": "2026-11-10",
-      "full_text": "Picture guiding a robot arm by hand while its motors supply just enough torque to support its weight and keep the robot upright. This simple interaction, a...",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#RL",
-      "#Manipulator"
-    ],
-    "score": 5.664,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 1.6641430406374007,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
-    },
-    "priority": "save_for_later"
-  },
-  {
-    "id": "news:ac43b5060a01",
-    "source": "news",
-    "title": "AI-assisted learning platform helps robots reason beyond literal commands",
-    "url": "https://news.mit.edu/2026/ai-assisted-learning-platform-helps-robots-reason-beyond-literal-commands-1109",
-    "summary": "The new approach, known as FLEX, could lead to more intuitive, interactive household and assistive robots.",
-    "published": "2026-11-09T05:00:00+00:00",
-    "updated": "2026-11-09T05:00:00+00:00",
-    "authors": [
-      "Jennifer Chu | MIT News"
-    ],
-    "extra": {
-      "feed": "MIT News — Robotics",
-      "thumbnail": "https://news.mit.edu/sites/default/files/styles/news_article__cover_image__original/public/images/202611/MIT-FLEX-01-press.jpg?itok=811PS9Sd",
-      "first_seen": "2026-11-10",
-      "full_text": "The new approach, known as FLEX, could lead to more intuitive, interactive household and assistive robots.",
-      "summary_kind": "truncation"
-    },
-    "tags": [
-      "#Other"
-    ],
-    "score": 5.538,
-    "score_breakdown": {
-      "title_keyword": 3.0,
-      "abstract_keyword": 1.0,
-      "research_interest_title": 0.0,
-      "research_interest_abstract": 0.0,
-      "recency": 1.5377243931870037,
-      "has_code": 0.0,
-      "github_stars_log": 0.0,
-      "github_forks_log": 0.0,
-      "real_robot": 0.0,
-      "trusted_feed": 0.0,
-      "demote": -0.0
     },
     "priority": "save_for_later"
   },
